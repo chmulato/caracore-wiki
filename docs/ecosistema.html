@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Mundo - Mapa do Ecossistema | Wiki Cara Core</title>
+    <meta name="description" content="Mapa visual do ecossistema Cara Core Informática: matriz, produtos, oficinas e lojas — como tudo se conecta.">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <!-- Wiki CSS -->
+    <link rel="stylesheet" href="assets/css/wiki.css">
+    <link rel="stylesheet" href="assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Eco Mundo — Ecossistema Cara Core">
+    <meta property="og:description" content="Mapa visual do ecossistema: matriz → produtos → oficinas → lojas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wiki.caracore.com.br/ecosistema.html">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-journal-code"></i> Wiki Cara Core
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação" title="Menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarWiki">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wiki.caracore.com.br/">
+                            <i class="bi bi-house"></i> Site Principal
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wiki.caracore.com.br/portfolio.html">
+                            <i class="bi bi-briefcase"></i> Portfólio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ecosistema.html" title="Conheça o Nosso Eco Mundo">
+                            <i class="bi bi-globe2"></i> Eco Mundo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="wiki-breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+                    <li class="breadcrumb-item active">Eco Mundo</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="wiki-container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="wiki-sidebar">
+                    <h4><i class="bi bi-list-ul"></i> Navegação</h4>
+                    <ul class="wiki-menu">
+                        <li><a href="index.html"><i class="bi bi-house"></i> Página Inicial</a></li>
+                        <li><a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a></li>
+                        <li><a href="tecnologias.html"><i class="bi bi-gear"></i> Tecnologias Utilizadas</a></li>
+                        <li><a href="guia-estagiario.html"><i class="bi bi-person-badge"></i> Guia do Estagiário</a></li>
+                        <li><a href="contribuindo.html"><i class="bi bi-git"></i> Como Contribuir</a></li>
+                        <li><a href="glossario.html"><i class="bi bi-book"></i> Glossário Técnico</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conteúdo Principal -->
+            <div class="col-lg-9 col-md-8">
+                <div class="wiki-content">
+                    <div class="wiki-header">
+                        <h1><i class="bi bi-globe2"></i> Eco Mundo — Mapa do Ecossistema</h1>
+                        <p>Visualize como a Cara Core Informática se organiza: da <strong>matriz</strong> aos <strong>produtos</strong>, das <strong>oficinas</strong> às <strong>lojas</strong>.</p>
+                    </div>
+
+                    <!-- Visão Geral -->
+                    <section class="mb-5">
+                        <h2><i class="bi bi-diagram-3-fill text-primary"></i> Visão Geral do Ecossistema</h2>
+
+                        <div class="leigos-section">
+                            <h3><i class="bi bi-people"></i> Para Leigos</h3>
+                            <p>Imagine a Cara Core como uma <strong>árvore</strong>: o tronco é a empresa (matriz), os galhos são os produtos, as folhas são as oficinas onde cada produto é desenvolvido e os frutos são as lojas onde o cliente final encontra tudo pronto para usar.</p>
+                        </div>
+
+                        <div class="estagiario-section">
+                            <h3><i class="bi bi-mortarboard"></i> Para Estagiários</h3>
+                            <p>O ecossistema segue quatro camadas. Cada produto nasce na matriz, é desenvolvido em uma oficina (repositório + ambiente de dev) e publicado em uma loja (subdomínio com wiki própria).</p>
+                        </div>
+                    </section>
+
+                    <!-- Camada 1: Matriz -->
+                    <section class="mb-5">
+                        <h2><i class="bi bi-building text-dark"></i> 1. Matriz</h2>
+                        <div class="project-card">
+                            <div class="project-header" style="background: linear-gradient(135deg, #2c3e50, #34495e);">
+                                <h3><i class="bi bi-building"></i> Cara Core Informática</h3>
+                            </div>
+                            <div class="project-body">
+                                <p>CNPJ 23.969.028/0001-37 — a empresa que mantém todo o ecossistema. Define estratégia, padrões de qualidade e roadmap dos produtos.</p>
+                                <ul class="feature-list">
+                                    <li><strong>Governança:</strong> decisões de portfólio, precificação e licenciamento</li>
+                                    <li><strong>Infraestrutura:</strong> domínio <code>caracore.com.br</code>, GitHub Organization, CI/CD</li>
+                                    <li><strong>Pessoas:</strong> sócios, estagiários e colaboradores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Camada 2: Produtos -->
+                    <section class="mb-5">
+                        <h2><i class="bi bi-box-seam text-success"></i> 2. Produtos</h2>
+                        <p>Cada produto resolve um problema diferente e possui identidade visual e técnica próprias.</p>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #185a9d, #43cea2);">
+                                        <h3><i class="bi bi-cart3"></i> CaraCore PDV</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Ponto de Venda — Reforma Tributária, PIX, modo offline. Java/Spring Boot + SQLite.</p>
+                                        <a href="projeto-pdv.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #e44d26, #f16529);">
+                                        <h3><i class="bi bi-pen"></i> Ink Agenda</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Gestão para estúdios de tatuagem — agenda, clientes, financeiro. Primeiro produto maduro.</p>
+                                        <a href="projeto-ink.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #b8860b, #ffd700);">
+                                        <h3><i class="bi bi-minecart-loaded"></i> Minerador 4.0</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Simulador ETE / hidrometalurgia para Ensino Médio e mineração (Ouro 4.0 R$ 29,90).</p>
+                                        <a href="projeto-minerador.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+                                        <h3><i class="bi bi-key"></i> CaraCore Seed</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Contador de licenças (Windows Desktop, R$ 29,90). Localhost + Desktop.</p>
+                                        <a href="projeto-seed.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #2E8B57, #228B22);">
+                                        <h3><i class="bi bi-signpost-split"></i> Circuito Ferradura</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Curso proprietário de lógica, ábaco romano e Python para jovens. Gratuito para pessoas físicas.</p>
+                                        <a href="projeto-python.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #43cea2, #185a9d);">
+                                        <h3><i class="bi bi-hub"></i> CaraCore Hub</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Sistema de integração e e-commerce via API. Garagem prevista para Abr/2027.</p>
+                                        <a href="projeto-hub.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                        <h3><i class="bi bi-shield-lock"></i> Área 51</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Consultoria OIDC / autenticação enterprise. Python/Flask.</p>
+                                        <a href="projeto-area51.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="project-card h-100">
+                                    <div class="project-header" style="background: linear-gradient(135deg, #8f6ed5, #d084c9);">
+                                        <h3><i class="bi bi-mortarboard"></i> Reino OIDC</h3>
+                                    </div>
+                                    <div class="project-body">
+                                        <p>Educação em OAuth 2.1 e OIDC. Produto educativo gratuito.</p>
+                                        <a href="projeto-reino.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Camada 3: Oficinas -->
+                    <section class="mb-5">
+                        <h2><i class="bi bi-tools text-warning"></i> 3. Oficinas (Desenvolvimento)</h2>
+                        <p>Cada produto é construído em sua <strong>oficina</strong> — o repositório GitHub com ambiente de desenvolvimento, testes e CI/CD.</p>
+
+                        <div class="project-card">
+                            <div class="project-body">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Produto</th>
+                                            <th>Repositório (oficina)</th>
+                                            <th>Stack Principal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="bi bi-cart3"></i> PDV</td>
+                                            <td><code>caracore-cso</code></td>
+                                            <td>Java · Spring Boot · SQLite</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-pen"></i> Ink Agenda</td>
+                                            <td><code>caracore-ink</code></td>
+                                            <td>HTML · CSS · JS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-minecart-loaded"></i> Minerador 4.0</td>
+                                            <td><code>caracore-ete</code></td>
+                                            <td>Python</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-key"></i> Seed</td>
+                                            <td><code>caracore-seed</code></td>
+                                            <td>Python · Windows</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-signpost-split"></i> Circuito Ferradura</td>
+                                            <td><code>caracore-circuito</code></td>
+                                            <td>HTML · Python</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-hub"></i> Hub</td>
+                                            <td><code>caracore-hub</code></td>
+                                            <td>Python · Flask · PostgreSQL</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-shield-lock"></i> Área 51</td>
+                                            <td><code>caracore-area51</code></td>
+                                            <td>Python · Flask</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-mortarboard"></i> Reino OIDC</td>
+                                            <td><code>caracore-oidc</code></td>
+                                            <td>HTML · CSS · JS</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Camada 4: Lojas -->
+                    <section class="mb-5">
+                        <h2><i class="bi bi-shop-window text-info"></i> 4. Lojas (Subdomínios)</h2>
+                        <p>Cada produto é publicado em sua <strong>loja</strong> — um subdomínio com site próprio e wiki dedicada.</p>
+
+                        <div class="project-card">
+                            <div class="project-body">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Produto</th>
+                                            <th>Loja (subdomínio)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="bi bi-cart3"></i> PDV</td>
+                                            <td><a href="https://pdv.caracore.com.br">pdv.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-pen"></i> Ink Agenda</td>
+                                            <td><a href="https://ink.caracore.com.br">ink.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-minecart-loaded"></i> Minerador 4.0</td>
+                                            <td><a href="https://ete.caracore.com.br">ete.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-key"></i> Seed</td>
+                                            <td><a href="https://seed.caracore.com.br">seed.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-signpost-split"></i> Circuito Ferradura</td>
+                                            <td><a href="https://circuito.caracore.com.br">circuito.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-hub"></i> Hub</td>
+                                            <td><a href="https://hub.caracore.com.br">hub.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-shield-lock"></i> Área 51</td>
+                                            <td><a href="https://area51.caracore.com.br">area51.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-mortarboard"></i> Reino OIDC</td>
+                                            <td><a href="https://oidc.caracore.com.br">oidc.caracore.com.br</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Fluxo Visual -->
+                    <section class="mb-5">
+                        <h2><i class="bi bi-arrow-left-right text-secondary"></i> Fluxo: Matriz → Produto → Oficina → Loja</h2>
+                        <div class="alert alert-secondary">
+                            <p class="mb-2 text-center" style="font-size: 1.1rem;">
+                                <i class="bi bi-building"></i> <strong>Matriz</strong>
+                                &nbsp;<i class="bi bi-arrow-right"></i>&nbsp;
+                                <i class="bi bi-box-seam"></i> <strong>Produto</strong>
+                                &nbsp;<i class="bi bi-arrow-right"></i>&nbsp;
+                                <i class="bi bi-tools"></i> <strong>Oficina</strong> (repo)
+                                &nbsp;<i class="bi bi-arrow-right"></i>&nbsp;
+                                <i class="bi bi-shop-window"></i> <strong>Loja</strong> (subdomínio)
+                            </p>
+                            <p class="mb-0 text-muted text-center">A empresa define o produto, a oficina constrói e a loja entrega ao cliente final.</p>
+                        </div>
+                    </section>
+
+                    <!-- Próximos passos -->
+                    <section class="text-center">
+                        <h2><i class="bi bi-signpost-2 text-primary"></i> Explore Mais</h2>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a href="projetos-overview.html" class="btn-wiki me-2">
+                                <i class="bi bi-collection"></i> Visão Geral dos Projetos
+                            </a>
+                            <a href="https://wiki.caracore.com.br/portfolio.html" class="btn-wiki me-2">
+                                <i class="bi bi-briefcase"></i> Portfólio
+                            </a>
+                            <a href="index.html" class="btn-wiki">
+                                <i class="bi bi-compass"></i> Wiki Home
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="wiki-footer">
+        <div class="container">
+            <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+            <p>Wiki criado para orientação de estagiários e divulgação técnica</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Wiki JS -->
+    <script src="assets/js/wiki.js"></script>
+</body>
+</html>
