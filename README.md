@@ -6,7 +6,7 @@ O Wiki da Cara Core Informática foi criado como um guia completo para **estagi�
 
 ### Objetivo Principal
 
-Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: PDV, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://www.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
+Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: PDV, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
 
 ## Projetos Documentados
 
@@ -32,8 +32,8 @@ O Wiki foi desenvolvido com foco em **responsividade total**:
 - **HTML5** - Estrutura semântica
 - **CSS3** - Estilos responsivos com variáveis CSS
 - **JavaScript** - Interatividade e navegação
-- **Bootstrap 5.3.3** - Framework CSS
-- **Bootstrap Icons** - Iconografia consistente
+- **Bootstrap 5.3.3** - Framework CSS (arquivos em `docs/assets/vendor/`, sem CDN externa)
+- **Bootstrap Icons** - Iconografia consistente (mesmo pacote local)
 
 ## Estrutura de Arquivos
 
@@ -118,7 +118,7 @@ wiki/
 Para estagiários ou dúvidas sobre o Wiki:
 
 - **Email**: [suporte@caracore.com.br]
-- **Site principal**: [www.caracore.com.br](https://www.caracore.com.br)
+- **Wiki publicada**: [wiki.caracore.com.br](https://wiki.caracore.com.br/)
 
 ---
 

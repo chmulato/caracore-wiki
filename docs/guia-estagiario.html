@@ -7,9 +7,9 @@
     <meta name="description" content="Guia completo para novos estagiários da Cara Core Informática - configuração de ambiente, primeiros passos e orientações.">
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
     <!-- Wiki CSS -->
     <link rel="stylesheet" href="assets/css/wiki.css">
     <!-- Wiki Unified (overrides) -->
@@ -17,19 +17,7 @@
     <link rel="stylesheet" href="assets/css/wiki-institutional.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="https://www.caracore.com.br/favicon.ico" type="image/x-icon">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKFC9G3CL0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MKFC9G3CL0', {
-            page_title: 'Guia Estagiário - Wiki',
-            custom_map: {'custom_parameter_1': 'guia_estagiario'}
-        });
-    </script>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Navegação -->
@@ -44,17 +32,17 @@
             <div class="collapse navbar-collapse" id="navbarWiki">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.caracore.com.br/">
+                        <a class="nav-link" href="https://wiki.caracore.com.br/">
                             <i class="bi bi-house"></i> Site Principal
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.caracore.com.br/portfolio.html">
+                        <a class="nav-link" href="https://wiki.caracore.com.br/portfolio.html">
                             <i class="bi bi-briefcase"></i> Portfólio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
                             <i class="bi bi-globe2"></i> Eco Mundo
                         </a>
                     </li>
@@ -127,8 +115,8 @@
                                     <h4><i class="bi bi-1-circle text-success"></i> Semana 1: Conhecendo os Projetos</h4>
                                     <ul class="feature-list">
                                         <li>Leia a <a href="projetos-overview.html" class="alert-link">Visão Geral dos Projetos</a></li>
-                                        <li>Explore cada projeto no <a href="https://www.caracore.com.br/portfolio.html" class="alert-link">Portfólio</a></li>
-                                        <li>Veja o mapa do ecossistema (matriz, produtos, oficinas, lojas) em <a href="https://www.caracore.com.br/ecosistema.html" class="alert-link" title="Conheça o Nosso Eco Mundo">Eco Mundo</a></li>
+                                        <li>Explore cada projeto no <a href="https://wiki.caracore.com.br/portfolio.html" class="alert-link">Portfólio</a></li>
+                                        <li>Veja o mapa do ecossistema (matriz, produtos, oficinas, lojas) em <a href="https://wiki.caracore.com.br/ecosistema.html" class="alert-link" title="Conheça o Nosso Eco Mundo">Eco Mundo</a></li>
                                         <li>Baixe o <a href="https://oidc.caracore.com.br/download.html" class="alert-link">ReinoOIDC.exe</a> (projeto educativo FREE)</li>
                                         <li>Acesse a <a href="https://area51.caracore.com.br/wiki/index.html" class="alert-link">Área 51</a> (se tiver permissão)</li>
                                     </ul>
@@ -196,7 +184,7 @@
                                         <p><strong>O que é:</strong> Python é a linguagem de programação principal que usamos.</p>
                                         <p><strong>Como instalar:</strong></p>
                                         <ol>
-                                            <li>Acesse <a href="https://python.org" target="_blank" rel="noopener">python.org</a></li>
+                                            <li>Acesse o site oficial em <code class="user-select-all">https://www.python.org/</code> (fora da rede restrita, se necessário)</li>
                                             <li>Baixe Python 3.11 ou superior</li>
                                             <li>Execute o instalador</li>
                                             <li>✅ Marque "Add Python to PATH"</li>
@@ -217,7 +205,7 @@
                                         <p><strong>O que é:</strong> Git é como um "histórico de versões" do código.</p>
                                         <p><strong>Como configurar:</strong></p>
                                         <ol>
-                                            <li>Baixe em <a href="https://git-scm.com" target="_blank" rel="noopener">git-scm.com</a></li>
+                                            <li>Baixe em <code class="user-select-all">https://git-scm.com/</code> (fora da rede restrita, se necessário)</li>
                                             <li>Instale com configurações padrão</li>
                                             <li>Configure seu nome e email:</li>
                                         </ol>
@@ -254,7 +242,7 @@ git config --global user.email "seu@email.com"</code></pre>
                                         <p><strong>O que é:</strong> "Nuvem" onde guardamos todo o código dos projetos.</p>
                                         <p><strong>Primeiros passos:</strong></p>
                                         <ul class="feature-list">
-                                            <li>Crie conta no <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+                                            <li>Crie conta no GitHub: <code class="user-select-all">https://github.com/</code> (fora da rede restrita, se necessário)</li>
                                             <li>Solicite acesso aos repositórios</li>
                                             <li>Configure chave SSH (seu supervisor ajuda)</li>
                                         </ul>
@@ -393,7 +381,7 @@ git config --global user.email "seu@email.com"</code></pre>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmFXPbcO9QPWZL9xRmdZLe6HMFND" crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Wiki JS -->
     <script src="assets/js/wiki.js"></script>
 </body>
