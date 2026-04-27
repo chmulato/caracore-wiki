@@ -14,7 +14,7 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 2. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 3. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
 4. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
-5. **Circuito Ferradura** - Produto chamariz (curso proprietário de lógica, ábaco romano e Python para jovens; gratuito para pessoas físicas e licença para escolas)
+5. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
 6. **Cara Core Hub** - Sistema de integração e e-commerce
 7. **Área 51** - Consultoria OIDC / autenticação enterprise
 
