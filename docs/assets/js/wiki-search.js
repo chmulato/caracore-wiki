@@ -13,9 +13,16 @@ function initWikiSearch() {
     const wikiIndex = [
         {
             title: 'CaraCore PDV',
-            description: 'PDV para varejo com foco em continuidade, economia (Selo Verde) e conformidade fiscal 2026',
+            description: 'PDV para Windows com foco em continuidade de venda, PIX, operação local e conformidade fiscal',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'selo verde', 'economia', 'blindagem', 'fiscal', '2026', 'ibs', 'cbs', 'contingência', 'continuidade'],
+            tags: ['pdv', 'ponto de venda', 'varejo', 'pix', 'windows', 'javafx', 'quarkus', 'sqlite', 'fiscal', '2026', 'ibs', 'cbs', 'contingência', 'continuidade', 'pme'],
+            category: 'projeto'
+        },
+        {
+            title: 'Ink Agenda',
+            description: 'Aplicativo para estúdios de tatuagem com agenda, clientes, financeiro e operação offline no desktop',
+            url: 'projeto-ink.html',
+            tags: ['ink agenda', 'tatuagem', 'estúdio', 'agenda', 'financeiro', 'clientes', 'javafx', 'sqlite', 'offline', 'windows', 'rc4'],
             category: 'projeto'
         },
         {

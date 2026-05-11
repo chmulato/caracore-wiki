@@ -2,21 +2,22 @@
 
 ## Sobre este Wiki
 
-O Wiki da Cara Core Informática foi criado como um guia completo para **estagiários**, **colaboradores** e **pessoas interessadas** em nossos projetos de tecnologia. 
+O Wiki da Cara Core Informática foi criado como um guia completo para **estagiários**, **colaboradores** e **pessoas interessadas** em nossos projetos de tecnologia.
 
 ### Objetivo Principal
 
-Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: PDV, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
+Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: PDV, Ink Agenda, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
 
 ## Projetos Documentados
 
-1. **CaraCore PDV** - Sistema de ponto de venda (Reforma Tributária, PIX, offline)
-2. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
-3. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
-4. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
-5. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
-6. **Cara Core Hub** - Sistema de integração e e-commerce
-7. **Área 51** - Consultoria OIDC / autenticação enterprise
+1. **CaraCore PDV** - Sistema de ponto de venda para Windows, com foco em pequenos e médios negócios, PIX, operação local e conformidade fiscal
+2. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes, financeiro e linha desktop em lançamento
+3. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
+4. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
+5. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
+6. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
+7. **Cara Core Hub** - Sistema de integração e e-commerce
+8. **Área 51** - Consultoria OIDC / autenticação enterprise
 
 ## Design Responsivo
 
@@ -58,7 +59,7 @@ wiki/
 ### Depois (Wiki Unificado)
 
 - Localização: `D:\dev\site\cara-core\wiki\`
-- Foco: **Todos os projetos** (PDV, Minerador 4.0, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51) com explicações para leigos e estagiários
+- Foco: **Todos os projetos** (PDV, Ink Agenda, Minerador 4.0, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51) com explicações para leigos e estagiários
 - Público: **Estagiários**, colaboradores e interessados em geral
 
 ### Links Atualizados
