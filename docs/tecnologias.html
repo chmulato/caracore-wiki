@@ -119,7 +119,7 @@
                     <section id="java-spring" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv">
-                                <h2><i class="bi bi-cash-stack"></i> Java, Quarkus e JavaFX</h2>
+                                <h2><i class="bi bi-cash-stack"></i> Java, Quarkus e JavaFX (linha PDV Desktop)</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Java 21</span>
                                     <span class="tech-badge">Quarkus</span>
@@ -137,7 +137,7 @@
                                         <p><strong>Quarkus</strong> ajuda a organizar APIs e integrações locais com foco em desempenho. <strong>JavaFX</strong> cuida da interface desktop que o operador usa no dia a dia.</p>
                                         
                                         <div class="alert alert-info">
-                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV</strong>, nosso sistema de ponto de venda para Windows, que hoje opera com Java, Quarkus, JavaFX e SQLite local.
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Desktop (Java · JavaFX)</strong>, oferta madura multi-plataforma. A nova linha <a href="projeto-pdv-rust.html">PDV v3 (Rust)</a> usa stack separada (Tauri + React).
                                         </div>
                                         <div class="alert alert-info mt-3 mb-0" role="note">
                                             <i class="bi bi-megaphone-fill"></i> <strong>Posicionamento V3 padronizado:</strong> foco em <strong>pequenos e médios negócios</strong>, direção prática para <strong>PIX Split 2027</strong> e transparência sobre o que já está pronto e o que está em evolução.
@@ -155,6 +155,37 @@
                                         </ul>
                                         <p><strong>Persona de negócio padronizada:</strong> gestor(a) de loja PME em crescimento, com equipe enxuta e pressão por fluxo de caixa, buscando simplificar a rotina fiscal e financeira no caixa.</p>
                                         <p><strong>Projeto de referência:</strong> <a href="projeto-pdv.html">CaraCore PDV</a> — documentação completa da stack, fluxos e links para a apresentação e tecnologia no site do PDV. Veja também <a href="trilha-cliente.html#v3-pdv-transparencia">Transparência V3 + Persona</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Rust e Tauri (PDV v3) -->
+                    <section id="rust-tauri" class="mb-5">
+                        <div class="project-card">
+                            <div class="project-header pdv-rust">
+                                <h2><i class="bi bi-lightning-charge"></i> Rust e Tauri 2</h2>
+                                <div class="mt-2">
+                                    <span class="tech-badge">Rust</span>
+                                    <span class="tech-badge">Tauri 2</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">SQLite</span>
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <p><strong>Rust</strong> é uma linguagem moderna focada em segurança e performance. <strong>Tauri</strong> empacota o aplicativo para Windows com instalador em português, mantendo o programa enxuto.</p>
+                                        <div class="alert alert-info">
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> na linha <strong>Cara Core PDV v3</strong>, em piloto Windows (release v0.1.0). A linha Java continua para quem precisa de Linux/macOS hoje.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <p>Monorepo <code>caracore-pdv-rust</code> com crates Rust, app Tauri e frontend React. Releases via GitHub Actions e scripts Python com validação de artefatos pt-BR.</p>
+                                        <p><strong>Projeto de referência:</strong> <a href="projeto-pdv-rust.html">PDV v3 (Rust)</a> · <a href="https://chmulato.github.io/caracore-rust-pdv-releases/wiki/index.html" target="_blank" rel="noopener">Wiki da loja</a></p>
                                     </div>
                                 </div>
                             </div>

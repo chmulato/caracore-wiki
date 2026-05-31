@@ -10,14 +10,15 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 
 ## Projetos Documentados
 
-1. **CaraCore PDV** - Sistema de ponto de venda para Windows, com foco em pequenos e médios negócios, PIX, operação local e conformidade fiscal
-2. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes, financeiro e linha desktop em lançamento
-3. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
-4. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
-5. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
-6. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
-7. **Cara Core Hub** - Sistema de integração e e-commerce
-8. **Área 51** - Consultoria OIDC / autenticação enterprise
+1. **CaraCore PDV Desktop (Java · JavaFX)** - Oferta madura multi-plataforma: PIX, operação local e conformidade fiscal
+2. **Cara Core PDV v3 (Rust + Tauri)** - Piloto Windows com instaladores pt-BR; coexiste com a linha Java
+3. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes, financeiro e linha desktop em lançamento
+4. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
+5. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
+6. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
+7. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
+8. **Cara Core Hub** - Sistema de integração e e-commerce
+9. **Área 51** - Consultoria OIDC / autenticação enterprise
 
 ## Design Responsivo
 

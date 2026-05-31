@@ -75,6 +75,7 @@
                             <a href="projetos-overview.html" class="active"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a>
                             <ul class="submenu">
                                 <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
+                                <li><a href="projeto-pdv-rust.html">PDV v3 (Rust)</a></li>
                                 <li><a href="projeto-ink.html">Ink Agenda</a></li>
                                 <li><a href="projeto-minerador.html">Minerador 4.0</a></li>
                                 <li><a href="projeto-reino.html">Reino OIDC</a></li>
@@ -108,7 +109,8 @@
                             <h3><i class="bi bi-people"></i> Para Pessoas Leigas</h3>
                             <p>A Cara Core Informática desenvolveu projetos principais que trabalham como um "ecossistema digital". Imagine nossa empresa como uma fábrica de software, onde cada projeto tem uma função específica:</p>
                             <ul class="feature-list">
-                                <li><strong>CaraCore PDV:</strong> O sistema de caixa para Windows, com PIX, operação local e evolução fiscal para pequenos e médios negócios</li>
+                                <li><strong>CaraCore PDV Desktop (Java):</strong> Oferta madura multi-plataforma — caixa, PIX, operação local e evolução fiscal para PMEs</li>
+                                <li><strong>Cara Core PDV v3 (Rust):</strong> Piloto Windows com Tauri — nova stack nativa, instaladores pt-BR (coexiste com a linha Java)</li>
                                 <li><strong>Ink Agenda:</strong> Gestão para estúdios de tatuagem — agenda, clientes e financeiro; <strong>última pre-release pública: RC4</strong> — <strong>lançamento oficial: 26/Jun/2026</strong></li>
                                 <li><strong>Minerador 4.0:</strong> Simulador de ETE e hidrometalurgia para <strong>Ensino Médio</strong> e mineração; upgrade Ouro 4.0 (R$ 29,90)</li>
                                 <li><strong>Reino OIDC:</strong> A "escola de segurança digital" para ensinar sobre logins (OAuth 2.1 e OIDC)</li>
@@ -133,25 +135,28 @@
                         </div>
                     </section>
 
-                    <!-- Projeto 1: CaraCore PDV -->
+                    <!-- Projeto 1: CaraCore PDV Desktop (Java) -->
                     <section class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv">
-                                <h2><i class="bi bi-cash-stack"></i> 1. CaraCore PDV - Sistema de Ponto de Venda</h2>
+                                <h2><i class="bi bi-cash-stack"></i> 1. CaraCore PDV Desktop — Java · JavaFX</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Java 21</span>
                                     <span class="tech-badge">Quarkus</span>
                                     <span class="tech-badge">JavaFX</span>
                                     <span class="tech-badge">SQLite</span>
-                                    <span class="tech-badge">Bootstrap 5</span>
-                                    <span class="tech-badge">v3.1.0</span>
+                                    <span class="tech-badge">v3.1.2-free</span>
+                                    <span class="tech-badge">Oferta madura</span>
                                 </div>
                             </div>
                             <div class="project-body">
+                                <div class="alert alert-secondary py-2 mb-3" role="note">
+                                    <i class="bi bi-lightning-charge"></i> Nova linha <strong>PDV v3 (Rust + Tauri)</strong> em piloto Windows — veja a <a href="#caracore-pdv-rust" class="alert-link">seção 1b</a>. A linha Java <strong>não é descontinuada</strong>.
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
-                                        <p>O CaraCore PDV é o sistema de caixa da loja: registrar vendas, receber PIX, emitir comprovantes e manter a operação estável no computador da empresa. O foco atual está em <strong>Windows Desktop</strong>, com operação local, banco SQLite e evolução fiscal voltada a pequenos e médios negócios.</p>
+                                        <p>O CaraCore PDV Desktop é o sistema de caixa maduro da Cara Core: registrar vendas, receber PIX, emitir comprovantes e manter a operação estável. Disponível em <strong>Windows · Linux · macOS</strong>, com operação local, banco SQLite e evolução fiscal voltada a pequenos e médios negócios.</p>
                                         <div class="alert alert-info mt-3 mb-3">
                                             <strong>Posicionamento V3:</strong> produto direcionado a <strong>pequenos e médios negócios</strong>, com foco operacional no cenário de <strong>PIX Split 2027</strong>, para reduzir a complexidade da geração de notas e da conciliação no caixa.
                                         </div>
@@ -169,7 +174,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
-                                        <p>O checkout atual trabalha com <strong>Java 21 + Quarkus + JavaFX + SQLite</strong>. O código-fonte está em <strong>v3.1.0</strong>, com validação consolidada de <strong>930 testes</strong> sem falhas na checagem mais recente. O backend local cuida das APIs e integrações; a interface operacional fica na aplicação JavaFX.</p>
+                                        <p>O checkout Java trabalha com <strong>Java 21 + Quarkus + JavaFX + SQLite</strong>. Canal público atual: <strong>v3.1.2-free</strong>. O backend local cuida das APIs e integrações; a interface operacional fica na aplicação JavaFX.</p>
                                         <p><strong>Persona de negócio padronizada:</strong> gestor(a) de loja PME em crescimento, com equipe enxuta, pressão por fluxo de caixa e necessidade de simplificar rotina fiscal/financeira com transparência de evolução por versão.</p>
                                         
                                         <p><strong>Stack:</strong></p>
@@ -181,7 +186,7 @@
                                         </ul>
                                         
                                         <div class="alert alert-info mt-3">
-                                            <strong>Escopo:</strong> localhost e Windows Desktop · <strong>Links:</strong> <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">Portal oficial</a> · <a href="https://pdv.caracore.com.br/download.html" target="_blank" rel="noopener">Loja online</a> · <a href="https://pdv.caracore.com.br/download.html" target="_blank" rel="noopener">Releases</a>
+                                            <strong>Escopo:</strong> multi-plataforma (oferta madura) · <strong>Links:</strong> <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">Portal oficial</a> · <a href="https://pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">Wiki da loja</a>
                                         </div>
                                     </div>
                                 </div>
@@ -192,8 +197,56 @@
                                     <a href="https://pdv.caracore.com.br/download.html" class="btn-wiki me-2" target="_blank" rel="noopener">
                                         <i class="bi bi-shop"></i> Loja online
                                     </a>
+                                    <a href="https://pdv.caracore.com.br/wiki/index.html" class="btn-wiki me-2" target="_blank" rel="noopener">
+                                        <i class="bi bi-journal-text"></i> Wiki da loja (Java)
+                                    </a>
                                     <a href="projeto-pdv.html" class="btn-wiki">
-                                        <i class="bi bi-arrow-right"></i> Ver Detalhes Completos
+                                        <i class="bi bi-arrow-right"></i> Hub PDV (duas linhas)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Projeto 1b: Cara Core PDV v3 (Rust) -->
+                    <section id="caracore-pdv-rust" class="mb-5">
+                        <div class="project-card">
+                            <div class="project-header pdv-rust">
+                                <h2><i class="bi bi-lightning-charge"></i> 1b. Cara Core PDV v3 — Rust + Tauri</h2>
+                                <div class="mt-2">
+                                    <span class="tech-badge">Rust</span>
+                                    <span class="tech-badge">Tauri 2</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">SQLite</span>
+                                    <span class="tech-badge">v0.1.0</span>
+                                    <span class="tech-badge">Piloto Windows</span>
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <p>Nova geração do caixa CaraCore, reescrita em Rust para Windows, com instaladores em português (NSIS, MSI pt-BR, ZIP). Indicada para lojas piloto que querem testar a stack moderna sem abandonar a linha Java já madura.</p>
+                                        <ul class="feature-list">
+                                            <li>Vendas, caixa, produtos e relatórios locais</li>
+                                            <li>Operação offline no balcão</li>
+                                            <li>Release piloto v0.1.0 com verificação SHA256</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <p>Monorepo Rust + app Tauri 2 + UI React. Publicação automatizada (MSI WiX pt-BR, NSIS, ZIP). Oficina <code>caracore-pdv-rust</code>; loja <code>caracore-pdv-rust-releases</code> em GitHub Pages.</p>
+                                        <div class="alert alert-info mt-3">
+                                            <strong>Links:</strong> <a href="https://chmulato.github.io/caracore-rust-pdv-releases/" target="_blank" rel="noopener">Loja Rust</a> · <a href="https://chmulato.github.io/caracore-rust-pdv-releases/wiki/index.html" target="_blank" rel="noopener">Wiki da loja</a> · <a href="https://www.caracore.com.br/delivery/pdv-rust/" target="_blank" rel="noopener">Matriz</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="projeto-pdv-rust.html" class="btn-wiki me-2">
+                                        <i class="bi bi-arrow-right"></i> Resumo institucional
+                                    </a>
+                                    <a href="https://chmulato.github.io/caracore-rust-pdv-releases/download.html" class="btn-wiki" target="_blank" rel="noopener">
+                                        <i class="bi bi-download"></i> Download v0.1.0
                                     </a>
                                 </div>
                             </div>

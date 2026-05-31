@@ -12,10 +12,17 @@ function initWikiSearch() {
     // Índice de conteúdo do wiki
     const wikiIndex = [
         {
-            title: 'CaraCore PDV',
-            description: 'PDV para Windows com foco em continuidade de venda, PIX, operação local e conformidade fiscal',
+            title: 'CaraCore PDV Desktop (Java)',
+            description: 'PDV maduro multi-plataforma: PIX, operação local, JavaFX, Quarkus e conformidade fiscal',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'pix', 'windows', 'javafx', 'quarkus', 'sqlite', 'fiscal', '2026', 'ibs', 'cbs', 'contingência', 'continuidade', 'pme'],
+            tags: ['pdv', 'ponto de venda', 'varejo', 'pix', 'javafx', 'quarkus', 'sqlite', 'fiscal', 'pme', 'selo verde'],
+            category: 'projeto'
+        },
+        {
+            title: 'Cara Core PDV v3 (Rust)',
+            description: 'Nova linha PDV em Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.0',
+            url: 'projeto-pdv-rust.html',
+            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'v3', 'pt-br', 'msi', 'nsis'],
             category: 'projeto'
         },
         {

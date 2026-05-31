@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cara Core PDV v3 (Rust) | Wiki Cara Core</title>
+  <meta name="description" content="Resumo institucional do Cara Core PDV v3: Rust, Tauri 2, piloto Windows, instaladores pt-BR. Wiki completa na loja oficial.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://wiki.caracore.com.br/portfolio.html#caracore-pdv-rust"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="projeto-pdv.html"><i class="bi bi-cash-stack"></i> Hub PDV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="projeto-pdv.html">CaraCore PDV</a></li>
+          <li class="breadcrumb-item active">PDV v3 (Rust)</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="wiki-content">
+      <div class="project-card mb-4">
+        <div class="project-header pdv-rust">
+          <h1 class="h2 mb-2"><i class="bi bi-lightning-charge"></i> Cara Core PDV v3 (Rust + Tauri)</h1>
+          <p class="mb-0">Nova geração do caixa CaraCore — piloto Windows, instaladores em português do Brasil</p>
+        </div>
+        <div class="project-body">
+          <div class="mb-3">
+            <span class="tech-badge">Rust</span>
+            <span class="tech-badge">Tauri 2</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge">v0.1.0</span>
+          </div>
+
+          <div class="alert alert-warning" role="note">
+            <strong>Linha Java continua disponível:</strong> quem precisa de oferta madura multi-plataforma deve usar o
+            <a href="https://pdv.caracore.com.br/">PDV Desktop Selo Verde</a> (Java · JavaFX).
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-people"></i> Para leigos</h2>
+              <p>O PDV v3 é o caixa CaraCore reescrito com tecnologia moderna (Rust), empacotado para Windows com instalador em português. Ideal para lojas piloto que querem testar a nova geração mantendo dados locais na máquina da loja.</p>
+              <ul class="feature-list">
+                <li>Vendas, caixa, produtos e relatórios do dia</li>
+                <li>Operação offline para o balcão</li>
+                <li>NSIS, MSI pt-BR e ZIP portátil na release oficial</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-code"></i> Para estagiários</h2>
+              <p>Monorepo Rust com app desktop Tauri, frontend React e persistência SQLite. Publicação via scripts Python (<code>tauri_bundle_windows.py</code>, <code>publish_release_delivery.py</code>) com smoke de artefatos e manifesto SHA256.</p>
+              <ul class="feature-list">
+                <li><strong>Oficina:</strong> <code>caracore-pdv-rust</code></li>
+                <li><strong>Loja:</strong> <code>caracore-pdv-rust-releases</code> (GitHub Pages)</li>
+                <li><strong>Release piloto:</strong> v0.1.0 — Windows x64 pt-BR</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="https://chmulato.github.io/caracore-rust-pdv-releases/wiki/index.html" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-journal-text"></i> Wiki completa (loja)
+            </a>
+            <a href="https://chmulato.github.io/caracore-rust-pdv-releases/download.html" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-download"></i> Download v0.1.0
+            </a>
+            <a href="https://www.caracore.com.br/delivery/pdv-rust/" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-globe"></i> Matriz caracore.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
