@@ -21,7 +21,7 @@ alwaysApply: true
 | Linha | Página wiki | Loja |
 |-------|-------------|------|
 | PDV Desktop (Java · JavaFX) | projeto-pdv.html (hub) · link wiki loja Java | pdv.caracore.com.br |
-| PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | GitHub Pages SEED (loja Rust) |
+| PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | https://rust-pdv.caracore.com.br/ (vitrine canónica) |
 
 - **Mensagem fixa:** dois PDVs Desktop, mesmo produto; stacks distintas; nenhuma substitui a outra.
 - **V3 negócio** (PME, PIX Split 2027) ≠ v3.1.x (Java) ≠ v0.1.x (Rust).
