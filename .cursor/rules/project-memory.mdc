@@ -12,9 +12,10 @@ alwaysApply: true
 - **Público:** estagiários, colaboradores, interessados nos projetos.
 
 ## Relação com a matriz e lojas
-- **Matriz:** caracore-site (caracore.com.br) — portfólio, delivery, ecossistema.
-- **Lojas:** repositórios *-releases (vitrine e download por produto).
+- **Matriz:** caracore-site (caracore.com.br) — **portfólio** (`portfolio.html#{âncora}`), ecossistema, publicações. **Não** usar `/delivery/` como destino principal.
+- **Lojas:** repositórios *-releases (vitrine e download por produto) → `*.caracore.com.br`.
 - **Eco Mundo:** mapa visual alinhado — matriz `ecosistema.html`, wiki `docs/ecosistema.html`.
+- **Índice ecossistema:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
 
 ## CaraCore PDV — hub duas linhas desktop
 
@@ -23,6 +24,7 @@ alwaysApply: true
 | PDV Desktop (Java · JavaFX) | projeto-pdv.html (hub) · link wiki loja Java | pdv.caracore.com.br |
 | PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | https://rust-pdv.caracore.com.br/ (vitrine canónica) |
 
+- **Comparação única na matriz:** `portfolio.html#pdv-coexistencia`
 - **Mensagem fixa:** dois PDVs Desktop, mesmo produto; stacks distintas; nenhuma substitui a outra.
 - **V3 negócio** (PME, PIX Split 2027) ≠ v3.1.x (Java) ≠ v0.1.x (Rust).
 - **Evitar:** "PDV v3", "nova geração", "substitui".
@@ -40,9 +42,11 @@ alwaysApply: true
 ## Convenções
 - Ao alterar discurso PDV, sincronizar com matriz (caracore-site), ambas as lojas PDV e ECOSYSTEM_*.txt na matriz.
 - Links para lojas usam URLs canónicas (ver caracore-site/ECOSYSTEM_LOJAS.txt).
+- Links para matriz usam portfólio com âncora quando aplicável (ver ECOSYSTEM_MEMORIA.md).
 - README.md na raiz resume projetos documentados — manter alinhado ao portfólio.
 
 ## Documentos de ecossistema (matriz)
 - caracore-site/ECOSYSTEM_CARA_CORE.txt
 - caracore-site/ECOSYSTEM_LOJAS.txt
+- caracore-site/docs/ECOSYSTEM_MEMORIA.md
 - caracore-site/.cursor/rules/project-memory.mdc
