@@ -19,8 +19,8 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
-            title: 'Cara Core PDV v3 (Rust)',
-            description: 'Nova linha PDV em Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.0',
+            title: 'Cara Core PDV Desktop (Rust + Tauri)',
+            description: 'Iniciativa Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.0',
             url: 'projeto-pdv-rust.html',
             tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'v3', 'pt-br', 'msi', 'nsis'],
             category: 'projeto'

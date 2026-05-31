@@ -75,7 +75,7 @@
                             <a href="projetos-overview.html" class="active"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a>
                             <ul class="submenu">
                                 <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
-                                <li><a href="projeto-pdv-rust.html">PDV v3 (Rust)</a></li>
+                                <li><a href="projeto-pdv-rust.html">PDV Desktop (Rust + Tauri)</a></li>
                                 <li><a href="projeto-ink.html">Ink Agenda</a></li>
                                 <li><a href="projeto-minerador.html">Minerador 4.0</a></li>
                                 <li><a href="projeto-reino.html">Reino OIDC</a></li>
@@ -110,7 +110,7 @@
                             <p>A Cara Core Informática desenvolveu projetos principais que trabalham como um "ecossistema digital". Imagine nossa empresa como uma fábrica de software, onde cada projeto tem uma função específica:</p>
                             <ul class="feature-list">
                                 <li><strong>CaraCore PDV Desktop (Java):</strong> Oferta madura multi-plataforma — caixa, PIX, operação local e evolução fiscal para PMEs</li>
-                                <li><strong>Cara Core PDV v3 (Rust):</strong> Piloto Windows com Tauri — nova stack nativa, instaladores pt-BR (coexiste com a linha Java)</li>
+                                <li><strong>Cara Core PDV Desktop (Rust + Tauri):</strong> PDV desktop — Rust + Tauri 2, release v0.1.0, piloto Windows (coexiste com Java; não substitui)</li>
                                 <li><strong>Ink Agenda:</strong> Gestão para estúdios de tatuagem — agenda, clientes e financeiro; <strong>última pre-release pública: RC4</strong> — <strong>lançamento oficial: 26/Jun/2026</strong></li>
                                 <li><strong>Minerador 4.0:</strong> Simulador de ETE e hidrometalurgia para <strong>Ensino Médio</strong> e mineração; upgrade Ouro 4.0 (R$ 29,90)</li>
                                 <li><strong>Reino OIDC:</strong> A "escola de segurança digital" para ensinar sobre logins (OAuth 2.1 e OIDC)</li>
@@ -151,7 +151,7 @@
                             </div>
                             <div class="project-body">
                                 <div class="alert alert-secondary py-2 mb-3" role="note">
-                                    <i class="bi bi-lightning-charge"></i> Nova linha <strong>PDV v3 (Rust + Tauri)</strong> em piloto Windows — veja a <a href="#caracore-pdv-rust" class="alert-link">seção 1b</a>. A linha Java <strong>não é descontinuada</strong>.
+                                    <i class="bi bi-lightning-charge"></i> <strong>PDV Desktop (Rust + Tauri 2)</strong> — também desktop, piloto Windows — <a href="#caracore-pdv-rust" class="alert-link">seção 1b</a>. Canal Java <strong>v3.1.2-free</strong> permanece; release Rust <strong>v0.1.0</strong> é faixa distinta.
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -208,11 +208,11 @@
                         </div>
                     </section>
 
-                    <!-- Projeto 1b: Cara Core PDV v3 (Rust) -->
+                    <!-- Projeto 1b: Cara Core PDV Desktop (Rust + Tauri) -->
                     <section id="caracore-pdv-rust" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv-rust">
-                                <h2><i class="bi bi-lightning-charge"></i> 1b. Cara Core PDV v3 — Rust + Tauri</h2>
+                                <h2><i class="bi bi-lightning-charge"></i> 1b. Cara Core PDV Desktop (Rust + Tauri 2)</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Rust</span>
                                     <span class="tech-badge">Tauri 2</span>
@@ -226,7 +226,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
-                                        <p>Nova geração do caixa CaraCore, reescrita em Rust para Windows, com instaladores em português (NSIS, MSI pt-BR, ZIP). Indicada para lojas piloto que querem testar a stack moderna sem abandonar a linha Java já madura.</p>
+                                        <p>PDV <strong>desktop</strong> do CaraCore PDV: levar ao caixa as qualidades de <strong>Rust</strong> (segurança de memória, performance) e <strong>Tauri 2</strong> (shell enxuto, instaladores pt-BR). Piloto Windows, release v0.1.0 — convive com o PDV Desktop Java.</p>
                                         <ul class="feature-list">
                                             <li>Vendas, caixa, produtos e relatórios locais</li>
                                             <li>Operação offline no balcão</li>

@@ -11,7 +11,7 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 ## Projetos Documentados
 
 1. **CaraCore PDV Desktop (Java · JavaFX)** - Oferta madura multi-plataforma: PIX, operação local e conformidade fiscal
-2. **Cara Core PDV v3 (Rust + Tauri)** - Piloto Windows com instaladores pt-BR; coexiste com a linha Java
+2. **Cara Core PDV Desktop (Rust + Tauri 2)** - PDV desktop, piloto Windows com instaladores pt-BR (release v0.1.0); coexiste com PDV Desktop Java
 3. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes, financeiro e linha desktop em lançamento
 4. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 5. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
