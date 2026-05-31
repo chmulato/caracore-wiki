@@ -1,0 +1,48 @@
+---
+description: Memória da wiki institucional — caracore-wiki; wiki.caracore.com.br; hub PDV Desktop Java + Rust, ecossistema Eco Mundo
+alwaysApply: true
+---
+
+# Memória — caracore-wiki
+
+## Repositório e papel
+- **caracore-wiki:** wiki institucional da Cara Core Informática.
+- **URL:** https://wiki.caracore.com.br/
+- **Publicação:** GitHub Pages a partir de **docs/**.
+- **Público:** estagiários, colaboradores, interessados nos projetos.
+
+## Relação com a matriz e lojas
+- **Matriz:** caracore-site (caracore.com.br) — portfólio, delivery, ecossistema.
+- **Lojas:** repositórios *-releases (vitrine e download por produto).
+- **Eco Mundo:** mapa visual alinhado — matriz `ecosistema.html`, wiki `docs/ecosistema.html`.
+
+## CaraCore PDV — hub duas linhas desktop
+
+| Linha | Página wiki | Loja |
+|-------|-------------|------|
+| PDV Desktop (Java · JavaFX) | projeto-pdv.html (hub) · link wiki loja Java | pdv.caracore.com.br |
+| PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | GitHub Pages SEED (loja Rust) |
+
+- **Mensagem fixa:** dois PDVs Desktop, mesmo produto; stacks distintas; nenhuma substitui a outra.
+- **V3 negócio** (PME, PIX Split 2027) ≠ v3.1.x (Java) ≠ v0.1.x (Rust).
+- **Evitar:** "PDV v3", "nova geração", "substitui".
+
+## Páginas principais (docs/)
+- **index.html** — entrada
+- **projetos-overview.html** — visão geral (seções 1 Java, 1b Rust)
+- **projeto-pdv.html** — hub PDV (tabela qual linha escolher)
+- **projeto-pdv-rust.html** — resumo linha Rust
+- **ecosistema.html** — Eco Mundo
+- **tecnologias.html** — stack por produto
+- **trilha-cliente.html** — `#v3-pdv-transparencia` (V3 negócio)
+- **assets/js/wiki-search.js** — índice de busca (títulos alinhados ao discurso)
+
+## Convenções
+- Ao alterar discurso PDV, sincronizar com matriz (caracore-site), ambas as lojas PDV e ECOSYSTEM_*.txt na matriz.
+- Links para lojas usam URLs canónicas (ver caracore-site/ECOSYSTEM_LOJAS.txt).
+- README.md na raiz resume projetos documentados — manter alinhado ao portfólio.
+
+## Documentos de ecossistema (matriz)
+- caracore-site/ECOSYSTEM_CARA_CORE.txt
+- caracore-site/ECOSYSTEM_LOJAS.txt
+- caracore-site/.cursor/rules/project-memory.mdc
