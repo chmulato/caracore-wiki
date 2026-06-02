@@ -5,6 +5,8 @@ alwaysApply: true
 
 # Memória — caracore-wiki
 
+**Atualizado:** 2026-06-02 · **Índice ecossistema:** `D:\dev\caracore-site\docs\ECOSYSTEM_MEMORIA.md`
+
 ## Repositório e papel
 - **caracore-wiki:** wiki institucional da Cara Core Informática.
 - **URL:** https://wiki.caracore.com.br/
@@ -16,6 +18,7 @@ alwaysApply: true
 - **Lojas:** repositórios *-releases (vitrine e download por produto) → `*.caracore.com.br`.
 - **Eco Mundo:** mapa visual alinhado — matriz `ecosistema.html`, wiki `docs/ecosistema.html`.
 - **Índice ecossistema:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
+- **Retrô:** caracore-retro — https://retro.caracore.com.br/ (artigos públicos; ex. PDV Rust #114)
 
 ## CaraCore PDV — hub duas linhas desktop
 
