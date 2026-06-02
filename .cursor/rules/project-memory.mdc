@@ -22,7 +22,7 @@ alwaysApply: true
 | Linha | Página wiki | Loja |
 |-------|-------------|------|
 | PDV Desktop (Java · JavaFX) | projeto-pdv.html (hub) · link wiki loja Java | pdv.caracore.com.br |
-| PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | https://rust-pdv.caracore.com.br/ (vitrine canónica) |
+| PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | vitrine rust-pdv · download github.com/chmulato/caracore-rust-pdv-releases/releases · v0.1.1 |
 
 - **Comparação única na matriz:** `portfolio.html#pdv-coexistencia`
 - **Mensagem fixa:** dois PDVs Desktop, mesmo produto; stacks distintas; nenhuma substitui a outra.
