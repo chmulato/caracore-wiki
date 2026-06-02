@@ -14,7 +14,8 @@ alwaysApply: true
 - **Público:** estagiários, colaboradores, interessados nos projetos.
 
 ## Relação com a matriz e lojas
-- **Matriz:** caracore-site (caracore.com.br) — **portfólio** (`portfolio.html#{âncora}`), ecossistema, publicações. **Não** usar `/delivery/` como destino principal.
+- **Matriz:** caracore-site (caracore.com.br) — **portfólio** em `https://www.caracore.com.br/portfolio.html#{âncora}` (nunca `wiki.caracore.com.br/portfolio.html`). **Não** usar `/delivery/` como destino principal.
+- **Redirect wiki:** `docs/portfolio.html` → matriz (legado de links errados na nav).
 - **Lojas:** repositórios *-releases (vitrine e download por produto) → `*.caracore.com.br`.
 - **Eco Mundo:** mapa visual alinhado — matriz `ecosistema.html`, wiki `docs/ecosistema.html`.
 - **Índice ecossistema:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
