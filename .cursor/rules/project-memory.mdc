@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória — caracore-wiki
 
-**Atualizado:** 2026-06-02 · **Nova tarefa:** `D:\dev\caracore-site\docs\INICIAR_NOVA_TAREFA.md` · **Ecossistema:** `ECOSYSTEM_MEMORIA.md` (caracore-site)
+**Atualizado:** 2026-06-07 · **Nova tarefa:** `D:\dev\caracore-site\docs\INICIAR_NOVA_TAREFA.md` · **Ecossistema:** `ECOSYSTEM_MEMORIA.md` (caracore-site)
 
 ## Repositório e papel
 - **caracore-wiki:** wiki institucional da Cara Core Informática.
@@ -15,11 +15,12 @@ alwaysApply: true
 
 ## Relação com a matriz e lojas
 - **Matriz:** caracore-site (caracore.com.br) — **portfólio** em `https://www.caracore.com.br/portfolio.html#{âncora}` (nunca `wiki.caracore.com.br/portfolio.html`). **Não** usar `/delivery/` como destino principal.
+- **Matriz B2B:** `#engenharia-b2b` · `#decisoes-engenharia` · suporte PME em `suporte-local.html` (fora do nav principal)
 - **Redirect wiki:** `docs/portfolio.html` → matriz (legado de links errados na nav).
 - **Lojas:** repositórios *-releases (vitrine e download por produto) → `*.caracore.com.br`.
 - **Eco Mundo:** mapa visual alinhado — matriz `ecosistema.html`, wiki `docs/ecosistema.html`.
 - **Índice ecossistema:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
-- **Retrô:** caracore-retro — https://retro.caracore.com.br/ (artigos públicos; ex. PDV Rust #114)
+- **Retrô:** caracore-retro — https://retro.caracore.com.br/ (**104 artigos**; art. 115 B2B/IA · art. 114 PDV Rust)
 
 ## CaraCore PDV — hub duas linhas desktop
 
@@ -44,13 +45,13 @@ alwaysApply: true
 - **assets/js/wiki-search.js** — índice de busca (títulos alinhados ao discurso)
 
 ## Convenções
-- Ao alterar discurso PDV, sincronizar com matriz (caracore-site), ambas as lojas PDV e ECOSYSTEM_*.txt na matriz.
-- Links para lojas usam URLs canónicas (ver caracore-site/ECOSYSTEM_LOJAS.txt).
+- Ao alterar discurso PDV, sincronizar com matriz (caracore-site), ambas as lojas PDV e ECOSYSTEM_*.md na matriz.
+- Links para lojas usam URLs canónicas (ver caracore-site/docs/ECOSYSTEM_LOJAS.md).
 - Links para matriz usam portfólio com âncora quando aplicável (ver ECOSYSTEM_MEMORIA.md).
 - README.md na raiz resume projetos documentados — manter alinhado ao portfólio.
 
 ## Documentos de ecossistema (matriz)
-- caracore-site/ECOSYSTEM_CARA_CORE.txt
-- caracore-site/ECOSYSTEM_LOJAS.txt
+- caracore-site/docs/ECOSYSTEM_CARA_CORE.md
+- caracore-site/docs/ECOSYSTEM_LOJAS.md
 - caracore-site/docs/ECOSYSTEM_MEMORIA.md
 - caracore-site/.cursor/rules/project-memory.mdc
