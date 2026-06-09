@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RU (Bioreator) | Wiki Cara Core</title>
+  <meta name="description" content="RU (Bioreator): Dashboard acadêmico e industrial para simulação de estações biorreatoras e balanço de massa. Lançamento da versão FREE previsto no roadmap para 18 de junho de 2026.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item active">RU (Bioreator)</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="wiki-content">
+      <div class="project-card mb-4">
+        <div class="project-header" style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); color: white; padding: 2rem; border-radius: 8px 8px 0 0;">
+          <h1 class="h2 mb-2"><i class="bi bi-droplet"></i> RU (Bioreator) — Sala Retrô 1991</h1>
+          <p class="mb-0">Simulador de biorreator e balanço estequiométrico de massa</p>
+        </div>
+        <div class="project-body p-4">
+          <div class="mb-3">
+            <span class="tech-badge">Java 21</span>
+            <span class="tech-badge">JavaFX</span>
+            <span class="tech-badge">Maven</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge" style="background: #22c55e; color: white;">Lançamento FREE (Roadmap): 18/06/2026</span>
+          </div>
+
+          <div class="alert alert-info" role="note">
+            <strong>Bunker Acadêmico:</strong> Inspirado nas salas de aula de Engenharia Química e Hidrometalurgia de 1991 (UFPR), o simulador opera totalmente offline com uma interface nostálgica que emula a clássica calculadora HP-48SX no topo.
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-people"></i> Para leigos</h2>
+              <p>O simulador RU (Restaurante Universitário) permite simular a operação real de um tanque biológico, acompanhando o consumo de oxigênio, substratos e o crescimento de biomassa. O aluno explora conceitos clássicos de conservação de massa (Lei de Lavoisier) de forma visual e segura.</p>
+              <ul class="feature-list">
+                <li>HP48SX funcional embutida no topo do painel</li>
+                <li>Gráficos em tempo real sobre a microvida e gases no biorreator</li>
+                <li>Modo local gratuito para fins educacionais e acadêmicos</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-code"></i> Para estagiários</h2>
+              <p>Trabalhe com <strong>Java 21 + JavaFX</strong> utilizando a API assíncrona baseada em <strong>Virtual Threads</strong> (Java Concurrency) para evitar travamento da interface durante simulações pesadas.</p>
+              <ul class="feature-list">
+                <li><strong>Oficina:</strong> <code>caracore-ru</code></li>
+                <li><strong>Loja:</strong> <code>caracore-ru-releases</code> — Distribuição baseada em releases (.zip / .exe)</li>
+                <li><strong>Sovereignty Bridge:</strong> O sistema de controle de licenças e validação estequiométrica embutido (SovereigntyManager).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
