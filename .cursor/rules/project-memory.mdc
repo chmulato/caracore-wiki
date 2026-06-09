@@ -31,7 +31,7 @@ alwaysApply: true
 
 - **Comparação única na matriz:** `portfolio.html#pdv-coexistencia`
 - **Mensagem fixa:** dois PDVs Desktop, mesmo produto; stacks distintas; nenhuma substitui a outra.
-- **V3 negócio** (PME, PIX Split 2027) ≠ v3.1.x (Java) ≠ v0.1.x (Rust).
+- **V3 negócio** (PME, PIX Split 2027) ≠ v3.2.2-free (Java) ≠ v0.1.2 (Rust).
 - **Evitar:** "PDV v3", "nova geração", "substitui".
 
 ## Páginas principais (docs/)
