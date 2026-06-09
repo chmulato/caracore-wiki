@@ -19,6 +19,7 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 7. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
 8. **Cara Core Hub** - Sistema de integração e e-commerce
 9. **Área 51** - Consultoria OIDC / autenticação enterprise
+10. **Helianto Condominium** - Sistema completo para administração condominial com soberania de dados e motor financeiro auditável (lançamento em 30 de dezembro de 2027)
 
 ## Design Responsivo
 
@@ -60,7 +61,7 @@ wiki/
 ### Depois (Wiki Unificado)
 
 - Localização: `D:\dev\site\cara-core\wiki\`
-- Foco: **Todos os projetos** (PDV, Ink Agenda, Minerador 4.0, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51) com explicações para leigos e estagiários
+- Foco: **Todos os projetos** (PDV, Ink Agenda, Minerador 4.0, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51, Helianto) com explicações para leigos e estagiários
 - Público: **Estagiários**, colaboradores e interessados em geral
 
 ### Links Atualizados

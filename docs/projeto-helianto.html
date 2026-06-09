@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helianto Condominium | Wiki Cara Core</title>
+  <meta name="description" content="Helianto Condominium: Sistema de administração condominial com soberania de dados, motor financeiro auditável e suporte a BolePix. Lançamento em 30 de dezembro de 2027.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-helianto"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item active">Helianto Condominium</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="wiki-content">
+      <div class="project-card mb-4">
+        <div class="project-header" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 2rem; border-radius: 8px 8px 0 0;">
+          <h1 class="h2 mb-2"><i class="bi bi-building"></i> Helianto Condominium</h1>
+          <p class="mb-0">Administração condominial com soberania de dados, motor financeiro auditável e suporte a BolePix híbrido</p>
+        </div>
+        <div class="project-body p-4">
+          <div class="mb-3">
+            <span class="tech-badge">Java 25</span>
+            <span class="tech-badge">Spring Boot 4</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">JasperReports</span>
+            <span class="tech-badge">BolePix</span>
+            <span class="tech-badge" style="background: #22c55e; color: white;">Lançamento: 30/12/2027</span>
+          </div>
+
+          <div class="alert alert-info" role="note">
+            <strong>Arquitetura Multi-Tenant Sólida:</strong> O Helianto opera com isolamento multilocatário no banco de dados relacional via <code>tenant_id</code> e filtro automático no Hibernate, protegendo os dados pessoais de cada morador com total rigor técnico.
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-people"></i> Para leigos</h2>
+              <p>O Helianto é uma plataforma completa que facilita a vida do síndico e dos moradores. Ele gerencia as unidades, calcula o rateio das despesas (igualitário ou por fração ideal), cobra as cotas usando boleto integrado ao Pix (BolePix) para liquidação imediata e disponibiliza um extrato de despesas simples de entender.</p>
+              <ul class="feature-list">
+                <li>Visualização clara dos boletos e cópia da linha digitável ou QR Pix</li>
+                <li>Breakdown detalhado do valor cobrado (taxa ordinária, fundo de obras, etc.)</li>
+                <li>Lembretes automáticos e controle de consentimentos de privacidade (LGPD)</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-code"></i> Para estagiários</h2>
+              <p>O monorepo do Helianto utiliza <strong>Spring Boot 4.0.6 + Java 25</strong>. Como estagiário, você trabalhará estendendo endpoints financeiros, ajustando o front-end responsivo React e lidando com o JasperReports para customização de PDF.</p>
+              <ul class="feature-list">
+                <li><strong>Oficina:</strong> <code>caracore-helianto</code> (Monorepo)</li>
+                <li><strong>Loja:</strong> <code>caracore-helianto-releases</code> — <a href="https://chmulato.github.io/caracore-helianto-releases/">releases store</a></li>
+                <li><strong>Garantia de Qualidade:</strong> JaCoCo para cobertura de testes integrado ao Maven</li>
+                <li><strong>Privacidade:</strong> PrivacyGuard (LGPD Shield) habilitado para mascaramento de PII em logs</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="https://chmulato.github.io/caracore-helianto-releases/" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-shop"></i> Loja oficial (releases)
+            </a>
+            <a href="https://chmulato.github.io/caracore-helianto-releases/manual/" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-book"></i> Manual do Produto
+            </a>
+            <a href="https://www.caracore.com.br/portfolio.html#caracore-helianto" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-globe"></i> Portfólio Cara Core
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

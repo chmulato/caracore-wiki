@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -83,6 +83,7 @@
                                 <li><a href="projeto-python.html">Circuito Ferradura</a></li>
                                 <li><a href="projeto-hub.html">Cara Core Hub</a></li>
                                 <li><a href="projeto-area51.html">Área 51</a></li>
+                                <li><a href="projeto-helianto.html">Helianto Condominium</a></li>
                             </ul>
                         </li>
                         <li><a href="tecnologias.html"><i class="bi bi-gear"></i> Tecnologias Utilizadas</a></li>
@@ -118,6 +119,7 @@
                                 <li><strong>Circuito Ferradura:</strong> produto educacional em evolução para apresentar lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas interessadas</li>
                                 <li><strong>Cara Core Hub:</strong> O "centro de controle" de e-commerce e integração — <em>Garagem, lançamento previsto: Abr/2027</em></li>
                                 <li><strong>Área 51:</strong> Consultoria OIDC — autenticação enterprise (OAuth 2.1, OIDC, PKCE)</li>
+                                <li><strong>Helianto Condominium:</strong> Sistema de administração condominial com soberania de dados e motor financeiro auditável — <em>Garagem, lançamento previsto: Dez/2027</em></li>
                             </ul>
                             <p><strong>Política institucional:</strong> quando houver trilha Free/Premium, a versão Free é liberada sem cobrança; a versão Premium é liberada somente após confirmação de pagamento e registro LGPD do atendimento.</p>
                         </div>
@@ -643,6 +645,64 @@
                             </div>
                         </div>
                     </section>
+
+                    <!-- Projeto 9: Helianto Condominium -->
+                    <section class="mb-5">
+                        <div class="project-card">
+                            <div class="project-header" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;">
+                                <h2><i class="bi bi-building"></i> 9. Helianto Condominium — Administração Condominial</h2>
+                                <div class="mt-2">
+                                    <span class="tech-badge">Java 25</span>
+                                    <span class="tech-badge">Spring Boot 4</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                    <span class="tech-badge">JasperReports</span>
+                                    <span class="tech-badge" style="background: #22c55e; color: white;">Garagem — Dez/2027</span>
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <p>O Helianto Condominium é a central do morador e do síndico para organizar a rotina do condomínio. Ele controla a entrada/saída de moradores, faz o rateio das despesas mensais de forma justa e gera o boleto contendo o QR Code Pix de liquidação imediata (BolePix) com total conformidade e privacidade.</p>
+                                        <p><strong>Destaques:</strong></p>
+                                        <ul class="feature-list">
+                                            <li>Acesso a boletos e cópia da linha digitável no celular</li>
+                                            <li>Gestão de moradores e vínculo a unidades</li>
+                                            <li>Baixa automática e manual de pagamentos</li>
+                                            <li>Rateio por fração ideal, valor fixo ou igualitário</li>
+                                            <li>Histórico de consentimento LGPD integrado</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <p>Arquitetura moderna de multilocação (multi-tenant) com shared schema PostgreSQL e isolamento robusto via <code>tenant_id</code> e ThreadLocal.</p>
+                                        <p><strong>Stack:</strong></p>
+                                        <ul class="feature-list">
+                                            <li>Backend: Spring Boot 4.0.6, Java 25 LTS, Spring Data JPA</li>
+                                            <li>Frontend: React + Vite + TypeScript responsivo (abstração por persona)</li>
+                                            <li>Relatórios: PDF via JasperReports e QR Code Pix EMV integrado</li>
+                                            <li>Segurança: RBAC (ADMIN, SYNDIC, USER) e sanitização LGPD via PrivacyGuard (LGPD Shield)</li>
+                                        </ul>
+                                        <div class="alert alert-info mt-3">
+                                            <strong>Escopo:</strong> Monorepo corporativo · <strong>Releases:</strong> <a href="https://chmulato.github.io/caracore-helianto-releases/" target="_blank" rel="noopener">chmulato.github.io/caracore-helianto-releases</a>
+                                        </div>
+                                        <div class="alert alert-success mt-3">
+                                            <strong>Seu papel como estagiário:</strong> Desenvolver endpoints de relatórios adicionais, ajudar na cobertura de testes integrados do motor financeiro e auxiliar na interface React de visualização de consumo.
+                                        </div>
+                                     </div>
+                                 </div>
+                                 <div class="text-center mt-3">
+                                     <a href="projeto-helianto.html" class="btn-wiki me-2">
+                                         <i class="bi bi-arrow-right"></i> Wiki do Helianto
+                                     </a>
+                                     <a href="https://chmulato.github.io/caracore-helianto-releases/" class="btn-wiki me-2" target="_blank" rel="noopener">
+                                         <i class="bi bi-shop"></i> Releases Store
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
+                     </section>
 
                     <!-- Integração entre Projetos -->
                     <section class="mb-5">
