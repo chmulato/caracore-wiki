@@ -12,7 +12,7 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 
 1. **CaraCore PDV Desktop (Java · JavaFX)** - Oferta madura multi-plataforma: PIX, operação local e conformidade fiscal
 2. **Cara Core PDV Desktop (Rust + Tauri 2)** - PDV desktop, piloto Windows com instaladores pt-BR (release v0.1.0); coexiste com PDV Desktop Java
-3. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes, financeiro e linha desktop em lançamento
+3. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes e financeiro; versão estável v2.0.0 publicada oficialmente em 26/Jun/2026
 4. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 5. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
 6. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
