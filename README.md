@@ -20,6 +20,7 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 8. **Cara Core Hub** - Sistema de integração e e-commerce
 9. **Área 51** - Consultoria OIDC / autenticação enterprise
 10. **Helianto Condominium** - Sistema completo para administração condominial com soberania de dados e motor financeiro auditável (lançamento em 30 de dezembro de 2027)
+11. **Cara Core CSO** - Plataforma dual para frotas e logística: Gestão de Frotas (Web, já em produção 2026) e Gestão de Transportes (Desktop offline-first, bunker para telemetria/backup com previsão para 2028).
 
 ## Design Responsivo
 
