@@ -19,17 +19,17 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
-            title: 'Cara Core PDV Desktop (Rust + Tauri)',
-            description: 'Iniciativa Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.0',
+            title: 'CaraCore PDV (Rust + Tauri)',
+            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.2',
             url: 'projeto-pdv-rust.html',
-            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'v3', 'pt-br', 'msi', 'nsis'],
+            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.2'],
             category: 'projeto'
         },
         {
             title: 'Ink Agenda',
-            description: 'Aplicativo para estúdios de tatuagem com agenda, clientes, financeiro e operação offline no desktop',
+            description: 'Aplicativo para estúdios de tatuagem com agenda, clientes, financeiro e operação offline no desktop — v2.0.0 lançada',
             url: 'projeto-ink.html',
-            tags: ['ink agenda', 'tatuagem', 'estúdio', 'agenda', 'financeiro', 'clientes', 'javafx', 'sqlite', 'offline', 'windows', 'rc4'],
+            tags: ['ink agenda', 'tatuagem', 'estúdio', 'agenda', 'financeiro', 'clientes', 'javafx', 'sqlite', 'offline', 'windows', 'v2.0.0'],
             category: 'projeto'
         },
         {
@@ -41,16 +41,16 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Sistema de gerenciamento centralizado com APIs REST para integração de sistemas',
+            description: 'Gestão logística e e-commerce (WAR/Tomcat) para centros de distribuição — Garagem Abr/2027',
             url: 'projeto-hub.html',
-            tags: ['python', 'flask', 'docker', 'api', 'rest', 'backend', 'integração'],
+            tags: ['java', 'tomcat', 'war', 'logística', 'e-commerce', 'hub', 'garagem'],
             category: 'projeto'
         },
         {
             title: 'CaraCore Seed',
-            description: 'Template base para criação rápida de novos projetos Python',
+            description: 'Contador de licenças interno — vitrine pública; aplicação não está em oferta',
             url: 'projeto-seed.html',
-            tags: ['python', 'template', 'boilerplate', 'git', 'starter'],
+            tags: ['seed', 'licença', 'interno', 'windows', 'sqlite', 'contador'],
             category: 'projeto'
         },
         {
@@ -69,10 +69,45 @@ function initWikiSearch() {
         },
         {
             title: 'Circuito Ferradura',
-            description: 'Projeto de treinamento em Python para estagiários',
+            description: 'Produto educacional em evolução para lógica, ábaco romano e Python',
             url: 'projeto-python.html',
-            tags: ['python', 'treinamento', 'educação', 'estagiário', 'tutorial'],
+            tags: ['python', 'treinamento', 'educação', 'estagiário', 'circuito', 'ferradura'],
             category: 'projeto'
+        },
+        {
+            title: 'CaraCore CSO',
+            description: 'Gestão de Frotas (Web, em produção) e Gestão de Transportes (Desktop 2028) em cso.caracore.com.br',
+            url: 'projeto-cso.html',
+            tags: ['cso', 'frotas', 'transportes', 'quarkus', 'logística', 'javafx', 'produção'],
+            category: 'projeto'
+        },
+        {
+            title: 'RU Soberano',
+            description: 'Simulador de reator e sala RETRO — lançamento 18/06/2027, loja ru.caracore.com.br',
+            url: 'projeto-ru.html',
+            tags: ['ru', 'soberano', 'reator', 'retro', 'javafx', 'engenharia', 'simulador'],
+            category: 'projeto'
+        },
+        {
+            title: 'Helianto Condominium',
+            description: 'Administração condominial com soberania de dados — helianto.caracore.com.br, lançamento 30/12/2027',
+            url: 'projeto-helianto.html',
+            tags: ['helianto', 'condomínio', 'bolepix', 'spring boot', 'react', 'postgresql'],
+            category: 'projeto'
+        },
+        {
+            title: 'Cara Core MKT',
+            description: 'Vitrine gratuita e Sala Cara Core — rotina, disciplina e presença digital. Não vendemos.',
+            url: 'projeto-mkt.html',
+            tags: ['mkt', 'sala', 'gratuito', 'lgpd', 'python', 'tools'],
+            category: 'projeto'
+        },
+        {
+            title: 'Eco Mundo',
+            description: 'Mapa do ecossistema: matriz, produtos, oficinas, lojas e presenças institucionais',
+            url: 'ecosistema.html',
+            tags: ['eco mundo', 'ecossistema', 'matriz', 'oficina', 'loja', 'mapa'],
+            category: 'navegação'
         },
         {
             title: 'Visão Geral dos Projetos',

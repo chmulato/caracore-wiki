@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cara Core CSO | Wiki Cara Core</title>
-  <meta name="description" content="Cara Core CSO: Sistema de soberania operacional para gestão de entregas e logística de serviços. Lançamento planejado no roadmap para 8 de novembro de 2028.">
+  <title>CaraCore CSO | Wiki Cara Core</title>
+  <meta name="description" content="CaraCore CSO: plataforma dual de Gestão de Frotas (Web, em produção em cso.caracore.com.br) e Gestão de Transportes (Desktop bunker, lançamento 08/11/2028).">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -33,7 +33,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
-          <li class="breadcrumb-item active">Cara Core CSO</li>
+          <li class="breadcrumb-item active">CaraCore CSO</li>
         </ol>
       </nav>
     </div>
@@ -43,50 +43,57 @@
     <div class="wiki-content">
       <div class="project-card mb-4">
         <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 2rem; border-radius: 8px 8px 0 0;">
-          <h1 class="h2 mb-2"><i class="bi bi-truck"></i> Cara Core CSO</h1>
-          <p class="mb-0">Gestão operacional de transportes, entregas e logística de serviços</p>
+          <h1 class="h2 mb-2"><i class="bi bi-truck"></i> CaraCore CSO</h1>
+          <p class="mb-0">Gestão de Frotas (Web) e Gestão de Transportes (Desktop) — soberania operacional para logística</p>
         </div>
         <div class="project-body p-4">
           <div class="mb-3">
-            <span class="tech-badge">Java 21</span>
             <span class="tech-badge">Quarkus</span>
+            <span class="tech-badge">Java 21</span>
+            <span class="tech-badge">PostgreSQL</span>
             <span class="tech-badge">JavaFX</span>
-            <span class="tech-badge">Vue 3</span>
             <span class="tech-badge">SQLite</span>
-            <span class="tech-badge" style="background: #f59e0b; color: #1a1a1a;">Lançamento (Roadmap): 08/11/2028</span>
+            <span class="tech-badge" style="background: #22c55e; color: white;">Frotas em produção</span>
+            <span class="tech-badge" style="background: #f59e0b; color: #1a1a1a;">Transportes 08/11/2028</span>
           </div>
 
           <div class="alert alert-info" role="note">
-            <strong>O Poder da Tela Preta:</strong> O CSO prioriza a eficiência bruta dos dados, a telemetria limpa e a rastreabilidade segura sobre decorações gráficas pesadas. É um sistema construído para funcionar de forma imediata e sem atrito na última milha operacional.
+            <strong>Duas frentes, um produto:</strong> a <strong>Gestão de Frotas</strong> já opera no navegador em
+            <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>
+            (captação, planos, frota e LGPD). A <strong>Gestão de Transportes</strong> é o bunker desktop (JavaFX + SQLite) para telemetria e backup local, com lançamento em <strong>08 de novembro de 2028</strong>.
           </div>
 
           <div class="row g-4">
             <div class="col-md-6">
               <h2 class="h5"><i class="bi bi-people"></i> Para leigos</h2>
-              <p>O Cara Core CSO é o painel de controle para frotas e serviços de transporte de mercadorias. Ele organiza as coletas, o roteiro de entrega de cada veículo, o status do motorista e garante o registro correto de que a mercadoria chegou ao destino sem falhas.</p>
+              <p>O <strong>CaraCore CSO</strong> é o centro logístico da operação. No dia a dia, a equipe usa o aplicativo web para veículos, motoristas, viagens, custos e planos. O desktop (quando chegar) guarda os dados críticos no computador da empresa e cuida do rastreamento pesado — mesmo se a internet falhar.</p>
               <ul class="feature-list">
-                <li>Gestão de entregas e despacho em tempo real</li>
-                <li>Rastreabilidade de encomendas e rotas inteligentes</li>
-                <li>Operação local resiliente mesmo sem conexão constante</li>
+                <li>Gestão de frota no navegador (já disponível)</li>
+                <li>Planos FREE_3, P5, P10 e CORPORATE, com Pix e registro LGPD</li>
+                <li>Bunker local para telemetria e backup (trilha 2028)</li>
               </ul>
             </div>
             <div class="col-md-6">
               <h2 class="h5"><i class="bi bi-code"></i> Para estagiários</h2>
-              <p>O desenvolvimento da oficina CSO se apoia em um backend REST robusto em <strong>Quarkus (Java)</strong>, interface nativa desktop com <strong>JavaFX</strong> e uma SPA leve em <strong>Vue 3</strong>.</p>
+              <p>Não há uma oficina única <code>caracore-cso</code>. O produto vive em duas oficinas e a URL pública é a aplicação, não uma loja GitHub Pages.</p>
               <ul class="feature-list">
-                <li><strong>Oficina:</strong> <code>caracore-cso</code></li>
-                <li><strong>Loja:</strong> <code>caracore-cso-releases</code> — <a href="https://chmulato.github.io/caracore-cso-releases/">releases store</a></li>
-                <li><strong>Protocolo Amarelinha:</strong> A evolução conceitual de entregas do CSO estruturada em 5 atos (Geometria, Dinâmica, Sombra, Massa, Céu).</li>
+                <li><strong>Frotas (Web):</strong> oficina <code>caracore-cso-quarkus</code> — Quarkus, PostgreSQL, Qute/HTMX, i18n</li>
+                <li><strong>Transportes (Desktop):</strong> oficina <code>caracore-cso-transportes</code> — JavaFX + SQLite, bunker offline</li>
+                <li><strong>Aplicação canónica:</strong> <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a></li>
+                <li><strong>Releases:</strong> <code>caracore-cso-releases</code> não substitui a aplicação (sem vitrine de loja)</li>
               </ul>
             </div>
           </div>
 
           <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
-            <a href="https://chmulato.github.io/caracore-cso-releases/" class="btn-wiki" target="_blank" rel="noopener">
-              <i class="bi bi-shop"></i> Loja oficial (releases)
+            <a href="https://cso.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i> Acessar aplicação
             </a>
             <a href="https://www.caracore.com.br/portfolio.html#caracore-cso" class="btn-wiki" target="_blank" rel="noopener">
               <i class="bi bi-globe"></i> Portfólio Cara Core
+            </a>
+            <a href="ecosistema.html" class="btn-wiki">
+              <i class="bi bi-globe2"></i> Eco Mundo
             </a>
           </div>
         </div>

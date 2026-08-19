@@ -1,44 +1,60 @@
 ---
-description: Memória da wiki institucional — caracore-wiki; wiki.caracore.com.br; hub PDV Desktop Java + Rust, ecossistema Eco Mundo
+description: Memória da wiki institucional — caracore-wiki; wiki.caracore.com.br; hub PDV Desktop Java + Rust, Eco Mundo alinhado à matriz 15/08/2026
 alwaysApply: true
 ---
 
 # Memória — caracore-wiki
 
-**Atualizado:** 2026-06-07 · **Nova tarefa:** `D:\dev\caracore-site\docs\INICIAR_NOVA_TAREFA.md` · **Ecossistema:** `ECOSYSTEM_MEMORIA.md` (caracore-site)
+**Atualizado:** 2026-08-19 · **Nova tarefa:** `D:\onedrive\dev\caracore-site\docs\INICIAR_NOVA_TAREFA.md` · **Ecossistema:** `ECOSYSTEM_MEMORIA.md` (caracore-site)
 
 ## Repositório e papel
 - **caracore-wiki:** wiki institucional da Cara Core Informática.
 - **URL:** https://wiki.caracore.com.br/
 - **Publicação:** GitHub Pages a partir de **docs/**.
 - **Público:** estagiários, colaboradores, interessados nos projetos.
+- **Workspace:** `D:\onedrive\dev\` (não `D:\dev\`).
 
 ## Relação com a matriz e lojas
 - **Matriz:** caracore-site (caracore.com.br) — **portfólio** em `https://www.caracore.com.br/portfolio.html#{âncora}` (nunca `wiki.caracore.com.br/portfolio.html`). **Não** usar `/delivery/` como destino principal.
 - **Matriz B2B:** `#engenharia-b2b` · `#decisoes-engenharia` · suporte PME em `suporte-local.html` (fora do nav principal)
 - **Redirect wiki:** `docs/portfolio.html` → matriz (legado de links errados na nav).
 - **Lojas:** repositórios *-releases (vitrine e download por produto) → `*.caracore.com.br`.
+- **CSO:** aplicação canónica `https://cso.caracore.com.br/` (sem vitrine GitHub Pages).
 - **Eco Mundo:** mapa visual alinhado — matriz `ecosistema.html`, wiki `docs/ecosistema.html`.
 - **Índice ecossistema:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
-- **Retrô:** caracore-retro — https://retro.caracore.com.br/ (**104 artigos**; art. 115 B2B/IA · art. 114 PDV Rust)
+- **Retrô:** caracore-retro — https://retro.caracore.com.br/ (**117 artigos**; art. 115 B2B/IA · art. 114 PDV Rust)
 
 ## CaraCore PDV — hub duas linhas desktop
 
-| Linha | Página wiki | Loja |
-|-------|-------------|------|
-| PDV Desktop (Java · JavaFX) | projeto-pdv.html (hub) · link wiki loja Java | pdv.caracore.com.br |
-| PDV Desktop (Rust + Tauri 2) | projeto-pdv-rust.html | vitrine rust-pdv · download github.com/chmulato/caracore-rust-pdv-releases/releases · v0.1.2 |
+| Linha | Nome comercial | Página wiki | Loja |
+|-------|----------------|-------------|------|
+| Java · JavaFX | CaraCore PDV Desktop | projeto-pdv.html (hub) | pdv.caracore.com.br |
+| Rust + Tauri 2 | **CaraCore PDV** | projeto-pdv-rust.html | rust-pdv.caracore.com.br · download GitHub Releases v0.1.2 |
 
 - **Comparação única na matriz:** `portfolio.html#pdv-coexistencia`
 - **Mensagem fixa:** dois PDVs Desktop, mesmo produto; stacks distintas; nenhuma substitui a outra.
 - **V3 negócio** (PME, PIX Split 2027) ≠ v3.2.2-free (Java) ≠ v0.1.2 (Rust).
 - **Evitar:** "PDV v3", "nova geração", "substitui".
 
+## Produtos a manter alinhados (ago/2026)
+
+| Produto | Loja / aplicação | Oficina |
+|---------|------------------|---------|
+| CaraCore CSO | https://cso.caracore.com.br/ | `caracore-cso-quarkus` (Frotas Web, produção) + `caracore-cso-transportes` (Desktop 08/11/2028) |
+| RU Soberano | https://ru.caracore.com.br/ | caracore-ru · lanç. 18/06/2027 |
+| Helianto | https://helianto.caracore.com.br/ | caracore-helianto · lanç. 30/12/2027 |
+| Cara Core MKT | https://mkt.caracore.com.br/ | caracore-mkt · Sala tools.caracore.com.br/sala/ |
+| Hub | https://hub.caracore.com.br/ | caracore-hub · WAR/Tomcat · GA 06/04/2027 |
+| Ink Agenda | https://ink.caracore.com.br/ | caracore-ink · Java 25 · **v2.0.0 lançada 26/06/2026** |
+
 ## Páginas principais (docs/)
 - **index.html** — entrada
 - **projetos-overview.html** — visão geral (seções 1 Java, 1b Rust)
 - **projeto-pdv.html** — hub PDV (tabela qual linha escolher)
-- **projeto-pdv-rust.html** — resumo linha Rust
+- **projeto-pdv-rust.html** — **CaraCore PDV** (linha Rust)
+- **projeto-cso.html** — plataforma dual Frotas + Transportes
+- **projeto-ru.html** — RU Soberano
+- **projeto-mkt.html** — Cara Core MKT / Sala
 - **ecosistema.html** — Eco Mundo
 - **tecnologias.html** — stack por produto
 - **trilha-cliente.html** — `#v3-pdv-transparencia` (V3 negócio)
@@ -46,7 +62,7 @@ alwaysApply: true
 
 ## Convenções
 - Ao alterar discurso PDV, sincronizar com matriz (caracore-site), ambas as lojas PDV e ECOSYSTEM_*.md na matriz.
-- Links para lojas usam URLs canónicas (ver caracore-site/docs/ECOSYSTEM_LOJAS.md).
+- Links para lojas usam URLs canónicas (ver caracore-site/docs/ECOSYSTEM_LOJAS.md). **Não** usar `chmulato.github.io/caracore-*-releases` quando o subdomínio existe.
 - Links para matriz usam portfólio com âncora quando aplicável (ver ECOSYSTEM_MEMORIA.md).
 - README.md na raiz resume projetos documentados — manter alinhado ao portfólio.
 

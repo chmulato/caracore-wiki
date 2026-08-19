@@ -6,21 +6,23 @@ O Wiki da Cara Core Informática foi criado como um guia completo para **estagi�
 
 ### Objetivo Principal
 
-Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: PDV, Ink Agenda, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
+Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: CaraCore PDV Desktop, CaraCore PDV, Ink Agenda, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51, CaraCore CSO, RU Soberano, Helianto, MKT), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
 
 ## Projetos Documentados
 
-1. **CaraCore PDV Desktop (Java · JavaFX)** - Oferta madura multi-plataforma: PIX, operação local e conformidade fiscal
-2. **Cara Core PDV Desktop (Rust + Tauri 2)** - PDV desktop, piloto Windows com instaladores pt-BR (release v0.1.0); coexiste com PDV Desktop Java
-3. **Ink Agenda** - Gestão para estúdios de tatuagem, com agenda, clientes e financeiro; versão estável v2.0.0 publicada oficialmente em 26/Jun/2026
-4. **chmulatoETE Minerador 4.0** - Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
-5. **Reino OIDC** - Educação em OAuth 2.1 e OIDC
-6. **Cara Core Seed** - Contador de licenças (Windows, R$ 29,90)
-7. **Circuito Ferradura** - Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
-8. **Cara Core Hub** - Sistema de integração e e-commerce
-9. **Área 51** - Consultoria OIDC / autenticação enterprise
-10. **Helianto Condominium** - Sistema completo para administração condominial com soberania de dados e motor financeiro auditável (lançamento em 30 de dezembro de 2027)
-11. **Cara Core CSO** - Plataforma dual para frotas e logística: Gestão de Frotas (Web, já em produção 2026) e Gestão de Transportes (Desktop offline-first, bunker para telemetria/backup com previsão para 2028).
+1. **CaraCore PDV Desktop (Java · JavaFX)** — Oferta madura multi-plataforma: PIX, operação local e conformidade fiscal (canal v3.2.2-free)
+2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; coexiste com o PDV Desktop Java (não substitui)
+3. **Ink Agenda** — Gestão para estúdios de tatuagem (agenda, clientes e financeiro); **v2.0.0 estável lançada em 26/Jun/2026**
+4. **chmulatoETE Minerador 4.0** — Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
+5. **Reino OIDC** — Educação em OAuth 2.1 e OIDC
+6. **Cara Core Seed** — Contador de licenças (ferramenta interna; aplicação não está em oferta pública)
+7. **Circuito Ferradura** — Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
+8. **Cara Core Hub** — Gestão logística e e-commerce (WAR/Tomcat); vitrine em hub.caracore.com.br; GA prevista 06/Abr/2027
+9. **Área 51** — Consultoria OIDC / autenticação enterprise
+10. **Helianto Condominium** — Administração condominial com soberania de dados e motor financeiro auditável (loja helianto.caracore.com.br; lançamento 30/Dez/2027)
+11. **CaraCore CSO** — Plataforma dual: Gestão de Frotas (Web, em produção em cso.caracore.com.br) e Gestão de Transportes (Desktop offline-first, 08/Nov/2028)
+12. **RU Soberano** — Simulador de reator e sala RETRO (loja ru.caracore.com.br; lançamento 18/Jun/2027; RETRO gratuito · simulador R$ 29,90)
+13. **Cara Core MKT** — Vitrine gratuita e Sala Cara Core (mkt.caracore.com.br · tools.caracore.com.br/sala/); não vendemos
 
 ## Design Responsivo
 
@@ -126,5 +128,5 @@ Para estagiários ou dúvidas sobre o Wiki:
 
 ---
 
-**© 2025 Cara Core Informática - CNPJ: 23.969.028/0001-37**  
+**© 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37**  
 *Wiki criado para orientação de estagiários e divulgação técnica*

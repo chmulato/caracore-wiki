@@ -167,7 +167,7 @@
                                     <div class="estagiario-section">
                                         <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
                                         <p>Plataforma de computação em nuvem da Microsoft que oferece serviços como App Service (hospedagem web), Storage (armazenamento), SQL Database, Active Directory, Functions (serverless), entre outros.</p>
-                                        <p><strong>Usado em:</strong> Projetos Hub, Seed e Circuito Ferradura</p>
+                                        <p><strong>Usado em:</strong> Área 51 (Azure) e presenças estáticas no GitHub Pages</p>
                                     </div>
                                 </div>
                             </div>
@@ -234,11 +234,64 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
 
-                    <!-- C -->
+                        <div class="glossary-term">
+                            <h3>Bunker Digital</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>Bunker Digital é o jeito Cara Core de manter dados e operação crítica no computador da empresa. Se a internet cair, o caixa, a agenda ou o backup local continuam funcionando.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Arquitetura offline-first com persistência local (em geral SQLite) e nuvem só quando o desenho pede (FinOps/híbrido). Usado no PDV, Ink Agenda, CSO Transportes e Hub planejado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section id="C" class="glossary-section mb-5">
                         <h2 class="glossary-letter">C</h2>
+
+                        <div class="glossary-term">
+                            <h3>CaraCore CSO</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>Centro logístico da Cara Core: Gestão de Frotas no navegador (já no ar) e Gestão de Transportes no computador da empresa (2028), para a operação não depender só da nuvem.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Oficinas <code>caracore-cso-quarkus</code> (Quarkus + PostgreSQL, produção em cso.caracore.com.br) e <code>caracore-cso-transportes</code> (JavaFX + SQLite). Não usar GitHub Pages como URL canónica.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-cso.html">projeto-cso.html</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3>CaraCore PDV</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>Nome comercial da linha desktop em Rust + Tauri. Convive com o CaraCore PDV Desktop (Java). São o mesmo produto de caixa, com stacks diferentes — nenhuma substitui a outra.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Release v0.1.2. Loja rust-pdv.caracore.com.br. Download oficial no GitHub Releases. Canal Java maduro: v3.2.2-free em pdv.caracore.com.br.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="glossary-term">
                             <h3>CSS (Cascading Style Sheets)</h3>
@@ -513,6 +566,49 @@
                         </div>
                     </section>
 
+                    <!-- M -->
+                    <section id="M" class="glossary-section mb-5">
+                        <h2 class="glossary-letter">M</h2>
+
+                        <div class="glossary-term">
+                            <h3>Matriz · Oficina · Loja</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>A <strong>matriz</strong> é o site da empresa (caracore.com.br). A <strong>oficina</strong> é o repositório onde o produto é construído. A <strong>loja</strong> é o subdomínio onde o cliente baixa e lê o produto.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Regra: oficina <code>caracore-&lt;produto&gt;</code>, loja <code>caracore-&lt;produto&gt;-releases</code>, URL <code>*.caracore.com.br</code>. CSO foge um pouco: a URL canónica é a aplicação em cso.caracore.com.br.</p>
+                                        <p><strong>Mapa:</strong> <a href="ecosistema.html">Eco Mundo</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3>MKT (Cara Core MKT)</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>Espaço gratuito da Cara Core para rotina e presença digital com propósito. A Sala Cara Core é o ambiente de execução. Não é um produto à venda.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Oficina <code>caracore-mkt</code>. Loja mkt.caracore.com.br. Sala canónica tools.caracore.com.br/sala/.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-mkt.html">projeto-mkt.html</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- O -->
                     <section id="O" class="glossary-section mb-5">
                         <h2 class="glossary-letter">O</h2>
@@ -602,6 +698,25 @@
                     <!-- R -->
                     <section id="R" class="glossary-section mb-5">
                         <h2 class="glossary-letter">R</h2>
+
+                        <div class="glossary-term">
+                            <h3>RU Soberano</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>Produto educacional que usa o Restaurante Universitário como analogia de um reator industrial. A sala RETRO (1991) é gratuita; o simulador custa R$ 29,90. Nome comercial: RU Soberano — não “Bioreator”.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Oficina <code>caracore-ru</code> (Java 25 + JavaFX). Loja ru.caracore.com.br. Lançamento público: 18/06/2027.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-ru.html">projeto-ru.html</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="glossary-term">
                             <h3>Repository (Repositório)</h3>
