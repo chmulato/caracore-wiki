@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub de Guias do PDV | Wiki PDV</title>
+  <meta name="description" content="Central de guias públicos do CaraCore PDV, com foco no material atual do desktop local e arquivo resumido de apoio.">
+  <link href="https://pdv.caracore.com.br/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/guias-aplicacao.css">
+  <link rel="icon" href="https://pdv.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-core-typography.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-institutional-components.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://pdv.caracore.com.br/"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki</a></li>
+          <li class="nav-item"><a class="nav-link active" href="guias-aplicacao.html" aria-current="page"><i class="bi bi-journal-bookmark"></i> Hub de Guias</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projeto-pdv.html"><i class="bi bi-box"></i> Produto PDV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="https://pdv.caracore.com.br/">Loja</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Hub de Guias do PDV</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container py-4">
+    <div class="wiki-content">
+      <section class="guides-hero">
+        <h1><i class="bi bi-journal-bookmark"></i> Hub de Guias do PDV</h1>
+        <p>Material oficial da loja organizado com foco na trilha atual do desktop local e um arquivo resumido de apoio quando necessário.</p>
+        <div class="guides-badges">
+          <span class="guides-badge">HTML-only na loja</span>
+          <span class="guides-badge">Atual em destaque</span>
+          <span class="guides-badge">Manuais com imagens</span>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Leitura recomendada</h2>
+        <div class="stack-note-grid">
+          <article class="stack-note">
+            <strong>Trilha atual</strong>
+            <p>Use o guia operacional atual para o desktop local em Windows com SQLite e servidor local embutido.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Arquivo de apoio</strong>
+            <p>Materiais de transicao e trilhas anteriores continuam disponiveis apenas como referencia curta, nunca como instrucao padrao do produto atual.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Evolucao documentada</strong>
+            <p>Guias de migracao continuam acessiveis apenas quando precisam explicar a evolucao do produto ou apoiar auditoria de mudancas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Governanca de versionamento</h2>
+        <div class="stack-note-grid">
+          <article class="stack-note">
+            <strong>Fonte oficial dos manuais</strong>
+            <p>Todo material de manual do CaraCore PDV e versionado na loja, neste repositório de releases, em HTML e com seus respectivos ativos visuais.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Codigo-fonte e engenharia</strong>
+            <p>Os repositórios de desenvolvimento permanecem como local de codigo-fonte e materiais tecnicos internos. A trilha pública de leitura do produto fica concentrada nesta loja.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Coerencia editorial</strong>
+            <p>Qualquer revisao de manual, imagem, stack ou transparência publica deve ser feita primeiro na loja para manter trilha unica e coerente de publicacao.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Guias da Loja</h2>
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Atual</span>
+              <h3>Manual Operacional - Desktop local atual</h3>
+              <p>Guia do runtime atual do produto, com capturas do desktop local e foco na operacao vigente em Windows com SQLite.</p>
+              <a class="btn btn-success btn-sm" href="manual-operacional-pdv-java21.html"><i class="bi bi-journal-check"></i> Abrir guia atual</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Alias</span>
+              <h3>Trilha de transicao (alias historico)</h3>
+              <p>URL de continuidade para links antigos, preservada sem dependencias da versao anterior.</p>
+              <a class="btn btn-outline-success btn-sm" href="manual-operacional-pdv-stack-anterior.html"><i class="bi bi-sign-turn-right"></i> Abrir alias historico</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Guias de Evolucao</h2>
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Upgrade</span>
+              <h3>Manual de Upgrade - Apoio de transicao</h3>
+              <p>Fluxo de transicao preservado apenas para leitura tecnica e auditoria da evolucao do produto.</p>
+              <a class="btn btn-primary btn-sm" href="manual-upgrade-java21.html"><i class="bi bi-images"></i> Acessar manual de upgrade</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Contexto produto</span>
+              <h3>Pagina do Produto PDV</h3>
+              <p>Documentacao geral do produto, requisitos de operacao e links institucionais.</p>
+              <a class="btn btn-outline-primary btn-sm" href="../projeto-pdv.html"><i class="bi bi-file-earmark-text"></i> Abrir pagina do produto</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Padrao de Coerencia</h2>
+        <ul class="feature-list mb-0">
+          <li>A trilha atual e o arquivo de apoio ficam separados.</li>
+          <li>Cada guia explicita se descreve o produto atual ou apenas contexto preservado.</li>
+          <li>A loja aponta primeiro para o desktop local atual e mantém apenas o mínimo de rastreabilidade publica.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://pdv.caracore.com.br/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+

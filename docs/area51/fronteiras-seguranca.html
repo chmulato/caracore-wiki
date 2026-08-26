@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-loja-shell="1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronteiras e segurança — Wiki Área 51</title>
+    <meta name="description" content="Fronteiras on-premises, variáveis de ambiente, controlos PKCE/JWT e pipeline de validação do produto Área 51.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://area51.caracore.com.br/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://area51.caracore.com.br/assets/css/store-public.css">
+    <link rel="stylesheet" href="assets/css/wiki.css">
+    <link rel="stylesheet" href="assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
+    <link rel="stylesheet" href="assets/css/wiki-diagrams.css">
+    <link rel="icon" href="https://area51.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="assets/js/wiki-mermaid.js" defer></script>
+</head>
+<body class="store store-inner wiki-loja">
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="https://area51.caracore.com.br/">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="https://area51.caracore.com.br/">Início</a></li>
+                    <li><a href="../produto.html">Produto</a></li>
+                    <li><a href="../servicos.html">Serviços</a></li>
+                    <li><a href="../galeria.html">Galeria</a></li>
+                    <li><a href="../projeto-area51.html" aria-current="page">Wiki</a></li>
+                    <li><a href="https://area51.caracore.com.br/download.html">Como começar</a></li>
+                    <li><a href="../imprensa.html">Imprensa</a></li>
+                    <li><a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="https://area51.caracore.com.br/">Início</a>
+                    <a href="../produto.html">Produto</a>
+                    <a href="../servicos.html">Serviços</a>
+                    <a href="../galeria.html">Galeria</a>
+                    <a href="../projeto-area51.html" aria-current="page">Wiki</a>
+                    <a href="https://area51.caracore.com.br/download.html">Como começar</a>
+                    <a href="../imprensa.html">Imprensa</a>
+                    <a href="../faq.html">FAQ</a>
+                    <a href="../licenca-uso.html">Licença</a>
+                    <a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <div class="wiki-trail">
+        <div class="sf-header-inner">
+            <nav class="sf-breadcrumb" aria-label="Navegação">
+                <a href="https://area51.caracore.com.br/">Loja</a>
+                <span class="sep">/</span>
+                <a href="../projeto-area51.html">Wiki</a>
+                <span class="sep">/</span>
+                <span class="sf-breadcrumb-current">Fronteiras e segurança</span>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main" class="wiki-container">
+        <article class="wiki-content wiki-diagram-page">
+            <h1>Fronteiras de controle e validação de segurança</h1>
+            <p class="wiki-diagram-lead">
+                O pacote Área 51 separa <strong>fronteira on-premises</strong> (infraestrutura local)
+                de <strong>configuração OIDC</strong> (protocolo) e executa <strong>validações repetíveis</strong>
+                antes de promover ambientes críticos.
+            </p>
+
+            <div class="wiki-diagram-panel">
+                <h2>Desacoplamento de variáveis de ambiente</h2>
+                <pre class="mermaid">
+flowchart TB
+    subgraph FR["Fronteira — AREA51_FRONTIER_*"]
+        F1["Perfil lab / homolog / prod"]
+        F2["Host e porta do IdP"]
+        F3["Host, porta e URL pública da app"]
+    end
+    subgraph OIDC["Cliente OIDC — OIDC_*"]
+        O1["Realm e client_id"]
+        O2["redirect_uri e scopes"]
+        O3["Segredos via secret manager"]
+    end
+    subgraph OUT["Saída validada"]
+        V["Configuração pronta<br/>para homologação"]
+    end
+    FR --> OIDC
+    OIDC --> V
+                </pre>
+            </div>
+
+            <div class="wiki-diagram-panel">
+                <h2>Controlos de segurança no fluxo</h2>
+                <pre class="mermaid">
+flowchart LR
+    A["Authorization request"] --> B{"PKCE S256?"}
+    B -->|Sim| C{"state válido?"}
+    B -->|Não| X["Rejeitar baseline"]
+    C -->|Sim| D["Troca de code"]
+    C -->|Não| X
+    D --> E{"JWT assinatura<br/>exp e audiência?"}
+    E -->|Sim| F["Sessão / API protegida"]
+    E -->|Não| X
+                </pre>
+            </div>
+
+            <div class="wiki-diagram-panel">
+                <h2>Pipeline de validação da baseline</h2>
+                <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    participant EQ as Equipa licenciada
+    participant BL as Validação baseline
+    participant KC as Keycloak lab
+
+    EQ->>BL: Fase dev — testes automatizados
+    Note over BL: Scripts OIDC e protocolo OAuth 2.1
+    EQ->>BL: Fase config — Google e Entra
+    Note over BL: Parâmetros PKCE e redirect_uri
+    EQ->>BL: Fase env — fronteira + OIDC
+    Note over BL: Esquema on-premises desacoplado
+    opt IdP activo
+        EQ->>BL: Fase operational
+        BL->>KC: validate_oidc_flow
+        Note over KC: Discovery, code, tokens
+    end
+    BL->>EQ: Evidência para auditoria interna
+                </pre>
+            </div>
+
+            <h2>Controlos incluídos na baseline</h2>
+            <div class="wiki-table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Controle</th>
+                            <th>Ameaça tratada</th>
+                            <th>Como validar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PKCE (S256)</td>
+                            <td>Interceptação do authorization code</td>
+                            <td>Testes dev + fluxo operacional</td>
+                        </tr>
+                        <tr>
+                            <td>Parâmetro <code>state</code></td>
+                            <td>CSRF em redirects</td>
+                            <td>Validação na troca de tokens</td>
+                        </tr>
+                        <tr>
+                            <td>Assinatura JWT</td>
+                            <td>Token adulterado</td>
+                            <td>Testes integrados e API protegida</td>
+                        </tr>
+                        <tr>
+                            <td>Expiração de token</td>
+                            <td>Replay prolongado</td>
+                            <td>Parâmetros documentados nos guias</td>
+                        </tr>
+                        <tr>
+                            <td>Cookie HTTP-only (exemplo)</td>
+                            <td>Exposição via script no browser</td>
+                            <td>App de referência Flask</td>
+                        </tr>
+                        <tr>
+                            <td>HTTPS em produção</td>
+                            <td>Redirect em claro</td>
+                            <td>Perfil <code>prod</code> exige redirect HTTPS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="wiki-diagram-callout wiki-diagram-callout-warn">
+                <strong>Transparência:</strong> a baseline cobre <em>lab e homologação assistida</em>.
+                Produção exige hardening, políticas internas e, frequentemente, Suporte Área 51 contratado.
+            </div>
+
+            <div class="wiki-diagram-nav">
+                <a class="btn btn-outline-secondary btn-sm" href="componentes-entrega.html">Componentes</a>
+                <a class="btn btn-outline-secondary btn-sm" href="fluxo-oidc-referencia.html">Fluxo OIDC de referência</a>
+                <a class="btn btn-primary btn-sm" href="../apresentacao-tecnica.html">Apresentação técnica</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Identidade e acesso institucional — produto licenciado e serviços Cara Core.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="https://area51.caracore.com.br/"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="../produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="../servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="../galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="../projeto-area51.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="https://area51.caracore.com.br/download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Como começar</a>
+                <a href="../imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="../faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="../licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="https://area51.caracore.com.br/canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="../apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="https://area51.caracore.com.br/canal-feedback.html">Canal de feedback</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

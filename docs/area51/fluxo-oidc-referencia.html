@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-loja-shell="1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo OIDC de referência — Wiki Área 51</title>
+    <meta name="description" content="Diagrama de referência: Authorization Code + PKCE para integrações OIDC do cliente licenciado — não modela a loja pública.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://area51.caracore.com.br/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://area51.caracore.com.br/assets/css/store-public.css">
+    <link rel="stylesheet" href="assets/css/wiki.css">
+    <link rel="stylesheet" href="assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
+    <link rel="stylesheet" href="assets/css/wiki-diagrams.css">
+    <link rel="icon" href="https://area51.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="assets/js/wiki-mermaid.js" defer></script>
+</head>
+<body class="store store-inner wiki-loja">
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="https://area51.caracore.com.br/">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="https://area51.caracore.com.br/">Início</a></li>
+                    <li><a href="../produto.html">Produto</a></li>
+                    <li><a href="../servicos.html">Serviços</a></li>
+                    <li><a href="../galeria.html">Galeria</a></li>
+                    <li><a href="../projeto-area51.html" aria-current="page">Wiki</a></li>
+                    <li><a href="https://area51.caracore.com.br/download.html">Como começar</a></li>
+                    <li><a href="../imprensa.html">Imprensa</a></li>
+                    <li><a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="https://area51.caracore.com.br/">Início</a>
+                    <a href="../produto.html">Produto</a>
+                    <a href="../servicos.html">Serviços</a>
+                    <a href="../galeria.html">Galeria</a>
+                    <a href="../projeto-area51.html" aria-current="page">Wiki</a>
+                    <a href="https://area51.caracore.com.br/download.html">Como começar</a>
+                    <a href="../imprensa.html">Imprensa</a>
+                    <a href="../faq.html">FAQ</a>
+                    <a href="../licenca-uso.html">Licença</a>
+                    <a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <div class="wiki-trail">
+        <div class="sf-header-inner">
+            <nav class="sf-breadcrumb" aria-label="Navegação">
+                <a href="https://area51.caracore.com.br/">Loja</a>
+                <span class="sep">/</span>
+                <a href="../projeto-area51.html">Wiki</a>
+                <span class="sep">/</span>
+                <span class="sf-breadcrumb-current">Fluxo OIDC de referência</span>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main" class="wiki-container">
+        <article class="wiki-content wiki-diagram-page">
+            <h1>Fluxo OIDC de referência</h1>
+            <p class="wiki-diagram-lead">
+                Diagrama educacional do fluxo <strong>Authorization Code + PKCE</strong> (OAuth 2.1)
+                para aplicações que integram o pacote licenciado Área 51.
+            </p>
+
+            <div class="wiki-diagram-callout wiki-diagram-callout-warn">
+                <strong>Nota de fidelidade:</strong> este diagrama modela a integração OIDC do <em>cliente licenciado</em>
+                (app protegida + IdP). A loja pública em area51.caracore.com.br é vitrine institucional —
+                não executa checkout OIDC nem entrega o pacote por download directo.
+            </div>
+
+            <div class="wiki-diagram-panel" aria-label="Diagrama de sequência OIDC">
+                <h2>Sequência lab / homologação</h2>
+                <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    actor Utilizador
+    participant RP as App protegida (RP)
+    participant IdP as Provedor de identidade
+    participant API as Recurso protegido
+
+    Utilizador->>RP: Acede a rota /protected
+    Note over RP: Gera code_verifier e code_challenge PKCE S256<br/>Gera state para proteção CSRF
+    RP->>IdP: Redirect /authorize com PKCE e state
+    IdP->>Utilizador: Tela de login
+    Utilizador->>IdP: Credenciais
+    IdP->>RP: Redirect com Authorization Code e state
+    Note over RP: Valida state recebido
+    RP->>IdP: POST /token com code e code_verifier
+    Note over RP,IdP: PKCE validado na troca — preferir back-end ou BFF
+    IdP->>RP: ID Token e Access Token
+    RP->>API: Pedido com Bearer Access Token
+    Note over API: Valida JWT assinatura exp audiência e escopos
+    API->>RP: Recurso autorizado
+    RP->>Utilizador: Sessão autenticada
+                </pre>
+            </div>
+
+            <h2>Passos resumidos</h2>
+            <ol class="wiki-diagram-list">
+                <li><strong>1 — Intenção:</strong> o utilizador acede a uma rota protegida da aplicação cliente.</li>
+                <li><strong>2 — PKCE:</strong> a RP gera par verifier/challenge antes do redirect (sem client secret no browser).</li>
+                <li><strong>3 — Login:</strong> o IdP autentica e devolve um authorization code de uso único.</li>
+                <li><strong>4 — Tokens:</strong> a RP troca o code por tokens; o IdP valida PKCE na troca.</li>
+                <li><strong>5 — Acesso:</strong> a API ou rota protegida valida o access token antes de servir o recurso.</li>
+            </ol>
+
+            <p class="text-muted small mt-3">
+                Ver também:
+                <a href="fronteiras-seguranca.html">fronteiras e segurança</a> ·
+                <a href="o-que-recebe-entrega.html">o que recebe na entrega</a> ·
+                <a href="../apresentacao-tecnica.html">apresentação técnica</a>.
+            </p>
+
+            <div class="wiki-diagram-nav">
+                <a class="btn btn-outline-secondary btn-sm" href="fronteiras-seguranca.html">Fronteiras e segurança</a>
+                <a class="btn btn-outline-secondary btn-sm" href="projeto-area51.html">Documentação do produto</a>
+                <a class="btn btn-primary btn-sm" href="../projeto-area51.html">Índice do wiki</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Identidade e acesso institucional — produto licenciado e serviços Cara Core.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="https://area51.caracore.com.br/"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="../produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="../servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="../galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="../projeto-area51.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="https://area51.caracore.com.br/download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Como começar</a>
+                <a href="../imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="../faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="../licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="https://area51.caracore.com.br/canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="../apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="https://area51.caracore.com.br/canal-feedback.html">Canal de feedback</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

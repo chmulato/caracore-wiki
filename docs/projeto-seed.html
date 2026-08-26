@@ -3,13 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wiki migrada para a loja</title>
-  <meta http-equiv="refresh" content="0; url=https://seed.caracore.com.br/wiki/index.html">
-  <link rel="canonical" href="https://seed.caracore.com.br/wiki/index.html">
-  <script>window.location.replace('https://seed.caracore.com.br/wiki/index.html');</script>
+  <title>Cara Core Seed | Wiki Cara Core</title>
+  <meta name="description" content="Cara Core Seed: contador de licenças interno. Não está em oferta aberta. Loja seed.caracore.com.br informa com honestidade que não há download público.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <p>Esta wiki de produto foi migrada para a loja oficial.</p>
-  <p>Se o redirecionamento não ocorrer, use: <a href="https://seed.caracore.com.br/wiki/index.html">https://seed.caracore.com.br/wiki/index.html</a>.</p>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-seed"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item"><button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema"><i class="bi bi-moon-stars-fill"></i></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="projetos-overview.html">Projetos</a></li>
+          <li class="breadcrumb-item active">Cara Core Seed</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="wiki-container">
+    <div class="wiki-content wiki-home">
+      <div class="wiki-header">
+        <h1><i class="bi bi-key"></i> Cara Core Seed</h1>
+        <p class="wiki-lede">Ferramenta interna de licenciamento (contador de licenças dos produtos Windows da Cara Core). <strong>Não está em oferta aberta</strong> — a vitrine declara isso com honestidade.</p>
+      </div>
+      <div class="project-card mb-4">
+        <div class="project-body p-4">
+          <div class="mb-3">
+            <span class="tech-badge">Interno</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge">Windows Desktop</span>
+            <span class="tech-badge">Sem download público</span>
+          </div>
+          <div class="alert alert-warning" role="note">
+            Não prometa instalador nem loja de venda. A página <a href="https://seed.caracore.com.br/" target="_blank" rel="noopener">seed.caracore.com.br</a> existe para explicar o papel do Seed, não para entregar o aplicativo.
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-people"></i> O que é</h2>
+              <p>Registo das licenças de quem compra PDV, Minerador, Reino e Hub para correr no Windows. Offline-first, localhost, gestão transparente e LGPD.</p>
+            </div>
+            <div class="col-md-6">
+              <h2 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h2>
+              <p>Oficina <code>caracore-seed</code>; loja <code>caracore-seed-releases</code>. Não compete com PDV, CSO nem Hub na comunicação de negócio.</p>
+            </div>
+          </div>
+          <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="https://seed.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Vitrine (sem download)</a>
+            <a href="https://www.caracore.com.br/portfolio.html#caracore-seed" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-globe"></i> Portfólio</a>
+            <a href="projetos-overview.html" class="btn-wiki"><i class="bi bi-collection"></i> Visão geral</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Documentação de produto neste portal — vitrine honesta na loja, sem falsa promessa de download.</p>
+    </div>
+  </footer>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/wiki.js"></script>
 </body>
 </html>

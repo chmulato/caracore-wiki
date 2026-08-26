@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-loja-shell="1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é o Área 51 — Wiki</title>
+    <meta name="description" content="Definição fiel do produto Área 51: titularidade, entrega licenciada, pacote baseline e serviços Cara Core.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://area51.caracore.com.br/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://area51.caracore.com.br/assets/css/store-public.css">
+    <link rel="stylesheet" href="assets/css/wiki.css">
+    <link rel="stylesheet" href="assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
+    <link rel="stylesheet" href="assets/css/wiki-diagrams.css">
+    <link rel="icon" href="https://area51.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="assets/js/wiki-mermaid.js" defer></script>
+</head>
+<body class="store store-inner wiki-loja">
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="https://area51.caracore.com.br/">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="https://area51.caracore.com.br/">Início</a></li>
+                    <li><a href="../produto.html">Produto</a></li>
+                    <li><a href="../servicos.html">Serviços</a></li>
+                    <li><a href="../galeria.html">Galeria</a></li>
+                    <li><a href="../projeto-area51.html" aria-current="page">Wiki</a></li>
+                    <li><a href="https://area51.caracore.com.br/download.html">Como começar</a></li>
+                    <li><a href="../imprensa.html">Imprensa</a></li>
+                    <li><a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="https://area51.caracore.com.br/">Início</a>
+                    <a href="../produto.html">Produto</a>
+                    <a href="../servicos.html">Serviços</a>
+                    <a href="../galeria.html">Galeria</a>
+                    <a href="../projeto-area51.html" aria-current="page">Wiki</a>
+                    <a href="https://area51.caracore.com.br/download.html">Como começar</a>
+                    <a href="../imprensa.html">Imprensa</a>
+                    <a href="../faq.html">FAQ</a>
+                    <a href="../licenca-uso.html">Licença</a>
+                    <a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <div class="wiki-trail">
+        <div class="sf-header-inner">
+            <nav class="sf-breadcrumb" aria-label="Navegação">
+                <a href="https://area51.caracore.com.br/">Loja</a>
+                <span class="sep">/</span>
+                <a href="../projeto-area51.html">Wiki</a>
+                <span class="sep">/</span>
+                <span class="sf-breadcrumb-current">O que é o Área 51</span>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main" class="wiki-container">
+        <article class="wiki-content wiki-diagram-page">
+            <h1>O que é o Área 51</h1>
+            <p class="wiki-diagram-lead">
+                Solução licenciada de <strong>identidade e acesso</strong> para organizações que precisam
+                implantar autenticação federada com entrega documentada — não é software genérico de e-commerce
+                nem plataforma IAM completa pronta para produção sem hardening.
+            </p>
+
+            <div class="wiki-diagram-callout">
+                <strong>Transparência:</strong> o produto é de titularidade do <strong>Governo Federal</strong>.
+                A Cara Core Informática implementa e presta o <strong>Suporte Área 51</strong> sob contrato.
+                O código entrega-se mediante <a href="../licenca-uso.html">licença de uso</a> — não há download público avulso.
+            </div>
+
+            <div class="wiki-diagram-panel">
+                <h2>Modelo de titularidade e entrega</h2>
+                <pre class="mermaid">
+flowchart TB
+    GF["Governo Federal<br/>Titular do produto Área 51"]
+    CC["Cara Core Informática<br/>Implementação e Suporte Área 51"]
+    LOJA["Loja pública<br/>Documentação e canal comercial"]
+    P1["Nível 1 — Pacote licenciado<br/>Baseline técnica"]
+    P2["Nível 2 — Implementação guiada<br/>Sob consulta"]
+    P3["Nível 3 — Acompanhamento SLA<br/>Contrato"]
+
+    GF --> P1
+    CC --> P2
+    CC --> P3
+    LOJA -->|"Licença + contacto institucional"| P1
+    LOJA -->|"Proposta comercial"| P2
+    LOJA -->|"Contrato"| P3
+                </pre>
+            </div>
+
+            <h2>Em uma frase</h2>
+            <ul class="wiki-diagram-list">
+                <li><strong>Produto:</strong> pacote licenciado com scripts OIDC, ambiente de laboratório Keycloak, testes e documentação.</li>
+                <li><strong>Serviço:</strong> equipa Cara Core no ambiente do cliente — integração, acompanhamento e evolução contratada.</li>
+                <li><strong>Loja (este site):</strong> vitrine institucional; não executa checkout OAuth — explica e canaliza pedidos.</li>
+            </ul>
+
+            <div class="wiki-diagram-panel">
+                <h2>Loja, wiki e entrega licenciada</h2>
+                <pre class="mermaid">
+flowchart LR
+    V["Visitante"]
+    L["Loja area51.caracore.com.br"]
+    W["Wiki — conceitos e diagramas"]
+    C["Canal institucional"]
+    E["Entrega licenciada<br/>pacote técnico"]
+
+    V --> L
+    L --> W
+    L --> C
+    C -->|"Acordo + licença"| E
+    W -.->|"Referência, não substitui entrega"| E
+                </pre>
+            </div>
+
+            <div class="wiki-diagram-nav">
+                <a class="btn btn-primary btn-sm" href="componentes-entrega.html">Componentes do pacote</a>
+                <a class="btn btn-outline-secondary btn-sm" href="fronteiras-seguranca.html">Fronteiras e segurança</a>
+                <a class="btn btn-outline-secondary btn-sm" href="o-que-recebe-entrega.html">O que recebe na entrega</a>
+                <a class="btn btn-outline-secondary btn-sm" href="fluxo-oidc-referencia.html">Fluxo OIDC de referência</a>
+                <a class="btn btn-outline-secondary btn-sm" href="../projeto-area51.html">Índice do wiki</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Identidade e acesso institucional — produto licenciado e serviços Cara Core.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="https://area51.caracore.com.br/"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="../produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="../servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="../galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="../projeto-area51.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="https://area51.caracore.com.br/download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Como começar</a>
+                <a href="../imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="../faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="../licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="https://area51.caracore.com.br/canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="../apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="https://area51.caracore.com.br/canal-feedback.html">Canal de feedback</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

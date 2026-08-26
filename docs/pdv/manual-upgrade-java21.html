@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Upgrade Historico - Transicao Java 21 | Wiki PDV</title>
+  <meta name="description" content="Guia historico preservado da transicao para Java 21, mantido para auditoria e consulta tecnica, nao como fluxo publico principal.">
+  <link href="https://pdv.caracore.com.br/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/manual-upgrade-java21.css">
+  <link rel="icon" href="https://pdv.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-core-typography.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-institutional-components.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://pdv.caracore.com.br/"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki</a></li>
+          <li class="nav-item"><a class="nav-link active" href="manual-upgrade-java21.html" aria-current="page"><i class="bi bi-file-earmark-richtext"></i> Manual Upgrade</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projeto-pdv.html"><i class="bi bi-box"></i> Produto PDV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="https://pdv.caracore.com.br/">Loja</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Manual Upgrade Historico</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container py-4">
+    <div class="manual-hero">
+      <h1><i class="bi bi-shield-check"></i> Manual Historico de Upgrade (transicao para Java 21)</h1>
+      <p class="mb-2">Guia historico preservado com capturas e passos de uma transicao tecnica anterior do produto. Nao representa o caminho publico principal de uso da loja.</p>
+      <span class="manual-pill">Banco SQLite</span>
+      <span class="manual-pill">Flyway</span>
+      <span class="manual-pill">Rollback testado</span>
+    </div>
+
+    <div class="quick-nav mb-3">
+      <a href="#passo1" class="btn btn-outline-primary btn-sm">1. Pré-check</a>
+      <a href="#passo2" class="btn btn-outline-primary btn-sm">2. Backup</a>
+      <a href="#passo3" class="btn btn-outline-primary btn-sm">3. Upgrade historico</a>
+      <a href="#passo4" class="btn btn-outline-primary btn-sm">4. Validação</a>
+      <a href="#passo5" class="btn btn-outline-primary btn-sm">5. Rollback</a>
+    </div>
+
+    <div id="passo1" class="step-card">
+      <h2 class="step-title">Passo 1 - Pré-check do ambiente</h2>
+      <p>Execute os comandos abaixo apenas quando estiver reproduzindo a transicao historica em ambiente tecnico controlado.</p>
+      <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe --version
+&amp; D:\\dev\\.mvn\\activate-maven-env.ps1
+mvn --version</code></pre>
+    </div>
+
+    <div id="passo2" class="step-card">
+      <h2 class="step-title">Passo 2 - Backup do banco</h2>
+      <p>Crie backup do SQLite antes de qualquer alteracao nesse fluxo historico.</p>
+      <pre><code>cd D:\\dev\\caracore-pdv
+$timestamp = Get-Date -Format "yyyy_MM_dd_HHmmss"
+Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.db"</code></pre>
+    </div>
+
+    <div id="passo3" class="step-card">
+      <h2 class="step-title">Passo 3 - Executar upgrade + validação</h2>
+      <p>Use o orquestrador Python para validar pre e pos-upgrade apenas nesse procedimento historico.</p>
+      <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe .\\scripts\\upgrade\\run_upgrade_and_validate.py ^
+  --db-path .\\data\\caracore-pdv.db ^
+  --backup-dir .\\backups ^
+  --report-file .\\upgrade_validation_report.txt</code></pre>
+      <div class="callout-ok mt-2"><strong>Criterio de aprovacao:</strong> o relatorio final deve conter <strong>result=GO</strong>.</div>
+    </div>
+
+    <div id="passo4" class="step-card">
+      <h2 class="step-title">Passo 4 - Validação operacional</h2>
+      <ul>
+        <li>Login no sistema</li>
+        <li>Consulta de venda</li>
+        <li>Teste de autorização por perfil</li>
+        <li>Validação de integridade do banco</li>
+      </ul>
+    </div>
+
+    <div id="passo5" class="step-card">
+      <h2 class="step-title">Passo 5 - Rollback (se necessário)</h2>
+      <p>Se houver qualquer falha critica, execute rollback imediato nesse fluxo historico:</p>
+      <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe .\\scripts\\upgrade\\rollback_from_backup.py ^
+  --backup-dir .\\backups --latest ^
+  --db-path .\\data\\caracore-pdv.db --force</code></pre>
+      <div class="callout-warn mt-2"><strong>NO-GO:</strong> qualquer inconsistência de dados, erro de startup ou falha de segurança.</div>
+    </div>
+
+    <div class="step-card">
+      <h2 class="step-title">Checklist de publicação</h2>
+      <ul>
+        <li>[ ] GO/NO-GO preenchido</li>
+        <li>[ ] Validação operacional executada (login, venda, autorização, banco)</li>
+        <li>[ ] Backup confirmado antes do upgrade</li>
+        <li>[ ] Nenhuma inconsistência de dados detectada</li>
+      </ul>
+      <a class="btn btn-primary" href="index.html"><i class="bi bi-arrow-left"></i> Voltar para Wiki</a>
+    </div>
+  </div>
+
+  <script src="https://pdv.caracore.com.br/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+

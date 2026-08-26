@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Operacional PDV - Desktop Local Atual | Wiki PDV</title>
+  <meta name="description" content="Guia operacional do desktop local atual do CaraCore PDV, com capturas do runtime atual em Windows e SQLite.">
+  <link href="https://pdv.caracore.com.br/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/manual-operacional-pdv-java21.css">
+  <link rel="icon" href="https://pdv.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-core-typography.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-institutional-components.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://pdv.caracore.com.br/"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki</a></li>
+          <li class="nav-item"><a class="nav-link active" href="manual-operacional-pdv-java21.html" aria-current="page"><i class="bi bi-file-earmark-richtext"></i> Guia Atual</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projeto-pdv.html"><i class="bi bi-box"></i> Produto PDV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="https://pdv.caracore.com.br/">Loja</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Manual Operacional Desktop Local Atual</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container py-4">
+    <div class="wiki-content">
+      <div class="audit-print-header" aria-hidden="true">
+        <strong>AUDITORIA PDV</strong> - Manual Operacional Desktop Local Atual | Loja: CaraCore-PDV | Versao documento: 2026.04.17 | Emissao: <span id="auditStamp">--</span>
+      </div>
+
+      <section class="manual-hero">
+        <h1><i class="bi bi-journal-check"></i> Manual Operacional PDV - Desktop Local Atual</h1>
+        <p>Documento operacional do runtime atual do produto, com capturas do desktop local em Windows, servidor local e SQLite. Este material deve ser lido como referencia vigente da oferta atual da loja.</p>
+        <div class="manual-badges">
+          <span class="manual-badge">6 telas disponiveis</span>
+          <span class="manual-badge">Checklist por tela</span>
+          <span class="manual-badge">Impressao/PDF-friendly</span>
+          <span class="manual-badge">Runtime atual</span>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="manual-actions">
+          <a class="btn btn-outline-primary btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar para Wiki</a>
+          <button class="btn btn-primary btn-sm" type="button" onclick="window.print()"><i class="bi bi-printer"></i> Gerar impressao/PDF</button>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <h2>Escopo desta trilha</h2>
+        <p>Este manual representa o caminho operacional atual do produto. As imagens desta pagina pertencem ao conjunto vigente do desktop local e devem ser usadas como referencia canonica da operacao.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Transparencia de classificacao</h2>
+        <p>Esta pagina aponta somente para as imagens homologadas da oferta atual, mantendo foco na operacao vigente da loja.</p>
+        <p>Quando novas capturas homologadas do runtime atual forem adicionadas, esta trilha deve ser expandida mantendo a mesma classificacao editorial.</p>
+      </section>
+
+      <section class="screens-grid" id="screensGrid"></section>
+
+      <section class="section-card">
+        <strong>Padrao aplicado:</strong> manual funcional em HTML responsivo com imagens PNG do runtime atual, checklist de aceite por tela e versao de impressao com quebra de pagina por item.
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const screens = [
+      ["01", "Nova venda", "Fluxo principal de venda no desktop local atual", "01-nova-venda.png", "Validar selecao de itens, total da venda e acao de conclusao."],
+      ["02", "Cadastro de cliente", "Registro de dados basicos do cliente no desktop local atual", "02-cadastro-cliente.png", "Conferir campos obrigatorios e retorno de persistencia."],
+      ["03", "Cadastro de produto", "Cadastro de produto no desktop local atual", "03-cadastro-produto.png", "Conferir codigo, descricao, preco e unidade com validacao ativa."],
+      ["04", "Nova venda (detalhe)", "Visao complementar do fluxo de venda no desktop local atual", "04-nova-venda.png", "Conferir comportamento de venda em visao alternativa da tela."],
+      ["05", "Cadastro de produtos", "Gerenciamento do catalogo de produtos no desktop local atual", "05-cadastro-produtos.png", "Conferir codigo, descricao, preco, unidade e status de produto."],
+      ["06", "Cadastro de clientes", "Gerenciamento da base de clientes no desktop local atual", "06-cadastro-clientes.png", "Conferir campos obrigatorios de CPF, contato e historico do cliente."]
+    ];
+
+    const checklist = [
+      "Tela carregada sem erro funcional",
+      "Campos e dados visiveis conforme fluxo esperado",
+      "Acao principal executada com sucesso"
+    ];
+    const screensGrid = document.getElementById("screensGrid");
+
+    for (const [num, title, meta, image, notes] of screens) {
+      const acceptance = checklist.map((line) => `<li>${line}</li>`).join("");
+      const card = document.createElement("article");
+      card.className = "screen-card";
+      card.id = `s${num}`;
+      card.innerHTML = `
+        <header class="screen-head">
+          <h3>${num}. ${title}</h3>
+          <p class="screen-meta">${meta}</p>
+        </header>
+        <figure class="screen-media">
+          <img src="https://pdv.caracore.com.br/assets/img/wiki/manual-operacional-pdv-java21/${image}" alt="Tela atual ${title}">
+        </figure>
+        <p class="screen-notes">${notes}</p>
+        <section class="acceptance-box" aria-label="Checklist de aceite da tela atual ${title}">
+          <p class="acceptance-title">Checklist de aceite - tela ${num}</p>
+          <ul class="acceptance-list">${acceptance}</ul>
+        </section>
+      `;
+      screensGrid.appendChild(card);
+    }
+
+    document.getElementById("auditStamp").textContent = new Date().toLocaleString("pt-BR");
+  </script>
+  <script src="https://pdv.caracore.com.br/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
