@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual operacional — CaraCore Hub | Wiki Cara Core</title>
+  <meta name="description" content="Como usar a aplicação web do CaraCore Hub na oficina: login, pedidos, estoque, administração e problemas comuns.">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projeto-hub.html"><i class="bi bi-box-seam"></i> Hub do produto</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://hub.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="../projeto-hub.html">CaraCore Hub</a></li>
+          <li class="breadcrumb-item active">Manual operacional</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Manual do Hub</h4>
+          <ul class="wiki-menu">
+            <li><a href="../projeto-hub.html"><i class="bi bi-box-seam"></i> O que é o produto</a></li>
+            <li><a href="index.html" class="active"><i class="bi bi-map"></i> Mapa do manual</a></li>
+            <li><a href="acesso.html"><i class="bi bi-globe"></i> Como acessa</a></li>
+            <li><a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login e sessão</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+            <li><a href="pedidos.html"><i class="bi bi-receipt"></i> Pedidos</a></li>
+            <li><a href="estoque.html"><i class="bi bi-boxes"></i> Estoque</a></li>
+            <li><a href="admin.html"><i class="bi bi-shield-lock"></i> Administração</a></li>
+            <li><a href="casos-de-uso.html"><i class="bi bi-list-check"></i> Casos de uso</a></li>
+            <li><a href="dicas.html"><i class="bi bi-lightning"></i> Dicas</a></li>
+            <li><a href="troubleshooting.html"><i class="bi bi-wrench"></i> Problemas comuns</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home">
+          <div class="wiki-header">
+            <h1><i class="bi bi-box-seam"></i> Manual operacional</h1>
+            <p class="wiki-lede">Como a aplicação web da oficina se usa no dia a dia: pedidos, estoque, conferência e administração. Extraído do tutorial interno da oficina.</p>
+          </div>
+
+          <div class="alert alert-warning" role="note">
+            <i class="bi bi-cone-striped"></i>
+            <strong>Oficina, não oferta madura.</strong> Este manual descreve a aplicação
+            <strong>web</strong> da oficina (versão <strong>2.1</strong>, WAR/Tomcat).
+            Não há SaaS público do Hub nem instalador Windows em oferta.
+            O calendário oficial do instalador com SQLite é <strong>06 de abril de 2027</strong>.
+            Conectores vivos no código: Mercado Livre, Shopee e Temu.
+          </div>
+
+
+          <section class="mb-5">
+            <h2>O que este manual cobre</h2>
+            <p>O CaraCore Hub junta pedidos de Mercado Livre, Shopee e Temu numa fila só, localiza o volume no estoque e confere a retirada. Os perfis são <strong>ADMIN</strong>, <strong>SUPERVISOR</strong> e <strong>OPERADOR</strong>.</p>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="project-card h-100">
+                  <div class="project-body">
+                    <h3 class="h5">Começar</h3>
+                    <ul class="feature-list">
+                      <li><a href="acesso.html">Como a aplicação sobe e como se acessa</a></li>
+                      <li><a href="login.html">Login, senha e sessão</a></li>
+                      <li><a href="dashboard.html">Dashboard depois do login</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card h-100">
+                  <div class="project-body">
+                    <h3 class="h5">Operar</h3>
+                    <ul class="feature-list">
+                      <li><a href="pedidos.html">Lista, detalhe e triagem de pedidos</a></li>
+                      <li><a href="estoque.html">Mapa, etiquetas, recebimento e inventário</a></li>
+                      <li><a href="casos-de-uso.html">Três fluxos completos</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card h-100">
+                  <div class="project-body">
+                    <h3 class="h5">Administrar</h3>
+                    <ul class="feature-list">
+                      <li><a href="admin.html">Usuários, métricas, relatórios e conectores</a></li>
+                      <li><a href="dicas.html">Atalhos e alertas</a></li>
+                      <li><a href="troubleshooting.html">Problemas comuns</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card h-100">
+                  <div class="project-body">
+                    <h3 class="h5">Alinhamento</h3>
+                    <ul class="feature-list">
+                      <li><a href="../projeto-hub.html">O que o produto é (e não é)</a></li>
+                      <li>Tia Sócia é pitch, não o nome do produto</li>
+                      <li>Não misturar com Área 51 (Python/Flask)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="../projeto-hub.html" class="btn-wiki"><i class="bi bi-box-seam"></i> Hub do produto</a>
+            <a href="https://hub.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja</a>
+            <a href="https://hub.caracore.com.br/canal-feedback.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Canal de feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Manual extraído da oficina <code>caracore-hub</code> — aplicação web 2.1. GA do instalador Windows: 06/04/2027.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+</body>
+</html>

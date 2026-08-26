@@ -54,6 +54,27 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
+            title: 'Manual operacional do Hub',
+            description: 'Como usar a aplicação web da oficina: login, dashboard, pedidos, estoque, administração e problemas comuns',
+            url: 'hub/index.html',
+            tags: ['hub', 'manual', 'tutorial', 'pedidos', 'estoque', 'login', 'encomendas', 'oficina', '2.1'],
+            category: 'guia'
+        },
+        {
+            title: 'Hub — pedidos e estoque',
+            description: 'Lista de pedidos, triagem, mapa de posições, etiquetas, recebimento e inventário cíclico',
+            url: 'hub/pedidos.html',
+            tags: ['hub', 'pedidos', 'estoque', 'qr', 'etiqueta', 'inventário', 'marketplace'],
+            category: 'guia'
+        },
+        {
+            title: 'Hub — administração e conectores',
+            description: 'RBAC, métricas, relatórios, Mercado Livre, Shopee, Temu e auditoria LGPD',
+            url: 'hub/admin.html',
+            tags: ['hub', 'admin', 'rbac', 'mercado livre', 'shopee', 'temu', 'auditoria', 'whatsapp'],
+            category: 'guia'
+        },
+        {
             title: 'CaraCore Seed',
             description: 'Contador de licenças interno — vitrine pública; aplicação não está em oferta',
             url: 'projeto-seed.html',

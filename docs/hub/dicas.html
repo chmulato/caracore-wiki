@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas e atalhos — CaraCore Hub | Wiki Cara Core</title>
+  <meta name="description" content="Atalhos de teclado, busca, operação no chão e alertas que pedem ação.">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projeto-hub.html"><i class="bi bi-box-seam"></i> Hub do produto</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://hub.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="../projeto-hub.html">CaraCore Hub</a></li>
+          <li class="breadcrumb-item active">Dicas</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Manual do Hub</h4>
+          <ul class="wiki-menu">
+            <li><a href="../projeto-hub.html"><i class="bi bi-box-seam"></i> O que é o produto</a></li>
+            <li><a href="index.html"><i class="bi bi-map"></i> Mapa do manual</a></li>
+            <li><a href="acesso.html"><i class="bi bi-globe"></i> Como acessa</a></li>
+            <li><a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login e sessão</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+            <li><a href="pedidos.html"><i class="bi bi-receipt"></i> Pedidos</a></li>
+            <li><a href="estoque.html"><i class="bi bi-boxes"></i> Estoque</a></li>
+            <li><a href="admin.html"><i class="bi bi-shield-lock"></i> Administração</a></li>
+            <li><a href="casos-de-uso.html"><i class="bi bi-list-check"></i> Casos de uso</a></li>
+            <li><a href="dicas.html" class="active"><i class="bi bi-lightning"></i> Dicas</a></li>
+            <li><a href="troubleshooting.html"><i class="bi bi-wrench"></i> Problemas comuns</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home">
+          <div class="wiki-header">
+            <h1><i class="bi bi-box-seam"></i> Dicas</h1>
+            <p class="wiki-lede">Pouca tecla, menos erro de digitação, alerta tratado no começo do turno.</p>
+          </div>
+
+          <div class="alert alert-warning" role="note">
+            <i class="bi bi-cone-striped"></i>
+            <strong>Oficina, não oferta madura.</strong> Este manual descreve a aplicação
+            <strong>web</strong> da oficina (versão <strong>2.1</strong>, WAR/Tomcat).
+            Não há SaaS público do Hub nem instalador Windows em oferta.
+            O calendário oficial do instalador com SQLite é <strong>06 de abril de 2027</strong>.
+            Conectores vivos no código: Mercado Livre, Shopee e Temu.
+          </div>
+
+
+          <section class="mb-5">
+            <h2>Atalhos</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead><tr><th>Tecla</th><th>Ação</th></tr></thead>
+                <tbody>
+                  <tr><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td><td>Busca</td></tr>
+                  <tr><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td><td>Impressão</td></tr>
+                  <tr><td><kbd>Ctrl</kbd> + <kbd>E</kbd></td><td>Exportar (onde existir)</td></tr>
+                  <tr><td><kbd>Esc</kbd></td><td>Fecha diálogo</td></tr>
+                  <tr><td><kbd>/</kbd></td><td>Navegação (onde existir)</td></tr>
+                  <tr><td><kbd>?</kbd></td><td>Ajuda contextual (onde existir)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Busca rápida: <code>#PED001</code> para pedido, <code>@CAMI-001</code> para SKU. Filtros em texto, quando a tela oferecer: <code>status:pronto</code>, <code>marketplace:mercadolivre</code>.</p>
+          </section>
+          <section class="mb-5">
+            <h2>Operação</h2>
+            <ul class="feature-list">
+              <li>Prefira o leitor de QR à digitação no pico do turno</li>
+              <li>Guarde os filtros que você mais usa</li>
+              <li>Exporte PDF para o time e CSV/Excel para o contador</li>
+              <li>ADMIN: olhe a auditoria quando houver disputa de status</li>
+            </ul>
+          </section>
+          <section class="mb-5">
+            <h2>Alertas que pedem ação</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead><tr><th>Alerta</th><th>O que fazer</th></tr></thead>
+                <tbody>
+                  <tr><td>Estoque crítico</td><td>Repor com o fornecedor</td></tr>
+                  <tr><td>Pedido atrasado</td><td>Investigar na triagem</td></tr>
+                  <tr><td>Capacidade alta</td><td>Reorganizar corredor</td></tr>
+                  <tr><td>Erro de integração</td><td>Reconectar o marketplace</td></tr>
+                  <tr><td>Falhas de login</td><td>ADMIN investiga o usuário</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="../projeto-hub.html" class="btn-wiki"><i class="bi bi-box-seam"></i> Hub do produto</a>
+            <a href="https://hub.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja</a>
+            <a href="https://hub.caracore.com.br/canal-feedback.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Canal de feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Manual extraído da oficina <code>caracore-hub</code> — aplicação web 2.1. GA do instalador Windows: 06/04/2027.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+</body>
+</html>
