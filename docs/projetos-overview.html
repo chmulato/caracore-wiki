@@ -120,7 +120,7 @@
                                 <li><strong>Reino OIDC:</strong> A "escola de segurança digital" para ensinar sobre logins (OAuth 2.1 e OIDC)</li>
                                 <li><strong>Cara Core Seed:</strong> Contador de licenças interno — vitrine em seed.caracore.com.br; aplicação não está em oferta pública</li>
                                 <li><strong>Circuito Ferradura:</strong> produto educacional em evolução para apresentar lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas interessadas</li>
-                                <li><strong>Cara Core Hub:</strong> Gestão logística e e-commerce (WAR/Tomcat) — <em>Garagem, GA 06/Abr/2027</em></li>
+                                <li><strong>Cara Core Hub:</strong> Gestão de encomendas e marketplaces (Mercado Livre, Shopee, Temu) — vitrine já pública; <em>GA do instalador Windows 06/Abr/2027</em></li>
                                 <li><strong>Área 51:</strong> Consultoria OIDC — autenticação enterprise (OAuth 2.1, OIDC, PKCE)</li>
                                 <li><strong>Helianto Condominium:</strong> Administração condominial com soberania de dados — <em>Garagem, lançamento 30/Dez/2027</em> · loja helianto.caracore.com.br</li>
                                 <li><strong>CaraCore CSO:</strong> Gestão de Frotas no navegador (já em produção em cso.caracore.com.br) e Gestão de Transportes no computador da empresa (bunker desktop, 08/Nov/2028) — CSO não é rastreador GPS</li>
@@ -539,58 +539,58 @@
                     <section class="mb-5">
                         <div class="project-card">
                             <div class="project-header hub">
-                                <h2><i class="bi bi-diagram-3"></i> 7. Cara Core Hub - Sistema de Integração</h2>
+                                <h2><i class="bi bi-diagram-3"></i> 7. Cara Core Hub - Gestão de Encomendas</h2>
                                 <div class="mt-2">
-                                    <span class="tech-badge">Java</span>
+                                    <span class="tech-badge">Jakarta EE 10</span>
                                     <span class="tech-badge">WAR / Tomcat</span>
-                                    <span class="tech-badge">Logística B2B</span>
+                                    <span class="tech-badge">Marketplaces</span>
                                     <span class="tech-badge">Bunker</span>
-                                    <span class="tech-badge" style="background: #f59e0b; color: #1a1a1a;">Garagem — 06/Abr/2027</span>
+                                    <span class="tech-badge" style="background: #f59e0b; color: #1a1a1a;">GA instalador — 06/Abr/2027</span>
                                 </div>
                             </div>
                             <div class="project-body">
                                 <div class="alert alert-warning mb-3">
-                                    <i class="bi bi-cone-striped"></i> <strong>Em desenvolvimento (Garagem).</strong> Lançamento previsto: <strong>06/Abr/2027</strong>. O portal de apresentação já está disponível; o produto ainda não está em produção.
+                                    <i class="bi bi-cone-striped"></i> <strong>Garagem no calendário oficial</strong> refere-se ao <strong>instalador Windows</strong> (<strong>06/Abr/2027</strong>). A vitrine já está em hub.caracore.com.br. A oficina já tem a aplicação web 2.1 (WAR/Tomcat); isso ainda não é oferta madura nem SaaS público.
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
-                                        <p>O CaraCore Hub é como o "centro de controle" da nossa empresa. Imagine que você tem vários aparelhos em casa (TV, som, ar-condicionado) e quer controlá-los com um único controle remoto universal - isso é o que o Hub faz com nossos sistemas.</p>
+                                        <p>Quem vende em vários marketplaces (Mercado Livre, Shopee, Temu) costuma abrir vários painéis para ver o mesmo tipo de pedido. O Hub junta pedidos, estoque e retirada num só lugar — para o centro de distribuição, não para “ligar os produtos da Cara Core entre si”.</p>
                                         
                                         <p><strong>Benefícios práticos:</strong></p>
                                         <ul class="feature-list">
-                                            <li>Conecta diferentes programas da empresa</li>
-                                            <li>Permite que sistemas "conversem" entre si</li>
-                                            <li>Centraliza informações importantes</li>
-                                            <li>Facilita a manutenção e atualizações</li>
+                                            <li>Pedidos de vários canais numa fila só</li>
+                                            <li>Mapa de estoque e conferência na retirada</li>
+                                            <li>Aviso quando um volume atrasa</li>
+                                            <li>Dados no computador do cliente no lançamento Windows (Bunker)</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
-                                        <p>API REST centralizada em <strong>WAR/Tomcat</strong> (gestão logística B2B, Tia Sócia) que serve como gateway de integração para marketplaces e operação bunker.</p>
+                                        <p>Oficina <code>caracore-hub</code> (privada): Jakarta EE 10, WAR/Tomcat, JSP, PostgreSQL e Redis na aplicação web atual. Destino público: instalador Windows com SQLite. Tia Sócia é exemplo de negócio na loja, não o nome do produto.</p>
                                         
                                         <p><strong>Arquitetura:</strong></p>
                                         <ul class="feature-list">
-                                            <li>Aplicação Java empacotada como WAR (Tomcat)</li>
-                                            <li>Bunker Digital com operação local prevista</li>
-                                            <li>Integração com marketplaces e gestão de encomendas</li>
-                                            <li>Licença proprietária; vitrine já pública</li>
+                                            <li>Aplicação Java empacotada como WAR (Tomcat 10.1)</li>
+                                            <li>Conectores: Mercado Livre, Shopee, Temu</li>
+                                            <li>RBAC ADMIN / SUPERVISOR / OPERADOR</li>
+                                            <li>Licença proprietária; CTA público = hub.caracore.com.br</li>
                                         </ul>
                                         
                                         <div class="alert alert-info mt-3">
-                                            <strong>Portal (preview):</strong> <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a> — produto em desenvolvimento; lançamento oficial Abr/2027.
+                                            <strong>Loja:</strong> <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a> — vitrine e artefatos de pré-lançamento; GA do instalador em Abr/2027.
                                         </div>
                                         <div class="alert alert-info mt-3">
-                                            <strong>Seu papel como estagiário:</strong> Desenvolver novos endpoints, criar testes automatizados, melhorar documentação da API.
+                                            <strong>Seu papel como estagiário:</strong> Ler STATUS-ATUAL da oficina. Não descrever o Hub como Python/Flask nem como orquestrador interno da Cara Core.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="text-center mt-3">
                                     <a href="https://hub.caracore.com.br/" class="btn-wiki me-2" target="_blank" rel="noopener">
-                                        <i class="bi bi-globe"></i> Portal (preview)
+                                        <i class="bi bi-shop"></i> Loja (vitrine)
                                     </a>
                                     <a href="projeto-hub.html" class="btn-wiki">
-                                        <i class="bi bi-arrow-right"></i> Ver Detalhes
+                                        <i class="bi bi-arrow-right"></i> Hub (Wiki)
                                     </a>
                                 </div>
                             </div>
@@ -858,7 +858,7 @@
                                         <li><strong>Ink Agenda</strong> gestão para estúdios de tatuagem (agenda, clientes, financeiro) — v2.0.0 lançada</li>
                                         <li><strong>Minerador 4.0</strong> simulador para Ensino Médio e mineração (ETE, terras raras)</li>
                                         <li><strong>CaraCore Seed</strong> centraliza licenças internamente (não é oferta pública)</li>
-                                        <li><strong>CaraCore Hub</strong> conectará logística e marketplaces (WAR/Tomcat) — <em>Garagem (06/Abr/2027)</em></li>
+                                        <li><strong>CaraCore Hub</strong> junta encomendas e marketplaces (WAR/Tomcat na oficina; instalador Windows 06/Abr/2027)</li>
                                         <li><strong>Área 51</strong> protege acessos com autenticação</li>
                                         <li><strong>Reino OIDC</strong> educa sobre segurança</li>
                                         <li><strong>Circuito Ferradura</strong> testa uma proposta educacional inicial e busca feedback/adoção responsável</li>
@@ -875,7 +875,7 @@
                                         <li><strong>Python/Flask:</strong> Área 51 e automações (MKT)</li>
                                         <li><strong>OAuth 2.1:</strong> Reino OIDC ensina, Área 51 implementa</li>
                                         <li><strong>Rust + Tauri 2:</strong> CaraCore PDV (piloto)</li>
-                                        <li><strong>SQLite / PostgreSQL:</strong> PDV, Ink e CSO Transportes (SQLite); CSO Frotas e Helianto (PostgreSQL)</li>
+                                        <li><strong>SQLite / PostgreSQL:</strong> PDV, Ink e CSO Transportes (SQLite); CSO Frotas, Helianto e Hub oficina web (PostgreSQL); Hub GA 2027 (SQLite)</li>
                                         <li><strong>Canais institucionais:</strong> subdomínios de loja + wiki.caracore.com.br</li>
                                     </ul>
                                 </div>

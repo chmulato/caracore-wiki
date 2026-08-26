@@ -48,9 +48,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Gestão logística e e-commerce (WAR/Tomcat) para centros de distribuição — Garagem Abr/2027',
+            description: 'Gestão de encomendas e marketplaces (ML, Shopee, Temu). Oficina WAR/Tomcat 2.1; GA instalador Windows 06/Abr/2027',
             url: 'projeto-hub.html',
-            tags: ['java', 'tomcat', 'war', 'logística', 'e-commerce', 'hub', 'garagem'],
+            tags: ['java', 'tomcat', 'war', 'jakarta', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'garagem', 'tia sócia'],
             category: 'projeto'
         },
         {

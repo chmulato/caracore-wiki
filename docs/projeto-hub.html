@@ -3,13 +3,232 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wiki migrada para a loja</title>
-  <meta http-equiv="refresh" content="0; url=https://hub.caracore.com.br/wiki/index.html">
-  <link rel="canonical" href="https://hub.caracore.com.br/wiki/index.html">
-  <script>window.location.replace('https://hub.caracore.com.br/wiki/index.html');</script>
+  <title>CaraCore Hub — Gestão de encomendas e marketplaces | Wiki Cara Core</title>
+  <meta name="description" content="CaraCore Hub: gestão de encomendas para centros de distribuição, com Mercado Livre, Shopee e Temu. Oficina web WAR/Tomcat já existe; GA do instalador Windows em 06/04/2027. Não é a central telefônica da Cara Core.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="CaraCore Hub — Gestão de encomendas | Wiki Cara Core">
+  <meta property="og:description" content="Pedidos de vários marketplaces num só lugar. Vitrine já pública; instalador Windows previsto para 06/04/2027.">
+  <meta property="og:type" content="article">
 </head>
 <body>
-  <p>Esta wiki de produto foi migrada para a loja oficial.</p>
-  <p>Se o redirecionamento não ocorrer, use: <a href="https://hub.caracore.com.br/wiki/index.html">https://hub.caracore.com.br/wiki/index.html</a>.</p>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-hub"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="projetos-overview.html">Projetos</a></li>
+          <li class="breadcrumb-item active">CaraCore Hub</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Navegação</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-house"></i> Página Inicial</a></li>
+            <li>
+              <a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral</a>
+              <ul class="submenu">
+                <li><a href="projeto-hub.html" class="active">CaraCore Hub</a></li>
+              </ul>
+            </li>
+            <li><a href="#o-que-e"><i class="bi bi-box-seam"></i> O que é</a></li>
+            <li><a href="#oficina"><i class="bi bi-tools"></i> O que já existe na oficina</a></li>
+            <li><a href="#ga"><i class="bi bi-windows"></i> Instalador Windows 2027</a></li>
+            <li><a href="#tia-socia"><i class="bi bi-people"></i> Tia Sócia</a></li>
+            <li><a href="#mapa"><i class="bi bi-table"></i> Mapa para o código</a></li>
+            <li><a href="glossario.html"><i class="bi bi-book"></i> Glossário</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content">
+          <div class="wiki-header">
+            <h1><i class="bi bi-box-seam"></i> CaraCore Hub — encomendas, não “central telefônica”</h1>
+            <p>O Hub é o sistema de <strong>gestão de encomendas</strong> para centros de distribuição: pedidos de vários marketplaces entram num só lugar, o estoque tem mapa e a retirada é conferida. A vitrine já está em <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a>. O <strong>lançamento público</strong> do instalador Windows é <strong>06 de abril de 2027</strong>.</p>
+          </div>
+
+          <div class="alert alert-info" role="note">
+            <i class="bi bi-info-circle"></i>
+            <strong>Honestidade de produto:</strong> o Hub <strong>não</strong> é o orquestrador interno da Cara Core nem uma API Python/Flask. Isso mistura o Hub com a Área 51. Também <strong>não</strong> está em oferta madura como o PDV Java: a oficina já tem a aplicação web (WAR/Tomcat); o que o calendário oficial chama de GA é o <strong>instalador Windows com SQLite local</strong>.
+          </div>
+
+          <div class="row g-4 mb-4" id="o-que-e">
+            <div class="col-md-6">
+              <div class="project-card h-100">
+                <div class="project-header hub">
+                  <h2 class="h4 mb-0"><i class="bi bi-people"></i> Para quem vende em vários canais</h2>
+                </div>
+                <div class="project-body">
+                  <p>Quem vende no Mercado Livre, na Shopee e na Temu costuma abrir três painéis para ver o mesmo tipo de pedido. O Hub junta isso: o pedido chega, vai para uma posição no estoque e sai com conferência.</p>
+                  <ul class="feature-list">
+                    <li>Centraliza pedidos de vários marketplaces</li>
+                    <li>Mapa de estoque (rua, módulo, nível, caixa)</li>
+                    <li>Inventário cíclico e etiquetas</li>
+                    <li>Aviso no WhatsApp quando algo atrasa</li>
+                    <li>Perfis ADMIN, SUPERVISOR e OPERADOR</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="project-card h-100">
+                <div class="project-header hub">
+                  <h2 class="h4 mb-0"><i class="bi bi-mortarboard"></i> O que o estagiário precisa saber</h2>
+                </div>
+                <div class="project-body">
+                  <p>Uma oficina (<code>caracore-hub</code>, repositório privado) e uma loja (<code>caracore-hub-releases</code>). Stack da aplicação web: <strong>Jakarta EE 10 · WAR · Tomcat · JSP</strong>. PostgreSQL e Redis no ambiente atual da oficina; o destino público de 2027 é SQLite no computador do cliente.</p>
+                  <ul class="feature-list">
+                    <li>Versão de referência na oficina: <strong>2.1</strong></li>
+                    <li>Fases 1 a 5 da aplicação web marcadas como concluídas na oficina</li>
+                    <li>Conectores vivos no código: Mercado Livre, Shopee, Temu</li>
+                    <li>Há um envelope desktop (Electron + Tomcat embutido) no caminho do instalador</li>
+                    <li>Licença proprietária; gratuito para pessoa física (estudo), conforme política Cara Core</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="mb-5" id="oficina">
+            <h2><i class="bi bi-tools"></i> O que já existe na oficina (não é GA pública)</h2>
+            <p>Na oficina, a aplicação web de gestão de encomendas está em versão <strong>2.1</strong>, com as cinco fases internas concluídas. Isso <strong>não</strong> significa que o cliente já baixa um instalador Windows ou que há um SaaS público do Hub.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead>
+                  <tr><th>Fase</th><th>O que cobre</th><th>Status na oficina</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>RBAC, health, PDF</td><td>Concluída</td></tr>
+                  <tr><td>2</td><td>Mercado Livre (webhook HMAC, worker, WhatsApp)</td><td>Concluída</td></tr>
+                  <tr><td>3</td><td>Shopee + Temu, estoque avançado, inventário cíclico</td><td>Concluída</td></tr>
+                  <tr><td>4</td><td>KPIs, CSV, centro de erros, auditoria LGPD</td><td>Concluída</td></tr>
+                  <tr><td>5</td><td>Configuração por perfil, Redis, WebSocket, Chart.js</td><td>Concluída</td></tr>
+                  <tr><td>GA</td><td>Instalador Windows (EXE + SQLite + Bunker)</td><td><strong>06/04/2027</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-warning" role="note">
+              <i class="bi bi-cone-striped"></i>
+              <strong>Calendário oficial:</strong> o que o Eco Mundo e o AGENTS.md chamam de Garagem do Hub é o <strong>instalador Windows</strong>, não a inexistência de código. A analogia com o CSO Transportes vale: a oficina já tem produto; a oferta pública ainda não.
+            </div>
+          </section>
+
+          <section class="mb-5" id="ga">
+            <h2><i class="bi bi-windows"></i> Dois tempos: WAR na oficina × instalador em 2027</h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="project-card h-100">
+                  <div class="project-body">
+                    <p><span class="badge bg-secondary">Oficina hoje</span></p>
+                    <p>Aplicação <strong>web</strong> empacotada como WAR, Tomcat, JSP/Bootstrap, PostgreSQL e Redis. Sobe com Docker na oficina. Não é desktop e não é o canal de download do cliente final.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card h-100">
+                  <div class="project-body">
+                    <p><span class="badge bg-warning text-dark">Oferta pública</span></p>
+                    <p>Instalador Windows com <strong>SQLite local</strong> (Bunker Digital), mesma soberania do PDV. A loja já antecipa essa história; o marco oficial é <strong>06 de abril de 2027</strong>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5" id="tia-socia">
+            <h2><i class="bi bi-people"></i> Tia Sócia é exemplo de negócio, não o nome do produto</h2>
+            <p>O <strong>Programa Tias Sócias</strong> é uma proposta ilustrativa de última milha com impacto social, usada no pitch da loja. O produto que se instala e se opera continua se chamando <strong>CaraCore Hub</strong>. Números do pitch são ilustrativos.</p>
+          </section>
+
+          <section class="mb-5" id="mapa">
+            <h2><i class="bi bi-table"></i> Mapa rápido para quem vai mexer no código</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead>
+                  <tr><th></th><th>Aplicação web (oficina)</th><th>Caminho desktop (GA 2027)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Oficina</td><td colspan="2"><code>caracore-hub</code> (privado)</td></tr>
+                  <tr><td>Loja</td><td colspan="2"><code>caracore-hub-releases</code> — <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a></td></tr>
+                  <tr><td>Runtime</td><td>Jakarta EE 10 · Tomcat 10.1 · WAR</td><td>Tomcat embutido + envelope Electron (na oficina)</td></tr>
+                  <tr><td>Interface</td><td>JSP + JSTL + Bootstrap 5 + Chart.js</td><td>As mesmas telas JSP, dentro do desktop</td></tr>
+                  <tr><td>Banco</td><td>PostgreSQL 15 (+ Redis 7)</td><td>SQLite local (Bunker)</td></tr>
+                  <tr><td>Marketplaces</td><td colspan="2">Mercado Livre, Shopee, Temu (não inventar Amazon como conector pronto)</td></tr>
+                  <tr><td>CTA público</td><td colspan="2">hub.caracore.com.br — nunca <code>/delivery/hub</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-secondary" role="note">
+              <i class="bi bi-mortarboard"></i>
+              <strong>Primeiro passo do estagiário:</strong> ler o README da oficina e o <code>project_hub/docs/STATUS-ATUAL.md</code>. Não copie senhas de desenvolvimento. Não descreva o Hub como Flask, Azure App Service ou “cérebro que liga todos os produtos Cara Core”.
+            </div>
+          </section>
+
+          <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="https://hub.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-shop"></i> Loja (vitrine)
+            </a>
+            <a href="https://hub.caracore.com.br/download.html" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-download"></i> Pré-lançamento
+            </a>
+            <a href="https://www.caracore.com.br/portfolio.html#caracore-hub" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-globe"></i> Portfólio Cara Core
+            </a>
+            <a href="ecosistema.html" class="btn-wiki">
+              <i class="bi bi-globe2"></i> Eco Mundo
+            </a>
+            <a href="projetos-overview.html" class="btn-wiki">
+              <i class="bi bi-collection"></i> Visão geral dos projetos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Wiki como centro de alinhamento — CaraCore Hub: oficina web 2.1, GA do instalador Windows 06/04/2027.</p>
+      <div class="mt-2">
+        <a href="https://wiki.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+          <i class="bi bi-shield-lock"></i> Política de Privacidade
+        </a>
+        <a href="https://www.caracore.com.br/" class="text-light">
+          <i class="bi bi-house"></i> Site Principal
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/wiki.js"></script>
 </body>
 </html>
