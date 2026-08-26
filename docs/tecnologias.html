@@ -42,9 +42,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -91,10 +96,10 @@
 
             <!-- Conteúdo Principal -->
             <div class="col-lg-9 col-md-8">
-                <div class="wiki-content">
+                <div class="wiki-content wiki-home">
                     <div class="wiki-header">
-                        <h1><i class="bi bi-gear"></i> Tecnologias Utilizadas</h1>
-                        <p>Stack tecnológico completo da Cara Core Informática com explicações para todos os níveis</p>
+                    <h1><i class="bi bi-gear"></i> Tecnologias Utilizadas</h1>
+                    <p class="wiki-lede">O detalhe da stack fica aqui — na capa e nas trilhas o discurso é o cenário. Comece pelo que muda na operação; o bloco técnico é opcional.</p>
                     </div>
 
                     <!-- Introdução -->
@@ -132,7 +137,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Java</strong> é uma linguagem de programação muito usada em sistemas de empresas, bancos e lojas. É estável, segura e roda em praticamente qualquer computador.</p>
                                         
                                         <p><strong>Quarkus</strong> ajuda a organizar APIs e integrações locais com foco em desempenho. <strong>JavaFX</strong> cuida da interface desktop que o operador usa no dia a dia.</p>
@@ -145,7 +150,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>No <a href="projeto-pdv.html">CaraCore PDV</a> utilizamos:</p>
                                         <ul class="feature-list">
                                             <li><strong>Java 25:</strong> LTS (set/2025) com virtual threads, Valhalla e melhorias de performance</li>
@@ -162,7 +167,7 @@
                         </div>
                     </section>
 
-                    <!-- Rust e Tauri (PDV Rust + Tauri) -->
+                    <!-- Rust e Tauri (Linha piloto do PDV) -->
                     <section id="rust-tauri" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv-rust">
@@ -177,14 +182,14 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Rust</strong> é uma linguagem moderna focada em segurança e performance. <strong>Tauri</strong> empacota o aplicativo para Windows com instalador em português, mantendo o programa enxuto.</p>
                                         <div class="alert alert-info">
                                             <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> no <strong>CaraCore PDV (Rust + Tauri 2)</strong>, release v0.1.2, piloto Windows. O CaraCore PDV Desktop Java (canal v3.2.2-free) permanece maduro e independente — ambos são aplicativos desktop.
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Monorepo <code>caracore-pdv-rust</code> com crates Rust, app Tauri e frontend React. Releases via GitHub Actions e scripts Python com validação de artefatos pt-BR.</p>
                                         <p><strong>Projeto de referência:</strong> <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> · <a href="https://rust-pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">Wiki da loja</a></p>
                                     </div>
@@ -208,7 +213,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Python</strong> é como o "idioma" que usamos para falar com o computador. É uma linguagem muito popular porque é fácil de aprender e ler - quase como inglês!</p>
                                         
                                         <p><strong>Flask</strong> é como um "kit de ferramentas" que nos ajuda a criar sites e sistemas mais rapidamente. Em vez de fazer tudo do zero, o Flask já tem peças prontas que podemos usar.</p>
@@ -218,7 +223,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p><strong>Python</strong> é nossa linguagem principal para backend. Escolhemos Python 3.11+ pelas melhorias de performance e novas funcionalidades de tipagem.</p>
                                         
                                         <p><strong>Frameworks utilizados:</strong></p>
@@ -280,7 +285,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>Se um site fosse uma casa:</p>
                                         <ul class="feature-list">
                                             <li><strong>HTML:</strong> É a "estrutura" - as paredes, portas, janelas</li>
@@ -291,7 +296,7 @@
                                         <p><strong>Bootstrap</strong> é como comprar uma casa semi-pronta - já vem com decoração básica bonita, você só personaliza os detalhes!</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Nosso frontend prioriza <strong>responsividade</strong> e <strong>acessibilidade</strong>:</p>
                                         
                                         <p><strong>HTML5:</strong></p>
@@ -342,7 +347,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>Imagine que você quer entrar em uma festa exclusiva:</p>
                                         
                                         <p><strong>OAuth 2.1:</strong> É como ter um "segurança da festa" que verifica sua identidade usando seu RG (Google/Microsoft) em vez de criar uma nova carteirinha só para a festa.</p>
@@ -358,7 +363,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Implementamos as melhores práticas de segurança modernas:</p>
                                         
                                         <p><strong>OAuth 2.1 (RFC 6749 atualizada):</strong></p>
@@ -424,7 +429,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Azure:</strong> É como "alugar computadores na Microsoft" em vez de comprar. Seus programas ficam rodando nos servidores da Microsoft pelo mundo todo.</p>
                                         
                                         <p><strong>Docker:</strong> Imagine que você quer mandar um presente pelo correio. Você coloca numa caixa com tudo que precisa (produto + proteção + instruções). Docker faz isso com programas - empacota tudo numa "caixa" que funciona em qualquer computador.</p>
@@ -432,7 +437,7 @@
                                         <p><strong>GitHub Pages:</strong> É como um "terreno grátis na internet" onde você pode construir seu site. Ideal para sites simples que não precisam de banco de dados.</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Para Estagiários</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Nossa infraestrutura prioriza <strong>custo-benefício</strong> e <strong>facilidade de manutenção</strong>:</p>
                                         
                                         <p><strong>Azure Web Apps:</strong></p>
@@ -522,7 +527,7 @@
                                         <ul class="feature-list">
                                             <li><strong>Qute + HTMX + Alpine.js:</strong> SSR da Gestão de Frotas (CSO)</li>
                                             <li><strong>Vue.js 3:</strong> SPA da oficina CSO Transportes</li>
-                                            <li><strong>React:</strong> CaraCore PDV (Rust + Tauri) e Helianto</li>
+                                            <li><strong>React:</strong> Linha piloto do PDV e Helianto</li>
                                             <li><strong>Bootstrap 5:</strong> UI responsivo (matriz, wiki e lojas)</li>
                                             <li><strong>Alpine.js:</strong> interatividade leve nas telas SSR</li>
                                         </ul>
@@ -865,13 +870,14 @@
     <footer class="wiki-footer">
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-            <p>Wiki criado para orientação de estagiários e divulgação técnica</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

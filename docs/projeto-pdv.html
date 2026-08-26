@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaraCore PDV — Java e Rust | Wiki Cara Core</title>
-  <meta name="description" content="Hub do CaraCore PDV: PDV Desktop Java (canal v3.2.2-free, Windows/Linux/macOS) e CaraCore PDV Rust + Tauri 2 (piloto Windows v0.1.2). Dois desktops, mesma filosofia; nenhuma substitui a outra.">
+  <meta name="description" content="Hub do CaraCore PDV: linha madura (canal v3.2.2-free, Windows/Linux/macOS) e linha piloto (Windows v0.1.2). Dois desktops, mesma filosofia; nenhuma substitui a outra.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -26,7 +26,12 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-pdv"><i class="bi bi-briefcase"></i> Portfólio</a></li>
-          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -55,11 +60,11 @@
               <a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral</a>
               <ul class="submenu">
                 <li><a href="projeto-pdv.html" class="active">CaraCore PDV (hub)</a></li>
-                <li><a href="projeto-pdv-rust.html">PDV Rust + Tauri</a></li>
+                <li><a href="projeto-pdv-rust.html">Linha piloto do PDV</a></li>
               </ul>
             </li>
             <li><a href="#java"><i class="bi bi-cash-register"></i> PDV Desktop Java</a></li>
-            <li><a href="#rust"><i class="bi bi-lightning-charge"></i> PDV Rust + Tauri</a></li>
+            <li><a href="#rust"><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</a></li>
             <li><a href="#escolher"><i class="bi bi-table"></i> Qual linha escolher</a></li>
             <li><a href="trilha-cliente.html#v3-pdv-transparencia"><i class="bi bi-megaphone"></i> Transparência V3</a></li>
           </ul>
@@ -67,10 +72,10 @@
       </div>
 
       <div class="col-lg-9 col-md-8">
-        <div class="wiki-content">
+        <div class="wiki-content wiki-home">
           <div class="wiki-header">
             <h1><i class="bi bi-cash-stack"></i> CaraCore PDV — dois desktops, mesma filosofia</h1>
-            <p>O CaraCore PDV é o caixa da loja, instalado no computador. Existem <strong>duas linhas desktop</strong> do mesmo produto: a oferta madura em Java e o piloto em Rust + Tauri. <strong>Nenhuma substitui a outra.</strong> A documentação operacional detalhada fica na <strong>wiki de cada loja</strong>.</p>
+            <p class="wiki-lede">O CaraCore PDV é o caixa da loja, instalado no computador. Existem <strong>duas linhas desktop</strong> do mesmo produto: a oferta madura e a linha piloto, mais leve. <strong>Nenhuma substitui a outra.</strong> Manual de botão e download ficam na <strong>wiki de cada loja</strong>.</p>
           </div>
 
           <div class="alert alert-info" role="note">
@@ -80,9 +85,9 @@
 
           <div class="row g-4 mb-4">
             <div class="col-md-6">
-              <div class="project-card h-100" id="java">
+              <div class="project-card product-card product-card--pdv h-100" id="java">
                 <div class="project-header pdv">
-                  <h2 class="h4 mb-0"><i class="bi bi-cash-register"></i> PDV Desktop (Java · JavaFX)</h2>
+                  <h2 class="h4 mb-0"><i class="bi bi-cash-register"></i> Linha madura</h2>
                 </div>
                 <div class="project-body">
                   <p><span class="badge bg-success">Oferta madura</span> · canal <strong>v3.2.2-free</strong></p>
@@ -101,9 +106,9 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="project-card h-100" id="rust">
+              <div class="project-card product-card product-card--pdv h-100" id="rust">
                 <div class="project-header pdv-rust">
-                  <h2 class="h4 mb-0"><i class="bi bi-lightning-charge"></i> CaraCore PDV (Rust + Tauri 2)</h2>
+                  <h2 class="h4 mb-0"><i class="bi bi-lightning-charge"></i> Linha piloto</h2>
                 </div>
                 <div class="project-body">
                   <p><span class="badge bg-warning text-dark">Piloto Windows</span> · release <strong>v0.1.2</strong></p>
@@ -124,11 +129,11 @@
           </div>
 
           <section class="mb-5">
-            <h2><i class="bi bi-people"></i> Para leigos e para estagiários</h2>
+            <h2><i class="bi bi-people"></i> O que muda para você e o detalhe opcional</h2>
             <div class="row g-4">
               <div class="col-md-6">
                 <div class="leigos-section h-100">
-                  <h3 class="h5"><i class="bi bi-people"></i> Para leigos</h3>
+                  <h3 class="h5"><i class="bi bi-people"></i> O que muda para você</h3>
                   <p>Os dois programas fazem o trabalho do caixa: registrar venda, receber PIX, fechar o dia e guardar os dados no computador da loja. A diferença é a tecnologia por baixo e o estágio da oferta.</p>
                   <ul class="feature-list">
                     <li><strong>Java</strong> — o caminho maduro, já em Windows, Linux e macOS</li>
@@ -140,7 +145,7 @@
               </div>
               <div class="col-md-6">
                 <div class="estagiario-section h-100">
-                  <h3 class="h5"><i class="bi bi-code"></i> Para estagiários</h3>
+                  <h3 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h3>
                   <p>Há duas oficinas e duas lojas. Manuais de botão, Wiki Fiscal e trilhas de suporte ficam na <strong>loja Java</strong>. Transparência, formatos de instalador e piloto ficam na <strong>loja Rust</strong>.</p>
                   <ul class="feature-list">
                     <li>Não afirmar que Rust “substitui” ou é “migração forçada” do Java</li>
@@ -251,7 +256,7 @@
               <i class="bi bi-globe"></i> Coexistência no portfólio
             </a>
             <a href="ecosistema.html" class="btn-wiki">
-              <i class="bi bi-globe2"></i> Eco Mundo
+              <i class="bi bi-globe2"></i> Mapa do ecossistema
             </a>
           </div>
         </div>
@@ -275,6 +280,7 @@
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/wiki.js"></script>
 </body>
 </html>

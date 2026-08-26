@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CaraCore PDV (Rust + Tauri) | Wiki Cara Core</title>
+  <title>Linha piloto do PDV | Wiki Cara Core</title>
   <meta name="description" content="PDV Desktop Rust + Tauri 2: release v0.1.2, piloto Windows, PDV local e na rede, download em GitHub Releases. Convive com o PDV Desktop Java (v3.2.2-free); não o substitui.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
@@ -24,7 +24,12 @@
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust"><i class="bi bi-briefcase"></i> Portfólio</a></li>
           <li class="nav-item"><a class="nav-link" href="projeto-pdv.html"><i class="bi bi-cash-stack"></i> Hub PDV</a></li>
-          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -36,7 +41,7 @@
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
           <li class="breadcrumb-item"><a href="projeto-pdv.html">CaraCore PDV</a></li>
-          <li class="breadcrumb-item active">CaraCore PDV (Rust + Tauri)</li>
+          <li class="breadcrumb-item active">Linha piloto do PDV</li>
         </ol>
       </nav>
     </div>
@@ -51,18 +56,21 @@
             <li><a href="index.html"><i class="bi bi-house"></i> Página Inicial</a></li>
             <li><a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral</a></li>
             <li><a href="projeto-pdv.html"><i class="bi bi-cash-stack"></i> Hub PDV</a></li>
-            <li><a href="projeto-pdv-rust.html" class="active"><i class="bi bi-lightning-charge"></i> PDV Rust + Tauri</a></li>
+            <li><a href="projeto-pdv-rust.html" class="active"><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</a></li>
             <li><a href="https://rust-pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Wiki da loja</a></li>
           </ul>
         </div>
       </div>
 
       <div class="col-lg-9 col-md-8">
-        <div class="wiki-content">
-          <div class="project-card mb-4">
+        <div class="wiki-content wiki-home">
+          <div class="wiki-header">
+            <h1><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</h1>
+            <p class="wiki-lede">A segunda linha de caixa, mais leve, piloto Windows (v0.1.2). Convive com a linha madura; <strong>não a substitui</strong>.</p>
+          </div>
+          <div class="project-card product-card product-card--pdv mb-4">
             <div class="project-header pdv-rust">
-              <h1 class="h2 mb-2"><i class="bi bi-lightning-charge"></i> CaraCore PDV (Rust + Tauri 2)</h1>
-              <p class="mb-0">PDV desktop piloto Windows — release v0.1.2, PDV local e na rede, download em GitHub Releases</p>
+              <h2 class="h4 mb-0">Detalhe da linha piloto</h2>
             </div>
             <div class="project-body">
               <div class="mb-3">
@@ -84,7 +92,7 @@
 
               <div class="row g-4">
                 <div class="col-md-6">
-                  <h2 class="h5"><i class="bi bi-people"></i> Para leigos</h2>
+                  <h2 class="h5"><i class="bi bi-people"></i> O que muda para você</h2>
                   <p>É o mesmo caixa CaraCore PDV, com outra tecnologia por baixo: <strong>Rust</strong> para robustez e <strong>Tauri 2</strong> para um programa Windows enxuto, com instalador em português. Comece no <strong>PDV local</strong> (um PC) e evolua para <strong>PDV na rede</strong> quando precisar.</p>
                   <p><strong>Edição gratuita:</strong> até <strong>100 vendas</strong> para testar na loja; condições na <a href="https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita" target="_blank" rel="noopener">transparência rust-pdv</a>.</p>
                   <ul class="feature-list">
@@ -96,7 +104,7 @@
                   </ul>
                 </div>
                 <div class="col-md-6">
-                  <h2 class="h5"><i class="bi bi-code"></i> Para estagiários</h2>
+                  <h2 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h2>
                   <p>Monorepo <code>caracore-pdv-rust</code>: crates Rust (<code>backend/pdv-core</code>), app Tauri 2, UI React, SQLite. Publicação via scripts Python com smoke de artefatos pt-BR e manifesto SHA256.</p>
                   <ul class="feature-list">
                     <li><strong>Oficina:</strong> <code>caracore-pdv-rust</code></li>
@@ -185,11 +193,12 @@
   <footer class="wiki-footer">
     <div class="container">
       <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>CaraCore PDV (Rust + Tauri 2) — piloto v0.1.2; convive com o PDV Desktop Java v3.2.2-free.</p>
+      <p>Wiki como centro de alinhamento — linha piloto do PDV (v0.1.2) convive com a linha madura (v3.2.2-free).</p>
     </div>
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/wiki.js"></script>
 </body>
 </html>

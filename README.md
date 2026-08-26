@@ -6,7 +6,7 @@ O Wiki da Cara Core Informática foi criado como um guia completo para **estagi�
 
 ### Objetivo Principal
 
-Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega. Os **três produtos-chave** são **PDV** (caixa desktop Java + Rust), **CSO** (Frotas no ar + Transportes 2028) e **Hub** (encomendas; GA Windows 06/Abr/2027). O restante do portfólio (Ink, OIDC, Seed, Circuito, Área 51, RU, Helianto, MKT) está documentado sem competir com esse núcleo. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
+Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega. Os **três produtos-chave** são **PDV** (caixa desktop Java + Rust), **CSO** (Frotas no ar + Transportes 2028) e **Hub** (encomendas; GA Windows 06/Abr/2027). O restante do portfólio (Ink, OIDC, Seed, Circuito, Área 51, RU, Helianto, MKT) está documentado sem competir com esse núcleo. O Wiki está alinhado ao **mapa do ecossistema** (apelido interno: Eco Mundo — matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem o link **Mapa** na navegação.
 
 ## Projetos Documentados
 

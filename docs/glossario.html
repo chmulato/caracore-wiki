@@ -44,9 +44,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -117,10 +122,10 @@
 
             <!-- Conteúdo Principal -->
             <div class="col-lg-9 col-md-8">
-                <div class="wiki-content">
+                <div class="wiki-content wiki-home">
                     <div class="wiki-header">
-                        <h1><i class="bi bi-book"></i> Glossário Técnico</h1>
-                        <p>Dicionário de termos técnicos com explicações simples e detalhadas</p>
+                    <h1><i class="bi bi-book"></i> Glossário</h1>
+                    <p class="wiki-lede">Termos da casa e da operação, no mesmo tom da wiki: primeiro o que muda para você; o detalhe técnico é opcional.</p>
                     </div>
 
                     <!-- Campo de busca -->
@@ -140,15 +145,34 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>API é como um "garçom" entre dois sistemas. Imagine que você está em um restaurante: você (o aplicativo) quer pedir comida da cozinha (outro sistema), mas não pode entrar lá diretamente. O garçom (API) leva seu pedido para a cozinha e traz a comida de volta para você.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Interface de programação que define métodos de comunicação entre componentes de software. Especifica como diferentes sistemas podem interagir através de endpoints, métodos HTTP (GET, POST, PUT, DELETE) e formatos de dados como JSON.</p>
                                         <p><strong>Exemplo:</strong> <code>GET /api/users</code> retorna lista de usuários</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3>Área 51</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
+                                        <p>Laboratório de segurança da Cara Core. É o lugar onde testamos padrões de acesso (quem entra, com qual identidade) antes de levar o mesmo cuidado para os outros produtos.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
+                                        <p>Consultoria e baseline OIDC. Loja <a href="https://area51.caracore.com.br/" target="_blank" rel="noopener">area51.caracore.com.br</a>. Não confundir com o CaraCore Hub (encomendas) nem com o Reino OIDC (educação).</p>
+                                        <p><strong>Wiki da loja:</strong> <a href="https://area51.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">area51.caracore.com.br/wiki</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -159,13 +183,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Azure é como um "shopping center virtual" da Microsoft onde você pode alugar espaços para colocar seus sites, aplicativos e dados. Em vez de comprar computadores próprios, você "aluga" o que precisa na nuvem.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Plataforma de computação em nuvem da Microsoft que oferece serviços como App Service (hospedagem web), Storage (armazenamento), SQL Database, Active Directory, Functions (serverless), entre outros.</p>
                                         <p><strong>Usado em:</strong> Área 51 (Azure) e presenças estáticas no GitHub Pages</p>
                                     </div>
@@ -183,15 +207,34 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Backend é a "cozinha" do restaurante. É onde toda a "magia" acontece: processar pedidos, buscar informações no banco de dados, fazer cálculos. O cliente não vê, mas é essencial para tudo funcionar.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Parte do sistema responsável pela lógica de negócio, processamento de dados, autenticação, autorização e comunicação com bancos de dados. Roda no servidor, não no navegador do usuário.</p>
                                         <p><strong>Tecnologias:</strong> Python/Flask, Node.js, Java, APIs REST</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3>Blindagem fiscal</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
+                                        <p>Menos risco na nota fiscal e na rotina do caixa: o sistema ajuda a operação a ficar em dia, em vez de o lojista improvisar na hora da venda.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
+                                        <p>Discurso de resultado do PDV (Selo Verde / conformidade). Em texto para cliente, preferir “menos risco fiscal” a “blindagem orientada a ROI”.</p>
+                                        <p><strong>Produto:</strong> <a href="projeto-pdv.html">CaraCore PDV</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -202,13 +245,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Branch é como criar uma "cópia paralela" do seu projeto para trabalhar sem bagunçar o original. É como tirar xerox de um documento para fazer anotações sem estragar o original.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Ramificação no Git que permite desenvolvimento paralelo de features. A branch <code>main</code> contém o código estável, enquanto branches de feature (<code>feature/login</code>) isolam desenvolvimento específico.</p>
                                         <p><strong>Comando:</strong> <code>git checkout -b feature/nova-funcionalidade</code></p>
                                     </div>
@@ -221,13 +264,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Bootstrap é como um "kit de moldes" para fazer sites bonitos. Em vez de criar botões, menus e layouts do zero, você usa peças prontas que já ficam elegantes e funcionam em celular e computador.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Framework CSS que fornece componentes pré-construídos, grid system responsivo, utilitários de espaçamento e JavaScript para interações. Acelera desenvolvimento frontend com padrões consistentes.</p>
                                         <p><strong>Classes comuns:</strong> <code>container</code>, <code>row</code>, <code>col-md-6</code>, <code>btn-primary</code></p>
                                     </div>
@@ -240,13 +283,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Bunker Digital é o jeito Cara Core de manter dados e operação crítica no computador da empresa. Se a internet cair, o caixa, a agenda ou o backup local continuam funcionando.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Arquitetura offline-first com persistência local (em geral SQLite) e nuvem só quando o desenho pede (FinOps/híbrido). Usado no PDV, Ink Agenda, CSO Transportes e no Hub planejado para o instalador Windows de 2027.</p>
                                     </div>
                                 </div>
@@ -261,13 +304,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Centro logístico da Cara Core, em duas frentes: <strong>Gestão de Frotas</strong> no navegador (já no ar, para sair da planilha) e <strong>Gestão de Transportes</strong> no computador da empresa (bunker desktop, 08/Nov/2028). Quem contrata o CSO de gestão <strong>não</strong> está comprando rastreador GPS.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficinas <code>caracore-cso-quarkus</code> (Java 21 · Quarkus · PostgreSQL · Qute/HTMX, produção em cso.caracore.com.br) e <code>caracore-cso-transportes</code> (Quarkus · JavaFX · Vue 3 · SQLite). Não usar GitHub Pages como URL canónica.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-cso.html">projeto-cso.html</a> · <strong>Frotas:</strong> <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a></p>
                                     </div>
@@ -280,13 +323,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Sistema de gestão de encomendas para centros de distribuição: junta pedidos de Mercado Livre, Shopee e Temu, organiza o estoque e confere a retirada. A vitrine já está em hub.caracore.com.br; o instalador Windows está previsto para 06/Abr/2027. Não é orquestrador interno da Cara Core.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-hub</code> (privada): Jakarta EE 10 · WAR/Tomcat · JSP · PostgreSQL/Redis na web atual; SQLite no GA Windows. Loja <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a>. Tia Sócia é pitch ilustrativo, não o nome do produto.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-hub.html">projeto-hub.html</a></p>
                                     </div>
@@ -299,13 +342,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Nome comercial da linha desktop em <strong>Rust + Tauri 2</strong> (piloto Windows, v0.1.2). Convive com o CaraCore PDV Desktop (Java). São o mesmo produto de caixa, com stacks diferentes — nenhuma substitui a outra.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-pdv-rust</code>. Loja <a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">rust-pdv.caracore.com.br</a>. Download na <a href="https://rust-pdv.caracore.com.br/download.html" target="_blank" rel="noopener">página de formatos</a> (artefatos na tag <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" target="_blank" rel="noopener">v0.1.2</a> de <code>caracore-pdv-releases</code> — não usar <code>/releases/latest</code>, que é o canal Java). Canal Java maduro: v3.2.2-free em pdv.caracore.com.br.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-pdv-rust.html">projeto-pdv-rust.html</a> · <a href="projeto-pdv.html">hub das duas linhas</a></p>
                                     </div>
@@ -318,13 +361,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>É o caixa maduro da Cara Core, em Java: vender, receber PIX e continuar operando no computador da loja, em Windows, Linux ou macOS. Canal público atual: v3.2.2-free.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-pdv</code> — Java 25, Quarkus, JavaFX, SQLite. Loja <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a>. Wiki Fiscal e trilhas (cliente, suporte, contador, sócio) ficam na loja, não nesta wiki institucional.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-pdv.html#java">projeto-pdv.html#java</a></p>
                                     </div>
@@ -337,13 +380,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>CSS é como a "roupa" do site. O HTML é como o corpo/esqueleto, e o CSS é a roupa que deixa tudo bonito: cores, tamanhos, posições, fontes. É o que faz um site ficar apresentável.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Linguagem de estilo que controla apresentação visual de elementos HTML. Define cores, layout, tipografia, responsividade e animações. Funciona com seletores, propriedades e valores.</p>
                                         <p><strong>Exemplo:</strong> <code>.btn { background-color: #007bff; }</code></p>
                                     </div>
@@ -356,13 +399,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Commit é como tirar uma "foto" do seu progresso no projeto. Cada foto fica salva com uma descrição do que você fez. Se algo der errado, você pode voltar para uma "foto" anterior.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Snapshot do estado atual do código que fica permanentemente salvo no histórico Git. Cada commit tem hash único, mensagem descritiva, autor e timestamp.</p>
                                         <p><strong>Comando:</strong> <code>git commit -m "feat: adicionar login com Google"</code></p>
                                     </div>
@@ -375,13 +418,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Container é como uma "caixa de mudança" para programas. Você coloca seu aplicativo e tudo que ele precisa dentro da caixa, e ela funciona igual em qualquer computador, sem conflitos.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Unidade de software que empacota aplicação com todas dependências (libraries, runtime, ferramentas). Garante consistência entre ambientes (dev, test, prod) usando virtualização em nível de OS.</p>
                                         <p><strong>Comando:</strong> <code>docker run -p 5000:5000 minha-app</code></p>
                                     </div>
@@ -399,13 +442,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Banco de dados é como um "arquivo gigante e organizado" onde o sistema guarda todas as informações: usuários, produtos, pedidos, etc. É como uma biblioteca super organizada onde você encontra tudo rapidinho.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Sistema de armazenamento estruturado que organiza dados em tabelas (SQL) ou documentos (NoSQL). Permite operações CRUD (Create, Read, Update, Delete) com queries otimizadas e transações ACID.</p>
                                         <p><strong>Tipos:</strong> PostgreSQL, MySQL, MongoDB, SQLite</p>
                                     </div>
@@ -418,15 +461,38 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Docker é como uma empresa de mudanças que embala seu aplicativo em caixas padronizadas. Não importa se você está mudando de casa ou escritório - as caixas funcionam em qualquer lugar.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Plataforma de containerização que simplifica deployment e versionamento de aplicações. Usa Dockerfile para definir ambiente, docker-compose para orquestração multi-container.</p>
                                         <p><strong>Arquivo:</strong> <code>docker-compose.yml</code> nos projetos Hub e Seed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- E -->
+                    <section id="E" class="glossary-section mb-5">
+                        <h2 class="glossary-letter">E</h2>
+
+                        <div class="glossary-term">
+                            <h3>Eco Mundo</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
+                                        <p>Apelido interno do <strong>mapa do ecossistema</strong>: um desenho de como a Cara Core se organiza — empresa (matriz), produtos, oficinas (onde o código vive) e lojas (onde o cliente baixa e lê).</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
+                                        <p>Página <a href="ecosistema.html">ecosistema.html</a>. Na navegação da wiki o rótulo visível é <strong>Mapa</strong>; o apelido Eco Mundo permanece no título e neste glossário, para quem já usa o nome interno.</p>
                                     </div>
                                 </div>
                             </div>
@@ -442,13 +508,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Flask é como um "kit de ferramentas" para criar sites em Python. É mais simples que outras ferramentas - você pega só o que precisa e monta seu site do jeito que quiser.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Micro-framework web para Python, minimalista e flexível. Oferece routing, templating (Jinja2), sessions, mas deixa escolha de database, forms, auth por conta do desenvolvedor.</p>
                                         <p><strong>Exemplo:</strong> <code>@app.route('/api/users')</code></p>
                                     </div>
@@ -461,13 +527,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Frontend é a "vitrine da loja" - tudo que o cliente vê e toca: botões, menus, cores, textos. É a parte bonita e interativa do site que roda no seu navegador.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Interface do usuário que roda no browser. Usa HTML (estrutura), CSS (visual), JavaScript (interatividade). Comunica com backend via APIs para buscar/enviar dados.</p>
                                         <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript ES6+, Bootstrap</p>
                                     </div>
@@ -479,19 +545,37 @@
                     <!-- G -->
                     <section id="G" class="glossary-section mb-5">
                         <h2 class="glossary-letter">G</h2>
+
+                        <div class="glossary-term">
+                            <h3>Garagem</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
+                                        <p>Estágio honesto: o produto (ou uma parte dele) ainda está em desenvolvimento e <strong>não está em oferta aberta</strong>. O que já existe é dito; o que ainda não se vende também.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
+                                        <p>Exemplos: instalador Windows do Hub (<strong>06/Abr/2027</strong>) e CSO Transportes desktop (<strong>08/Nov/2028</strong>). Garagem não significa “não há código”: a oficina pode já ter produto; a oferta pública é que ainda não abriu.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="glossary-term">
                             <h3>Git</h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Git é como um "histórico detalhado" de tudo que aconteceu no seu projeto. Ele guarda cada mudança, quem fez, quando fez, e permite voltar no tempo se algo der errado.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Sistema de controle de versão distribuído. Cada desenvolvedor tem cópia completa do histórico. Permite branches paralelas, merge de mudanças, resolução de conflitos.</p>
                                         <p><strong>Comandos:</strong> <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code></p>
                                     </div>
@@ -504,13 +588,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>GitHub é like um "Google Drive para programadores". Você salva seu código lá, outras pessoas podem ver e ajudar, além de ter ferramentas para gerenciar projetos em equipe.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Plataforma de hospedagem Git com interface web. Oferece repositories, pull requests, issues, actions (CI/CD), pages (hosting), collaboration tools.</p>
                                         <p><strong>Features:</strong> Pull Requests, GitHub Actions, GitHub Pages</p>
                                     </div>
@@ -523,13 +607,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>É a parte do CaraCore CSO que já funciona no navegador: cadastro de veículos, combustível, manutenções, motoristas, viagens e relatórios. Começa grátis com até 3 veículos. Não é rastreador GPS.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>SaaS multi-tenant na oficina <code>caracore-cso-quarkus</code>. Planos FREE_3 / P5 / P10 / CORPORATE. Perfis ADMIN, GESTOR e ENTREGADOR. Produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-cso.html#frotas">projeto-cso.html#frotas</a></p>
                                     </div>
@@ -542,13 +626,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>É o CSO que mora no computador da empresa: entregas, equipe e clientes com cópia local dos dados. Lançamento previsto em 08 de novembro de 2028. Não substitui a Gestão de Frotas no navegador.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-cso-transportes</code>: Quarkus + SQLite, SPA Vue 3 e cliente JavaFX. Bunker para operação offline e roteamento de telemetria pesada — GPS/mapa ficam no Virtual Tracker™ (produto separado).</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-cso.html#transportes">projeto-cso.html#transportes</a></p>
                                     </div>
@@ -566,13 +650,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>HTML é como o "esqueleto" de uma página web. Define onde vai o título, onde vai o texto, onde vai a imagem - a estrutura básica. É como a planta de uma casa.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Linguagem de marcação que estrutura conteúdo web usando tags. Define elementos semânticos como headers, paragraphs, links, images, forms.</p>
                                         <p><strong>Tags:</strong> <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code></p>
                                     </div>
@@ -585,13 +669,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>HTTP é como o "idioma" que seu navegador usa para conversar com sites. HTTPS é a versão "segura" - como falar em código para ninguém escutar a conversa.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Protocolo de comunicação web. HTTP transfere dados em texto claro, HTTPS adiciona criptografia TLS/SSL. Usa métodos GET, POST, PUT, DELETE e status codes (200, 404, 500).</p>
                                         <p><strong>Status:</strong> 200 OK, 404 Not Found, 500 Server Error</p>
                                     </div>
@@ -609,13 +693,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>JavaScript é como o "cérebro" das páginas web. Ele faz as coisas se moverem, responderem a cliques, validarem formulários - tudo que é interativo no site.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Linguagem de programação interpretada que roda no browser (e server com Node.js). Manipula DOM, faz requisições AJAX, valida forms, cria animações.</p>
                                         <p><strong>Exemplo:</strong> <code>document.getElementById('btn').addEventListener('click', ...)</code></p>
                                     </div>
@@ -628,13 +712,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>JSON é como uma "linguagem universal" para sistemas trocarem informações. É como escrever uma carta em um formato que qualquer programa consegue entender.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Formato de dados texto para intercâmbio entre sistemas. Usa chaves-valor, arrays, objetos aninhados. Padrão para APIs REST.</p>
                                         <p><strong>Exemplo:</strong> <code>{"name": "João", "age": 25}</code></p>
                                     </div>
@@ -652,15 +736,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>A <strong>matriz</strong> é o site da empresa (caracore.com.br). A <strong>oficina</strong> é o repositório onde o produto é construído. A <strong>loja</strong> é o subdomínio onde o cliente baixa e lê o produto.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Regra: oficina <code>caracore-&lt;produto&gt;</code>, loja <code>caracore-&lt;produto&gt;-releases</code>, URL <code>*.caracore.com.br</code>. CSO foge um pouco: a URL canónica é a aplicação em cso.caracore.com.br.</p>
-                                        <p><strong>Mapa:</strong> <a href="ecosistema.html">Eco Mundo</a></p>
+                                        <p><strong>Mapa:</strong> <a href="ecosistema.html">mapa do ecossistema</a> (apelido interno: Eco Mundo)</p>
                                     </div>
                                 </div>
                             </div>
@@ -671,13 +755,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Espaço gratuito da Cara Core para rotina e presença digital com propósito. A Sala Cara Core é o ambiente de execução. Não é um produto à venda.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-mkt</code>. Loja mkt.caracore.com.br. Sala canónica tools.caracore.com.br/sala/.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-mkt.html">projeto-mkt.html</a></p>
                                     </div>
@@ -695,13 +779,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>OAuth é como um "sistema de visitante" de um prédio. Você se identifica na portaria (Google, Facebook) e ganha uma "pulseirinha" (token) para entrar em outros sites sem precisar dar sua senha.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Protocolo de autorização que permite aplicações acessarem recursos em nome do usuário sem exposição de credenciais. Usado em "Login com Google", "Login com Facebook".</p>
                                         <p><strong>Flow:</strong> Authorization Code → Access Token → Resource Access</p>
                                     </div>
@@ -714,13 +798,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>OIDC é como um "RG digital". Além de autorizar o acesso (como OAuth), ele também confirma quem você é - seu nome, email, foto - de forma segura.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Camada de identidade sobre OAuth 2.0. Adiciona ID Token (JWT) com informações do usuário. Padrão para Single Sign-On (SSO) e autenticação federada.</p>
                                         <p><strong>Usado em:</strong> Projeto Reino OIDC para aprendizado</p>
                                     </div>
@@ -738,13 +822,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>É o cenário em que o PIX no caixa passa a dividir automaticamente valores (impostos, recebedores). O CaraCore PDV se posiciona para PME reduzir a complexidade dessa rotina — nas duas linhas desktop (Java e Rust).</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Faz parte do <strong>posicionamento V3 de negócio</strong>, não de um número de release. Não confundir V3 com v3.2.2-free (canal Java) nem com v0.1.2 (Rust). Ver <a href="trilha-cliente.html#v3-pdv-transparencia">transparência V3</a>.</p>
                                     </div>
                                 </div>
@@ -756,13 +840,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Python é uma linguagem de programação "fácil de ler". É como se fosse quase português - você lê o código e entende o que está acontecendo, mesmo sem ser programador.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Linguagem interpretada, dinamicamente tipada, com sintaxe clara. Usada em web (Flask/Django), data science, AI, automação. Grande ecossistema de bibliotecas (pip).</p>
                                         <p><strong>Versão:</strong> Python 3.11+ nos projetos Cara Core</p>
                                     </div>
@@ -775,13 +859,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Pull Request é como pedir para alguém revisar seu trabalho antes de entregar. Você mostra o que fez e pede: "Pode dar uma olhada? Está bom para juntar com o projeto principal?"</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Mecanismo do GitHub para propor mudanças no código. Permite code review, discussão, testes automáticos antes do merge. Inclui diff de mudanças e histórico de commits.</p>
                                         <p><strong>Processo:</strong> Branch → Push → PR → Review → Merge</p>
                                     </div>
@@ -799,13 +883,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Produto educacional que usa o Restaurante Universitário como analogia de um reator industrial. A sala RETRO (1991) é gratuita; o simulador custa R$ 29,90. Nome comercial: RU Soberano — não “Bioreator”.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-ru</code> (Java 25 + JavaFX). Loja ru.caracore.com.br. Lançamento público: 18/06/2027.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-ru.html">projeto-ru.html</a></p>
                                     </div>
@@ -818,13 +902,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Repositório é como uma "pasta de projeto" que guarda tudo: código, imagens, documentos, histórico de mudanças. É onde vive o projeto completo.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Diretório Git que contém todos arquivos do projeto, histórico de commits, branches, tags. Pode ser local (sua máquina) ou remoto (GitHub, GitLab).</p>
                                         <p><strong>Estrutura:</strong> .git/, código fonte, README.md, .gitignore</p>
                                     </div>
@@ -837,13 +921,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>REST API é como um "cardápio padronizado" para sistemas. Você pede informações usando "verbos" específicos (GET para pegar, POST para criar) e recebe a resposta organizada.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Architectural style para APIs web usando HTTP methods (GET, POST, PUT, DELETE), status codes, JSON, URLs representando recursos.</p>
                                         <p><strong>Exemplo:</strong> <code>GET /api/users/123</code> retorna usuário ID 123</p>
                                     </div>
@@ -861,13 +945,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>SQL é a "linguagem" para conversar com bancos de dados. É como fazer perguntas organizadas: "Me dê todos os usuários que se cadastraram hoje" ou "Apague este produto".</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Linguagem para gerenciar dados relacionais. Comandos principais: SELECT (consulta), INSERT (criar), UPDATE (alterar), DELETE (remover).</p>
                                         <p><strong>Exemplo:</strong> <code>SELECT * FROM users WHERE age > 18</code></p>
                                     </div>
@@ -880,13 +964,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>SSL/TLS é como um "envelope lacrado" para proteger informações na internet. Quando você vê o "cadeadinho" no navegador, significa que sua conversa com o site está protegida.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Protocolos criptográficos para comunicação segura. TLS é sucessor do SSL. Garante confidencialidade, integridade e autenticidade dos dados transmitidos.</p>
                                         <p><strong>Certificado:</strong> Let's Encrypt, certificados comerciais</p>
                                     </div>
@@ -904,13 +988,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Nome curto da <strong>Gestão de Transportes</strong>: o aplicativo de computador do CaraCore CSO, previsto para 08/11/2028, para a operação de entregas não depender só da nuvem.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Ver <a href="#G">Gestão de Transportes</a> e o hub <a href="projeto-cso.html#transportes">projeto-cso.html</a>. Oficina <code>caracore-cso-transportes</code>.</p>
                                     </div>
                                 </div>
@@ -927,13 +1011,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>É o produto futuro de rastreamento por GPS e mapa. Está previsto para 2028 e <strong>não</strong> faz parte do CSO de gestão que o cliente contrata hoje. Quem usa Frotas não está comprando rastreador.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Produto separado da Gestão de Frotas e da Gestão de Transportes. Copy, FAQ, dashboard e wiki <strong>não</strong> devem sugerir GPS, SSE ou mapa em tempo real como se já existissem. Ver <a href="projeto-cso.html#roadmap">roadmap do CSO</a>.</p>
                                     </div>
                                 </div>
@@ -945,13 +1029,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Versionamento é como numerar as "edições" do seu projeto. Versão 1.0 é a primeira, 1.1 tem pequenas melhorias, 2.0 tem mudanças grandes. Como versões de um livro.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Sistema para identificar diferentes estados do software. Semantic Versioning (SemVer): MAJOR.MINOR.PATCH (ex: 2.1.3). Git tags marcam releases específicas.</p>
                                         <p><strong>Padrão:</strong> v1.0.0, v1.1.0, v2.0.0-beta</p>
                                     </div>
@@ -964,13 +1048,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="leigos-section">
-                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
                                         <p>Virtual Environment é como ter "gavetas separadas" para cada projeto Python. Cada gaveta tem suas próprias ferramentas, sem misturar com outros projetos.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
-                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Ambiente isolado para projetos Python que mantém dependências separadas. Evita conflitos entre versões de bibliotecas em diferentes projetos.</p>
                                         <p><strong>Comando:</strong> <code>python -m venv venv && venv\Scripts\activate</code></p>
                                     </div>
@@ -994,13 +1078,14 @@
     <footer class="wiki-footer">
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-            <p>Glossário técnico para orientação de estagiários e divulgação educacional</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
     <!-- Glossary Search Script -->
     <script>

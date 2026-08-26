@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -42,9 +42,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -82,10 +87,10 @@
 
             <!-- Conteúdo Principal -->
             <div class="col-lg-9 col-md-8">
-                <div class="wiki-content">
+                <div class="wiki-content wiki-home">
                     <div class="wiki-header">
-                        <h1><i class="bi bi-git"></i> Como Contribuir</h1>
-                        <p>Guia completo para contribuir com os projetos da Cara Core Informática</p>
+                    <h1><i class="bi bi-git"></i> Como Contribuir</h1>
+                    <p class="wiki-lede">Como entrar no fluxo sem quebrar o padrão: o que você ganha (entrega replicável), como resolve agora (git e revisão) e o próximo passo.</p>
                     </div>
 
                     <!-- Introdução -->
@@ -130,7 +135,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação Simples</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>Git é como um "sistema de versões" do seu projeto. Imagine que você está escrevendo um livro:</p>
                                         <ul class="feature-list">
                                             <li><strong>main/master:</strong> É o "livro oficial" publicado</li>
@@ -501,13 +506,14 @@ git checkout -- arquivo.py</code></pre>
     <footer class="wiki-footer">
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-            <p>Wiki criado para orientação de estagiários e divulgação técnica</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

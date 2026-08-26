@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visão Geral dos Projetos - Wiki Cara Core</title>
-    <meta name="description" content="Visão geral dos projetos da Cara Core Informática (CaraCore PDV Desktop, CaraCore PDV, Ink Agenda, Minerador, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51, CSO, RU Soberano, Helianto, MKT) com explicações técnicas e para leigos.">
+    <meta name="description" content="Visão geral dos projetos da Cara Core: PDV, CSO e Hub no núcleo; o restante do portfólio documentado sem competir com esse trio.">
     
     <!-- Bootstrap CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,9 +42,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -75,16 +80,16 @@
                             <a href="projetos-overview.html" class="active"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a>
                             <ul class="submenu">
                                 <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
-                                <li><a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri)</a></li>
+                                <li><a href="projeto-pdv-rust.html">Linha piloto do PDV</a></li>
+                                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
+                                <li><a href="projeto-hub.html">CaraCore Hub</a></li>
                                 <li><a href="projeto-ink.html">Ink Agenda</a></li>
                                 <li><a href="projeto-minerador.html">Minerador 4.0</a></li>
                                 <li><a href="projeto-reino.html">Reino OIDC</a></li>
                                 <li><a href="projeto-seed.html">Cara Core Seed</a></li>
                                 <li><a href="projeto-python.html">Circuito Ferradura</a></li>
-                                <li><a href="projeto-hub.html">Cara Core Hub</a></li>
-                                <li><a href="projeto-area51.html">Área 51</a></li>
+                                <li><a href="projeto-area51.html">Área 51 (laboratório)</a></li>
                                 <li><a href="projeto-helianto.html">Helianto Condominium</a></li>
-                                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
                                 <li><a href="projeto-ru.html">RU Soberano</a></li>
                                 <li><a href="projeto-mkt.html">Cara Core MKT</a></li>
                             </ul>
@@ -99,55 +104,98 @@
 
             <!-- Conteúdo Principal -->
             <div class="col-lg-9 col-md-8">
-                <div class="wiki-content">
+                <div class="wiki-content wiki-home">
                     <div class="wiki-header">
                         <h1><i class="bi bi-collection"></i> Visão Geral dos Projetos</h1>
-                        <p>Conheça todos os projetos da Cara Core Informática com explicações técnicas e para leigos</p>
+                        <p class="wiki-home-subtitle">
+                            O mesmo núcleo da capa: <strong>o que entregamos</strong>, <strong>o que já existe</strong> e <strong>o que ainda está em desenvolvimento</strong> — sem competir PDV, CSO e Hub com o restante do portfólio.
+                        </p>
+                        <p class="mb-2">Os <strong>três produtos-chave</strong> são o <a href="projeto-pdv.html">CaraCore PDV</a> (caixa no computador da loja), o <a href="projeto-cso.html">CaraCore CSO</a> (frota no navegador) e o <a href="projeto-hub.html">CaraCore Hub</a> (encomendas de Mercado Livre, Shopee e Temu).</p>
+                        <p class="mb-0 wiki-lede">O PDV tem duas linhas que <strong>convivem</strong> (nenhuma substitui a outra). O CSO de frota já está no ar; transportes no computador chegam em <strong>08/Nov/2028</strong>. O Hub já tem vitrine; o instalador Windows, para instalar sem equipe de TI, está previsto para <strong>06/Abr/2027</strong>.</p>
+                        <div class="wiki-quick-actions wiki-quick-actions--trails" role="navigation" aria-label="Trilhas">
+                            <a class="btn btn-success btn-sm" href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Trilha do Cliente</a>
+                            <a class="btn btn-primary btn-sm" href="trilha-estagiario.html"><i class="bi bi-mortarboard"></i> Trilha do Estagiário</a>
+                            <a class="btn btn-dark btn-sm" href="trilha-socio.html"><i class="bi bi-diagram-3"></i> Trilha do Sócio</a>
+                            <a class="btn btn-outline-secondary btn-sm" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa do ecossistema</a>
+                        </div>
                     </div>
 
-                    <!-- Introdução -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-info-circle text-info"></i> Nossa Suíte de Projetos</h2>
-                        
-                        <div class="leigos-section">
-                            <h3><i class="bi bi-people"></i> Para Pessoas Leigas</h3>
-                            <p>Os <strong>três produtos-chave</strong> da Cara Core Informática são o <strong>PDV</strong> (caixa da loja), o <strong>CSO</strong> (frota e, em 2028, transportes) e o <strong>Hub</strong> (encomendas de marketplace). O resto do portfólio (Ink, OIDC, simuladores, Seed, MKT) existe e tem loja ou vitrine; não substitui esse núcleo.</p>
-                            <ul class="feature-list">
-                                <li><strong>CaraCore PDV Desktop (Java):</strong> Oferta madura multi-plataforma — caixa, PIX, operação local e evolução fiscal para PMEs</li>
-                                <li><strong>CaraCore PDV (Rust + Tauri):</strong> linha desktop piloto Windows, release v0.1.2 (coexiste com Java; não substitui)</li>
-                                <li><strong>Ink Agenda:</strong> Gestão para estúdios de tatuagem — agenda, clientes e financeiro; <strong>v2.0.0 estável lançada em 26/Jun/2026</strong></li>
-                                <li><strong>Minerador 4.0:</strong> Simulador de ETE e hidrometalurgia para <strong>Ensino Médio</strong> e mineração; upgrade Ouro 4.0 (R$ 29,90)</li>
-                                <li><strong>Reino OIDC:</strong> A "escola de segurança digital" para ensinar sobre logins (OAuth 2.1 e OIDC)</li>
-                                <li><strong>Cara Core Seed:</strong> Contador de licenças interno — vitrine em seed.caracore.com.br; aplicação não está em oferta pública</li>
-                                <li><strong>Circuito Ferradura:</strong> produto educacional em evolução para apresentar lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas interessadas</li>
-                                <li><strong>Cara Core Hub:</strong> Gestão de encomendas e marketplaces (Mercado Livre, Shopee, Temu) — vitrine já pública; <em>GA do instalador Windows 06/Abr/2027</em></li>
-                                <li><strong>Área 51:</strong> Consultoria OIDC — autenticação enterprise (OAuth 2.1, OIDC, PKCE)</li>
-                                <li><strong>Helianto Condominium:</strong> Administração condominial com soberania de dados — <em>Garagem, lançamento 30/Dez/2027</em> · loja helianto.caracore.com.br</li>
-                                <li><strong>CaraCore CSO:</strong> Gestão de Frotas no navegador (já em produção em cso.caracore.com.br) e Gestão de Transportes no computador da empresa (bunker desktop, 08/Nov/2028) — CSO não é rastreador GPS</li>
-                                <li><strong>RU Soberano:</strong> Simulador de reator e sala RETRO — <em>Garagem, lançamento 18/Jun/2027</em> · loja ru.caracore.com.br</li>
-                                <li><strong>Cara Core MKT:</strong> Vitrine gratuita e Sala Cara Core — mkt.caracore.com.br; não vendemos</li>
-                            </ul>
-                            <p><strong>Política institucional:</strong> quando houver trilha Free/Premium, a versão Free é liberada sem cobrança; a versão Premium é liberada somente após confirmação de pagamento e registro LGPD do atendimento.</p>
-                        </div>
-
-                        <div class="estagiario-section">
-                            <h3><i class="bi bi-mortarboard"></i> Para Estagiários</h3>
-                            <p>Como estagiário, você trabalhará com um portfólio diversificado de projetos que cobrem diferentes aspectos do desenvolvimento moderno:</p>
-                            <ul class="feature-list">
-                                <li><strong>Integração de Sistemas:</strong> APIs REST, microserviços</li>
-                                <li><strong>Autenticação e Segurança:</strong> OAuth 2.1, OIDC, JWT</li>
-                                <li><strong>Desenvolvimento Frontend:</strong> HTML5, CSS3, JavaScript</li>
-                                <li><strong>Backend Python:</strong> Flask, FastAPI, Docker</li>
-                                <li><strong>Educação Tecnológica:</strong> Plataformas interativas de aprendizado</li>
-                            </ul>
+                    <section class="wiki-track wiki-track--cliente">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Núcleo</p>
+                            <h2><i class="bi bi-bullseye"></i> Três produtos-chave</h2>
+                            <p class="wiki-track-lead">Comece por aqui. O catálogo completo continua mais abaixo, sem competir com este núcleo.</p>
+                        </header>
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="track-card project-card product-card product-card--pdv">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-shop"></i> CaraCore PDV</h3>
+                                        <small>Caixa no computador da loja</small>
+                                        <span class="product-badge product-badge--pdv">PDV</span>
+                                    </div>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Venda contínua, custo menor e rotina previsível no caixa.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Linha madura em produção e linha piloto mais leve — convivem; nenhuma substitui a outra.</li>
+                                                <li><span class="step-label">Próximo passo</span> <a href="#caracore-pdv">Catálogo PDV</a> ou <a href="projeto-pdv.html">o que é o PDV</a>.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="track-card project-card product-card product-card--cso">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-truck"></i> CaraCore CSO</h3>
+                                        <small>Frota no navegador — não é GPS</small>
+                                        <span class="product-badge product-badge--cso">CSO</span>
+                                    </div>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Veículos e equipe fora da planilha, sem comprar rastreador.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Gestão de Frotas já no ar em cso.caracore.com.br.</li>
+                                                <li><span class="step-label">Próximo passo</span> Transportes no computador em <strong>08/Nov/2028</strong>. <a href="#caracore-cso">Catálogo CSO</a>.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="track-card project-card product-card product-card--hub">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> CaraCore Hub</h3>
+                                        <small>Encomendas numa fila só</small>
+                                        <span class="product-badge product-badge--hub">Hub</span>
+                                    </div>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Mercado Livre, Shopee e Temu com menos erro na retirada.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Vitrine pública em hub.caracore.com.br.</li>
+                                                <li><span class="step-label">Próximo passo</span> Instalador Windows em <strong>06/Abr/2027</strong>. <a href="#caracore-hub">Catálogo Hub</a>.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    <!-- Projeto 1: CaraCore PDV Desktop (Java) -->
-                    <section class="mb-5">
+                    <section class="mb-4">
+                        <div class="alert alert-info" role="note">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong>Como ler o catálogo:</strong> cada ficha abaixo começa pelo que muda na operação. O bloco técnico é opcional. Manual de botão e download ficam na loja do produto.
+                        </div>
+                    </section>
+
+                    <!-- Projeto 1: CaraCore PDV — linha madura -->
+                    <section id="caracore-pdv" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv">
-                                <h2><i class="bi bi-cash-stack"></i> 1. CaraCore PDV Desktop — Java · JavaFX</h2>
+                                <h2><i class="bi bi-cash-stack"></i> 1. CaraCore PDV — linha madura</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Java 25</span>
                                     <span class="tech-badge">Quarkus</span>
@@ -159,11 +207,11 @@
                             </div>
                             <div class="project-body">
                                 <div class="alert alert-secondary py-2 mb-3" role="note">
-                                    <i class="bi bi-lightning-charge"></i> <strong>CaraCore PDV (Rust + Tauri 2)</strong> — também desktop, piloto Windows — <a href="#caracore-pdv-rust" class="alert-link">seção 1b</a>. Canal Java <strong>v3.2.2-free</strong> permanece; release Rust <strong>v0.1.2</strong> é faixa distinta.
+                                    <i class="bi bi-lightning-charge"></i> <strong>Linha piloto do PDV</strong> (Windows, v0.1.2) — também desktop, convive com esta linha — <a href="#caracore-pdv-rust" class="alert-link">seção 1b</a>. Nenhuma substitui a outra.
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O CaraCore PDV Desktop é o sistema de caixa maduro da Cara Core: registrar vendas, receber PIX, emitir comprovantes e manter a operação estável. Disponível em <strong>Windows · Linux · macOS</strong>, com operação local, banco SQLite e evolução fiscal voltada a pequenos e médios negócios.</p>
                                         <div class="alert alert-info mt-3 mb-3">
                                             <strong>Posicionamento V3:</strong> produto direcionado a <strong>pequenos e médios negócios</strong>, com foco operacional no cenário de <strong>PIX Split 2027</strong>, para reduzir a complexidade da geração de notas e da conciliação no caixa.
@@ -181,7 +229,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>O checkout Java trabalha com <strong>Java 25 + Quarkus + JavaFX + SQLite</strong>. Canal público atual: <strong>v3.2.2-free</strong>. O backend local cuida das APIs e integrações; a interface operacional fica na aplicação JavaFX.</p>
                                         <p><strong>Persona de negócio padronizada:</strong> gestor(a) de loja PME em crescimento, com equipe enxuta, pressão por fluxo de caixa e necessidade de simplificar rotina fiscal/financeira com transparência de evolução por versão.</p>
                                         
@@ -220,7 +268,7 @@
                     <section id="caracore-pdv-rust" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv-rust">
-                                <h2><i class="bi bi-lightning-charge"></i> 1b. CaraCore PDV (Rust + Tauri 2)</h2>
+                                <h2><i class="bi bi-lightning-charge"></i> 1b. CaraCore PDV — linha piloto</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Rust</span>
                                     <span class="tech-badge">Tauri 2</span>
@@ -233,8 +281,8 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
-                                        <p>PDV <strong>desktop</strong> do CaraCore PDV: levar ao caixa as qualidades de <strong>Rust</strong> (segurança de memória, performance) e <strong>Tauri 2</strong> (shell enxuto, instaladores pt-BR). Piloto Windows, release v0.1.2 — convive com o PDV Desktop Java; <strong>não o substitui</strong>.</p>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <p>Linha piloto do PDV no computador da loja: mais leve, em teste no Windows (release v0.1.2). Convive com a linha madura; <strong>não a substitui</strong>.</p>
                                         <ul class="feature-list">
                                             <li>Checkout <code>/vendas-v2</code>, caixa, gestão, estoque e clientes (LGPD)</li>
                                             <li>PDV local (um PC) ou na rede (vários caixas; PostgreSQL opcional)</li>
@@ -243,7 +291,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Monorepo Rust + app Tauri 2 + UI React. Oficina <code>caracore-pdv-rust</code>; loja <code>caracore-pdv-rust-releases</code> em <a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">rust-pdv.caracore.com.br</a>. Homologação SEFAZ real e multi-loja plena ainda não fazem parte do piloto.</p>
                                         <div class="alert alert-info mt-3">
                                             <strong>Links:</strong> <a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">Loja Rust</a> · <a href="https://rust-pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">Wiki da loja</a> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" target="_blank" rel="noopener">GitHub tag v0.1.2</a>
@@ -281,7 +329,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O <strong>Ink Agenda</strong> é o aplicativo de computador para tatuadores e estúdios organizarem agenda, clientes e resultado financeiro em um só lugar. Funciona no Windows, opera offline por padrão e foi <strong>lançado oficialmente em 26 de junho de 2026</strong> (v2.0.0 estável).</p>
                                         <ul class="feature-list">
                                             <li>Agenda com calendário e lista do dia (ordem por horário; sem sobreposição)</li>
@@ -291,7 +339,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>O Ink Agenda desktop usa <strong>Java 25 + JavaFX 21 + SQLite local</strong>. A linha pública atual é a <strong>v2.0.0 estável</strong>, com distribuição oficial para Windows, macOS e Linux. O sistema opera offline por padrão, com autenticação local e foco total na versão desktop atual.</p>
                                         <div class="alert alert-info mt-3">
                                             <strong>Links:</strong> <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">Portal oficial</a> · <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">Loja (releases)</a>
@@ -329,7 +377,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O <strong>Minerador 4.0</strong> é um simulador que aplica a lógica das <strong>Estações de Tratamento de Efluentes (ETE)</strong> ao refino de terras raras. No computador, o aluno ou o engenheiro explora cenários de separação mineral usando tanques em série, decantação e controle de pH — sem risco e com base em modelos validados.</p>
                                         <p><strong>Foco Ensino Médio Escolar:</strong></p>
                                         <ul class="feature-list">
@@ -340,7 +388,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Instalador Windows (.exe), checksums SHA-256 e MD5. Arquitetura ETE transferida para refino mineral; módulo Mineração desbloqueado via upgrade Ouro 4.0 (PIX + <code>license.key</code>), com liberação após confirmação de pagamento e registro LGPD.</p>
                                         <div class="alert alert-info mt-3">
                                             <strong>Links:</strong> <a href="https://ete.caracore.com.br/" target="_blank" rel="noopener">Portal oficial</a> · <a href="https://ete.caracore.com.br/download.html" target="_blank" rel="noopener">Download</a>
@@ -374,7 +422,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O Reino OIDC é como um "jogo educativo" que ensina sobre segurança na internet. Imagine aprender sobre senhas e logins através de uma história de fantasia com personagens divertidos!</p>
                                         
                                         <p><strong>O que ensina:</strong></p>
@@ -390,7 +438,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Plataforma educacional gamificada que ensina OAuth 2.1 e OpenID Connect através de narrativa épica, flashcards interativos e progressão por níveis.</p>
                                         
                                         <p><strong>Recursos técnicos:</strong></p>
@@ -413,7 +461,7 @@
                                         <i class="bi bi-download"></i> Baixar EXE (FREE)
                                     </a>
                                     <a href="projeto-reino.html" class="btn-wiki">
-                                        <i class="bi bi-arrow-right"></i> Ver Detalhes Técnicos
+                                        <i class="bi bi-arrow-right"></i> Ver Detalhe opcional
                                     </a>
                                 </div>
                             </div>
@@ -435,7 +483,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O <strong>Cara Core Seed</strong> é o <strong>Contador de Licenças</strong> para quem compra os produtos Cara Core (PDV, Minerador 4.0, Reino OIDC, Hub) para rodar no Windows. <strong>Foco localhost e Windows Desktop:</strong> o aplicativo roda no computador do cliente; ao abrir, sobe em localhost e abre a interface. SQLite local, 100% offline. O produto existe, mas a aplicação não está em oferta ativa no momento.</p>
                                         
                                         <p><strong>Vantagens:</strong></p>
@@ -447,7 +495,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>WAR Java com SQLite local; Electron inicia JRE + WAR e abre em <code>http://localhost:9080</code>. Dois perfis: Contador de Clientes (uso interno) e Comprador (consulta). Testes com foco em localhost e Desktop Electron (UT, HTTP, E2E).</p>
                                         
                                         <p><strong>Escopo:</strong></p>
@@ -486,7 +534,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O Circuito Ferradura é um produto educacional em evolução da Cara Core. A proposta é testar uma forma simples de apresentar lógica, ábaco romano e primeiros passos em Python. O uso pessoal é gratuito; para escolas, cursos e laboratórios, a adoção deve ser conversada e licenciada conforme o contexto.</p>
                                         
                                         <p><strong>O que o material propõe:</strong></p>
@@ -502,7 +550,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Curso em HTML, pacote Windows com executável, pacote macOS, HTML offline, checksums e registro local de conclusão. A wiki detalhada permanece na loja oficial do produto.</p>
                                         
                                         <p><strong>Módulos:</strong></p>
@@ -535,8 +583,7 @@
                         </div>
                     </section>
 
-                    <!-- Projeto 7: Cara Core Hub -->
-                    <section class="mb-5">
+                    <section id="caracore-hub" class="mb-5">
                         <div class="project-card">
                             <div class="project-header hub">
                                 <h2><i class="bi bi-diagram-3"></i> 7. Cara Core Hub - Gestão de Encomendas</h2>
@@ -554,7 +601,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>Quem vende em vários marketplaces (Mercado Livre, Shopee, Temu) costuma abrir vários painéis para ver o mesmo tipo de pedido. O Hub junta pedidos, estoque e retirada num só lugar — para o centro de distribuição, não para “ligar os produtos da Cara Core entre si”.</p>
                                         
                                         <p><strong>Benefícios práticos:</strong></p>
@@ -566,7 +613,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Oficina <code>caracore-hub</code> (privada): Jakarta EE 10, WAR/Tomcat, JSP, PostgreSQL e Redis na aplicação web atual. Destino público: instalador Windows com SQLite. Tia Sócia é exemplo de negócio na loja, não o nome do produto.</p>
                                         
                                         <p><strong>Arquitetura:</strong></p>
@@ -612,8 +659,8 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
-                                        <p>A Área 51 é o "sistema de segurança" do nosso site. Como um segurança de prédio que verifica se você está na "lista VIP" antes de deixar entrar em salas especiais.</p>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <p>A Área 51 é o <strong>laboratório de segurança</strong> da Cara Core: testamos padrões de acesso (quem entra, com qual identidade) antes de levar o mesmo cuidado aos outros produtos.</p>
                                         
                                         <p><strong>Como funciona:</strong></p>
                                         <ul class="feature-list">
@@ -628,7 +675,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Sistema de autenticação e autorização enterprise-grade em produção, com integração Google/Microsoft e controle granular de acessos.</p>
                                         
                                         <p><strong>Arquitetura:</strong></p>
@@ -658,7 +705,7 @@
                     <!-- Projeto 9: Helianto Condominium -->
                     <section class="mb-5">
                         <div class="project-card">
-                            <div class="project-header" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;">
+                            <div class="project-header">
                                 <h2><i class="bi bi-building"></i> 9. Helianto Condominium — Administração Condominial</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Java 25</span>
@@ -672,7 +719,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p>O Helianto Condominium é a central do morador e do síndico para organizar a rotina do condomínio. Ele controla a entrada/saída de moradores, faz o rateio das despesas mensais de forma justa e gera o boleto contendo o QR Code Pix de liquidação imediata (BolePix) com total conformidade e privacidade.</p>
                                         <p><strong>Destaques:</strong></p>
                                         <ul class="feature-list">
@@ -684,7 +731,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                         <p>Arquitetura moderna de multilocação (multi-tenant) com shared schema PostgreSQL e isolamento robusto via <code>tenant_id</code> e ThreadLocal.</p>
                                         <p><strong>Stack:</strong></p>
                                         <ul class="feature-list">
@@ -713,10 +760,9 @@
                          </div>
                      </section>
 
-                     <!-- Projeto 10: CaraCore CSO -->
-                     <section class="mb-5">
+                     <section id="caracore-cso" class="mb-5">
                          <div class="project-card">
-                             <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white;">
+                             <div class="project-header">
                                  <h2><i class="bi bi-truck"></i> 10. CaraCore CSO — Frotas e Transportes</h2>
                                  <div class="mt-2">
                                      <span class="tech-badge">Quarkus</span>
@@ -735,7 +781,7 @@
                                  </div>
                                  <div class="row">
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                          <p>O <strong>CaraCore CSO</strong> tira a frota da planilha. No navegador, a empresa cadastra veículos, combustível, manutenções, motoristas e viagens, com relatórios e conformidade LGPD. Começa grátis com até 3 veículos. O desktop de 2028 guarda a operação crítica no computador da empresa — mesmo se a internet falhar.</p>
                                          <p><strong>Destaques da Frotas (já disponível):</strong></p>
                                          <ul class="feature-list">
@@ -746,7 +792,7 @@
                                          </ul>
                                      </div>
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                          <p>Não há oficina única <code>caracore-cso</code>. A URL canónica é a aplicação, não GitHub Pages.</p>
                                          <ul class="feature-list">
                                              <li><strong>Frotas:</strong> <code>caracore-cso-quarkus</code> — Java 21, Quarkus, PostgreSQL 16, Qute/HTMX, sessão opaca, multi-tenant</li>
@@ -776,7 +822,7 @@
                      <!-- Projeto 11: RU Soberano -->
                      <section class="mb-5">
                          <div class="project-card">
-                             <div class="project-header" style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); color: white;">
+                             <div class="project-header">
                                  <h2><i class="bi bi-droplet"></i> 11. RU Soberano — Simulador de Reator</h2>
                                  <div class="mt-2">
                                      <span class="tech-badge">Java 25</span>
@@ -789,11 +835,11 @@
                              <div class="project-body">
                                  <div class="row">
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                          <p>O <strong>RU Soberano</strong> usa o cotidiano do Restaurante Universitário para ensinar engenharia de processos. A sala RETRO (UFPR 1991) é gratuita; o simulador de reator custa R$ 29,90.</p>
                                      </div>
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                          <p>Oficina <code>caracore-ru</code> em Java 25 + JavaFX. Lançamento público: 18 de junho de 2027. Loja no subdomínio oficial.</p>
                                          <div class="alert alert-info mt-3">
                                              <strong>Loja:</strong> <a href="https://ru.caracore.com.br/" target="_blank" rel="noopener">ru.caracore.com.br</a>
@@ -812,7 +858,7 @@
                      <!-- Projeto 12: Cara Core MKT -->
                      <section class="mb-5">
                          <div class="project-card">
-                             <div class="project-header" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white;">
+                             <div class="project-header">
                                  <h2><i class="bi bi-gift"></i> 12. Cara Core MKT — Sala e operação gratuita</h2>
                                  <div class="mt-2">
                                      <span class="tech-badge">Gratuito</span>
@@ -824,11 +870,11 @@
                              <div class="project-body">
                                  <div class="row">
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-people text-info"></i> Explicação para Leigos</h4>
+                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                          <p>Ambiente gratuito para rotina, disciplina e presença digital com propósito. A Sala Cara Core organiza o fluxo do dia; a loja explica o método. <strong>Não vendemos.</strong></p>
                                      </div>
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-code text-warning"></i> Detalhes Técnicos</h4>
+                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
                                          <p>Oficina <code>caracore-mkt</code> (Python). Loja em mkt.caracore.com.br. Sala canónica em tools.caracore.com.br/sala/.</p>
                                          <div class="alert alert-info mt-3">
                                              <strong>Vitrine:</strong> <a href="https://mkt.caracore.com.br/" target="_blank" rel="noopener">mkt.caracore.com.br</a> · <strong>Sala:</strong> <a href="https://tools.caracore.com.br/sala/" target="_blank" rel="noopener">tools.caracore.com.br/sala/</a>
@@ -844,41 +890,21 @@
                          </div>
                      </section>
 
-                    <!-- Integração entre Projetos -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-diagram-3-fill text-success"></i> Como os Projetos se Integram</h2>
-                        <div class="estagiario-section">
-                            <p>Como estagiário, é importante entender que nossos projetos não são isolados — eles trabalham juntos como um ecossistema. Veja o mapa visual (matriz → produtos → oficinas → lojas) em <a href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo"><i class="bi bi-globe2"></i> Eco Mundo</a>.</p>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4><i class="bi bi-arrow-repeat text-info"></i> Fluxo de Integração</h4>
-                                    <ol>
-                                        <li><strong>CaraCore PDV</strong> atende o varejo (caixa, PIX, fiscal, offline) — duas linhas desktop (Java maduro + Rust piloto)</li>
-                                        <li><strong>Ink Agenda</strong> gestão para estúdios de tatuagem (agenda, clientes, financeiro) — v2.0.0 lançada</li>
-                                        <li><strong>Minerador 4.0</strong> simulador para Ensino Médio e mineração (ETE, terras raras)</li>
-                                        <li><strong>CaraCore Seed</strong> centraliza licenças internamente (não é oferta pública)</li>
-                                        <li><strong>CaraCore Hub</strong> junta encomendas e marketplaces (WAR/Tomcat na oficina; instalador Windows 06/Abr/2027)</li>
-                                        <li><strong>Área 51</strong> protege acessos com autenticação</li>
-                                        <li><strong>Reino OIDC</strong> educa sobre segurança</li>
-                                        <li><strong>Circuito Ferradura</strong> testa uma proposta educacional inicial e busca feedback/adoção responsável</li>
-                                        <li><strong>CaraCore CSO</strong> — Frotas Web em produção; Transportes Desktop em 08/11/2028 (CSO ≠ GPS)</li>
-                                        <li><strong>RU Soberano</strong> — sala RETRO gratuita e simulador de reator (Garagem 18/06/2027)</li>
-                                        <li><strong>Cara Core MKT</strong> — Sala e operação interna gratuita</li>
-                                    </ol>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4><i class="bi bi-share text-warning"></i> Tecnologias Compartilhadas</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>Java/Quarkus/JavaFX:</strong> CaraCore PDV Desktop, CSO Frotas (Qute/HTMX), CSO Transportes (JavaFX + Vue), Ink Agenda</li>
-                                        <li><strong>Java/WAR/Tomcat:</strong> CaraCore Hub</li>
-                                        <li><strong>Python/Flask:</strong> Área 51 e automações (MKT)</li>
-                                        <li><strong>OAuth 2.1:</strong> Reino OIDC ensina, Área 51 implementa</li>
-                                        <li><strong>Rust + Tauri 2:</strong> CaraCore PDV (piloto)</li>
-                                        <li><strong>SQLite / PostgreSQL:</strong> PDV, Ink e CSO Transportes (SQLite); CSO Frotas, Helianto e Hub oficina web (PostgreSQL); Hub GA 2027 (SQLite)</li>
-                                        <li><strong>Canais institucionais:</strong> subdomínios de loja + wiki.caracore.com.br</li>
-                                    </ul>
-                                </div>
+                    <section class="wiki-track wiki-track--estagiario">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Mapa</p>
+                            <h2><i class="bi bi-diagram-3-fill"></i> Como os produtos se encaixam</h2>
+                            <p class="wiki-track-lead">Não são peças isoladas. O mapa do ecossistema (apelido interno: Eco Mundo) mostra matriz → produto → oficina → loja.</p>
+                        </header>
+                        <div class="scenario-card support-card">
+                            <ul class="scenario-steps">
+                                <li><span class="step-label">Núcleo</span> PDV (caixa), CSO (frota; transportes em 2028), Hub (encomendas). Nenhuma linha de PDV substitui a outra. CSO não é GPS.</li>
+                                <li><span class="step-label">Demais</span> Ink, Minerador, Reino OIDC, Seed, Circuito, Área 51, Helianto, RU e MKT existem e têm loja ou vitrine — não competem com o núcleo na capa.</li>
+                                <li><span class="step-label">Próximo passo</span> <a href="ecosistema.html">Abrir o mapa do ecossistema</a> ou a <a href="trilha-estagiario.html">trilha do estagiário</a>.</li>
+                            </ul>
+                            <div class="links">
+                                <a href="ecosistema.html"><i class="bi bi-globe2"></i> Mapa do ecossistema</a>
+                                <a href="glossario.html"><i class="bi bi-book"></i> Glossário</a>
                             </div>
                         </div>
                     </section>
@@ -886,28 +912,37 @@
                     <!-- Próximos Passos -->
                     <section class="text-center">
                         <h2><i class="bi bi-rocket text-primary"></i> Próximos Passos</h2>
-                        <p class="lead">Agora que você conhece todos os nossos projetos, escolha por onde começar:</p>
+                        <p class="lead">Com o núcleo alinhado, escolha a trilha — não um catálogo de stacks.</p>
                         
                         <div class="row">
                             <div class="col-md-4 mb-3">
-                                <div class="alert alert-beginner">
-                                    <h5><i class="bi bi-1-circle text-success"></i> Iniciante</h5>
-                                    <p>Baixe o ReinoOIDC.exe para aprender conceitos de segurança (OAuth 2.1 e OIDC)</p>
-                                    <a href="https://oidc.caracore.com.br/download.html" class="btn btn-success btn-sm">Baixar EXE (FREE)</a>
+                                <div class="scenario-card support-card h-100">
+                                    <div class="kicker">Cliente</div>
+                                    <h4>Trilha do Sucesso</h4>
+                                    <p class="wiki-lede">O que você ganha, como resolve agora, próximo passo.</p>
+                                    <div class="links">
+                                        <a href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Abrir</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
-                                <div class="alert alert-intermediate">
-                                    <h5><i class="bi bi-2-circle text-warning"></i> Estagiário</h5>
-                                    <p>Leia o guia completo de configuração</p>
-                                    <a href="guia-estagiario.html" class="btn btn-warning btn-sm">Guia Completo</a>
+                                <div class="scenario-card support-card h-100">
+                                    <div class="kicker">Estagiário</div>
+                                    <h4>Trilha do Aprendizado</h4>
+                                    <p class="wiki-lede">Primeira semana, padrão de entrega e qual produto resolve qual dor.</p>
+                                    <div class="links">
+                                        <a href="trilha-estagiario.html"><i class="bi bi-mortarboard"></i> Abrir</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
-                                <div class="alert alert-advanced">
-                                    <h5><i class="bi bi-3-circle text-danger"></i> Desenvolvedor</h5>
-                                    <p>Explore as tecnologias utilizadas</p>
-                                    <a href="tecnologias.html" class="btn btn-danger btn-sm">Ver Stack</a>
+                                <div class="scenario-card support-card h-100">
+                                    <div class="kicker">Sócio</div>
+                                    <h4>Trilha da Estratégia</h4>
+                                    <p class="wiki-lede">Por que a decisão existe e o que muda na operação em seguida.</p>
+                                    <div class="links">
+                                        <a href="trilha-socio.html"><i class="bi bi-diagram-3"></i> Abrir</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -921,13 +956,13 @@
     <footer class="wiki-footer">
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-            <p>Wiki criado para orientação de estagiários e divulgação técnica</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

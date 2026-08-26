@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -48,9 +48,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -58,15 +63,15 @@
     </nav>
 
     <div class="wiki-container">
-        <div class="wiki-content">
+        <div class="wiki-content wiki-home">
             <div class="wiki-header">
                 <h1><i class="bi bi-mortarboard-fill"></i> Trilha do Aprendizado (Estagiário)</h1>
                 <p class="wiki-home-subtitle">
                     O objetivo aqui é acelerar sua autonomia sem perder padrão: <strong>entender contexto</strong>, <strong>executar com qualidade</strong> e <strong>registrar o que importa</strong>.
                 </p>
                 <div class="wiki-quick-actions">
-                    <a class="btn btn-outline-light btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar à Wiki</a>
-                    <a class="btn btn-light btn-sm" href="guia-estagiario.html"><i class="bi bi-person-badge"></i> Guia do estagiário</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar à Wiki</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="guia-estagiario.html"><i class="bi bi-person-badge"></i> Guia do estagiário</a>
                 </div>
             </div>
 
@@ -77,8 +82,12 @@
                 </div>
             </section>
 
-            <section class="mb-5">
-                <h2><i class="bi bi-rocket-takeoff"></i> Cenário 1 — Primeira semana</h2>
+            <section class="wiki-track wiki-track--estagiario mb-5">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Estagiário</p>
+                    <h2><i class="bi bi-rocket-takeoff"></i> Cenário 1 — Primeira semana</h2>
+                    <p class="wiki-track-lead">Contexto, padrão e onde pedir ajuda — no mesmo formato da capa.</p>
+                </header>
                 <div class="row g-3">
                     <div class="col-md-6">
                         <div class="scenario-card">
@@ -147,7 +156,7 @@
                             <p>Dois desktops do mesmo caixa: Java maduro (v3.2.2-free, multi-plataforma) e Rust piloto (v0.1.2, Windows). Nenhuma linha substitui a outra.</p>
                             <div class="links">
                                 <a href="projeto-pdv.html"><i class="bi bi-shop"></i> Hub PDV</a>
-                                <a href="projeto-pdv-rust.html"><i class="bi bi-lightning-charge"></i> PDV Rust + Tauri</a>
+                                <a href="projeto-pdv-rust.html"><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</a>
                                 <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia PDV</a>
                             </div>
                         </div>
@@ -268,6 +277,7 @@
     <!-- Wiki Search JS -->
     <script src="assets/js/wiki-search.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

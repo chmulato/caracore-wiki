@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Mundo - Mapa do Ecossistema | Wiki Cara Core</title>
+    <title>Mapa do ecossistema (Eco Mundo) | Wiki Cara Core</title>
     <meta name="description" content="Mapa visual do ecossistema Cara Core Informática: matriz, produtos, oficinas e lojas — como tudo se conecta.">
 
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
     <!-- Meta tags Open Graph -->
-    <meta property="og:title" content="Eco Mundo — Ecossistema Cara Core">
+    <meta property="og:title" content="Mapa do ecossistema (Eco Mundo) — Cara Core">
     <meta property="og:description" content="Mapa visual do ecossistema: matriz → produtos → oficinas → lojas.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.caracore.com.br/ecosistema.html">
@@ -47,9 +47,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link active" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -62,7 +67,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
-                    <li class="breadcrumb-item active">Eco Mundo</li>
+                    <li class="breadcrumb-item active">Mapa do ecossistema</li>
                 </ol>
             </nav>
         </div>
@@ -76,7 +81,16 @@
                     <h4><i class="bi bi-list-ul"></i> Navegação</h4>
                     <ul class="wiki-menu">
                         <li><a href="index.html"><i class="bi bi-house"></i> Página Inicial</a></li>
-                        <li><a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a></li>
+                        <li>
+                            <a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a>
+                            <ul class="submenu">
+                                <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
+                                <li><a href="projeto-pdv-rust.html">Linha piloto do PDV</a></li>
+                                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
+                                <li><a href="projeto-hub.html">CaraCore Hub</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="ecosistema.html" class="active"><i class="bi bi-globe2"></i> Mapa do ecossistema</a></li>
                         <li><a href="tecnologias.html"><i class="bi bi-gear"></i> Tecnologias Utilizadas</a></li>
                         <li><a href="guia-estagiario.html"><i class="bi bi-person-badge"></i> Guia do Estagiário</a></li>
                         <li><a href="contribuindo.html"><i class="bi bi-git"></i> Como Contribuir</a></li>
@@ -87,222 +101,264 @@
 
             <!-- Conteúdo Principal -->
             <div class="col-lg-9 col-md-8">
-                <div class="wiki-content">
+                <div class="wiki-content wiki-home">
                     <div class="wiki-header">
-                        <h1><i class="bi bi-globe2"></i> Eco Mundo — Mapa do Ecossistema</h1>
-                        <p>Visualize como a Cara Core Informática se organiza: da <strong>matriz</strong> aos <strong>produtos</strong>, das <strong>oficinas</strong> às <strong>lojas</strong>.</p>
+                        <h1><i class="bi bi-globe2"></i> Mapa do ecossistema</h1>
+                        <p class="wiki-home-subtitle">
+                            Como a Cara Core se organiza: <strong>empresa</strong> → <strong>produto</strong> → <strong>oficina</strong> (onde o código vive) → <strong>loja</strong> (onde o cliente baixa e lê).
+                        </p>
+                        <p class="mb-2"><strong>Eco Mundo</strong> é só o apelido interno desta página. Os <strong>três produtos-chave</strong> são o <a href="projeto-pdv.html">PDV</a> (caixa), o <a href="projeto-cso.html">CSO</a> (frota) e o <a href="projeto-hub.html">Hub</a> (encomendas). O restante do portfólio não compete com esse núcleo.</p>
+                        <p class="mb-0 wiki-lede">Duas linhas de PDV convivem (nenhuma substitui a outra). CSO de frota já no ar; transportes no computador em <strong>08/Nov/2028</strong>. Hub com vitrine hoje; instalador Windows em <strong>06/Abr/2027</strong>.</p>
+                        <div class="wiki-quick-actions wiki-quick-actions--trails" role="navigation" aria-label="Trilhas">
+                            <a class="btn btn-success btn-sm" href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Trilha do Cliente</a>
+                            <a class="btn btn-primary btn-sm" href="trilha-estagiario.html"><i class="bi bi-mortarboard"></i> Trilha do Estagiário</a>
+                            <a class="btn btn-dark btn-sm" href="trilha-socio.html"><i class="bi bi-diagram-3"></i> Trilha do Sócio</a>
+                            <a class="btn btn-outline-secondary btn-sm" href="projetos-overview.html"><i class="bi bi-collection"></i> Visão geral</a>
+                        </div>
                     </div>
 
-                    <!-- Visão Geral -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-diagram-3-fill text-primary"></i> Visão Geral do Ecossistema</h2>
-
-                        <div class="leigos-section">
-                            <h3><i class="bi bi-people"></i> Para Leigos</h3>
-                            <p>Imagine a Cara Core como uma <strong>árvore</strong>: o tronco é a empresa (matriz), os galhos são os produtos, as folhas são as oficinas onde cada produto é desenvolvido e os frutos são as lojas onde o cliente final encontra tudo pronto para usar.</p>
-                        </div>
-
-                        <div class="estagiario-section">
-                            <h3><i class="bi bi-mortarboard"></i> Para Estagiários</h3>
-                            <p>O ecossistema segue quatro camadas. Cada produto nasce na matriz, é desenvolvido em uma oficina (repositório + ambiente de dev) e publicado em uma loja (subdomínio com wiki própria).</p>
+                    <section class="wiki-track wiki-track--cliente">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Quatro camadas</p>
+                            <h2><i class="bi bi-diagram-3-fill"></i> Como ler este mapa</h2>
+                            <p class="wiki-track-lead">Não é um organograma técnico. É o caminho de uma ideia até o cliente.</p>
+                        </header>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="scenario-card h-100">
+                                    <div class="kicker">1</div>
+                                    <h4>Matriz</h4>
+                                    <p class="mb-0">A empresa (www.caracore.com.br): o que vendemos, o que já existe, o que ainda não está em oferta aberta.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="scenario-card h-100">
+                                    <div class="kicker">2</div>
+                                    <h4>Produto</h4>
+                                    <p class="mb-0">A solução com nome: PDV, CSO, Hub — e o restante do portfólio, sem competir com esse núcleo.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="scenario-card h-100">
+                                    <div class="kicker">3</div>
+                                    <h4>Oficina</h4>
+                                    <p class="mb-0">Onde o time constrói o código. O cliente não precisa entrar aqui.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="scenario-card h-100">
+                                    <div class="kicker">4</div>
+                                    <h4>Loja</h4>
+                                    <p class="mb-0">O subdomínio onde se baixa, lê o manual de botão e fala com o produto. CSO é a própria aplicação, sem vitrine Pages.</p>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
                     <!-- Camada 1: Matriz -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-building text-dark"></i> 1. Matriz</h2>
-                        <div class="project-card">
-                            <div class="project-header" style="background: linear-gradient(135deg, #2c3e50, #34495e);">
-                                <h3><i class="bi bi-building"></i> Cara Core Informática</h3>
-                            </div>
-                            <div class="project-body">
-                                <p>CNPJ 23.969.028/0001-37 — a empresa que mantém todo o ecossistema. Define estratégia, padrões de qualidade e roadmap dos produtos.</p>
-                                <ul class="feature-list">
-                                    <li><strong>Governança:</strong> decisões de portfólio, precificação e licenciamento</li>
-                                    <li><strong>Infraestrutura:</strong> domínio <code>caracore.com.br</code>, GitHub Organization, CI/CD</li>
-                                    <li><strong>Pessoas:</strong> sócios, estagiários e colaboradores</li>
-                                </ul>
-                            </div>
+                    <section class="wiki-track wiki-track--socio mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Camada 1</p>
+                            <h2><i class="bi bi-building"></i> Matriz</h2>
+                            <p class="wiki-track-lead">A empresa que decide o que entra em oferta e o que fica em Garagem (ainda em desenvolvimento, sem venda aberta).</p>
+                        </header>
+                        <div class="scenario-card">
+                            <h4>Cara Core Informática</h4>
+                            <p>CNPJ 23.969.028/0001-37. Define o que vendemos, o preço, a licença e o calendário público. O site institucional é <a href="https://www.caracore.com.br/" target="_blank" rel="noopener">www.caracore.com.br</a>; o portfólio fica em <a href="https://www.caracore.com.br/portfolio.html" target="_blank" rel="noopener">portfolio.html</a> — nunca nesta wiki.</p>
+                            <ul class="scenario-steps mb-0">
+                                <li><span class="step-label">O que você ganha</span> Um discurso único: o que já existe, o que ainda não está à venda, e para quem cada produto serve.</li>
+                                <li><span class="step-label">Como resolve agora</span> A matriz aponta para as lojas (pdv., rust-pdv., hub.) e para a aplicação do CSO. Sem pasta <code>/delivery/</code>.</li>
+                                <li><span class="step-label">Próximo passo</span> Os três produtos-chave abaixo; o restante do mapa não compete com esse núcleo.</li>
+                            </ul>
                         </div>
                     </section>
 
-                    <!-- Camada 2: Produtos -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-box-seam text-success"></i> 2. Produtos</h2>
-                        <p>Cada produto resolve um problema diferente e possui identidade visual e técnica próprias.</p>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header pdv">
-                                        <h3><i class="bi bi-cart3"></i> PDV Desktop (Java)</h3>
+                    <!-- Camada 2: Produtos — núcleo -->
+                    <section class="wiki-track wiki-track--cliente mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Camada 2 · Núcleo</p>
+                            <h2><i class="bi bi-bullseye"></i> Três produtos-chave</h2>
+                            <p class="wiki-track-lead">Comece por aqui. O restante do portfólio existe e tem loja; não compete com este trio.</p>
+                        </header>
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="track-card project-card product-card product-card--pdv">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-shop"></i> CaraCore PDV</h3>
+                                        <small>Caixa no computador da loja</small>
+                                        <span class="product-badge product-badge--pdv">PDV</span>
                                     </div>
-                                    <div class="project-body">
-                                        <p>Oferta madura multi-plataforma (canal <strong>v3.2.2-free</strong>): PIX, operação local, trilha fiscal. Java 25, Quarkus, JavaFX e SQLite. Convive com a linha Rust; não a substitui.</p>
-                                        <a href="projeto-pdv.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Hub PDV</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header pdv-rust">
-                                        <h3><i class="bi bi-lightning-charge"></i> CaraCore PDV</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Linha desktop em Rust + Tauri 2, release <strong>v0.1.2</strong>, piloto Windows. Download no GitHub Releases. Coexiste com o CaraCore PDV Desktop (Java); nenhuma substitui a outra.</p>
-                                        <a href="projeto-pdv-rust.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Venda contínua, custo menor e rotina previsível no caixa.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Linha madura em produção e linha piloto mais leve — convivem; nenhuma substitui a outra.</li>
+                                                <li><span class="step-label">Próximo passo</span> <a href="projeto-pdv.html">O que é o PDV</a> · lojas <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.</a> e <a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">rust-pdv.</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #e44d26, #f16529);">
-                                        <h3><i class="bi bi-pen"></i> Ink Agenda</h3>
+                            <div class="col-lg-4">
+                                <div class="track-card project-card product-card product-card--cso">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-truck"></i> CaraCore CSO</h3>
+                                        <small>Frota no navegador — não é GPS</small>
+                                        <span class="product-badge product-badge--cso">CSO</span>
                                     </div>
-                                    <div class="project-body">
-                                        <p>Gestão para estúdios de tatuagem com agenda, clientes e financeiro. Versão estável <strong>v2.0.0</strong> lançada em 26/06/2026.</p>
-                                        <a href="projeto-ink.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #b8860b, #ffd700);">
-                                        <h3><i class="bi bi-minecart-loaded"></i> Minerador 4.0</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Simulador ETE / hidrometalurgia para Ensino Médio e mineração (Ouro 4.0 R$ 29,90).</p>
-                                        <a href="projeto-minerador.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Veículos e equipe fora da planilha, sem comprar rastreador.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Gestão de Frotas já no ar em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a> (é a aplicação, não uma vitrine Pages).</li>
+                                                <li><span class="step-label">Próximo passo</span> Transportes no computador em <strong>08/Nov/2028</strong>. <a href="projeto-cso.html">O que é o CSO</a>.</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
-                                        <h3><i class="bi bi-key"></i> CaraCore Seed</h3>
+                            <div class="col-lg-4">
+                                <div class="track-card project-card product-card product-card--hub">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> CaraCore Hub</h3>
+                                        <small>Encomendas numa fila só</small>
+                                        <span class="product-badge product-badge--hub">Hub</span>
                                     </div>
-                                    <div class="project-body">
-                                        <p>Contador de licenças interno. Vitrine em seed.caracore.com.br; a aplicação não está em oferta pública.</p>
-                                        <a href="projeto-seed.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #2E8B57, #228B22);">
-                                        <h3><i class="bi bi-signpost-split"></i> Circuito Ferradura</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Produto educacional em evolução para lógica, ábaco romano e Python. Uso pessoal gratuito; uso institucional mediante conversa e licença.</p>
-                                        <a href="projeto-python.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #43cea2, #185a9d);">
-                                        <h3><i class="bi bi-hub"></i> CaraCore Hub</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Gestão de encomendas e marketplaces (ML, Shopee, Temu). Vitrine em hub.caracore.com.br; GA do instalador Windows em 06/Abr/2027. Oficina web 2.1 já existe — não é Flask.</p>
-                                        <a href="projeto-hub.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                                        <h3><i class="bi bi-shield-lock"></i> Área 51</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Consultoria OIDC / autenticação enterprise. Python/Flask.</p>
-                                        <a href="projeto-area51.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #8f6ed5, #d084c9);">
-                                        <h3><i class="bi bi-mortarboard"></i> Reino OIDC</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Educação em OAuth 2.1 e OIDC. Produto educativo gratuito.</p>
-                                        <a href="projeto-reino.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-                                        <h3><i class="bi bi-building"></i> Helianto Condominium</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Sistema de administração condominial com soberania de dados, multi-tenancy e motor financeiro auditável. Garagem prevista para Dez/2027.</p>
-                                        <a href="projeto-helianto.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
-                                        <h3><i class="bi bi-truck"></i> CaraCore CSO</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Plataforma dual: Gestão de Frotas já no navegador (produção) e Gestão de Transportes no desktop (bunker, 08/11/2028). CSO não é rastreador GPS. Aplicação em cso.caracore.com.br.</p>
-                                        <a href="projeto-cso.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
-                                        <h3><i class="bi bi-droplet"></i> RU Soberano</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Simulador de reator e sala RETRO (1991). Garagem: lançamento 18/Jun/2027. Ambientação gratuita; simulador R$ 29,90.</p>
-                                        <a href="projeto-ru.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-header" style="background: linear-gradient(135deg, #059669, #10b981);">
-                                        <h3><i class="bi bi-gift"></i> Cara Core MKT</h3>
-                                    </div>
-                                    <div class="project-body">
-                                        <p>Vitrine gratuita e Sala Cara Core: rotina, disciplina e presença digital com propósito. Não vendemos.</p>
-                                        <a href="projeto-mkt.html" class="btn-wiki btn-sm"><i class="bi bi-arrow-right"></i> Detalhes</a>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Mercado Livre, Shopee e Temu com menos erro na retirada.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Vitrine pública em <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a>.</li>
+                                                <li><span class="step-label">Próximo passo</span> Instalador Windows em <strong>06/Abr/2027</strong>. <a href="projeto-hub.html">O que é o Hub</a>.</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Camada 3: Oficinas -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-tools text-warning"></i> 3. Oficinas (Desenvolvimento)</h2>
-                        <p>Cada produto é construído em sua <strong>oficina</strong> — o repositório GitHub com ambiente de desenvolvimento, testes e CI/CD.</p>
+                    <section class="wiki-track wiki-track--support mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Camada 2 · Portfólio</p>
+                            <h2><i class="bi bi-collection"></i> Demais produtos</h2>
+                            <p class="wiki-track-lead">Existem e têm loja ou vitrine. Manuais de botão ficam no subdomínio; nesta wiki só o alinhamento. Os atalhos de 1 KB (Ink, Minerador, Seed…) redirecionam de propósito para a loja.</p>
+                        </header>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</h4>
+                                    <p>A segunda linha de caixa, mais leve, piloto Windows. Convive com a linha madura; não a substitui.</p>
+                                    <div class="links"><a href="projeto-pdv-rust.html">Alinhamento</a> · <a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">Loja</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-pen"></i> Ink Agenda</h4>
+                                    <p>Agenda, clientes e financeiro para estúdio de tatuagem. Estável desde 26/Jun/2026.</p>
+                                    <div class="links"><a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">Loja e wiki</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-minecart-loaded"></i> Minerador 4.0</h4>
+                                    <p>Simulador de planta para ensino e mineração. Vitrine em ete.caracore.com.br.</p>
+                                    <div class="links"><a href="https://ete.caracore.com.br/" target="_blank" rel="noopener">Loja</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-key"></i> Cara Core Seed</h4>
+                                    <p>Contador de licenças interno. A vitrine existe; o aplicativo não está em oferta aberta.</p>
+                                    <div class="links"><a href="https://seed.caracore.com.br/" target="_blank" rel="noopener">Vitrine</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-signpost-split"></i> Circuito Ferradura</h4>
+                                    <p>Lógica e ábaco para estudo. Uso pessoal gratuito; uso institucional mediante conversa.</p>
+                                    <div class="links"><a href="https://circuito.caracore.com.br/" target="_blank" rel="noopener">Loja</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card product-card product-card--seguranca h-100">
+                                    <h4><i class="bi bi-shield-lock"></i> Área 51</h4>
+                                    <p>Laboratório de segurança e consultoria de autenticação. Não é o Hub nem o CSO.</p>
+                                    <div class="links"><a href="https://area51.caracore.com.br/" target="_blank" rel="noopener">Loja</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-mortarboard"></i> Reino OIDC</h4>
+                                    <p>Material educativo gratuito sobre login moderno (OAuth e OIDC).</p>
+                                    <div class="links"><a href="https://oidc.caracore.com.br/" target="_blank" rel="noopener">Loja</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-building"></i> Helianto Condominium</h4>
+                                    <p>Administração de condomínio. Ainda em Garagem; calendário público Dez/2027.</p>
+                                    <div class="links"><a href="projeto-helianto.html">Alinhamento</a> · <a href="https://helianto.caracore.com.br/" target="_blank" rel="noopener">Vitrine</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-droplet"></i> RU Soberano</h4>
+                                    <p>Simulador e sala retrô. Garagem: lançamento 18/Jun/2027.</p>
+                                    <div class="links"><a href="projeto-ru.html">Alinhamento</a> · <a href="https://ru.caracore.com.br/" target="_blank" rel="noopener">Vitrine</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-gift"></i> Cara Core MKT</h4>
+                                    <p>Vitrine gratuita e Sala Cara Core. Não vendemos por este canal.</p>
+                                    <div class="links"><a href="projeto-mkt.html">Alinhamento</a> · <a href="https://mkt.caracore.com.br/" target="_blank" rel="noopener">Vitrine</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
+                    <section class="wiki-track wiki-track--estagiario mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Camada 3</p>
+                            <h2><i class="bi bi-tools"></i> Oficinas</h2>
+                            <p class="wiki-track-lead">Onde o time constrói. O cliente não precisa entrar aqui — é o repositório de código, testes e publicação interna.</p>
+                        </header>
                         <div class="project-card">
                             <div class="project-body">
                                 <table class="table table-hover mb-0">
                                     <thead>
                                         <tr>
                                             <th>Produto</th>
-                                            <th>Repositório (oficina)</th>
-                                            <th>Stack Principal</th>
+                                            <th>Oficina</th>
+                                            <th>Detalhe opcional</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><i class="bi bi-cart3"></i> PDV Desktop (Java)</td>
+                                            <td><i class="bi bi-shop"></i> PDV — linha madura</td>
                                             <td><code>caracore-pdv</code></td>
                                             <td>Java 25 · Quarkus · JavaFX · SQLite</td>
                                         </tr>
                                         <tr>
-                                            <td><i class="bi bi-lightning-charge"></i> CaraCore PDV (Rust + Tauri)</td>
+                                            <td><i class="bi bi-lightning-charge"></i> PDV — linha piloto</td>
                                             <td><code>caracore-pdv-rust</code></td>
                                             <td>Rust · Tauri 2 · React · SQLite</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-truck"></i> CSO — Frotas (já no ar)</td>
+                                            <td><code>caracore-cso-quarkus</code></td>
+                                            <td>Java 21 · Quarkus · PostgreSQL</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-truck"></i> CSO — Transportes (08/Nov/2028)</td>
+                                            <td><code>caracore-cso-transportes</code></td>
+                                            <td>Quarkus · JavaFX · Vue 3 · SQLite</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-box-seam"></i> Hub</td>
+                                            <td><code>caracore-hub</code></td>
+                                            <td>Jakarta EE 10 · WAR · Tomcat · PostgreSQL</td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-pen"></i> Ink Agenda</td>
@@ -325,11 +381,6 @@
                                             <td>HTML · Python</td>
                                         </tr>
                                         <tr>
-                                            <td><i class="bi bi-hub"></i> Hub</td>
-                                            <td><code>caracore-hub</code></td>
-                                            <td>Java · WAR/Tomcat</td>
-                                        </tr>
-                                        <tr>
                                             <td><i class="bi bi-shield-lock"></i> Área 51</td>
                                             <td><code>caracore-area51</code></td>
                                             <td>Python · Flask</td>
@@ -340,179 +391,184 @@
                                             <td>HTML · CSS · JS</td>
                                         </tr>
                                         <tr>
-                                             <td><i class="bi bi-building"></i> Helianto Condominium</td>
-                                             <td><code>caracore-helianto</code></td>
-                                             <td>Java 25 · Spring Boot 4 · React · PostgreSQL</td>
+                                            <td><i class="bi bi-building"></i> Helianto Condominium</td>
+                                            <td><code>caracore-helianto</code></td>
+                                            <td>Java 25 · Spring Boot 4 · React</td>
                                         </tr>
                                         <tr>
-                                              <td><i class="bi bi-truck"></i> CaraCore CSO — Frotas (Web)</td>
-                                              <td><code>caracore-cso-quarkus</code></td>
-                                              <td>Java 21 · Quarkus · PostgreSQL · Qute/HTMX</td>
-                                          </tr>
+                                            <td><i class="bi bi-droplet"></i> RU Soberano</td>
+                                            <td><code>caracore-ru</code></td>
+                                            <td>Java 25 · JavaFX · SQLite</td>
+                                        </tr>
                                         <tr>
-                                              <td><i class="bi bi-truck"></i> CaraCore CSO — Transportes (Desktop)</td>
-                                              <td><code>caracore-cso-transportes</code></td>
-                                              <td>Java 21 · Quarkus · JavaFX · Vue 3 · SQLite</td>
-                                          </tr>
-                                        <tr>
-                                              <td><i class="bi bi-droplet"></i> RU Soberano</td>
-                                              <td><code>caracore-ru</code></td>
-                                              <td>Java 25 · JavaFX · Maven · SQLite</td>
-                                          </tr>
-                                        <tr>
-                                              <td><i class="bi bi-gift"></i> Cara Core MKT</td>
-                                              <td><code>caracore-mkt</code></td>
-                                              <td>Python · Sala Cara Core</td>
-                                          </tr>
+                                            <td><i class="bi bi-gift"></i> Cara Core MKT</td>
+                                            <td><code>caracore-mkt</code></td>
+                                            <td>Python · Sala Cara Core</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Camada 4: Lojas -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-shop-window text-info"></i> 4. Lojas (Subdomínios)</h2>
-                        <p>Cada produto é publicado em sua <strong>loja</strong> — um subdomínio com site próprio e wiki dedicada.</p>
-
+                    <section class="wiki-track wiki-track--cliente mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Camada 4</p>
+                            <h2><i class="bi bi-shop-window"></i> Lojas</h2>
+                            <p class="wiki-track-lead">Onde o cliente baixa, lê o manual de botão e fala com o produto. Esta wiki (wiki.caracore.com.br) é só alinhamento.</p>
+                        </header>
                         <div class="project-card">
                             <div class="project-body">
                                 <table class="table table-hover mb-0">
                                     <thead>
                                         <tr>
                                             <th>Produto</th>
-                                            <th>Loja (subdomínio)</th>
+                                            <th>Onde o cliente encontra</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><i class="bi bi-cart3"></i> PDV Desktop (Java)</td>
-                                            <td><a href="https://pdv.caracore.com.br">pdv.caracore.com.br</a></td>
+                                            <td><i class="bi bi-shop"></i> PDV — linha madura</td>
+                                            <td><a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
-                                            <td><i class="bi bi-lightning-charge"></i> CaraCore PDV (Rust + Tauri)</td>
+                                            <td><i class="bi bi-lightning-charge"></i> PDV — linha piloto</td>
                                             <td><a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">rust-pdv.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
+                                            <td><i class="bi bi-truck"></i> CaraCore CSO</td>
+                                            <td><a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a> — a própria aplicação; sem vitrine GitHub Pages</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="bi bi-box-seam"></i> Hub</td>
+                                            <td><a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a></td>
+                                        </tr>
+                                        <tr>
                                             <td><i class="bi bi-pen"></i> Ink Agenda</td>
-                                            <td><a href="https://ink.caracore.com.br">ink.caracore.com.br</a></td>
+                                            <td><a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">ink.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-minecart-loaded"></i> Minerador 4.0</td>
-                                            <td><a href="https://ete.caracore.com.br">ete.caracore.com.br</a></td>
+                                            <td><a href="https://ete.caracore.com.br/" target="_blank" rel="noopener">ete.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-key"></i> Seed</td>
-                                            <td><a href="https://seed.caracore.com.br">seed.caracore.com.br</a></td>
+                                            <td><a href="https://seed.caracore.com.br/" target="_blank" rel="noopener">seed.caracore.com.br</a> (vitrine; sem oferta aberta)</td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-signpost-split"></i> Circuito Ferradura</td>
-                                            <td><a href="https://circuito.caracore.com.br">circuito.caracore.com.br</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="bi bi-hub"></i> Hub</td>
-                                            <td><a href="https://hub.caracore.com.br">hub.caracore.com.br</a></td>
+                                            <td><a href="https://circuito.caracore.com.br/" target="_blank" rel="noopener">circuito.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-shield-lock"></i> Área 51</td>
-                                            <td><a href="https://area51.caracore.com.br">area51.caracore.com.br</a></td>
+                                            <td><a href="https://area51.caracore.com.br/" target="_blank" rel="noopener">area51.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-mortarboard"></i> Reino OIDC</td>
-                                            <td><a href="https://oidc.caracore.com.br">oidc.caracore.com.br</a></td>
+                                            <td><a href="https://oidc.caracore.com.br/" target="_blank" rel="noopener">oidc.caracore.com.br</a></td>
                                         </tr>
                                         <tr>
-                                             <td><i class="bi bi-building"></i> Helianto Condominium</td>
-                                             <td><a href="https://helianto.caracore.com.br/" target="_blank" rel="noopener">helianto.caracore.com.br</a></td>
-                                         </tr>
+                                            <td><i class="bi bi-building"></i> Helianto Condominium</td>
+                                            <td><a href="https://helianto.caracore.com.br/" target="_blank" rel="noopener">helianto.caracore.com.br</a></td>
+                                        </tr>
                                         <tr>
-                                              <td><i class="bi bi-truck"></i> CaraCore CSO</td>
-                                              <td><a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a> (aplicação; sem vitrine GitHub Pages)</td>
-                                          </tr>
+                                            <td><i class="bi bi-droplet"></i> RU Soberano</td>
+                                            <td><a href="https://ru.caracore.com.br/" target="_blank" rel="noopener">ru.caracore.com.br</a></td>
+                                        </tr>
                                         <tr>
-                                              <td><i class="bi bi-droplet"></i> RU Soberano</td>
-                                              <td><a href="https://ru.caracore.com.br/" target="_blank" rel="noopener">ru.caracore.com.br</a></td>
-                                          </tr>
-                                        <tr>
-                                              <td><i class="bi bi-gift"></i> Cara Core MKT</td>
-                                              <td><a href="https://mkt.caracore.com.br/" target="_blank" rel="noopener">mkt.caracore.com.br</a> · Sala: <a href="https://tools.caracore.com.br/sala/" target="_blank" rel="noopener">tools.caracore.com.br/sala/</a></td>
-                                          </tr>
+                                            <td><i class="bi bi-gift"></i> Cara Core MKT</td>
+                                            <td><a href="https://mkt.caracore.com.br/" target="_blank" rel="noopener">mkt.caracore.com.br</a> · Sala: <a href="https://tools.caracore.com.br/sala/" target="_blank" rel="noopener">tools.caracore.com.br/sala/</a></td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Camada 5: Presenças institucionais -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-broadcast text-primary"></i> 5. Presenças institucionais</h2>
-                        <p>Além das lojas de produto, o ecossistema tem canais de alinhamento, editorial e operação.</p>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-body">
-                                        <h3 class="h5"><i class="bi bi-journal-code"></i> Wiki</h3>
-                                        <p class="mb-1"><a href="https://wiki.caracore.com.br/">wiki.caracore.com.br</a> — centro de alinhamento (esta pasta).</p>
-                                    </div>
+                    <section class="wiki-track wiki-track--support mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Outros canais</p>
+                            <h2><i class="bi bi-broadcast"></i> Presenças institucionais</h2>
+                            <p class="wiki-track-lead">Além das lojas: alinhamento, editorial e operação. Não competem com PDV, CSO e Hub.</p>
+                        </header>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-journal-code"></i> Wiki de alinhamento</h4>
+                                    <p class="mb-0"><a href="https://wiki.caracore.com.br/">wiki.caracore.com.br</a> — o que é cada produto, o que já existe, o que é Garagem. Não é manual de botão.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-body">
-                                        <h3 class="h5"><i class="bi bi-newspaper"></i> Retrô</h3>
-                                        <p class="mb-1"><a href="https://retro.caracore.com.br/" target="_blank" rel="noopener">retro.caracore.com.br</a> — 117 artigos editoriais (art. 114 PDV Rust · art. 115 B2B/IA).</p>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-newspaper"></i> Retrô</h4>
+                                    <p class="mb-0"><a href="https://retro.caracore.com.br/" target="_blank" rel="noopener">retro.caracore.com.br</a> — artigos editoriais (incluindo a linha piloto do PDV e o discurso B2B).</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-body">
-                                        <h3 class="h5"><i class="bi bi-door-open"></i> Sala Cara Core</h3>
-                                        <p class="mb-1"><a href="https://tools.caracore.com.br/sala/" target="_blank" rel="noopener">tools.caracore.com.br/sala/</a> — operação e campanhas (ligada ao MKT).</p>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-door-open"></i> Sala Cara Core</h4>
+                                    <p class="mb-0"><a href="https://tools.caracore.com.br/sala/" target="_blank" rel="noopener">tools.caracore.com.br/sala/</a> — rotina e campanhas, ligada ao MKT.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="project-card h-100">
-                                    <div class="project-body">
-                                        <h3 class="h5"><i class="bi bi-person"></i> Blog pessoal</h3>
-                                        <p class="mb-1"><a href="https://personal.caracore.com.br/" target="_blank" rel="noopener">personal.caracore.com.br</a> — Christian Mulato (153 artigos).</p>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="scenario-card h-100">
+                                    <h4><i class="bi bi-person"></i> Blog pessoal</h4>
+                                    <p class="mb-0"><a href="https://personal.caracore.com.br/" target="_blank" rel="noopener">personal.caracore.com.br</a> — Christian Mulato.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
-
-                    <!-- Fluxo Visual -->
-                    <section class="mb-5">
-                        <h2><i class="bi bi-arrow-left-right text-secondary"></i> Fluxo: Matriz → Produto → Oficina → Loja</h2>
-                        <div class="alert alert-secondary">
+                    <section class="wiki-track wiki-track--timeline mb-5">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Resumo</p>
+                            <h2><i class="bi bi-arrow-left-right"></i> O caminho até o cliente</h2>
+                            <p class="wiki-track-lead">A empresa define, o time constrói, a loja entrega. O CSO foge um pouco: o cliente entra na aplicação, não numa vitrine Pages.</p>
+                        </header>
+                        <div class="alert alert-secondary mb-0">
                             <p class="mb-2 text-center" style="font-size: 1.1rem;">
                                 <i class="bi bi-building"></i> <strong>Matriz</strong>
                                 &nbsp;<i class="bi bi-arrow-right"></i>&nbsp;
                                 <i class="bi bi-box-seam"></i> <strong>Produto</strong>
                                 &nbsp;<i class="bi bi-arrow-right"></i>&nbsp;
-                                <i class="bi bi-tools"></i> <strong>Oficina</strong> (repo)
+                                <i class="bi bi-tools"></i> <strong>Oficina</strong>
                                 &nbsp;<i class="bi bi-arrow-right"></i>&nbsp;
-                                <i class="bi bi-shop-window"></i> <strong>Loja</strong> (subdomínio)
+                                <i class="bi bi-shop-window"></i> <strong>Loja</strong>
                             </p>
-                            <p class="mb-0 text-muted text-center">A empresa define o produto, a oficina constrói e a loja entrega ao cliente final.</p>
+                            <p class="mb-0 wiki-lede text-center">A empresa decide o que entra em oferta; a oficina constrói; a loja (ou a aplicação, no CSO) entrega.</p>
                         </div>
                     </section>
 
-                    <!-- Próximos passos -->
-                    <section class="text-center">
-                        <h2><i class="bi bi-signpost-2 text-primary"></i> Explore Mais</h2>
-                        <div class="d-grid gap-2 d-md-block">
-                            <a href="projetos-overview.html" class="btn-wiki me-2">
-                                <i class="bi bi-collection"></i> Visão Geral dos Projetos
-                            </a>
-                            <a href="https://www.caracore.com.br/portfolio.html" class="btn-wiki me-2">
-                                <i class="bi bi-briefcase"></i> Portfólio
-                            </a>
-                            <a href="index.html" class="btn-wiki">
-                                <i class="bi bi-compass"></i> Wiki Home
-                            </a>
+                    <section class="wiki-track wiki-track--support">
+                        <header class="wiki-track-heading">
+                            <p class="wiki-track-kicker">Continuar</p>
+                            <h2><i class="bi bi-signpost-2"></i> Próximo passo</h2>
+                            <p class="wiki-track-lead">Trilhas por personagem, catálogo completo ou o portfólio da matriz.</p>
+                        </header>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="scenario-card support-card h-100">
+                                    <div class="kicker">Capa</div>
+                                    <h4>Centro de alinhamento</h4>
+                                    <p class="wiki-lede">O mesmo discurso da wiki, por cenário.</p>
+                                    <div class="links"><a href="index.html"><i class="bi bi-compass"></i> Abrir</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="scenario-card support-card h-100">
+                                    <div class="kicker">Catálogo</div>
+                                    <h4>Visão geral dos projetos</h4>
+                                    <p class="wiki-lede">Fichas PDV, CSO, Hub e o restante do portfólio.</p>
+                                    <div class="links"><a href="projetos-overview.html"><i class="bi bi-collection"></i> Abrir</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="scenario-card support-card h-100">
+                                    <div class="kicker">Matriz</div>
+                                    <h4>Portfólio institucional</h4>
+                                    <p class="wiki-lede">A vitrine B2B em www.caracore.com.br — nunca wiki/portfolio.</p>
+                                    <div class="links"><a href="https://www.caracore.com.br/portfolio.html" target="_blank" rel="noopener"><i class="bi bi-briefcase"></i> Abrir</a></div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -524,13 +580,13 @@
     <footer class="wiki-footer">
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-            <p>Wiki criado para orientação de estagiários e divulgação técnica</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

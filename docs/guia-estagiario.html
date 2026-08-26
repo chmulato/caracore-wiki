@@ -42,9 +42,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -82,10 +87,10 @@
 
             <!-- Conteúdo Principal -->
             <div class="col-lg-9 col-md-8">
-                <div class="wiki-content">
+                <div class="wiki-content wiki-home">
                     <div class="wiki-header">
-                        <h1><i class="bi bi-mortarboard"></i> Guia do Estagiário</h1>
-                        <p>Seu primeiro passo na equipe de desenvolvimento da Cara Core Informática</p>
+                    <h1><i class="bi bi-mortarboard"></i> Guia do Estagiário</h1>
+                    <p class="wiki-lede">Primeira semana: contexto, padrão de entrega e qual produto resolve qual dor. PDV, CSO e Hub são o núcleo; o restante do portfólio não compete com eles.</p>
                     </div>
 
                     <!-- Bem-vindo -->
@@ -116,7 +121,7 @@
                                     <ul class="feature-list">
                                         <li>Leia a <a href="projetos-overview.html" class="alert-link">Visão Geral dos Projetos</a></li>
                                         <li>Explore cada projeto no <a href="https://www.caracore.com.br/portfolio.html" class="alert-link">Portfólio</a></li>
-                                        <li>Veja o mapa do ecossistema (matriz, produtos, oficinas, lojas) em <a href="https://wiki.caracore.com.br/ecosistema.html" class="alert-link" title="Conheça o Nosso Eco Mundo">Eco Mundo</a></li>
+                                        <li>Veja o <a href="https://wiki.caracore.com.br/ecosistema.html" class="alert-link" title="Mapa do ecossistema (Eco Mundo)">mapa do ecossistema</a> (matriz, produtos, oficinas, lojas)</li>
                                         <li>Baixe o <a href="https://oidc.caracore.com.br/download.html" class="alert-link">ReinoOIDC.exe</a> (projeto educativo FREE)</li>
                                         <li>Acesse a <a href="https://area51.caracore.com.br/wiki/index.html" class="alert-link">Área 51</a> (se tiver permissão)</li>
                                     </ul>
@@ -264,11 +269,11 @@ git config --global user.email "seu@email.com"</code></pre>
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-people"></i> Para Leigos:</h5>
+                                        <h5><i class="bi bi-people"></i> O que muda para você</h5>
                                         <p>É o caixa da loja. Existem dois programas: o Java maduro (Windows, Linux e macOS, canal v3.2.2-free) e o Rust piloto (Windows, v0.1.2). Os dois vendem no computador da loja, mesmo sem internet. Nenhum substitui o outro.</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-mortarboard"></i> Para Estagiários:</h5>
+                                        <h5><i class="bi bi-mortarboard"></i> Detalhe opcional</h5>
                                         <p>Oficinas <code>caracore-pdv</code> (Java 25 · Quarkus · JavaFX) e <code>caracore-pdv-rust</code> (Rust · Tauri 2 · React). Lojas pdv.caracore.com.br e rust-pdv.caracore.com.br. Download Rust = GitHub Releases.</p>
                                         <div class="mt-2">
                                             <span class="tech-badge">Java 25</span>
@@ -293,11 +298,11 @@ git config --global user.email "seu@email.com"</code></pre>
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-people"></i> Para Leigos:</h5>
+                                        <h5><i class="bi bi-people"></i> O que muda para você</h5>
                                         <p>É o sistema do centro de distribuição: pedidos do Mercado Livre, da Shopee e da Temu entram numa fila só, o estoque tem mapa e a retirada é conferida. Não é a “central telefônica” da Cara Core. A vitrine já existe; o instalador Windows sai em 06/Abr/2027.</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-mortarboard"></i> Para Estagiários:</h5>
+                                        <h5><i class="bi bi-mortarboard"></i> Detalhe opcional</h5>
                                         <p>Oficina <code>caracore-hub</code> (Jakarta EE 10 · WAR · Tomcat · JSP). PostgreSQL e Redis na web atual; SQLite no destino bunker. Python/Flask é Área 51, não Hub. Loja: hub.caracore.com.br.</p>
                                         <div class="mt-2">
                                             <span class="tech-badge">Jakarta EE 10</span>
@@ -315,17 +320,17 @@ git config --global user.email "seu@email.com"</code></pre>
                         </div>
 
                         <div class="project-card mb-4">
-                            <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white;">
+                            <div class="project-header">
                                 <h3><i class="bi bi-truck"></i> CaraCore CSO — Frotas e Transportes</h3>
                             </div>
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-people"></i> Para Leigos:</h5>
+                                        <h5><i class="bi bi-people"></i> O que muda para você</h5>
                                         <p>É o caderno da frota que deixa de ser planilha. No navegador a empresa cuida de veículos, combustível, oficina e equipe. O aplicativo de computador (2028) guarda os dados críticos na empresa. Não é rastreador GPS.</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-mortarboard"></i> Para Estagiários:</h5>
+                                        <h5><i class="bi bi-mortarboard"></i> Detalhe opcional</h5>
                                         <p>Duas oficinas: <code>caracore-cso-quarkus</code> (Frotas Web, produção) e <code>caracore-cso-transportes</code> (desktop bunker). URL canónica: cso.caracore.com.br — não GitHub Pages.</p>
                                         <div class="mt-2">
                                             <span class="tech-badge">Java 21</span>
@@ -350,11 +355,11 @@ git config --global user.email "seu@email.com"</code></pre>
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-people"></i> Para Leigos:</h5>
+                                        <h5><i class="bi bi-people"></i> O que muda para você</h5>
                                         <p>É uma proposta educacional da Cara Core para apresentar lógica, ábaco romano e primeiros passos em Python. O produto ainda está em evolução e depende de feedback real para amadurecer.</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5><i class="bi bi-mortarboard"></i> Para Estagiários:</h5>
+                                        <h5><i class="bi bi-mortarboard"></i> Detalhe opcional</h5>
                                         <p>Site educacional em HTML/CSS/JS com conteúdo Python introdutório, fases progressivas e pacotes locais para Windows/macOS. Foco em clareza, navegação simples e feedback de usuários.</p>
                                         <div class="mt-2">
                                             <span class="tech-badge">HTML5</span>
@@ -434,13 +439,14 @@ git config --global user.email "seu@email.com"</code></pre>
     <footer class="wiki-footer">
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-            <p>Wiki criado para orientação de estagiários e divulgação técnica</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

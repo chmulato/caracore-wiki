@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -48,9 +48,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -58,15 +63,15 @@
     </nav>
 
     <div class="wiki-container">
-        <div class="wiki-content">
+        <div class="wiki-content wiki-home">
             <div class="wiki-header">
                 <h1><i class="bi bi-diagram-3-fill"></i> Trilha da Estratégia (Sócio)</h1>
                 <p class="wiki-home-subtitle">
                     O objetivo aqui é visão e coerência: <strong>decisão por cenário</strong>, <strong>execução replicável</strong> e <strong>evidências</strong> (resultado) — sem excesso de tecnologia na vitrine.
                 </p>
                 <div class="wiki-quick-actions">
-                    <a class="btn btn-outline-light btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar à Wiki</a>
-                    <a class="btn btn-light btn-sm" href="https://www.caracore.com.br/portfolio.html" target="_blank" rel="noopener"><i class="bi bi-briefcase"></i> Portfólio</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar à Wiki</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="https://www.caracore.com.br/portfolio.html" target="_blank" rel="noopener"><i class="bi bi-briefcase"></i> Portfólio</a>
                 </div>
             </div>
 
@@ -77,8 +82,12 @@
                 </div>
             </section>
 
-            <section class="mb-5">
-                <h2><i class="bi bi-bullseye"></i> Decisões por cenário</h2>
+            <section class="wiki-track wiki-track--socio mb-5">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Sócio</p>
+                    <h2><i class="bi bi-bullseye"></i> Decisões por cenário</h2>
+                    <p class="wiki-track-lead">Situação → decisão → evidência. PDV, CSO e Hub no núcleo; o restante não compete.</p>
+                </header>
                 <div class="row g-3">
                     <div class="col-lg-6">
                         <div class="scenario-card">
@@ -208,6 +217,7 @@
     <!-- Wiki Search JS -->
     <script src="assets/js/wiki-search.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

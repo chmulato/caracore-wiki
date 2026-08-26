@@ -20,6 +20,21 @@
   --wiki-inst-link-hover: #064a5c;
   --wiki-inst-header-bg: #f8f9fa;
   --wiki-inst-nav-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+  --track-cliente: #0f7a5a;
+  --track-cliente-soft: #e8f6f1;
+  --track-estagiario: #3b5bdb;
+  --track-estagiario-soft: #eef1fb;
+  --track-socio: #334155;
+  --track-socio-soft: #f1f5f9;
+  --product-pdv: #0a6b85;
+  --product-pdv-soft: #eaf3f6;
+  --product-cso: #0f7a5a;
+  --product-cso-soft: #e8f6f1;
+  --product-hub: #b45309;
+  --product-hub-soft: #f8efe4;
+  --product-seguranca: #5b6570;
+  --product-seguranca-soft: #eef0f2;
 }
 
 [data-theme="dark"] {
@@ -28,13 +43,28 @@
   --wiki-inst-border: #30363d;
   --wiki-inst-border-strong: #484f58;
   --wiki-inst-text: #e6edf3;
-  --wiki-inst-muted: #8b949e;
+  --wiki-inst-muted: #c9d1d9;
   --wiki-inst-accent: #58a6b8;
   --wiki-inst-accent-soft: #21262d;
   --wiki-inst-link: #58a6b8;
   --wiki-inst-link-hover: #79c0d0;
   --wiki-inst-header-bg: #161b22;
   --wiki-inst-nav-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --track-cliente: #3d9b7a;
+  --track-cliente-soft: #15241e;
+  --track-estagiario: #6d8cff;
+  --track-estagiario-soft: #1a2033;
+  --track-socio: #8b9cb3;
+  --track-socio-soft: #1c222b;
+  --product-pdv: #58a6b8;
+  --product-pdv-soft: #152026;
+  --product-cso: #3d9b7a;
+  --product-cso-soft: #15241e;
+  --product-hub: #d4a017;
+  --product-hub-soft: #2a2414;
+  --product-seguranca: #8b949e;
+  --product-seguranca-soft: #1c222b;
 }
 
 /* -------------------------------------------------------------------------
@@ -155,6 +185,22 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
   color: var(--wiki-inst-muted) !important;
 }
 
+.wiki-header p {
+  opacity: 1 !important;
+  color: var(--wiki-inst-text);
+}
+
+.wiki-lede {
+  color: var(--wiki-inst-muted) !important;
+  font-size: 0.925rem;
+  line-height: 1.55;
+}
+
+.wiki-lede strong {
+  color: var(--wiki-inst-text);
+  font-weight: 650;
+}
+
 /* Atalhos da home: botões neutros (não semáforo) */
 .wiki-quick-actions .btn {
   border-radius: 4px !important;
@@ -247,7 +293,7 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
 }
 
 /* -------------------------------------------------------------------------
-   Trilhas (track cards): cabeçalhos discretos
+   Trilhas (track cards): identidade por personagem, sem degradê
    ------------------------------------------------------------------------- */
 .track-header {
   color: var(--wiki-inst-text) !important;
@@ -256,16 +302,53 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
   border-bottom: 1px solid var(--wiki-inst-border);
 }
 
-.track-header.track-cliente,
-.track-header.track-estagiario,
-.track-header.track-socio {
-  background: var(--wiki-inst-header-bg) !important;
+.track-header.track-cliente {
+  background: var(--track-cliente-soft) !important;
   background-image: none !important;
-  border-left: 4px solid var(--wiki-inst-accent);
+  border-left: 4px solid var(--track-cliente);
+}
+
+.track-header.track-estagiario {
+  background: var(--track-estagiario-soft) !important;
+  background-image: none !important;
+  border-left: 4px solid var(--track-estagiario);
+}
+
+.track-header.track-socio {
+  background: var(--track-socio-soft) !important;
+  background-image: none !important;
+  border-left: 4px solid var(--track-socio);
 }
 
 .track-card {
   box-shadow: none !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-card .track-body {
+  flex: 1;
+}
+
+.scenario-card {
+  background: var(--wiki-inst-surface) !important;
+  border-color: var(--wiki-inst-border);
+  transform: none !important;
+}
+
+.scenario-card:hover {
+  transform: none !important;
+  background: var(--wiki-inst-surface) !important;
+}
+
+.scenario-steps .step-label {
+  color: var(--wiki-inst-accent) !important;
+}
+
+.scenario-note {
+  border-left-color: var(--wiki-inst-border-strong);
+  background: var(--wiki-inst-header-bg);
 }
 
 /* -------------------------------------------------------------------------
@@ -394,3 +477,483 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
   border-color: var(--wiki-inst-border) !important;
   background: var(--wiki-inst-surface) !important;
 }
+
+/* -------------------------------------------------------------------------
+   Capa (wiki-home): hierarquia, trilhas, cards de situação, timeline
+   ------------------------------------------------------------------------- */
+.wiki-home {
+  line-height: 1.55;
+}
+
+.wiki-home h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.wiki-home h2 {
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--wiki-inst-text) !important;
+  margin: 0 0 0.35rem;
+}
+
+.wiki-home h3.h5,
+.wiki-home .track-header h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--wiki-inst-text);
+}
+
+.wiki-home .scenario-card h4 {
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--wiki-inst-text);
+  margin: 0 0 0.85rem;
+  line-height: 1.35;
+}
+
+.wiki-home .wiki-header {
+  margin-bottom: 28px !important;
+  padding: 24px 28px !important;
+}
+
+.wiki-home .wiki-quick-actions--trails .btn:nth-child(1) {
+  border-color: var(--track-cliente) !important;
+  color: var(--track-cliente) !important;
+}
+.wiki-home .wiki-quick-actions--trails .btn:nth-child(2) {
+  border-color: var(--track-estagiario) !important;
+  color: var(--track-estagiario) !important;
+}
+.wiki-home .wiki-quick-actions--trails .btn:nth-child(3) {
+  border-color: var(--track-socio) !important;
+  color: var(--track-socio) !important;
+}
+
+.wiki-home .alert {
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+/* Trilhas: faixas com respiro e cor própria */
+.wiki-track {
+  margin: 0 -30px 28px;
+  padding: 22px 28px 28px;
+  border-top: 1px solid var(--wiki-inst-border);
+  border-bottom: 1px solid var(--wiki-inst-border);
+}
+
+.wiki-track + .wiki-track {
+  margin-top: 8px;
+}
+
+.wiki-track-heading {
+  margin-bottom: 1.25rem;
+  max-width: 46rem;
+}
+
+.wiki-track-kicker {
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wiki-track-lead {
+  margin: 0;
+  color: var(--wiki-inst-muted);
+  font-size: 0.98rem;
+}
+
+.wiki-track--cliente {
+  background: color-mix(in srgb, var(--track-cliente-soft) 70%, var(--wiki-inst-surface));
+  border-left: 4px solid var(--track-cliente);
+}
+
+.wiki-track--cliente .wiki-track-kicker,
+.wiki-track--cliente h2 i {
+  color: var(--track-cliente);
+}
+
+.wiki-track--estagiario {
+  background: color-mix(in srgb, var(--track-estagiario-soft) 70%, var(--wiki-inst-surface));
+  border-left: 4px solid var(--track-estagiario);
+}
+
+.wiki-track--estagiario .wiki-track-kicker,
+.wiki-track--estagiario h2 i {
+  color: var(--track-estagiario);
+}
+
+.wiki-track--socio {
+  background: color-mix(in srgb, var(--track-socio-soft) 70%, var(--wiki-inst-surface));
+  border-left: 4px solid var(--track-socio);
+}
+
+.wiki-track--socio .wiki-track-kicker,
+.wiki-track--socio h2 i {
+  color: var(--track-socio);
+}
+
+.wiki-track--timeline,
+.wiki-track--support {
+  background: var(--wiki-inst-header-bg);
+  border-left: 4px solid var(--wiki-inst-accent);
+}
+
+.wiki-track--timeline .wiki-track-kicker,
+.wiki-track--timeline h2 i,
+.wiki-track--support .wiki-track-kicker,
+.wiki-track--support h2 i {
+  color: var(--wiki-inst-accent);
+}
+
+/* Cards de produto: PDV / CSO / Hub / Segurança */
+.product-card {
+  background: var(--wiki-inst-surface);
+  border: 1px solid var(--wiki-inst-border) !important;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.product-card--pdv {
+  border-top: 3px solid var(--product-pdv) !important;
+}
+
+.product-card--cso {
+  border-top: 3px solid var(--product-cso) !important;
+}
+
+.product-card--hub {
+  border-top: 3px solid var(--product-hub) !important;
+}
+
+.product-card--seguranca {
+  border-top: 3px solid var(--product-seguranca) !important;
+}
+
+.product-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.product-badge--pdv {
+  background: var(--product-pdv-soft);
+  color: var(--product-pdv);
+}
+
+.product-badge--cso {
+  background: var(--product-cso-soft);
+  color: var(--product-cso);
+}
+
+.product-badge--hub {
+  background: var(--product-hub-soft);
+  color: var(--product-hub);
+}
+
+.product-badge--seguranca {
+  background: var(--product-seguranca-soft);
+  color: var(--product-seguranca);
+}
+
+.wiki-home .track-header:has(.product-badge) {
+  position: relative;
+  padding-right: 5.5rem;
+}
+
+.wiki-home .track-header .product-badge {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+}
+
+.wiki-home .track-body > p {
+  font-size: 0.95rem;
+  color: var(--wiki-inst-muted);
+}
+
+/* Manual de situação: Ganho / Agora / Próximo como blocos */
+.wiki-home .scenario-steps {
+  counter-reset: situacao;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.wiki-home .scenario-steps li {
+  counter-increment: situacao;
+  position: relative;
+  margin: 0;
+  padding: 10px 12px 10px 42px;
+  border-radius: 6px;
+  background: var(--wiki-inst-canvas);
+  border: 1px solid var(--wiki-inst-border);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--wiki-inst-text);
+}
+
+.wiki-home .scenario-steps li::before {
+  content: counter(situacao);
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--wiki-inst-muted);
+}
+
+.wiki-home .scenario-steps li:nth-child(1) {
+  border-left: 3px solid var(--track-cliente);
+}
+
+.wiki-home .scenario-steps li:nth-child(1)::before {
+  background: var(--track-cliente);
+}
+
+.wiki-home .scenario-steps li:nth-child(2) {
+  border-left: 3px solid var(--wiki-inst-accent);
+}
+
+.wiki-home .scenario-steps li:nth-child(2)::before {
+  background: var(--wiki-inst-accent);
+}
+
+.wiki-home .scenario-steps li:nth-child(3) {
+  border-left: 3px solid var(--track-socio);
+}
+
+.wiki-home .scenario-steps li:nth-child(3)::before {
+  background: var(--track-socio);
+}
+
+.wiki-home .scenario-steps .step-label {
+  margin-bottom: 3px;
+  color: inherit !important;
+}
+
+.wiki-home .scenario-steps li:nth-child(1) .step-label {
+  color: var(--track-cliente) !important;
+}
+
+.wiki-home .scenario-steps li:nth-child(2) .step-label {
+  color: var(--wiki-inst-accent) !important;
+}
+
+.wiki-home .scenario-steps li:nth-child(3) .step-label {
+  color: var(--track-socio) !important;
+}
+
+/* Links de ação: chips, não texto corrido */
+.wiki-home .scenario-card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.wiki-home .scenario-card .links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--wiki-inst-border);
+  border-radius: 4px;
+  background: var(--wiki-inst-header-bg);
+  color: var(--wiki-inst-link) !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.wiki-home .scenario-card .links a:hover {
+  background: var(--wiki-inst-accent-soft);
+  border-color: var(--wiki-inst-accent);
+  color: var(--wiki-inst-link-hover) !important;
+}
+
+.wiki-home .support-card {
+  padding: 16px;
+  background: var(--wiki-inst-surface) !important;
+}
+
+.wiki-home .support-card .kicker {
+  color: var(--wiki-inst-accent);
+}
+
+.wiki-home .support-card .links a {
+  background: var(--wiki-inst-accent);
+  border-color: var(--wiki-inst-accent);
+  color: #fff !important;
+}
+
+.wiki-home .support-card .links a:hover {
+  filter: brightness(0.95);
+  color: #fff !important;
+}
+
+/* Linha do tempo: eixo vertical + anos em cápsula */
+.wiki-home .timeline {
+  position: relative;
+  margin: 0;
+  padding: 4px 0 4px 8px;
+}
+
+.wiki-home .timeline::before {
+  content: "";
+  position: absolute;
+  left: 107px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--wiki-inst-border-strong);
+}
+
+.wiki-home .timeline li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: none;
+  align-items: start;
+}
+
+.wiki-home .timeline li::after {
+  content: "";
+  position: absolute;
+  left: 102px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--wiki-inst-surface);
+  border: 2px solid var(--wiki-inst-accent);
+  z-index: 1;
+}
+
+.wiki-home .timeline li:nth-child(odd) .event {
+  background: var(--wiki-inst-surface);
+}
+
+.wiki-home .timeline li:nth-child(even) .event {
+  background: var(--wiki-inst-accent-soft);
+}
+
+.wiki-home .timeline .year {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--wiki-inst-accent);
+  background: var(--wiki-inst-surface);
+  border: 1px solid var(--wiki-inst-border);
+  border-radius: 999px;
+  padding: 4px 8px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.wiki-home .timeline .event {
+  color: var(--wiki-inst-text);
+  border: 1px solid var(--wiki-inst-border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+}
+
+.wiki-home .timeline .event strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--wiki-inst-text);
+}
+
+@media (max-width: 991px) {
+  .wiki-track {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wiki-track {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .wiki-home .timeline::before {
+    left: 14px;
+  }
+
+  .wiki-home .timeline li {
+    grid-template-columns: 1fr;
+    padding-left: 32px;
+    gap: 8px;
+  }
+
+  .wiki-home .timeline li::after {
+    left: 9px;
+    margin-left: 0;
+  }
+
+  .wiki-home .timeline .year {
+    width: fit-content;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Contraste: Bootstrap .text-muted é cinza de tema claro (ilegível no escuro)
+   ------------------------------------------------------------------------- */
+.text-muted,
+.text-secondary,
+.text-body-secondary,
+.form-text {
+  color: var(--wiki-inst-muted) !important;
+}
+
+[data-theme="dark"] .alert-secondary,
+[data-theme="dark"] .alert-light,
+[data-theme="dark"] .alert-info {
+  background: var(--wiki-inst-accent-soft) !important;
+  color: var(--wiki-inst-text) !important;
+  border-color: var(--wiki-inst-border) !important;
+}
+
+[data-theme="dark"] .alert-secondary a,
+[data-theme="dark"] .alert-light a,
+[data-theme="dark"] .alert-info a {
+  color: var(--wiki-inst-link) !important;
+}
+
+[data-theme="dark"] .wiki-header small,
+[data-theme="dark"] .track-header small,
+[data-theme="dark"] .wiki-track-lead {
+  color: var(--wiki-inst-muted) !important;
+  opacity: 1;
+}
+

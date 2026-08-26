@@ -34,4 +34,6 @@ alwaysApply: true
 - Encomendas (ML, Shopee, Temu). Não é Flask nem orquestrador interno. Oficina web 2.1 (WAR/Tomcat/PostgreSQL). GA instalador Windows 06/04/2027 (SQLite). Tia Sócia = pitch.
 
 ## Convenções
+- Capa e cards: linguagem de cenário primeiro (**o que ganha / como resolve agora / próximo passo**). Nomes internos (Eco Mundo, Garagem, Área 51) vêm explicados; Java/Rust e datas de GA ficam como detalhe, sem apagar o fato.
+- Navegação: rótulo **Mapa** = `ecosistema.html` (apelido interno Eco Mundo).
 - Ao alterar discurso dos três produtos-chave, sincronizar AGENTS.md, ECOSYSTEM_*.md, lojas e matriz.

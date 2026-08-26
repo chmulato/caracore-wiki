@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trilha do Sucesso (Cliente) | Wiki Cara Core</title>
-    <meta name="description" content="Trilha do Sucesso (Cliente): cenários e decisões práticas para gerar resultado com a Cara Core (economia, blindagem e produtividade).">
+    <meta name="description" content="Trilha do Sucesso (Cliente): o que você ganha, como resolve agora e qual é o próximo passo — caixa, frota, encomendas e segurança.">
 
     <!-- Bootstrap CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
     <!-- Wiki CSS -->
-    <link rel="stylesheet" href="assets/css/wiki.css">
+    <link href="assets/css/wiki.css" rel="stylesheet">
     <!-- Wiki Unified (overrides) -->
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
     <link rel="stylesheet" href="assets/css/wiki-institutional.css">
@@ -21,7 +21,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Trilha do Sucesso (Cliente) | Wiki Cara Core">
-    <meta property="og:description" content="Cenários de resultado: economia, blindagem e produtividade — com foco em decisão e execução.">
+    <meta property="og:description" content="Cenários de resultado: o que você ganha, como resolve agora e o próximo passo.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wiki.caracore.com.br/trilha-cliente.html">
 </head>
@@ -48,9 +48,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -58,175 +63,381 @@
     </nav>
 
     <div class="wiki-container">
-        <div class="wiki-content">
+        <div class="wiki-content wiki-home">
             <div class="wiki-header">
                 <h1><i class="bi bi-briefcase-fill"></i> Trilha do Sucesso (Cliente)</h1>
                 <p class="wiki-home-subtitle">
-                    O objetivo aqui é decisão rápida com clareza: <strong>o que você ganha</strong>, <strong>o que muda na operação</strong> e <strong>qual é o próximo passo</strong>.
+                    Decisão rápida: <strong>o que você ganha</strong>, <strong>como resolve agora</strong> e <strong>qual é o próximo passo</strong>.
                 </p>
                 <div class="wiki-quick-actions">
-                    <a class="btn btn-outline-light btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar à Wiki</a>
-                    <a class="btn btn-light btn-sm" href="https://wiki.caracore.com.br/#contato"><i class="bi bi-chat-dots"></i> Falar com a Cara Core</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar à Wiki</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="https://wiki.caracore.com.br/#contato"><i class="bi bi-chat-dots"></i> Falar com a Cara Core</a>
                 </div>
             </div>
 
             <section class="mb-4">
                 <div class="alert alert-info" role="note">
                     <i class="bi bi-info-circle-fill"></i>
-                    <strong>Como ler esta trilha:</strong> cada cenário é um “manual de situação”. Ele descreve o problema real, a resposta recomendada e como validar o resultado.
+                    <strong>Como ler:</strong> cada card é um cenário. O selo (PDV, CSO, Hub) diz o produto; os três blocos dizem o que muda para você. Manual de botão e download ficam na loja do produto.
                 </div>
             </section>
 
-            <section class="mb-5">
-                <h2><i class="bi bi-compass"></i> Cenários prioritários</h2>
-                <div class="row g-3">
+            <section class="wiki-track wiki-track--cliente">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Cenários</p>
+                    <h2><i class="bi bi-compass"></i> Cenários prioritários</h2>
+                    <p class="wiki-track-lead">Comece pela dor que mais custa hoje. Os três produtos-chave vêm primeiro; segurança e transportes no computador vêm em seguida.</p>
+                </header>
+
+                <div class="row g-4">
                     <div class="col-lg-4">
-                        <div class="scenario-card">
-                            <div class="kicker">Varejo</div>
-                            <h4>Vender com previsibilidade (economia + continuidade)</h4>
-                            <p><strong>Quando acontece:</strong> fila no caixa, custo recorrente “invisível” e ansiedade com mudança fiscal.</p>
-                            <p><strong>O que você ganha:</strong> operação mais estável e previsível, com redução de desperdícios e rotinas manuais.</p>
-                            <div class="links">
-                                <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (PDV)</a>
-                                <a href="projeto-pdv.html"><i class="bi bi-journal-code"></i> Contexto (Wiki)</a>
+                        <div class="track-card project-card product-card product-card--pdv">
+                            <div class="track-header track-cliente">
+                                <div>
+                                    <h3 class="h5 mb-1"><i class="bi bi-shop"></i> Cenário: vender com previsibilidade</h3>
+                                    <small>Fila no caixa, custo escondido e mudança fiscal</small>
+                                </div>
+                                <span class="product-badge product-badge--pdv">PDV</span>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Reduzir custo e manter a venda fluindo</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Caixa mais estável, menos desperdício e rotina que a equipe consegue repetir.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Use o PDV no computador da loja. Há uma linha já madura e uma linha piloto, mais leve; as duas convivem — nenhuma substitui a outra.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Abra o guia de serviços ou o que é o PDV nesta wiki. Download e manual de botão ficam na loja.
+                                        </li>
+                                    </ul>
+                                    <p class="scenario-note"><strong>Detalhe opcional:</strong> linha madura Java <code>v3.2.2-free</code> · linha piloto Rust <code>v0.1.2</code> (Windows).</p>
+                                    <div class="links">
+                                        <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (PDV)</a>
+                                        <a href="projeto-pdv.html"><i class="bi bi-journal-code"></i> O que é o PDV</a>
+                                        <a href="#v3-pdv-transparencia"><i class="bi bi-megaphone"></i> Transparência V3</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="scenario-card">
-                            <div class="kicker">Operação</div>
-                            <h4>E-commerce sem retrabalho (encomendas numa fila só)</h4>
-                            <p><strong>Quando acontece:</strong> o mesmo tipo de pedido está em três marketplaces e o time “trabalha para consertar”.</p>
-                            <p><strong>O que você ganha:</strong> CaraCore Hub junta Mercado Livre, Shopee e Temu com estoque e retirada.</p>
-                            <small class="text-warning d-block mb-2"><i class="bi bi-clock-history"></i> Vitrine já pública — GA do instalador Windows 06/Abr/2027</small>
-                            <div class="links">
-                                <a href="projeto-hub.html"><i class="bi bi-journal-code"></i> Hub (Wiki)</a>
-                                <a href="https://hub.caracore.com.br" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Loja (vitrine)</a>
+                        <div class="track-card project-card product-card product-card--cso">
+                            <div class="track-header track-cliente">
+                                <div>
+                                    <h3 class="h5 mb-1"><i class="bi bi-truck"></i> Cenário: frota fora da planilha</h3>
+                                    <small>Veículos, combustível e equipe sem dono claro</small>
+                                </div>
+                                <span class="product-badge product-badge--cso">CSO</span>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Organizar a frota hoje, sem comprar rastreador</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Custo e permissões num só lugar — gestão de frota, não GPS.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Abra a Gestão de Frotas no navegador: já está em produção.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Se a operação crítica não pode depender só da internet, veja o cenário de transportes no computador (08/Nov/2028).
+                                        </li>
+                                    </ul>
+                                    <div class="links">
+                                        <a href="projeto-cso.html"><i class="bi bi-journal-code"></i> O que é o CSO</a>
+                                        <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Gestão de Frotas</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="scenario-card">
-                            <div class="kicker">Segurança</div>
-                            <h4>Controle de risco sem travar o time</h4>
-                            <p><strong>Quando acontece:</strong> acesso “solto”, falta de trilha de auditoria e dependência de pessoas-chave.</p>
-                            <p><strong>O que você ganha:</strong> governança simples, padrões claros e continuidade operacional.</p>
-                            <div class="links">
-                                <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (geral)</a>
-                                <a href="projeto-area51.html"><i class="bi bi-journal-code"></i> Contexto (Wiki)</a>
+                        <div class="track-card project-card product-card product-card--hub">
+                            <div class="track-header track-cliente">
+                                <div>
+                                    <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> Cenário: e-commerce sem retrabalho</h3>
+                                    <small>O mesmo pedido em três painéis</small>
+                                </div>
+                                <span class="product-badge product-badge--hub">Hub</span>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Processar mais com a mesma equipe</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Mercado Livre, Shopee e Temu numa fila só, com estoque visível e menos erro na retirada.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Conheça a vitrine pública e alinhe o produto nesta wiki.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Em <strong>06/Abr/2027</strong> o instalador Windows entra em oferta, para instalar sem equipe de TI.
+                                        </li>
+                                    </ul>
+                                    <div class="links">
+                                        <a href="projeto-hub.html"><i class="bi bi-journal-code"></i> O que é o Hub</a>
+                                        <a href="https://hub.caracore.com.br" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Loja (vitrine)</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row g-3 mt-1">
+                <div class="row g-4 mt-1">
                     <div class="col-lg-4">
-                        <div class="scenario-card">
-                            <div class="kicker">Logística</div>
-                            <h4>Tirar a frota da planilha (sem comprar GPS)</h4>
-                            <p><strong>Quando acontece:</strong> veículos, combustível e manutenção espalhados em planilha; o gestor não vê custo nem equipe com clareza.</p>
-                            <p><strong>O que você ganha:</strong> Gestão de Frotas no navegador (já em produção), planos a partir de R$ 0 e perfis ADMIN/GESTOR/ENTREGADOR.</p>
-                            <div class="links">
-                                <a href="projeto-cso.html"><i class="bi bi-journal-code"></i> Hub CSO (Wiki)</a>
-                                <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Gestão de Frotas</a>
+                        <div class="track-card project-card product-card product-card--seguranca">
+                            <div class="track-header track-cliente">
+                                <div>
+                                    <h3 class="h5 mb-1"><i class="bi bi-shield-check"></i> Cenário: risco controlado</h3>
+                                    <small>Acesso solto e dependência de uma pessoa só</small>
+                                </div>
+                                <span class="product-badge product-badge--seguranca">Segurança</span>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Reduzir risco sem travar o time</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Quem entra, o que faz e como a operação continua — sem burocracia que trava a loja.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Leia o guia de serviços e a Área 51 (laboratório de segurança, onde testamos padrões antes de liberar).
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Fale com o suporte descrevendo a operação, não o nome da ferramenta.
+                                        </li>
+                                    </ul>
+                                    <div class="links">
+                                        <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços</a>
+                                        <a href="projeto-area51.html"><i class="bi bi-journal-code"></i> Área 51 (laboratório)</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="scenario-card">
-                            <div class="kicker">Soberania</div>
-                            <h4>Operar entregas no computador da empresa</h4>
-                            <p><strong>Quando acontece:</strong> a operação crítica não pode depender só da nuvem — internet cai, dado precisa ficar na casa.</p>
-                            <p><strong>O que você ganha:</strong> Gestão de Transportes (desktop bunker) prevista para 08/Nov/2028, acoplada à Frotas. Não substitui o web e não é rastreador.</p>
-                            <small class="text-warning d-block mb-2"><i class="bi bi-clock-history"></i> Garagem — lançamento 08/11/2028</small>
-                            <div class="links">
-                                <a href="projeto-cso.html#transportes"><i class="bi bi-pc-display"></i> Transportes (Wiki)</a>
+                        <div class="track-card project-card product-card product-card--cso">
+                            <div class="track-header track-cliente">
+                                <div>
+                                    <h3 class="h5 mb-1"><i class="bi bi-pc-display"></i> Cenário: entregas no computador da empresa</h3>
+                                    <small>A operação crítica não pode cair com a internet</small>
+                                </div>
+                                <span class="product-badge product-badge--cso">CSO</span>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Transportes no computador, acoplado à frota</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Entregas e dados na casa da empresa, mesmo se a nuvem falhar. Não substitui a Frotas no navegador e não é rastreador GPS.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Use a Gestão de Frotas hoje. Este módulo ainda está em desenvolvimento (ainda não em oferta aberta).
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Lançamento previsto para <strong>08/Nov/2028</strong>. Acompanhe o alinhamento na wiki do CSO.
+                                        </li>
+                                    </ul>
+                                    <div class="links">
+                                        <a href="projeto-cso.html#transportes"><i class="bi bi-pc-display"></i> Transportes (Wiki)</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="v3-pdv-transparencia" class="mb-5">
-                <h2><i class="bi bi-megaphone"></i> Posicionamento de negócio (V3) — vale para as duas linhas</h2>
-                <p class="text-muted small mb-3">“V3” aqui é a <strong>narrativa comercial</strong> do CaraCore PDV (PME, PIX Split 2027), não o número de release da linha Rust (v0.1.x) nem o canal Java (v3.2.x).</p>
-                <div class="row g-3">
+            <section id="v3-pdv-transparencia" class="wiki-track wiki-track--cliente">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">PDV · negócio</p>
+                    <h2><i class="bi bi-megaphone"></i> Posicionamento de negócio (V3)</h2>
+                    <p class="wiki-track-lead">“V3” é a história comercial do PDV para PME (incluindo PIX Split em 2027). Não é o número da linha madura nem o da linha piloto.</p>
+                </header>
+                <div class="row g-4">
                     <div class="col-lg-6">
-                        <div class="scenario-card h-100">
-                            <div class="kicker">Produto</div>
-                            <h4>CaraCore PDV para pequenos e médios negócios</h4>
-                            <p>Na V3, o CaraCore PDV mantém foco em operação simples, continuidade de venda e previsibilidade para empresas de pequeno e médio porte.</p>
-                            <p><strong>Direção estratégica:</strong> foco prático no cenário de <strong>PIX Split 2027</strong>, reduzindo a complexidade operacional da rotina fiscal e financeira no dia a dia do caixa.</p>
-                            <p class="mb-0"><strong>Compromisso de transparência:</strong> mostramos com clareza o que já está pronto, o que está em evolução e quais resultados o cliente pode esperar em cada etapa.</p>
+                        <div class="track-card project-card product-card product-card--pdv">
+                            <div class="track-header track-cliente">
+                                <h3 class="h5 mb-1"><i class="bi bi-shop"></i> O produto na prática</h3>
+                                <small>Pequenos e médios negócios</small>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Operação simples e venda contínua</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Foco no caixa do dia a dia, com previsibilidade para PME — não um sistema “para crescer depois”.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            A linha madura já está em uso. A linha piloto convive com ela; nenhuma substitui a outra.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Em 2027, a direção de negócio inclui PIX Split, para reduzir a complexidade de receber e repartir no caixa.
+                                        </li>
+                                    </ul>
+                                    <p class="scenario-note"><strong>Transparência:</strong> o que já está pronto, o que ainda evolui e o que você pode esperar em cada etapa — sem misturar versão de produto com história de negócio.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="scenario-card h-100">
-                            <div class="kicker">Persona de negócio</div>
-                            <h4>Gestor(a) de loja PME em crescimento</h4>
-                            <p><strong>Perfil:</strong> dono(a), gerente administrativo-financeiro ou responsável pela operação de caixa, com equipe enxuta e alta pressão por resultado.</p>
-                            <p><strong>Dores centrais:</strong> retrabalho fiscal, dificuldade em conciliar pagamentos, incerteza com mudanças regulatórias e pouco tempo para treinar equipe.</p>
-                            <p><strong>Objetivo de negócio:</strong> vender mais com menos atrito operacional, padronizar processos e simplificar o fluxo de documentos e recebimentos.</p>
-                            <p class="mb-0"><strong>Valor esperado do produto:</strong> reduzir esforço manual, organizar a rotina do caixa e apoiar a transição para PIX Split 2027 com linguagem de negócio e execução clara.</p>
+                        <div class="track-card project-card product-card product-card--pdv">
+                            <div class="track-header track-cliente">
+                                <h3 class="h5 mb-1"><i class="bi bi-person"></i> Para quem é</h3>
+                                <small>Gestor(a) de loja PME em crescimento</small>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Equipe enxuta, pressão por resultado</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Menos retrabalho fiscal, conciliação mais clara e menos tempo treinado “na hora da fila”.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Padronize o caixa com o PDV que já opera na loja (linha madura) e, se fizer sentido, experimente a linha piloto.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Combine proposta, execução e evidência na conversa com a Cara Core — não um catálogo de versões.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="alert alert-light border mt-3 mb-0" role="note">
-                    <i class="bi bi-lightning-charge"></i>
-                    <strong>Dois PDVs Desktop, um produto:</strong> oferta madura em <a href="https://pdv.caracore.com.br/">PDV Desktop (Java · JavaFX, canal v3.2.2-free)</a>.
-                    <strong>CaraCore PDV (Rust + Tauri 2)</strong> (release v0.1.2) em piloto Windows — wiki na <a href="https://rust-pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">loja Rust</a>. Nenhuma substitui a outra.
+                <div class="alert alert-light border mt-4 mb-0" role="note">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Dois PDVs no computador, um produto:</strong> linha madura em <a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a> (canal <code>v3.2.2-free</code>).
+                    Linha piloto em <a href="https://rust-pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">rust-pdv.caracore.com.br</a> (release <code>v0.1.2</code>, Windows). Nenhuma substitui a outra.
                 </div>
             </section>
 
-            <section class="mb-5">
-                <h2><i class="bi bi-clipboard-check"></i> Como validar que deu certo</h2>
-                <div class="row g-3">
+            <section class="wiki-track wiki-track--cliente">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Resultado</p>
+                    <h2><i class="bi bi-clipboard-check"></i> Como saber que deu certo</h2>
+                    <p class="wiki-track-lead">Três sinais visíveis na operação — não uma lista de funcionalidades.</p>
+                </header>
+                <div class="row g-4">
                     <div class="col-md-4">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card h-100">
                             <div class="kicker">Economia</div>
                             <h4>Custos recorrentes caem</h4>
-                            <p>Menos desperdício, menos rotinas manuais e menos “custo invisível” sustentando a operação.</p>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Menos desperdício e menos rotina manual sustentando a operação.
+                                </li>
+                                <li>
+                                    <span class="step-label">Como validar</span>
+                                    Compare o mês: menos retrabalho, menos “custo que ninguém via”.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card h-100">
                             <div class="kicker">Continuidade</div>
-                            <h4>Operação fica previsível</h4>
-                            <p>Menos paradas e menos improviso. A operação roda com padrão, e a equipe sabe o que fazer.</p>
+                            <h4>A operação fica previsível</h4>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Menos parada e menos improviso no caixa, na frota ou na fila de encomendas.
+                                </li>
+                                <li>
+                                    <span class="step-label">Como validar</span>
+                                    Qualquer pessoa do time consegue seguir o padrão, sem depender de uma só.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="scenario-card">
-                            <div class="kicker">Governança</div>
+                        <div class="scenario-card support-card h-100">
+                            <div class="kicker">Confiança</div>
                             <h4>Risco diminui sem burocracia</h4>
-                            <p>Controles simples, acessos com responsabilidade e trilha para auditoria quando necessário.</p>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Acessos com dono claro e registro do que aconteceu, quando precisar.
+                                </li>
+                                <li>
+                                    <span class="step-label">Como validar</span>
+                                    A loja continua vendendo; o controle não vira fila extra.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="mb-4">
-                <h2><i class="bi bi-link-45deg"></i> Próximos passos recomendados</h2>
-                <div class="row g-3">
+            <section class="wiki-track wiki-track--support">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Ação</p>
+                    <h2><i class="bi bi-link-45deg"></i> Próximos passos recomendados</h2>
+                </header>
+                <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card">
                             <div class="kicker">Começar</div>
                             <h4>Escolha o cenário principal</h4>
-                            <p>Qual é a dor que mais custa hoje: custo recorrente, risco fiscal/operacional, retrabalho ou falta de previsibilidade?</p>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Uma conversa objetiva: a dor que mais custa hoje (caixa, frota, encomenda ou acesso).
+                                </li>
+                                <li>
+                                    <span class="step-label">Próximo passo</span>
+                                    Agende com o contexto da operação — não com o nome da ferramenta.
+                                </li>
+                            </ul>
                             <div class="links">
                                 <a href="https://wiki.caracore.com.br/#contato" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Agendar conversa</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card">
                             <div class="kicker">Contexto</div>
                             <h4>Ver a suíte como uma jornada</h4>
-                            <p>Quando o cenário muda, a solução evolui. O importante é manter coerência entre proposta → execução → evidências.</p>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Coerência entre o que combinamos, o que entregamos e o que dá para mostrar.
+                                </li>
+                                <li>
+                                    <span class="step-label">Próximo passo</span>
+                                    Abra a visão geral dos produtos ou a linha do tempo da wiki.
+                                </li>
+                            </ul>
                             <div class="links">
-                                <a href="projetos-overview.html"><i class="bi bi-collection"></i> Projetos (overview)</a>
+                                <a href="projetos-overview.html"><i class="bi bi-collection"></i> Projetos</a>
                                 <a href="index.html#linha-do-tempo"><i class="bi bi-clock-history"></i> Linha do tempo</a>
                             </div>
                         </div>
@@ -258,7 +469,7 @@
     <!-- Wiki Search JS -->
     <script src="assets/js/wiki-search.js"></script>
     <!-- Wiki JS -->
+    <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>
-

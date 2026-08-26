@@ -46,8 +46,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo">
-                            <i class="bi bi-globe2"></i> Eco Mundo
+                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                            <i class="bi bi-globe2"></i> Mapa
                         </a>
                     </li>
                     <li class="nav-item">
@@ -61,19 +61,20 @@
     </nav>
 
     <div class="wiki-container">
-        <div class="wiki-content">
+        <div class="wiki-content wiki-home">
             <div class="wiki-header">
                 <h1><i class="bi bi-compass"></i> Wiki Cara Core — Centro de Alinhamento</h1>
                 <p class="wiki-home-subtitle">
                     Um ponto único para entender <strong>o que entregamos</strong>, <strong>como executamos</strong> e <strong>por que evoluímos</strong> — guiado por cenários e por nossa história desde 2010.
                 </p>
-                <p class="mb-0">Os <strong>três produtos-chave</strong> da Cara Core Informática são o <a href="projeto-pdv.html">CaraCore PDV</a> (caixa desktop, Java maduro e Rust piloto), o <a href="projeto-cso.html">CaraCore CSO</a> (Frotas no ar e Transportes em 2028) e o <a href="projeto-hub.html">CaraCore Hub</a> (encomendas e marketplaces; instalador Windows em 06/Abr/2027). O restante do portfólio existe e está documentado; não compete com esse núcleo de negócio.</p>
+                <p class="mb-2">Os <strong>três produtos-chave</strong> da Cara Core Informática são o <a href="projeto-pdv.html">CaraCore PDV</a> (caixa no computador da loja), o <a href="projeto-cso.html">CaraCore CSO</a> (frota no navegador) e o <a href="projeto-hub.html">CaraCore Hub</a> (encomendas de Mercado Livre, Shopee e Temu). O restante do portfólio existe e está documentado; não compete com esse núcleo de negócio.</p>
+                <p class="mb-0 wiki-lede">O PDV tem duas linhas que <strong>convivem</strong> (nenhuma substitui a outra): a estável, já no dia a dia, e uma linha piloto mais leve. O CSO de frota já está no ar; o módulo de transportes no computador da empresa chega em <strong>08/Nov/2028</strong> para operar sem depender da nuvem. O Hub já tem vitrine pública; o instalador Windows, para instalar sem equipe de TI, está previsto para <strong>06/Abr/2027</strong>.</p>
 
-                <div class="wiki-quick-actions" role="navigation" aria-label="Trilhas principais">
+                <div class="wiki-quick-actions wiki-quick-actions--trails" role="navigation" aria-label="Trilhas principais">
                     <a class="btn btn-success btn-sm" href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Trilha do Sucesso (Cliente)</a>
                     <a class="btn btn-primary btn-sm" href="trilha-estagiario.html"><i class="bi bi-mortarboard"></i> Trilha do Aprendizado (Estagiário)</a>
                     <a class="btn btn-dark btn-sm" href="trilha-socio.html"><i class="bi bi-diagram-3"></i> Trilha da Estratégia (Sócio)</a>
-                    <a class="btn btn-outline-secondary btn-sm" href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo"><i class="bi bi-globe2"></i> Eco Mundo</a>
+                    <a class="btn btn-outline-secondary btn-sm" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa do ecossistema</a>
                     <a class="btn btn-outline-secondary btn-sm" href="#linha-do-tempo"><i class="bi bi-clock-history"></i> Linha do tempo</a>
                 </div>
             </div>
@@ -81,51 +82,67 @@
             <section class="mb-3">
                 <div class="alert alert-secondary border mb-0" role="note">
                     <i class="bi bi-shop-window me-1"></i>
-                    <strong>Wiki institucional × wiki da loja:</strong> esta wiki é o <strong>centro de alinhamento</strong> (o que é cada produto, o que já existe, o que ainda é Garagem). Manuais de botão, download e trilhas operacionais ficam na <strong>loja de cada produto</strong> (PDV Java, PDV Rust, Hub). O CSO não tem vitrine GitHub Pages: a URL canónica é a aplicação em cso.caracore.com.br.
+                    <strong>Esta wiki × a loja do produto:</strong> aqui você alinha <strong>o que é cada produto</strong>, <strong>o que já existe</strong> e <strong>o que ainda é Garagem</strong> (em desenvolvimento, ainda não em oferta aberta). Manual de botão, download e passo a passo ficam na <strong>loja de cada produto</strong>. O CSO não tem loja estática: o endereço oficial é a própria aplicação em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>.
                 </div>
             </section>
 
             <section class="mb-4">
                 <div class="alert alert-info" role="note">
                     <i class="bi bi-info-circle-fill"></i>
-                    <strong>Como usar:</strong> escolha sua trilha. Cada card é um <strong>manual de situação</strong>: “o que ganho”, “como resolvo agora” e “qual é o próximo passo”.
-                    <span class="d-block mt-2 text-muted">Nesta página, evitamos “manuais de botões” e detalhes internos de infraestrutura. O foco é desempenho, disciplina e resultado.</span>
+                    <strong>Como usar:</strong> escolha sua trilha. Cada card responde três perguntas: <strong>o que você ganha</strong>, <strong>como resolve agora</strong> e <strong>qual é o próximo passo</strong>.
+                    <span class="d-block mt-2 wiki-lede">Nesta página evitamos manuais de botão e detalhes de infraestrutura. Quando um nome interno aparecer (por exemplo Eco Mundo ou Área 51), ele vem explicado na hora — ou no <a href="glossario.html">glossário</a>.</span>
                 </div>
 
                 <div class="mt-3">
                     <label class="form-label fw-semibold" for="wiki-search">Busca rápida</label>
-                    <input type="search" id="wiki-search" class="form-control" placeholder="Buscar por cenário, produto, termo (ex.: Selo Verde, Blindagem, onboarding)...">
+                    <input type="search" id="wiki-search" class="form-control" placeholder="Buscar por cenário, produto ou termo (ex.: caixa, frota, encomendas, segurança)...">
                 </div>
             </section>
 
             <!-- TRILHA DO CLIENTE -->
-            <section id="trilha-cliente" class="mb-5">
-                <h2><i class="bi bi-briefcase-fill text-success"></i> Trilha do Sucesso (Cliente)</h2>
-                <p class="text-muted">Foco: experiência e resultado. “O que eu ganho? Como resolvo meu problema agora?”</p>
+            <section id="trilha-cliente" class="wiki-track wiki-track--cliente">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Trilha 1 de 3</p>
+                    <h2><i class="bi bi-briefcase-fill"></i> Trilha do Sucesso (Cliente)</h2>
+                    <p class="wiki-track-lead">Foco: experiência e resultado. “O que eu ganho? Como resolvo meu problema agora? Qual o próximo passo?”</p>
+                </header>
 
                 <div class="row g-4">
                     <div class="col-lg-4">
-                        <div class="track-card project-card">
+                        <div class="track-card project-card product-card product-card--pdv">
                             <div class="track-header track-cliente">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div>
                                         <h3 class="h5 mb-1"><i class="bi bi-shop"></i> Cenário: vender com previsibilidade</h3>
-                                        <small>Selo Verde, Economia e Blindagem — sem complicação</small>
+                                        <small>Fiscal em dia, custo menor e operação mais segura</small>
                                     </div>
-                                    <span class="badge bg-light text-dark">PDV</span>
+                                    <span class="product-badge product-badge--pdv">PDV</span>
                                 </div>
                             </div>
                             <div class="track-body">
-                                <p class="mb-3">Quando o varejo muda (fiscal, operação, fila), você precisa de continuidade e clareza — não de “mais um software”.</p>
+                                <p class="mb-3">Quando o varejo muda (nota fiscal, fila, forma de pagamento), você precisa de continuidade — não de “mais um software”.</p>
                                 <div class="scenario-card">
-                                    <div class="kicker">Ganho</div>
                                     <h4>Reduzir custo e manter a venda fluindo</h4>
-                                    <p>Economia operacional, fluxo de caixa protegido e rotina mais previsível no caixa.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Economia no dia a dia, caixa protegido e rotina previsível no ponto de venda.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Use o PDV no computador da loja. Há uma linha já madura em produção e uma linha piloto, mais leve; as duas convivem — nenhuma substitui a outra.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Abra o hub do PDV nesta wiki (o que é cada linha) ou o guia de serviços. Download e manual de botão ficam na loja do produto.
+                                        </li>
+                                    </ul>
+                                    <p class="scenario-note"><strong>Detalhe opcional:</strong> linha madura Java <code>v3.2.2-free</code> · linha piloto Rust <code>v0.1.2</code> (Windows).</p>
                                     <div class="links">
-                                        <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (PDV Java)</a>
-                                        <a href="projeto-pdv.html"><i class="bi bi-journal-code"></i> Hub PDV (Java + Rust)</a>
-                                        <a href="projeto-pdv-rust.html"><i class="bi bi-lightning-charge"></i> PDV Rust + Tauri</a>
-                                        <a href="trilha-cliente.html#v3-pdv-transparencia"><i class="bi bi-megaphone"></i> Transparência V3 + Persona</a>
+                                        <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (PDV)</a>
+                                        <a href="projeto-pdv.html"><i class="bi bi-journal-code"></i> O que é o PDV</a>
+                                        <a href="projeto-pdv-rust.html"><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</a>
+                                        <a href="trilha-cliente.html#v3-pdv-transparencia"><i class="bi bi-megaphone"></i> Transparência V3</a>
                                     </div>
                                 </div>
                             </div>
@@ -133,24 +150,36 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="track-card project-card">
+                        <div class="track-card project-card product-card product-card--cso">
                             <div class="track-header track-cliente">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div>
                                         <h3 class="h5 mb-1"><i class="bi bi-truck"></i> Cenário: frota fora da planilha</h3>
                                         <small>Veículos, combustível e equipe com previsibilidade</small>
                                     </div>
-                                    <span class="badge bg-success">CSO Frotas</span>
+                                    <span class="product-badge product-badge--cso">CSO</span>
                                 </div>
                             </div>
                             <div class="track-body">
                                 <p class="mb-3">Quando a operação de veículos vive em planilha, o custo aparece tarde e a equipe não sabe quem pode o quê.</p>
                                 <div class="scenario-card">
-                                    <div class="kicker">Ganho</div>
                                     <h4>Organizar a frota hoje, sem comprar rastreador</h4>
-                                    <p>Gestão de Frotas no navegador (já no ar). Transportes desktop em 08/Nov/2028. GPS é produto futuro, separado.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Veículos, combustível e permissões num só lugar — gestão, não GPS.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Abra a Gestão de Frotas no navegador: já está em produção.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Em <strong>08/Nov/2028</strong> chega o módulo de transportes no computador da empresa, para operar mesmo se a internet falhar. Rastreador GPS é produto futuro e separado — não faz parte deste CSO.
+                                        </li>
+                                    </ul>
                                     <div class="links">
-                                        <a href="projeto-cso.html"><i class="bi bi-journal-code"></i> Hub CSO (Wiki)</a>
+                                        <a href="projeto-cso.html"><i class="bi bi-journal-code"></i> O que é o CSO</a>
                                         <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Gestão de Frotas</a>
                                     </div>
                                 </div>
@@ -159,24 +188,36 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="track-card project-card">
+                        <div class="track-card project-card product-card product-card--hub">
                             <div class="track-header track-cliente">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div>
                                         <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> Cenário: e-commerce sem retrabalho</h3>
                                         <small>Pedidos de vários marketplaces numa fila só</small>
                                     </div>
-                                    <span class="badge bg-warning text-dark">Hub &mdash; GA 06/Abr/2027</span>
+                                    <span class="product-badge product-badge--hub">Hub</span>
                                 </div>
                             </div>
                             <div class="track-body">
                                 <p class="mb-3">Quando o pedido está no Mercado Livre, na Shopee e na Temu ao mesmo tempo, o certo é uma fila só — não três painéis.</p>
                                 <div class="scenario-card">
-                                    <div class="kicker">Ganho</div>
                                     <h4>Processar mais com a mesma equipe</h4>
-                                    <p>Centralização de encomendas, mapa de estoque e menos falha na retirada. Vitrine já pública; instalador Windows em 06/Abr/2027.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Encomendas centralizadas, estoque visível e menos erro na retirada.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Conheça a vitrine pública e alinhe o produto nesta wiki.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Em <strong>06/Abr/2027</strong> o instalador Windows entra em oferta, para instalar no computador da operação sem depender de equipe de TI.
+                                        </li>
+                                    </ul>
                                     <div class="links">
-                                        <a href="projeto-hub.html"><i class="bi bi-journal-code"></i> Hub (Wiki)</a>
+                                        <a href="projeto-hub.html"><i class="bi bi-journal-code"></i> O que é o Hub</a>
                                         <a href="https://hub.caracore.com.br" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Loja (vitrine)</a>
                                     </div>
                                 </div>
@@ -187,24 +228,36 @@
 
                 <div class="row g-4 mt-1">
                     <div class="col-lg-4">
-                        <div class="track-card project-card">
+                        <div class="track-card project-card product-card product-card--seguranca">
                             <div class="track-header track-cliente">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div>
                                         <h3 class="h5 mb-1"><i class="bi bi-shield-check"></i> Cenário: risco controlado</h3>
-                                        <small>Governança, acesso e continuidade</small>
+                                        <small>Quem entra, o que faz e como a operação continua</small>
                                     </div>
-                                    <span class="badge bg-light text-dark">Segurança</span>
+                                    <span class="product-badge product-badge--seguranca">Segurança</span>
                                 </div>
                             </div>
                             <div class="track-body">
-                                <p class="mb-3">Quando a operação depende do digital, segurança é “evitar prejuízo”, não “instalar ferramenta”.</p>
+                                <p class="mb-3">Quando a operação depende do digital, segurança é evitar prejuízo — não “instalar mais uma ferramenta”.</p>
                                 <div class="scenario-card">
-                                    <div class="kicker">Ganho</div>
                                     <h4>Reduzir risco sem travar o time</h4>
-                                    <p>Controle de acesso, trilha de auditoria e padrões claros para operar com confiança.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Controle de quem acessa o quê, registro do que aconteceu e regras claras para operar com confiança.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Leia o guia de serviços e a página da Área 51 — o laboratório de segurança onde testamos padrões antes de liberar no restante dos produtos.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Se o cenário for o seu, fale com o suporte com o contexto da operação (não com o nome da ferramenta).
+                                        </li>
+                                    </ul>
                                     <div class="links">
-                                        <a href="projeto-area51.html"><i class="bi bi-journal-code"></i> Área 51 (Wiki)</a>
+                                        <a href="projeto-area51.html"><i class="bi bi-journal-code"></i> Área 51 (laboratório de segurança)</a>
                                         <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (geral)</a>
                                     </div>
                                 </div>
@@ -215,9 +268,12 @@
             </section>
 
             <!-- TRILHA DO ESTAGIÁRIO -->
-            <section id="trilha-estagiario" class="mb-5">
-                <h2><i class="bi bi-mortarboard-fill text-primary"></i> Trilha do Aprendizado (Estagiário)</h2>
-                <p class="text-muted">Foco: cultura e execução. “Como fazemos isso desde 2010? Qual padrão de excelência é esperado?”</p>
+            <section id="trilha-estagiario" class="wiki-track wiki-track--estagiario">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Trilha 2 de 3</p>
+                    <h2><i class="bi bi-mortarboard-fill"></i> Trilha do Aprendizado (Estagiário)</h2>
+                    <p class="wiki-track-lead">Foco: cultura e execução. “Como fazemos isso desde 2010? O que se espera de mim na primeira entrega?”</p>
+                </header>
 
                 <div class="row g-4">
                     <div class="col-lg-4">
@@ -228,9 +284,21 @@
                             </div>
                             <div class="track-body">
                                 <div class="scenario-card">
-                                    <div class="kicker">Situação</div>
                                     <h4>“Cheguei. O que eu faço primeiro?”</h4>
-                                    <p>Onboarding, contexto, responsabilidades, e como pedir ajuda do jeito certo.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Contexto da empresa, o que é sua responsabilidade e como pedir ajuda sem travar o time.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Siga o guia do estagiário na ordem: leitura, acesso, primeira tarefa pequena.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Abra “Como contribuir” antes de mandar a primeira alteração — o checklist evita retrabalho.
+                                        </li>
+                                    </ul>
                                     <div class="links">
                                         <a href="guia-estagiario.html"><i class="bi bi-person-badge"></i> Guia do estagiário</a>
                                         <a href="contribuindo.html"><i class="bi bi-git"></i> Como contribuir</a>
@@ -244,16 +312,28 @@
                         <div class="track-card project-card">
                             <div class="track-header track-estagiario">
                                 <h3 class="h5 mb-1"><i class="bi bi-clipboard-check"></i> Padrão de execução</h3>
-                                <small>Manual de situações (não de botões)</small>
+                                <small>Situação, plano, aceite e registro</small>
                             </div>
                             <div class="track-body">
                                 <div class="scenario-card">
-                                    <div class="kicker">Situação</div>
                                     <h4>Visita técnica / entrega</h4>
-                                    <p>Diagnóstico → plano → execução → aceite → registro. O padrão é clareza, previsibilidade e documentação útil.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Qualquer pessoa do time consegue repetir a entrega sem depender de quem “sabe de cabeça”.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Use a sequência: diagnóstico → plano → execução → aceite do cliente → registro. Documente o que o próximo precisa para continuar.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Confira os termos no glossário e o mapa dos produtos, para não misturar nomes.
+                                        </li>
+                                    </ul>
                                     <div class="links">
                                         <a href="glossario.html"><i class="bi bi-book"></i> Glossário</a>
-                                        <a href="projetos-overview.html"><i class="bi bi-collection"></i> Projetos (overview)</a>
+                                        <a href="projetos-overview.html"><i class="bi bi-collection"></i> Projetos (visão geral)</a>
                                     </div>
                                 </div>
                             </div>
@@ -264,18 +344,30 @@
                         <div class="track-card project-card">
                             <div class="track-header track-estagiario">
                                 <h3 class="h5 mb-1"><i class="bi bi-layers"></i> Produtos e cenários</h3>
-                                <small>Entender “o porquê” antes do “como”</small>
+                                <small>Entender a dor do cliente antes da ferramenta</small>
                             </div>
                             <div class="track-body">
                                 <div class="scenario-card">
-                                    <div class="kicker">Situação</div>
                                     <h4>“Qual produto resolve qual dor?”</h4>
-                                    <p>Conectar o que o cliente sente com o que a empresa entrega — sem jargão e sem ruído.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Ligar o que o cliente sente (fila, planilha, pedido perdido) ao produto certo, sem jargão.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Comece pelos três produtos-chave: PDV (caixa), CSO (frota) e Hub (encomendas).
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Se a pergunta for de outro produto, abra a visão geral. A linha piloto do PDV é uma opção a mais — não substitui a linha madura.
+                                        </li>
+                                    </ul>
                                     <div class="links">
-                                        <a href="projeto-pdv.html"><i class="bi bi-shop"></i> PDV (hub)</a>
+                                        <a href="projeto-pdv.html"><i class="bi bi-shop"></i> PDV</a>
                                         <a href="projeto-cso.html"><i class="bi bi-truck"></i> CSO</a>
                                         <a href="projeto-hub.html"><i class="bi bi-box-seam"></i> Hub</a>
-                                        <a href="projeto-pdv-rust.html"><i class="bi bi-lightning-charge"></i> PDV Rust</a>
+                                        <a href="projeto-pdv-rust.html"><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</a>
                                         <a href="projetos-overview.html"><i class="bi bi-collection"></i> Demais produtos</a>
                                     </div>
                                 </div>
@@ -286,25 +378,40 @@
             </section>
 
             <!-- TRILHA DO SÓCIO -->
-            <section id="trilha-socio" class="mb-5">
-                <h2><i class="bi bi-diagram-3-fill text-dark"></i> Trilha da Estratégia (Sócio)</h2>
-                <p class="text-muted">Foco: visão e evolução. “Por que tomamos essa decisão? Qual o próximo passo em 2026?”</p>
+            <section id="trilha-socio" class="wiki-track wiki-track--socio">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Trilha 3 de 3</p>
+                    <h2><i class="bi bi-diagram-3-fill"></i> Trilha da Estratégia (Sócio)</h2>
+                    <p class="wiki-track-lead">Foco: visão e evolução. “Por que tomamos essa decisão? O que muda na operação em seguida?”</p>
+                </header>
 
                 <div class="row g-4">
                     <div class="col-lg-6">
                         <div class="track-card project-card">
                             <div class="track-header track-socio">
                                 <h3 class="h5 mb-1"><i class="bi bi-bullseye"></i> Estratégia por cenário</h3>
-                                <small>Motor escondido, desempenho evidente</small>
+                                <small>O cliente vê o resultado; a tecnologia fica nos bastidores</small>
                             </div>
                             <div class="track-body">
                                 <div class="scenario-card">
-                                    <div class="kicker">Decisão</div>
                                     <h4>Produto nasce quando a operação pede previsibilidade</h4>
-                                    <p>Priorizamos soluções que reduzem custo, risco e tempo — e que conseguem ser explicadas em “situações reais”.</p>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Decisões que se explicam em situação real: menos custo, menos risco, menos tempo parado.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Use o portfólio da matriz para prova de entrega e o mapa do ecossistema para ver como matriz, produto, oficina e loja se encaixam.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Se a dúvida for “onde isso vive?”, abra o <a href="ecosistema.html">mapa do ecossistema</a> (apelido interno: Eco Mundo).
+                                        </li>
+                                    </ul>
                                     <div class="links">
                                         <a href="https://www.caracore.com.br/portfolio.html" target="_blank" rel="noopener"><i class="bi bi-briefcase"></i> Portfólio</a>
-                                        <a href="https://wiki.caracore.com.br/ecosistema.html" title="Conheça o Nosso Eco Mundo"><i class="bi bi-globe2"></i> Eco Mundo</a>
+                                        <a href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa do ecossistema</a>
                                         <a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão geral</a>
                                     </div>
                                 </div>
@@ -316,13 +423,25 @@
                         <div class="track-card project-card">
                             <div class="track-header track-socio">
                                 <h3 class="h5 mb-1"><i class="bi bi-arrow-repeat"></i> Evolução 2026</h3>
-                                <small>Próximos passos (alto nível)</small>
+                                <small>Próximos passos em linguagem de operação</small>
                             </div>
                             <div class="track-body">
                                 <div class="scenario-card">
-                                    <div class="kicker">Próximo passo</div>
-                                    <h4>Consolidar narrativas e execução</h4>
-                                    <p>Mais consistência entre: proposta → entrega → documentação → evidências (resultados). Menos dispersão em páginas técnicas.</p>
+                                    <h4>Uma história só: proposta, entrega e evidência</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Menos páginas técnicas soltas e mais consistência entre o que prometemos, o que entregamos e o que dá para mostrar.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Os guias de serviços são a referência de discurso para conversa com cliente.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            Manter PDV, CSO e Hub como núcleo visível; o restante do portfólio permanece documentado, sem competir na capa.
+                                        </li>
+                                    </ul>
                                     <div class="links">
                                         <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços</a>
                                         <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Guia PDV</a>
@@ -335,63 +454,96 @@
             </section>
 
             <!-- LINHA DO TEMPO -->
-            <section id="linha-do-tempo" class="mb-5">
-                <h2><i class="bi bi-clock-history text-secondary"></i> Linha do tempo (desde 2010)</h2>
-                <p class="text-muted">O objetivo desta linha do tempo é dar contexto: por que cada solução surgiu e como evoluiu.</p>
+            <section id="linha-do-tempo" class="wiki-track wiki-track--timeline">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">História</p>
+                    <h2><i class="bi bi-clock-history"></i> Linha do tempo (desde 2010)</h2>
+                    <p class="wiki-track-lead">O objetivo desta linha do tempo é dar contexto: por que cada solução surgiu e como evoluiu.</p>
+                </header>
 
                 <ol class="timeline">
                     <li>
                         <div class="year">2010</div>
-                        <div class="event"><strong>Fundação e base de confiança.</strong> A Cara Core nasce com foco em resolver “o dia de amanhã” do cliente com execução consistente.</div>
+                        <div class="event"><strong>Fundação e base de confiança.</strong> A Cara Core nasce para resolver o “dia de amanhã” do cliente com execução consistente — o que combinamos, entregamos.</div>
                     </li>
                     <li>
                         <div class="year">2016–2020</div>
-                        <div class="event"><strong>Padronização e escala.</strong> Menos improviso, mais método: documentação, rotinas, e entrega replicável.</div>
+                        <div class="event"><strong>Processos que qualquer pessoa do time consegue repetir.</strong> Documentação, rotinas e entrega padronizada, para a operação não depender de uma pessoa só.</div>
                     </li>
                     <li>
                         <div class="year">2021–2024</div>
-                        <div class="event"><strong>Produtos ganham forma.</strong> Cenários repetidos viram soluções: integração, autenticação, educação e automação.</div>
+                        <div class="event"><strong>Produtos ganham forma.</strong> Situações que se repetiam viraram soluções: integração, acesso seguro, educação e automação.</div>
                     </li>
                     <li>
                         <div class="year">2025</div>
-                        <div class="event"><strong>Transparência e publicação.</strong> Conteúdo técnico com linguagem acessível e evidências (sem expor segredos internos).</div>
+                        <div class="event"><strong>Transparência e publicação.</strong> Passamos a explicar o que entregamos em linguagem de operação, com evidências — sem abrir detalhes internos.</div>
                     </li>
                     <li>
                         <div class="year">2026</div>
-                        <div class="event"><strong>Foco em resultado.</strong> Blindagem fiscal e produtividade orientada a ROI, com narrativa clara por cenário.</div>
+                        <div class="event"><strong>Foco em resultado.</strong> Menos risco fiscal e mais produtividade no dia a dia, com uma história clara para cada situação do cliente.</div>
                     </li>
                 </ol>
             </section>
 
             <!-- LINKS DE APOIO (SEM POLUIR A ENTRADA) -->
-            <section class="mb-4">
-                <h2><i class="bi bi-link-45deg text-info"></i> Links de apoio</h2>
+            <section class="wiki-track wiki-track--support">
+                <header class="wiki-track-heading">
+                    <p class="wiki-track-kicker">Atalhos</p>
+                    <h2><i class="bi bi-link-45deg"></i> Links de apoio</h2>
+                </header>
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card">
                             <div class="kicker">Visão</div>
-                            <h4>Projetos (overview)</h4>
-                            <p>Quando você quiser ver a suíte completa em um só lugar.</p>
+                            <h4>Projetos (visão geral)</h4>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    A suíte completa num só lugar, além dos três produtos-chave.
+                                </li>
+                                <li>
+                                    <span class="step-label">Próximo passo</span>
+                                    Abrir a visão geral quando a pergunta não for PDV, CSO ou Hub.
+                                </li>
+                            </ul>
                             <div class="links">
                                 <a href="projetos-overview.html"><i class="bi bi-collection"></i> Abrir</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card">
                             <div class="kicker">Referência</div>
                             <h4>Glossário</h4>
-                            <p>Termos técnicos em linguagem simples, para alinhar comunicação.</p>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Nomes internos e termos técnicos em linguagem simples.
+                                </li>
+                                <li>
+                                    <span class="step-label">Próximo passo</span>
+                                    Consultar quando aparecer Eco Mundo, Garagem, Área 51 ou outro termo da casa.
+                                </li>
+                            </ul>
                             <div class="links">
                                 <a href="glossario.html"><i class="bi bi-book"></i> Abrir</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="scenario-card">
+                        <div class="scenario-card support-card">
                             <div class="kicker">Execução</div>
                             <h4>Como contribuir</h4>
-                            <p>Checklist de contribuição, boas práticas e padrão de qualidade.</p>
+                            <ul class="scenario-steps">
+                                <li>
+                                    <span class="step-label">O que você ganha</span>
+                                    Checklist para enviar alteração no padrão da casa, sem retrabalho.
+                                </li>
+                                <li>
+                                    <span class="step-label">Próximo passo</span>
+                                    Seguir o checklist antes do primeiro envio.
+                                </li>
+                            </ul>
                             <div class="links">
                                 <a href="contribuindo.html"><i class="bi bi-git"></i> Abrir</a>
                             </div>

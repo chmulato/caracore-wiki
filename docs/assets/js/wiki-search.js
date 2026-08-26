@@ -68,10 +68,10 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
-            title: 'Área 51',
-            description: 'Sistema de autenticação centralizado com múltiplos provedores OIDC',
+            title: 'Área 51 (laboratório de segurança)',
+            description: 'Onde testamos padrões de acesso e autenticação antes de liberar no restante dos produtos',
             url: 'projeto-area51.html',
-            tags: ['oauth', 'oidc', 'autenticação', 'google', 'microsoft', 'entra id', 'segurança'],
+            tags: ['área 51', 'laboratorio', 'segurança', 'oauth', 'oidc', 'autenticação', 'google', 'microsoft', 'entra id'],
             category: 'projeto'
         },
         {
@@ -124,10 +124,10 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
-            title: 'Eco Mundo',
-            description: 'Mapa do ecossistema: matriz, produtos, oficinas, lojas e presenças institucionais',
+            title: 'Mapa do ecossistema (Eco Mundo)',
+            description: 'Como a Cara Core se organiza: empresa, produto, oficina e loja. Núcleo PDV, CSO e Hub. Eco Mundo é só o apelido interno.',
             url: 'ecosistema.html',
-            tags: ['eco mundo', 'ecossistema', 'matriz', 'oficina', 'loja', 'mapa'],
+            tags: ['eco mundo', 'ecossistema', 'matriz', 'oficina', 'loja', 'mapa', 'garagem'],
             category: 'navegação'
         },
         {

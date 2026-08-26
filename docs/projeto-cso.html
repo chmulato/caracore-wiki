@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,12 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-cso"><i class="bi bi-briefcase"></i> Portfólio</a></li>
-          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -67,10 +72,10 @@
       </div>
 
       <div class="col-lg-9 col-md-8">
-        <div class="wiki-content">
+        <div class="wiki-content wiki-home">
           <div class="wiki-header">
             <h1><i class="bi bi-truck"></i> CaraCore CSO — duas frentes, um produto de logística</h1>
-            <p>O CSO é o centro logístico da Cara Core: a <strong>Gestão de Frotas</strong> já opera no navegador; a <strong>Gestão de Transportes</strong> é o bunker desktop previsto para <strong>08 de novembro de 2028</strong>. A URL pública é a aplicação, não uma loja GitHub Pages.</p>
+            <p class="wiki-lede">O CSO é o caderno da frota: a <strong>Gestão de Frotas</strong> já opera no navegador; a <strong>Gestão de Transportes</strong> chega no computador da empresa em <strong>08 de novembro de 2028</strong>. A URL pública é a aplicação, não uma loja GitHub Pages. <strong>Não é GPS.</strong></p>
           </div>
 
           <div class="alert alert-info" role="note">
@@ -80,8 +85,8 @@
 
           <div class="row g-4 mb-4">
             <div class="col-md-6">
-              <div class="project-card h-100" id="frotas">
-                <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white;">
+              <div class="project-card product-card product-card--cso h-100" id="frotas">
+                <div class="project-header">
                   <h2 class="h4 mb-0"><i class="bi bi-globe"></i> Gestão de Frotas (Web)</h2>
                 </div>
                 <div class="project-body">
@@ -97,8 +102,8 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="project-card h-100" id="transportes">
-                <div class="project-header" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%); color: white;">
+              <div class="project-card product-card product-card--cso h-100" id="transportes">
+                <div class="project-header">
                   <h2 class="h4 mb-0"><i class="bi bi-pc-display"></i> Gestão de Transportes (Desktop)</h2>
                 </div>
                 <div class="project-body">
@@ -116,11 +121,11 @@
           </div>
 
           <section class="mb-5">
-            <h2><i class="bi bi-people"></i> Para leigos e para estagiários</h2>
+            <h2><i class="bi bi-people"></i> O que muda para você e o detalhe opcional</h2>
             <div class="row g-4">
               <div class="col-md-6">
                 <div class="leigos-section h-100">
-                  <h3 class="h5"><i class="bi bi-people"></i> Para leigos</h3>
+                  <h3 class="h5"><i class="bi bi-people"></i> O que muda para você</h3>
                   <p>Pense no CSO como o caderno da frota que deixa de ser planilha. No dia a dia a equipe entra no site, registra veículos, combustível, oficina, motoristas e viagens, e o gestor vê relatórios. Cada empresa vê só os próprios dados.</p>
                   <ul class="feature-list">
                     <li>Começar grátis (até 3 veículos), sem cartão no cadastro</li>
@@ -132,7 +137,7 @@
               </div>
               <div class="col-md-6">
                 <div class="estagiario-section h-100">
-                  <h3 class="h5"><i class="bi bi-code"></i> Para estagiários</h3>
+                  <h3 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h3>
                   <p>Não existe uma oficina única <code>caracore-cso</code>. São duas oficinas e a URL canónica é a aplicação web. <code>caracore-cso-releases</code> não substitui o produto no ar.</p>
                   <ul class="feature-list">
                     <li><strong>Frotas:</strong> SSR Qute + HTMX, sessão opaca no Postgres, RBAC, Flyway, multi-tenant</li>
@@ -206,7 +211,7 @@
             </div>
             <div class="row g-4">
               <div class="col-md-6">
-                <h3 class="h5">Para leigos</h3>
+                <h3 class="h5">O que muda para você</h3>
                 <p>É o CSO que mora no computador da empresa. Serve para quem precisa continuar operando entregas, equipe e clientes mesmo com internet instável, e para guardar uma cópia soberana dos dados críticos.</p>
                 <ul class="feature-list">
                   <li>Entregas, entregadores, clientes, equipes e tabelas de preço</li>
@@ -215,7 +220,7 @@
                 </ul>
               </div>
               <div class="col-md-6">
-                <h3 class="h5">Para estagiários</h3>
+                <h3 class="h5">Detalhe opcional</h3>
                 <p>Oficina <code>caracore-cso-transportes</code>: API REST Quarkus com SQLite, SPA Vue 3 e cliente JavaFX 21 em <code>cs-desktop-fx/</code>. A trilha soberana segue o Protocolo Amarelinha (Geometria → Dinâmica → Sombra → Massa → Céu).</p>
                 <ul class="feature-list">
                   <li>Persistência local em SQLite; Flyway nas migrações</li>
@@ -278,7 +283,7 @@
               <i class="bi bi-globe"></i> Portfólio Cara Core
             </a>
             <a href="ecosistema.html" class="btn-wiki">
-              <i class="bi bi-globe2"></i> Eco Mundo
+              <i class="bi bi-globe2"></i> Mapa do ecossistema
             </a>
             <a href="projetos-overview.html" class="btn-wiki">
               <i class="bi bi-collection"></i> Visão geral dos projetos
@@ -305,6 +310,7 @@
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/wiki.js"></script>
 </body>
 </html>
