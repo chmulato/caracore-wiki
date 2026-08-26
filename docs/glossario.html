@@ -262,14 +262,14 @@
                                 <div class="col-md-6">
                                     <div class="leigos-section">
                                         <h4><i class="bi bi-people"></i> Explicação Simples</h4>
-                                        <p>Centro logístico da Cara Core: Gestão de Frotas no navegador (já no ar) e Gestão de Transportes no computador da empresa (2028), para a operação não depender só da nuvem.</p>
+                                        <p>Centro logístico da Cara Core, em duas frentes: <strong>Gestão de Frotas</strong> no navegador (já no ar, para sair da planilha) e <strong>Gestão de Transportes</strong> no computador da empresa (bunker desktop, 08/Nov/2028). Quem contrata o CSO de gestão <strong>não</strong> está comprando rastreador GPS.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
                                         <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
-                                        <p>Oficinas <code>caracore-cso-quarkus</code> (Quarkus + PostgreSQL, produção em cso.caracore.com.br) e <code>caracore-cso-transportes</code> (JavaFX + SQLite). Não usar GitHub Pages como URL canónica.</p>
-                                        <p><strong>Wiki:</strong> <a href="projeto-cso.html">projeto-cso.html</a></p>
+                                        <p>Oficinas <code>caracore-cso-quarkus</code> (Java 21 · Quarkus · PostgreSQL · Qute/HTMX, produção em cso.caracore.com.br) e <code>caracore-cso-transportes</code> (Quarkus · JavaFX · Vue 3 · SQLite). Não usar GitHub Pages como URL canónica.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-cso.html">projeto-cso.html</a> · <strong>Frotas:</strong> <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -281,18 +281,38 @@
                                 <div class="col-md-6">
                                     <div class="leigos-section">
                                         <h4><i class="bi bi-people"></i> Explicação Simples</h4>
-                                        <p>Nome comercial da linha desktop em Rust + Tauri. Convive com o CaraCore PDV Desktop (Java). São o mesmo produto de caixa, com stacks diferentes — nenhuma substitui a outra.</p>
+                                        <p>Nome comercial da linha desktop em <strong>Rust + Tauri 2</strong> (piloto Windows, v0.1.2). Convive com o CaraCore PDV Desktop (Java). São o mesmo produto de caixa, com stacks diferentes — nenhuma substitui a outra.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
                                         <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
-                                        <p>Release v0.1.2. Loja rust-pdv.caracore.com.br. Download oficial no GitHub Releases. Canal Java maduro: v3.2.2-free em pdv.caracore.com.br.</p>
+                                        <p>Oficina <code>caracore-pdv-rust</code>. Loja <a href="https://rust-pdv.caracore.com.br/" target="_blank" rel="noopener">rust-pdv.caracore.com.br</a>. Download oficial no <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" target="_blank" rel="noopener">GitHub Releases</a>. Canal Java maduro: v3.2.2-free em pdv.caracore.com.br.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-pdv-rust.html">projeto-pdv-rust.html</a> · <a href="projeto-pdv.html">hub das duas linhas</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
+                        <div class="glossary-term">
+                            <h3>CaraCore PDV Desktop</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>É o caixa maduro da Cara Core, em Java: vender, receber PIX e continuar operando no computador da loja, em Windows, Linux ou macOS. Canal público atual: v3.2.2-free.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Oficina <code>caracore-pdv</code> — Java 25, Quarkus, JavaFX, SQLite. Loja <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a>. Wiki Fiscal e trilhas (cliente, suporte, contador, sócio) ficam na loja, não nesta wiki institucional.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-pdv.html#java">projeto-pdv.html#java</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="glossary-term">
                             <h3>CSS (Cascading Style Sheets)</h3>
                             <div class="row">
@@ -478,6 +498,44 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="glossary-term">
+                            <h3>Gestão de Frotas</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>É a parte do CaraCore CSO que já funciona no navegador: cadastro de veículos, combustível, manutenções, motoristas, viagens e relatórios. Começa grátis com até 3 veículos. Não é rastreador GPS.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>SaaS multi-tenant na oficina <code>caracore-cso-quarkus</code>. Planos FREE_3 / P5 / P10 / CORPORATE. Perfis ADMIN, GESTOR e ENTREGADOR. Produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-cso.html#frotas">projeto-cso.html#frotas</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3>Gestão de Transportes</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>É o CSO que mora no computador da empresa: entregas, equipe e clientes com cópia local dos dados. Lançamento previsto em 08 de novembro de 2028. Não substitui a Gestão de Frotas no navegador.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Oficina <code>caracore-cso-transportes</code>: Quarkus + SQLite, SPA Vue 3 e cliente JavaFX. Bunker para operação offline e roteamento de telemetria pesada — GPS/mapa ficam no Virtual Tracker™ (produto separado).</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-cso.html#transportes">projeto-cso.html#transportes</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
 
                     <!-- H -->
@@ -655,7 +713,25 @@
                     <!-- P -->
                     <section id="P" class="glossary-section mb-5">
                         <h2 class="glossary-letter">P</h2>
-                        
+
+                        <div class="glossary-term">
+                            <h3>PIX Split 2027</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>É o cenário em que o PIX no caixa passa a dividir automaticamente valores (impostos, recebedores). O CaraCore PDV se posiciona para PME reduzir a complexidade dessa rotina — nas duas linhas desktop (Java e Rust).</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Faz parte do <strong>posicionamento V3 de negócio</strong>, não de um número de release. Não confundir V3 com v3.2.2-free (canal Java) nem com v0.1.2 (Rust). Ver <a href="trilha-cliente.html#v3-pdv-transparencia">transparência V3</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="glossary-term">
                             <h3>Python</h3>
                             <div class="row">
@@ -800,10 +876,51 @@
                         </div>
                     </section>
 
+                    <!-- T -->
+                    <section id="T" class="glossary-section mb-5">
+                        <h2 class="glossary-letter">T</h2>
+
+                        <div class="glossary-term">
+                            <h3>Transportes (CSO)</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>Nome curto da <strong>Gestão de Transportes</strong>: o aplicativo de computador do CaraCore CSO, previsto para 08/11/2028, para a operação de entregas não depender só da nuvem.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Ver <a href="#G">Gestão de Transportes</a> e o hub <a href="projeto-cso.html#transportes">projeto-cso.html</a>. Oficina <code>caracore-cso-transportes</code>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- V -->
                     <section id="V" class="glossary-section mb-5">
                         <h2 class="glossary-letter">V</h2>
-                        
+
+                        <div class="glossary-term">
+                            <h3>Virtual Tracker™</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> Explicação Simples</h4>
+                                        <p>É o produto futuro de rastreamento por GPS e mapa. Está previsto para 2028 e <strong>não</strong> faz parte do CSO de gestão que o cliente contrata hoje. Quem usa Frotas não está comprando rastreador.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhes Técnicos</h4>
+                                        <p>Produto separado da Gestão de Frotas e da Gestão de Transportes. Copy, FAQ, dashboard e wiki <strong>não</strong> devem sugerir GPS, SSE ou mapa em tempo real como se já existissem. Ver <a href="projeto-cso.html#roadmap">roadmap do CSO</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="glossary-term">
                             <h3>Versionamento</h3>
                             <div class="row">

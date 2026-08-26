@@ -10,8 +10,8 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 
 ## Projetos Documentados
 
-1. **CaraCore PDV Desktop (Java · JavaFX)** — Oferta madura multi-plataforma: PIX, operação local e conformidade fiscal (canal v3.2.2-free)
-2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; coexiste com o PDV Desktop Java (não substitui)
+1. **CaraCore PDV Desktop (Java · JavaFX)** — Oferta madura multi-plataforma (Windows · Linux · macOS): PIX, operação local e conformidade fiscal (canal **v3.2.2-free**; Java 25+)
+2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; download oficial no GitHub Releases; coexiste com o PDV Desktop Java (não substitui)
 3. **Ink Agenda** — Gestão para estúdios de tatuagem (agenda, clientes e financeiro); **v2.0.0 estável lançada em 26/Jun/2026**
 4. **chmulatoETE Minerador 4.0** — Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 5. **Reino OIDC** — Educação em OAuth 2.1 e OIDC
@@ -20,7 +20,7 @@ Fornecer explicações **claras e acessíveis** sobre nossos projetos principais
 8. **Cara Core Hub** — Gestão logística e e-commerce (WAR/Tomcat); vitrine em hub.caracore.com.br; GA prevista 06/Abr/2027
 9. **Área 51** — Consultoria OIDC / autenticação enterprise
 10. **Helianto Condominium** — Administração condominial com soberania de dados e motor financeiro auditável (loja helianto.caracore.com.br; lançamento 30/Dez/2027)
-11. **CaraCore CSO** — Plataforma dual: Gestão de Frotas (Web, em produção em cso.caracore.com.br) e Gestão de Transportes (Desktop offline-first, 08/Nov/2028)
+11. **CaraCore CSO** — Plataforma dual: Gestão de Frotas (Web, em produção em cso.caracore.com.br; Java 21 · Quarkus · PostgreSQL) e Gestão de Transportes (Desktop bunker JavaFX/SQLite, 08/Nov/2028). CSO de gestão **não** inclui GPS/mapa (Virtual Tracker™ é produto separado, 2028).
 12. **RU Soberano** — Simulador de reator e sala RETRO (loja ru.caracore.com.br; lançamento 18/Jun/2027; RETRO gratuito · simulador R$ 29,90)
 13. **Cara Core MKT** — Vitrine gratuita e Sala Cara Core (mkt.caracore.com.br · tools.caracore.com.br/sala/); não vendemos
 

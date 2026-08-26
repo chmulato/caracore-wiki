@@ -126,6 +126,7 @@
                                     <span class="tech-badge">JavaFX</span>
                                     <span class="tech-badge">JPA / Hibernate</span>
                                     <span class="tech-badge">SQLite</span>
+                                    <span class="tech-badge">v3.2.2-free</span>
                                 </div>
                             </div>
                             <div class="project-body">
@@ -137,7 +138,7 @@
                                         <p><strong>Quarkus</strong> ajuda a organizar APIs e integrações locais com foco em desempenho. <strong>JavaFX</strong> cuida da interface desktop que o operador usa no dia a dia.</p>
                                         
                                         <div class="alert alert-info">
-                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Desktop (Java · JavaFX)</strong>, desktop multi-plataforma maduro. O <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> também é desktop, com stack separada (Tauri + React).
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Desktop (Java · JavaFX)</strong> e na <strong>Gestão de Frotas</strong> do <a href="projeto-cso.html">CaraCore CSO</a> (Quarkus + Qute/HTMX). O <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> também é desktop, com stack separada (Tauri + React).
                                         </div>
                                         <div class="alert alert-info mt-3 mb-0" role="note">
                                             <i class="bi bi-megaphone-fill"></i> <strong>Posicionamento V3 padronizado:</strong> foco em <strong>pequenos e médios negócios</strong>, direção prática para <strong>PIX Split 2027</strong> e transparência sobre o que já está pronto e o que está em evolução.
@@ -154,7 +155,7 @@
                                             <li><strong>Qualidade validada:</strong> 1072 testes verdes na validação consolidada de 2026-06-02</li>
                                         </ul>
                                         <p><strong>Persona de negócio padronizada:</strong> gestor(a) de loja PME em crescimento, com equipe enxuta e pressão por fluxo de caixa, buscando simplificar a rotina fiscal e financeira no caixa.</p>
-                                        <p><strong>Projeto de referência:</strong> <a href="projeto-pdv.html">CaraCore PDV</a> — documentação completa da stack, fluxos e links para a apresentação e tecnologia no site do PDV. Veja também <a href="trilha-cliente.html#v3-pdv-transparencia">Transparência V3 + Persona</a>.</p>
+                                        <p><strong>Projeto de referência:</strong> hub <a href="projeto-pdv.html">projeto-pdv.html</a> (duas linhas) · wiki da loja Java em <a href="https://pdv.caracore.com.br/wiki/index.html" target="_blank" rel="noopener">pdv.caracore.com.br/wiki</a>. Veja também <a href="trilha-cliente.html#v3-pdv-transparencia">Transparência V3 + Persona</a>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -486,8 +487,8 @@
                                             <li><strong>Java 21/25:</strong> CaraCore PDV Desktop, Ink Agenda, CaraCore CSO, Helianto, RU Soberano, Hub (WAR)</li>
                                             <li><strong>Python 3.11+:</strong> Área 51, MKT, Minerador 4.0, automações</li>
                                             <li><strong>Rust:</strong> CaraCore PDV (Tauri 2)</li>
-                                            <li><strong>JavaScript / TypeScript:</strong> frontends (React no PDV Rust e Helianto)</li>
-                                            <li><strong>SQL:</strong> SQLite local e PostgreSQL (CSO Frotas, Helianto)</li>
+                                            <li><strong>JavaScript / TypeScript:</strong> React (PDV Rust, Helianto) e Vue 3 (CSO Transportes)</li>
+                                            <li><strong>SQL:</strong> SQLite local (PDV, Ink, CSO Transportes) e PostgreSQL (CSO Frotas, Helianto)</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -501,7 +502,7 @@
                                     </div>
                                     <div class="project-body">
                                         <ul class="feature-list">
-                                            <li><strong>Quarkus:</strong> CaraCore PDV Desktop e CSO Frotas</li>
+                                            <li><strong>Quarkus:</strong> CaraCore PDV Desktop e CSO Frotas (também backend da oficina CSO Transportes)</li>
                                             <li><strong>Jakarta EE / WAR Tomcat:</strong> CaraCore Hub</li>
                                             <li><strong>Flask 3.x:</strong> Área 51 e APIs Python leves</li>
                                              <li><strong>Spring Boot 4:</strong> Helianto Condominium (Java 25)</li>
@@ -519,11 +520,11 @@
                                     </div>
                                     <div class="project-body">
                                         <ul class="feature-list">
-                                            <li><strong>Bootstrap 5:</strong> UI responsivo (atual)</li>
-                                            <li><strong>Tailwind CSS:</strong> Utility-first CSS (planejado)</li>
-                                            <li><strong>React:</strong> SPAs complexas (futuro)</li>
-                                            <li><strong>Vue.js:</strong> Interfaces interativas (futuro)</li>
-                                            <li><strong>Alpine.js:</strong> Interatividade leve</li>
+                                            <li><strong>Qute + HTMX + Alpine.js:</strong> SSR da Gestão de Frotas (CSO)</li>
+                                            <li><strong>Vue.js 3:</strong> SPA da oficina CSO Transportes</li>
+                                            <li><strong>React:</strong> CaraCore PDV (Rust + Tauri) e Helianto</li>
+                                            <li><strong>Bootstrap 5:</strong> UI responsivo (matriz, wiki e lojas)</li>
+                                            <li><strong>Alpine.js:</strong> interatividade leve nas telas SSR</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -537,11 +538,11 @@
                                     </div>
                                     <div class="project-body">
                                         <ul class="feature-list">
-                                            <li><strong>PostgreSQL 15+:</strong> Banco principal relacional</li>
-                                            <li><strong>MySQL/MariaDB:</strong> Alternativa SQL</li>
-                                            <li><strong>SQLite:</strong> Desenvolvimento local e testes</li>
+                                            <li><strong>PostgreSQL 16:</strong> CSO Frotas (produção) e Helianto</li>
+                                            <li><strong>SQLite:</strong> bunker local (PDV, Ink Agenda, CSO Transportes)</li>
+                                            <li><strong>MySQL/MariaDB:</strong> alternativa SQL em contextos pontuais</li>
                                             <li><strong>MongoDB:</strong> NoSQL para dados flexíveis (futuro)</li>
-                                            <li><strong>Redis:</strong> Cache e sessões</li>
+                                            <li><strong>Redis:</strong> cache e sessões (quando o desenho pedir)</li>
                                         </ul>
                                     </div>
                                 </div>

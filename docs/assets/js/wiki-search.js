@@ -12,17 +12,24 @@ function initWikiSearch() {
     // Índice de conteúdo do wiki
     const wikiIndex = [
         {
-            title: 'CaraCore PDV Desktop (Java)',
-            description: 'PDV maduro multi-plataforma: PIX, operação local, JavaFX, Quarkus e conformidade fiscal',
+            title: 'CaraCore PDV (hub Java + Rust)',
+            description: 'Duas linhas desktop do mesmo caixa: Java maduro v3.2.2-free e Rust piloto v0.1.2 — nenhuma substitui a outra',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'pix', 'javafx', 'quarkus', 'sqlite', 'fiscal', 'pme', 'selo verde'],
+            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3', 'pix split'],
+            category: 'projeto'
+        },
+        {
+            title: 'CaraCore PDV Desktop (Java)',
+            description: 'PDV maduro multi-plataforma (v3.2.2-free): PIX, operação local, JavaFX, Quarkus e conformidade fiscal',
+            url: 'projeto-pdv.html#java',
+            tags: ['pdv', 'ponto de venda', 'varejo', 'pix', 'javafx', 'quarkus', 'sqlite', 'fiscal', 'pme', 'selo verde', 'v3.2.2-free', 'java 25'],
             category: 'projeto'
         },
         {
             title: 'CaraCore PDV (Rust + Tauri)',
-            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.2',
+            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.2, download no GitHub Releases',
             url: 'projeto-pdv-rust.html',
-            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.2'],
+            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.2', 'github releases'],
             category: 'projeto'
         },
         {
@@ -76,9 +83,23 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore CSO',
-            description: 'Gestão de Frotas (Web, em produção) e Gestão de Transportes (Desktop 2028) em cso.caracore.com.br',
+            description: 'Gestão de Frotas (Web, em produção) e Gestão de Transportes (Desktop bunker 08/11/2028) em cso.caracore.com.br — CSO não é rastreador GPS',
             url: 'projeto-cso.html',
-            tags: ['cso', 'frotas', 'transportes', 'quarkus', 'logística', 'javafx', 'produção'],
+            tags: ['cso', 'frotas', 'transportes', 'quarkus', 'logística', 'javafx', 'produção', 'frota', 'veículos', 'lgpd', 'pix', 'planilha', 'bunker'],
+            category: 'projeto'
+        },
+        {
+            title: 'Gestão de Frotas (CSO)',
+            description: 'SaaS no navegador: veículos, combustível, manutenção, motoristas, viagens e relatórios — já em produção',
+            url: 'projeto-cso.html#frotas',
+            tags: ['frotas', 'cso', 'veículos', 'abastecimento', 'manutenção', 'motorista', 'relatórios', 'free_3', 'p5', 'p10'],
+            category: 'projeto'
+        },
+        {
+            title: 'Gestão de Transportes (CSO)',
+            description: 'Bunker desktop offline-first (JavaFX + SQLite), lançamento 08/11/2028 — não substitui a Frotas Web',
+            url: 'projeto-cso.html#transportes',
+            tags: ['transportes', 'cso', 'desktop', 'javafx', 'sqlite', 'bunker', 'entregas', '2028'],
             category: 'projeto'
         },
         {

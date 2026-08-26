@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CaraCore CSO | Wiki Cara Core</title>
-  <meta name="description" content="CaraCore CSO: plataforma dual de Gestão de Frotas (Web, em produção em cso.caracore.com.br) e Gestão de Transportes (Desktop bunker, lançamento 08/11/2028).">
+  <title>CaraCore CSO — Frotas e Transportes | Wiki Cara Core</title>
+  <meta name="description" content="Hub do CaraCore CSO: Gestão de Frotas (Web, em produção em cso.caracore.com.br) e Gestão de Transportes (Desktop bunker, lançamento 08/11/2028). CSO não é rastreador GPS.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
   <link rel="stylesheet" href="assets/css/wiki-unified.css">
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="CaraCore CSO — Frotas e Transportes | Wiki Cara Core">
+  <meta property="og:description" content="Gestão de Frotas no navegador (já no ar) e Gestão de Transportes no computador da empresa (2028).">
+  <meta property="og:type" content="article">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
@@ -21,6 +24,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarWiki">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-cso"><i class="bi bi-briefcase"></i> Portfólio</a></li>
           <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Eco Mundo</a></li>
         </ul>
@@ -33,6 +37,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="projetos-overview.html">Projetos</a></li>
           <li class="breadcrumb-item active">CaraCore CSO</li>
         </ol>
       </nav>
@@ -40,54 +45,234 @@
   </div>
 
   <div class="wiki-container">
-    <div class="wiki-content">
-      <div class="project-card mb-4">
-        <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 2rem; border-radius: 8px 8px 0 0;">
-          <h1 class="h2 mb-2"><i class="bi bi-truck"></i> CaraCore CSO</h1>
-          <p class="mb-0">Gestão de Frotas (Web) e Gestão de Transportes (Desktop) — soberania operacional para logística</p>
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Navegação</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-house"></i> Página Inicial</a></li>
+            <li>
+              <a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral</a>
+              <ul class="submenu">
+                <li><a href="projeto-cso.html" class="active">CaraCore CSO</a></li>
+              </ul>
+            </li>
+            <li><a href="#frotas"><i class="bi bi-globe"></i> Gestão de Frotas</a></li>
+            <li><a href="#transportes"><i class="bi bi-pc-display"></i> Gestão de Transportes</a></li>
+            <li><a href="#planos"><i class="bi bi-tag"></i> Planos e perfis</a></li>
+            <li><a href="#roadmap"><i class="bi bi-signpost-split"></i> O que vem depois</a></li>
+            <li><a href="glossario.html"><i class="bi bi-book"></i> Glossário</a></li>
+          </ul>
         </div>
-        <div class="project-body p-4">
-          <div class="mb-3">
-            <span class="tech-badge">Quarkus</span>
-            <span class="tech-badge">Java 21</span>
-            <span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">JavaFX</span>
-            <span class="tech-badge">SQLite</span>
-            <span class="tech-badge" style="background: #22c55e; color: white;">Frotas em produção</span>
-            <span class="tech-badge" style="background: #f59e0b; color: #1a1a1a;">Transportes 08/11/2028</span>
+      </div>
+
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content">
+          <div class="wiki-header">
+            <h1><i class="bi bi-truck"></i> CaraCore CSO — duas frentes, um produto de logística</h1>
+            <p>O CSO é o centro logístico da Cara Core: a <strong>Gestão de Frotas</strong> já opera no navegador; a <strong>Gestão de Transportes</strong> é o bunker desktop previsto para <strong>08 de novembro de 2028</strong>. A URL pública é a aplicação, não uma loja GitHub Pages.</p>
           </div>
 
           <div class="alert alert-info" role="note">
-            <strong>Duas frentes, um produto:</strong> a <strong>Gestão de Frotas</strong> já opera no navegador em
-            <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>
-            (captação, planos, frota e LGPD). A <strong>Gestão de Transportes</strong> é o bunker desktop (JavaFX + SQLite) para telemetria e backup local, com lançamento em <strong>08 de novembro de 2028</strong>.
+            <i class="bi bi-info-circle"></i>
+            <strong>Honestidade de produto:</strong> o CSO que o cliente contrata hoje é <strong>gestão administrativa de frota</strong> (veículos, combustível, manutenção, equipe e relatórios). <strong>Não</strong> é rastreador GPS nem mapa ao vivo. O Virtual Tracker™ é um produto futuro, separado, previsto para 2028.
           </div>
 
-          <div class="row g-4">
+          <div class="row g-4 mb-4">
             <div class="col-md-6">
-              <h2 class="h5"><i class="bi bi-people"></i> Para leigos</h2>
-              <p>O <strong>CaraCore CSO</strong> é o centro logístico da operação. No dia a dia, a equipe usa o aplicativo web para veículos, motoristas, viagens, custos e planos. O desktop (quando chegar) guarda os dados críticos no computador da empresa e cuida do rastreamento pesado — mesmo se a internet falhar.</p>
-              <ul class="feature-list">
-                <li>Gestão de frota no navegador (já disponível)</li>
-                <li>Planos FREE_3, P5, P10 e CORPORATE, com Pix e registro LGPD</li>
-                <li>Bunker local para telemetria e backup (trilha 2028)</li>
-              </ul>
+              <div class="project-card h-100" id="frotas">
+                <div class="project-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white;">
+                  <h2 class="h4 mb-0"><i class="bi bi-globe"></i> Gestão de Frotas (Web)</h2>
+                </div>
+                <div class="project-body">
+                  <p><span class="badge bg-success">Em produção</span> · <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a></p>
+                  <p>SaaS multi-tenant no navegador para PME que ainda usa planilha: cadastro de veículos, abastecimentos, manutenções, motoristas, viagens, relatórios e LGPD. Começa grátis com até 3 veículos.</p>
+                  <ul class="feature-list">
+                    <li>Oficina: <code>caracore-cso-quarkus</code></li>
+                    <li>Stack: Java 21 · Quarkus · PostgreSQL 16 · Qute/HTMX</li>
+                    <li>i18n: pt, en, es, it, de</li>
+                  </ul>
+                  <a href="https://cso.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Abrir aplicação</a>
+                </div>
+              </div>
             </div>
             <div class="col-md-6">
-              <h2 class="h5"><i class="bi bi-code"></i> Para estagiários</h2>
-              <p>Não há uma oficina única <code>caracore-cso</code>. O produto vive em duas oficinas e a URL pública é a aplicação, não uma loja GitHub Pages.</p>
-              <ul class="feature-list">
-                <li><strong>Frotas (Web):</strong> oficina <code>caracore-cso-quarkus</code> — Quarkus, PostgreSQL, Qute/HTMX, i18n</li>
-                <li><strong>Transportes (Desktop):</strong> oficina <code>caracore-cso-transportes</code> — JavaFX + SQLite, bunker offline</li>
-                <li><strong>Aplicação canónica:</strong> <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a></li>
-                <li><strong>Releases:</strong> <code>caracore-cso-releases</code> não substitui a aplicação (sem vitrine de loja)</li>
-              </ul>
+              <div class="project-card h-100" id="transportes">
+                <div class="project-header" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%); color: white;">
+                  <h2 class="h4 mb-0"><i class="bi bi-pc-display"></i> Gestão de Transportes (Desktop)</h2>
+                </div>
+                <div class="project-body">
+                  <p><span class="badge bg-warning text-dark">Garagem — 08/11/2028</span></p>
+                  <p>Bunker no computador da empresa: operação de entregas, entregadores, clientes e tabelas de preço com persistência local. Serve de backup e de rota para telemetria pesada — <strong>sem vender GPS como se já existisse</strong>.</p>
+                  <ul class="feature-list">
+                    <li>Oficina: <code>caracore-cso-transportes</code></li>
+                    <li>Stack: Java 21 · Quarkus · JavaFX · Vue 3 · SQLite</li>
+                    <li>Trilha soberana (Protocolo Amarelinha) em evolução</li>
+                  </ul>
+                  <a href="#transportes-detalhe" class="btn-wiki"><i class="bi bi-arrow-down"></i> Ver o que é o bunker</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
+          <section class="mb-5">
+            <h2><i class="bi bi-people"></i> Para leigos e para estagiários</h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="leigos-section h-100">
+                  <h3 class="h5"><i class="bi bi-people"></i> Para leigos</h3>
+                  <p>Pense no CSO como o caderno da frota que deixa de ser planilha. No dia a dia a equipe entra no site, registra veículos, combustível, oficina, motoristas e viagens, e o gestor vê relatórios. Cada empresa vê só os próprios dados.</p>
+                  <ul class="feature-list">
+                    <li>Começar grátis (até 3 veículos), sem cartão no cadastro</li>
+                    <li>Planos pagos em reais, com Pix no Brasil</li>
+                    <li>Perfis claros: quem administra, quem gestiona, quem opera</li>
+                    <li>O desktop de 2028 guarda a operação crítica na empresa, mesmo se a nuvem falhar</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="estagiario-section h-100">
+                  <h3 class="h5"><i class="bi bi-code"></i> Para estagiários</h3>
+                  <p>Não existe uma oficina única <code>caracore-cso</code>. São duas oficinas e a URL canónica é a aplicação web. <code>caracore-cso-releases</code> não substitui o produto no ar.</p>
+                  <ul class="feature-list">
+                    <li><strong>Frotas:</strong> SSR Qute + HTMX, sessão opaca no Postgres, RBAC, Flyway, multi-tenant</li>
+                    <li><strong>Transportes:</strong> API REST + SPA Vue + cliente JavaFX, SQLite local, JWT na trilha desktop</li>
+                    <li><strong>Regra de copy:</strong> não sugerir GPS, mapa em tempo real ou rastreador na UI nem na wiki</li>
+                    <li><strong>Credenciais de demo:</strong> só no README da oficina, e só no banco local — nunca em produção</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5">
+            <h2><i class="bi bi-ui-checks-grid"></i> O que a Gestão de Frotas já faz</h2>
+            <p>Momento atual (produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>): o cliente organiza a frota e os custos. Completar km/L, pneus, documentos do veículo e custo por km entra depois, no mesmo produto, sem taxa extra.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead>
+                  <tr><th>Área</th><th>O que o cliente usa hoje</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Captação</td><td>Landing com planos, cadastro self-service (FREE_3), convite, checkout Pix/ACH e recuperação de acesso</td></tr>
+                  <tr><td>Onboarding</td><td>Aceite LGPD (termos v2.0) → primeiro veículo → dashboard</td></tr>
+                  <tr><td>Frota</td><td>CRUD de veículos com limite por plano; placa única; status ativo / manutenção / inativo</td></tr>
+                  <tr><td>Operação</td><td>Abastecimentos, manutenções (com sync de status do veículo), motoristas e viagens</td></tr>
+                  <tr><td>Relatórios</td><td>Consumo, manutenção, status da frota, CNH, viagens, manutenção mensal e utilização mensal (ADMIN/GESTOR)</td></tr>
+                  <tr><td>Equipe</td><td>Usuários e convites (ADMIN); mesmos perfis em todos os planos — o que muda é o limite de veículos</td></tr>
+                  <tr><td>Privacidade</td><td>Aceite versionado + auditoria gerencial; cada organização isolada (multi-tenant)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="mb-5" id="planos">
+            <h2><i class="bi bi-tag"></i> Planos e perfis (Frotas)</h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h3 class="h5">Limite de veículos</h3>
+                <div class="table-responsive">
+                  <table class="table table-bordered align-middle">
+                    <thead>
+                      <tr><th>Plano</th><th>Veículos</th><th>Preço</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>FREE_3</td><td>até 3</td><td>R$ 0</td></tr>
+                      <tr><td>P5</td><td>até 5</td><td>R$ 5,00/mês</td></tr>
+                      <tr><td>P10</td><td>até 10</td><td>R$ 10,00/mês</td></tr>
+                      <tr><td>CORPORATE</td><td>até 50</td><td>R$ 49,00/mês</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="small text-muted mb-0">Cobrança sempre em reais. No Brasil, Pix avulso; fora, transferência internacional equivalente. A operação libera o plano após o comprovante — não é PIX recorrente automático.</p>
+              </div>
+              <div class="col-md-6">
+                <h3 class="h5">Quem acessa o quê</h3>
+                <ul class="feature-list">
+                  <li><strong>ADMIN</strong> — administra a empresa: usuários, convites, frota, relatórios e auditoria LGPD</li>
+                  <li><strong>GESTOR</strong> — opera a frota e vê relatórios; não gerencia usuários nem convites</li>
+                  <li><strong>ENTREGADOR</strong> — telas operacionais do dia a dia, sem menu admin nem relatórios</li>
+                </ul>
+                <p class="small text-muted mb-0">Todos entram pelo mesmo <code>/login</code>. O ADMIN define o perfil ao cadastrar. Há um operador interno da Cara Core (área discreta) que não mistura sessão com a frota do cliente.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5" id="transportes-detalhe">
+            <h2><i class="bi bi-pc-display"></i> Gestão de Transportes — o bunker de 2028</h2>
+            <div class="alert alert-warning" role="note">
+              <i class="bi bi-cone-striped"></i>
+              <strong>Em desenvolvimento (Garagem).</strong> Lançamento previsto: <strong>08 de novembro de 2028</strong>. Não há download público nem vitrine GitHub Pages. A URL de referência continua sendo <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>.
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h3 class="h5">Para leigos</h3>
+                <p>É o CSO que mora no computador da empresa. Serve para quem precisa continuar operando entregas, equipe e clientes mesmo com internet instável, e para guardar uma cópia soberana dos dados críticos.</p>
+                <ul class="feature-list">
+                  <li>Entregas, entregadores, clientes, equipes e tabelas de preço</li>
+                  <li>Banco local (SQLite) — o dado não depende só da nuvem</li>
+                  <li>Acoplado à Gestão de Frotas; não a substitui</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h3 class="h5">Para estagiários</h3>
+                <p>Oficina <code>caracore-cso-transportes</code>: API REST Quarkus com SQLite, SPA Vue 3 e cliente JavaFX 21 em <code>cs-desktop-fx/</code>. A trilha soberana segue o Protocolo Amarelinha (Geometria → Dinâmica → Sombra → Massa → Céu).</p>
+                <ul class="feature-list">
+                  <li>Persistência local em SQLite; Flyway nas migrações</li>
+                  <li>Autenticação JWT na API da oficina; JavaFX consome a API</li>
+                  <li>Papel: bunker e roteamento de telemetria pesada — GPS/mapa ficam no Virtual Tracker™ (produto separado, 2028)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5" id="roadmap">
+            <h2><i class="bi bi-signpost-split"></i> O que vem depois (status honesto)</h2>
+            <p>O acordo visível com o cliente: o que não está marcado como disponível ainda não faz parte do que se paga. Preferimos atrasar um recurso a prometer o que não entregamos.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead>
+                  <tr><th>Quando</th><th>O quê</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Hoje</td><td>Gestão de frota no navegador: veículos, combustível, manutenções, motoristas, viagens, relatórios, planos e LGPD</td><td><span class="badge bg-success">Disponível</span></td></tr>
+                  <tr><td>Até out/2026</td><td>Telas mais claras, troca de perfil da equipe, regras de KM e veículos parados mais fáceis de entender</td><td><span class="badge bg-warning text-dark">Em andamento</span></td></tr>
+                  <tr><td>1º trim. 2027</td><td>Completar a frota: km/L, documentos do veículo, pneus, toxicológico/infrações e custo por km</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
+                  <tr><td>A partir de 2027</td><td>Jornada com QR (plano corporativo), app de gestão offline e porta de API para automações da empresa</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
+                  <tr><td>08/11/2028</td><td>Gestão de Transportes (desktop bunker)</td><td><span class="badge bg-secondary">Garagem</span></td></tr>
+                  <tr><td>2028</td><td>GPS e mapa (Virtual Tracker™) — <strong>produto separado</strong>, não incluso no CSO de gestão</td><td><span class="badge bg-dark">Fora deste contrato</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="mb-5">
+            <h2><i class="bi bi-diagram-3"></i> Mapa rápido para quem vai mexer no código</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead>
+                  <tr><th></th><th>Frotas (Web)</th><th>Transportes (Desktop)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Oficina</td><td><code>caracore-cso-quarkus</code></td><td><code>caracore-cso-transportes</code></td></tr>
+                  <tr><td>Runtime</td><td>Quarkus 3.8 · Java 21</td><td>Quarkus 3 · Java 21 · JavaFX 21</td></tr>
+                  <tr><td>Interface</td><td>Qute + HTMX + Alpine.js</td><td>Vue 3 SPA + JavaFX</td></tr>
+                  <tr><td>Banco</td><td>PostgreSQL 16 (produção na Railway)</td><td>SQLite local</td></tr>
+                  <tr><td>Sessão</td><td>Cookie opaco (estado no Postgres)</td><td>JWT na API da oficina</td></tr>
+                  <tr><td>Subir local</td><td><code>docker compose up -d</code> e <code>mvn quarkus:dev</code></td><td><code>mvn quarkus:dev</code> / <code>cs-desktop-fx</code></td></tr>
+                  <tr><td>URL pública</td><td colspan="2"><a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">https://cso.caracore.com.br/</a> (aplicação; sem vitrine GitHub Pages)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-secondary" role="note">
+              <i class="bi bi-mortarboard"></i>
+              <strong>Primeiro passo do estagiário na Frotas:</strong> ler o README da oficina, subir o Postgres local e a aplicação em <code>http://localhost:8080</code>. Testes automatizados usam H2 e não exigem Docker. Não copie senhas de desenvolvimento para produção.
+            </div>
+          </section>
+
+          <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
             <a href="https://cso.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener">
-              <i class="bi bi-box-arrow-up-right"></i> Acessar aplicação
+              <i class="bi bi-box-arrow-up-right"></i> Acessar Gestão de Frotas
             </a>
             <a href="https://www.caracore.com.br/portfolio.html#caracore-cso" class="btn-wiki" target="_blank" rel="noopener">
               <i class="bi bi-globe"></i> Portfólio Cara Core
@@ -95,12 +280,31 @@
             <a href="ecosistema.html" class="btn-wiki">
               <i class="bi bi-globe2"></i> Eco Mundo
             </a>
+            <a href="projetos-overview.html" class="btn-wiki">
+              <i class="bi bi-collection"></i> Visão geral dos projetos
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Wiki como centro de alinhamento — CaraCore CSO: Frotas em produção, Transportes em 08/11/2028.</p>
+      <div class="mt-2">
+        <a href="https://wiki.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+          <i class="bi bi-shield-lock"></i> Política de Privacidade
+        </a>
+        <a href="https://www.caracore.com.br/" class="text-light">
+          <i class="bi bi-house"></i> Site Principal
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/wiki.js"></script>
 </body>
 </html>
