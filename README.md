@@ -6,12 +6,12 @@ O Wiki da Cara Core Informática foi criado como um guia completo para **estagi�
 
 ### Objetivo Principal
 
-Fornecer explicações **claras e acessíveis** sobre nossos projetos principais (alinhados ao portfólio: CaraCore PDV Desktop, CaraCore PDV, Ink Agenda, Reino OIDC, Seed, Circuito Ferradura, Hub, Área 51, CaraCore CSO, RU Soberano, Helianto, MKT), usando linguagem simples para pessoas leigas e orientações técnicas específicas para estagiários. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
+Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega. Os **três produtos-chave** são **PDV** (caixa desktop Java + Rust), **CSO** (Frotas no ar + Transportes 2028) e **Hub** (encomendas; GA Windows 06/Abr/2027). O restante do portfólio (Ink, OIDC, Seed, Circuito, Área 51, RU, Helianto, MKT) está documentado sem competir com esse núcleo. O Wiki está alinhado ao **Eco Mundo** (mapa visual do ecossistema: matriz → produtos → oficinas → lojas em [ecosistema.html](https://wiki.caracore.com.br/ecosistema.html)); todas as páginas da wiki incluem link "Eco Mundo" na navegação.
 
 ## Projetos Documentados
 
 1. **CaraCore PDV Desktop (Java · JavaFX)** — Oferta madura multi-plataforma (Windows · Linux · macOS): PIX, operação local e conformidade fiscal (canal **v3.2.2-free**; Java 25+)
-2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; download oficial no GitHub Releases; coexiste com o PDV Desktop Java (não substitui)
+2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; download na loja rust-pdv.caracore.com.br (artefatos no GitHub, tag v0.1.2); coexiste com o PDV Desktop Java (não substitui)
 3. **Ink Agenda** — Gestão para estúdios de tatuagem (agenda, clientes e financeiro); **v2.0.0 estável lançada em 26/Jun/2026**
 4. **chmulatoETE Minerador 4.0** — Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 5. **Reino OIDC** — Educação em OAuth 2.1 e OIDC

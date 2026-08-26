@@ -27,7 +27,7 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore PDV (Rust + Tauri)',
-            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.2, download no GitHub Releases',
+            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.2, download na loja rust-pdv (tag GitHub v0.1.2, não latest Java)',
             url: 'projeto-pdv-rust.html',
             tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.2', 'github releases'],
             category: 'projeto'
