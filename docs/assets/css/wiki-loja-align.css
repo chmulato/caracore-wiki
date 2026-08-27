@@ -1,0 +1,655 @@
+/**
+ * Wiki Área 51 — tema alinhado à loja (store-public.css)
+ * Carregar por último. Requer html[data-loja-shell="1"] e body.store.wiki-loja
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* --- Tokens partilhados com a loja --- */
+
+html[data-loja-shell="1"] {
+    --sf-bg: #0d1117;
+    --sf-surface: #161b22;
+    --sf-elevated: #21262d;
+    --sf-border: #30363d;
+    --sf-text: #e6edf3;
+    --sf-muted: #8b949e;
+    --sf-accent: #58a6ff;
+    --sf-accent-soft: rgba(88, 166, 255, 0.12);
+    --sf-warn: #d29922;
+    --sf-warn-bg: rgba(210, 153, 34, 0.1);
+    --sf-radius: 10px;
+    --sf-radius-sm: 6px;
+    --sf-max: 1120px;
+    --sf-header-h: 56px;
+    --sf-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --sf-gutter: clamp(14px, 4vw, 24px);
+    --sf-pad-main-top: clamp(20px, 3vw, 28px);
+    --sf-pad-main-bottom: clamp(40px, 6vw, 64px);
+
+    /* Ponte: variáveis legadas da wiki → loja */
+    --primary-color: var(--sf-accent);
+    --secondary-color: var(--sf-muted);
+    --info-color: var(--sf-accent);
+    --warning-color: var(--sf-warn);
+    --success-color: #3fb950;
+    --danger-color: #f85149;
+    --light-color: var(--sf-elevated);
+    --dark-color: var(--sf-text);
+    --border-radius: var(--sf-radius-sm);
+    --box-shadow: none;
+    --bg-color: var(--sf-bg);
+    --bg-gradient-start: var(--sf-bg);
+    --bg-gradient-end: var(--sf-bg);
+    --text-color: var(--sf-text);
+    --card-bg: var(--sf-surface);
+    --card-text: var(--sf-text);
+    --muted-text: var(--sf-muted);
+    --border-color: var(--sf-border);
+    --divider-color: var(--sf-border);
+    --hover-bg: var(--sf-elevated);
+    --code-bg: var(--sf-elevated);
+    --code-text: var(--sf-text);
+    --link-color: var(--sf-accent);
+    --link-hover: var(--sf-accent);
+    --footer-bg: var(--sf-bg);
+    --footer-text: var(--sf-muted);
+    --wiki-text: var(--sf-text);
+    --area51-color: var(--sf-accent);
+}
+
+/* --- Base --- */
+
+html[data-loja-shell="1"] body.store.wiki-loja {
+    font-family: var(--sf-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--sf-text);
+    background: var(--sf-bg) !important;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Cabeçalho e menu: mesmo comportamento da loja (sf-header + sf-menu) */
+html[data-loja-shell="1"] .sf-header {
+    position: sticky;
+}
+
+html[data-loja-shell="1"] .sf-menu-body a[aria-current="page"],
+html[data-loja-shell="1"] .sf-menu-body a.wiki-menu-current {
+    background: var(--sf-elevated);
+    color: var(--sf-accent);
+}
+
+/* Trilha abaixo do header (substitui wiki-breadcrumb Bootstrap) */
+html[data-loja-shell="1"] .wiki-trail {
+    background: var(--sf-surface);
+    border-bottom: 1px solid var(--sf-border);
+}
+
+html[data-loja-shell="1"] .wiki-trail .sf-breadcrumb {
+    margin: 0;
+    max-width: none;
+}
+
+html[data-loja-shell="1"] .wiki-trail .sf-header-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
+    min-height: 0;
+}
+
+html[data-loja-shell="1"] .wiki-trail .sf-breadcrumb {
+    padding: 12px 0;
+}
+
+html[data-loja-shell="1"] .text-muted {
+    color: var(--sf-muted) !important;
+}
+
+html[data-loja-shell="1"] ::-webkit-scrollbar {
+    width: 8px;
+}
+
+html[data-loja-shell="1"] ::-webkit-scrollbar-track {
+    background: var(--sf-bg);
+}
+
+html[data-loja-shell="1"] ::-webkit-scrollbar-thumb {
+    background: var(--sf-border);
+    border-radius: 4px;
+}
+
+html[data-loja-shell="1"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--sf-muted);
+}
+
+/* --- Cabeçalho legado Bootstrap (oculto se ainda existir) --- */
+
+html[data-loja-shell="1"] .wiki-nav {
+    display: none !important;
+}
+
+/* --- Breadcrumb legado --- */
+
+html[data-loja-shell="1"] .wiki-header::after,
+html[data-loja-shell="1"] .project-header::after,
+html[data-loja-shell="1"] .character-header::after,
+html[data-loja-shell="1"] .scenario-header::after,
+html[data-loja-shell="1"] .auth-header::after,
+html[data-loja-shell="1"] .fed-header::after {
+    content: none !important;
+    display: none !important;
+}
+
+html[data-loja-shell="1"] .wiki-sidebar .bi,
+html[data-loja-shell="1"] .area51-nav .bi {
+    display: none !important;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb {
+    background: var(--sf-surface);
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--sf-border);
+    padding: 12px 0;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .container {
+    max-width: var(--sf-max);
+    padding-left: var(--sf-gutter);
+    padding-right: var(--sf-gutter);
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item a {
+    color: var(--sf-accent);
+    text-decoration: none;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item.active {
+    color: var(--sf-muted);
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--sf-muted);
+    opacity: 0.45;
+}
+
+/* --- Layout principal --- */
+
+html[data-loja-shell="1"] .wiki-container {
+    max-width: var(--sf-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--sf-pad-main-top) var(--sf-gutter) var(--sf-pad-main-bottom);
+}
+
+@media (max-width: 991px),
+       (max-width: 767px),
+       (max-width: 480px) {
+    html[data-loja-shell="1"] .wiki-container {
+        padding-left: var(--sf-gutter);
+        padding-right: var(--sf-gutter);
+    }
+}
+
+/* --- Superfícies = sf-block --- */
+
+html[data-loja-shell="1"] .wiki-sidebar,
+html[data-loja-shell="1"] .wiki-content {
+    background: var(--sf-surface);
+    color: var(--sf-text);
+    border: 1px solid var(--sf-border);
+    border-radius: var(--sf-radius);
+    box-shadow: none;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    transition: none;
+}
+
+html[data-loja-shell="1"] .wiki-sidebar {
+    position: sticky;
+    top: calc(var(--sf-header-h) + 16px);
+    max-height: calc(100vh - var(--sf-header-h) - 32px);
+    overflow-y: auto;
+}
+
+@media (max-width: 991px) {
+    html[data-loja-shell="1"] .wiki-sidebar {
+        position: static;
+        max-height: none;
+    }
+}
+
+html[data-loja-shell="1"] .wiki-sidebar h4,
+html[data-loja-shell="1"] .wiki-sidebar h5 {
+    color: var(--sf-text);
+    border-bottom: 1px solid var(--sf-border);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+html[data-loja-shell="1"] .wiki-menu a {
+    color: var(--sf-muted);
+    padding: 8px 12px;
+    border-radius: var(--sf-radius-sm);
+    transform: none;
+}
+
+html[data-loja-shell="1"] .wiki-menu a:hover,
+html[data-loja-shell="1"] .wiki-menu a.active {
+    background: var(--sf-elevated);
+    color: var(--sf-accent);
+    transform: none;
+}
+
+html[data-loja-shell="1"] .wiki-menu .submenu a {
+    color: var(--sf-muted);
+    font-size: 0.875rem;
+}
+
+html[data-loja-shell="1"] .area51-nav a {
+    color: var(--sf-muted);
+    border-radius: var(--sf-radius-sm);
+}
+
+html[data-loja-shell="1"] .area51-nav a:hover {
+    background: var(--sf-elevated);
+    color: var(--sf-accent);
+}
+
+/* --- Tipografia do conteúdo --- */
+
+html[data-loja-shell="1"] .wiki-content h1,
+html[data-loja-shell="1"] .wiki-content h2,
+html[data-loja-shell="1"] .wiki-content h3,
+html[data-loja-shell="1"] .wiki-content h4,
+html[data-loja-shell="1"] .wiki-content h5 {
+    color: var(--sf-text);
+    letter-spacing: -0.02em;
+}
+
+html[data-loja-shell="1"] .wiki-content h1 {
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+html[data-loja-shell="1"] .wiki-content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--sf-border);
+}
+
+html[data-loja-shell="1"] .wiki-content .lead {
+    color: var(--sf-muted);
+    font-size: 1.05rem;
+    max-width: 680px;
+}
+
+html[data-loja-shell="1"] .wiki-sidebar a,
+html[data-loja-shell="1"] .wiki-content a:not(.btn) {
+    color: var(--sf-accent);
+    text-decoration: none;
+}
+
+html[data-loja-shell="1"] .wiki-sidebar a:hover,
+html[data-loja-shell="1"] .wiki-content a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+html[data-loja-shell="1"] .wiki-content code {
+    background: var(--sf-elevated);
+    color: var(--sf-text);
+    border: 1px solid var(--sf-border);
+    padding: 0.1rem 0.35rem;
+    border-radius: var(--sf-radius-sm);
+    font-size: 0.875em;
+}
+
+/* --- Cards de projeto --- */
+
+html[data-loja-shell="1"] .project-card {
+    background: var(--sf-surface);
+    border: 1px solid var(--sf-border);
+    border-radius: var(--sf-radius);
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+html[data-loja-shell="1"] .project-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+html[data-loja-shell="1"] .project-header,
+html[data-loja-shell="1"] .project-header.area51,
+html[data-loja-shell="1"] .project-header.hub,
+html[data-loja-shell="1"] .project-header.seed,
+html[data-loja-shell="1"] .project-header.reino,
+html[data-loja-shell="1"] .project-header.python,
+html[data-loja-shell="1"] .project-header.pdv,
+html[data-loja-shell="1"] .project-header.ete,
+html[data-loja-shell="1"] .project-header.ink,
+html[data-loja-shell="1"] .wiki-header {
+    background: var(--sf-elevated) !important;
+    color: var(--sf-text) !important;
+    border-bottom: 1px solid var(--sf-border);
+    padding: 20px 28px;
+    margin: 0;
+    border-radius: 0;
+}
+
+html[data-loja-shell="1"] .wiki-header {
+    margin: -24px -28px 24px -28px;
+    border-radius: var(--sf-radius) var(--sf-radius) 0 0;
+}
+
+html[data-loja-shell="1"] .project-header h1,
+html[data-loja-shell="1"] .project-header h3,
+html[data-loja-shell="1"] .wiki-header h1 {
+    margin: 0;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+}
+
+html[data-loja-shell="1"] .project-header p,
+html[data-loja-shell="1"] .wiki-header p {
+    margin: 8px 0 0;
+    color: var(--sf-muted);
+    opacity: 1;
+}
+
+html[data-loja-shell="1"] .project-body {
+    padding: 24px 28px;
+    color: var(--sf-text);
+}
+
+html[data-loja-shell="1"] .project-status {
+    margin-bottom: 1rem;
+}
+
+/* --- Badges = sf-chip --- */
+
+html[data-loja-shell="1"] .badge,
+html[data-loja-shell="1"] .tech-badge {
+    background: var(--sf-elevated) !important;
+    color: var(--sf-muted) !important;
+    border: 1px solid var(--sf-border);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    margin: 2px;
+}
+
+/* --- Alertas --- */
+
+html[data-loja-shell="1"] .alert {
+    border-radius: var(--sf-radius-sm);
+    border: 1px solid var(--sf-border);
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    color: var(--sf-text);
+}
+
+html[data-loja-shell="1"] .alert-info,
+html[data-loja-shell="1"] .alert-beginner,
+html[data-loja-shell="1"] .leigos-section {
+    background: var(--sf-accent-soft) !important;
+    border-left: 3px solid var(--sf-accent) !important;
+    color: var(--sf-text) !important;
+}
+
+html[data-loja-shell="1"] .alert-warning,
+html[data-loja-shell="1"] .alert-intermediate,
+html[data-loja-shell="1"] .estagiario-section {
+    background: var(--sf-warn-bg) !important;
+    border-left: 3px solid var(--sf-warn) !important;
+    color: var(--sf-text) !important;
+}
+
+html[data-loja-shell="1"] .alert-danger,
+html[data-loja-shell="1"] .alert-advanced {
+    background: rgba(248, 81, 73, 0.1) !important;
+    border-left: 3px solid var(--sf-danger, #f85149) !important;
+    color: var(--sf-text) !important;
+}
+
+html[data-loja-shell="1"] .alert h4,
+html[data-loja-shell="1"] .alert h5,
+html[data-loja-shell="1"] .leigos-section h3,
+html[data-loja-shell="1"] .estagiario-section h3 {
+    color: var(--sf-text) !important;
+}
+
+html[data-loja-shell="1"] .alert .alert-link {
+    color: var(--sf-accent);
+}
+
+/* --- Botões = sf-btn --- */
+
+html[data-loja-shell="1"] .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: var(--sf-radius-sm);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: opacity 0.2s, background 0.2s, border-color 0.2s, color 0.2s;
+    transform: none;
+    box-shadow: none !important;
+}
+
+html[data-loja-shell="1"] .btn:hover {
+    transform: none;
+    box-shadow: none !important;
+}
+
+html[data-loja-shell="1"] .btn-primary,
+html[data-loja-shell="1"] .btn-wiki {
+    background: var(--sf-accent) !important;
+    border-color: var(--sf-accent) !important;
+    color: #0d1117 !important;
+}
+
+html[data-loja-shell="1"] .btn-primary:hover,
+html[data-loja-shell="1"] .btn-wiki:hover {
+    filter: brightness(1.06);
+    color: #0d1117 !important;
+}
+
+html[data-loja-shell="1"] .btn-outline-secondary,
+html[data-loja-shell="1"] .btn-secondary {
+    background: transparent !important;
+    color: var(--sf-text) !important;
+    border-color: var(--sf-border) !important;
+}
+
+html[data-loja-shell="1"] .btn-outline-secondary:hover,
+html[data-loja-shell="1"] .btn-secondary:hover {
+    border-color: var(--sf-accent) !important;
+    color: var(--sf-accent) !important;
+    background: transparent !important;
+}
+
+/* --- Cards e blocos (projeto-area51 + wiki-unified) --- */
+
+html[data-loja-shell="1"] .feature-card,
+html[data-loja-shell="1"] .module-card,
+html[data-loja-shell="1"] .flow-step,
+html[data-loja-shell="1"] .arch-layer,
+html[data-loja-shell="1"] .api-endpoint,
+html[data-loja-shell="1"] .setup-card,
+html[data-loja-shell="1"] .best-practice-card,
+html[data-loja-shell="1"] .auth-card,
+html[data-loja-shell="1"] .federation-card,
+html[data-loja-shell="1"] .role-card,
+html[data-loja-shell="1"] .rbac-example,
+html[data-loja-shell="1"] .architecture-diagram,
+html[data-loja-shell="1"] .analogy-card,
+html[data-loja-shell="1"] .benefits-card,
+html[data-loja-shell="1"] .glossary-term,
+html[data-loja-shell="1"] .step-content,
+html[data-loja-shell="1"] .character-card,
+html[data-loja-shell="1"] .org-box,
+html[data-loja-shell="1"] .federation-diagram {
+    background: var(--sf-surface) !important;
+    color: var(--sf-text) !important;
+    border: 1px solid var(--sf-border) !important;
+    border-radius: var(--sf-radius) !important;
+    box-shadow: none !important;
+}
+
+html[data-loja-shell="1"] .auth-header,
+html[data-loja-shell="1"] .fed-header,
+html[data-loja-shell="1"] .character-header,
+html[data-loja-shell="1"] .scenario-header {
+    background: var(--sf-elevated) !important;
+    color: var(--sf-text) !important;
+    border-bottom: 1px solid var(--sf-border);
+}
+
+html[data-loja-shell="1"] .auth-card.primary .auth-header,
+html[data-loja-shell="1"] .auth-card.social .auth-header,
+html[data-loja-shell="1"] .auth-card.enterprise .auth-header,
+html[data-loja-shell="1"] .federation-card.saml .fed-header,
+html[data-loja-shell="1"] .federation-card.oidc .fed-header,
+html[data-loja-shell="1"] .federation-card.ldap .fed-header {
+    background: var(--sf-elevated) !important;
+    color: var(--sf-text) !important;
+}
+
+html[data-loja-shell="1"] .auth-body,
+html[data-loja-shell="1"] .fed-body {
+    color: var(--sf-text);
+}
+
+html[data-loja-shell="1"] .area51-box {
+    background: var(--sf-elevated) !important;
+    color: var(--sf-text) !important;
+    border: 1px solid var(--sf-accent);
+}
+
+html[data-loja-shell="1"] .component,
+html[data-loja-shell="1"] .idp,
+html[data-loja-shell="1"] .broker,
+html[data-loja-shell="1"] .fed-features .feature {
+    background: var(--sf-elevated) !important;
+    color: var(--sf-muted) !important;
+    border: 1px solid var(--sf-border);
+}
+
+html[data-loja-shell="1"] .area51-intro,
+html[data-loja-shell="1"] .roi-card,
+html[data-loja-shell="1"] .classification-banner {
+    background: var(--sf-surface) !important;
+    color: var(--sf-text) !important;
+    border: 1px solid var(--sf-border) !important;
+    border-radius: var(--sf-radius) !important;
+}
+
+html[data-loja-shell="1"] .classification-banner {
+    background: var(--sf-warn-bg) !important;
+    border-left: 3px solid var(--sf-warn) !important;
+}
+
+html[data-loja-shell="1"] .feature-header h4,
+html[data-loja-shell="1"] .module-header h5,
+html[data-loja-shell="1"] .glossary-term h3,
+html[data-loja-shell="1"] .layer-title {
+    color: var(--sf-text) !important;
+}
+
+html[data-loja-shell="1"] .feature-list li {
+    border-bottom-color: var(--sf-border);
+    color: var(--sf-muted);
+}
+
+html[data-loja-shell="1"] .feature-list li::before {
+    color: var(--sf-accent);
+}
+
+/* --- Rodapé = sf-footer (wiki usa markup sf-footer da loja) --- */
+
+html[data-loja-shell="1"] .wiki-footer {
+    background: var(--sf-bg);
+    color: var(--sf-muted);
+    text-align: center;
+    padding: 40px var(--sf-gutter);
+    margin-top: 0;
+    border-top: 1px solid var(--sf-border);
+}
+
+html[data-loja-shell="1"] .wiki-footer .container {
+    max-width: var(--sf-max);
+    padding-left: var(--sf-gutter);
+    padding-right: var(--sf-gutter);
+}
+
+html[data-loja-shell="1"] .wiki-footer p {
+    margin: 8px 0 0;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--sf-muted);
+}
+
+html[data-loja-shell="1"] .wiki-footer a {
+    color: var(--sf-muted);
+}
+
+html[data-loja-shell="1"] .wiki-footer a:hover {
+    color: var(--sf-accent);
+}
+
+/* --- Utilitários Bootstrap --- */
+
+html[data-loja-shell="1"] .border,
+html[data-loja-shell="1"] .border-top,
+html[data-loja-shell="1"] .border-bottom {
+    border-color: var(--sf-border) !important;
+}
+
+html[data-loja-shell="1"] hr {
+    border-color: var(--sf-border);
+    opacity: 1;
+}
+
+html[data-loja-shell="1"] .list-group-item {
+    background: var(--sf-surface);
+    color: var(--sf-text);
+    border-color: var(--sf-border);
+}
+
+html[data-loja-shell="1"] .table {
+    color: var(--sf-text);
+    border-color: var(--sf-border);
+}
+
+html[data-loja-shell="1"] .table td,
+html[data-loja-shell="1"] .table th {
+    border-color: var(--sf-border);
+}
+
+/* Animações suaves, sem deslocamento */
+html[data-loja-shell="1"] .wiki-content,
+html[data-loja-shell="1"] .project-card {
+    animation: none;
+}

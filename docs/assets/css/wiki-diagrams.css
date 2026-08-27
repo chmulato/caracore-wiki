@@ -1,0 +1,151 @@
+/* Wiki Área 51 — páginas com diagramas Mermaid */
+
+.wiki-diagram-page {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wiki-diagram-page h1 {
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.wiki-diagram-lead {
+    color: var(--sf-muted, #8b949e);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.wiki-diagram-callout {
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0 1.75rem;
+    border-radius: var(--sf-radius-sm, 6px);
+    border: 1px solid var(--sf-border, #30363d);
+    background: var(--sf-accent-soft, rgba(88, 166, 255, 0.12));
+    font-size: 0.95rem;
+}
+
+.wiki-diagram-callout-warn {
+    background: var(--sf-warn-bg, rgba(210, 153, 34, 0.1));
+    border-color: var(--sf-warn, #d29922);
+}
+
+.wiki-diagram-panel {
+    background: var(--sf-surface, #161b22);
+    border: 1px solid var(--sf-border, #30363d);
+    border-radius: var(--sf-radius, 10px);
+    padding: clamp(14px, 3vw, 24px);
+    margin: 1.25rem 0 1.75rem;
+    overflow-x: auto;
+}
+
+.wiki-diagram-panel h2,
+.wiki-diagram-panel h3 {
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+    color: var(--sf-muted, #8b949e);
+    font-weight: 600;
+}
+
+.wiki-diagram-panel .mermaid {
+    display: flex;
+    justify-content: center;
+    min-width: min(100%, 280px);
+}
+
+.wiki-diagram-list {
+    display: grid;
+    gap: 0.65rem;
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wiki-diagram-list li {
+    padding: 0.7rem 1rem;
+    background: var(--sf-elevated, #21262d);
+    border: 1px solid var(--sf-border, #30363d);
+    border-radius: var(--sf-radius-sm, 6px);
+}
+
+.wiki-diagram-list strong {
+    color: var(--sf-accent, #58a6ff);
+}
+
+.wiki-diagram-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--sf-border, #30363d);
+}
+
+.wiki-hub-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .wiki-hub-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.wiki-hub-card {
+    padding: 1.15rem;
+    border: 1px solid var(--sf-border, #30363d);
+    border-radius: var(--sf-radius, 10px);
+    background: var(--sf-surface, #161b22);
+    height: 100%;
+}
+
+.wiki-hub-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.wiki-hub-card p {
+    font-size: 0.9rem;
+    color: var(--sf-muted, #8b949e);
+    margin-bottom: 0.75rem;
+}
+
+.wiki-table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.wiki-table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.wiki-table-wrap th,
+.wiki-table-wrap td {
+    border: 1px solid var(--sf-border, #30363d);
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+}
+
+.wiki-table-wrap th {
+    background: var(--sf-elevated, #21262d);
+}
+
+.wiki-diagram-panel pre:not(.mermaid) {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: var(--sf-elevated, #21262d);
+    border: 1px solid var(--sf-border, #30363d);
+    border-radius: var(--sf-radius-sm, 6px);
+    overflow-x: auto;
+    font-size: 0.85rem;
+}
+
+.wiki-diagram-panel pre:not(.mermaid) code {
+    color: var(--sf-text, #e6edf3);
+}

@@ -253,6 +253,14 @@ def main() -> None:
         ("href=\"wiki.html\"", "href=\"https://wiki.caracore.com.br/projeto-pdv.html\""),
     ])
 
+    mkt_wiki = ROOT / "caracore-mkt-releases" / "docs" / "wiki.html"
+    if mkt_wiki.exists():
+        write_redirect(mkt_wiki, "https://wiki.caracore.com.br/projeto-mkt.html")
+        replace_in_store_docs(ROOT / "caracore-mkt-releases" / "docs", [
+            ("href=\"wiki.html\"", "href=\"https://wiki.caracore.com.br/projeto-mkt.html\""),
+        ])
+        print("redirect mkt wiki.html")
+
     print("done")
 
 
