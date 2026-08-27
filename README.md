@@ -11,7 +11,7 @@ Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega.
 ## Projetos Documentados
 
 1. **CaraCore PDV Desktop (Java · JavaFX)** — Oferta madura multi-plataforma (Windows · Linux · macOS): PIX, operação local e conformidade fiscal (canal **v3.2.2-free**; Java 25+)
-2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; download na loja rust-pdv.caracore.com.br (artefatos no GitHub, tag v0.1.2); coexiste com o PDV Desktop Java (não substitui)
+2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.2**; download na loja pdv-rust.caracore.com.br (artefatos no GitHub, tag v0.1.2); coexiste com o PDV Desktop Java (não substitui)
 3. **Ink Agenda** — Gestão para estúdios de tatuagem (agenda, clientes e financeiro); **v2.0.0 estável lançada em 26/Jun/2026**
 4. **chmulatoETE Minerador 4.0** — Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 5. **Reino OIDC** — Educação em OAuth 2.1 e OIDC

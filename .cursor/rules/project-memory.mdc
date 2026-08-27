@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória — caracore-wiki
 
-**Atualizado:** 2026-08-26 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+**Atualizado:** 2026-08-27 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
 
 ## Repositório e papel
 - **caracore-wiki:** centro de **alinhamento** (o que é cada produto, o que já existe, o que é Garagem). Não é manual de botão.
@@ -18,13 +18,13 @@ alwaysApply: true
 
 ## Relação com a matriz e lojas
 - **Matriz:** portfólio em `https://www.caracore.com.br/portfolio.html#{âncora}` (nunca wiki/portfolio). Sem `/delivery/`.
-- **Lojas:** manuais de botão e download em `pdv.` / `rust-pdv.` / `hub.`.
-- **CSO:** aplicação canónica `https://cso.caracore.com.br/` (sem vitrine Pages). **Não é GPS.**
+- **Lojas:** manuais de botão e download em `pdv.` / `pdv-rust.` / `hub.` / `cso-transp.`.
+- **CSO:** aplicação `https://cso.caracore.com.br/` · vitrine `https://cso-transp.caracore.com.br/`. **Não é GPS.**
 - **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
 
 ## CaraCore PDV — duas linhas desktop
 - Java: v3.2.2-free · pdv.caracore.com.br · Java 25 · Win/Linux/macOS.
-- Rust: v0.1.2 piloto Windows · rust-pdv.caracore.com.br · download = tag v0.1.2 em `caracore-pdv-releases` (**nunca** `/latest`).
+- Rust: v0.1.2 piloto Windows · pdv-rust.caracore.com.br · download = tag v0.1.2 em `caracore-pdv-releases` (**nunca** `/latest`).
 - Nenhuma substitui a outra. V3 negócio ≠ v3.2.x ≠ v0.1.x.
 
 ## CaraCore CSO

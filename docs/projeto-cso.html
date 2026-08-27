@@ -75,7 +75,7 @@
         <div class="wiki-content wiki-home">
           <div class="wiki-header">
             <h1><i class="bi bi-truck"></i> CaraCore CSO — duas frentes, um produto de logística</h1>
-            <p class="wiki-lede">O CSO é o caderno da frota: a <strong>Gestão de Frotas</strong> já opera no navegador; a <strong>Gestão de Transportes</strong> chega no computador da empresa em <strong>08 de novembro de 2028</strong>. A URL pública é a aplicação, não uma loja GitHub Pages. <strong>Não é GPS.</strong></p>
+            <p class="wiki-lede">O CSO é o caderno da frota: a <strong>Gestão de Frotas</strong> já opera no navegador; a <strong>Gestão de Transportes</strong> chega no computador da empresa em <strong>08 de novembro de 2028</strong>. A aplicação é <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>; a vitrine é <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a>. <strong>Não é GPS.</strong></p>
           </div>
 
           <div class="alert alert-info" role="note">
@@ -138,7 +138,7 @@
               <div class="col-md-6">
                 <div class="estagiario-section h-100">
                   <h3 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h3>
-                  <p>Não existe uma oficina única <code>caracore-cso</code>. São duas oficinas e a URL canónica é a aplicação web. <code>caracore-cso-releases</code> não substitui o produto no ar.</p>
+                  <p>Não existe uma oficina única <code>caracore-cso</code>. São duas oficinas. A aplicação Frotas vive em cso.caracore.com.br; a vitrine dual é <code>caracore-cso-releases</code> em cso-transp.caracore.com.br — a loja não substitui o produto no ar.</p>
                   <ul class="feature-list">
                     <li><strong>Frotas:</strong> SSR Qute + HTMX, sessão opaca no Postgres, RBAC, Flyway, multi-tenant</li>
                     <li><strong>Transportes:</strong> API REST + SPA Vue + cliente JavaFX, SQLite local, JWT na trilha desktop</li>
@@ -207,7 +207,7 @@
             <h2><i class="bi bi-pc-display"></i> Gestão de Transportes — o bunker de 2028</h2>
             <div class="alert alert-warning" role="note">
               <i class="bi bi-cone-striped"></i>
-              <strong>Em desenvolvimento (Garagem).</strong> Lançamento previsto: <strong>08 de novembro de 2028</strong>. Não há download público nem vitrine GitHub Pages. A URL de referência continua sendo <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>.
+              <strong>Em desenvolvimento (Garagem).</strong> Lançamento previsto: <strong>08 de novembro de 2028</strong>. Não há download público. A vitrine (status do instalador) está em <a href="https://cso-transp.caracore.com.br/download.html" target="_blank" rel="noopener">cso-transp.caracore.com.br/download.html</a>. A Frotas continua em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>.
             </div>
             <div class="row g-4">
               <div class="col-md-6">
@@ -265,7 +265,7 @@
                   <tr><td>Banco</td><td>PostgreSQL 16 (produção na Railway)</td><td>SQLite local</td></tr>
                   <tr><td>Sessão</td><td>Cookie opaco (estado no Postgres)</td><td>JWT na API da oficina</td></tr>
                   <tr><td>Subir local</td><td><code>docker compose up -d</code> e <code>mvn quarkus:dev</code></td><td><code>mvn quarkus:dev</code> / <code>cs-desktop-fx</code></td></tr>
-                  <tr><td>URL pública</td><td colspan="2"><a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">https://cso.caracore.com.br/</a> (aplicação; sem vitrine GitHub Pages)</td></tr>
+                  <tr><td>URL pública</td><td><a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a> (aplicação)</td><td>GA 08/11/2028 · vitrine <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a></td></tr>
                 </tbody>
               </table>
             </div>
@@ -278,6 +278,9 @@
           <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
             <a href="https://cso.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener">
               <i class="bi bi-box-arrow-up-right"></i> Acessar Gestão de Frotas
+            </a>
+            <a href="https://cso-transp.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-shop"></i> Vitrine CSO
             </a>
             <a href="https://www.caracore.com.br/portfolio.html#caracore-cso" class="btn-wiki" target="_blank" rel="noopener">
               <i class="bi bi-globe"></i> Portfólio Cara Core
