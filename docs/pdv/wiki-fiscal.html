@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia fiscal em linguagem simples para a pequena operação: entenda o que o CaraCore-PDV cobre hoje em NFC-e, alíquotas, NCM, operação local e limites do escopo público atual.">
+    <title>Wiki Fiscal - Escopo Fiscal Atual | CaraCore-PDV</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/portal-style.css">
+</head>
+<body class="smooth-scroll bg-gray-50">
+    
+    <!-- Header -->
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <a href="https://pdv.caracore.com.br/" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
+                            <i class="fas fa-cash-register text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                            <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="https://pdv.caracore.com.br/#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
+                    <a href="https://pdv.caracore.com.br/#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
+                    <a href="https://pdv.caracore.com.br/#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
+                    <a href="https://pdv.caracore.com.br/#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
+                    <a href="https://pdv.caracore.com.br/versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
+                    <a href="https://pdv.caracore.com.br/consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="https://pdv.caracore.com.br/#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="https://pdv.caracore.com.br/#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="https://pdv.caracore.com.br/#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="https://pdv.caracore.com.br/#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="https://pdv.caracore.com.br/versoes.html" class="text-gray-700 font-medium py-2">Versões</a>
+                    <a href="https://pdv.caracore.com.br/consultoria.html" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="portal-hero green-bg text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <i class="fas fa-book me-3"></i>Wiki Fiscal
+                </h1>
+                <p class="text-xl text-green-50">
+                    Guia fiscal em linguagem simples para a pequena operação
+                </p>
+                <p class="text-lg text-green-100 mt-4">
+                    NFC-e, alíquotas e NCM da oferta atual — sem aula de reforma no caminho da venda.
+                </p>
+                <p class="mt-6">
+                    <a href="https://pdv.caracore.com.br/consultoria.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Agendar demonstração</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content -->
+    <main class="page-shell container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <div class="section-card mb-8 bg-amber-50 border-2 border-amber-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                <i class="fas fa-triangle-exclamation me-2 text-amber-600"></i>Leitura correta desta página
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-3">
+                Esta wiki explica a camada fiscal da <strong>oferta pública atual</strong> do CaraCore-PDV para pequena operação em Windows com SQLite local. Ela existe para reduzir insegurança e ajudar a configurar o básico com clareza.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+                O escopo público atual deve ser lido como: <strong>NFC-e, PIX configurável, pagamento misto, configuração de alíquotas, NCM, conferência de caixa e operação local</strong>.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                <strong>Não tratar esta página como promessa de TEF, voucher, SAT, MFE, pinpad homologado ou PIX Split ativo.</strong> Quando houver dúvida, prevalece a leitura do escopo atual e a validação em consultoria.
+            </p>
+        </div>
+        
+        <!-- Índice -->
+        <div class="section-card mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                <i class="fas fa-list me-2 text-green-600"></i>Índice do Guia
+            </h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><a href="#o-que-e-reforma" class="text-green-600 hover:underline">1. O que é a Reforma Tributária 2026-2033?</a></li>
+                <li><a href="#cbs-e-ibs" class="text-green-600 hover:underline">2. O que são CBS e IBS?</a></li>
+                <li><a href="#ncm" class="text-green-600 hover:underline">3. O que é NCM e para que serve?</a></li>
+                <li><a href="#como-funciona" class="text-green-600 hover:underline">4. Como funciona o cálculo de impostos?</a></li>
+                <li><a href="#tela-configuracao" class="text-green-600 hover:underline">5. Como usar a tela de Configuração Fiscal?</a></li>
+                <li><a href="#configurar-aliquotas" class="text-green-600 hover:underline">6. Como configurar as alíquotas?</a></li>
+                <li><a href="#upload-ncm" class="text-green-600 hover:underline">7. Como fazer upload da tabela NCM?</a></li>
+                <li><a href="#buscar-ncm" class="text-green-600 hover:underline">8. Como buscar um NCM específico?</a></li>
+                <li><a href="#pix-split" class="text-green-600 hover:underline">9. O que o PIX significa no escopo atual?</a></li>
+                <li><a href="#historico" class="text-green-600 hover:underline">10. Como ver o histórico de alterações?</a></li>
+                <li><a href="#offline-first" class="text-green-600 hover:underline">11. O que a operação local resolve hoje?</a></li>
+                <li><a href="#modo-contingencia" class="text-green-600 hover:underline">12. Como ler contingência e limites do escopo?</a></li>
+                <li><a href="#guia-bolso-governo-fora" class="text-green-600 hover:underline">13. O que fazer quando a SEFAZ fica fora do ar?</a></li>
+            </ul>
+        </div>
+        
+        <!-- Seção 1: O que é a Reforma Tributária -->
+        <div id="o-que-e-reforma" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">1</span>
+                O que é a Reforma Tributária 2026-2033?
+            </h2>
+            <div class="info-box">
+                <p class="text-gray-800 leading-relaxed">
+                    <strong>A Reforma Tributária é uma mudança na forma como o Brasil cobra impostos.</strong> 
+                    Antes, existiam muitos impostos diferentes (ICMS, IPI, PIS, COFINS, etc.). 
+                    A partir de 2026, esses impostos serão substituídos gradualmente por apenas dois impostos: 
+                    <strong>CBS</strong> e <strong>IBS</strong>.
+                </p>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Imagine que você tinha que pagar várias contas diferentes todo mês (água, luz, telefone, internet, etc.). 
+                A Reforma Tributária é como se todas essas contas fossem unificadas em apenas duas contas mais simples.
+            </p>
+            <div class="warning-box">
+                <p class="text-gray-800">
+                    <strong>⚠️ Importante:</strong> A mudança não acontece de uma vez. Ela vai ocorrer gradualmente de 2026 até 2033. 
+                    Isso significa que as alíquotas (percentuais) dos impostos vão mudar a cada ano durante esse período.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Por que isso é importante para o seu negócio?</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Você precisa calcular os impostos corretamente para não ter problemas com a Receita Federal</li>
+                <li>Os impostos afetam o preço final dos seus produtos</li>
+                <li>Você precisa saber quanto de imposto está pagando para calcular seu lucro real</li>
+                <li>O sistema CaraCore-PDV faz esses cálculos automaticamente, mas você precisa configurá-lo corretamente</li>
+            </ul>
+        </div>
+        
+        <!-- Seção 2: O que são CBS e IBS -->
+        <div id="cbs-e-ibs" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">2</span>
+                O que são CBS e IBS?
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-building me-2"></i>CBS - Contribuição sobre Bens e Serviços
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        O <strong>CBS</strong> é um imposto federal. É como se fosse a "parte do governo federal" do imposto. 
+                        Ele substitui os antigos PIS e COFINS.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        <strong>Exemplo prático:</strong> Se você vende um produto por R$ 100,00 e a alíquota de CBS é 1%, 
+                        você paga R$ 1,00 de CBS para o governo federal.
+                    </p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>IBS - Imposto sobre Bens e Serviços
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        O <strong>IBS</strong> é um imposto estadual e municipal. É como se fosse a "parte dos estados e cidades" do imposto. 
+                        Ele substitui o antigo ICMS.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        <strong>Exemplo prático:</strong> Se você vende um produto por R$ 100,00 e a alíquota de IBS é 18%, 
+                        você paga R$ 18,00 de IBS para o estado e município.
+                    </p>
+                </div>
+            </div>
+            <div class="success-box">
+                <p class="text-gray-800">
+                    <strong>💡 Dica:</strong> Quando você soma CBS + IBS, você tem o <strong>total de impostos</strong> que precisa pagar sobre uma venda. 
+                    Por exemplo: CBS 1% + IBS 18% = 19% de impostos totais.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 3: O que é NCM -->
+        <div id="ncm" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">3</span>
+                O que é NCM e para que serve?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>NCM</strong> significa <strong>"Nomenclatura Comum do Mercosul"</strong>. É como se fosse um "CPF" para cada tipo de produto.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Cada produto tem um código NCM que identifica:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                <li>O tipo de produto (se é alimento, eletrônico, roupa, etc.)</li>
+                <li>A categoria do produto</li>
+                <li>As características principais do produto</li>
+            </ul>
+            <div class="info-box">
+                <p class="text-gray-800">
+                    <strong>Por que o NCM é importante?</strong> O governo usa o NCM para saber qual alíquota de imposto aplicar em cada produto. 
+                    Por exemplo, alimentos básicos podem ter uma alíquota diferente de produtos de luxo.
+                </p>
+            </div>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-2">Exemplo de NCM:</h4>
+                <p class="text-gray-700">
+                    <strong>NCM 2202.10.00</strong> = Águas, incluindo águas minerais e águas gaseificadas, não adicionadas de açúcar ou outros edulcorantes
+                </p>
+                <p class="text-gray-700 mt-2">
+                    <strong>NCM 8517.12.00</strong> = Telefones celulares
+                </p>
+            </div>
+            <div class="warning-box">
+                <p class="text-gray-800">
+                    <strong>⚠️ Atenção:</strong> Você precisa ter o NCM correto de cada produto para que o sistema calcule os impostos corretamente. 
+                    O NCM geralmente vem na nota fiscal do fornecedor ou você pode buscar no site da Receita Federal.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 4: Como funciona o cálculo -->
+        <div id="como-funciona" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">4</span>
+                Como funciona o cálculo de impostos no sistema?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                O sistema CaraCore-PDV calcula os impostos <strong>automaticamente</strong> quando você faz uma venda. 
+                Mas para isso funcionar, você precisa configurar algumas coisas primeiro.
+            </p>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Passo a passo do cálculo:</h4>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li><strong>Você cadastra um produto</strong> com seu NCM</li>
+                    <li><strong>O sistema busca na tabela NCM</strong> qual é a alíquota correta para aquele produto</li>
+                    <li><strong>O sistema pega as alíquotas base</strong> de CBS e IBS que você configurou para o ano atual</li>
+                    <li><strong>O sistema calcula:</strong> Valor do produto × (Alíquota CBS + Alíquota IBS) = Total de impostos</li>
+                    <li><strong>O sistema mostra no cupom</strong> quanto de imposto foi cobrado</li>
+                </ol>
+            </div>
+            <div class="info-box">
+                <h4 class="font-semibold text-gray-900 mb-2">Exemplo prático:</h4>
+                <p class="text-gray-700 mb-2">
+                    Você vende um produto por <strong>R$ 100,00</strong>
+                </p>
+                <p class="text-gray-700 mb-2">
+                    Alíquotas configuradas para 2026: <strong>CBS = 1%</strong> e <strong>IBS = 18%</strong>
+                </p>
+                <p class="text-gray-700 mb-2">
+                    <strong>Cálculo:</strong>
+                </p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li>CBS: R$ 100,00 × 1% = <strong>R$ 1,00</strong></li>
+                    <li>IBS: R$ 100,00 × 18% = <strong>R$ 18,00</strong></li>
+                    <li>Total de impostos: <strong>R$ 19,00</strong></li>
+                </ul>
+                <p class="text-gray-700 mt-2">
+                    O cliente paga R$ 100,00, mas você precisa repassar R$ 19,00 em impostos para o governo.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 5: Como usar a tela de configuração -->
+        <div id="tela-configuracao" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">5</span>
+                Como usar a tela de Configuração Fiscal?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A tela de <strong>Configuração Fiscal</strong> é onde você configura tudo relacionado a impostos. 
+                Para acessá-la, você precisa estar logado como <strong>Administrador</strong>.
+            </p>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Como acessar:</h4>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Faça login no sistema com usuário <strong>Administrador</strong></li>
+                    <li>No menu lateral, clique em <strong>"Fiscal"</strong></li>
+                    <li>Depois clique em <strong>"Configuração Fiscal"</strong></li>
+                </ol>
+            </div>
+            <div class="my-6 text-center">
+                <p class="text-sm text-gray-600 italic">
+                    Imagem antiga removida. Captura geral será republicada no próximo ciclo de atualização visual.
+                </p>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-4 mt-6">
+                A tela de Configuração Fiscal tem <strong>4 seções principais</strong>:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                    <h4 class="font-semibold text-green-900 mb-2">
+                        <i class="fas fa-cog me-2"></i>1. Configurações de Split
+                    </h4>
+                    <p class="text-gray-700 text-sm">
+                        Onde você configura referências ligadas ao PIX no escopo atual, sem tratar split automático como funcionalidade vigente
+                    </p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                    <h4 class="font-semibold text-green-900 mb-2">
+                        <i class="fas fa-calculator me-2"></i>2. Motor da Reforma Tributária
+                    </h4>
+                    <p class="text-gray-700 text-sm">
+                        Onde você configura as alíquotas de CBS e IBS para cada ano (2026-2033)
+                    </p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                    <h4 class="font-semibold text-blue-900 mb-2">
+                        <i class="fas fa-barcode me-2"></i>3. Gestão de NCM
+                    </h4>
+                    <p class="text-gray-700 text-sm">
+                        Onde você faz upload da tabela NCM e busca códigos específicos
+                    </p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <h4 class="font-semibold text-yellow-900 mb-2">
+                        <i class="fas fa-history me-2"></i>4. Histórico de Alíquotas
+                    </h4>
+                    <p class="text-gray-700 text-sm">
+                        Onde você vê todas as alterações que foram feitas nas alíquotas
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Seção 6: Como configurar alíquotas -->
+        <div id="configurar-aliquotas" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">6</span>
+                Como configurar as alíquotas de CBS e IBS?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                As alíquotas são os <strong>percentuais</strong> que o governo vai cobrar de imposto. 
+                Esses percentuais mudam a cada ano durante a Reforma Tributária (2026-2033).
+            </p>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Passo a passo:</h4>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li>
+                        <strong>Acesse a seção "Motor da Reforma Tributária"</strong> na tela de Configuração Fiscal
+                    </li>
+                    <li>
+                        <strong>Você verá uma tabela</strong> com os anos de 2026 até 2033
+                    </li>
+                    <li>
+                        <strong>Para cada ano, digite:</strong>
+                        <ul class="list-disc list-inside ml-6 mt-2">
+                            <li>A <strong>Alíquota CBS</strong> (em percentual, por exemplo: 1.00 para 1%)</li>
+                            <li>A <strong>Alíquota IBS</strong> (em percentual, por exemplo: 18.00 para 18%)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>O sistema calcula automaticamente</strong> o total (CBS + IBS) e mostra na última coluna
+                    </li>
+                    <li>
+                        <strong>Clique em "Salvar Alíquotas"</strong> para salvar as configurações
+                    </li>
+                </ol>
+            </div>
+            <div class="my-6 text-center wiki-image-frame">
+                <img src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_03_config_modulos_fiscais.png" 
+                     alt="Motor da Reforma Tributária - Tabela de Alíquotas CBS e IBS" 
+                     class="wiki-image">
+                <p class="text-sm text-gray-500 mt-2 italic">
+                    Figura: Tabela do Motor da Reforma Tributária com alíquotas de CBS e IBS por ano (2026-2033)
+                </p>
+            </div>
+            <div class="info-box">
+                <h4 class="font-semibold text-gray-900 mb-2">💡 Dica importante:</h4>
+                <p class="text-gray-700">
+                    As alíquotas oficiais são divulgadas pelo governo. Você deve verificar no site da Receita Federal 
+                    quais são os valores corretos para cada ano antes de configurar.
+                </p>
+            </div>
+            <div class="warning-box">
+                <h4 class="font-semibold text-gray-900 mb-2">⚠️ Atenção:</h4>
+                <p class="text-gray-700">
+                    O total de CBS + IBS <strong>não pode ultrapassar 100%</strong>. Se você ver a coluna "Total" 
+                    ficando vermelha, significa que a soma está acima de 100% e você precisa corrigir os valores.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 7: Upload NCM -->
+        <div id="upload-ncm" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">7</span>
+                Como fazer upload da tabela NCM?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A tabela NCM é um arquivo que contém todos os códigos NCM e suas respectivas alíquotas de imposto. 
+                Esse arquivo é fornecido pelo <strong>IBPT</strong> (Instituto Brasileiro de Planejamento e Tributação).
+            </p>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Passo a passo:</h4>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li>
+                        <strong>Baixe o arquivo CSV do IBPT</strong>
+                        <ul class="list-disc list-inside ml-6 mt-2 text-sm">
+                            <li>Você pode baixar no site do IBPT (geralmente é pago)</li>
+                            <li>Ou usar uma tabela fornecida pela Receita Federal</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Na tela de Configuração Fiscal, vá até a seção "Gestão de NCM"</strong>
+                    </li>
+                    <li>
+                        <strong>Clique em "Escolher arquivo"</strong> ou "Selecionar arquivo"
+                    </li>
+                    <li>
+                        <strong>Selecione o arquivo CSV</strong> que você baixou
+                    </li>
+                    <li>
+                        <strong>Clique em "Enviar Arquivo"</strong> ou "Upload"
+                    </li>
+                    <li>
+                        <strong>Aguarde o processamento</strong> - o sistema vai importar todos os códigos NCM
+                    </li>
+                </ol>
+            </div>
+            <div class="my-6 text-center wiki-image-frame">
+                <img src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_03_config_gestao_de_ncm.png" 
+                     alt="Gestão de NCM - Upload de Tabela IBPT" 
+                     class="wiki-image">
+                <p class="text-sm text-gray-500 mt-2 italic">
+                    Figura: Seção de Gestão de NCM mostrando a opção de upload de arquivo CSV do IBPT
+                </p>
+            </div>
+            <div class="my-4 text-center wiki-image-frame">
+                <img src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_03_config_modulos_fiscais.png" 
+                     alt="Sincronização de NCM via API - Alternativa ao Upload" 
+                     class="wiki-image">
+                <p class="text-sm text-gray-500 mt-2 italic">
+                    Figura: Opção alternativa de sincronizar NCM individual via API da Receita Federal
+                </p>
+            </div>
+            <div class="info-box">
+                <h4 class="font-semibold text-gray-900 mb-2">💡 Por que fazer upload da tabela NCM?</h4>
+                <p class="text-gray-700">
+                    Quando você faz upload da tabela NCM, o sistema passa a "conhecer" todos os produtos e suas alíquotas. 
+                    Assim, quando você cadastrar um produto com seu NCM, o sistema já sabe automaticamente qual imposto aplicar.
+                </p>
+            </div>
+            <div class="warning-box">
+                <h4 class="font-semibold text-gray-900 mb-2">⚠️ Importante:</h4>
+                <p class="text-gray-700">
+                    Você precisa fazer upload da tabela NCM <strong>pelo menos uma vez</strong> antes de começar a usar o sistema. 
+                    E é recomendado fazer upload novamente quando houver atualizações na tabela (geralmente a cada 3 meses).
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 8: Buscar NCM -->
+        <div id="buscar-ncm" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">8</span>
+                Como buscar um NCM específico?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Às vezes você precisa descobrir qual é o NCM de um produto ou verificar se um NCM está cadastrado no sistema.
+            </p>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Passo a passo:</h4>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li>
+                        <strong>Na tela de Configuração Fiscal, vá até a seção "Gestão de NCM"</strong>
+                    </li>
+                    <li>
+                        <strong>Encontre o campo "Busca Rápida de NCM"</strong>
+                    </li>
+                    <li>
+                        <strong>Digite o código NCM</strong> que você quer buscar (por exemplo: 2202.10.00)
+                    </li>
+                    <li>
+                        <strong>Clique em "Buscar"</strong>
+                    </li>
+                    <li>
+                        <strong>O sistema vai mostrar:</strong>
+                        <ul class="list-disc list-inside ml-6 mt-2 text-sm">
+                            <li>Se o NCM foi encontrado</li>
+                            <li>A descrição do produto</li>
+                            <li>As alíquotas de imposto relacionadas</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="info-box">
+                <h4 class="font-semibold text-gray-900 mb-2">💡 Dica:</h4>
+                <p class="text-gray-700">
+                    Se você não souber o NCM de um produto, você pode:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 mt-2">
+                    <li>Consultar na nota fiscal do fornecedor</li>
+                    <li>Buscar no site da Receita Federal</li>
+                    <li>Consultar um contador ou especialista fiscal</li>
+                </ul>
+            </div>
+            <div class="my-6 text-center wiki-image-frame">
+                <img src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_03_config_gestao_de_ncm.png" 
+                     alt="Busca Rápida de NCM - Campo de busca e resultado" 
+                     class="wiki-image">
+                <p class="text-sm text-gray-500 mt-2 italic">
+                    Figura: Campo de busca rápida de NCM na seção de Gestão de NCM
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 9: PIX no escopo atual -->
+        <div id="pix-split" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">9</span>
+                O que o PIX significa no escopo atual?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                No escopo público atual, <strong>PIX deve ser entendido como meio de pagamento configurável e registrável dentro da operação do PDV</strong>. Isso ajuda a pequena loja a conferir melhor o que entrou por PIX no caixa e no fechamento.
+            </p>
+            <div class="info-box">
+                <h4 class="font-semibold text-gray-900 mb-2">Leitura correta para a loja:</h4>
+                <p class="text-gray-700 mb-3">
+                    O foco da conversa comercial não deve ser automação futura. O foco deve ser responder se a loja consegue <strong>registrar, conferir e fechar</strong> pagamentos via PIX com mais clareza na rotina atual.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                    <li><strong>Pagamento registrado no PDV</strong> com leitura operacional do caixa</li>
+                    <li><strong>Conferência por meio de pagamento</strong> para fechamento diário</li>
+                    <li><strong>Configuração e evolução assistida</strong> conforme o perfil real da operação</li>
+                </ul>
+            </div>
+            <div class="warning-box">
+                <h4 class="font-semibold text-gray-900 mb-2">⚠️ Status Atual:</h4>
+                <p class="text-gray-700">
+                    <strong>PIX Split não deve ser vendido como funcionalidade ativa da oferta pública atual.</strong>
+                    Se houver demanda por automação específica, isso deve entrar como avaliação futura de produto e implantação, nunca como promessa implícita desta página.
+                </p>
+            </div>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Como abordar na demonstração:</h4>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Mostrar como o pagamento via PIX entra no fluxo atual de venda e conferência.</li>
+                    <li>Explicar que a camada fiscal calcula e organiza a leitura do que foi vendido e tributado.</li>
+                    <li>Deixar explícito que split automático, adquirência e integrações específicas não fazem parte da promessa pública vigente.</li>
+                </ol>
+            </div>
+            <div class="my-6 text-center wiki-image-frame">
+                <img src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_03_config_configuracoes_de_pix_split.png" 
+                     alt="Configurações de PIX Split - Chaves PIX e Toggle de Ativação" 
+                     class="wiki-image">
+                <p class="text-sm text-gray-500 mt-2 italic">
+                    Figura: Seção fiscal com referências ligadas ao PIX e configurações relacionadas
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 10: Histórico -->
+        <div id="historico" class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">10</span>
+                Como ver o histórico de alterações?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                O sistema guarda um <strong>histórico completo</strong> de todas as alterações que foram feitas nas alíquotas. 
+                Isso é importante para auditoria e para você saber quando e quem alterou cada configuração.
+            </p>
+            <div class="step-box">
+                <h4 class="font-semibold text-gray-900 mb-3">Como acessar o histórico:</h4>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Na tela de Configuração Fiscal, clique no botão <strong>"Ver Histórico"</strong> na seção Motor da Reforma Tributária</li>
+                    <li>Ou acesse diretamente pelo menu <strong>"Fiscal" → "Histórico de Alíquotas"</strong></li>
+                    <li>Você verá uma tabela com todas as alterações</li>
+                </ol>
+            </div>
+            <div class="my-6 text-center">
+                <p class="text-gray-600 mb-2">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Nota:</strong> A imagem do histórico será adicionada após a captura do screenshot.
+                </p>
+            </div>
+            <div class="info-box">
+                <h4 class="font-semibold text-gray-900 mb-2">O que você vê no histórico:</h4>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                    <li><strong>Data e hora</strong> da alteração</li>
+                    <li><strong>Quem fez</strong> a alteração (usuário)</li>
+                    <li><strong>Qual ano</strong> foi alterado</li>
+                    <li><strong>Valor antigo</strong> da alíquota</li>
+                    <li><strong>Valor novo</strong> da alíquota</li>
+                    <li><strong>Tipo</strong> de alteração (CBS ou IBS)</li>
+                </ul>
+            </div>
+            <div class="success-box">
+                <h4 class="font-semibold text-gray-900 mb-2">✅ Por que isso é útil:</h4>
+                <p class="text-gray-700">
+                    O histórico ajuda você a:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 mt-2">
+                    <li>Saber quando as alíquotas foram alteradas</li>
+                    <li>Reverter alterações erradas (se necessário)</li>
+                    <li>Ter um registro para auditoria fiscal</li>
+                    <li>Entender quem fez cada alteração no sistema</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Seção 11: Operação local -->
+        <div id="offline-first" class="section-card" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); border: 2px solid #667eea;">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">11</span>
+                O que a operação local resolve hoje?
+            </h2>
+            <div class="info-box" style="background: #e0e7ff; border-left-color: #667eea;">
+                <p class="text-gray-800 leading-relaxed">
+                    <strong>A operação local em Windows com SQLite ajuda a pequena loja a depender menos da internet no dia a dia.</strong>
+                    O valor principal aqui é simples: reduzir susto operacional no balcão e preservar continuidade do trabalho local.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">
+                <i class="fas fa-shield-alt me-2 text-green-600"></i>Por que isso é importante?
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Imagine que você está finalizando uma venda importante e, de repente, a internet cai. 
+                Com um sistema tradicional, você perderia a venda ou teria que anotar manualmente e digitar depois.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>Com a operação local do CaraCore-PDV:</strong>
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                <li>✅ A base operacional fica no computador da loja com <strong>SQLite</strong></li>
+                <li>✅ O caixa não depende da nuvem como premissa principal de uso</li>
+                <li>✅ A loja percebe mais previsibilidade em ambiente com internet instável</li>
+                <li>✅ O modelo local ajuda na continuidade do dia a dia e na leitura do fechamento</li>
+            </ul>
+            <div class="success-box">
+                <p class="text-gray-800">
+                    <strong>✅ Exemplo prático:</strong> se a internet oscilar em horário de pico, a conversa correta com a pequena loja é que o sistema foi desenhado para operar localmente e reduzir dependência de infraestrutura externa na rotina principal.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">
+                <i class="fas fa-cog me-2 text-green-600"></i>Como funciona?
+            </h3>
+            <div class="step-box">
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>1. Operação desktop:</strong> o PDV roda localmente em Windows.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>2. Base local:</strong> a persistência operacional padrão usa SQLite local.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>3. Continuidade:</strong> isso ajuda a loja a trabalhar com menos dependência da internet no fluxo principal.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>4. Limite importante:</strong> serviços externos, como SEFAZ e infraestruturas de pagamento, continuam sendo externos ao software.
+                </p>
+            </div>
+            <div class="warning-box">
+                <p class="text-gray-800">
+                    <strong>⚠️ Importante:</strong> operação local não significa independência total de SEFAZ, regras fiscais ou integrações externas. A promessa correta é <strong>menor dependência de internet na rotina do PDV</strong>, não autonomia absoluta de todo o ecossistema.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 12: Contingência e limites -->
+        <div id="modo-contingencia" class="section-card" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border: 2px solid #ef4444;">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">12</span>
+                Como ler contingência e limites do escopo?
+            </h2>
+            <div class="info-box" style="background: #fee2e2; border-left-color: #ef4444;">
+                <p class="text-gray-800 leading-relaxed">
+                    <strong>Contingência fiscal deve ser explicada como mecanismo para lidar com indisponibilidade externa, e não como promessa irrestrita de qualquer infraestrutura futura.</strong>
+                    A leitura correta para a pequena loja é: existe preocupação real com continuidade operacional e com o tratamento de cenários de indisponibilidade no escopo fiscal vigente.
+                </p>
+            </div>
+            <div class="warning-box" style="background: #fef3c7; border-left-color: #f59e0b;">
+                <p class="text-gray-800">
+                    <strong>Leitura de escopo:</strong> não usar esta seção para vender SMS, Android conectado, TEF, voucher, SAT, MFE, pinpad ou qualquer automação externa não enquadrada como entrega pública vigente.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">
+                <i class="fas fa-mobile-alt me-2 text-red-600"></i>Por que isso é importante?
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Imagine que você está em uma loja movimentada e, de repente, a internet cai completamente. 
+                Com um sistema tradicional, você teria que parar todas as vendas e esperar a internet voltar.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>Com a leitura correta de contingência do CaraCore-PDV:</strong>
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                <li>✅ A loja entende que serviços governamentais e de pagamento podem falhar</li>
+                <li>✅ A equipe comercial não promete cobertura além do que foi homologado</li>
+                <li>✅ A implantação assistida passa a ser parte da segurança operacional</li>
+                <li>✅ A conversa fiscal fica mais honesta e menos sujeita a surpresa pós-venda</li>
+            </ul>
+            <div class="success-box" style="background: #dcfce7; border-left-color: #16a34a;">
+                <p class="text-gray-800">
+                    <strong>✅ Exemplo prático:</strong> se a SEFAZ estiver instável, a resposta correta ao cliente é que o produto trabalha com escopo fiscal definido e com orientação de contingência no ambiente implantado, não que qualquer cenário externo está automaticamente resolvido por integrações universais.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">
+                <i class="fas fa-cog me-2 text-red-600"></i>Como funciona?
+            </h3>
+            <div class="step-box">
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>1. Escopo definido:</strong> o produto público atual cobre NFC-e e configuração fiscal no enquadramento vigente.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>2. Implantação e homologação:</strong> cenários de indisponibilidade precisam ser lidos junto com a configuração real da loja e com orientação assistida.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>3. Continuidade operacional:</strong> a operação local reduz parte do risco, mas não elimina dependências externas.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>4. Limite importante:</strong> integrações específicas e contingências avançadas só podem entrar na promessa comercial quando houver prova rastreável e homologação correspondente.
+                </p>
+            </div>
+            <div class="warning-box" style="background: #fef3c7; border-left-color: #f59e0b;">
+                <p class="text-gray-800">
+                    <strong>⚠️ Requisitos:</strong> para falar de contingência com segurança, você precisa considerar:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 mt-2">
+                    <li>ambiente realmente implantado e homologado</li>
+                    <li>orientação fiscal e operacional para a rotina da loja</li>
+                    <li>clareza sobre o que está ativo hoje e o que é apenas trilha futura</li>
+                </ul>
+            </div>
+            <div class="warning-box">
+                <p class="text-gray-800">
+                    <strong>⚠️ Importante:</strong> esta seção existe para evitar ilusão comercial. Quando houver caso sensível de contingência fiscal, a abordagem correta é validação assistida em consultoria e não promessa genérica de arquitetura futura.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Seção 13: Guia de Bolso - Governo fora do ar -->
+        <div id="guia-bolso-governo-fora" class="section-card" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 2px solid #10b981;">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                <span class="step-number">13</span>
+                O que fazer quando a SEFAZ fica fora do ar?
+            </h2>
+            <p class="text-lg text-gray-800 mb-4">
+                <strong>Guia de bolso para a pequena operação</strong>
+            </p>
+            <div class="info-box" style="background: #d1fae5; border-left-color: #10b981;">
+                <p class="text-gray-800 leading-relaxed">
+                    Quando a SEFAZ fica fora do ar, o problema é de infraestrutura externa. A função desta página é orientar a leitura correta do cenário e evitar reação improvisada da loja.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">O que acontece no sistema?</h3>
+            <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-4">
+                <li><strong>A emissão fiscal depende de serviço externo</strong> e pode sofrer indisponibilidade temporária.</li>
+                <li><strong>A operação local do PDV reduz parte do atrito</strong>, mas não elimina a dependência da SEFAZ.</li>
+                <li><strong>O procedimento correto</strong> depende da configuração homologada da loja e da orientação fiscal adotada na implantação.</li>
+                <li><strong>A equipe deve registrar o cenário</strong> e seguir o fluxo assistido previsto para aquele ambiente.</li>
+            </ol>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">O que você deve fazer?</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                <li><strong>Não improvisar promessa técnica</strong> para cliente ou operador.</li>
+                <li><strong>Seguir o procedimento orientado na implantação</strong> para o caso fiscal daquela loja.</li>
+                <li><strong>Registrar o evento</strong> para suporte e conferência posterior.</li>
+                <li><strong>Usar consultoria e suporte</strong> quando houver dúvida sobre emissão, contingência e regularização.</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+                Instabilidades nos servidores governamentais são <strong>externas ao software</strong>. A comunicação correta não é prometer imunidade total, e sim mostrar que o produto foi pensado para operar com mais previsibilidade local e com apoio de configuração assistida no fiscal.
+            </p>
+            <p class="text-gray-600 text-sm">
+                Se a loja precisar validar cenários específicos de indisponibilidade, homologação fiscal ou rotina de emissão, o caminho correto é demonstração assistida e validação operacional do ambiente real.
+            </p>
+        </div>
+        
+        <!-- FAQ -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                <i class="fas fa-question-circle me-2 text-green-600"></i>Perguntas Frequentes (FAQ)
+            </h2>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">P: Preciso configurar tudo isso sozinho?</h3>
+                <p class="text-gray-700">
+                    <strong>R:</strong> Não necessariamente! A Cara Core Informática oferece serviços de consultoria especializada 
+                    para ajudar você a configurar tudo corretamente. 
+                    <a href="https://pdv.caracore.com.br/consultoria.html" class="text-green-600 hover:underline">Saiba mais sobre nossos serviços →</a>
+                </p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">P: Com que frequência preciso atualizar as alíquotas?</h3>
+                <p class="text-gray-700">
+                    <strong>R:</strong> As alíquotas mudam anualmente durante a Reforma Tributária (2026-2033). 
+                    Você deve verificar e atualizar no início de cada ano, ou sempre que o governo divulgar novas alíquotas.
+                </p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">P: Esta wiki significa que o produto já entrega TEF, voucher ou PIX Split automático?</h3>
+                <p class="text-gray-700">
+                    <strong>R:</strong> Não. A leitura correta do escopo público atual é NFC-e, configuração fiscal, NCM, PIX configurável, pagamento misto, conferência de caixa e operação local. TEF, voucher, SAT, MFE, pinpad homologado e split automático não devem ser tratados como entrega vigente nesta página.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">P: E se eu errar alguma configuração?</h3>
+                <p class="text-gray-700">
+                    <strong>R:</strong> Você pode sempre corrigir! Basta acessar a tela de Configuração Fiscal novamente e alterar os valores. 
+                    O sistema guarda o histórico de todas as alterações, então você pode ver o que foi alterado e quando.
+                </p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">P: O sistema calcula os impostos automaticamente nas vendas?</h3>
+                <p class="text-gray-700">
+                    <strong>R:</strong> Sim! Depois que você configurar as alíquotas e fazer upload da tabela NCM, 
+                    o sistema calcula automaticamente os impostos em cada venda. Você só precisa garantir que os produtos 
+                    estejam cadastrados com seus NCMs corretos.
+                </p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">P: Preciso ser contador para usar isso?</h3>
+                <p class="text-gray-700">
+                    <strong>R:</strong> Não! Este guia foi feito justamente para pessoas que não são especialistas em tributação. 
+                    Mas se você tiver dúvidas complexas, é sempre recomendado consultar um contador ou usar nossos serviços de consultoria.
+                </p>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="section-card bg-gradient-to-r from-purple-50 to-indigo-50 border-2 border-purple-200">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                    Precisa de Ajuda Profissional?
+                </h2>
+                <p class="text-gray-700 mb-6">
+                    Nossa equipe pode ajudar você a configurar o fiscal com clareza, validar o escopo atual da pequena operação e evitar promessas fora da realidade do ambiente implantado.
+                </p>
+                <div class="text-center">
+                    <a href="https://pdv.caracore.com.br/consultoria.html" class="inline-flex items-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                        Agendar demonstração
+                    </a>
+                    <p class="mt-4 text-sm text-gray-600">
+                        <a href="https://wiki.caracore.com.br/projeto-pdv.html" class="text-green-700 font-semibold hover:text-green-800">Ver perfil ideal</a>
+                        ·
+                        <a href="https://pdv.caracore.com.br/" class="text-green-700 font-semibold hover:text-green-800">Voltar à loja</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 green-bg rounded-lg flex items-center justify-center">
+                            <i class="fas fa-cash-register text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold">Cara Core</h3>
+                            <p class="text-xs">Informática</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Soluções tecnológicas de ponta para o varejo brasileiro.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://pdv.caracore.com.br/" class="hover:text-white transition">Início</a></li>
+                        <li><a href="#configuracao-fiscal" class="hover:text-white transition">Configuração Fiscal</a></li>
+                        <li><a href="wiki-fiscal.html" class="hover:text-white transition">Wiki Fiscal</a></li>
+                        <li><a href="https://pdv.caracore.com.br/tecnologia.html" class="hover:text-white transition">Tecnologia</a></li>
+                        <li><a href="readme.html" class="hover:text-white transition">Documentação</a></li>
+                        <li><a href="https://pdv.caracore.com.br/consultoria.html" class="hover:text-white transition">Consultoria</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-comments w-5 mr-3 text-green-400"></i>
+                            <a href="https://pdv.caracore.com.br/canal-feedback.html" class="hover:text-white transition">Canal de contato da loja</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-chart-line w-5 mr-3 text-green-400"></i>
+                            <a href="https://wiki.caracore.com.br/projeto-pdv.html" class="hover:text-white transition">Análise comercial</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-briefcase w-5 mr-3 text-green-400"></i>
+                            <a href="https://pdv.caracore.com.br/consultoria.html" class="hover:text-white transition">Consultoria</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2024–2026 Cara Core Informática. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript para Menu Mobile -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Fechar menu ao clicar em um link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+        
+        // Smooth scroll para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

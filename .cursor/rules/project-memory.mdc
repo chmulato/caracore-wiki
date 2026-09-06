@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória — caracore-wiki
 
-**Atualizado:** 2026-08-27 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+**Atualizado:** 2026-09-05 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
 
 ## Repositório e papel
 - **caracore-wiki:** centro de **alinhamento** (o que é cada produto, o que já existe, o que é Garagem). Não é manual de botão.
@@ -23,8 +23,10 @@ alwaysApply: true
 - **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
 
 ## CaraCore PDV — duas linhas desktop
-- Java: v3.2.2-free · pdv.caracore.com.br · Java 25 · Win/Linux/macOS.
-- Rust: v0.1.2 piloto Windows · pdv-rust.caracore.com.br · download = tag v0.1.2 em `caracore-pdv-releases` (**nunca** `/latest`).
+- Java Free: `v3.2.2-free` · pdv.caracore.com.br · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja, 10 SMS/mês; sem PIX/NF-e. Premium R$ 79,90/mês.
+- Java v4: `v4.0.0-rc1` pré-release (Qute); T032 aberto; não substitui o Free.
+- Loja: CTA = demonstração presencial.
+- Rust: v0.1.2 piloto Windows · 100 vendas na vida (não/mês) · download = tag v0.1.2 em `caracore-pdv-releases` (**nunca** `/latest`).
 - Nenhuma substitui a outra. V3 negócio ≠ v3.2.x ≠ v0.1.x.
 
 ## CaraCore CSO
