@@ -80,7 +80,7 @@
                         <li>
                             <a href="tecnologias.html" class="active"><i class="bi bi-gear"></i> Tecnologias Utilizadas</a>
                             <ul class="submenu">
-                                <li><a href="#java-spring">Java, Quarkus e JavaFX</a></li>
+                                <li><a href="#java-spring">Java, Quarkus e navegador</a></li>
                                 <li><a href="#python-flask">Python & Flask</a></li>
                                 <li><a href="#frontend">HTML/CSS/JavaScript</a></li>
                                 <li><a href="#oauth">OAuth 2.1 & OIDC</a></li>
@@ -111,7 +111,7 @@
                             <p>Imagine que você está construindo uma casa. Você precisa de diferentes materiais: tijolos, cimento, madeira, tinta, etc. Na programação, a "stack" são as diferentes tecnologias (linguagens, ferramentas, serviços) que usamos para construir nossos sistemas.</p>
                             <p>Cada tecnologia tem uma função específica, como os materiais de construção:</p>
                             <ul class="feature-list">
-                                <li><strong>Java, Quarkus e JavaFX:</strong> A base do nosso PDV desktop e de outras trilhas Java do ecossistema</li>
+                                <li><strong>Java e Quarkus:</strong> A base do nosso PDV desktop (UI no navegador) e de outras trilhas Java do ecossistema</li>
                                 <li><strong>Python:</strong> A "linguagem" que usamos para escrever programas</li>
                                 <li><strong>Flask:</strong> A "estrutura" para criar sites e APIs</li>
                                 <li><strong>HTML/CSS:</strong> A "aparência" dos sites</li>
@@ -120,18 +120,18 @@
                         </div>
                     </section>
 
-                    <!-- Java, Quarkus e JavaFX (CaraCore PDV) -->
+                    <!-- Java, Quarkus e navegador (CaraCore PDV) -->
                     <section id="java-spring" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv">
-                                <h2><i class="bi bi-cash-stack"></i> Java, Quarkus e JavaFX (linha PDV Desktop)</h2>
+                                <h2><i class="bi bi-cash-stack"></i> Java, Quarkus e navegador (linha PDV Desktop)</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Java 25</span>
                                     <span class="tech-badge">Quarkus</span>
-                                    <span class="tech-badge">JavaFX</span>
+                                    <span class="tech-badge">Navegador</span>
                                     <span class="tech-badge">JPA / Hibernate</span>
                                     <span class="tech-badge">SQLite</span>
-                                    <span class="tech-badge">v3.2.3-free</span>
+                                    <span class="tech-badge">v3.2.4-free</span>
                                 </div>
                             </div>
                             <div class="project-body">
@@ -140,10 +140,10 @@
                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Java</strong> é uma linguagem de programação muito usada em sistemas de empresas, bancos e lojas. É estável, segura e roda em praticamente qualquer computador.</p>
                                         
-                                        <p><strong>Quarkus</strong> ajuda a organizar APIs e integrações locais com foco em desempenho. <strong>JavaFX</strong> cuida da interface desktop que o operador usa no dia a dia.</p>
+                                        <p><strong>Quarkus</strong> ajuda a organizar APIs e integrações locais com foco em desempenho. O operador do PDV Java abre o <strong>navegador</strong> em <code>http://localhost:8080/login</code> — não é janela JavaFX.</p>
                                         
                                         <div class="alert alert-info">
-                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Desktop (Java · JavaFX)</strong> e na <strong>Gestão de Frotas</strong> do <a href="projeto-cso.html">CaraCore CSO</a> (Quarkus + Qute/HTMX). O <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> também é desktop, com stack separada (Tauri + React).
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Desktop (Java · Quarkus)</strong> e na <strong>Gestão de Frotas</strong> do <a href="projeto-cso.html">CaraCore CSO</a> (Quarkus + Qute/HTMX). O <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> também é desktop, com stack separada (Tauri + React).
                                         </div>
                                         <div class="alert alert-info mt-3 mb-0" role="note">
                                             <i class="bi bi-megaphone-fill"></i> <strong>Posicionamento V3 padronizado:</strong> foco em <strong>pequenos e médios negócios</strong>, direção prática para <strong>PIX Split 2027</strong> e transparência sobre o que já está pronto e o que está em evolução.
@@ -155,7 +155,7 @@
                                         <ul class="feature-list">
                                             <li><strong>Java 25:</strong> LTS (set/2025) com virtual threads, Valhalla e melhorias de performance</li>
                                             <li><strong>Quarkus:</strong> backend local, APIs REST, persistência e integrações do domínio</li>
-                                            <li><strong>JavaFX:</strong> interface operacional desktop do checkout atual</li>
+                                            <li><strong>Navegador:</strong> interface operacional do checkout atual em <code>http://localhost:8080/login</code></li>
                                             <li><strong>SQLite:</strong> banco local soberano para operação e contingência</li>
                                             <li><strong>Qualidade validada:</strong> 1072 testes verdes na validação consolidada de 2026-06-02</li>
                                         </ul>
@@ -185,7 +185,7 @@
                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Rust</strong> é uma linguagem moderna focada em segurança e performance. <strong>Tauri</strong> empacota o aplicativo para Windows com instalador em português, mantendo o programa enxuto.</p>
                                         <div class="alert alert-info">
-                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> no <strong>CaraCore PDV (Rust + Tauri 2)</strong>, release v0.1.2, piloto Windows. O CaraCore PDV Desktop Java (canal v3.2.3-free) permanece maduro e independente — ambos são aplicativos desktop.
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> no <strong>CaraCore PDV (Rust + Tauri 2)</strong>, release v0.1.2, piloto Windows. O CaraCore PDV Desktop Java (canal v3.2.4-free) permanece maduro e independente — ambos são aplicativos desktop.
                                         </div>
                                     </div>
                                     <div class="col-md-6">

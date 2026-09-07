@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaraCore PDV — Java e Rust | Wiki Cara Core</title>
-  <meta name="description" content="Hub do CaraCore PDV: linha madura (canal v3.2.3-free, Windows/Linux/macOS) e linha piloto (Windows v0.1.2). Dois desktops, mesma filosofia; nenhuma substitui a outra.">
+  <meta name="description" content="Hub do CaraCore PDV: linha madura (canal v3.2.4-free, Windows/Linux/macOS) e linha piloto (Windows v0.1.2). Dois desktops, mesma filosofia; nenhuma substitui a outra.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <meta property="og:title" content="CaraCore PDV — Java e Rust | Wiki Cara Core">
-  <meta property="og:description" content="Dois PDVs desktop: Java maduro (v3.2.3-free) e Rust piloto (v0.1.2). Nenhuma linha substitui a outra.">
+  <meta property="og:description" content="Dois PDVs desktop: Java maduro (v3.2.4-free) e Rust piloto (v0.1.2). Nenhuma linha substitui a outra.">
   <meta property="og:type" content="article">
 </head>
 <body>
@@ -81,7 +81,7 @@
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Coexistência e versões:</strong> Java usa o canal <strong>v3.2.3-free</strong>; Rust usa a release <strong>v0.1.2</strong>. São faixas independentes. <strong>V3</strong> é o posicionamento de negócio (PME e PIX Split 2027), não o número de release de nenhuma das linhas.
+            <strong>Coexistência e versões:</strong> Java usa o canal <strong>v3.2.4-free</strong>; Rust usa a release <strong>v0.1.2</strong>. São faixas independentes. <strong>V3</strong> é o posicionamento de negócio (PME e PIX Split 2027), não o número de release de nenhuma das linhas.
           </div>
 
           <div class="row g-4 mb-4">
@@ -91,17 +91,17 @@
                   <h2 class="h4 mb-0"><i class="bi bi-cash-register"></i> Linha madura</h2>
                 </div>
                 <div class="project-body">
-                  <p><span class="badge bg-success">Oferta madura</span> · canal <strong>v3.2.3-free</strong></p>
-                  <p>Caixa multi-plataforma para PME: vendas, PIX, comprovantes e operação local mesmo sem internet. Requisito do usuário: <strong>Java 25+</strong> (Temurin recomendado).</p>
+                  <p><span class="badge bg-success">Oferta madura</span> · canal <strong>v3.2.4-free</strong></p>
+                  <p>Caixa multi-plataforma para PME: cadastrar produto, registrar venda no navegador e operar local mesmo sem internet. Requisito: <strong>Java 25+</strong> (Temurin recomendado). Sem PIX integrado e sem NF-e/NFC-e no Free.</p>
                   <ul class="feature-list">
                     <li>Oficina: <code>caracore-pdv</code></li>
                     <li>Loja: <code>caracore-pdv-releases</code> — <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a></li>
-                    <li>Stack: Java 25 · Quarkus · JavaFX · SQLite</li>
+                    <li>Stack: Java 25 · Quarkus · SQLite · navegador em <code>localhost:8080/login</code></li>
                     <li>Windows · Linux · macOS</li>
                   </ul>
                   <div class="d-flex flex-wrap gap-2">
                     <a href="pdv/index.html" class="btn-wiki"><i class="bi bi-journal-text"></i> Manual operacional Java</a>
-                    <a href="https://pdv.caracore.com.br/download.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-download"></i> Baixar v3.2.3-free</a>
+                    <a href="https://pdv.caracore.com.br/download.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-download"></i> Baixar v3.2.4-free</a>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@
               <div class="col-md-6">
                 <div class="leigos-section h-100">
                   <h3 class="h5"><i class="bi bi-people"></i> O que muda para você</h3>
-                  <p>Os dois programas fazem o trabalho do caixa: registrar venda, receber PIX, fechar o dia e guardar os dados no computador da loja. A diferença é a tecnologia por baixo e o estágio da oferta.</p>
+                  <p>Os dois programas fazem o trabalho do caixa: registrar venda, fechar o dia e guardar os dados no computador da loja. A diferença é a tecnologia por baixo e o estágio da oferta. No Java Free não há PIX integrado (QR/gateway); isso entra no Premium. O piloto Rust documenta PIX com QR nas próprias regras da edição gratuita.</p>
                   <ul class="feature-list">
                     <li><strong>Java</strong> — o caminho maduro, já em Windows, Linux e macOS</li>
                     <li><strong>Rust</strong> — piloto Windows, instalador em português, para avaliar a nova stack</li>
@@ -161,24 +161,24 @@
 
           <section class="mb-5" id="java-detalhe">
             <h2><i class="bi bi-cash-register"></i> O que o PDV Desktop Java já entrega</h2>
-            <p>Canal público atual: <strong>v3.2.3-free</strong> (06/09/2026). Pacotes ZIP para Windows, Linux e macOS. Primeiro acesso: Java 25+, pasta nova, <code>iniciar-pdv.bat</code> / <code>iniciar-pdv.sh</code>, depois <code>http://localhost:8080/login</code> com <code>admin</code> / <code>admin</code>. Roteiro: <a href="https://pdv.caracore.com.br/download.html#instalacao" target="_blank" rel="noopener">instalação com sucesso</a>. Manual e Wiki Fiscal: <a href="pdv/index.html">manual operacional Java</a>.</p>
+            <p>Canal público atual: <strong>v3.2.4-free</strong> (07/09/2026). Pacotes ZIP para Windows, Linux e macOS. Primeiro acesso: Java 25+, pasta nova, <code>iniciar-pdv.bat</code> / <code>iniciar-pdv.sh</code>, depois <code>http://localhost:8080/login</code> com <code>admin</code> / <code>admin</code>. Em seguida cadastre um produto e registre a primeira venda no caixa pela interface do navegador. Roteiro: <a href="https://pdv.caracore.com.br/download.html#instalacao" target="_blank" rel="noopener">instalação com sucesso</a>. Manual e Wiki Fiscal: <a href="pdv/index.html">manual operacional Java</a>.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
                   <tr><th>Área</th><th>O que o lojista usa hoje</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Caixa</td><td>Vendas, PIX com QR Code e Split, comprovantes, leitor de código de barras e atalhos de teclado</td></tr>
+                  <tr><td>Caixa</td><td>Free: venda no navegador (dinheiro, débito, crédito e outros — “outros” não é PIX integrado). Sem QR/gateway e sem NF-e/NFC-e. PIX integrado e fiscal entram no Premium. Leitor de código de barras e atalhos de teclado.</td></tr>
                   <tr><td>Gestão</td><td>Dashboard (vendas, estoque, performance), multi-loja com estoque por unidade</td></tr>
                   <tr><td>Continuidade</td><td>SQLite local; a loja continua vendendo se a internet falhar</td></tr>
                   <tr><td>Relatórios</td><td>PDF via JasperReports; trilha do contador neste portal</td></tr>
-                  <tr><td>Planos</td><td>Fonte: <code>PlanoLicencaService</code>. <strong>Free</strong> (R$ 0): 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja, 10 SMS recibo/mês; sem PIX/NF-e. <strong>Premium</strong> (R$ 79,90/mês): vendas ilimitadas, PIX, mais operadores, relatório ao contador, suporte remoto. Liberação após pagamento e registro LGPD. CTA da loja: demonstração presencial.</td></tr>
+                  <tr><td>Planos</td><td>Fonte: <code>PlanoLicencaService</code>. <strong>Free</strong> (R$ 0): 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; SQLite offline; sem PIX integrado e sem NF-e/NFC-e. <strong>Premium</strong> (R$ 79,90/mês): sem o teto de 100 vendas, PIX integrado (QR/gateway), fiscal quando aplicável, suporte prioritário. CTA da loja: <strong>Baixar Free</strong>; Premium via demonstração em pdv.caracore.com.br.</td></tr>
                 </tbody>
               </table>
             </div>
             <div class="alert alert-secondary" role="note">
               <i class="bi bi-mortarboard"></i>
-              <strong>Oficina Java:</strong> módulos <code>pdv-core</code>, <code>pdv-fiscal-payment</code>, <code>pdv-platform-security</code> e <code>pdv-apps</code>. O canal público <code>v3.2.3-free</code> é o desktop publicado. O v4 na oficina usa Quarkus + Qute (Fases 0–7 técnicas; corte T032 ainda aberto). A wiki institucional não substitui o README da oficina.
+              <strong>Oficina Java:</strong> módulos <code>pdv-core</code>, <code>pdv-fiscal-payment</code>, <code>pdv-platform-security</code> e <code>pdv-apps</code>. O canal público <code>v3.2.4-free</code> é o desktop publicado. O v4 na oficina usa Quarkus + Qute (Fases 0–7 técnicas; corte T032 ainda aberto). A wiki institucional não substitui o README da oficina.
             </div>
           </section>
 
@@ -186,7 +186,7 @@
             <h2><i class="bi bi-window"></i> CaraCore-PDV v4 (em homologação)</h2>
             <p>Candidato publicado: <a href="https://pdv.caracore.com.br/wiki-release-v4-0-0-rc2.html" target="_blank" rel="noopener"><strong>v4.0.0-rc2</strong></a>. GA previsto: <strong>08/11/2026</strong>. Escopo: Quarkus + SQLite local + interface web/PWA + launcher. O corte T032 ainda depende de homologação visual, suíte completa e instalador assinado.</p>
             <ul class="feature-list">
-              <li>Download público maduro permanece a <a href="https://pdv.caracore.com.br/download.html" target="_blank" rel="noopener">v3.2.3-free</a> (Windows, Linux e macOS).</li>
+              <li>Download público maduro permanece a <a href="https://pdv.caracore.com.br/download.html" target="_blank" rel="noopener">v3.2.4-free</a> (Windows, Linux e macOS).</li>
               <li>A <a href="https://pdv.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA da loja</a> é atalho da vitrine — não é o caixa.</li>
               <li>Roadmap: <a href="https://pdv.caracore.com.br/roadmap-2026.html" target="_blank" rel="noopener">pdv.caracore.com.br/roadmap-2026.html</a>.</li>
               <li>Não substitui a linha Rust (<a href="projeto-pdv-rust.html">projeto-pdv-rust.html</a>).</li>
@@ -227,7 +227,7 @@
                 </thead>
                 <tbody>
                   <tr><td>Loja em produção hoje, Linux ou macOS</td><td><strong>Java</strong> — <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a></td></tr>
-                  <tr><td>Windows, oferta madura, Wiki Fiscal e planos Free/Premium</td><td><strong>Java</strong> (canal v3.2.3-free)</td></tr>
+                  <tr><td>Windows, oferta madura, Wiki Fiscal e planos Free/Premium</td><td><strong>Java</strong> (canal v3.2.4-free)</td></tr>
                   <tr><td>Piloto Windows, MSI pt-BR ou avaliação Rust/Tauri</td><td><strong>Rust</strong> — <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">pdv-rust.caracore.com.br</a></td></tr>
                   <tr><td>Trilhas comerciais, representantes, suporte L1 histórico</td><td><strong>Java</strong> — <a href="pdv/index.html">manual neste portal</a></td></tr>
                   <tr><td>TI avaliando Tauri, Rust e artefatos reprodutíveis</td><td><strong>Rust</strong> (release v0.1.2)</td></tr>
@@ -241,14 +241,14 @@
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
-                  <tr><th></th><th>Java · JavaFX</th><th>Rust + Tauri 2</th></tr>
+                  <tr><th></th><th>Java · Quarkus</th><th>Rust + Tauri 2</th></tr>
                 </thead>
                 <tbody>
                   <tr><td>Oficina</td><td><code>caracore-pdv</code></td><td><code>caracore-pdv-rust</code></td></tr>
                   <tr><td>Loja + artefatos</td><td><code>caracore-pdv-releases</code></td><td><code>caracore-rust-pdv-releases</code></td></tr>
-                  <tr><td>Canal / release</td><td>v3.2.3-free</td><td>v0.1.2</td></tr>
+                  <tr><td>Canal / release</td><td>v3.2.4-free</td><td>v0.1.2</td></tr>
                   <tr><td>Plataforma</td><td>Windows · Linux · macOS</td><td>Piloto Windows</td></tr>
-                  <tr><td>Interface</td><td>JavaFX</td><td>React + Tauri 2</td></tr>
+                  <tr><td>Interface</td><td>Navegador em <code>http://localhost:8080/login</code></td><td>React + Tauri 2</td></tr>
                   <tr><td>Banco</td><td>SQLite local</td><td>SQLite local (PostgreSQL opcional multi-caixa)</td></tr>
                   <tr><td>Wiki detalhada</td><td><a href="pdv/index.html">wiki.caracore.com.br/pdv/</a></td><td><a href="projeto-pdv-rust.html">projeto-pdv-rust.html</a></td></tr>
                   <tr><td>Download</td><td><a href="https://pdv.caracore.com.br/download.html" target="_blank" rel="noopener">loja Java</a></td><td><a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" target="_blank" rel="noopener">caracore-rust-pdv-releases/releases</a></td></tr>
@@ -279,7 +279,7 @@
   <footer class="wiki-footer">
     <div class="container">
       <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>Wiki como centro de alinhamento — CaraCore PDV: Java v3.2.3-free e Rust v0.1.2, coexistência sem substituição.</p>
+      <p>Wiki como centro de alinhamento — CaraCore PDV: Java v3.2.4-free e Rust v0.1.2, coexistência sem substituição.</p>
       <div class="mt-2">
         <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
           <i class="bi bi-shield-lock"></i> Política de Privacidade
