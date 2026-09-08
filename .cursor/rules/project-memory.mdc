@@ -25,9 +25,9 @@ alwaysApply: true
 ## CaraCore PDV — duas linhas desktop
 - Java Free: `v3.2.4-free` · pdv.caracore.com.br · UI no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; sem PIX integrado e sem NF-e/NFC-e. Copy **não** anuncia recibo. Premium R$ 79,90/mês (PIX integrado, fiscal).
 - Java v4: `v4.0.0-rc2` pré-release **estacionada** (Qute + Edge app; T032 aberto; não substitui o Free). Handoff: `caracore-pdv/docs/arquitetura/CONTINUIDADE_DESENVOLVIMENTO.md`.
-- Loja: CTA = **Baixar Free**; Premium via demonstração.
-- Rust: v0.1.4 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.4). Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
-- Nenhuma substitui a outra. V3 negócio ≠ v3.2.x ≠ v0.1.x. Não misturar pasta nem data entre Free e RC2.
+- Loja: CTA = **Baixar Free**; Premium via demonstração. Quem entra no Free: `download.html#perfis` (`admin`/`admin`, 1 operador).
+- Rust: v0.1.4 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.4). Logins: `primeiros-passos.html#perfis`. Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
+- Nenhuma substitui a outra. V3 negócio ≠ v3.2.x ≠ v0.1.x. Não misturar pasta, senha nem data entre Free, RC2 e Rust.
 
 ## CaraCore CSO
 - Frotas Web em produção (`caracore-cso-quarkus`). Transportes Desktop 08/11/2028 (`caracore-cso-transportes`). Virtual Tracker™ separado, 2028.
@@ -38,4 +38,4 @@ alwaysApply: true
 ## Convenções
 - Capa e cards: linguagem de cenário primeiro (**o que ganha / como resolve agora / próximo passo**). Nomes internos (Eco Mundo, Garagem, Área 51) vêm explicados; Java/Rust e datas de GA ficam como detalhe, sem apagar o fato.
 - Navegação: rótulo **Mapa** = `ecosistema.html` (apelido interno Eco Mundo).
-- Ao alterar discurso dos três produtos-chave, sincronizar AGENTS.md, ECOSYSTEM_*.md, lojas e matriz.
+- Ao alterar discurso dos três produtos-chave **ou** logins/perfis públicos, sincronizar `AGENTS.md`, `ECOSYSTEM_MEMORIA.md`, lojas e matriz. Wiki **aponta** senhas para a loja; não duplicar tabela de login aqui.
