@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória — caracore-wiki
 
-**Atualizado:** 2026-09-07 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+**Atualizado:** 2026-09-08 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
 
 ## Repositório e papel
 - **caracore-wiki:** centro de **alinhamento** (o que é cada produto, o que já existe, o que é Garagem). Não é manual de botão.
@@ -26,7 +26,7 @@ alwaysApply: true
 - Java Free: `v3.2.4-free` · pdv.caracore.com.br · UI no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; sem PIX integrado e sem NF-e/NFC-e. Copy **não** anuncia recibo. Premium R$ 79,90/mês (PIX integrado, fiscal).
 - Java v4: `v4.0.0-rc2` pré-release **estacionada** (Qute + Edge app; T032 aberto; não substitui o Free). Handoff: `caracore-pdv/docs/arquitetura/CONTINUIDADE_DESENVOLVIMENTO.md`.
 - Loja: CTA = **Baixar Free**; Premium via demonstração.
-- Rust: v0.1.2 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.2). Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
+- Rust: v0.1.4 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.4). Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
 - Nenhuma substitui a outra. V3 negócio ≠ v3.2.x ≠ v0.1.x. Não misturar pasta nem data entre Free e RC2.
 
 ## CaraCore CSO
