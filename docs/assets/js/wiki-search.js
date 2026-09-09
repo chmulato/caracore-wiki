@@ -132,7 +132,7 @@ function initWikiSearch() {
         },
         {
             title: 'Helianto Condominium',
-            description: 'Administração condominial com soberania de dados — helianto.caracore.com.br, lançamento 30/12/2027',
+            description: 'Administração condominial com soberania de dados — helianto.caracore.com.br, lançamento 30/12/2029',
             url: 'projeto-helianto.html',
             tags: ['helianto', 'condomínio', 'bolepix', 'spring boot', 'react', 'postgresql'],
             category: 'projeto'
