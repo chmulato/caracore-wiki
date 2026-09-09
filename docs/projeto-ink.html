@@ -81,6 +81,22 @@
               </ul>
             </div>
           </div>
+          <section class="mt-4" id="primeiros-passos">
+            <h2 class="h5"><i class="bi bi-door-open"></i> Primeiros passos no desktop</h2>
+            <p>Canal atual: <strong>v2.0.0</strong> — Windows publicado · macOS/Linux em breve. Download e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia de instalação: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
+            <p>Isto <strong>não é</strong> o PDV Cara Core. Não use <code>admin</code>/<code>admin</code> nem <code>admin</code>/<code>admin123</code>. O Ink v2.0.0 <strong>não traz usuário de fábrica</strong>.</p>
+            <ol>
+              <li>Baixe <code>AgendaInk-2.0.0-windows-setup.exe</code> ou <code>AgendaInk-2.0.0-windows.zip</code>. Runtime Java 25 embutido — sem JDK.</li>
+              <li>Instale ou extraia e abra <code>AgendaInk.exe</code>.</li>
+              <li>Na primeira abertura aparece <strong>Primeiro acesso (assistido)</strong>: só o celular do responsável e o botão <strong>Continuar para primeiro acesso</strong> (a senha ainda não aparece).</li>
+              <li>Confirme o celular. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
+              <li>Escolha o perfil (Proprietário, Tatuador Sr ou Tatuador Jr), senha (mínimo 8 caracteres) e frase de recuperação (mínimo 10 caracteres). Opcional: códigos de emergência (anote; o app mostra uma vez).</li>
+              <li>Volte ao login e entre com o mesmo celular e a senha criada.</li>
+            </ol>
+            <p>Dados: <code>%LOCALAPPDATA%\CaraCore\AgendaInk\agenda.db</code>. Reinstalar o app não apaga essa pasta.</p>
+            <p><strong>Esqueci a senha:</strong> sem recuperação remota (sem SMS/e-mail). No login, “Esqueci a minha senha” gera um código de 6 dígitos só neste computador (~15 min), com a frase de recuperação. Sem frase nem código de emergência: backup local ou apagar a pasta de dados.</p>
+            <p>Depois de entrar: 1 cliente · 1 agendamento · 1 receita ou despesa · 1 backup manual (exportação na linha 2.0.0).</p>
+          </section>
           <section class="mt-4" id="operacao">
             <h2 class="h5"><i class="bi bi-clipboard-check"></i> Operação no estúdio</h2>
             <ul>
@@ -93,6 +109,7 @@
           <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
             <a href="https://ink.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja</a>
             <a href="https://ink.caracore.com.br/download.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-download"></i> Download</a>
+            <a href="https://ink.caracore.com.br/primeiro-acesso.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-person-lock"></i> Primeiro acesso</a>
             <a href="https://ink.caracore.com.br/canal-feedback.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Feedback</a>
             <a href="projetos-overview.html" class="btn-wiki"><i class="bi bi-collection"></i> Visão geral</a>
           </div>
