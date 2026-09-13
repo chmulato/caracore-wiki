@@ -23,7 +23,7 @@ alwaysApply: true
 - **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
 
 ## CaraCore PDV — duas linhas desktop
-- Java Free: `v3.2.4-free` · pdv.caracore.com.br · UI no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; sem PIX integrado e sem NF-e/NFC-e. Copy **não** anuncia recibo. Premium R$ 79,90/mês (PIX integrado, fiscal).
+- Java Free: `v3.2.5-free` · pdv.caracore.com.br · UI no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; sem PIX integrado e sem NF-e/NFC-e. Copy **não** anuncia recibo. Premium R$ 79,90/mês (PIX integrado, fiscal).
 - Java v4: `v4.0.0-rc2` pré-release **estacionada** (Qute + Edge app; T032 aberto; não substitui o Free). Handoff: `caracore-pdv/docs/arquitetura/CONTINUIDADE_DESENVOLVIMENTO.md`.
 - Loja: CTA = **Baixar Free**; Premium via demonstração. Quem entra no Free: `download.html#perfis` (`admin`/`admin`, 1 operador).
 - Rust: v0.1.4 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.4). Logins: `primeiros-passos.html#perfis`. Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
