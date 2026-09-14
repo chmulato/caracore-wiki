@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaraCore PDV — Java e Rust | Wiki Cara Core</title>
-  <meta name="description" content="Hub do CaraCore PDV: linha madura (canal v3.2.6-free, Windows/Linux/macOS) e linha piloto (Windows v0.1.4). Dois desktops, mesma filosofia; nenhuma substitui a outra.">
+  <meta name="description" content="Hub do CaraCore PDV: linha madura (canal v3.2.6-free, Java 25 · Quarkus · browser localhost:8080) e linha piloto Rust (Windows v0.1.4). Duas linhas de PDV — Java Free no navegador e Rust piloto em app Windows; nenhuma substitui a outra.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <meta property="og:title" content="CaraCore PDV — Java e Rust | Wiki Cara Core">
-  <meta property="og:description" content="Dois PDVs desktop: Java maduro (v3.2.6-free) e Rust piloto (v0.1.4). Nenhuma linha substitui a outra.">
+  <meta property="og:description" content="Duas linhas de PDV: Java Free no navegador (v3.2.6-free, Java 25 · Quarkus · browser localhost:8080) e Rust piloto em app Windows (v0.1.4). Nenhuma linha substitui a outra.">
   <meta property="og:type" content="article">
 </head>
 <body>
@@ -63,7 +63,7 @@
                 <li><a href="projeto-pdv-rust.html">Linha piloto do PDV</a></li>
               </ul>
             </li>
-            <li><a href="#java"><i class="bi bi-cash-register"></i> PDV Desktop Java</a></li>
+            <li><a href="#java"><i class="bi bi-cash-register"></i> PDV Java (navegador)</a></li>
             <li><a href="#rust"><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</a></li>
             <li><a href="#escolher"><i class="bi bi-table"></i> Qual linha escolher</a></li>
             <li><a href="pdv/index.html"><i class="bi bi-book"></i> Manual operacional Java</a></li>
@@ -75,8 +75,8 @@
       <div class="col-lg-9 col-md-8">
         <div class="wiki-content wiki-home">
           <div class="wiki-header">
-            <h1><i class="bi bi-cash-stack"></i> CaraCore PDV — dois desktops, mesma filosofia</h1>
-            <p class="wiki-lede">O CaraCore PDV é o caixa da loja, instalado no computador. Existem <strong>duas linhas desktop</strong> do mesmo produto: a oferta madura e a linha piloto, mais leve. <strong>Nenhuma substitui a outra.</strong> Manuais estão neste portal; download fica na loja de cada linha.</p>
+            <h1><i class="bi bi-cash-stack"></i> CaraCore PDV — duas linhas, mesma filosofia</h1>
+            <p class="wiki-lede">O CaraCore PDV é o caixa da loja. Existem <strong>duas linhas</strong> do mesmo produto: a oferta madura Java Free (backend Quarkus, UI no <strong>navegador</strong> em <code>localhost:8080</code>) e a linha piloto Rust (app nativo Windows). <strong>Nenhuma substitui a outra.</strong> Manuais estão neste portal; download fica na loja de cada linha.</p>
           </div>
 
           <div class="alert alert-info" role="note">
@@ -160,7 +160,7 @@
           </section>
 
           <section class="mb-5" id="java-detalhe">
-            <h2><i class="bi bi-cash-register"></i> O que o PDV Desktop Java já entrega</h2>
+            <h2><i class="bi bi-cash-register"></i> O que o PDV Java (linha madura) já entrega</h2>
             <p>Canal público atual: <strong>v3.2.6-free</strong> (13/09/2026). Patch de UX: shell PDV em coluna + caixa tipo registradora (busca/código, total grande, atalhos); menu lateral com Início/Produtos/Caixa e mapa Premium com Restrito. Pacotes ZIP para Windows, Linux e macOS. Primeiro acesso: Java 25+, pasta nova, <code>iniciar-pdv.bat</code> / <code>iniciar-pdv.sh</code>, depois <code>http://localhost:8080/login</code> com <code>admin</code> / <code>admin</code>. Em seguida cadastre um produto e registre a primeira venda no caixa pela interface do navegador. Roteiro: <a href="https://pdv.caracore.com.br/download.html#instalacao" target="_blank" rel="noopener">instalação com sucesso</a>. Manual e Wiki Fiscal: <a href="pdv/index.html">manual operacional Java</a>.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">

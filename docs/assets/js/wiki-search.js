@@ -19,10 +19,10 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
-            title: 'CaraCore PDV Desktop (Java)',
-            description: 'PDV maduro multi-plataforma (v3.2.2-free): PIX, operação local, JavaFX, Quarkus e conformidade fiscal',
+            title: 'CaraCore PDV Java (linha madura)',
+            description: 'PDV maduro multi-plataforma (v3.2.6-free): Quarkus, SQLite local, UI no navegador (localhost:8080). Sem PIX integrado e sem NF-e/NFC-e no Free.',
             url: 'projeto-pdv.html#java',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'pix', 'javafx', 'quarkus', 'sqlite', 'fiscal', 'pme', 'selo verde', 'v3.2.2-free', 'java 25'],
+            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'browser', 'localhost:8080', 'pme', 'v3.2.6-free', 'java 25'],
             category: 'projeto'
         },
         {
