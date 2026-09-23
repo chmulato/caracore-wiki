@@ -406,11 +406,11 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
 /* -------------------------------------------------------------------------
    Links no conteúdo (alinhar institucional)
    ------------------------------------------------------------------------- */
-.wiki-content a:not(.btn):not(.nav-link):not(.navbar-brand),
+.wiki-content a:not(.btn):not(.btn-wiki):not(.nav-link):not(.navbar-brand),
 .wiki-sidebar a {
   color: var(--wiki-inst-link) !important;
 }
-.wiki-content a:not(.btn):not(.nav-link):not(.navbar-brand):hover,
+.wiki-content a:not(.btn):not(.btn-wiki):not(.nav-link):not(.navbar-brand):hover,
 .wiki-sidebar a:hover {
   color: var(--wiki-inst-link-hover) !important;
 }
