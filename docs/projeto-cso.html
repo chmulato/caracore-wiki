@@ -152,20 +152,20 @@
 
           <section class="mb-5">
             <h2><i class="bi bi-ui-checks-grid"></i> O que a Gestão de Frotas já faz</h2>
-            <p>Momento atual (produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>): o cliente organiza a frota e os custos. Completar km/L, pneus, documentos do veículo e custo por km entra depois, no mesmo produto, sem taxa extra.</p>
+            <p>Momento atual (produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>): o cliente organiza a frota, os custos e a equipe. A aplicação inclui filtros operacionais, regras para veículos inativos, atualização de quilometragem e termos LGPD v2.1. Completar km/L, pneus, documentos do veículo e custo por km continua no roadmap, sem taxa extra anunciada.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
                   <tr><th>Área</th><th>O que o cliente usa hoje</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Captação</td><td>Landing com planos, cadastro self-service (FREE_3), convite, checkout Pix/ACH e recuperação de acesso</td></tr>
-                  <tr><td>Onboarding</td><td>Aceite LGPD (termos v2.0) → primeiro veículo → dashboard</td></tr>
-                  <tr><td>Frota</td><td>CRUD de veículos com limite por plano; placa única; status ativo / manutenção / inativo</td></tr>
-                  <tr><td>Operação</td><td>Abastecimentos, manutenções (com sync de status do veículo), motoristas e viagens</td></tr>
+                  <tr><td>Captação</td><td>Landing com planos, cadastro self-service (FREE_3), convites por chave, checkout Pix/ACH e recuperação de acesso</td></tr>
+                  <tr><td>Onboarding</td><td>Aceite LGPD (termos v2.1, com controlador/operadora e bases legais do art. 7º) → primeiro veículo → dashboard; a nova versão exige novo aceite</td></tr>
+                  <tr><td>Frota</td><td>Cadastro de veículos com categoria (automóvel, utilitário, van, caminhão, ônibus, motocicleta, implemento ou outro), limite por plano, placa única, filtro por status e estados ativo / manutenção / inativo</td></tr>
+                  <tr><td>Operação</td><td>Abastecimentos filtráveis por veículo, posto e período; manutenções por veículo, status, descrição e período. Veículos inativos não podem receber abastecimentos ou novas manutenções nem iniciar viagens; a quilometragem é atualizada por abastecimento e conclusão de viagem, e valores regressivos são rejeitados</td></tr>
                   <tr><td>Relatórios</td><td>Consumo, manutenção, status da frota, CNH, viagens, manutenção mensal e utilização mensal (ADMIN/GESTOR)</td></tr>
-                  <tr><td>Equipe</td><td>Usuários e convites (ADMIN); mesmos perfis em todos os planos — o que muda é o limite de veículos</td></tr>
-                  <tr><td>Privacidade</td><td>Aceite versionado + auditoria gerencial; cada organização isolada (multi-tenant)</td></tr>
+                  <tr><td>Equipe</td><td>O ADMIN gerencia usuários em uma tela e emite chaves de convite de uso único para ADMIN, GESTOR ou ENTREGADOR. GESTOR e ENTREGADOR não gerenciam a equipe; o ADMIN pode alterar perfis</td></tr>
+                  <tr><td>Privacidade</td><td>Aceite versionado dos termos v2.1, bases legais do art. 7º e auditoria gerencial; cada organização isolada (multi-tenant)</td></tr>
                 </tbody>
               </table>
             </div>
@@ -189,7 +189,7 @@
                     </tbody>
                   </table>
                 </div>
-                <p class="small text-muted mb-0">Cobrança sempre em reais. No Brasil, Pix avulso; fora, transferência internacional equivalente. A operação libera o plano após o comprovante — não é PIX recorrente automático.</p>
+                <p class="small text-muted mb-0">Cobrança sempre em reais. No Brasil, Pix avulso; fora, transferência internacional equivalente. A operação libera o plano após o comprovante — não é PIX recorrente automático. A aplicação só sugere upgrade quando o uso alcança 80% do limite de veículos.</p>
               </div>
               <div class="col-md-6">
                 <h3 class="h5">Quem acessa o quê</h3>
@@ -198,7 +198,7 @@
                   <li><strong>GESTOR</strong> — opera a frota e vê relatórios; não gerencia usuários nem convites</li>
                   <li><strong>ENTREGADOR</strong> — telas operacionais do dia a dia, sem menu admin nem relatórios</li>
                 </ul>
-                <p class="small text-muted mb-0">Todos entram pelo mesmo <code>/login</code>. O ADMIN define o perfil ao cadastrar e pode trocá-lo depois em Usuários, sem recriar a conta. Há um operador interno da Cara Core (área discreta) que não mistura sessão com a frota do cliente.</p>
+                <p class="small text-muted mb-0">Todos entram pelo mesmo <code>/login</code>. O ADMIN define o perfil ao emitir uma chave de convite, válida de 1 a 30 dias, e pode alterar o perfil depois em Usuários, sem recriar a conta. A chave é de uso único; o convite não depende de envio de e-mail. Há um operador interno da Cara Core (área discreta) que não mistura sessão com a frota do cliente.</p>
               </div>
             </div>
           </section>
@@ -240,10 +240,10 @@
                   <tr><th>Quando</th><th>O quê</th><th>Status</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Hoje</td><td>Gestão de frota no navegador: veículos, combustível, manutenções, motoristas, viagens, relatórios, planos e LGPD. Troca de perfil da equipe pelo ADMIN. Quilometragem atualiza no abastecimento e na viagem; veículo inativo não inicia viagem nem nova manutenção</td><td><span class="badge bg-success">Disponível</span></td></tr>
-                  <tr><td>Até out/2026</td><td>Filtros nas listas, textos/FAQ ainda mais claros (CSO ≠ GPS) e conferência do documento do motorista</td><td><span class="badge bg-warning text-dark">Em andamento</span></td></tr>
-                  <tr><td>1º trim. 2027</td><td>Completar a frota: km/L, documentos do veículo, pneus, toxicológico/infrações e custo por km</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
-                  <tr><td>A partir de 2027</td><td>Jornada com QR (plano corporativo), app de gestão offline e porta de API para automações da empresa</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
+                  <tr><td>Hoje</td><td>Gestão de frota no navegador: veículos e categorias, combustível, manutenções, motoristas, viagens, relatórios, planos e LGPD v2.1. Inclui filtros nas listas de veículos, abastecimentos e manutenções; convites de equipe por chave de uso único; atualização de quilometragem por abastecimento e viagem; e bloqueios operacionais para veículos inativos</td><td><span class="badge bg-success">Disponível</span></td></tr>
+                  <tr><td>08/11/2026</td><td>Freeze do Momento 1: estabilização do escopo atual da Gestão de Frotas, não um novo lançamento nem o fechamento de FRO ou do Momento 2</td><td><span class="badge bg-warning text-dark">Marco de estabilização</span></td></tr>
+                  <tr><td>08/abr–dez/2027</td><td>Completar a gestão de frota: km/L, documentos do veículo, pneus, toxicológico/infrações e custo por km</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
+                  <tr><td>Depois de completar FRO</td><td>Jornada com QR, monitoramento operacional e porta de API para automações; app de gestão offline depende da conclusão de FRO. Sem data de lançamento confirmada</td><td><span class="badge bg-secondary">Roadmap, sem data confirmada</span></td></tr>
                   <tr><td>08/11/2028</td><td>CSO único: Frotas (web) + Transportes (bunker no computador da empresa)</td><td><span class="badge bg-secondary">Garagem</span></td></tr>
                   <tr><td>2028</td><td>GPS e mapa (Virtual Tracker™) — <strong>fora do que se paga hoje</strong>; não se compra ao contratar a Frotas agora</td><td><span class="badge bg-dark">Fora deste contrato</span></td></tr>
                 </tbody>
