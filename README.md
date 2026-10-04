@@ -10,7 +10,7 @@ Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega.
 
 ## Projetos Documentados
 
-1. **CaraCore PDV Desktop (Java · Quarkus)** — Oferta madura multi-plataforma (Windows · Linux · macOS): venda no navegador, operação local; PIX integrado e fiscal no Premium (canal **v3.2.6-free**; Java 25+)
+1. **CaraCore PDV Desktop (Java · Quarkus)** — Oferta madura multi-plataforma (Windows · Linux · macOS): venda no navegador, operação local; canal estável **v3.2.6-free**. A **v4.0.0-rc4** é pré-release pública para avaliação (T032 ainda aberto; Free sem PIX integrado e sem emissão de NF-e/NFC-e); PIX integrado e recursos fiscais permanecem no Premium.
 2. **CaraCore PDV (Rust + Tauri 2)** — Linha desktop piloto Windows, instaladores pt-BR, release **v0.1.4**; download na loja pdv-rust.caracore.com.br (artefatos no GitHub, tag v0.1.4); coexiste com o PDV Desktop Java (não substitui)
 3. **Ink Agenda** — Gestão para estúdios de tatuagem; Desktop Windows **v2.0.0** (26/Jun/2026); PWA em roadmap (**não antes de 2028**; Mac, Linux, Android; sem DMG/DEB)
 4. **chmulatoETE Minerador 4.0** — Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
@@ -20,7 +20,7 @@ Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega.
 8. **Cara Core Hub** — Gestão de encomendas e marketplaces (ML, Shopee, Temu); oficina web WAR/Tomcat 2.1; vitrine em hub.caracore.com.br; GA do instalador Windows **06/Abr/2027**. Não é orquestrador interno nem Python/Flask.
 9. **Área 51** — Consultoria OIDC / autenticação enterprise
 10. **Helianto Condominium** — Administração condominial com soberania de dados e motor financeiro auditável (loja helianto.caracore.com.br; lançamento 30/Dez/2029)
-11. **CaraCore CSO** — Plataforma dual: Gestão de Frotas (Web, em produção em cso.caracore.com.br; Java 21 · Quarkus · PostgreSQL) e Gestão de Transportes (Desktop bunker JavaFX/SQLite, 08/Nov/2028). CSO de gestão **não** inclui GPS/mapa (Virtual Tracker™ é produto separado, 2028).
+11. **CaraCore CSO** — Plataforma dual: Gestão de Frotas (Web, em produção em cso.caracore.com.br; Java 21 · Quarkus · PostgreSQL) e Gestão de Transportes (Desktop bunker JavaFX/SQLite, 08/Nov/2028). Os commits recentes de RBAC em convites e responsividade passaram localmente, mas o deploy em produção ainda não está confirmado. CSO de gestão **não** inclui GPS/mapa (Virtual Tracker™ é produto separado, 2028).
 12. **RU Soberano** — Simulador de reator e sala RETRO (loja ru.caracore.com.br; lançamento 18/Jun/2027; RETRO gratuito · simulador R$ 29,90)
 13. **Cara Core MKT** — Vitrine gratuita e Sala Cara Core (mkt.caracore.com.br · tools.caracore.com.br/sala/); não vendemos
 

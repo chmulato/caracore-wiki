@@ -82,6 +82,9 @@
             <i class="bi bi-info-circle"></i>
             <strong>Honestidade de produto:</strong> o CSO que o cliente contrata hoje é <strong>gestão administrativa de frota</strong> (veículos, combustível, manutenção, equipe e relatórios). <strong>Não</strong> é rastreador GPS nem mapa ao vivo. O Virtual Tracker™ é um produto futuro, separado, previsto para 2028.
           </div>
+          <div class="alert alert-warning" role="note">
+            <strong>Status operacional — 03/10/2026:</strong> o último release documentado em produção é <code>e193d6d</code> (30/09). Os commits <code>3c0e41e</code> (RBAC de convites) e <code>febaa3c</code> (responsividade/acessibilidade) estão em <code>master</code>/<code>origin/master</code>; testes e smoke completos passaram localmente, mas o deploy ainda não foi confirmado. A produção serve CSS <code>20260807c</code>, enquanto o commit atual usa <code>20261003b</code>; a versão efetiva das migrações Flyway em produção também está por confirmar. Portanto, não trate essas alterações recentes como publicadas até a verificação do ambiente.
+          </div>
 
           <div class="row g-4 mb-4">
             <div class="col-md-6">
@@ -240,7 +243,8 @@
                   <tr><th>Quando</th><th>O quê</th><th>Status</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Hoje</td><td>Gestão de frota no navegador: veículos e categorias, combustível, manutenções, motoristas, viagens, relatórios, planos e LGPD v2.1. Inclui filtros nas listas de veículos, abastecimentos e manutenções; convites de equipe por chave de uso único; atualização de quilometragem por abastecimento e viagem; e bloqueios operacionais para veículos inativos</td><td><span class="badge bg-success">Disponível</span></td></tr>
+                  <tr><td>Em produção (release e193d6d)</td><td>Gestão de frota no navegador: veículos e categorias, combustível, manutenções, motoristas, viagens, relatórios, planos e termos LGPD v2.1. Inclui filtros operacionais, convites por chave, atualização de quilometragem por abastecimento e viagem e bloqueios para veículos inativos, conforme o último release documentado.</td><td><span class="badge bg-success">Disponível</span></td></tr>
+                  <tr><td>Código atual — deploy a confirmar</td><td>RBAC de convites (<code>3c0e41e</code>) e responsividade/acessibilidade (<code>febaa3c</code>) estão sincronizados em <code>master</code>/<code>origin/master</code>; <code>mvn test</code> passou 362/362 e <code>test-smoke.ps1 -Full</code> passou localmente. CSS de produção ainda é <code>20260807c</code> (o código atual usa <code>20261003b</code>); schema Flyway efetivo em produção por confirmar.</td><td><span class="badge bg-warning text-dark">Não confirmado em produção</span></td></tr>
                   <tr><td>08/11/2026</td><td>Freeze do Momento 1: estabilização do escopo atual da Gestão de Frotas, não um novo lançamento nem o fechamento de FRO ou do Momento 2</td><td><span class="badge bg-warning text-dark">Marco de estabilização</span></td></tr>
                   <tr><td>08/abr–dez/2027</td><td>Completar a gestão de frota: km/L, documentos do veículo, pneus, toxicológico/infrações e custo por km</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
                   <tr><td>Depois de completar FRO</td><td>Jornada com QR, monitoramento operacional e porta de API para automações; app de gestão offline depende da conclusão de FRO. Sem data de lançamento confirmada</td><td><span class="badge bg-secondary">Roadmap, sem data confirmada</span></td></tr>

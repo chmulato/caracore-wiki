@@ -13,9 +13,9 @@ function initWikiSearch() {
     const wikiIndex = [
         {
             title: 'CaraCore PDV (hub Java + Rust)',
-            description: 'Duas linhas desktop do mesmo caixa: Java maduro v3.2.2-free e Rust piloto v0.1.2 — nenhuma substitui a outra',
+            description: 'PDV Java estável v3.2.6-free e pré-release v4.0.0-rc4 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3', 'pix split'],
+            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.6-free', 'v4.0.0-rc4', 't032', 'pix split'],
             category: 'projeto'
         },
         {
@@ -27,9 +27,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore PDV (Rust + Tauri)',
-            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.2, download na loja pdv-rust (tag GitHub v0.1.2, não latest Java)',
+            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.4, download na loja pdv-rust (tag GitHub v0.1.4, não latest Java)',
             url: 'projeto-pdv-rust.html',
-            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.2', 'github releases'],
+            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.4', 'github releases'],
             category: 'projeto'
         },
         {
