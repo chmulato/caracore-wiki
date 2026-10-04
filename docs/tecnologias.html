@@ -111,7 +111,7 @@
                             <p>Imagine que você está construindo uma casa. Você precisa de diferentes materiais: tijolos, cimento, madeira, tinta, etc. Na programação, a "stack" são as diferentes tecnologias (linguagens, ferramentas, serviços) que usamos para construir nossos sistemas.</p>
                             <p>Cada tecnologia tem uma função específica, como os materiais de construção:</p>
                             <ul class="feature-list">
-                                <li><strong>Java e Quarkus:</strong> A base do nosso PDV desktop (UI no navegador) e de outras trilhas Java do ecossistema</li>
+                                <li><strong>Java e Quarkus:</strong> A base do PDV Java como aplicação web local no navegador e de outras trilhas Java do ecossistema</li>
                                 <li><strong>Python:</strong> A "linguagem" que usamos para escrever programas</li>
                                 <li><strong>Flask:</strong> A "estrutura" para criar sites e APIs</li>
                                 <li><strong>HTML/CSS:</strong> A "aparência" dos sites</li>
@@ -124,7 +124,7 @@
                     <section id="java-spring" class="mb-5">
                         <div class="project-card">
                             <div class="project-header pdv">
-                                <h2><i class="bi bi-cash-stack"></i> Java, Quarkus e navegador (linha PDV Desktop)</h2>
+                                <h2><i class="bi bi-cash-stack"></i> Java, Quarkus e navegador (PDV web local)</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Java 25</span>
                                     <span class="tech-badge">Quarkus</span>
@@ -143,7 +143,7 @@
                                         <p><strong>Quarkus</strong> ajuda a organizar APIs e integrações locais com foco em desempenho. O operador do PDV Java abre o <strong>navegador</strong> em <code>http://localhost:8080/login</code> — não é janela JavaFX.</p>
                                         
                                         <div class="alert alert-info">
-                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Desktop (Java · Quarkus)</strong> e na <strong>Gestão de Frotas</strong> do <a href="projeto-cso.html">CaraCore CSO</a> (Quarkus + Qute/HTMX). O <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> também é desktop, com stack separada (Tauri + React).
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> No <strong>CaraCore PDV Java (Quarkus), uma aplicação web local no navegador</strong>, e na <strong>Gestão de Frotas</strong> do <a href="projeto-cso.html">CaraCore CSO</a> (Quarkus + Qute/HTMX). O <a href="projeto-pdv-rust.html">CaraCore PDV (Rust + Tauri 2)</a> é desktop, com stack separada (Tauri + React).
                                         </div>
                                         <div class="alert alert-info mt-3 mb-0" role="note">
                                             <i class="bi bi-megaphone-fill"></i> <strong>Posicionamento V3 padronizado:</strong> foco em <strong>pequenos e médios negócios</strong>, direção prática para <strong>PIX Split 2027</strong> e transparência sobre o que já está pronto e o que está em evolução.
@@ -185,7 +185,7 @@
                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
                                         <p><strong>Rust</strong> é uma linguagem moderna focada em segurança e performance. <strong>Tauri</strong> empacota o aplicativo para Windows com instalador em português, mantendo o programa enxuto.</p>
                                         <div class="alert alert-info">
-                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> no <strong>CaraCore PDV (Rust + Tauri 2)</strong>, release v0.1.4, piloto Windows. O CaraCore PDV Desktop Java (canal v3.2.6-free) permanece maduro e independente — ambos são aplicativos desktop.
+                                            <i class="bi bi-lightbulb"></i> <strong>Onde usamos:</strong> no <strong>CaraCore PDV (Rust + Tauri 2)</strong>, release v0.1.4, piloto Windows. O CaraCore PDV Java (canal estável v3.2.6-free) é uma aplicação web local no navegador e permanece independente do Rust.
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -489,7 +489,7 @@
                                     </div>
                                     <div class="project-body">
                                         <ul class="feature-list">
-                                            <li><strong>Java 21/25:</strong> CaraCore PDV Desktop, Ink Agenda, CaraCore CSO, Helianto, RU Soberano, Hub (WAR)</li>
+                                            <li><strong>Java 21/25:</strong> CaraCore PDV Java (aplicação web local), Ink Agenda, CaraCore CSO, Helianto, RU Soberano, Hub (WAR)</li>
                                             <li><strong>Python 3.11+:</strong> Área 51, MKT, Minerador 4.0, automações</li>
                                             <li><strong>Rust:</strong> CaraCore PDV (Tauri 2)</li>
                                             <li><strong>JavaScript / TypeScript:</strong> React (PDV Rust, Helianto) e Vue 3 (CSO Transportes)</li>
@@ -507,7 +507,7 @@
                                     </div>
                                     <div class="project-body">
                                         <ul class="feature-list">
-                                            <li><strong>Quarkus:</strong> CaraCore PDV Desktop e CSO Frotas (também backend da oficina CSO Transportes)</li>
+                                            <li><strong>Quarkus:</strong> CaraCore PDV Java (aplicação web local) e CSO Frotas (também backend da oficina CSO Transportes)</li>
                                             <li><strong>Jakarta EE / WAR Tomcat:</strong> CaraCore Hub</li>
                                             <li><strong>Flask 3.x:</strong> Área 51 e APIs Python leves</li>
                                              <li><strong>Spring Boot 4:</strong> Helianto Condominium (Java 25)</li>
@@ -881,4 +881,3 @@
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>
-
