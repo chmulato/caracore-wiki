@@ -83,7 +83,7 @@
             <strong>Honestidade de produto:</strong> o CSO que o cliente contrata hoje é <strong>gestão administrativa de frota</strong> (veículos, combustível, manutenção, equipe e relatórios). <strong>Não</strong> é rastreador GPS nem mapa ao vivo. O Virtual Tracker™ é um produto futuro, separado, previsto para 2028.
           </div>
           <div class="alert alert-warning" role="note">
-            <strong>Status operacional — 03/10/2026:</strong> o último release documentado em produção é <code>e193d6d</code> (30/09). Os commits <code>3c0e41e</code> (RBAC de convites) e <code>febaa3c</code> (responsividade/acessibilidade) estão em <code>master</code>/<code>origin/master</code>; testes e smoke completos passaram localmente, mas o deploy ainda não foi confirmado. A produção serve CSS <code>20260807c</code>, enquanto o commit atual usa <code>20261003b</code>; a versão efetiva das migrações Flyway em produção também está por confirmar. Portanto, não trate essas alterações recentes como publicadas até a verificação do ambiente.
+            <strong>Status operacional — 06/10/2026:</strong> a gestão de frota está em produção. O schema publicado inclui km/L, documentos do veículo, pneus, exame toxicológico, infrações e custo por km. A index pública descreve essa versão. O freeze de 08/11/2026 estabiliza o que já está no ar. Jornada, app offline e GPS permanecem fora desta versão.
           </div>
 
           <div class="row g-4 mb-4">
@@ -155,7 +155,7 @@
 
           <section class="mb-5">
             <h2><i class="bi bi-ui-checks-grid"></i> O que a Gestão de Frotas já faz</h2>
-            <p>Momento atual (produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>): o cliente organiza a frota, os custos e a equipe. A aplicação inclui filtros operacionais, regras para veículos inativos, atualização de quilometragem e termos LGPD v2.1. Completar km/L, pneus, documentos do veículo e custo por km continua no roadmap, sem taxa extra anunciada.</p>
+            <p>Momento atual (produção em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>): o cliente organiza a frota, os custos e a equipe. Desde 06/10/2026 a versão inclui km/L, documentos do veículo, pneus, exame toxicológico, infrações e custo por km, além de filtros operacionais, regras para veículos inativos, atualização de quilometragem e termos LGPD v2.1.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
@@ -166,7 +166,8 @@
                   <tr><td>Onboarding</td><td>Aceite LGPD (termos v2.1, com controlador/operadora e bases legais do art. 7º) → primeiro veículo → dashboard; a nova versão exige novo aceite</td></tr>
                   <tr><td>Frota</td><td>Cadastro de veículos com categoria (automóvel, utilitário, van, caminhão, ônibus, motocicleta, implemento ou outro), limite por plano, placa única, filtro por status e estados ativo / manutenção / inativo</td></tr>
                   <tr><td>Operação</td><td>Abastecimentos filtráveis por veículo, posto e período; manutenções por veículo, status, descrição e período. Veículos inativos não podem receber abastecimentos ou novas manutenções nem iniciar viagens; a quilometragem é atualizada por abastecimento e conclusão de viagem, e valores regressivos são rejeitados</td></tr>
-                  <tr><td>Relatórios</td><td>Consumo, manutenção, status da frota, CNH, viagens, manutenção mensal e utilização mensal (ADMIN/GESTOR)</td></tr>
+                  <tr><td>Relatórios</td><td>Consumo, manutenção, status da frota, CNH, viagens, manutenção mensal, utilização mensal e custo por km (ADMIN/GESTOR). O custo por km soma combustível e manutenção do mês e divide pelos quilômetros; sem quilometragem, o relatório não divide. Imposto, seguro, depreciação e GPS ficam de fora</td></tr>
+                  <tr><td>Economia e documentos</td><td>Km/L por veículo. Vencimentos de imposto do veículo, circulação e seguro no cadastro, com o rótulo conforme o país. Pneus com posição e alerta. Exame toxicológico e infrações do condutor, sem integração com o DETRAN</td></tr>
                   <tr><td>Equipe</td><td>O ADMIN gerencia usuários em uma tela e emite chaves de convite de uso único para ADMIN, GESTOR ou ENTREGADOR. GESTOR e ENTREGADOR não gerenciam a equipe; o ADMIN pode alterar perfis</td></tr>
                   <tr><td>Privacidade</td><td>Aceite versionado dos termos v2.1, bases legais do art. 7º e auditoria gerencial; cada organização isolada (multi-tenant)</td></tr>
                 </tbody>
@@ -243,11 +244,9 @@
                   <tr><th>Quando</th><th>O quê</th><th>Status</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Em produção (release e193d6d)</td><td>Gestão de frota no navegador: veículos e categorias, combustível, manutenções, motoristas, viagens, relatórios, planos e termos LGPD v2.1. Inclui filtros operacionais, convites por chave, atualização de quilometragem por abastecimento e viagem e bloqueios para veículos inativos, conforme o último release documentado.</td><td><span class="badge bg-success">Disponível</span></td></tr>
-                  <tr><td>Código atual — deploy a confirmar</td><td>RBAC de convites (<code>3c0e41e</code>) e responsividade/acessibilidade (<code>febaa3c</code>) estão sincronizados em <code>master</code>/<code>origin/master</code>; <code>mvn test</code> passou 362/362 e <code>test-smoke.ps1 -Full</code> passou localmente. CSS de produção ainda é <code>20260807c</code> (o código atual usa <code>20261003b</code>); schema Flyway efetivo em produção por confirmar.</td><td><span class="badge bg-warning text-dark">Não confirmado em produção</span></td></tr>
-                  <tr><td>08/11/2026</td><td>Freeze do Momento 1: estabilização do escopo atual da Gestão de Frotas, não um novo lançamento nem o fechamento de FRO ou do Momento 2</td><td><span class="badge bg-warning text-dark">Marco de estabilização</span></td></tr>
-                  <tr><td>08/abr–dez/2027</td><td>Completar a gestão de frota: km/L, documentos do veículo, pneus, toxicológico/infrações e custo por km</td><td><span class="badge bg-secondary">Planejado</span></td></tr>
-                  <tr><td>Depois de completar FRO</td><td>Jornada com QR, monitoramento operacional e porta de API para automações; app de gestão offline depende da conclusão de FRO. Sem data de lançamento confirmada</td><td><span class="badge bg-secondary">Roadmap, sem data confirmada</span></td></tr>
+                  <tr><td>Em produção desde 06/10/2026</td><td>Gestão de frota no navegador: veículos e categorias, combustível, manutenções, motoristas, viagens, relatórios, planos e termos LGPD v2.1. Inclui km/L, documentos do veículo, pneus, exame toxicológico, infrações e custo por km, além de filtros operacionais, convites por chave e bloqueios para veículos inativos.</td><td><span class="badge bg-success">Disponível</span></td></tr>
+                  <tr><td>08/11/2026</td><td>Freeze do Momento 1: estabilização da Gestão de Frotas já publicada. Sem jornada, app offline nem GPS</td><td><span class="badge bg-warning text-dark">Marco de estabilização</span></td></tr>
+                  <tr><td>Depois de dez/2028</td><td>Jornada com QR, monitoramento operacional, porta de API para automações e app de gestão offline. Sem data de lançamento confirmada</td><td><span class="badge bg-secondary">Roadmap, sem data confirmada</span></td></tr>
                   <tr><td>08/11/2028</td><td>CSO único: Frotas (web) + Transportes (bunker no computador da empresa)</td><td><span class="badge bg-secondary">Garagem</span></td></tr>
                   <tr><td>2028</td><td>GPS e mapa (Virtual Tracker™) — <strong>fora do que se paga hoje</strong>; não se compra ao contratar a Frotas agora</td><td><span class="badge bg-dark">Fora deste contrato</span></td></tr>
                 </tbody>
