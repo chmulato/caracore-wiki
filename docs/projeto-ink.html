@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ink Agenda | Wiki Cara Core</title>
-  <meta name="description" content="Ink Agenda v2.0.0: gestão para estúdios de tatuagem. Desktop Windows no ar. PWA para Mac, Linux e Android (sem instalador nativo nesses sistemas). Java 25 + SQLite.">
+  <meta name="description" content="Ink Agenda v2.0.1: gestão para estúdios de tatuagem. Desktop Windows no ar. PWA para Mac, Linux e Android não antes de 2028 (sem instalador nativo nesses sistemas). Java 25 + SQLite.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -46,7 +46,7 @@
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
         <h1><i class="bi bi-calendar-check"></i> Ink Agenda</h1>
-        <p class="wiki-lede">Gestão para estúdios de tatuagem. Desktop Windows <strong>v2.0.0</strong> (26/Jun/2026). <strong>PWA em 26/Jun/2027</strong> (Mac, Linux, Android e tablet — sem DMG/DEB nativos). Download e PWA na loja; documentação neste portal.</p>
+        <p class="wiki-lede">Gestão para estúdios de tatuagem. Desktop Windows <strong>v2.0.1</strong> (linha 2.0 lançada em 26/Jun/2026). <strong>PWA não antes de 2028</strong> (Mac, Linux, Android e tablet — sem DMG/DEB nativos). Download e PWA na loja; documentação neste portal.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
@@ -56,7 +56,7 @@
             <span class="tech-badge">SQLite</span>
             <span class="tech-badge">Windows desktop</span>
             <span class="tech-badge">PWA não antes de 2028 (sem Mac/Linux nativos)</span>
-            <span class="tech-badge">v2.0.0</span>
+            <span class="tech-badge">v2.0.1</span>
             <span class="tech-badge">Licença proprietária</span>
           </div>
           <div class="alert alert-info" role="note">
@@ -65,11 +65,11 @@
           <div class="row g-4">
             <div class="col-md-6">
               <h2 class="h5"><i class="bi bi-people"></i> O que muda para você</h2>
-              <p>Agenda de sessões, cadastro de clientes, receitas e despesas, saldo por período. Tudo no PC, sem depender de internet para funcionar.</p>
+              <p>Agenda de sessões, cadastro de clientes, orçamentos, receitas e despesas, saldo e faturamento por mês e ano. Tudo no PC, sem depender de internet para funcionar.</p>
               <ul class="feature-list">
-                <li>Calendário e lista do dia (sem sobrepor horários)</li>
-                <li>Check de pagamento na lista do dia</li>
-                <li>Exportação/importação e backup manual na linha 2.0.0</li>
+                <li>Calendário e lista do dia com horário, duração e valor (sem sobrepor horários)</li>
+                <li>Check “Pagou” na lista do dia</li>
+                <li>Backup <code>.inkbak</code> com senha, backup automático (pode desligar) e CSV que não duplica ao importar</li>
               </ul>
             </div>
             <div class="col-md-6">
@@ -83,23 +83,22 @@
           </div>
           <section class="mt-4" id="primeiros-passos">
             <h2 class="h5"><i class="bi bi-door-open"></i> Primeiros passos no desktop</h2>
-            <p>Canal atual: <strong>v2.0.0 Desktop Windows</strong>. Mac/Linux/Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG/DEB). Download e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
-            <p>Isto <strong>não é</strong> o PDV Cara Core. Não use <code>admin</code>/<code>admin</code> nem <code>admin</code>/<code>admin123</code>. O Ink v2.0.0 <strong>não traz usuário de fábrica</strong>.</p>
+            <p>Canal atual: <strong>v2.0.1 Desktop Windows</strong>. Mac/Linux/Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG/DEB). Download e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
+            <p>Isto <strong>não é</strong> o PDV Cara Core. Não use <code>admin</code>/<code>admin</code> nem <code>admin</code>/<code>admin123</code>. O Ink Agenda <strong>não traz usuário de fábrica</strong>.</p>
             <ol>
-              <li>Baixe <code>AgendaInk-2.0.0-windows-setup.exe</code> ou <code>AgendaInk-2.0.0-windows.zip</code>. Runtime Java 25 embutido — sem JDK.</li>
-              <li>Instale ou extraia e abra <code>AgendaInk.exe</code>.</li>
-              <li>Na primeira abertura aparece <strong>Primeiro acesso (assistido)</strong>: só o celular do responsável e o botão <strong>Continuar para primeiro acesso</strong> (a senha ainda não aparece).</li>
-              <li>Confirme o celular. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
-              <li>Escolha o perfil (Proprietário, Tatuador Sr ou Tatuador Jr), senha (mínimo 8 caracteres) e frase de recuperação (mínimo 10 caracteres). Opcional: códigos de emergência (anote; o app mostra uma vez).</li>
-              <li>Volte ao login e entre com o mesmo celular e a senha criada.</li>
+              <li>Baixe <code>AgendaInk-2.0.1-windows-setup.exe</code> ou <code>AgendaInk-2.0.1-windows.zip</code>. Runtime Java 25 embutido — sem JDK.</li>
+              <li>Instale ou extraia e abra <code>AgendaInk.exe</code>. Um aviso diz “Seus dados ficam só neste computador”.</li>
+              <li>A primeira tela é o <strong>Passo 1 de 3 — Identificação</strong>: celular do responsável e <strong>Continuar</strong>. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
+              <li><strong>Passo 2 de 3 — Senha e recuperação local:</strong> perfil (Proprietário, Tatuador Sr ou Tatuador Jr), senha (mínimo 8 caracteres), frase de recuperação (mínimo 10 caracteres) e, recomendado, 8 códigos de emergência (anote; o app mostra uma vez). Clique em <strong>Concluir configuração</strong>.</li>
+              <li><strong>Passo 3:</strong> o login aparece só agora. Entre com o mesmo celular e a senha criada.</li>
             </ol>
-            <p>Dados: <code>%LOCALAPPDATA%\CaraCore\AgendaInk\agenda.db</code>. Reinstalar o app não apaga essa pasta.</p>
-            <p><strong>Esqueci a senha:</strong> sem recuperação remota (sem SMS/e-mail). No login, “Esqueci a minha senha” gera um código de 6 dígitos só neste computador (~15 min), com a frase de recuperação. Sem frase nem código de emergência: backup local ou apagar a pasta de dados.</p>
-            <p>Depois de entrar: 1 cliente · 1 agendamento · 1 receita ou despesa · 1 backup manual (exportação na linha 2.0.0).</p>
+            <p>Dados: <code>%LOCALAPPDATA%\CaraCore\AgendaInk\agenda.db</code>; backup automático em <code>backups\</code>; registro técnico em <code>logs\</code>. Reinstalar o app não apaga essa pasta.</p>
+            <p><strong>Esqueci minha senha:</strong> sem recuperação remota (sem SMS/e-mail). No login, “Esqueci minha senha” gera um código de 6 dígitos só neste computador, válido por 15 minutos, com a frase de recuperação ou um código de emergência. Sem frase nem código: restaurar um backup ou apagar a pasta de dados.</p>
+            <p>Depois de entrar: 1 cliente · 1 agendamento · 1 receita ou despesa · 1 backup com senha em Config → Backup do estúdio. Manual completo na <a href="https://ink.caracore.com.br/manual.html" target="_blank" rel="noopener">loja</a>.</p>
           </section>
           <section class="mt-4" id="pwa">
             <h2 class="h5"><i class="bi bi-phone"></i> PWA — não antes de 2028</h2>
-            <p>Não haverá instalador nativo para macOS nem Linux. O canal abrangente é o PWA (mesmo backend da v2): Mac, Linux, Android e tablet. Data oficial: <strong>26 de junho de 2027</strong>. Até lá o download é o Desktop Windows. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
+            <p>Não haverá instalador nativo para macOS nem Linux. O canal abrangente é o PWA (mesmo backend da v2): Mac, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá o download é o Desktop Windows. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
           </section>
           <section class="mt-4" id="operacao">
             <h2 class="h5"><i class="bi bi-clipboard-check"></i> Operação no estúdio</h2>
@@ -107,7 +106,7 @@
               <li>Conferir agenda do dia antes de abrir atendimento</li>
               <li>Atualizar pagamento ao finalizar a sessão</li>
               <li>Lançar despesas no mesmo dia</li>
-              <li>Backup diário no encerramento; cópia extra em mídia segura; retenção mínima de 7 dias úteis</li>
+              <li>Backup automático a cada hora e ao fechar (30 cópias no PC); backup <code>.inkbak</code> com senha ao menos uma vez por semana, guardado em pendrive ou outro disco</li>
             </ul>
           </section>
           <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
