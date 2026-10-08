@@ -13,16 +13,16 @@ function initWikiSearch() {
     const wikiIndex = [
         {
             title: 'CaraCore PDV (hub Java + Rust)',
-            description: 'PDV Java estável v3.2.6-free e pré-release v4.0.0-rc4 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
+            description: 'PDV Java estável v3.2.7-free e pré-release v4.0.0-rc5 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.6-free', 'v4.0.0-rc4', 't032', 'pix split'],
+            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.7-free', 'v4.0.0-rc5', 't032', 'pix split'],
             category: 'projeto'
         },
         {
             title: 'CaraCore PDV Java (linha madura)',
-            description: 'PDV maduro multi-plataforma (v3.2.6-free): Quarkus, SQLite local, UI no navegador (localhost:8080). Sem PIX integrado e sem NF-e/NFC-e no Free.',
+            description: 'PDV maduro multi-plataforma (v3.2.7-free): Quarkus, SQLite local, UI no navegador (localhost:8080). Sem PIX integrado e sem NF-e/NFC-e no Free.',
             url: 'projeto-pdv.html#java',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'browser', 'localhost:8080', 'pme', 'v3.2.6-free', 'java 25'],
+            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'browser', 'localhost:8080', 'pme', 'v3.2.7-free', 'java 25'],
             category: 'projeto'
         },
         {
@@ -34,9 +34,9 @@ function initWikiSearch() {
         },
         {
             title: 'Ink Agenda',
-            description: 'Aplicativo para estúdios de tatuagem com agenda, clientes, financeiro e operação offline no desktop — v2.0.0 lançada',
+            description: 'Aplicativo para estúdios de tatuagem com agenda, clientes, financeiro e operação offline no desktop — v2.0.1 publicada',
             url: 'projeto-ink.html',
-            tags: ['ink agenda', 'tatuagem', 'estúdio', 'agenda', 'financeiro', 'clientes', 'javafx', 'sqlite', 'offline', 'windows', 'v2.0.0'],
+            tags: ['ink agenda', 'tatuagem', 'estúdio', 'agenda', 'financeiro', 'clientes', 'javafx', 'sqlite', 'offline', 'windows', 'v2.0.1'],
             category: 'projeto'
         },
         {
@@ -48,9 +48,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Gestão de encomendas e marketplaces (ML, Shopee, Temu). Oficina WAR/Tomcat 2.1; GA instalador Windows 06/Abr/2027',
+            description: 'Gestão de encomendas e marketplaces (ML, Shopee, Temu). Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/Abr/2027',
             url: 'projeto-hub.html',
-            tags: ['java', 'tomcat', 'war', 'jakarta', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'garagem', 'tia sócia'],
+            tags: ['java', 'tomcat', 'war', 'jakarta', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'garagem', 'tia sócia', 'v2.1.0-rc1.2'],
             category: 'projeto'
         },
         {

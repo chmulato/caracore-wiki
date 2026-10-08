@@ -24,10 +24,10 @@ alwaysApply: true
 
 ## CaraCore PDV — Java web local e Rust desktop
 - Java Free estável: `v3.2.7-free` · `pdv.caracore.com.br` · app web local no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; recibo digital por link e PDF, sem valor fiscal; sem PIX integrado nem NF-e/NFC-e.
-- Java v4: `v4.0.0-rc4` pré-release pública para avaliação (Qute + launcher Edge; 100 vendas finalizadas/mês; não é GA nem substitui o Free). Validada em testes internos; roteiro operacional formal T032 pendente antes do GA previsto para 08/11/2026. Handoff: `caracore-pdv/docs/arquitetura/CONTINUIDADE_DESENVOLVIMENTO.md`.
+- Java v4: `v4.0.0-rc5` pré-release pública para avaliação (Qute + launcher Edge; 100 vendas finalizadas/mês; não é GA nem substitui o Free). Validada em testes internos; roteiro operacional formal T032 pendente antes do GA previsto para 08/11/2026. SHA-256 `d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81`. Handoff: `caracore-pdv/docs/arquitetura/CONTINUIDADE_DESENVOLVIMENTO.md`.
 - Loja: CTA = **Baixar Free**; Premium via demonstração. Quem entra no Free: `download.html#perfis` (`admin`/`admin`, 1 operador).
 - Rust: v0.1.4 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.4). Logins: `primeiros-passos.html#perfis`. Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
-- Java e Rust não se substituem. V3 negócio ≠ v3.2.x ≠ v0.1.x. Não misturar pasta, senha nem data entre Free, RC4 e Rust.
+- Java e Rust não se substituem. V3 negócio ≠ v3.2.x ≠ v0.1.x. Não misturar pasta, senha nem data entre Free, RC5 e Rust.
 
 ## CaraCore CSO
 - Frotas Web em produção (`caracore-cso-quarkus`). Transportes Desktop 08/11/2028 (`caracore-cso-transportes`). Virtual Tracker™ separado, 2028.
