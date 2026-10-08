@@ -31,8 +31,7 @@ BANNER = """
             <i class="bi bi-cone-striped"></i>
             <strong>Oficina, não oferta madura.</strong> Este manual descreve a aplicação
             <strong>web</strong> da oficina (versão <strong>2.1</strong>, WAR/Tomcat).
-            Não há SaaS público do Hub nem instalador Windows em oferta.
-            O calendário oficial do instalador com SQLite é <strong>06 de abril de 2027</strong>.
+            A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não há SaaS público. O GA do instalador com SQLite continua em <strong>06 de abril de 2027</strong>.
             Conectores vivos no código: Mercado Livre, Shopee e Temu.
           </div>
 """
