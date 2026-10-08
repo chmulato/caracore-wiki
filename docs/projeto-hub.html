@@ -109,7 +109,7 @@
                   <h2 class="h4 mb-0"><i class="bi bi-mortarboard"></i> Detalhe opcional</h2>
                 </div>
                 <div class="project-body">
-                  <p>Uma oficina (<code>caracore-hub</code>, repositório privado) e uma loja (<code>caracore-hub-releases</code>). Stack da aplicação web: <strong>Jakarta EE 10 · WAR · Tomcat · JSP</strong>. PostgreSQL e Redis no ambiente atual da oficina; o destino público de 2027 é SQLite no computador do cliente.</p>
+                  <p>Uma oficina (<code>caracore-hub</code>, repositório privado) e uma loja (<code>caracore-hub-releases</code>). Stack da aplicação: <strong>Jakarta EE 10 · WAR · Tomcat · JSP · SQLite local</strong>. Os dados ficam no computador do cliente.</p>
                   <ul class="feature-list">
                     <li>Versão de referência na oficina: <strong>2.1</strong></li>
                     <li>Fases 1 a 5 da aplicação web marcadas como concluídas na oficina</li>
@@ -154,7 +154,7 @@
                 <div class="project-card h-100">
                   <div class="project-body">
                     <p><span class="badge bg-secondary">Oficina hoje</span></p>
-                    <p>Aplicação <strong>web</strong> empacotada como WAR, Tomcat, JSP/Bootstrap, PostgreSQL e Redis. Sobe com Docker na oficina. Não é desktop e não é o canal de download do cliente final.</p>
+                    <p>Aplicação <strong>web</strong> empacotada como WAR, Tomcat e JSP. O banco é <strong>SQLite local</strong>. O canal de download do cliente é a pré-release Windows.</p>
                   </div>
                 </div>
               </div>
@@ -186,7 +186,7 @@
                   <tr><td>Loja</td><td colspan="2"><code>caracore-hub-releases</code> — <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a></td></tr>
                   <tr><td>Runtime</td><td>Jakarta EE 10 · Tomcat 10.1 · WAR</td><td>Tomcat embutido + envelope Electron (na oficina)</td></tr>
                   <tr><td>Interface</td><td>JSP + JSTL + Bootstrap 5 + Chart.js</td><td>As mesmas telas JSP, dentro do desktop</td></tr>
-                  <tr><td>Banco</td><td>PostgreSQL 15 (+ Redis 7)</td><td>SQLite local (Bunker)</td></tr>
+                  <tr><td>Banco</td><td>SQLite local (WAL)</td><td>SQLite local (WAL)</td></tr>
                   <tr><td>Marketplaces</td><td colspan="2">Mercado Livre, Shopee, Temu (não inventar Amazon como conector pronto)</td></tr>
                   <tr><td>CTA público</td><td colspan="2">hub.caracore.com.br — nunca <code>/delivery/hub</code></td></tr>
                 </tbody>
