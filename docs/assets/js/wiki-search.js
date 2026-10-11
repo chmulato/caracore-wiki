@@ -124,10 +124,10 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
-            title: 'RU Soberano',
-            description: 'Simulador de reator e sala RETRO — lançamento 18/06/2027, loja ru.caracore.com.br',
-            url: 'projeto-ru.html',
-            tags: ['ru', 'soberano', 'reator', 'retro', 'javafx', 'engenharia', 'simulador'],
+            title: 'BioReator 4.0',
+            description: 'Community 1.0.0 se baixa agora. Premium em 18/06/2027, sem preço e sem PIX. Loja ru.caracore.com.br',
+            url: 'projeto-bioreator.html',
+            tags: ['ru', 'bioreator', 'bioinsumos', 'fermentacao', 'community', 'premium', 'javafx'],
             category: 'projeto'
         },
         {
