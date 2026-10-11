@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioReator 4.0 — exemplo e cinética | Wiki Cara Core</title>
+  <meta name="description" content="Exemplo da carga de referência do BioReator 4.0 e a cinética que o simulador calcula: Monod, kLa, oxigênio e rendimento.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="projeto-bioreator.html"><i class="bi bi-moisture"></i> BioReator 4.0</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="projeto-bioreator.html">BioReator 4.0</a></li>
+          <li class="breadcrumb-item active">Exemplo e cinética</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="wiki-content wiki-home">
+      <div class="wiki-header">
+        <h1><i class="bi bi-moisture"></i> BioReator 4.0 — exemplo e cinética</h1>
+        <p class="wiki-lede">A carga de referência da Community e as contas que o simulador 1.0.0 faz em cima dela. Calibração de console, não medição de planta nem procedimento de produção.</p>
+      </div>
+
+      <div class="project-card mb-4">
+        <div class="project-body p-4">
+          <h2 class="h5">Exemplo Community — carga de referência</h2>
+          <p><em>Bradyrhizobium japonicum</em> em batelada. Tanque de 100 L a 75% (75 L de caldo), 1 vvm, 400 rpm, 28 °C, pH 6,75. X inicial 0,20 g/L. S inicial 20 g/L. O oxigênio parte de 7,8 mg/L, a saturação de referência do simulador para ar perto de 28 °C.</p>
+          <p>O console estima kLa ≈ 157 h⁻¹, cerca de 122 W de agitação e cerca de 114 W de aeração, num cilindro de líquido com cerca de 0,46 m de diâmetro. A correlação é a de Van’t Riet para meio coalescente, com turbina Rushton (Po = 5, D/T = 1/3, H = T) e compressor ideal com 0,5 bar no sparger e rendimento 55%. Sem rotação ou sem ar, kLa fica em zero.</p>
+
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr><th>Hora</th><th>X (g/L)</th><th>S (g/L)</th><th>OD (mg/L)</th><th>OD (%)</th><th>µ (h⁻¹)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>0</td><td>0,20</td><td>20,0</td><td>7,8</td><td>100</td><td>0,099</td></tr>
+                <tr><td>6</td><td>0,36</td><td>19,6</td><td>7,5</td><td>96</td><td>0,099</td></tr>
+                <tr><td>12</td><td>0,65</td><td>18,9</td><td>7,3</td><td>94</td><td>0,099</td></tr>
+                <tr><td>24</td><td>2,12</td><td>15,4</td><td>6,2</td><td>79</td><td>0,098</td></tr>
+                <tr><td>cerca de 40</td><td>8,6</td><td>esgotado</td><td>cerca de 1,2</td><td>cerca de 16</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Por volta de 38 h, S cai abaixo de 1 g/L (5% da carga) e o oxigênio dissolvido cruza 20% da saturação. Os avisos de substrato baixo e de hipóxia entram juntos. Por volta de 40 h o substrato acaba. A biomassa para em 8,6 g/L: 15 g iniciais mais 630 g formados dos 1.500 g de substrato. O rendimento imposto é 0,42 g/g e o erro relativo fica abaixo de 1e-6.</p>
+          <p>O oxigênio permanece perto de 16% depois que o crescimento para. O consumo específico continua proporcional à biomassa presente. A hipóxia fica no aviso e não reduz µ.</p>
+
+          <h2 class="h5 mt-4">Equações da batelada</h2>
+          <ul class="feature-list">
+            <li>µ = µ<sub>máx</sub> × S / (Ks + S)</li>
+            <li>dX/dt = µ × X, com o volume constante</li>
+            <li>dS/dt = −µ × X / Yxs, limitado pelo substrato que ainda existe</li>
+            <li>dCL/dt = kLa × (C* − CL) − qO₂ × X, com solução analítica em cada passo</li>
+            <li>OUR = qO₂ × X e OTR = kLa × (C* − CL)</li>
+          </ul>
+          <p>Neste perfil, µ<sub>máx</sub> = 0,10 h⁻¹, Ks = 0,25 g/L, Yxs = 0,42 g/g e qO₂ = 0,12 g de O₂ por g de biomassa por hora. No instante zero, µ ≈ 0,099 h⁻¹, dX/dt ≈ 0,020 g/(L·h) e dS/dt ≈ −0,047 g/(L·h).</p>
+          <p>pH fora de 6,5–7,0, ou temperatura a mais de 2 °C de 28 °C, gera aviso. A cinética de crescimento continua a de Monod no substrato.</p>
+
+          <h2 class="h5 mt-4">Catálogo calibrado</h2>
+          <p>Os números são constantes do simulador, na ordem de grandeza de um cultivo aeróbio. Eles não descrevem meio, inóculo nem procedimento de produção. A Community opera só a primeira linha. As outras quatro entram na Pro, na oficina.</p>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr><th>Perfil</th><th>Edição</th><th>µ<sub>máx</sub> (h⁻¹)</th><th>Ks (g/L)</th><th>Yxs (g/g)</th><th>qO₂</th><th>pH</th><th>T (°C)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><em>Bradyrhizobium japonicum</em></td><td>Community</td><td>0,10</td><td>0,25</td><td>0,42</td><td>0,12</td><td>6,5–7,0</td><td>28</td></tr>
+                <tr><td><em>Bacillus subtilis</em></td><td>Pro</td><td>0,85</td><td>0,10</td><td>0,50</td><td>0,34</td><td>6,5–7,5</td><td>30</td></tr>
+                <tr><td><em>Bacillus thuringiensis</em></td><td>Pro, só crescimento</td><td>0,65</td><td>0,15</td><td>0,46</td><td>0,30</td><td>6,8–7,4</td><td>30</td></tr>
+                <tr><td><em>Trichoderma harzianum</em></td><td>Pro</td><td>0,18</td><td>0,70</td><td>0,40</td><td>0,22</td><td>5,0–6,5</td><td>26</td></tr>
+                <tr><td><em>Saccharomyces cerevisiae</em></td><td>Pro, biomassa aeróbia</td><td>0,45</td><td>0,10</td><td>0,50</td><td>0,30</td><td>4,0–5,5</td><td>30</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><em>B. thuringiensis</em> não descreve esporulação, cristal proteico nem rendimento de toxina. <em>S. cerevisiae</em> não descreve fermentação alcoólica.</p>
+
+          <h2 class="h5 mt-4">Exemplo Pro — 6 h de batelada alimentada</h2>
+          <p>A Community zera a vazão mesmo que os campos de alimentação tenham número. Na Pro, a alimentação de referência é 0,5 L/h com 100 g/L de substrato. O balanço extensivo é dV/dt = F, d(VX)/dt = µ × X × V e d(VS)/dt = F × Sin − µ × X × V / Yxs.</p>
+          <p>Na mesma carga de 75 L, depois de 6 h o volume está em 78 L. A leitura é X ≈ 0,35 g/L, S ≈ 22,7 g/L e oxigênio dissolvido ≈ 7,5 mg/L (cerca de 97%). O substrato sobe porque a entrada supera o consumo. Na batelada simples, na mesma hora, S estaria em cerca de 19,6 g/L e X em cerca de 0,36 g/L.</p>
+          <p>A conta do lote e o PDF de uma página também ficam na Pro. Os preços são os que o operador digita. A edição não tem preço de venda e a loja não combina PIX.</p>
+
+          <div class="wiki-actions mt-4">
+            <a href="https://ru.caracore.com.br/exemplo-bioreator.html" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-journal-text"></i> O mesmo exemplo na loja
+            </a>
+            <a href="projeto-bioreator.html" class="btn-wiki">
+              <i class="bi bi-arrow-left"></i> Ficha do BioReator
+            </a>
+            <a href="https://ru.caracore.com.br/manual-bioreator.html" class="btn-wiki" target="_blank" rel="noopener">
+              <i class="bi bi-book"></i> Manual do operador
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/wiki.js"></script>
+</body>
+</html>
