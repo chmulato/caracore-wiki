@@ -39,6 +39,7 @@ alwaysApply: true
 
 ## Satélites (versão pública)
 - Minerador 4.0: canal **v1.2.3** · loja `ete.caracore.com.br` · página `projeto-minerador.html`
+- BioReator 4.0: Community **1.1.0**, publicada em 12/10/2026 · Windows x64, runtime Java 25 incluído, sem assinatura · release `bioreator-1.1.0` (MSI e ZIP; EXE dentro do ZIP). Aproximações configuradas de oxigênio, temperatura e pH, fase lag, decaimento celular, término ao esgotar substrato e estimativa de UFC/mL. Parâmetros são simulações e requerem validação experimental. Premium em 18/06/2027, sem preço e sem PIX. Matriz: `portfolio.html#bioreator40`; loja: `ru.caracore.com.br`; Central: `download.caracore.com.br/download.html#bioreator40`.
 
 ## Convenções
 - Capa e cards: linguagem de cenário primeiro (**o que ganha / como resolve agora / próximo passo**). Nomes internos (Eco Mundo, Garagem, Área 51) vêm explicados; Java/Rust e datas de GA ficam como detalhe, sem apagar o fato.
