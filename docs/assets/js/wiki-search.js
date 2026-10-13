@@ -125,7 +125,7 @@ function initWikiSearch() {
         },
         {
             title: 'BioReator 4.0',
-            description: 'Community 1.1.0 publicada em 12/10/2026. Premium em 18/06/2027, sem preço e sem PIX. Loja ru.caracore.com.br',
+            description: 'Community 1.1.1 publicada em 13/10/2026. Premium em 18/06/2027, sem preço e sem PIX. Loja ru.caracore.com.br',
             url: 'projeto-bioreator.html',
             tags: ['ru', 'bioreator', 'bioinsumos', 'fermentacao', 'community', 'premium', 'javafx'],
             category: 'projeto'

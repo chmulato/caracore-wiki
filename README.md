@@ -21,7 +21,7 @@ Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega.
 9. **Área 51** — Consultoria OIDC / autenticação enterprise
 10. **Helianto Condominium** — Administração condominial com soberania de dados e motor financeiro auditável (loja helianto.caracore.com.br; lançamento 30/Dez/2029)
 11. **CaraCore CSO** — Plataforma dual: Gestão de Frotas (Web, em produção em cso.caracore.com.br; Java 21 · Quarkus · PostgreSQL) e Gestão de Transportes (Desktop bunker JavaFX/SQLite, 08/Nov/2028). Os commits recentes de RBAC em convites e responsividade passaram localmente, mas o deploy em produção ainda não está confirmado. CSO de gestão **não** inclui GPS/mapa (Virtual Tracker™ é produto separado, 2028).
-12. **BioReator 4.0** — Estação de bioinsumos (loja ru.caracore.com.br; Community 1.1.0 publicada em 12/Out/2026; Premium em 18/Jun/2027, sem preço e sem PIX)
+12. **BioReator 4.0** — Estação de bioinsumos (loja ru.caracore.com.br; Community 1.1.1 publicada em 13/Out/2026; Premium em 18/Jun/2027, sem preço e sem PIX)
 13. **Cara Core MKT** — Vitrine gratuita e Sala Cara Core (mkt.caracore.com.br · tools.caracore.com.br/sala/); não vendemos
 
 ## Design Responsivo
