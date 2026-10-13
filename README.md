@@ -15,7 +15,7 @@ Fornecer explicações **claras e acessíveis** sobre o que a Cara Core entrega.
 3. **Ink Agenda** — Gestão para estúdios de tatuagem; Desktop Windows **v2.0.0** (26/Jun/2026); PWA em roadmap (**não antes de 2028**; Mac, Linux, Android; sem DMG/DEB)
 4. **chmulatoETE Minerador 4.0** — Simulador ETE/hidrometalurgia para **Ensino Médio** e mineração (upgrade Ouro 4.0 R$ 29,90)
 5. **Reino OIDC** — Educação em OAuth 2.1 e OIDC
-6. **Cara Core Seed** — Contador de licenças (ferramenta interna; aplicação não está em oferta pública)
+6. **CaraCore Seed** — Aplicativo local de gestão de clientes e licenças; piloto gratuito sob MIT por convite. Candidato Windows x64 `0.1.3` aguarda homologação independente; sem download público, Linux fora desta etapa e sem monitoramento remoto de heartbeats. Primeiro acesso `admin`/`admin`, troca obrigatória por senha de exatamente 8 caracteres com confirmação e chave de recuperação.
 7. **Circuito Ferradura** — Produto educacional em evolução para lógica, ábaco romano e Python; uso pessoal gratuito e conversa institucional para escolas
 8. **Cara Core Hub** — Gestão de encomendas e marketplaces (ML, Shopee, Temu); oficina web WAR/Tomcat 2.1; pré-release Windows **v2.1.0-rc1.2** para avaliação em hub.caracore.com.br (instalador e ZIP, sem assinatura); GA do instalador Windows **06/Abr/2027**. Não é orquestrador interno nem Python/Flask.
 9. **Área 51** — Consultoria OIDC / autenticação enterprise

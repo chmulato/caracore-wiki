@@ -485,29 +485,30 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
-                                        <p>O <strong>Cara Core Seed</strong> é o <strong>Contador de Licenças</strong> para quem compra os produtos Cara Core (PDV, Minerador 4.0, Reino OIDC, Hub) para rodar no Windows. <strong>Foco localhost e Windows Desktop:</strong> o aplicativo roda no computador do cliente; ao abrir, sobe em localhost e abre a interface. SQLite local, 100% offline. O produto existe, mas a aplicação não está em oferta ativa no momento.</p>
+                                        <p>O <strong>CaraCore Seed</strong> é um aplicativo desktop local para cadastrar clientes e administrar licenças de software. O candidato Windows x64 <strong>0.1.3</strong> passou nos testes automatizados e aguarda homologação independente; o piloto é gratuito sob MIT e será fechado por convite, sem download público. SQLite local e API vinculada a <code>127.0.0.1</code>; sem nuvem, checkout ou monitoramento remoto de heartbeats.</p>
                                         
                                         <p><strong>Vantagens:</strong></p>
                                         <ul class="feature-list">
-                                            <li>Portal de controle com transparência e LGPD</li>
-                                            <li>EXE para Windows (Electron + servidor local)</li>
-                                            <li>Banco apenas SQLite no escopo</li>
-                                            <li>Licença atrelada ao hardware (license.key)</li>
+                                            <li>Cadastro de clientes e administração/validação de licenças</li>
+                                            <li>Auditoria local, alertas e consulta de validade/limites</li>
+                                            <li>Aplicativo desktop Electron com backend Java 25 e SQLite</li>
+                                            <li>Servidor local restrito a <code>127.0.0.1</code></li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
-                                        <p>WAR Java com SQLite local; Electron inicia JRE + WAR e abre em <code>http://localhost:9080</code>. Dois perfis: Contador de Clientes (uso interno) e Comprador (consulta). Testes com foco em localhost e Desktop Electron (UT, HTTP, E2E).</p>
+                                        <p>O pacote desktop inclui runtime Java 25 e Tomcat embutido; os dados permanecem no perfil local do usuário. A suíte automatizada atual passou: 914 testes Maven, 2 testes do launcher e 6 testes Electron. Isso não substitui a homologação manual do instalador nem comprova restauração de backup.</p>
                                         
                                         <p><strong>Escopo:</strong></p>
                                         <ul class="feature-list">
-                                            <li>localhost + Windows Desktop (Electron)</li>
-                                            <li>SQLite como único banco no escopo</li>
-                                            <li>Build EXE e publicar em caracore-seed-releases</li>
+                                            <li>Candidato Windows x64; Linux fora desta etapa</li>
+                                            <li>Primeiro acesso <code>admin</code>/<code>admin</code>; troca obrigatória por senha de exatamente 8 caracteres com confirmação</li>
+                                            <li>Chave de recuperação exibida no primeiro acesso; guardar fora do computador</li>
+                                            <li>Homologação independente e teste em perfil limpo pendentes; não distribuir antes do aceite</li>
                                         </ul>
                                         
                                         <div class="alert alert-success mt-3">
-                                            <strong>Links:</strong> <a href="https://seed.caracore.com.br/index.html" target="_blank" rel="noopener">Portal Seed</a> · <span>Repositório de releases (referência): <code class="user-select-all">https://github.com/chmulato/caracore-seed-releases/releases</code></span>
+                                            <strong>Links:</strong> <a href="https://seed.caracore.com.br/index.html" target="_blank" rel="noopener">Vitrine e estado do piloto</a> · <a href="https://seed.caracore.com.br/canal-feedback.html#convite" target="_blank" rel="noopener">Manifestar interesse no convite</a>. Não há release pública para baixar.
                                         </div>
                                     </div>
                                 </div>
