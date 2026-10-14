@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cara Core Seed | Wiki Cara Core</title>
-  <meta name="description" content="CaraCore Seed: piloto público local de gestão de clientes e licenças. Windows 0.1.4 disponível para avaliação; homologação independente pendente.">
+  <meta name="description" content="CaraCore Seed: piloto público local de gestão de clientes e licenças. Pré-release candidata Windows 0.1.5 para avaliação; homologação independente pendente.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -42,19 +42,19 @@
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
         <h1><i class="bi bi-key"></i> Cara Core Seed</h1>
-        <p class="wiki-lede">Aplicativo desktop local para cadastrar clientes e administrar licenças de software. O piloto público é gratuito e licenciado sob MIT. O candidato Windows <strong>0.1.4 está disponível para avaliação</strong>, mas ainda aguarda homologação independente.</p>
+        <p class="wiki-lede">Aplicativo desktop local para cadastrar clientes e administrar licenças de software. O piloto público é gratuito e licenciado sob MIT. A pré-release candidata Windows <strong>0.1.5 está disponível para avaliação</strong>; a 0.1.4 permanece como release estável anterior. A homologação independente da candidata está pendente.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
           <div class="mb-3">
-            <span class="tech-badge">Piloto público</span>
+            <span class="tech-badge">Pré-release candidata 0.1.5</span>
             <span class="tech-badge">Electron · Java 25</span>
             <span class="tech-badge">SQLite</span>
             <span class="tech-badge">Windows x64</span>
             <span class="tech-badge">MIT · gratuito</span>
           </div>
           <div class="alert alert-warning" role="note">
-            O candidato `0.1.4` está publicado para avaliação. Instalador: 216.458.520 bytes; SHA-256: <code>a01da8dbad7fdee2e9e59b1a99ed1be45b3f2e1d007d559cf289c6a606a30c2a</code>. Esta versão corrige problemas de segurança e robustez, mas homologação independente e regressões manuais completas continuam pendentes. Não o considere homologado ou pronto para produção. Consulte a <a href="https://seed.caracore.com.br/download.html" target="_blank" rel="noopener">página de distribuição</a> para baixar o instalador e verificar o checksum. A versão 0.1.3 foi substituída e não deve ser usada.
+            A pré-release candidata `0.1.5` está publicada para avaliação. Instalador Windows x64: 216.466.586 bytes; SHA-256: <code>e449ca2cee74fda135ac098d2333fe674c2c476773a7d4adb60bc016a767db16</code>. A candidata corrige problemas de segurança e robustez, mas homologação independente continua pendente; não a considere homologada nem pronta para produção. A versão estável anterior é a 0.1.4; a 0.1.3 foi substituída e não deve ser usada. Consulte a <a href="https://seed.caracore.com.br/download.html" target="_blank" rel="noopener">página de distribuição</a> para baixar o instalador e conferir o checksum.
           </div>
           <div class="row g-4">
             <div class="col-md-6">
@@ -63,8 +63,11 @@
               <ul>
                 <li>Banco SQLite guardado no perfil local do usuário</li>
                 <li>Aplicação desktop Electron com backend Java 25 e Tomcat embutido</li>
-                <li>Servidor vinculado a <code>127.0.0.1</code>, com porta local dinâmica e sem API exposta na rede local</li>
-                <li>API administrativa protegida por sessão ADMIN/CSRF; operações de integração protegidas por token por licença</li>
+                <li>Servidor vinculado a <code>127.0.0.1</code>, com porta local dinâmica, validação de Host e sem API exposta na rede local</li>
+                <li>API administrativa protegida por sessão ADMIN/CSRF, com token CSRF renovado após login e troca de senha; integrações protegidas por token por licença</li>
+                <li>Swagger UI e documentação da API servidas localmente, sem dependência de CDN</li>
+                <li>Heartbeats registrados em UTC do servidor, preservando o horário do cliente para diagnosticar desvios</li>
+                <li>Respostas de licença incluem o payload assinado exato e o algoritmo RSA para verificação pelo cliente</li>
                 <li>Sem serviço em nuvem, checkout ou pagamento real</li>
               </ul>
             </div>
@@ -72,14 +75,14 @@
               <h2 class="h5"><i class="bi bi-shield-lock"></i> Primeiro acesso e segurança</h2>
               <p>O primeiro acesso usa <code>admin</code> / <code>admin</code> e exige a troca da senha por uma nova de 12 a 128 caracteres, com confirmação. A janela inicial apresenta uma chave de recuperação: copie-a e guarde-a fora do computador. Se perder a senha, use a chave na tela de recuperação; não apague os arquivos de credenciais ou o banco.</p>
               <p>O instalador publicado é unsigned. Não desative SmartScreen, Defender ou outras proteções do Windows.</p>
-              <p>Faça backup antes de atualizar e preserve o banco SQLite e as chaves de assinatura. Licenças antigas podem precisar de emissão ou rotação do token de API para usar as rotas protegidas. A porta escolhida fica registrada em <code>%APPDATA%\CaraCore Seed\server\server.port</code>; consulte a interface Swagger local.</p>
+              <p>Faça backup antes de atualizar e preserve o banco SQLite e as chaves de assinatura. A migração aditiva V8 mantém compatibilidade com bancos 0.1.3 e 0.1.4, preservando dados e chaves; licenças antigas podem precisar de emissão ou rotação do token de API para usar as rotas protegidas. A porta escolhida fica registrada em <code>%APPDATA%\CaraCore Seed\server\server.port</code>; consulte a interface Swagger local.</p>
             </div>
           </div>
           <div class="alert alert-info mt-4" role="note">
             <strong>Escopo desta etapa:</strong> piloto público para avaliação em Windows x64. Linux fica fora até haver build e smoke em runner Linux nativo. Além da homologação em perfil limpo, ainda faltam regressões manuais de licenças/assinatura/auditoria e de backup/restauração antes de considerar o produto pronto para produção.
           </div>
           <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
-            <a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/caracore-seed-0.1.4-windows-x64.exe" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-download"></i> Baixar piloto Windows 0.1.4</a>
+            <a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.5/caracore-seed-0.1.5-windows-x64.exe" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-download"></i> Baixar pré-release Windows 0.1.5</a>
             <a href="https://seed.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Estado na vitrine</a>
             <a href="https://www.caracore.com.br/portfolio.html#caracore-seed" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-globe"></i> Portfólio</a>
             <a href="projetos-overview.html" class="btn-wiki"><i class="bi bi-collection"></i> Visão geral</a>
