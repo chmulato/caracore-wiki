@@ -1,0 +1,8 @@
+@media (max-width: 480px) {
+  .wiki-bioreator .wiki-home .wiki-header {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}

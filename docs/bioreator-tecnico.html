@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BioReator 4.0 — exemplo e cinética | Wiki Cara Core</title>
-  <meta name="description" content="Exemplo da carga de referência do BioReator 4.0 e a cinética que o simulador calcula: Monod, kLa, oxigênio e rendimento.">
+  <title>BioReator 4.0 — modelo e exemplo 1.1.1 | Wiki Cara Core</title>
+  <meta name="description" content="Modelo, parâmetros, método numérico, critérios de término e trajetória de referência do BioReator 4.0 Community 1.1.1.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
   <link rel="stylesheet" href="assets/css/wiki-unified.css">
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="assets/css/bioreator-wiki.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="wiki-bioreator">
   <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
     <div class="container">
       <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
@@ -48,9 +49,89 @@
   <div class="wiki-container">
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
-        <h1><i class="bi bi-moisture"></i> BioReator 4.0 — exemplo e cinética</h1>
-        <p class="wiki-lede">A página preserva a carga e os cálculos históricos da versão 1.0.0. A Community 1.1.1 está publicada e usa outra carga e cinética; consulte o <a href="https://ru.caracore.com.br/exemplo-bioreator.html#previa-1-1" target="_blank" rel="noopener">exemplo atualizado da versão 1.1.1</a>, os <a href="https://ru.caracore.com.br/fundamentos-bioprocesso.html#previa-1-1" target="_blank" rel="noopener">fundamentos atuais</a> e os <a href="https://ru.caracore.com.br/manual-tecnico.html#criterios-fim" target="_blank" rel="noopener">critérios de término</a>. Os resultados são simulações, não medições de planta nem procedimentos de produção.</p>
+        <h1><i class="bi bi-moisture"></i> BioReator 4.0 — modelo e exemplo 1.1.1</h1>
+        <p class="wiki-lede">Esta página documenta primeiro a Community 1.1.1 publicada e preserva abaixo, claramente identificados, os cálculos históricos da 1.0.0. Os resultados são simulações didáticas: não são medições de planta nem procedimentos de produção.</p>
       </div>
+
+      <section class="panel bio-callout" id="modelo-1-1-1">
+        <h2>Versão atual: Community 1.1.1</h2>
+        <p>A carga de referência usa tanque nominal de 100 L, 75 L de volume líquido, 1 vvm, 400 rpm, X₀ = 0,03 g/L, S₀ = 10 g/L, 28 °C e pH 6,8. O kLa calculado pelo pacote é 131,0455 h⁻¹.</p>
+        <p>O modelo multiplica Monod por fatores configurados de oxigênio, temperatura, pH e fase lag; a biomassa viável também sofre decaimento:</p>
+        <p class="formula">μ = μmax · S/(Ks + S) · DO/(KO + DO) · fT(T) · fPH(pH)<sup>1,25</sup> · [1 − exp(−t/8 h)]</p>
+        <p class="formula">dXviável/dt = μ · Xviável − kd · Xviável; &nbsp; dS/dt = −μ · Xviável / Yx/s</p>
+        <p class="formula">qO₂ = μ / Yx/o + mo; &nbsp; OUR = qO₂ · Xviável</p>
+        <p>A biomassa total inclui a biomassa viável e a parcela acumulada que decaiu: Xtotal = Xviável + X que decaiu. A saturação de oxigênio de referência da carga é 7,8 mg/L.</p>
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead><tr><th>Parâmetro</th><th>Valor configurado</th><th>Unidade</th><th>Base e limite</th></tr></thead>
+            <tbody>
+              <tr><td>μmax; Ks; Yx/s</td><td>0,05; 0,25; 0,42</td><td>h⁻¹; g/L; gX/gS</td><td>Perfil do simulador [R5, R11]; a forma de Monod e os balanços seguem [R1–R3]. Não são medições da cepa.</td></tr>
+              <tr><td>KO</td><td>0,15</td><td>mg O₂/L</td><td>Constante demonstrativa de limitação por oxigênio [R5].</td></tr>
+              <tr><td>Yx/o; mo</td><td>1,1; 0,007</td><td>gX/gO₂; gO₂/(gX·h)</td><td>Parâmetros configurados de rendimento/manutenção; formulação de manutenção relacionada a [R9].</td></tr>
+              <tr><td>Temperatura min.; ótima; máx.</td><td>10; 28; 37</td><td>°C</td><td>Pontos da função cardinal [R10], configurados no perfil.</td></tr>
+              <tr><td>pH min.; ótimo; máx.; expoente</td><td>4,5; 6,8; 9,0; 1,25</td><td>adimensional</td><td>Pontos e expoente configurados no perfil; função cardinal relacionada a [R10].</td></tr>
+              <tr><td>Fase lag; kd</td><td>8; 0,003</td><td>h; h⁻¹</td><td>Configuração didática [R5]; não ajustada a dados experimentais.</td></tr>
+              <tr><td>Conversão para UFC/mL</td><td>2,0 × 10⁹</td><td>UFC/mL por g/L de Xviável</td><td>Fator do perfil [R5]. Estimativa do software, não contagem laboratorial.</td></tr>
+              <tr><td>kLa na carga padrão</td><td>131,0455</td><td>h⁻¹</td><td>Resultado do pacote com P/V pelo volume líquido; correlação de van’t Riet [R4].</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A biblioteca [R1–R4, R9–R10] fundamenta as formas do modelo; ela não é a origem experimental dos valores de perfil. As constantes são configurações pedagógicas documentadas nas releases [R5, R11]. Consulte os <a href="https://ru.caracore.com.br/fundamentos-bioprocesso.html#previa-1-1" target="_blank" rel="noopener">fundamentos e referências completos</a>.</p>
+      </section>
+
+      <section class="panel mt-3" id="trajetoria-1-1-1">
+        <h2>Trajetória da carga padrão</h2>
+        <p>A execução empacotada termina em 122,55 h (5,11 dias) por <code>SUBSTRATE_DEPLETED</code>. Ao fim, S = 0,000985 g/L, Xviável = 3,913056 g/L e Xtotal = 4,229586 g/L.</p>
+        <figure class="my-3">
+          <img class="img-fluid rounded border" src="assets/img/comparacao-curva-bioreator-1.1.1.svg" alt="Curva simulada do BioReator 4.0 1.1.1, com biomassa viável e total, consumo de substrato e término após 122,55 horas.">
+          <figcaption class="small text-muted mt-2">A faixa de 5–7 dias é apenas contexto de duração publicado; não é validação nem série experimental equivalente.</figcaption>
+        </figure>
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead><tr><th>Tempo (h)</th><th>X viável (g/L)</th><th>X total (g/L)</th><th>S (g/L)</th><th>OD (% sat.)</th><th>Evento</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td>0,030000</td><td>0,030000</td><td>10,000000</td><td>100,0000</td><td>Início</td></tr>
+              <tr><td>24</td><td>0,061072</td><td>0,063992</td><td>9,919066</td><td>99,7119</td><td>—</td></tr>
+              <tr><td>48</td><td>0,175655</td><td>0,186365</td><td>9,627702</td><td>99,1366</td><td>—</td></tr>
+              <tr><td>72</td><td>0,513039</td><td>0,546441</td><td>8,770378</td><td>97,4792</td><td>—</td></tr>
+              <tr><td>96</td><td>1,489489</td><td>1,589001</td><td>6,288093</td><td>92,7547</td><td>—</td></tr>
+              <tr><td>120</td><td>3,905962</td><td>4,192506</td><td>0,089271</td><td>92,6230</td><td>S &lt; 5% de S₀</td></tr>
+              <tr><td>122,55</td><td>3,913056</td><td>4,229586</td><td>0,000985</td><td>97,2462</td><td><code>SUBSTRATE_DEPLETED</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A estimativa configurada é Xviável × 2,0 × 10⁹ ≈ 7,826 × 10⁹ UFC/mL. A literatura relata trajetórias de vários dias em outras cepas, meios e condições [R6–R8]; duração semelhante não demonstra equivalência entre o simulador e a produção real.</p>
+        <p><a href="https://ru.caracore.com.br/assets/data/exemplo-bioreator-community-1.1.1.csv" target="_blank" rel="noopener">Baixar CSV didático completo</a> · <a href="https://ru.caracore.com.br/exemplo-bioreator.html#previa-1-1" target="_blank" rel="noopener">Ver o exemplo da versão 1.1.1 na loja</a>.</p>
+      </section>
+
+      <section class="panel mt-3" id="metodo-1-1-1">
+        <h2>Método numérico, oxigênio e término</h2>
+        <p>O passo é Δt = 0,05 h. Biomassa e substrato usam Euler explícito, com μ avaliada no início do passo; a formação de biomassa é limitada pelo substrato disponível e o decaimento é aplicado depois da formação.</p>
+        <p class="formula">mX,formada = min(μn · Xn · V · Δt, Yx/s · Sn · V)</p>
+        <p class="formula">Xn+1 = (Xn + mX,formada/V) · exp(−kd·Δt); &nbsp; Sn+1 = Sn − mX,formada/(Yx/s·V)</p>
+        <p>OD não é integrado por Euler: para α = kLa e β = kLa·CL* − qO₂·1000·Xviável, o programa resolve exatamente CL<sub>n+1</sub> = β/α + (CL<sub>n</sub> − β/α) · exp(−αΔt), usando OUR do início do passo. A telemetria da interface é emitida a cada 0,25 h simuladas; o integrador avança 0,05 h a cada 0,2 s de relógio real (aproximadamente 4 s por hora simulada).</p>
+        <p>O kLa usa a correlação de van’t Riet para meio coalescente: kLa = 0,026 · (P/V)<sup>0,4</sup> · u<sub>s</sub><sup>0,5</sup>, com kLa em s⁻¹, P/V em W/m³ e velocidade superficial do gás em m/s. O cálculo converte o resultado para h⁻¹, usa P/V sobre o volume líquido e reduz a potência aerada pelo fator 0,5. Para a turbina Rushton, Np = 5, Di = D/3 e H = D; são hipóteses geométricas do simulador, não especificações de projeto.</p>
+        <p>O primeiro critério alcançado encerra o lote:</p>
+        <ul>
+          <li><code>SUBSTRATE_DEPLETED</code>: S ≤ 0,001 g/L.</li>
+          <li><code>DO_SPIKE</code>: com S &lt; 5% de S₀, OD aumenta pelo menos 15 pontos percentuais da saturação em até 1 h.</li>
+          <li><code>STALLED</code>: após o lag, variação absoluta de X &lt; 0,0001 g/L/h durante 12 h.</li>
+          <li><code>MAX_TIME</code>: limite padrão de 240 h.</li>
+          <li><code>STOPPED</code>: encerramento manual pelo operador.</li>
+        </ul>
+        <p>O motivo é registrado como <code>end_reason</code> no CSV e no lote local. A curva padrão encerra por <code>SUBSTRATE_DEPLETED</code>. Confira o <a href="https://ru.caracore.com.br/manual-tecnico.html#criterios-fim" target="_blank" rel="noopener">manual técnico e critérios da loja</a>.</p>
+      </section>
+
+      <section class="panel mt-3" id="limites-1-1-1">
+        <h2>Interpretação e limites</h2>
+        <ul>
+          <li>X viável e a conversão para UFC/mL são saídas matemáticas; não são contagem de células em laboratório.</li>
+          <li>Não há medição de planta, validação experimental publicada nem simulação de contaminação.</li>
+          <li>Temperatura, pH e oxigênio afetam o crescimento pela parametrização do modelo; isso não equivale a controle de processo real.</li>
+          <li>OD pode voltar a subir quando a demanda calculada cai; não deve ser interpretado como recuperação medida por uma sonda.</li>
+          <li>A faixa publicada de 5–7 dias é contextual, de outros estudos e condições; não é comparação direta nem validação.</li>
+        </ul>
+      </section>
 
       <div class="project-card mb-4">
         <div class="project-body p-4">
@@ -105,9 +186,27 @@
           <p><em>B. thuringiensis</em> não descreve esporulação, cristal proteico nem rendimento de toxina. <em>S. cerevisiae</em> não descreve fermentação alcoólica.</p>
 
           <h2 class="h5 mt-4">Exemplo Pro — 6 h de batelada alimentada</h2>
-          <p>A Community zera a vazão mesmo que os campos de alimentação tenham número. Na Pro, a alimentação de referência é 0,5 L/h com 100 g/L de substrato. O balanço extensivo é dV/dt = F, d(VX)/dt = µ × X × V e d(VS)/dt = F × Sin − µ × X × V / Yxs.</p>
+          <p>Esta simulação foi apresentada como exemplo de edição planejada; não é uma função da Community 1.1.1. O cenário usa alimentação de 0,5 L/h com 100 g/L de substrato. O balanço extensivo ilustrativo é dV/dt = F, d(VX)/dt = µ × X × V e d(VS)/dt = F × Sin − µ × X × V / Yxs.</p>
           <p>Na mesma carga de 75 L, depois de 6 h o volume está em 78 L. A leitura é X ≈ 0,35 g/L, S ≈ 22,7 g/L e oxigênio dissolvido ≈ 7,5 mg/L (cerca de 97%). O substrato sobe porque a entrada supera o consumo. Na batelada simples, na mesma hora, S estaria em cerca de 19,6 g/L e X em cerca de 0,36 g/L.</p>
-          <p>A conta do lote e o PDF de uma página também ficam na Pro. Os preços são os que o operador digita. A edição não tem preço de venda e a loja não combina PIX.</p>
+          <p>Este cálculo de demonstração não define recursos, preço ou disponibilidade da edição futura.</p>
+
+          <section class="mt-4" id="bibliografia">
+            <h2 class="h5">Bibliografia e fontes dos parâmetros</h2>
+            <p>As referências de engenharia abaixo fundamentam as equações e formas de modelo. Os valores numéricos do perfil são configurações documentadas nas releases do programa, não parâmetros ajustados a partir dos artigos citados.</p>
+            <ol>
+              <li id="r1">Monod, J. (1949). The growth of bacterial cultures. <em>Annual Review of Microbiology</em>, 3, 371–394. <a href="https://doi.org/10.1146/annurev.mi.03.100149.002103">doi:10.1146/annurev.mi.03.100149.002103</a>.</li>
+              <li id="r2">Shuler, M. L., Kargi, F., &amp; DeLisa, M. P. (2017). <em>Bioprocess Engineering: Basic Concepts</em> (3rd ed.). Pearson.</li>
+              <li id="r3">Doran, P. M. (2013). <em>Bioprocess Engineering Principles</em> (2nd ed.). Academic Press, Elsevier.</li>
+              <li id="r4">van’t Riet, K. (1979). Review of measuring methods and results in nonviscous gas–liquid mass transfer in stirred vessels. <em>Industrial &amp; Engineering Chemistry Process Design and Development</em>, 18(3), 357–364. <a href="https://doi.org/10.1021/i260071a001">doi:10.1021/i260071a001</a>.</li>
+              <li id="r5">Cara Core Informática (2026). <em>BioReator 4.0 Community 1.1.0</em>. Perfil e setpoints demonstrativos, não validação experimental. <a href="https://github.com/chmulato/caracore-ru-releases/releases/tag/bioreator-1.1.0">Release bioreator-1.1.0</a>.</li>
+              <li id="r6">Vassileva, M., Malusà, E., et al. (2021). Fermentation strategies to improve soil bio-inoculant production and quality. <em>Microorganisms</em>, 9(6), 1254. <a href="https://doi.org/10.3390/microorganisms9061254">doi:10.3390/microorganisms9061254</a>.</li>
+              <li id="r7">Pradella, J. G. C., Oliveira, M. S., Zuccolo, M., Severo, A. C. R., &amp; Bonomi, A. (1994). Improved culture media for growth of <em>Bradyrhizobium japonicum</em>. <em>World Journal of Microbiology and Biotechnology</em>, 10(1), 112–113. <a href="https://doi.org/10.1007/BF00357575">doi:10.1007/BF00357575</a>.</li>
+              <li id="r8">Hafiz, M. H. R., Salehin, A., &amp; Itoh, K. (2021). Growth and competitive infection behaviors of <em>Bradyrhizobium japonicum</em> and <em>Bradyrhizobium elkanii</em> at different temperatures. <em>Horticulturae</em>, 7(3), 41. <a href="https://doi.org/10.3390/horticulturae7030041">doi:10.3390/horticulturae7030041</a>.</li>
+              <li id="r9">Pirt, S. J. (1965). The maintenance energy of bacteria in growing cultures. <em>Proceedings of the Royal Society of London. Series B, Biological Sciences</em>, 163(991), 224–231. <a href="https://doi.org/10.1098/rspb.1965.0069">doi:10.1098/rspb.1965.0069</a>.</li>
+              <li id="r10">Rosso, L., Lobry, J. R., Bajard, S., &amp; Flandrois, J. P. (1995). Convenient model to describe the combined effects of temperature and pH on microbial growth. <em>Applied and Environmental Microbiology</em>, 61(2), 610–616. <a href="https://doi.org/10.1128/aem.61.2.610-616.1995">doi:10.1128/aem.61.2.610-616.1995</a>.</li>
+              <li id="r11">Cara Core Informática (2026). <em>BioReator 4.0 Community 1.1.1</em>. Implementação do modelo, critérios de término e dados desta página. <a href="https://github.com/chmulato/caracore-ru-releases/releases/tag/bioreator-1.1.1">Release bioreator-1.1.1</a>.</li>
+            </ol>
+          </section>
 
           <div class="wiki-actions mt-4">
             <a href="https://ru.caracore.com.br/exemplo-bioreator.html" class="btn-wiki" target="_blank" rel="noopener">
