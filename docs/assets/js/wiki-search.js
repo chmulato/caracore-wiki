@@ -13,16 +13,16 @@ function initWikiSearch() {
     const wikiIndex = [
         {
             title: 'CaraCore PDV (hub Java + Rust)',
-            description: 'PDV Java estável v3.2.7-free e pré-release v4.0.0-rc5 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
+            description: 'PDV Java estável v3.2.8-free e pré-release v4.0.0-rc6 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.7-free', 'v4.0.0-rc5', 't032', 'pix split'],
+            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.8-free', 'v4.0.0-rc6', 't032', 'pix split'],
             category: 'projeto'
         },
         {
             title: 'CaraCore PDV Java (linha madura)',
-            description: 'PDV maduro multi-plataforma (v3.2.7-free): Quarkus, SQLite local, UI no navegador (localhost:8080). Sem PIX integrado e sem NF-e/NFC-e no Free.',
+            description: 'PDV maduro multi-plataforma (v3.2.8-free): Quarkus, SQLite local, UI no navegador (localhost:8080). Sem PIX integrado e sem NF-e/NFC-e no Free.',
             url: 'projeto-pdv.html#java',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'browser', 'localhost:8080', 'pme', 'v3.2.7-free', 'java 25'],
+            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'browser', 'localhost:8080', 'pme', 'v3.2.8-free', 'java 25'],
             category: 'projeto'
         },
         {
