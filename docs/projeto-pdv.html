@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaraCore PDV — Java e Rust | Wiki Cara Core</title>
-  <meta name="description" content="Hub do CaraCore PDV: linha madura (canal v3.2.8-free, Java 25 · Quarkus · browser localhost:8080) e linha piloto Rust (Windows v0.1.4). Duas linhas de PDV — Java Free no navegador e Rust piloto em app Windows; nenhuma substitui a outra.">
+  <meta name="description" content="Hub do CaraCore PDV: última Free 3.2.x (v3.2.8-free, Java 25 · Quarkus · browser localhost:8080), ciclo de RCs v4 e linha piloto Rust (Windows v0.1.4).">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <meta property="og:title" content="CaraCore PDV — Java e Rust | Wiki Cara Core">
-  <meta property="og:description" content="Duas linhas de PDV: Java Free no navegador (v3.2.8-free, Java 25 · Quarkus · browser localhost:8080) e Rust piloto em app Windows (v0.1.4). Nenhuma linha substitui a outra.">
+  <meta property="og:description" content="PDV Java Free v3.2.8-free é a última da linha 3.2.x; a v4 segue por RCs. A linha Rust v0.1.4 é piloto independente.">
   <meta property="og:type" content="article">
 </head>
 <body>
@@ -81,7 +81,7 @@
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Coexistência e versões:</strong> Java usa o canal <strong>v3.2.8-free</strong>; Rust usa a release <strong>v0.1.4</strong>. São faixas independentes. <strong>V3</strong> é o posicionamento de negócio (PME e PIX Split 2027), não o número de release de nenhuma das linhas.
+            <strong>Coexistência e versões:</strong> Java estável usa a <strong>v3.2.8-free</strong>, última versão da linha 3.2.x, com manutenção restrita até 08/11/2026; a v4 sucede por ciclo de RCs, sem GA automático nessa data. A RC6 é pré-release pública; RC7 segue em QA local. Rust usa a release <strong>v0.1.4</strong>. São faixas independentes. <strong>V3</strong> é o posicionamento de negócio (PME e PIX Split 2027), não o número de release de nenhuma das linhas.
           </div>
 
           <div class="row g-4 mb-4">
@@ -91,7 +91,7 @@
                   <h2 class="h4 mb-0"><i class="bi bi-cash-register"></i> Linha madura</h2>
                 </div>
                 <div class="project-body">
-                  <p><span class="badge bg-success">Oferta madura</span> · canal <strong>v3.2.8-free</strong></p>
+                  <p><span class="badge bg-success">Estável · última 3.2.x</span> · canal <strong>v3.2.8-free</strong></p>
                   <p>Caixa multi-plataforma para PME: cadastrar produto, registrar venda no navegador e operar local mesmo sem internet. Requisito: <strong>Java 25+</strong> (Temurin recomendado). Sem PIX integrado e sem NF-e/NFC-e no Free.</p>
                   <ul class="feature-list">
                     <li>Oficina: <code>caracore-pdv</code></li>
@@ -184,7 +184,7 @@
 
           <section class="mb-5" id="v4">
             <h2><i class="bi bi-window"></i> CaraCore-PDV v4 (pré-release para avaliação)</h2>
-            <p>Pré-release pública: <a href="https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html" target="_blank" rel="noopener"><strong>v4.0.0-rc6</strong></a>, edição Free para avaliação no Windows, com limite de 100 vendas finalizadas por mês civil. ZIP portátil unsigned na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc6" target="_blank" rel="noopener">GitHub Release</a>; SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code> (178.166.244 bytes, substituído de novo em 11/10/2026). Java 25 está em <code>runtime\</code>; o pacote não usa JDK nem Python do sistema. O Edge continua necessário. A <strong>v4.0.0-rc5</strong> fica no histórico. O <a href="https://pdv.caracore.com.br/homologacao-v4.html#rc6" target="_blank" rel="noopener">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. MSI não será distribuído. Não é GA; a versão estável multiplataforma é <code>v3.2.8-free</code>. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e. O corte de 08/11/2026 foi recusado em 11/10; a data fica em reavaliação.</p>
+            <p>Pré-release pública: <a href="https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html" target="_blank" rel="noopener"><strong>v4.0.0-rc6</strong></a>, edição Free para avaliação no Windows, com limite de 100 vendas finalizadas por mês civil. ZIP portátil unsigned na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc6" target="_blank" rel="noopener">GitHub Release</a>; SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code> (178.166.244 bytes, substituído de novo em 11/10/2026). Java 25 está em <code>runtime\</code>; o pacote não usa JDK nem Python do sistema. O Edge continua necessário. A <strong>v4.0.0-rc5</strong> fica no histórico. O <a href="https://pdv.caracore.com.br/homologacao-v4.html#rc6" target="_blank" rel="noopener">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. MSI não será distribuído. RC7 segue em QA local, sem download público. A v4 avança pelo ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A versão estável multiplataforma é <code>v3.2.8-free</code>, última da linha 3.2.x, em manutenção restrita até essa data. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
             <div class="alert alert-info" role="note">
               <strong>O que a v4 acrescenta para a gestão:</strong> faturamento do dia identificado sem chamar faturamento de lucro; projeção de bruto, IBS, CBS, retenção prevista e líquido; painel diário com recebimentos por meio e saldo esperado em dinheiro; simulador de preço com alíquotas informadas (sem consulta à SEFAZ e sem executar PIX Split); custo de aquisição opcional e alertas gerenciais de custo acima do preço ou líquido previsto negativo. Essas projeções e alertas são restritos a GERENTE/ADMIN. Não são apuração fiscal, emissão de documento fiscal, integração SEFAZ ou PIX Split ativo.
             </div>
