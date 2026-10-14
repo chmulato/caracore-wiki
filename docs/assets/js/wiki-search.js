@@ -76,9 +76,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Seed',
-            description: 'Contador de licenças interno — vitrine pública; aplicação não está em oferta',
+            description: 'Guia de uso do CaraCore Seed: primeiros passos, clientes, licenças, backups e integrações da pré-release Windows 0.1.5',
             url: 'projeto-seed.html',
-            tags: ['seed', 'licença', 'interno', 'windows', 'sqlite', 'contador'],
+            tags: ['seed', 'clientes', 'licenças', 'token', 'assinatura', 'backup', 'seedbackup', 'api', 'integração', 'windows', '0.1.5'],
             category: 'projeto'
         },
         {

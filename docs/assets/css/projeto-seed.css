@@ -195,3 +195,95 @@
 [data-theme="dark"] .alert-warning p {
     color: #856404;
 }
+
+.seed-guide a:not(.btn):not(.btn-wiki) {
+    text-decoration: none;
+    color: #464feb;
+}
+
+.seed-guide a:not(.btn):not(.btn-wiki):focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.seed-guide tr th,
+.seed-guide tr td {
+    border: 1px solid #e6e6e6;
+    padding: 0.65rem;
+}
+
+.seed-guide tr th {
+    background-color: #f5f5f5;
+}
+
+.seed-guide-card,
+.seed-faq,
+.seed-technical-notes {
+    border: 1px solid #e6e6e6;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: #fff;
+}
+
+.seed-faq + .seed-faq {
+    margin-top: 0.5rem;
+}
+
+.seed-faq summary,
+.seed-technical-notes summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.seed-faq p {
+    margin: 0.75rem 0 0;
+}
+
+.seed-critical-note {
+    border-left: 4px solid #b42318;
+    padding-left: 0.75rem;
+}
+
+html[data-theme="dark"] .seed-guide a:not(.btn):not(.btn-wiki) {
+    color: #aeb8ff;
+}
+
+html[data-theme="dark"] .seed-guide-card,
+html[data-theme="dark"] .seed-faq,
+html[data-theme="dark"] .seed-technical-notes {
+    background: #263244;
+    border-color: #526176;
+    color: #edf2f8;
+}
+
+html[data-theme="dark"] .seed-guide-card h3,
+html[data-theme="dark"] .seed-guide-card strong,
+html[data-theme="dark"] .seed-faq summary,
+html[data-theme="dark"] .seed-technical-notes summary {
+    color: #edf2f8;
+}
+
+html[data-theme="dark"] .seed-guide tr th,
+html[data-theme="dark"] .seed-guide tr td {
+    border-color: #526176;
+}
+
+html[data-theme="dark"] .seed-guide tr th {
+    background-color: #364457;
+    color: #edf2f8;
+}
+
+html[data-theme="dark"] .seed-guide tr td {
+    background-color: #263244;
+    color: #edf2f8;
+}
+
+html[data-theme="dark"] .seed-critical-note {
+    border-left-color: #ff7b72;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .seed-guide [id] {
+        scroll-margin-top: 1.5rem;
+    }
+}

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/wiki.css">
   <link rel="stylesheet" href="assets/css/wiki-unified.css">
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="assets/css/projeto-seed.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -39,146 +40,125 @@
     </div>
   </div>
   <div class="wiki-container">
-    <div class="wiki-content wiki-home">
+    <div class="wiki-content wiki-home seed-guide">
       <div class="wiki-header">
         <h1><i class="bi bi-key"></i> Cara Core Seed</h1>
-        <p class="wiki-lede">Aplicativo desktop local para cadastrar clientes e administrar licenças de software. O piloto público é gratuito e licenciado sob MIT. A pré-release candidata Windows <strong>0.1.5 está disponível para avaliação</strong>; a 0.1.4 permanece como release estável anterior. A homologação independente da candidata está pendente.</p>
+        <p class="wiki-lede">Cadastre clientes e emita licenças digitais no próprio computador. O Seed é uma ferramenta local e complementar: cada produto Cara Core mantém seu aplicativo e seus dados.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
           <div class="mb-3">
             <span class="tech-badge">Pré-release candidata 0.1.5</span>
-            <span class="tech-badge">Electron · Java 25</span>
-            <span class="tech-badge">SQLite</span>
             <span class="tech-badge">Windows x64</span>
-            <span class="tech-badge">MIT · gratuito</span>
+            <span class="tech-badge">Gratuito · MIT</span>
           </div>
           <div class="alert alert-warning" role="note">
-            A pré-release candidata <code>0.1.5</code> está publicada para avaliação. Instalador Windows x64: 216.466.586 bytes; SHA-256: <code>e449ca2cee74fda135ac098d2333fe674c2c476773a7d4adb60bc016a767db16</code>. A candidata corrige problemas de segurança e robustez, mas homologação independente continua pendente; não a considere homologada nem pronta para produção. A versão estável anterior é a 0.1.4; a 0.1.3 foi substituída e não deve ser usada. Consulte a <a href="https://seed.caracore.com.br/download.html" target="_blank" rel="noopener">página de distribuição</a> para baixar o instalador e conferir o checksum.
+            <strong>Versão para avaliação, ainda não homologada.</strong> A pré-release 0.1.5 é um candidato de teste, não uma versão declarada pronta para produção. O instalador não tem assinatura digital; confira o tamanho e o SHA-256 na <a href="https://seed.caracore.com.br/download.html" target="_blank" rel="noopener">página de download</a> e não desative as proteções do Windows. A 0.1.4 é a versão estável anterior.
           </div>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <h2 class="h5"><i class="bi bi-people"></i> O que o piloto faz</h2>
-              <p>Permite manter cadastros de clientes, criar e administrar licenças, acompanhar validade e limites, validar licenças assinadas e consultar eventos de auditoria e alertas. Registros de heartbeat são locais; não existe painel de monitoramento remoto.</p>
-              <ul>
-                <li>Banco SQLite guardado no perfil local do usuário</li>
-                <li>Aplicação desktop Electron com backend Java 25 e Tomcat embutido</li>
-                <li>A tela de administração abre neste computador; não é um painel hospedado na nuvem nem fica disponível para outros computadores da rede</li>
-                <li>Operações administrativas pedem login; integrações de produtos usam um token separado por licença</li>
-                <li>A documentação técnica da API é servida pelo próprio aplicativo, sem dependência de CDN</li>
-                <li>Os sinais de atividade (heartbeats) são guardados localmente com horário do servidor; o horário enviado pelo produto integrado fica disponível para diagnosticar diferenças no relógio</li>
-                <li>A API fornece a assinatura e os dados exatos da licença para que o produto integrado possa verificar que não foram alterados</li>
-                <li>Sem serviço em nuvem, checkout ou pagamento real</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h2 class="h5"><i class="bi bi-shield-lock"></i> Primeiro acesso e segurança</h2>
-              <p>O primeiro acesso usa <code>admin</code> / <code>admin</code> e exige a troca da senha por uma nova de 12 a 128 caracteres, com confirmação. A janela inicial apresenta uma chave de recuperação: copie-a e guarde-a fora do computador. Se perder a senha, use a chave na tela de recuperação; não apague os arquivos de credenciais ou o banco.</p>
-              <p>O instalador publicado é unsigned. Não desative SmartScreen, Defender ou outras proteções do Windows.</p>
-              <p>Faça backup antes de atualizar e preserve o banco SQLite e as chaves de assinatura. A migração aditiva V8 mantém compatibilidade com bancos 0.1.3 e 0.1.4, preservando dados e chaves; licenças antigas podem precisar de emissão ou rotação do token de API para usar as rotas protegidas. A porta escolhida fica registrada em <code>%APPDATA%\CaraCore Seed\server\server.port</code>; consulte a interface Swagger local.</p>
-            </div>
-          </div>
-          <section class="mt-5" id="guia-uso">
-            <h2 class="h4"><i class="bi bi-journal-check"></i> Guia rápido de uso</h2>
-            <p>Este roteiro acompanha as opções disponíveis no aplicativo. Os nomes entre aspas são os textos dos menus e botões.</p>
-            <nav class="d-flex flex-wrap gap-2 mb-3" aria-label="Atalhos do guia de uso">
-              <a class="btn btn-sm btn-outline-primary" href="#guia-cliente">Clientes</a>
-              <a class="btn btn-sm btn-outline-primary" href="#guia-licenca">Licenças</a>
-              <a class="btn btn-sm btn-outline-primary" href="#guia-assinatura">Assinaturas</a>
-              <a class="btn btn-sm btn-outline-primary" href="#guia-backup">Backup e restauração</a>
-              <a class="btn btn-sm btn-outline-primary" href="#duvidas">Dúvidas comuns</a>
+          <section class="mb-5" id="guia-uso">
+            <h2 class="h4"><i class="bi bi-play-circle"></i> Primeiros passos</h2>
+            <p>Da instala&ccedil;&atilde;o &agrave; emiss&atilde;o de uma licen&ccedil;a, siga estes passos e use os atalhos para consultar cada perfil.</p>
+            <nav class="seed-guide-nav d-flex flex-wrap gap-2 mb-3" aria-label="Navega&ccedil;&atilde;o do guia Seed">
+              <a class="btn btn-sm btn-outline-primary" href="#visao-geral">Vis&atilde;o geral</a>
+              <a class="btn btn-sm btn-outline-primary" href="#operacao">Clientes e licen&ccedil;as</a>
+              <a class="btn btn-sm btn-outline-primary" href="#administracao">Administra&ccedil;&atilde;o</a>
+              <a class="btn btn-sm btn-outline-primary" href="#integracoes">Integra&ccedil;&otilde;es</a>
+              <a class="btn btn-sm btn-outline-primary" href="#conceitos">Conceitos</a>
+              <a class="btn btn-sm btn-outline-primary" href="#faq">FAQ</a>
             </nav>
-            <ol>
-              <li><strong>Abra o CaraCore Seed</strong> pelo atalho instalado. Na primeira entrada, use <code>admin</code> / <code>admin</code>, troque a senha quando solicitado e guarde a chave de recuperação fora deste computador. Nas próximas entradas, use a senha que você definiu.</li>
-              <li><strong>Encontre a área desejada</strong> na barra do aplicativo: <em>Dashboard</em> resume a operação; <em>Clientes</em> mantém os cadastros; <em>Licenças</em> emite e acompanha licenças; <em>Assinaturas</em> e <em>Auditoria</em> mostram os respectivos registros. Use <em>Sair</em> para encerrar a sessão.</li>
+            <ol class="seed-quickstart">
+              <li><strong>Instale:</strong> baixe o instalador Windows x64 na <a href="https://seed.caracore.com.br/download.html" target="_blank" rel="noopener">p&aacute;gina oficial</a> e confira tamanho e SHA-256 antes de executar.</li>
+              <li><strong>Entre:</strong> no primeiro in&iacute;cio, use <code>admin</code> / <code>admin</code>, escolha uma senha nova (12 a 128 caracteres) e guarde a chave de recupera&ccedil;&atilde;o fora do computador.</li>
+              <li><strong>Cadastre:</strong> em <em>Clientes &rarr; Novo Cliente</em>, informe raz&atilde;o social, CNPJ v&aacute;lido, e-mail e telefone.</li>
+              <li><strong>Emita:</strong> em <em>Licen&ccedil;as &rarr; Nova licen&ccedil;a</em>, preencha os dados do centro e do plano e escolha <em>Gerar licen&ccedil;a</em>.</li>
+              <li><strong>Conclua:</strong> se um produto for integrar com a API, copie o token exibido na confirma&ccedil;&atilde;o e guarde-o com seguran&ccedil;a. Ele aparece uma vez.</li>
             </ol>
-            <div class="row g-4 mt-1">
-              <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h3 class="h5" id="guia-cliente">Cadastrar um cliente</h3>
-                    <ol>
-                      <li>Abra <em>Clientes</em> e escolha <em>Novo Cliente</em>.</li>
-                      <li>Preencha Razão Social, CNPJ, e-mail e telefone. Esses campos são obrigatórios; o CNPJ precisa ser válido. Nome fantasia, endereço, cidade, UF, CEP e observações podem complementar o cadastro.</li>
-                      <li>Confira o status e os dados e escolha <em>Criar Cliente</em>. Para localizar um registro depois, use a busca por razão social, nome fantasia ou CNPJ e o filtro de status.</li>
-                    </ol>
-                    <p class="small text-muted mb-0">O cadastro de cliente e os dados de centro pedidos no formulário de licença são etapas separadas. Confira se razão social e CNPJ correspondem nos dois lugares.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h3 class="h5" id="guia-licenca">Criar uma licença</h3>
-                    <ol>
-                      <li>Abra <em>Licenças</em> e escolha <em>Nova licença</em>.</li>
-                      <li>Informe Código do Centro, CNPJ válido, Plano, Razão Social, UF e Endereço. Complete contato e os limites/módulos que se aplicarem ao cliente.</li>
-                      <li>Revise os dados e escolha <em>Gerar licença</em>. A tela de detalhes mostra o identificador, plano, status, datas, limites e os dados registrados. Use esse identificador para localizar a licença na lista.</li>
-                      <li>Se o produto integrado precisar chamar a API do Seed, copie o token de integração mostrado na confirmação. Ele é exibido somente uma vez; guarde-o em local seguro. Esse token é diferente da assinatura digital da licença.</li>
-                    </ol>
-                    <p class="small text-muted mb-0">Mensalidade e moeda são campos de registro: o Seed não cobra, não processa pagamentos e não confirma recebimento.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h3 class="h5">Consultar e proteger licenças</h3>
-                    <ul>
-                      <li>Na lista, filtre por ID, CNPJ ou razão social. Abra <em>Detalhes</em> para conferir plano, status, emissão, vencimento e último heartbeat registrado.</li>
-                      <li>Use <em>Editar</em> para revisar os dados permitidos pelo formulário.</li>
-                      <li><em>Cancelar licença</em> encerra a licença e não pode ser desfeito pela tela; confirme o ID antes da ação.</li>
-                      <li><em>Gerar novo token de integração</em> invalida o token anterior. Copie o novo token quando for exibido e atualize o sistema integrado; ele também só aparece uma vez.</li>
-                    </ul>
-                    <p class="small text-muted mb-0">O payload assinado identifica os dados da licença; o token autentica chamadas de integração. Não envie tokens, senhas ou chaves privadas em mensagens, URLs ou logs.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h3 class="h5" id="guia-assinatura">Registrar uma assinatura</h3>
-                    <ol>
-                      <li>Abra <em>Assinaturas</em> e escolha <em>Nova Assinatura</em>. Primeiro, cadastre o cliente na área <em>Clientes</em>; o formulário exige um cliente existente.</li>
-                      <li>Selecione cliente e plano; informe valor mensal, início e término. Escolha o método, o status e, se desejar, a data de renovação e a opção de renovação automática.</li>
-                      <li>Revise e escolha <em>Criar Assinatura</em>. Use a lista para filtrar por status, consultar ou editar o registro.</li>
-                    </ol>
-                    <p class="small text-muted mb-0">Este registro é administrativo. Apesar de exibir métodos como PIX e cartão, o piloto não cobra, não processa pagamentos e não confirma transações; a renovação automática não deve ser entendida como cobrança automática.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h3 class="h5" id="guia-backup">Fazer ou restaurar backup</h3>
-                    <ol>
-                      <li>No menu superior <em>Dados</em>, escolha <em>Criar backup...</em>, confirme o aviso e selecione onde salvar o arquivo <code>.seedbackup</code>.</li>
-                      <li>Guarde-o em local protegido e separado do computador. O backup contém banco, credenciais administrativas e chave privada de assinatura; ele <strong>não é criptografado</strong>.</li>
-                      <li>Para restaurar, abra <em>Dados → Restaurar backup...</em>, selecione o arquivo e confirme. A restauração substitui os dados atuais; o aplicativo guarda uma cópia local do estado anterior.</li>
-                      <li>Depois da restauração, entre com a senha administrativa que estava configurada quando o backup foi criado.</li>
-                    </ol>
-                    <p class="small text-muted mb-0">Mantenha mais de uma cópia protegida. Não compartilhe o backup em canais públicos: além dos dados, ele contém a chave que assina licenças.</p>
-                  </div>
-                </div>
-              </div>
+            <p class="mb-0"><strong>Resultado:</strong> cliente cadastrado e licen&ccedil;a dispon&iacute;vel para consulta. Para integrar um produto, configure nele o token e siga a documenta&ccedil;&atilde;o t&eacute;cnica.</p>
+          </section>
+
+          <section class="mb-5" id="visao-geral">
+            <h2 class="h4">O que o Seed faz &mdash; e o que n&atilde;o faz</h2>
+            <div class="row g-3">
+              <div class="col-md-6"><div class="seed-guide-card h-100">
+                <h3 class="h6">Use o Seed para</h3>
+                <ul class="mb-0"><li>Manter cadastros de clientes e licen&ccedil;as no computador local.</li><li>Consultar status, validade, limites e registros locais de atividade.</li><li>Emitir licen&ccedil;as assinadas para verifica&ccedil;&atilde;o pelo produto integrado.</li></ul>
+              </div></div>
+              <div class="col-md-6"><div class="seed-guide-card h-100">
+                <h3 class="h6">N&atilde;o use como</h3>
+                <ul class="mb-0"><li>Cadastro centralizado: cada produto Cara Core mant&eacute;m seu pr&oacute;prio aplicativo e banco.</li><li>Servi&ccedil;o em nuvem ou monitoramento remoto: o console e os registros de atividade s&atilde;o locais.</li><li>Sistema de cobran&ccedil;a: valores, meios de pagamento e renova&ccedil;&otilde;es s&atilde;o registros administrativos, n&atilde;o transa&ccedil;&otilde;es.</li></ul>
+              </div></div>
             </div>
           </section>
-          <section class="mt-5" id="duvidas">
-            <h2 class="h4"><i class="bi bi-question-circle"></i> Dúvidas comuns</h2>
-            <dl>
-              <dt>O Seed é a licença que ativa os outros produtos?</dt>
-              <dd>Não. O Seed administra registros de clientes e licenças. Cada produto Cara Core mantém seu próprio aplicativo e banco; o Seed não centraliza esses dados.</dd>
-              <dt>Preciso de internet para abrir o Seed?</dt>
-              <dd>O console de administração funciona neste computador e não é um serviço na nuvem. Um produto integrado pode exigir internet conforme sua configuração e seus próprios requisitos.</dd>
-              <dt>O que faço se esquecer a senha?</dt>
-              <dd>Na tela de login, escolha <em>Esqueci a senha — usar chave de recuperação</em> e siga as instruções. A chave precisa ter sido guardada previamente; não apague nem substitua os arquivos do perfil.</dd>
-              <dt>Onde encontro o manual técnico da integração?</dt>
-              <dd>Com o Seed aberto, use a interface Swagger local. A porta é dinâmica; o arquivo <code>%APPDATA%\CaraCore Seed\server\server.port</code> informa qual porta foi escolhida. A documentação e seus recursos são servidos pelo próprio aplicativo, sem CDN.</dd>
-            </dl>
+
+          <section class="mb-5" id="operacao">
+            <h2 class="h4"><i class="bi bi-person-workspace"></i> Para quem opera o Seed</h2>
+            <div class="seed-guide-card mb-3" id="guia-cliente">
+              <h3 class="h5">Cadastrar clientes</h3>
+              <p><strong>Objetivo:</strong> manter os dados de contato da organiza&ccedil;&atilde;o.</p>
+              <p><strong>Antes de come&ccedil;ar:</strong> tenha raz&atilde;o social, CNPJ, e-mail e telefone.</p>
+              <ol><li>Abra <em>Clientes</em> e selecione <em>Novo Cliente</em>.</li><li>Preencha os campos obrigat&oacute;rios e, se necess&aacute;rio, complete nome fantasia e endere&ccedil;o.</li><li>Confira os dados e escolha <em>Criar Cliente</em>. Depois, localize o cadastro pela busca ou pelo filtro de status.</li></ol>
+              <p class="mb-0"><strong>Resultado:</strong> o cliente aparece na lista. O cadastro do cliente &eacute; separado dos dados do centro preenchidos ao emitir uma licen&ccedil;a; confira raz&atilde;o social e CNPJ em ambos.</p>
+            </div>
+            <div class="seed-guide-card mb-3" id="guia-licenca">
+              <h3 class="h5">Criar e consultar licen&ccedil;as</h3>
+              <p><strong>Objetivo:</strong> registrar uma licen&ccedil;a assinada com plano, validade e limites.</p>
+              <p><strong>Antes de come&ccedil;ar:</strong> re&uacute;na c&oacute;digo do centro, CNPJ v&aacute;lido, raz&atilde;o social, UF e endere&ccedil;o.</p>
+              <ol><li>Abra <em>Licen&ccedil;as &rarr; Nova licen&ccedil;a</em>, preencha os dados obrigat&oacute;rios e escolha o plano.</li><li>Revise validade e limites e selecione <em>Gerar licen&ccedil;a</em>.</li><li>Na lista, filtre por ID, CNPJ ou raz&atilde;o social. Abra <em>Detalhes</em> para conferir status, emiss&atilde;o, vencimento e atividade recente.</li></ol>
+              <p class="mb-0"><strong>Resultado:</strong> a licen&ccedil;a fica dispon&iacute;vel para consulta pelo identificador. Cancelar uma licen&ccedil;a encerra seu uso e n&atilde;o pode ser desfeito pela tela; confira o registro antes de confirmar.</p>
+            </div>
           </section>
-          <div class="alert alert-info mt-4" role="note">
-            <strong>Escopo desta etapa:</strong> piloto público para avaliação em Windows x64. Linux fica fora até haver build e smoke em runner Linux nativo. Além da homologação em perfil limpo, ainda faltam regressões manuais de licenças/assinatura/auditoria e de backup/restauração antes de considerar o produto pronto para produção.
-          </div>
+
+          <section class="mb-5" id="administracao">
+            <h2 class="h4"><i class="bi bi-shield-check"></i> Para administradores</h2>
+            <div class="seed-guide-card mb-3">
+              <h3 class="h5">Acesso e recupera&ccedil;&atilde;o</h3>
+              <ul><li>Na primeira entrada, troque a senha tempor&aacute;ria por uma senha de 12 a 128 caracteres.</li><li>Guarde a chave de recupera&ccedil;&atilde;o fora do computador. Se esquecer a senha, use <em>Esqueci a senha &mdash; usar chave de recupera&ccedil;&atilde;o</em>; n&atilde;o apague nem substitua os arquivos do perfil.</li><li>O instalador n&atilde;o tem assinatura digital. Confira o SHA-256 publicado e n&atilde;o desative SmartScreen, Defender ou outras prote&ccedil;&otilde;es.</li></ul>
+            </div>
+            <div class="seed-guide-card mb-3" id="guia-assinatura">
+              <h3 class="h5">Assinaturas e auditoria</h3>
+              <p>Em <em>Assinaturas</em>, registre cliente, plano, valor e datas para controle administrativo. Selecionar PIX, cart&atilde;o ou renova&ccedil;&atilde;o autom&aacute;tica n&atilde;o inicia cobran&ccedil;a nem confirma pagamento. Em <em>Auditoria</em>, consulte os eventos administrativos dispon&iacute;veis.</p>
+            </div>
+            <div class="seed-guide-card" id="guia-backup">
+              <h3 class="h5">Backup e restaura&ccedil;&atilde;o</h3>
+              <ol><li>No menu <em>Dados</em>, escolha <em>Criar backup...</em>, confirme e salve o arquivo <code>.seedbackup</code> em local protegido, separado do computador.</li><li>Para restaurar, escolha <em>Dados &rarr; Restaurar backup...</em>, selecione o arquivo e confirme. A restaura&ccedil;&atilde;o substitui os dados atuais; uma c&oacute;pia do estado anterior &eacute; guardada pelo aplicativo.</li><li>Ap&oacute;s restaurar, entre com a senha configurada quando o backup foi criado.</li></ol>
+              <p class="seed-critical-note mb-0"><strong>Proteja o backup:</strong> o arquivo n&atilde;o &eacute; criptografado e cont&eacute;m dados, credenciais e a chave privada que assina licen&ccedil;as. Restrinja o acesso e n&atilde;o o envie por canais p&uacute;blicos.</p>
+            </div>
+          </section>
+
+          <section class="mb-5" id="integracoes">
+            <h2 class="h4"><i class="bi bi-plug"></i> Para desenvolvedores e integra&ccedil;&otilde;es</h2>
+            <div class="seed-guide-card">
+              <h3 class="h5">Configurar e verificar uma integra&ccedil;&atilde;o</h3>
+              <ol><li>Em <em>Licen&ccedil;as &rarr; Detalhes</em>, copie o token de integra&ccedil;&atilde;o mostrado ap&oacute;s a emiss&atilde;o. O token &eacute; exibido uma &uacute;nica vez.</li><li>Configure-o no produto integrado usando o mecanismo seguro desse produto; n&atilde;o o coloque em URLs, c&oacute;digo p&uacute;blico ou logs.</li><li>Com o Seed aberto, consulte a documenta&ccedil;&atilde;o Swagger local. A porta din&acirc;mica est&aacute; em <code>%APPDATA%\CaraCore Seed\server\server.port</code>.</li><li>Use o <code>signedPayload</code> e o algoritmo informados pela API para verificar a assinatura. O token autentica chamadas; n&atilde;o substitui a assinatura.</li></ol>
+              <p class="mb-0">A API local usa recursos servidos pelo pr&oacute;prio aplicativo, sem CDN. Heartbeats s&atilde;o registrados pelo hor&aacute;rio UTC do servidor e preservam a hora informada pelo cliente para diagn&oacute;stico.</p>
+            </div>
+          </section>
+
+          <section class="mb-5" id="conceitos">
+            <h2 class="h4"><i class="bi bi-book"></i> Conceitos fundamentais</h2>
+            <div class="table-responsive"><table class="table seed-concepts-table"><thead><tr><th scope="col">Termo</th><th scope="col">O que significa no Seed</th></tr></thead><tbody>
+              <tr><th scope="row">Cliente</th><td>Organiza&ccedil;&atilde;o cadastrada para associar registros de licen&ccedil;a.</td></tr>
+              <tr><th scope="row">Licen&ccedil;a</th><td>Registro com plano, status, validade e limites, assinado para que outro produto possa verificar seus dados.</td></tr>
+              <tr><th scope="row">Assinatura</th><td>Registro administrativo de plano, valor e datas. N&atilde;o &eacute; uma cobran&ccedil;a.</td></tr>
+              <tr><th scope="row">Token de integra&ccedil;&atilde;o</th><td>Segredo usado para autenticar chamadas da integra&ccedil;&atilde;o &agrave; API; &eacute; diferente da senha administrativa e da assinatura digital.</td></tr>
+              <tr><th scope="row">Assinatura digital</th><td>Prova criptogr&aacute;fica associada &agrave; licen&ccedil;a, usada para detectar altera&ccedil;&otilde;es nos dados.</td></tr>
+              <tr><th scope="row">Heartbeat</th><td>Sinal de atividade enviado pelo produto integrado e armazenado localmente para consulta operacional.</td></tr>
+            </tbody></table></div>
+          </section>
+
+          <section class="mb-5" id="faq">
+            <h2 class="h4"><i class="bi bi-question-circle"></i> D&uacute;vidas frequentes</h2>
+            <details class="seed-faq"><summary>Posso trocar o token de integra&ccedil;&atilde;o?</summary><p>Sim. Em <em>Licen&ccedil;as &rarr; Detalhes</em>, gere um novo token. Isso invalida o anterior; atualize o produto integrado com o novo valor, exibido uma &uacute;nica vez.</p></details>
+            <details class="seed-faq"><summary>O Seed funciona sem internet?</summary><p>O console de administra&ccedil;&atilde;o &eacute; local. O produto integrado pode ter requisitos pr&oacute;prios de conex&atilde;o; verifique a configura&ccedil;&atilde;o dele.</p></details>
+            <details class="seed-faq"><summary>Onde ficam os dados?</summary><p>No perfil local de dados do aplicativo. Use <em>Dados &rarr; Criar backup...</em> para fazer uma c&oacute;pia; n&atilde;o mova nem apague arquivos internos manualmente.</p></details>
+            <details class="seed-faq"><summary>O backup cont&eacute;m chaves privadas?</summary><p>Sim. Cont&eacute;m a chave privada usada para assinar licen&ccedil;as e n&atilde;o &eacute; criptografado. Guarde-o em local controlado, com acesso restrito.</p></details>
+            <details class="seed-faq"><summary>Posso atualizar da vers&atilde;o 0.1.3 ou 0.1.4?</summary><p>A migra&ccedil;&atilde;o V8 &eacute; compat&iacute;vel com bancos dessas vers&otilde;es e preserva dados e chaves. Mesmo assim, fa&ccedil;a backup antes de atualizar; licen&ccedil;as antigas podem precisar de emiss&atilde;o ou rota&ccedil;&atilde;o do token.</p></details>
+          </section>
+
+          <details class="seed-technical-notes mb-4">
+            <summary>Notas t&eacute;cnicas da vers&atilde;o 0.1.5</summary>
+            <ul class="mt-3 mb-0"><li>Aplicativo Electron para Windows x64, backend Java 25, Tomcat embutido e SQLite local.</li><li>Servidor local em porta din&acirc;mica, valida&ccedil;&atilde;o de Host e prote&ccedil;&atilde;o das opera&ccedil;&otilde;es administrativas.</li><li>Migra&ccedil;&atilde;o SQLite V8 aditiva, compat&iacute;vel com bancos 0.1.3/0.1.4; preserva dados e chaves existentes.</li><li>A vers&atilde;o 0.1.5 &eacute; pr&eacute;-release candidata, sem homologa&ccedil;&atilde;o independente; Linux n&atilde;o faz parte desta entrega.</li></ul>
+          </details>
           <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">
             <a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.5/caracore-seed-0.1.5-windows-x64.exe" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-download"></i> Baixar pré-release Windows 0.1.5</a>
             <a href="https://seed.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Estado na vitrine</a>
