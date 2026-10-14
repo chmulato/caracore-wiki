@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BioReator 4.0 | Wiki Cara Core</title>
-  <meta name="description" content="BioReator 4.0: Community 1.1.1 publicada para Windows. Premium em 18/06/2027, sem preço e sem PIX.">
+  <meta name="description" content="BioReator 4.0 Community 1.1.1: simulador desktop para aprendizado, cenários e análise didática de bioprocessos.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -49,44 +49,76 @@
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
         <h1><i class="bi bi-moisture"></i> BioReator 4.0</h1>
-        <p class="wiki-lede">Simulador desktop de bateladas para estudo de bioprocessos. A Community 1.1.1 está publicada para Windows; os resultados são simulações didáticas, não medições de planta.</p>
+        <p class="wiki-lede">Simulador desktop para estudo de bioprocessos baseado em modelos matemáticos, destinado ao aprendizado, a testes de cenários e à análise didática. A Community 1.1.1 está publicada para Windows.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
-          <div class="mb-3">
-            <span class="tech-badge">Java 25</span>
-            <span class="tech-badge">JavaFX</span>
-            <span class="tech-badge">SQLite</span>
-            <span class="tech-badge">Windows</span>
-            <span class="tech-badge">Community</span>
-            <span class="tech-badge">1.1.1</span>
-          </div>
-
           <div class="alert alert-info" role="note">
             A Community 1.1.1 está publicada desde 13/10/2026. Consulte a <a href="https://ru.caracore.com.br/" target="_blank" rel="noopener">loja do BioReator</a>, os <a href="https://ru.caracore.com.br/download.html#arquivos" target="_blank" rel="noopener">downloads, requisitos e hashes</a> ou a <a href="https://github.com/chmulato/caracore-ru-releases/releases/tag/bioreator-1.1.1" target="_blank" rel="noopener">release oficial no GitHub</a>.
           </div>
 
           <div class="row g-4">
             <div class="col-md-6">
-              <h2 class="h5">Community</h2>
+              <h2 class="h5">Características da Community 1.1.1</h2>
               <ul class="feature-list">
-                <li><em>Bradyrhizobium japonicum</em> em batelada, com parâmetros didáticos configurados</li>
-                <li>Modelo de Monod com fatores de oxigênio, temperatura, pH, fase lag e decaimento celular</li>
-                <li>Gráficos ao vivo e distinção entre biomassa viável e total</li>
-                <li>Histórico local em SQLite e exportação CSV; a conversão para UFC/mL é uma estimativa configurada</li>
-                <li>Critérios de término: substrato esgotado, pico de OD, estagnação, tempo máximo ou parada manual</li>
-                <li>Tanque nominal configurável de 50 L a 10.000 L</li>
+                <li>Simulação em batelada de <em>Bradyrhizobium japonicum</em> com parâmetros didáticos configurados</li>
+                <li>Modelo de Monod com efeitos configurados de oxigênio, temperatura, pH, fase lag e decaimento celular</li>
+                <li>Gráficos ao vivo, biomassa viável e total, e critérios de término identificados</li>
+                <li>Exportação CSV e histórico local; UFC/mL é uma estimativa calculada, não uma contagem</li>
+                <li>Escala nominal configurável de 50 L a 10.000 L</li>
               </ul>
             </div>
             <div class="col-md-6">
-              <h2 class="h5">Edição Premium prevista para 18/06/2027</h2>
-              <ul class="feature-list">
-                <li>Edição planejada para 18/06/2027; ainda não disponível nesta release</li>
-                <li>Escopo e condições comerciais podem mudar; preço não anunciado</li>
-                <li>As funções previstas não fazem parte da Community 1.1.1</li>
-              </ul>
+              <h2 class="h5">Tecnologias e plataforma</h2>
+              <p>Aplicativo desktop para Windows x64, com Java 25 incluído. A interface usa JavaFX e o histórico local usa SQLite.</p>
+              <h2 class="h5 mt-4">Edições</h2>
+              <div class="table-responsive">
+                <table class="table table-sm bio-editions">
+                  <thead><tr><th>Recurso</th><th>Community 1.1.1</th><th>Premium</th></tr></thead>
+                  <tbody>
+                    <tr><td>Simulação de batelada</td><td>Disponível</td><td>Escopo em definição</td></tr>
+                    <tr><td>CSV e histórico local</td><td>Disponível</td><td>Escopo em definição</td></tr>
+                    <tr><td>Recursos adicionais</td><td>Não incluídos</td><td>Planejados; ainda não disponíveis</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="small mb-0">A edição Premium está planejada para 18/06/2027. Data, escopo e condições podem mudar; não está disponível na release atual.</p>
             </div>
           </div>
+
+          <section class="mt-4" aria-labelledby="publico-alvo">
+            <h2 class="h5" id="publico-alvo">Para quem é</h2>
+            <p>Estudantes, professores e pessoas interessadas em aprender sobre bioprocessos por meio de simulações e análise de cenários.</p>
+          </section>
+
+          <section class="mt-4" aria-labelledby="fluxo-modelo">
+            <h2 class="h5" id="fluxo-modelo">Como o modelo organiza os resultados</h2>
+            <p>O substrato sustenta o crescimento calculado; oxigênio, pH, temperatura e fase lag modulam a cinética configurada. O modelo também representa decaimento celular.</p>
+            <div class="bio-model-flow" role="img" aria-label="Diagrama: substrato alimenta o crescimento; oxigênio, pH, temperatura e fase lag influenciam o crescimento; o crescimento e o decaimento celular determinam a biomassa, e o simulador apresenta os resultados em gráficos e CSV.">
+              <div class="bio-model-node">Substrato</div>
+              <span class="bio-model-arrow" aria-hidden="true">→</span>
+              <div class="bio-model-stage">
+                <div class="bio-model-factors">O₂ · pH · Temperatura · Fase lag</div>
+                <div class="bio-model-node">Crescimento calculado</div>
+                <div class="bio-model-factors">Decaimento celular</div>
+              </div>
+              <span class="bio-model-arrow" aria-hidden="true">→</span>
+              <div class="bio-model-node">Biomassa</div>
+              <span class="bio-model-arrow" aria-hidden="true">→</span>
+              <div class="bio-model-node">Gráficos e CSV</div>
+            </div>
+          </section>
+
+          <section class="mt-4" aria-labelledby="primeiros-passos">
+            <h2 class="h5" id="primeiros-passos">Primeiros 5 minutos</h2>
+            <ol>
+              <li>Baixe e instale o pacote para Windows.</li>
+              <li>Abra o BioReator e confira o perfil e os parâmetros da carga.</li>
+              <li>Execute uma batelada e acompanhe as curvas e o critério de término.</li>
+              <li>Exporte o CSV para consultar os resultados.</li>
+            </ol>
+            <p><a href="https://ru.caracore.com.br/manual-bioreator.html" target="_blank" rel="noopener">Consulte o manual do operador</a> para instruções completas e <a href="https://ru.caracore.com.br/download.html#arquivos" target="_blank" rel="noopener">a página de download</a> para requisitos, tamanhos e hashes.</p>
+          </section>
 
           <section class="mt-4" aria-labelledby="visao-interface">
             <h2 class="h5" id="visao-interface">A interface da Community 1.1.1</h2>
@@ -108,24 +140,20 @@
             <p class="mt-3 mb-0">O SQLite guarda o histórico no computador, mas esta edição não tem uma tela de consulta/listagem de lotes. Consulte a <a href="https://ru.caracore.com.br/referencia-bioreator.html#privacidade" target="_blank" rel="noopener">nota de privacidade e localização dos dados</a>.</p>
           </section>
 
-          <section class="mt-4" aria-labelledby="limites-modelo">
-            <h2 class="h5" id="limites-modelo">O que o simulador não representa</h2>
-            <ul class="feature-list">
-              <li>Não lê sondas de uma planta nem substitui controle experimental.</li>
-              <li>Os parâmetros do perfil são demonstrativos; não há validação experimental publicada para esta simulação.</li>
-              <li>Biomassa viável e UFC/mL são variáveis calculadas pelo modelo, não contagens laboratoriais.</li>
-              <li>O modelo não representa contaminação, identidade de cepa ou protocolo de produção.</li>
-              <li>Uma curva calculada não garante rendimento nem desempenho em escala industrial.</li>
+          <section class="alert alert-warning mt-4 mb-0" aria-labelledby="limites-modelo">
+            <h2 class="h5" id="limites-modelo">Limitações da Community 1.1.1</h2>
+            <ul class="mb-0">
+              <li>É uma ferramenta didática e não substitui experimentação real nem controle de processo.</li>
+              <li>Não lê sensores de planta; os parâmetros são demonstrativos e não há validação experimental publicada para esta simulação.</li>
+              <li>Biomassa viável e UFC/mL são estimativas calculadas, não contagens laboratoriais.</li>
+              <li>Não representa contaminação ou identidade de cepa, não se destina à validação regulatória e não garante desempenho industrial.</li>
             </ul>
           </section>
 
-          <h2 class="h5">Pacote 1.1.1</h2>
-              <p>Community para Windows x64, com runtime Java 25 incluído e sem assinatura digital. MSI, ZIP e lançador estão publicados na <a href="https://github.com/chmulato/caracore-ru-releases/releases/tag/bioreator-1.1.1" target="_blank" rel="noopener">release bioreator-1.1.1</a>. O EXE fica dentro do ZIP. Confira requisitos, tamanhos e hashes na <a href="https://ru.caracore.com.br/download.html#arquivos" target="_blank" rel="noopener">página de download</a>.</p>
-              <ul class="feature-list">
-                <li><code>BioReator40.exe</code> — 524.800 bytes — SHA-256 <code>88eb22c17b547ded71aed275021bfbbd4121b171cbaba4373dfdca96c11a609a</code></li>
-                <li><code>BioReator40-1.1.1.msi</code> — 72.675.328 bytes — SHA-256 <code>6eb0dd01006304d78c74f185345711bc8d4e135b03443d2ab583379338b04b21</code></li>
-                <li><code>BioReator40-1.1.1-windows-x64.zip</code> — 73.592.557 bytes — SHA-256 <code>b36d18a0fae828f359db3c2a6509ad519849e560487d0ebbfaa3c3c85e09e1d7</code></li>
-              </ul>
+          <section class="mt-4" aria-labelledby="pacote">
+            <h2 class="h5" id="pacote">Community 1.1.1 para Windows</h2>
+            <p>O pacote inclui Java 25 e não possui assinatura digital. Veja os formatos disponíveis na <a href="https://github.com/chmulato/caracore-ru-releases/releases/tag/bioreator-1.1.1" target="_blank" rel="noopener">release oficial</a>. Requisitos, tamanhos e hashes estão na <a href="https://ru.caracore.com.br/download.html#arquivos" target="_blank" rel="noopener">página de download</a>.</p>
+          </section>
 
           <div class="wiki-actions mt-4">
             <a href="bioreator-tecnico.html" class="btn-wiki">

@@ -6,3 +6,60 @@
     padding-right: 10px !important;
   }
 }
+
+.bio-model-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--card-bg);
+  color: var(--card-text);
+  text-align: center;
+}
+
+.bio-model-node,
+.bio-model-factors {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.bio-model-node {
+  font-weight: 600;
+}
+
+.bio-model-stage {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+}
+
+.bio-model-factors {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+}
+
+.bio-model-arrow {
+  color: var(--link-color);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.bio-editions th {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .bio-model-flow {
+    flex-direction: column;
+  }
+
+  .bio-model-arrow {
+    transform: rotate(90deg);
+  }
+}
