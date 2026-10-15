@@ -178,8 +178,19 @@
             </div>
             <div class="alert alert-secondary" role="note">
               <i class="bi bi-mortarboard"></i>
-              <strong>Oficina Java:</strong> módulos <code>pdv-core</code>, <code>pdv-fiscal-payment</code>, <code>pdv-platform-security</code> e <code>pdv-apps</code>. O canal público estável <code>v3.2.8-free</code> é uma aplicação web local no navegador em <code>http://localhost:8080/login</code>. Publicada em 14/10/2026 como Latest; 57 testes focados passaram (1 ignorado), mas a homologação manual completa no Edge e com leitor físico não foi concluída. O v4 na oficina usa Quarkus + Qute (Fases 0–7 técnicas; corte T032 ainda aberto). A wiki institucional não substitui o README da oficina.
+              <strong>Oficina Java:</strong> módulos <code>pdv-core</code>, <code>pdv-fiscal-payment</code>, <code>pdv-platform-security</code> e <code>pdv-apps</code>. O canal público estável <code>v3.2.8-free</code> é uma aplicação web local no navegador em <code>http://localhost:8080/login</code>. Os assets atuais são da <strong>build 2026-10-14.3</strong>, publicada excepcionalmente em 14/10/2026 com autorização explícita para gates pendentes, sem mover a tag. O v4 na oficina usa Quarkus + Qute (Fases 0–7 técnicas; corte T032 ainda aberto). A wiki institucional não substitui o README da oficina.
             </div>
+            <div class="alert alert-warning" role="note">
+              <strong>Não homologado integralmente:</strong> build limpo e CRC aprovados; cinco downloads conferidos por SHA-256. A suíte completa ficou incompleta por memória (322 testes concluídos em 46 classes, sem falhas nas classes concluídas). Pendentes: upgrade SQLite 3.2.7/3.2.8 com V046 no pacote, launcher/health/navegador/caixa/soak Windows desta build, runtime Linux/macOS e aceites Edge/leitor físico. Fonte PDF embutida adiada. Fonte local ainda não commitada; os aceites da build anterior não foram transferidos.
+            </div>
+            <h3>Downloads verificados — build 2026-10-14.3</h3>
+            <p>Correções de backup pré-migração, senhas legadas, estorno e turnos. Novos pagamentos são vinculados à abertura do turno; pagamentos antigos ficam como histórico não atribuído, fora do X/Z individual. O limite Free continua sendo um operador.</p>
+            <ul class="feature-list">
+              <li><a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/caracore-pdv-v3.2.8-free-windows-x64.zip">Windows x64</a> · SHA-256: <code class="text-break">6b26a710ca5c5d45402bdef4c5859824b66d962e0ab08807c70011d95e92003f</code></li>
+              <li><a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/caracore-pdv-v3.2.8-free-linux-x64.zip">Linux x64</a> · SHA-256: <code class="text-break">93c5919210ac441effebf643375417bf70ac924f9925565d11ce3930fe0c60e2</code></li>
+              <li><a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/caracore-pdv-v3.2.8-free-macos-x64.zip">macOS x64 (Intel)</a> · SHA-256: <code class="text-break">93c5919210ac441effebf643375417bf70ac924f9925565d11ce3930fe0c60e2</code></li>
+            </ul>
+            <p><a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.8-free">Release e ressalvas completas</a> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/RELEASE_MANIFEST.json">RELEASE_MANIFEST.json</a>. Encerre o PDV antes de atualizar e preserve os dados existentes.</p>
           </section>
 
           <section class="mb-5" id="v4">
