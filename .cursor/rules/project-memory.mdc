@@ -5,7 +5,14 @@ alwaysApply: true
 
 # Memória — caracore-wiki
 
-**Atualizado:** 2026-09-08 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+## PDV Free — publicação de 15/10/2026
+
+- Atual: `v3.2.12-free` Latest, fonte `hotfix/3.2.12-free` commit `72ace488aed4ee91001c60cf40a3934ddfe8faf1`. 3.2.8 preservada no histórico; RC6 pré-release separada.
+- 19/19 testes focados em Java 25/H2 aprovados; CRC/estrutura dos três ZIPs e hashes dos cinco assets remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa pendentes. Publicação estável/Latest autorizada explicitamente em 15/10/2026; não significa homologação completa.
+- Corretiva de HTTP 405 e ESTORNADA/CANCELADA, migração V047 e fila em transação independente. Mesmos limites, sem PIX/NF-e/NFC-e.
+
+
+**Atualizado:** 2026-10-15 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
 
 ## Repositório e papel
 - **caracore-wiki:** centro de **alinhamento** (o que é cada produto, o que já existe, o que é Garagem). Não é manual de botão.
@@ -23,8 +30,8 @@ alwaysApply: true
 - **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
 
 ## CaraCore PDV — Java web local e Rust desktop
-- Java Free estável: `v3.2.8-free` · `pdv.caracore.com.br` · app web local no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; caixa redesenhado e recibos com subtotal/desconto; sem PIX integrado nem NF-e/NFC-e.
-- Java Free: estável `v3.2.8-free`, Latest, Windows/Linux/macOS; testes focados 57 (0 falhas/erros, 1 ignorado). A homologação manual completa no Edge e com leitor físico ainda não foi concluída; publicação autorizada com essa ressalva. Sem PIX integrado nem NF-e/NFC-e.
+- Java Free estável: `v3.2.12-free` · `pdv.caracore.com.br` · app web local no navegador `http://localhost:8080/login` · 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; caixa redesenhado e recibos com subtotal/desconto; sem PIX integrado nem NF-e/NFC-e.
+- Java Free: estável `v3.2.12-free`, Latest, Windows/Linux/macOS; 19/19 testes focados aprovados em Java 25/H2. A homologação manual completa no Edge e com leitor físico ainda não foi concluída; publicação autorizada com essa ressalva. Sem PIX integrado nem NF-e/NFC-e.
 - Java v4: pré-release pública `v4.0.0-rc6` (Qute + launcher Edge; 100 vendas finalizadas/mês; SHA-256 `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325`; fonte `caracore-pdv` `master` commit `681ea32`, tag `v4.0.0-rc6` em `b3358fe`). Não é GA nem Latest nem substitui o Free. O ciclo manual completo do roteiro em `homologacao-v4.html#rc6` segue pendente. A `v4.0.0-rc5` fica no histórico. Gate E recusou o corte; 08/11/2026 está em reavaliação, sem nova data. T032 segue aberto. Handoff: `caracore-pdv/docs/arquitetura/CONTINUIDADE_DESENVOLVIMENTO.md`.
 - Loja: CTA = **Baixar Free**; Premium via demonstração. Quem entra no Free: `download.html#perfis` (`admin`/`admin`, 1 operador).
 - Rust: v0.1.4 piloto Windows · 100 vendas na vida (não/mês) · loja + artefatos no mesmo repo `caracore-rust-pdv-releases` (Pages = `pdv-rust.caracore.com.br`; Releases = tag v0.1.4). Logins: `primeiros-passos.html#perfis`. Clone local: `caracore-pdv-rust-releases`. **Nunca** `caracore-pdv-releases` (Java).
