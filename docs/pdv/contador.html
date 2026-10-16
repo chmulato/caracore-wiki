@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O que o PDV Free gera hoje para o contador, o que fica no Premium (roadmap) e a Reforma Tributária.">
+    <title>Contador | Wiki do PDV Free</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki-style.css">
+    <style>html,body{overflow-x:hidden}</style>
+</head>
+<body data-wiki-page="contador">
+  <div class="wiki-shell" id="wikiShell">
+    <div class="wiki-backdrop" id="wikiBackdrop" aria-hidden="true"></div>
+
+    <aside class="wiki-sidebar" aria-label="Navegação da Wiki">
+      <div class="wiki-side-inner">
+        <div class="wiki-side-brand">
+          <div class="wiki-iconbox"><i class="fas fa-book"></i></div>
+          <div>
+            <div class="name">Wiki do PDV Free</div>
+          </div>
+        </div>
+
+        <div class="wiki-search" role="search">
+          <i class="fas fa-magnifying-glass" style="color: var(--muted);"></i>
+          <input id="wikiSearch" type="search" placeholder="Buscar na Wiki" autocomplete="off" />
+        </div>
+
+        <nav class="wiki-nav" aria-label="Menu">
+          <a class="js-nav-item" data-page="home" data-search="inicio home wiki" href="index.html">
+            <i class="fas fa-house"></i><div><div class="label">Início</div></div>
+          </a>
+          <a class="js-nav-item" data-page="usar" data-search="usar instalar primeira venda erro suporte logs" href="usar.html">
+            <i class="fas fa-user"></i><div><div class="label">Usar o PDV</div><div class="hint">Instalar, vender, suporte</div></div>
+          </a>
+          <a class="js-nav-item" data-page="contador" data-search="contador fiscal reforma tributaria cbs ibs nf-e nfc-e" href="contador.html">
+            <i class="fas fa-calculator"></i><div><div class="label">Contador</div><div class="hint">Fiscal e Reforma 2026</div></div>
+          </a>
+          <a class="js-nav-item" data-page="parceiros" data-search="parceiros representantes comissao contrato abordagem objecoes" href="parceiros.html">
+            <i class="fas fa-user-tie"></i><div><div class="label">Parceiros</div><div class="hint">Comissões, regras, abordagem</div></div>
+          </a>
+          <a class="js-nav-item" data-search="download pdv free" href="https://pdv.caracore.com.br/download.html">
+            <i class="fas fa-download"></i><div><div class="label">Download do PDV Free</div></div>
+          </a>
+          <a class="js-nav-item" data-search="portal" href="https://pdv.caracore.com.br/">
+            <i class="fas fa-arrow-up-right-from-square"></i><div><div class="label">Voltar ao portal</div></div>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="wiki-content">
+      <header class="wiki-topbar">
+        <div class="wiki-topbar-title">
+          <button class="wiki-btn" id="wikiOpenSidebarBtn" type="button" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="wiki-iconbox"><i class="fas fa-calculator"></i></div>
+          <div class="min-w-0">
+            <div class="wiki-title">Contador</div>
+          </div>
+        </div>
+      </header>
+
+      <main class="wiki-container">
+        <div class="wiki-grid no-toc">
+          <div>
+            <div class="wiki-breadcrumbs" aria-label="Breadcrumbs" style="margin-top: 14px;">
+              <a href="https://pdv.caracore.com.br/">Home</a>
+              <span class="sep">›</span>
+              <a href="index.html">Wiki</a><span class="sep">›</span><span class="current">Contador</span>
+            </div>
+            <div class="space-y-8 py-6">
+<section class="card p-6 sm:p-8">
+<h1 class="text-3xl font-extrabold text-slate-900">Contador: fiscal e Reforma Tributária</h1>
+<div class="mt-4"><div class="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900" role="note"><strong>O PDV Free não emite NF-e/NFC-e e não tem PIX integrado. Premium está no roadmap.</strong></div></div>
+</section>
+<section id="hoje" class="card p-6 sm:p-8">
+<h2 class="text-2xl font-extrabold text-slate-900"><i class="fas fa-file-lines mr-2"></i>O que o PDV Free gera hoje</h2><ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+<li>Recibo digital por link e PDF, sem valor fiscal.</li>
+<li>Relatório X/Z no fechamento do turno.</li>
+<li>Vendas por forma de pagamento: dinheiro, débito, crédito e outros.</li>
+<li>Dados no SQLite local, em <code>%APPDATA%\caracore\</code> (Windows). Para backup, copie essa pasta com o PDV fechado.</li>
+</ul><p class="mt-4 text-slate-700">Os relatórios servem para conferência interna. O lojista continua responsável pela emissão fiscal obrigatória e pelas demais obrigações (SPED, EFD e regime tributário).</p>
+</section>
+<section id="reforma" class="card p-6 sm:p-8">
+<h2 class="text-2xl font-extrabold text-slate-900"><i class="fas fa-scale-balanced mr-2"></i>Reforma Tributária 2026–2033</h2><p class="mt-3 text-slate-700">A CBS (federal) e o IBS (estadual e municipal) substituem gradualmente PIS, COFINS, ICMS e outros tributos. As alíquotas mudam a cada ano até 2033 e são definidas pelo governo.</p><p class="mt-3 text-slate-700"><strong>No PDV Free, a Reforma Tributária não é um benefício.</strong> Ele não calcula CBS/IBS, não usa tabela NCM e não gera relatório para o contador.</p>
+</section>
+<section id="premium" class="card p-6 sm:p-8">
+<h2 class="text-2xl font-extrabold text-slate-900"><i class="fas fa-road mr-2"></i>Premium (roadmap)</h2><p class="mt-3 text-slate-700">Ainda sem data e sem entrega, o Premium prevê:</p><ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+<li>emissão de NF-e/NFC-e;</li>
+<li>configuração fiscal com alíquotas de CBS e IBS por ano e tabela NCM;</li>
+<li>histórico de alterações das alíquotas;</li>
+<li>relatório para o contador;</li>
+<li>PIX integrado.</li>
+</ul><p class="mt-3 text-sm text-slate-600">Dúvidas fiscais: confirme com o seu contador. Antes de qualquer decisão, veja o que a versão atual entrega em <a class="underline" href="https://pdv.caracore.com.br/versoes.html">Versões</a>.</p><div class="mt-5"><a class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 px-5 py-3 font-bold" href="https://pdv.caracore.com.br/canal-feedback.html"><i class="fas fa-comments"></i> Falar com a equipe</a></div>
+</section>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="wiki-footer py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-500">
+          <span class="font-semibold text-slate-700">Cara Core Informática</span> • desde 2010 •
+          <a href="https://pdv.caracore.com.br/" class="font-semibold text-slate-700 hover:underline">Voltar ao portal</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://pdv.caracore.com.br/assets/js/wiki.js"></script>
+</body>
+</html>
