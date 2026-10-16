@@ -97,7 +97,7 @@
     </section>
 <section id="produto" class="card p-6 sm:p-8">
 <h2 class="text-2xl font-extrabold text-slate-900"><i class="fas fa-cash-register mr-2"></i>O que você pode vender hoje</h2>
-<p class="text-slate-700 mt-2"><strong>PDV Free:</strong> roda no computador da loja, 1 caixa, até 100 vendas por mês. O PDV Free não emite NF-e/NFC-e e não tem PIX integrado. Premium está no roadmap. Não prometa PIX, NF-e/NFC-e, CBS/IBS nem Premium como disponíveis.</p>
+<p class="text-slate-700 mt-2"><strong>PDV Free:</strong> roda no computador da loja, 1 caixa, até 100 vendas por mês. O PDV Free não emite NF-e/NFC-e e não tem PIX integrado. Não prometa PIX, NF-e/NFC-e nem CBS/IBS como disponíveis em nenhum plano.</p>
 </section>
 
         <section id="ganho" class="card p-6 sm:p-8">
@@ -141,13 +141,13 @@
                                    class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400">
                         </label>
                         <label class="block">
-                            <span class="text-sm font-semibold text-slate-700">Mensalidade (R$, exemplo de plano futuro)</span>
-                            <input id="calcMensalidade" type="number" min="0" step="0.01" value="79.90"
+                            <span class="text-sm font-semibold text-slate-700">Mensalidade do Premium (R$)</span>
+                            <input id="calcMensalidade" type="number" min="0" step="0.01" value="{{PRECO_MENSAL}}"
                                    class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400">
                         </label>
                         <label class="block">
                             <span class="text-sm font-semibold text-slate-700">Comissão mensal (%)</span>
-                            <input id="calcPercentual" type="number" min="0" max="100" step="0.1" placeholder="Ex: 20"
+                            <input id="calcPercentual" type="number" min="0" max="100" step="0.1" value="{{PERCENTUAL_COMISSAO}}"
                                    class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400">
                         </label>
                         <div class="grid grid-cols-2 gap-3">
@@ -189,8 +189,18 @@
 
             <p class="mt-6 text-xs text-slate-500">
                 Simulação didática. O contrato individual assinado define valores, percentuais e prazos e prevalece sobre esta página.
-                R$ 79,90 é só um valor de exemplo de plano pago futuro, ainda não disponível.
             </p>
+        </section>
+
+        <section id="comissao-premium" class="card p-6 sm:p-8">
+            <h2 class="text-2xl font-extrabold text-slate-900">
+                <i class="fas fa-percent text-slate-900 mr-2"></i>
+                Comissão do Premium
+            </h2>
+            <p class="mt-4 text-slate-700">O Premium é uma assinatura mensal de suporte ({{PRECO_MENSAL}}). Você recebe {{PERCENTUAL_COMISSAO}} de cada mensalidade paga e conciliada, enquanto o cliente seguir assinando.</p>
+            <p class="mt-3 text-slate-700">Cadastro do cliente: registre a loja no canal oficial do parceiro quando ela instalar o PDV Free. A loja fica vinculada a você por {{PRAZO_VINCULO}}. Se ela assinar o Premium nesse prazo, a comissão é sua.</p>
+            <p class="mt-3 text-slate-700">Vale a partir de {{DATA_INICIO}}. Mensalidade não paga ou não conciliada não gera comissão. O contrato individual prevalece sobre esta página.</p>
+            <p class="mt-3 text-sm text-slate-600">Premium: assinatura mensal de suporte, {{PRECO_MENSAL}}. PIX, NF-e/NFC-e e CBS/IBS estão no roadmap, sem data. <a class="underline" href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</p>
         </section>
 
         
@@ -272,7 +282,7 @@
 <li><strong>“O meu trava quando cai a internet.”</strong> Aqui a venda é salva primeiro no computador da loja. Sem internet, o caixa continua.</li>
 <li><strong>“Já uso o sistema X.”</strong> Pergunte: quando a internet cai, o caixa para? Depois proponha: teste o PDV Free por uma semana, sem pagar. Se não incomodar, continue no X.</li>
 <li><strong>“A implantação do outro foi cara.”</strong> O PDV Free é um ZIP: extraia, abra o launcher e use no navegador. Os requisitos estão na página de download.</li>
-<li><strong>“Tem PIX? Emite nota?”</strong> Não. O PIX só pode ser registrado em “outros”, sem integração, e o Free não emite NF-e/NFC-e. O Premium está no roadmap, sem data.</li>
+<li><strong>“Tem PIX? Emite nota?”</strong> Não. O PIX só pode ser registrado em “outros”, sem integração, e o Free não emite NF-e/NFC-e. Premium: assinatura mensal de suporte, {{PRECO_MENSAL}}. PIX, NF-e/NFC-e e CBS/IBS estão no roadmap, sem data. <a class="underline" href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</li>
 </ul><h3 class="text-lg font-bold text-slate-900 mt-6">Qualificação</h3><ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
 <li>Quantas vendas por dia, e quais os horários de pico?</li>
 <li>A internet da loja é instável?</li>
@@ -283,8 +293,7 @@
 <li>Cadastro de produto.</li>
 <li>Fechamento do turno com relatório X/Z.</li>
 </ol><h3 class="text-lg font-bold text-slate-900 mt-6">Não prometa</h3><ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
-<li>PIX integrado, NF-e/NFC-e ou CBS/IBS como benefício do Free.</li>
-<li>Premium como algo disponível.</li>
+<li>PIX integrado, NF-e/NFC-e ou CBS/IBS como disponíveis em nenhum plano.</li>
 <li>Desconto, condição ou integração que não esteja no contrato ou no material oficial.</li>
 <li>Percentuais de comissão fora do contrato.</li>
 </ul><p class="mt-3 text-sm text-slate-600">Na dúvida, pergunte à equipe antes de fechar a venda.</p><details class="mt-5 rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-bold text-slate-900">Tour visual (opcional)</summary><div class="mt-4 grid sm:grid-cols-2 gap-4"><figure><img loading="lazy" class="w-full rounded-xl border border-slate-200" src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_de_login.png" alt="Tela de login do PDV"><figcaption class="text-xs text-slate-500 mt-1">Entrada</figcaption></figure><figure><img loading="lazy" class="w-full rounded-xl border border-slate-200" src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png" alt="Tela de nova venda"><figcaption class="text-xs text-slate-500 mt-1">Nova venda</figcaption></figure></div></details>
