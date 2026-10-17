@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaraCore CSO — Frotas e Transportes | Wiki Cara Core</title>
-  <meta name="description" content="Hub do CaraCore CSO: Gestão de Frotas (Web, em produção em cso.caracore.com.br) e Gestão de Transportes (Desktop bunker, lançamento 08/11/2028). CSO não é rastreador GPS.">
+  <meta name="description" content="Frotas já disponível. Transportes + Virtual Tracker integrado em desenvolvimento: entregas e localização pelo celular, com histórico somente no desktop. Alvo conjunto 08/11/2028, sujeito à validação.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <meta property="og:title" content="CaraCore CSO — Frotas e Transportes | Wiki Cara Core">
-  <meta property="og:description" content="Gestão de Frotas no navegador (já no ar) e Gestão de Transportes no computador da empresa (2028).">
+  <meta property="og:description" content="Duas aplicações, uma solução: Frotas disponível e Transportes + Virtual Tracker integrado em desenvolvimento, com alvo conjunto em 08/11/2028.">
   <meta property="og:type" content="article">
 </head>
 <body>
@@ -64,6 +64,7 @@
             </li>
             <li><a href="#frotas"><i class="bi bi-globe"></i> Gestão de Frotas</a></li>
             <li><a href="#transportes"><i class="bi bi-pc-display"></i> Gestão de Transportes</a></li>
+            <li><a href="#virtual-tracker"><i class="bi bi-phone"></i> Virtual Tracker integrado</a></li>
             <li><a href="#planos"><i class="bi bi-tag"></i> Planos e perfis</a></li>
             <li><a href="#roadmap"><i class="bi bi-signpost-split"></i> O que vem depois</a></li>
             <li><a href="glossario.html"><i class="bi bi-book"></i> Glossário</a></li>
@@ -74,16 +75,17 @@
       <div class="col-lg-9 col-md-8">
         <div class="wiki-content wiki-home">
           <div class="wiki-header">
-            <h1><i class="bi bi-truck"></i> CaraCore CSO — duas frentes, um produto de logística</h1>
-            <p class="wiki-lede">O CSO é o caderno da frota: a <strong>Gestão de Frotas</strong> já opera no navegador; a <strong>Gestão de Transportes</strong> chega no computador da empresa em <strong>08 de novembro de 2028</strong> — nessa data as duas frentes viram <strong>um só produto</strong>. A aplicação de hoje é <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>; a <strong>loja única</strong> (<a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a>) vende o que existe agora — o detalhe de alinhamento fica nesta wiki. <strong>Não é GPS.</strong></p>
+            <h1><i class="bi bi-truck"></i> CaraCore CSO — duas aplicações, uma solução</h1>
+            <p class="wiki-lede">A <strong>Gestão de Frotas</strong> cuida dos veículos e custos no navegador, já disponível. A <strong>Gestão de Transportes</strong> organiza clientes, entregas e equipe no computador da empresa. O <strong>Virtual Tracker</strong> será a capacidade integrada de acompanhar deslocamentos pelo celular do motorista, sem rastreador dedicado. Transportes + Virtual Tracker têm <strong>lançamento-alvo conjunto em 08/11/2028</strong>, sujeito à validação técnica e homologação. Não é um terceiro produto nem uma fusão dos bancos.</p>
+            <p><a href="https://cso-transp.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Conhecer a proposta e conversar sobre minha operação</a></p>
           </div>
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Honestidade de produto:</strong> o CSO que o cliente contrata hoje é <strong>gestão administrativa de frota</strong> (veículos, combustível, manutenção, equipe e relatórios). <strong>Não</strong> é rastreador GPS nem mapa ao vivo. O Virtual Tracker™ é um produto futuro, separado, previsto para 2028.
+            <strong>O que existe hoje:</strong> a Gestão de Frotas oferece veículos, combustível, manutenção, equipe e relatórios, sem GPS ou mapa de localização. Transportes + Virtual Tracker estão em desenvolvimento: não há contratação antecipada, preço ou instalador público confirmado. Contratar Frotas hoje não compra nem garante a futura integração; elegibilidade e licenciamento ainda serão definidos.
           </div>
           <div class="alert alert-warning" role="note">
-            <strong>Status operacional — 06/10/2026:</strong> a gestão de frota está em produção. O schema publicado inclui km/L, documentos do veículo, pneus, exame toxicológico, infrações e custo por km. A index pública descreve essa versão. O freeze de 08/11/2026 estabiliza o que já está no ar. Jornada, app offline e GPS permanecem fora desta versão.
+            <strong>Planejamento atualizado em 17/10/2026:</strong> Frotas está em produção desde 06/10; o freeze de 08/11/2026 apenas estabiliza essa versão, sem jornada ou GPS. A gestão web e o futuro acompanhamento exigem conexão. A PWA de gestão offline foi cancelada, não adiada. A operação administrativa local do desktop não equivale a rastreamento offline.
           </div>
 
           <div class="row g-4 mb-4">
@@ -110,8 +112,8 @@
                   <h2 class="h4 mb-0"><i class="bi bi-pc-display"></i> Gestão de Transportes (Desktop)</h2>
                 </div>
                 <div class="project-body">
-                  <p><span class="badge bg-warning text-dark">Garagem — 08/11/2028</span></p>
-                  <p>Bunker no computador da empresa: operação de entregas, entregadores, clientes e tabelas de preço com persistência local. Serve de backup e de rota para telemetria pesada — <strong>sem vender GPS como se já existisse</strong>.</p>
+                  <p><span class="badge bg-warning text-dark">Em desenvolvimento — alvo 08/11/2028</span></p>
+                  <p>Organiza entregas, equipe, clientes e tabelas de preço com persistência local. Na integração planejada, recebe e valida as posições cifradas do celular e mantém mapa e histórico somente na empresa. <strong>Não está disponível para contratação.</strong></p>
                   <ul class="feature-list">
                     <li>Oficina: <code>caracore-cso-transportes</code></li>
                     <li>Stack: Java 21 · Quarkus · JavaFX · Vue 3 · SQLite</li>
@@ -134,7 +136,7 @@
                     <li>Começar grátis (até 3 veículos), sem cartão no cadastro</li>
                     <li>Planos pagos em reais, com Pix no Brasil</li>
                     <li>Perfis claros: quem administra, quem gestiona, quem opera</li>
-                    <li>O desktop de 2028 guarda a operação crítica na empresa, mesmo se a nuvem falhar</li>
+                    <li>O desktop guarda a operação local na empresa; novas posições do celular exigem conexão e base disponível</li>
                   </ul>
                 </div>
               </div>
@@ -145,7 +147,7 @@
                   <ul class="feature-list">
                     <li><strong>Frotas:</strong> SSR Qute + HTMX, sessão opaca no Postgres, RBAC, Flyway, multi-tenant</li>
                     <li><strong>Transportes:</strong> API REST + SPA Vue + cliente JavaFX, SQLite local, JWT na trilha desktop</li>
-                    <li><strong>Regra de copy:</strong> não sugerir GPS, mapa em tempo real ou rastreador na UI nem na wiki</li>
+                    <li><strong>Regra de copy:</strong> separar Frotas disponível de Transportes + VT planejados; não anunciar GPS implementado, posição instantânea ou recuperação offline</li>
                     <li><strong>Credenciais de demo:</strong> só no README da oficina, e só no banco local — nunca em produção</li>
                   </ul>
                 </div>
@@ -229,10 +231,23 @@
                 <ul class="feature-list">
                   <li>Persistência local em SQLite; Flyway nas migrações</li>
                   <li>Autenticação JWT na API da oficina; JavaFX consome a API</li>
-                  <li>Papel: bunker e roteamento de telemetria pesada — GPS/mapa ficam no Virtual Tracker™ (produto separado, 2028)</li>
+                  <li>Papel planejado no VT: descriptografar, validar e persistir posições antes de confirmar recebimento; mapa e histórico somente no desktop</li>
                 </ul>
               </div>
             </div>
+          </section>
+
+          <section class="mb-5" id="virtual-tracker">
+            <h2><i class="bi bi-phone"></i> Virtual Tracker — acompanhar sem aparelho dedicado</h2>
+            <p><strong>Como será:</strong> o motorista inicia uma viagem autorizada no celular; Frotas conecta os participantes e encaminha o conteúdo cifrado; o computador da empresa recebe as posições e mostra o mapa e o histórico. A coleta fica restrita à viagem autorizada. Permissões, encerramento e revogação serão validados antes do lançamento.</p>
+            <ul class="feature-list">
+              <li><strong>Frotas não guarda trajetos:</strong> não lê nem persiste posições, rotas, trânsito ou envelopes cifrados, inclusive em logs, monitoramento técnico, caches e filas. O encaminhamento usa somente memória transitória limitada.</li>
+              <li><strong>Dados na empresa:</strong> chave privada de descriptografia, validação das coordenadas, mapa, histórico e retenção ficam no desktop. Frotas mantém apenas os metadados mínimos de autenticação, vínculo e presença; não é servidor de telemetria.</li>
+              <li><strong>Conexão necessária:</strong> sem rede ou base disponível, não há fila nem recuperação posterior de trechos. Falhas e posições antigas devem ser sinalizadas; timeout significa entrega não confirmada, não certeza de perda.</li>
+              <li><strong>Consumo regulado:</strong> perfil econômico de referência com presença a cada 120 segundos quando necessária e posição a cada 60 segundos em viagem. Tráfego autorizado pode substituir ping redundante; limites e reconexão progressiva evitam rajadas. Eventos de início, fim e revogação não aguardam o ping. Não é localização instantânea.</li>
+              <li><strong>Validação pendente:</strong> comportamento em Android/iPhone com tela bloqueada, bateria, banda nos dois trechos, protocolo criptográfico, endpoints e proteção das chaves ainda precisam de prova e aprovação. Criptografia não elimina o risco de código malicioso na origem que serve o cliente web.</li>
+            </ul>
+            <p><a href="https://cso-transp.caracore.com.br/#virtual-tracker" class="btn-wiki" target="_blank" rel="noopener">Entender a proposta na loja</a></p>
           </section>
 
           <section class="mb-5" id="roadmap">
@@ -246,12 +261,14 @@
                 <tbody>
                   <tr><td>Em produção desde 06/10/2026</td><td>Gestão de frota no navegador: veículos e categorias, combustível, manutenções, motoristas, viagens, relatórios, planos e termos LGPD v2.1. Inclui km/L, documentos do veículo, pneus, exame toxicológico, infrações e custo por km, além de filtros operacionais, convites por chave e bloqueios para veículos inativos.</td><td><span class="badge bg-success">Disponível</span></td></tr>
                   <tr><td>08/11/2026</td><td>Freeze do Momento 1: estabilização da Gestão de Frotas já publicada. Sem jornada, app offline nem GPS</td><td><span class="badge bg-warning text-dark">Marco de estabilização</span></td></tr>
-                  <tr><td>Depois de dez/2028</td><td>Jornada com QR, monitoramento operacional, porta de API para automações e app de gestão offline. Sem data de lançamento confirmada</td><td><span class="badge bg-secondary">Roadmap, sem data confirmada</span></td></tr>
-                  <tr><td>08/11/2028</td><td>CSO único: Frotas (web) + Transportes (bunker no computador da empresa)</td><td><span class="badge bg-secondary">Garagem</span></td></tr>
-                  <tr><td>2028</td><td>GPS e mapa (Virtual Tracker™) — <strong>fora do que se paga hoje</strong>; não se compra ao contratar a Frotas agora</td><td><span class="badge bg-dark">Fora deste contrato</span></td></tr>
+                  <tr><td>08/11/2028 — alvo conjunto</td><td>Transportes Desktop + Virtual Tracker integrado à Frotas: jornada autorizada, localização pelo celular e mapa/histórico somente na empresa. Sem contratação antecipada</td><td><span class="badge bg-secondary">Condicionado à validação</span></td></tr>
+                  <tr><td>Sem data adicional aprovada</td><td>Demais itens do epic MON, incluindo a porta de API de agentes, não entram automaticamente no escopo integrado</td><td><span class="badge bg-secondary">Roadmap</span></td></tr>
+                  <tr><td>Cancelado em 15/10/2026</td><td>PWA de gestão offline, armazenamento de negócio no celular e sincronização. Não fazem parte da proposta</td><td><span class="badge bg-dark">Não implementar</span></td></tr>
                 </tbody>
               </table>
             </div>
+            <p><strong>Plano de execução:</strong> 10 sprints locais estimadas de Transportes + 21 tarefas integradas (INT-01 a INT-21), organizadas em 6 etapas, não seis sprints. Backlog integrado: <strong>0/21 concluídas</strong>. O total de sprints, capacidade e calendário dependem de INT-03, após baseline e prova móvel. MON permanece 0/53, com reaproveitamento seletivo; não somar como tarefas independentes.</p>
+            <p>Etapas: baseline/prova/capacidade; contratos/privacidade/canal; jornada/autorização; posições/cliente; mapa/histórico/proteção; homologação/publicação. O plano mestre fica na oficina Transportes, em <code>docs/plano_organizado_execucao_cso.md</code>, seção 7. A data-alvo não confirma disponibilidade automaticamente.</p>
           </section>
 
           <section class="mb-5">
@@ -303,7 +320,7 @@
   <footer class="wiki-footer">
     <div class="container">
       <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>Wiki como centro de alinhamento — CaraCore CSO: Frotas em produção, Transportes em 08/11/2028.</p>
+      <p>Wiki como centro de alinhamento — Frotas disponível; Transportes + Virtual Tracker integrado com alvo conjunto em 08/11/2028, sujeito à validação.</p>
       <div class="mt-2">
         <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
           <i class="bi bi-shield-lock"></i> Política de Privacidade

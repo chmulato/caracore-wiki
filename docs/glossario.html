@@ -305,7 +305,7 @@
                                 <div class="col-md-6">
                                     <div class="leigos-section">
                                         <h4><i class="bi bi-people"></i> O que muda para você</h4>
-                                        <p>Centro logístico da Cara Core, em duas frentes: <strong>Gestão de Frotas</strong> no navegador (já no ar em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>) e <strong>Gestão de Transportes</strong> no computador da empresa (bunker desktop, 08/Nov/2028). Vitrine: <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a>. Quem contrata o CSO de gestão <strong>não</strong> está comprando rastreador GPS.</p>
+                                        <p>Duas aplicações, uma solução: <strong>Frotas</strong> já disponível em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>, sem GPS hoje; <strong>Transportes + Virtual Tracker integrado</strong> em desenvolvimento, com alvo conjunto 08/Nov/2028 sujeito à validação. VT é capacidade de integração/localização pelo celular, não terceiro produto. Vitrine: <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a>.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -627,13 +627,13 @@
                                 <div class="col-md-6">
                                     <div class="leigos-section">
                                         <h4><i class="bi bi-people"></i> O que muda para você</h4>
-                                        <p>É o CSO que mora no computador da empresa: entregas, equipe e clientes com cópia local dos dados. Lançamento previsto em 08 de novembro de 2028. Não substitui a Gestão de Frotas no navegador.</p>
+                                        <p>É o CSO que mora no computador da empresa: entregas, equipe e clientes com dados locais. Alvo conjunto com Virtual Tracker integrado em 08/11/2028, sujeito à validação. Não substitui Frotas; a operação local não garante localização quando falta conexão.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
                                         <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
-                                        <p>Oficina <code>caracore-cso-transportes</code>: Quarkus + SQLite, SPA Vue 3 e cliente JavaFX. Bunker para operação offline e roteamento de telemetria pesada — GPS/mapa ficam no Virtual Tracker™ (produto separado).</p>
+                                        <p>Oficina <code>caracore-cso-transportes</code>: Quarkus + SQLite, SPA Vue 3 e cliente JavaFX. Operação administrativa local; no Virtual Tracker integrado planejado, somente o desktop descriptografa, valida e guarda posições, mapa e histórico. Receber posições exige conexão; não há recuperação offline de trechos.</p>
                                         <p><strong>Wiki:</strong> <a href="projeto-cso.html#transportes">projeto-cso.html#transportes</a></p>
                                     </div>
                                 </div>
@@ -1012,13 +1012,13 @@
                                 <div class="col-md-6">
                                     <div class="leigos-section">
                                         <h4><i class="bi bi-people"></i> O que muda para você</h4>
-                                        <p>É o produto futuro de rastreamento por GPS e mapa. Está previsto para 2028 e <strong>não</strong> faz parte do CSO de gestão que o cliente contrata hoje. Quem usa Frotas não está comprando rastreador.</p>
+                                        <p>É a capacidade futura de integrar Frotas e Transportes para acompanhar deslocamentos pelo celular do motorista, sem aparelho dedicado. Alvo conjunto com Transportes em <strong>08/11/2028</strong>, sujeito à validação. Não é terceiro produto nem recurso já incluído na Frotas contratada hoje.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="estagiario-section">
                                         <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
-                                        <p>Produto separado da Gestão de Frotas e da Gestão de Transportes. Copy, FAQ, dashboard e wiki <strong>não</strong> devem sugerir GPS, SSE ou mapa em tempo real como se já existissem. Ver <a href="projeto-cso.html#roadmap">roadmap do CSO</a>.</p>
+                                        <p>Integração E2EE planejada: Frotas autentica e encaminha conteúdo cifrado em memória limitada, sem ler ou persistir trajetos/envelopes. Chave privada, mapa e histórico somente no desktop. Exige conexão, sem fila offline. Perfil de referência: presença 120 s quando necessária e posição 60 s em viagem, a medir; não é instantâneo. Ver <a href="projeto-cso.html#virtual-tracker">limites e planejamento do CSO</a>.</p>
                                     </div>
                                 </div>
                             </div>

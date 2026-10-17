@@ -26,7 +26,7 @@ alwaysApply: true
 ## Relação com a matriz e lojas
 - **Matriz:** portfólio em `https://www.caracore.com.br/portfolio.html#{âncora}` (nunca wiki/portfolio). Sem `/delivery/`.
 - **Lojas:** manuais de botão e download em `pdv.` / `pdv-rust.` / `hub.` / `cso-transp.`.
-- **CSO:** aplicação `https://cso.caracore.com.br/` · vitrine `https://cso-transp.caracore.com.br/`. **Não é GPS.**
+- **CSO:** aplicação Frotas `https://cso.caracore.com.br/` (sem GPS hoje) · vitrine `https://cso-transp.caracore.com.br/` (Transportes + VT integrado em desenvolvimento).
 - **Índice:** caracore-site/docs/ECOSYSTEM_MEMORIA.md
 
 ## CaraCore PDV — Java web local e Rust desktop
@@ -38,7 +38,10 @@ alwaysApply: true
 - Java e Rust não se substituem. V3 negócio ≠ v3.2.x ≠ v0.1.x. Não misturar pasta, senha nem data entre Free, RC6 e Rust.
 
 ## CaraCore CSO
-- Frotas Web em produção (`caracore-cso-quarkus`). Transportes Desktop 08/11/2028 (`caracore-cso-transportes`). Virtual Tracker™ separado, 2028.
+- Decisão 17/10/2026: Frotas Web em produção (`caracore-cso-quarkus`) + Transportes Desktop (`caracore-cso-transportes`); Virtual Tracker é capacidade integrada, não terceiro produto. Alvo conjunto 08/11/2028, condicionado à prova móvel, capacidade e homologação; não disponibilidade automática.
+- Plano mestre: `caracore-cso-transportes/docs/plano_organizado_execucao_cso.md`, seção 7. 10 sprints locais estimadas + 21 tarefas INT em 6 etapas (0/21); total integrado a estimar em INT-03. MON 0/53 com reaproveitamento seletivo; não somar nem antecipar todo o epic.
+- Frotas somente online: autenticação/presença e relay E2EE em memória limitada, sem ler nem persistir posições/rotas/trânsito/envelopes, incluindo logs/APM/cache/filas. Chave privada, mapa e histórico somente no desktop. Sem fila offline. Presença 120 s quando necessária e posição 60 s em viagem como referência a medir; sem promessa instantânea.
+- Loja: CTA de conversa sobre a operação, sem contratação antecipada ou instalador não publicado. Frotas é complemento já disponível. Wiki distingue planejamento de implementação; alterações locais não significam publicação.
 
 ## CaraCore Hub
 - Encomendas (ML, Shopee, Temu). Não é Flask nem orquestrador interno. Oficina web 2.1 (WAR/Tomcat/SQLite local).
