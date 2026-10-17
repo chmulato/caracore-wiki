@@ -97,7 +97,7 @@
     </section>
 <section id="produto" class="card p-6 sm:p-8">
 <h2 class="text-2xl font-extrabold text-slate-900"><i class="fas fa-cash-register mr-2"></i>O que você pode vender hoje</h2>
-<p class="text-slate-700 mt-2"><strong>PDV Free:</strong> roda no computador da loja, 1 caixa, até 100 vendas por mês. O PDV Free não emite NF-e/NFC-e e não tem PIX integrado. Não prometa PIX, NF-e/NFC-e nem CBS/IBS como disponíveis em nenhum plano.</p>
+<p class="text-slate-700 mt-2"><strong>PDV Free:</strong> roda no computador da loja, 1 caixa, até 100 vendas por mês. O PDV Free não emite NF-e/NFC-e e não tem PIX integrado. Não prometa NF-e/NFC-e como disponível em nenhum plano, nem CBS/IBS ou relatório para o contador no Free.</p>
 </section>
 
         <section id="ganho" class="card p-6 sm:p-8">
@@ -142,12 +142,12 @@
                         </label>
                         <label class="block">
                             <span class="text-sm font-semibold text-slate-700">Mensalidade do Premium (R$)</span>
-                            <input id="calcMensalidade" type="number" min="0" step="0.01" value="{{PRECO_MENSAL}}"
+                            <input id="calcMensalidade" type="number" min="0" step="0.01" value="79.90"
                                    class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400">
                         </label>
                         <label class="block">
-                            <span class="text-sm font-semibold text-slate-700">Comissão mensal (%)</span>
-                            <input id="calcPercentual" type="number" min="0" max="100" step="0.1" value="{{PERCENTUAL_COMISSAO}}"
+                            <span class="text-sm font-semibold text-slate-700">Comissão mensal (%, de 5 a 20)</span>
+                            <input id="calcPercentual" type="number" min="5" max="20" step="0.1" value="20"
                                    class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400">
                         </label>
                         <div class="grid grid-cols-2 gap-3">
@@ -188,7 +188,7 @@
             </div>
 
             <p class="mt-6 text-xs text-slate-500">
-                Simulação didática. O contrato individual assinado define valores, percentuais e prazos e prevalece sobre esta página.
+                Simulação didática. O contrato individual, formalizado por e-mail ou WhatsApp, define valores, percentuais e prazos e prevalece sobre esta página.
             </p>
         </section>
 
@@ -197,10 +197,10 @@
                 <i class="fas fa-percent text-slate-900 mr-2"></i>
                 Comissão do Premium
             </h2>
-            <p class="mt-4 text-slate-700">O Premium é uma assinatura mensal de suporte ({{PRECO_MENSAL}}). Você recebe {{PERCENTUAL_COMISSAO}} de cada mensalidade paga e conciliada, enquanto o cliente seguir assinando.</p>
-            <p class="mt-3 text-slate-700">Cadastro do cliente: registre a loja no canal oficial do parceiro quando ela instalar o PDV Free. A loja fica vinculada a você por {{PRAZO_VINCULO}}. Se ela assinar o Premium nesse prazo, a comissão é sua.</p>
-            <p class="mt-3 text-slate-700">Vale a partir de {{DATA_INICIO}}. Mensalidade não paga ou não conciliada não gera comissão. O contrato individual prevalece sobre esta página.</p>
-            <p class="mt-3 text-sm text-slate-600">Premium: assinatura mensal de suporte, {{PRECO_MENSAL}}. PIX, NF-e/NFC-e e CBS/IBS estão no roadmap, sem data. <a class="underline" href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</p>
+            <p class="mt-4 text-slate-700">O Premium é uma assinatura mensal de suporte (R$ 79,90). O representante tem duas comissões: a de ativação, paga uma vez, e a recorrente, de 5% a 20% de cada mensalidade paga e conciliada, enquanto o cliente da sua carteira seguir pagando mensalmente. A carteira é a lista de clientes que você cadastrou e que pagam regularmente. Use a calculadora acima para simular o valor pelo número de clientes. Valores, percentual e data de início são combinados em contrato, formalizado por e-mail ou WhatsApp com a Cara Core. O aceite expresso do parceiro, por escrito, nesses canais, formaliza o contrato.</p>
+            <p class="mt-3 text-slate-700">Cadastro do cliente: registre a loja no canal oficial do parceiro quando ela instalar o PDV Free. A loja fica na sua carteira enquanto pagar a mensalidade. Se ela assinar o Premium, a comissão é sua.</p>
+            <p class="mt-3 text-slate-700">Vale a partir da data de início combinada com a Cara Core. Mensalidade não paga ou não conciliada não gera comissão. O contrato individual prevalece sobre esta página.</p>
+            <p class="mt-3 text-sm text-slate-600">Premium: assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas por mês), cálculo de CBS/IBS e relatório para o contador. NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a class="underline" href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</p>
         </section>
 
         
@@ -214,13 +214,14 @@
                 <li>Você é independente: sem vínculo, sem subordinação e sem exclusividade.</li>
                 <li>A Cara Core cuida do software; você faz o primeiro atendimento (L1) quando o termo previr.</li>
                 <li>A comissão mensal vale para mensalidades efetivamente pagas e conciliadas.</li>
-                <li>Valores e percentuais mudam só com aviso de 30 dias; vale o contrato assinado.</li>
+                <li>Valores e percentuais mudam só com aviso de 30 dias; vale o contrato combinado.</li>
+                <li>O contrato é combinado e formalizado por e-mail ou WhatsApp com a Cara Core, com aceite expresso por escrito.</li>
             </ul>
 
             <details class="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
                 <summary class="cursor-pointer font-bold text-slate-900">Minuta do contrato de representação comercial (modelo)</summary>
                 <div class="mt-4 text-sm text-slate-700 leading-relaxed">
-                    <p>Modelo de referência para leitura. A versão final, assinada, detalha percentuais, prazos e condições, e deve ser revisada juridicamente.</p>
+                    <p>Modelo de referência para leitura. A versão final detalha percentuais, prazos e condições, é combinada e formalizada por e-mail ou WhatsApp com a Cara Core, e deve ser revisada juridicamente.</p>
 
                     <p class="font-bold text-slate-900 mt-4">1) Objeto</p>
                     <ul class="list-disc pl-5 mt-2 space-y-2">
@@ -242,18 +243,18 @@
                     <p class="font-bold text-slate-900 mt-4">4) Responsabilidade técnica (L1/L2)</p>
                     <ul class="list-disc pl-5 mt-2 space-y-2">
                         <li>A Cara Core responde pelo software: código, correções e evolução.</li>
-                        <li>O parceiro faz o suporte de primeiro nível (L1) e o treinamento do cliente, quando o termo assinado previr.</li>
+                        <li>O parceiro faz o suporte de primeiro nível (L1) e o treinamento do cliente, quando o termo combinado previr.</li>
                         <li>Falhas do produto são escaladas à Cara Core (L2) pelos canais oficiais.</li>
                     </ul>
 
-                    <p class="font-bold text-slate-900 mt-4">5) Comissão de ativação (se aplicável)</p>
+                    <p class="font-bold text-slate-900 mt-4">5) Comissão de ativação</p>
                     <ul class="list-disc pl-5 mt-2 space-y-2">
                         <li>O contrato indica o evento de disparo (ex.: primeira mensalidade paga e compensada), o percentual ou valor e a forma de pagamento.</li>
                     </ul>
 
-                    <p class="font-bold text-slate-900 mt-4">6) Comissão mensal</p>
+                    <p class="font-bold text-slate-900 mt-4">6) Comissão mensal (recorrente, de 5% a 20%)</p>
                     <ul class="list-disc pl-5 mt-2 space-y-2">
-                        <li>Calculada sobre as mensalidades do cliente final <strong>efetivamente pagas e conciliadas</strong>.</li>
+                        <li>Calculada sobre as mensalidades do cliente final <strong>efetivamente pagas e conciliadas</strong>, enquanto o cliente da carteira pagar mensalmente.</li>
                         <li>O repasse segue o calendário do contrato (ex.: fechamento mensal e pagamento em data fixa).</li>
                         <li>Em inadimplência ou cancelamento, a regra de pausa e retomada deve estar clara.</li>
                     </ul>
@@ -265,7 +266,7 @@
 
                     <p class="font-bold text-slate-900 mt-4">8) Alterações comerciais</p>
                     <ul class="list-disc pl-5 mt-2 space-y-2">
-                        <li>Valores e percentuais podem mudar com aviso prévio de <strong>30 dias</strong>; vale sempre o contrato vigente assinado individualmente.</li>
+                        <li>Valores e percentuais podem mudar com aviso prévio de <strong>30 dias</strong>; vale sempre o contrato vigente combinado individualmente.</li>
                     </ul>
 
                     <p class="font-bold text-slate-900 mt-4">9) Conduta</p>
@@ -282,18 +283,18 @@
 <li><strong>“O meu trava quando cai a internet.”</strong> Aqui a venda é salva primeiro no computador da loja. Sem internet, o caixa continua.</li>
 <li><strong>“Já uso o sistema X.”</strong> Pergunte: quando a internet cai, o caixa para? Depois proponha: teste o PDV Free por uma semana, sem pagar. Se não incomodar, continue no X.</li>
 <li><strong>“A implantação do outro foi cara.”</strong> O PDV Free é um ZIP: extraia, abra o launcher e use no navegador. Os requisitos estão na página de download.</li>
-<li><strong>“Tem PIX? Emite nota?”</strong> Não. O PIX só pode ser registrado em “outros”, sem integração, e o Free não emite NF-e/NFC-e. Premium: assinatura mensal de suporte, {{PRECO_MENSAL}}. PIX, NF-e/NFC-e e CBS/IBS estão no roadmap, sem data. <a class="underline" href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</li>
+<li><strong>“Tem PIX? Emite nota?”</strong> Não. O PIX só pode ser registrado em “outros”, sem integração, e o Free não emite NF-e/NFC-e. Premium: assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas por mês), cálculo de CBS/IBS e relatório para o contador. NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a class="underline" href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</li>
 </ul><h3 class="text-lg font-bold text-slate-900 mt-6">Qualificação</h3><ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
 <li>Quantas vendas por dia, e quais os horários de pico?</li>
 <li>A internet da loja é instável?</li>
-<li>O lojista precisa de NF-e/NFC-e ou PIX integrado? Se sim, o PDV Free ainda não atende.</li>
+<li>O lojista precisa emitir NF-e/NFC-e? Se sim, nenhum plano atende hoje (roadmap, sem data). O PIX é feito pela maquininha do banco.</li>
 </ul><h3 class="text-lg font-bold text-slate-900 mt-6">Demonstração (4 pontos)</h3><ol class="list-decimal pl-5 mt-3 space-y-2 text-slate-700">
 <li>Venda sem internet, mostrando que ela fica registrada no computador.</li>
 <li>Venda completa, com item, total e forma de pagamento.</li>
 <li>Cadastro de produto.</li>
 <li>Fechamento do turno com relatório X/Z.</li>
 </ol><h3 class="text-lg font-bold text-slate-900 mt-6">Não prometa</h3><ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
-<li>PIX integrado, NF-e/NFC-e ou CBS/IBS como disponíveis em nenhum plano.</li>
+<li>NF-e/NFC-e como disponível em nenhum plano; CBS/IBS ou relatório para o contador como benefício do Free; PIX integrado no PDV (o PIX é feito pela maquininha do banco).</li>
 <li>Desconto, condição ou integração que não esteja no contrato ou no material oficial.</li>
 <li>Percentuais de comissão fora do contrato.</li>
 </ul><p class="mt-3 text-sm text-slate-600">Na dúvida, pergunte à equipe antes de fechar a venda.</p><details class="mt-5 rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-bold text-slate-900">Tour visual (opcional)</summary><div class="mt-4 grid sm:grid-cols-2 gap-4"><figure><img loading="lazy" class="w-full rounded-xl border border-slate-200" src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_de_login.png" alt="Tela de login do PDV"><figcaption class="text-xs text-slate-500 mt-1">Entrada</figcaption></figure><figure><img loading="lazy" class="w-full rounded-xl border border-slate-200" src="https://pdv.caracore.com.br/assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png" alt="Tela de nova venda"><figcaption class="text-xs text-slate-500 mt-1">Nova venda</figcaption></figure></div></details>
@@ -329,7 +330,7 @@
         let rec = 0;
         if (!pRaw) { $('outComissao').textContent = fmt.format(0); $('outComissaoDetalhe').textContent = 'Informe o percentual para calcular.'; }
         else {
-          const p = Math.min(100, Math.max(0, num(pRaw)));
+          const p = Math.min(20, Math.max(5, num(pRaw)));
           rec = base * (p / 100);
           $('outComissao').textContent = fmt.format(rec);
           $('outComissaoDetalhe').textContent = 'Aplicando ' + p.toFixed(1).replace('.', ',') + '% sobre a base da carteira (' + fmt.format(base) + ').';
