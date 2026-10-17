@@ -147,8 +147,9 @@
                         </label>
                         <label class="block">
                             <span class="text-sm font-semibold text-slate-700">Comissão mensal (%, de 5 a 20)</span>
-                            <input id="calcPercentual" type="number" min="5" max="20" step="0.1" value="20"
+                            <input id="calcPercentual" type="text" inputmode="decimal" autocomplete="off" value="20" aria-describedby="erroPercentual"
                                    class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                            <span id="erroPercentual" class="mt-1 hidden text-sm font-semibold text-red-600" role="alert">A comissão vai de 5% a 20%. Digite um valor dentro dessa faixa.</span>
                         </label>
                         <div class="grid grid-cols-2 gap-3">
                             <label class="block">
@@ -327,6 +328,10 @@
       function calcular() {
         const base = Math.max(0, Math.floor(num($('calcClientes').value))) * Math.max(0, num($('calcMensalidade').value));
         const pRaw = String($('calcPercentual').value || '').trim();
+        const pInvalido = pRaw !== '' && (num(pRaw) < 5 || num(pRaw) > 20);
+        $('erroPercentual').classList.toggle('hidden', !pInvalido);
+        $('calcPercentual').classList.toggle('border-red-500', pInvalido);
+        $('calcPercentual').setAttribute('aria-invalid', pInvalido ? 'true' : 'false');
         let rec = 0;
         if (!pRaw) { $('outComissao').textContent = fmt.format(0); $('outComissaoDetalhe').textContent = 'Informe o percentual para calcular.'; }
         else {
@@ -350,6 +355,26 @@
       }
       ['calcClientes', 'calcMensalidade', 'calcPercentual', 'calcAtivacoesMes', 'calcAtivacaoValor'].forEach((id) => {
         ['input', 'change'].forEach((e) => $(id).addEventListener(e, calcular));
+      });
+      // Valores aceitos: 5 a 20, com no máximo uma casa decimal. Só passa o texto que ainda pode virar um desses valores.
+      const permitidos = [];
+      for (let i = 50; i <= 200; i++) {
+        const v = i / 10;
+        if (Number.isInteger(v)) permitidos.push(String(v), v + '.', v + '.0');
+        else permitidos.push(v.toFixed(1));
+      }
+      const podeVirarValido = (s) => s === '' || permitidos.some((c) => c.startsWith(s.replace(',', '.')));
+      $('calcPercentual').addEventListener('beforeinput', (e) => {
+        if (!e.inputType.startsWith('insert')) return;
+        const el = e.target;
+        const proximo = el.value.slice(0, el.selectionStart) + (e.data || '') + el.value.slice(el.selectionEnd);
+        if (!podeVirarValido(proximo)) e.preventDefault();
+      });
+      $('calcPercentual').addEventListener('blur', () => {
+        const raw = String($('calcPercentual').value || '').trim();
+        if (raw === '') { $('calcPercentual').value = 20; }
+        else { $('calcPercentual').value = Math.min(20, Math.max(5, num(raw))); }
+        calcular();
       });
       calcular();
     })();
