@@ -48,9 +48,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Gestão de encomendas e marketplaces (ML, Shopee, Temu). Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/Abr/2027',
+            description: 'Gestão logística interna para pontos de retirada (PUDOs), com encomendas de ML, Shopee e Temu. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/Abr/2027',
             url: 'projeto-hub.html',
-            tags: ['java', 'tomcat', 'war', 'jakarta', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'garagem', 'tia sócia', 'v2.1.0-rc1.2'],
+            tags: ['java', 'tomcat', 'war', 'jakarta', 'encomendas', 'pudo', 'ponto de retirada', 'mercado livre', 'shopee', 'temu', 'hub', 'garagem', 'tia sócia', 'v2.1.0-rc1.2'],
             category: 'projeto'
         },
         {

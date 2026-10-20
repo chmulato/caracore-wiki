@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CaraCore Hub — Gestão de encomendas e marketplaces | Wiki Cara Core</title>
-  <meta name="description" content="CaraCore Hub: gestão de encomendas para centros de distribuição, com Mercado Livre, Shopee e Temu. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/04/2027. Não é a central telefônica da Cara Core.">
+  <title>CaraCore Hub — Gestão logística de ponto de retirada (PUDO) | Wiki Cara Core</title>
+  <meta name="description" content="CaraCore Hub: gestão logística interna para pontos de retirada (PUDOs) — recebimento, guarda e retirada de encomendas do Mercado Livre, Shopee e Temu. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/04/2027. Não é a central telefônica da Cara Core.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
   <link rel="stylesheet" href="assets/css/wiki-unified.css">
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <meta property="og:title" content="CaraCore Hub — Gestão de encomendas | Wiki Cara Core">
-  <meta property="og:description" content="Pedidos de vários marketplaces num só lugar. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/04/2027.">
+  <meta property="og:title" content="CaraCore Hub — Gestão logística de PUDO | Wiki Cara Core">
+  <meta property="og:description" content="Recebimento, guarda e retirada de encomendas num ponto de retirada (PUDO). Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/04/2027.">
   <meta property="og:type" content="article">
 </head>
 <body>
@@ -76,8 +76,8 @@
       <div class="col-lg-9 col-md-8">
         <div class="wiki-content wiki-home">
           <div class="wiki-header">
-            <h1><i class="bi bi-box-seam"></i> CaraCore Hub — encomendas, não “central telefônica”</h1>
-            <p class="wiki-lede">O Hub junta pedidos de Mercado Livre, Shopee e Temu numa fila só. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está em <a href="https://hub.caracore.com.br/download.html" target="_blank" rel="noopener">hub.caracore.com.br</a>, para avaliação, sem assinatura, com instalador e ZIP. O GA do instalador permanece <strong>06 de abril de 2027</strong>.</p>
+            <h1><i class="bi bi-box-seam"></i> CaraCore Hub — logística do ponto de retirada, não “central telefônica”</h1>
+            <p class="wiki-lede">O Hub é a gestão logística interna de um ponto de retirada (PUDO): a encomenda chega do Mercado Livre, da Shopee ou da Temu, ganha posição de guarda e é conferida na retirada. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está em <a href="https://hub.caracore.com.br/download.html" target="_blank" rel="noopener">hub.caracore.com.br</a>, para avaliação, sem assinatura, com instalador e ZIP. O GA do instalador permanece <strong>06 de abril de 2027</strong>.</p>
           </div>
 
           <div class="alert alert-info" role="note">
@@ -92,10 +92,10 @@
                   <h2 class="h4 mb-0"><i class="bi bi-people"></i> O que você ganha</h2>
                 </div>
                 <div class="project-body">
-                  <p>Quem vende no Mercado Livre, na Shopee e na Temu costuma abrir três painéis para ver o mesmo tipo de pedido. O Hub junta isso: o pedido chega, vai para uma posição no estoque e sai com conferência.</p>
+                  <p>Quem opera um ponto de retirada recebe encomenda de três canais diferentes e precisa saber o que chegou, onde guardar e para quem entregar. O Hub organiza esse fluxo: a encomenda é recebida, ganha uma posição na prateleira, fica rastreável e só sai com conferência.</p>
                   <ul class="feature-list">
-                    <li>Centraliza pedidos de vários marketplaces</li>
-                    <li>Mapa de estoque (rua, módulo, nível, caixa)</li>
+                    <li>Recebimento e conferência na chegada da encomenda</li>
+                    <li>Mapa de guarda (rua, módulo, nível, caixa)</li>
                     <li>Inventário cíclico e etiquetas</li>
                     <li>Aviso no WhatsApp quando algo atrasa</li>
                     <li>Perfis ADMIN, SUPERVISOR e OPERADOR</li>
@@ -124,7 +124,7 @@
 
           <section class="mb-5" id="oficina">
             <h2><i class="bi bi-tools"></i> O que já existe na oficina (não é GA pública)</h2>
-            <p>Na oficina, a aplicação web de gestão de encomendas está em versão <strong>2.1</strong>, com as cinco fases internas concluídas. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Mac e Linux ficam fora desta tag. Isso não é o GA nem um SaaS público.</p>
+            <p>Na oficina, a aplicação web de gestão logística de ponto de retirada está em versão <strong>2.1</strong>, com as cinco fases internas concluídas. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Mac e Linux ficam fora desta tag. Isso não é o GA nem um SaaS público.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
@@ -187,7 +187,7 @@
                   <tr><td>Runtime</td><td>Jakarta EE 10 · Tomcat 10.1 · WAR</td><td>Tomcat embutido + envelope Electron (na oficina)</td></tr>
                   <tr><td>Interface</td><td>JSP + JSTL + Bootstrap 5 + Chart.js</td><td>As mesmas telas JSP, dentro do desktop</td></tr>
                   <tr><td>Banco</td><td>SQLite local (WAL)</td><td>SQLite local (WAL)</td></tr>
-                  <tr><td>Marketplaces</td><td colspan="2">Mercado Livre, Shopee, Temu (não inventar Amazon como conector pronto)</td></tr>
+                  <tr><td>Marketplaces</td><td colspan="2">Mercado Livre, Shopee, Temu — Amazon e B2W não têm conector nesta edição</td></tr>
                   <tr><td>CTA público</td><td colspan="2">hub.caracore.com.br — nunca <code>/delivery/hub</code></td></tr>
                 </tbody>
               </table>
@@ -226,7 +226,7 @@
   <footer class="wiki-footer">
     <div class="container">
       <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>Wiki como centro de alinhamento — CaraCore Hub: pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador 06/04/2027.</p>
+      <p>Wiki como centro de alinhamento — CaraCore Hub: gestão logística de ponto de retirada (PUDO); pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador 06/04/2027.</p>
       <div class="mt-2">
         <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
           <i class="bi bi-shield-lock"></i> Política de Privacidade

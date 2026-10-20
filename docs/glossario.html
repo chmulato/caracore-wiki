@@ -324,7 +324,7 @@
                                 <div class="col-md-6">
                                     <div class="leigos-section">
                                         <h4><i class="bi bi-people"></i> O que muda para você</h4>
-                                        <p>Sistema de gestão de encomendas para centros de distribuição: junta pedidos de Mercado Livre, Shopee e Temu, organiza o estoque e confere a retirada. A pré-release Windows v2.1.0-rc1.2 está para avaliação em hub.caracore.com.br; o GA do instalador segue em 06/Abr/2027. Não é orquestrador interno da Cara Core.</p>
+                                        <p>Sistema de gestão logística interna para pontos de retirada (PUDOs): junta pedidos de Mercado Livre, Shopee e Temu, organiza a guarda por posição e confere a retirada no balcão. A pré-release Windows v2.1.0-rc1.2 está para avaliação em hub.caracore.com.br; o GA do instalador segue em 06/Abr/2027. Não é orquestrador interno da Cara Core.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -830,6 +830,25 @@
                                     <div class="estagiario-section">
                                         <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
                                         <p>Faz parte do <strong>posicionamento V3 de negócio</strong> (PME), não de um número de release. Não confundir V3 com v3.2.12-free (canal Java) nem com v0.1.4 (Rust). Ver <a href="trilha-cliente.html#v3-pdv-transparencia">transparência V3</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3>PUDO (ponto de retirada)</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="leigos-section">
+                                        <h4><i class="bi bi-people"></i> O que muda para você</h4>
+                                        <p>É o balcão onde a encomenda do vizinho chega e é entregue: a loja recebe o volume de um canal de venda, guarda num lugar identificado e entrega quando a pessoa aparece. É a operação que o CaraCore Hub organiza.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="estagiario-section">
+                                        <h4><i class="bi bi-mortarboard"></i> Detalhe opcional</h4>
+                                        <p>Do inglês <em>Pick-Up and Drop-Off</em>. No Hub, o fluxo é <strong>recebimento → guarda por posição → retirada conferida</strong>, com o banco em SQLite local. Canais com conector nesta edição: Mercado Livre, Shopee e Temu; Amazon e B2W não têm conector.</p>
+                                        <p><strong>Wiki:</strong> <a href="projeto-hub.html">projeto-hub.html</a> · <a href="hub/index.html">manual do Hub</a></p>
                                     </div>
                                 </div>
                             </div>
