@@ -44,7 +44,7 @@ alwaysApply: true
 - Loja: CTA de conversa sobre a operação, sem contratação antecipada ou instalador não publicado. Frotas é complemento já disponível. Wiki distingue planejamento de implementação; alterações locais não significam publicação.
 
 ## CaraCore Hub
-- Encomendas (ML, Shopee, Temu). Não é Flask nem orquestrador interno. Oficina web 2.1 (WAR/Tomcat/SQLite local).
+- **Gestão logística interna para pontos de retirada (PUDOs):** recebe, confere, guarda por posição e entrega com conferência de volume. Encomendas de ML, Shopee e Temu; Amazon e B2W não têm conector nesta edição (fora do filtro de canais). Não é marketplace, não é centro de distribuição, não é Flask nem orquestrador interno. Oficina web 2.1 (WAR/Tomcat/SQLite local).
 - Download vigente: pré-release Windows `v2.1.0-rc1.2` em https://hub.caracore.com.br/download.html (instalador e ZIP, unsigned). SHA-256 do instalador `50d38ff0ee4defce5bb2598967331d0295fb4817dbec59df5d3e7574b22975e5`; ZIP `ec82b2bd57053c252faac4fdbb0066e9a5cea2df293562b35384107e5cb624b4`. As tags `v2.1.0-rc1.1` e `v2.1.0-rc1` permanecem. Mac e Linux fora desta tag. Não é GA. Aceite da QA desta build ainda pendente.
 - Próxima pré-release: outra tag, sem repor os bytes já publicados. GA instalador Windows 06/04/2027 (SQLite). Tia Sócia = pitch. Alinhamento: `docs/projeto-hub.html`. Manual: `docs/hub/`.
 

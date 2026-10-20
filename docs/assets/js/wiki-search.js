@@ -64,7 +64,7 @@ function initWikiSearch() {
             title: 'Hub — pedidos e estoque',
             description: 'Lista de pedidos, triagem, mapa de posições, etiquetas, recebimento e inventário cíclico',
             url: 'hub/pedidos.html',
-            tags: ['hub', 'pedidos', 'estoque', 'qr', 'etiqueta', 'inventário', 'marketplace'],
+            tags: ['hub', 'pedidos', 'estoque', 'qr', 'etiqueta', 'inventário', 'pudo', 'ponto de retirada', 'marketplace'],
             category: 'guia'
         },
         {
