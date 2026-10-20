@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Problemas comuns — CaraCore Hub | Wiki Cara Core</title>
-  <meta name="description" content="Login, lentidão, leitor, gravação, conector, estoque e relatório — o que tentar antes do suporte.">
+  <meta name="description" content="Login, lentidão, leitor, gravação, conector, estoque e exportação — o que tentar antes do suporte.">
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/css/wiki.css">
@@ -70,13 +70,12 @@
         <div class="wiki-content wiki-home">
           <div class="wiki-header">
             <h1><i class="bi bi-box-seam"></i> Problemas comuns</h1>
-            <p class="wiki-lede">Tente estes passos na oficina antes de abrir chamado. Não copie senha de desenvolvimento para produção.</p>
+            <p class="wiki-lede">Tente estes passos antes de abrir chamado. Não copie senha de desenvolvimento para produção.</p>
           </div>
 
           <div class="alert alert-warning" role="note">
             <i class="bi bi-cone-striped"></i>
-            <strong>Oficina, não oferta madura.</strong> Este manual descreve a aplicação
-            <strong>web</strong> da oficina (versão <strong>2.1</strong>, WAR/Tomcat).
+            <strong>Versão de avaliação.</strong> Este manual descreve a aplicação <strong>web</strong> 2.1 usada no ponto de retirada.
             A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não há SaaS público. O GA do instalador com SQLite continua em <strong>06 de abril de 2027</strong>.
             Conectores vivos no código: Mercado Livre, Shopee e Temu.
           </div>
@@ -85,7 +84,7 @@
           <section class="mb-5">
             <h2>Não entra</h2>
             <ol>
-              <li>URL exata da instalação (na oficina: Tomcat na porta 9090)</li>
+              <li>URL exata da instalação (Tomcat local na porta 9090)</li>
               <li>Usuário e senha; Caps Lock</li>
               <li>Esqueceu a senha? ou reset pelo ADMIN</li>
               <li>Usuário desativado</li>
@@ -95,7 +94,7 @@
             <h2>Lento ou não grava</h2>
             <ul class="feature-list">
               <li>Feche abas, atualize o navegador, limpe o cache (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Delete</kbd>)</li>
-              <li>Sessão expirada: entre de novo</li>
+              <li>Sessão perdida (servidor reiniciado ou cookie apagado): entre de novo</li>
               <li>Sem permissão de edição: peça ao ADMIN</li>
             </ul>
           </section>
@@ -117,8 +116,8 @@
             </ol>
           </section>
           <section class="mb-5">
-            <h2>Relatório não sai</h2>
-            <p>Afrouxe período e filtros, gere um recorte menor, aguarde exportação grande. Se persistir, abra o centro de erros (ADMIN) ou o canal de feedback da loja.</p>
+            <h2>Exportação não baixa</h2>
+            <p>Afrouxe período e filtros, escolha um recorte menor e aguarde o CSV de volume grande. Se persistir, abra o centro de erros (ADMIN) ou o canal de feedback da loja.</p>
           </section>
           <section class="mb-5">
             <h2>Quando falar com a Cara Core</h2>
@@ -138,7 +137,7 @@
   <footer class="wiki-footer">
     <div class="container">
       <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>Manual extraído da oficina <code>caracore-hub</code> — aplicação web 2.1. GA do instalador Windows: 06/04/2027.</p>
+      <p>Manual da aplicação web 2.1 do CaraCore Hub. GA do instalador Windows: 06/04/2027.</p>
     </div>
   </footer>
 

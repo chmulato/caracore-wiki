@@ -63,8 +63,8 @@
               </ul>
             </li>
             <li><a href="#o-que-e"><i class="bi bi-box-seam"></i> O que é</a></li>
-            <li><a href="hub/index.html"><i class="bi bi-book"></i> Manual de uso (oficina)</a></li>
-            <li><a href="#oficina"><i class="bi bi-tools"></i> O que já existe na oficina</a></li>
+            <li><a href="hub/index.html"><i class="bi bi-book"></i> Manual de uso</a></li>
+            <li><a href="#estado-atual"><i class="bi bi-tools"></i> O que já existe hoje</a></li>
             <li><a href="#ga"><i class="bi bi-windows"></i> Instalador Windows 2027</a></li>
             <li><a href="#tia-socia"><i class="bi bi-people"></i> Tia Sócia</a></li>
             <li><a href="#mapa"><i class="bi bi-table"></i> Mapa para o código</a></li>
@@ -82,7 +82,7 @@
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Honestidade de produto:</strong> o Hub <strong>não</strong> é o orquestrador interno da Cara Core nem uma API Python/Flask. Isso mistura o Hub com a Área 51. Também <strong>não</strong> está em oferta madura como o PDV Java: a oficina já tem a aplicação web (WAR/Tomcat); o que o calendário oficial chama de GA é o <strong>instalador Windows com SQLite local</strong>. O passo a passo das telas está no <a href="hub/index.html">manual de uso</a>.
+            <strong>Honestidade de produto:</strong> o Hub <strong>não</strong> é o orquestrador interno da Cara Core nem uma API Python/Flask. Isso mistura o Hub com a Área 51. Também <strong>não</strong> está em oferta madura como o PDV Java: o que o cliente baixa hoje é a <strong>pré-release Windows para avaliação</strong>; o que o calendário oficial chama de GA é o <strong>instalador Windows homologado, com Tomcat embutido e SQLite local</strong>, em 06/04/2027. O passo a passo das telas está no <a href="hub/index.html">manual de uso</a>.
           </div>
 
           <div class="row g-4 mb-4" id="o-que-e">
@@ -99,6 +99,7 @@
                     <li>Inventário cíclico e etiquetas</li>
                     <li>Aviso no WhatsApp quando algo atrasa</li>
                     <li>Perfis ADMIN, SUPERVISOR e OPERADOR</li>
+                    <li>Login por telefone e senha, com códigos de recuperação offline de uso único</li>
                   </ul>
                 </div>
               </div>
@@ -109,10 +110,10 @@
                   <h2 class="h4 mb-0"><i class="bi bi-mortarboard"></i> Detalhe opcional</h2>
                 </div>
                 <div class="project-body">
-                  <p>Uma oficina (<code>caracore-hub</code>, repositório privado) e uma loja (<code>caracore-hub-releases</code>). Stack da aplicação: <strong>Jakarta EE 10 · WAR · Tomcat · JSP · SQLite local</strong>. Os dados ficam no computador do cliente.</p>
+                  <p>Um repositório de código privado (<code>caracore-hub</code>) e uma loja pública (<code>caracore-hub-releases</code>). Stack da aplicação: <strong>Java 25 · Jakarta EE 10 · JSP · Tomcat embutido · SQLite local</strong>. Os dados ficam no computador do cliente.</p>
                   <ul class="feature-list">
-                    <li>Versão de referência na oficina: <strong>2.1</strong></li>
-                    <li>Fases 1 a 5 da aplicação web marcadas como concluídas na oficina</li>
+                    <li>Versão de referência da aplicação web: <strong>2.1</strong></li>
+                    <li>Fases 1 a 5 da aplicação web concluídas</li>
                     <li>Conectores vivos no código: Mercado Livre, Shopee, Temu</li>
                     <li>Há um envelope desktop (Electron + Tomcat embutido) no caminho do instalador</li>
                     <li>Licença proprietária; gratuito para pessoa física (estudo), conforme política Cara Core</li>
@@ -122,13 +123,13 @@
             </div>
           </div>
 
-          <section class="mb-5" id="oficina">
-            <h2><i class="bi bi-tools"></i> O que já existe na oficina (não é GA pública)</h2>
-            <p>Na oficina, a aplicação web de gestão logística de ponto de retirada está em versão <strong>2.1</strong>, com as cinco fases internas concluídas. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Mac e Linux ficam fora desta tag. Isso não é o GA nem um SaaS público.</p>
+          <section class="mb-5" id="estado-atual">
+            <h2><i class="bi bi-tools"></i> O que já existe hoje (não é GA pública)</h2>
+            <p>A aplicação web de gestão logística de ponto de retirada está na versão <strong>2.1</strong>, com as cinco fases concluídas. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Mac e Linux ficam fora desta tag. Isso não é o GA nem um SaaS público.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
-                  <tr><th>Fase</th><th>O que cobre</th><th>Status na oficina</th></tr>
+                  <tr><th>Fase</th><th>O que cobre</th><th>Status</th></tr>
                 </thead>
                 <tbody>
                   <tr><td>1</td><td>RBAC, health, PDF</td><td>Concluída</td></tr>
@@ -148,13 +149,13 @@
           </section>
 
           <section class="mb-5" id="ga">
-            <h2><i class="bi bi-windows"></i> Dois tempos: WAR na oficina × instalador em 2027</h2>
+            <h2><i class="bi bi-windows"></i> Dois tempos: aplicação web hoje × instalador homologado em 2027</h2>
             <div class="row g-4">
               <div class="col-md-6">
                 <div class="project-card h-100">
                   <div class="project-body">
-                    <p><span class="badge bg-secondary">Oficina hoje</span></p>
-                    <p>Aplicação <strong>web</strong> empacotada como WAR, Tomcat e JSP. O banco é <strong>SQLite local</strong>. O canal de download do cliente é a pré-release Windows.</p>
+                    <p><span class="badge bg-secondary">Hoje</span></p>
+                    <p>Aplicação <strong>web</strong> em JSP, aberta no navegador do próprio ponto, com <strong>SQLite local</strong>. O que o cliente baixa é a pré-release Windows, que traz o mesmo Tomcat embutido.</p>
                   </div>
                 </div>
               </div>
@@ -179,14 +180,14 @@
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
-                  <tr><th></th><th>Aplicação web (oficina)</th><th>Caminho desktop (GA 2027)</th></tr>
+                  <tr><th></th><th>Aplicação web (hoje)</th><th>Caminho desktop (GA 2027)</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Oficina</td><td colspan="2"><code>caracore-hub</code> (privado)</td></tr>
+                  <tr><td>Código</td><td colspan="2"><code>caracore-hub</code> (privado)</td></tr>
                   <tr><td>Loja</td><td colspan="2"><code>caracore-hub-releases</code> — <a href="https://hub.caracore.com.br/" target="_blank" rel="noopener">hub.caracore.com.br</a></td></tr>
-                  <tr><td>Runtime</td><td>Jakarta EE 10 · Tomcat 10.1 · WAR</td><td>Tomcat embutido + envelope Electron (na oficina)</td></tr>
+                  <tr><td>Runtime</td><td>Jakarta EE 10 · Tomcat 10.1 · JSP</td><td>Tomcat embutido + Electron</td></tr>
                   <tr><td>Interface</td><td>JSP + JSTL + Bootstrap 5 + Chart.js</td><td>As mesmas telas JSP, dentro do desktop</td></tr>
-                  <tr><td>Banco</td><td>SQLite local (WAL)</td><td>SQLite local (WAL)</td></tr>
+                  <tr><td>Banco</td><td>SQLite local</td><td>SQLite local</td></tr>
                   <tr><td>Marketplaces</td><td colspan="2">Mercado Livre, Shopee, Temu — Amazon e B2W não têm conector nesta edição</td></tr>
                   <tr><td>CTA público</td><td colspan="2">hub.caracore.com.br — nunca <code>/delivery/hub</code></td></tr>
                 </tbody>
@@ -194,7 +195,7 @@
             </div>
             <div class="alert alert-secondary" role="note">
               <i class="bi bi-mortarboard"></i>
-              <strong>Primeiro passo do estagiário:</strong> na oficina, ler <code>docs/contexto-rapido.md</code> (GA Windows 2027), o README e o <code>project_hub/docs/STATUS-ATUAL.md</code>. Manual público: <a href="hub/index.html">hub/</a>. Não copie senhas de desenvolvimento. Não descreva o Hub como Flask, Azure App Service ou “cérebro que liga todos os produtos Cara Core”.
+              <strong>Primeiro passo do estagiário:</strong> no repositório privado <code>caracore-hub</code>, ler <code>docs/contexto-rapido.md</code> (GA Windows 2027), o README e o <code>project_hub/docs/STATUS-ATUAL.md</code>. Manual público: <a href="hub/index.html">hub/</a>. Não copie senhas de desenvolvimento. Não descreva o Hub como Flask, Azure App Service ou “cérebro que liga todos os produtos Cara Core”.
             </div>
           </section>
 

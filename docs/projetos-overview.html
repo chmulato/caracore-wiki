@@ -111,7 +111,7 @@
                         <p class="wiki-home-subtitle">
                             O mesmo núcleo da capa: <strong>o que entregamos</strong>, <strong>o que já existe</strong> e <strong>o que ainda está em desenvolvimento</strong> — sem competir PDV, CSO e Hub com o restante do portfólio.
                         </p>
-                        <p class="mb-2">Os <strong>três produtos-chave</strong> são o <a href="projeto-pdv.html">CaraCore PDV</a> (caixa no computador da loja), o <a href="projeto-cso.html">CaraCore CSO</a> (frota no navegador) e o <a href="projeto-hub.html">CaraCore Hub</a> (encomendas de Mercado Livre, Shopee e Temu).</p>
+                        <p class="mb-2">Os <strong>três produtos-chave</strong> são o <a href="projeto-pdv.html">CaraCore PDV</a> (caixa no computador da loja), o <a href="projeto-cso.html">CaraCore CSO</a> (frota no navegador) e o <a href="projeto-hub.html">CaraCore Hub</a> (logística interna do ponto de retirada — PUDO).</p>
                         <p class="mb-0 wiki-lede">O PDV Java estável é a <strong>v3.2.12-free</strong>; a <strong>v4.0.0-rc6</strong> é a pré-release pública para avaliação no Windows. Ainda sem GA; o T032 segue aberto. As linhas Java e Rust convivem, sem substituição. O CSO de frota está no ar; alterações recentes em código aguardam confirmação de deploy. Transportes no computador chega conforme o plano de <strong>08/Nov/2028</strong>. O Hub tem a pré-release Windows <strong>v2.1.0-rc1.2</strong> para avaliação; o GA do instalador está previsto para <strong>06/Abr/2027</strong>.</p>
                         <div class="wiki-quick-actions wiki-quick-actions--trails" role="navigation" aria-label="Trilhas">
                             <a class="btn btn-success btn-sm" href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Trilha do Cliente</a>
@@ -591,7 +591,7 @@
                                 <h2><i class="bi bi-diagram-3"></i> 7. Cara Core Hub - Gestão de Encomendas</h2>
                                 <div class="mt-2">
                                     <span class="tech-badge">Jakarta EE 10</span>
-                                    <span class="tech-badge">WAR / Tomcat</span>
+                                    <span class="tech-badge">Tomcat embutido</span>
                                     <span class="tech-badge">Marketplaces</span>
                                     <span class="tech-badge">Bunker</span>
                                     <span class="tech-badge" style="background: #f59e0b; color: #1a1a1a;">GA instalador — 06/Abr/2027</span>
@@ -599,7 +599,7 @@
                             </div>
                             <div class="project-body">
                                 <div class="alert alert-warning mb-3">
-                                    <i class="bi bi-cone-striped"></i> <strong>Pré-release Windows v2.1.0-rc1.2</strong> publicada para avaliação, sem assinatura, com instalador e ZIP. O <strong>GA do instalador</strong> segue em <strong>06/Abr/2027</strong>. A oficina já tem a aplicação web 2.1 (WAR/Tomcat). Isso ainda não é oferta madura nem SaaS público.
+                                    <i class="bi bi-cone-striped"></i> <strong>Pré-release Windows v2.1.0-rc1.2</strong> publicada para avaliação, sem assinatura, com instalador e ZIP. O <strong>GA do instalador</strong> segue em <strong>06/Abr/2027</strong>. A aplicação web 2.1 já está concluída. Isso ainda não é oferta madura nem SaaS público.
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -616,11 +616,11 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
-                                        <p>Oficina <code>caracore-hub</code> (privada): Jakarta EE 10, WAR/Tomcat, JSP e SQLite local no computador do cliente. Tia Sócia é exemplo de negócio na loja, não o nome do produto.</p>
+                                        <p>Código do produto <code>caracore-hub</code> (privado): Jakarta EE 10, JSP, Tomcat embutido no instalador e SQLite local no computador do cliente. Tia Sócia é exemplo de negócio na loja, não o nome do produto.</p>
                                         
                                         <p><strong>Arquitetura:</strong></p>
                                         <ul class="feature-list">
-                                            <li>Aplicação Java empacotada como WAR (Tomcat 10.1)</li>
+                                            <li>Aplicação Java 25 com Tomcat 10.1 embutido no instalador</li>
                                             <li>Conectores: Mercado Livre, Shopee, Temu</li>
                                             <li>RBAC ADMIN / SUPERVISOR / OPERADOR</li>
                                             <li>Licença proprietária; CTA público = hub.caracore.com.br</li>
@@ -630,7 +630,7 @@
                                             <strong>Loja:</strong> <a href="https://hub.caracore.com.br/download.html" target="_blank" rel="noopener">hub.caracore.com.br</a> — pré-release Windows v2.1.0-rc1.2 para avaliação, com instalador e ZIP; GA do instalador em Abr/2027.
                                         </div>
                                         <div class="alert alert-info mt-3">
-                                            <strong>Seu papel como estagiário:</strong> Ler STATUS-ATUAL da oficina. Não descrever o Hub como Python/Flask nem como orquestrador interno da Cara Core.
+                                            <strong>Seu papel como estagiário:</strong> Ler o STATUS-ATUAL no repositório privado do Hub. Não descrever o Hub como Python/Flask nem como orquestrador interno da Cara Core.
                                         </div>
                                     </div>
                                 </div>

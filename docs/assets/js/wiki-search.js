@@ -48,16 +48,16 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Gestão logística interna para pontos de retirada (PUDOs), com encomendas de ML, Shopee e Temu. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/Abr/2027',
+            description: 'Gestão logística interna para pontos de retirada (PUDOs): recebimento, guarda por posição e retirada conferida. Canais desta edição: Mercado Livre, Shopee e Temu. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/Abr/2027',
             url: 'projeto-hub.html',
-            tags: ['java', 'tomcat', 'war', 'jakarta', 'encomendas', 'pudo', 'ponto de retirada', 'mercado livre', 'shopee', 'temu', 'hub', 'garagem', 'tia sócia', 'v2.1.0-rc1.2'],
+            tags: ['java', 'jakarta', 'pudo', 'ponto de retirada', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'v2.1.0-rc1.2'],
             category: 'projeto'
         },
         {
             title: 'Manual operacional do Hub',
-            description: 'Como usar a aplicação web da oficina: login, dashboard, pedidos, estoque, administração e problemas comuns',
+            description: 'Como usar a aplicação web do ponto de retirada: login por telefone, dashboard, pedidos, estoque, administração e problemas comuns',
             url: 'hub/index.html',
-            tags: ['hub', 'manual', 'tutorial', 'pedidos', 'estoque', 'login', 'encomendas', 'oficina', '2.1'],
+            tags: ['hub', 'manual', 'tutorial', 'pudo', 'ponto de retirada', 'pedidos', 'estoque', 'login', 'encomendas', '2.1'],
             category: 'guia'
         },
         {

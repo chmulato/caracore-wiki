@@ -70,13 +70,12 @@
         <div class="wiki-content wiki-home">
           <div class="wiki-header">
             <h1><i class="bi bi-box-seam"></i> Login e sessão</h1>
-            <p class="wiki-lede">A primeira tela pede usuário e senha. Sessão inativa cai; o ADMIN redefine acesso quando preciso.</p>
+            <p class="wiki-lede">A entrada é por telefone e senha. Numa instalação nova, o responsável cria o administrador antes do primeiro login.</p>
           </div>
 
           <div class="alert alert-warning" role="note">
             <i class="bi bi-cone-striped"></i>
-            <strong>Oficina, não oferta madura.</strong> Este manual descreve a aplicação
-            <strong>web</strong> da oficina (versão <strong>2.1</strong>, WAR/Tomcat).
+            <strong>Versão de avaliação.</strong> Este manual descreve a aplicação <strong>web</strong> 2.1 usada no ponto de retirada.
             A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura, com instalador e ZIP. Não há SaaS público. O GA do instalador com SQLite continua em <strong>06 de abril de 2027</strong>.
             Conectores vivos no código: Mercado Livre, Shopee e Temu.
           </div>
@@ -85,36 +84,41 @@
           <section class="mb-5">
             <h2>Tela de autenticação</h2>
             <ul class="feature-list">
-              <li>Campo de e-mail ou nome de usuário</li>
-              <li>Campo de senha</li>
-              <li>Botão Entrar</li>
-              <li>Link Esqueceu a senha?</li>
+              <li>Campo <strong>Telefone</strong>, com máscara <code>+55 (DD) 9XXXX-XXXX</code></li>
+              <li>Campo <strong>Senha</strong>, com botão para mostrar ou ocultar</li>
+              <li>Botão <strong>Entrar</strong> e a caixa <strong>Lembrar-me</strong> (nesta versão ela não prolonga a sessão)</li>
+              <li>Link <strong>Recuperar com código offline</strong></li>
+              <li>Rodapé com <strong>Primeiro acesso? Configure o administrador desta instalação</strong></li>
             </ul>
             <h3 class="h5 mt-4">Procedimento</h3>
             <ol>
-              <li>Digite o usuário</li>
+              <li>Digite o telefone cadastrado, com DDD</li>
               <li>Digite a senha</li>
               <li>Clique em Entrar</li>
               <li>Aguarde o redirecionamento para o dashboard</li>
             </ol>
+            <p>A conta é identificada pelo telefone: o Hub não aceita e-mail como login. Se a senha for recusada, a tela mostra credenciais inválidas — confira o telefone antes de tentar de novo.</p>
           </section>
           <section class="mb-5">
-            <h2>Recuperação de senha</h2>
+            <h2>Recuperação de senha — código offline</h2>
+            <p class="mb-2">A recuperação de senha <strong>não usa SMS, e-mail nem mensagem instantânea</strong>: ela depende dos códigos gerados ao criar a conta ou no perfil. Os avisos de WhatsApp/Telegram tratam de pedido, não de senha.</p>
             <ol>
-              <li>Clique em Esqueceu a senha?</li>
-              <li>Informe o e-mail cadastrado</li>
-              <li>Abra o link enviado por e-mail</li>
-              <li>Defina a nova senha e entre de novo</li>
+              <li>Na tela de login, clique em <strong>Recuperar com código offline</strong></li>
+              <li>Informe o telefone cadastrado</li>
+              <li>Informe um dos códigos guardados</li>
+              <li>Defina a nova senha e confirme (mínimo de 12 caracteres)</li>
+              <li>Entre de novo, com o telefone e a nova senha</li>
             </ol>
-            <p>Se o e-mail não chegar, o ADMIN pode resetar a senha em Administração → Usuários.</p>
+            <p>Cada código serve uma vez; ao redefinir a senha, os demais códigos do conjunto são invalidados. Sem um código válido não há recuperação automática — nesse caso, outro ADMIN redefine a senha em Administração → Usuários (ação Resetar senha) e informa a senha temporária mostrada na tela. Guarde os códigos fora do computador do ponto.</p>
           </section>
           <section class="mb-5">
             <h2>Sessão, perfil e saída</h2>
             <ul class="feature-list">
-              <li>Sessão ativa enquanto você usa o sistema</li>
-              <li>Inatividade prolongada encerra a sessão (cerca de 30 minutos)</li>
-              <li>Perfil: dados pessoais e permissões do seu papel</li>
-              <li>Logout: use Sair no menu superior e confirme</li>
+              <li>A sessão começa quando você entra e dura enquanto o navegador estiver aberto</li>
+              <li>Nesta versão não há expiração por inatividade configurada — ao fim do turno, clique em Sair</li>
+              <li>Fechar o navegador encerra o cookie de sessão</li>
+              <li>Perfil: dados pessoais, troca de senha e geração dos códigos de recuperação</li>
+              <li>Logout: use Sair no menu superior</li>
             </ul>
           </section>
 
@@ -131,7 +135,7 @@
   <footer class="wiki-footer">
     <div class="container">
       <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>Manual extraído da oficina <code>caracore-hub</code> — aplicação web 2.1. GA do instalador Windows: 06/04/2027.</p>
+      <p>Manual da aplicação web 2.1 do CaraCore Hub. GA do instalador Windows: 06/04/2027.</p>
     </div>
   </footer>
 
