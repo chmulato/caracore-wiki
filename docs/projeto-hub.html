@@ -97,7 +97,7 @@
                     <li>Recebimento e conferência na chegada da encomenda</li>
                     <li>Mapa de guarda (rua, módulo, nível, caixa)</li>
                     <li>Inventário cíclico e etiquetas</li>
-                    <li>Aviso no WhatsApp quando algo atrasa</li>
+                    <li>Aviso de atraso ao destinatário por WhatsApp, quando o canal está configurado — no pacote Tomcat a verificação é disparada por comando, não agendada</li>
                     <li>Perfis ADMIN, SUPERVISOR e OPERADOR</li>
                     <li>Login por telefone e senha, com códigos de recuperação offline de uso único</li>
                   </ul>
@@ -125,14 +125,14 @@
 
           <section class="mb-5" id="estado-atual">
             <h2><i class="bi bi-tools"></i> O que já existe hoje (não é GA pública)</h2>
-            <p>A aplicação web de gestão logística de ponto de retirada está na versão <strong>2.1</strong>, com as cinco fases concluídas. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura digital, com instalador e ZIP. Mac e Linux ficam fora desta tag. Isso não é o GA nem um SaaS em nuvem: o banco fica no computador do ponto. O produto é Free; o suporte opcional é pago à parte.</p>
+            <p>A aplicação web de gestão logística de ponto de retirada está na versão <strong>2.1</strong>, com as cinco fases implementadas — sem homologação: a QA da rodada 4 (16/10/2026) não aprovou esta build. A pré-release Windows <strong>v2.1.0-rc1.2</strong> está publicada para avaliação, sem assinatura digital, com instalador e ZIP. Mac e Linux ficam fora desta tag. Isso não é o GA nem um SaaS em nuvem: o banco fica no computador do ponto. O produto é Free; o suporte opcional é pago à parte.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
                   <tr><th>Fase</th><th>O que cobre</th><th>Status</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1</td><td>RBAC, health, PDF</td><td>Concluída</td></tr>
+                  <tr><td>1</td><td>Perfis de acesso nas telas, health, PDF</td><td>Concluída</td></tr>
                   <tr><td>2</td><td>Mercado Livre (webhook HMAC, worker, WhatsApp)</td><td>Concluída</td></tr>
                   <tr><td>3</td><td>Shopee + Temu, estoque avançado, inventário cíclico</td><td>Concluída</td></tr>
                   <tr><td>4</td><td>KPIs, CSV, centro de erros, auditoria LGPD</td><td>Concluída</td></tr>

@@ -116,7 +116,7 @@
                 </tbody>
               </table>
             </div>
-            <p>WhatsApp: com o canal configurado (Evolution API ou API compatível), o trabalho de atraso percorre os pedidos parados a cada 6 horas e avisa o cliente. Em Tomcat o agendador do servidor de aplicações não roda; nesse caso o Job precisa ser disparado por um agendador externo que chame <code>POST /api/notificacoes/atraso/verificar</code>. Sem canal configurado, nenhuma mensagem sai.</p>
+            <p>WhatsApp: com o canal configurado (Evolution API ou API compatível), pedidos parados podem gerar aviso ao cliente. O código traz um job com intervalo de 6 horas, mas ele usa agendamento de servidor de aplicações e <strong>não roda no Tomcat do pacote</strong>: hoje o envio depende de um disparo externo de <code>POST /api/notificacoes/atraso/verificar</code>. Sem canal configurado, nenhuma mensagem sai. O disparo automático dentro do instalador ainda não está definido.</p>
           </section>
           <section class="mb-5">
             <h2>Auditoria</h2>
