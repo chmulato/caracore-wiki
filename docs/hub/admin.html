@@ -76,7 +76,7 @@
           <div class="alert alert-warning" role="note">
             <i class="bi bi-cone-striped"></i>
             <strong>Versão de avaliação.</strong> Este manual descreve a aplicação <strong>web</strong> 2.1 usada no ponto de retirada.
-            A pré-release Windows <strong>v2.1.0-rc1.6</strong> está publicada para avaliação, sem assinatura digital, com instalador e ZIP. Não há SaaS público. O produto é Free; o suporte opcional é pago à parte. O GA do instalador com SQLite continua em <strong>06 de abril de 2027</strong>.
+            A pré-release Windows <strong>v2.1.0-rc1.7</strong> está publicada para avaliação, sem assinatura digital, com instalador e ZIP. Não há SaaS público. O produto é Free; o suporte opcional é pago à parte. O GA do instalador com SQLite continua em <strong>06 de abril de 2027</strong>.
             Conectores vivos no código: Mercado Livre, Shopee e Temu.
           </div>
 
@@ -121,7 +121,7 @@
           <section class="mb-5">
             <h2>Auditoria</h2>
             <p><strong>Log de Auditoria</strong> — menu <strong>Administração → Auditoria</strong> (rota <code>auditoria/lista</code>). Registro de quem fez o quê, quando, em qual registro e o que mudou, com filtro por usuário, data ou tipo (criação, edição, exclusão, login) e exportação para análise externa. Serve para disputa, conformidade LGPD e erro operacional.</p>
-            <p><strong>Auditoria e Logs</strong> — tela <code>/admin/auditoria</code>, restrita a ADMIN. Mostra as ações administrativas mais recentes sobre contas de usuário: criar, editar, desativar, ativar, redefinir senha e alterar perfil, com autor, perfil e horário. Os registros ficam na tabela <code>usuario_auditoria</code> e a gravação é obrigatória: se ela falhar, a operação sobre o usuário falha em vez de informar sucesso. <strong>Na pré-release v2.1.0-rc1.6 esta tela só se abre pela URL</strong> — o item de menu chega na atualização seguinte. A tela Log de Auditoria não exibe essas ações.</p>
+            <p><strong>Auditoria e Logs</strong> — tela <code>/admin/auditoria</code>, restrita a ADMIN. Mostra as ações administrativas mais recentes sobre contas de usuário: criar, editar, desativar, ativar, redefinir senha e alterar perfil, com autor, perfil e horário. Os registros ficam na tabela <code>usuario_auditoria</code> e a gravação é obrigatória: se ela falhar, a operação sobre o usuário falha em vez de informar sucesso. <strong>Desde a pré-release v2.1.0-rc1.7 esta tela tem item no menu</strong>, em Administração → Auditoria e Logs, logo abaixo de Log de Auditoria; na v2.1.0-rc1.6 ela só se abria digitando a URL. A tela Log de Auditoria não exibe essas ações.</p>
           </section>
 
           <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
