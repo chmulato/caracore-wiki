@@ -120,7 +120,8 @@
           </section>
           <section class="mb-5">
             <h2>Auditoria</h2>
-            <p>Menu: <strong>Administração → Auditoria</strong>. Registro de quem fez o quê, quando, em qual registro e o que mudou. Filtre por usuário, data ou tipo (criação, edição, exclusão, login). Exporte para análise externa. Serve para disputa, conformidade LGPD e erro operacional.</p>
+            <p><strong>Log de Auditoria</strong> — menu <strong>Administração → Auditoria</strong> (rota <code>auditoria/lista</code>). Registro de quem fez o quê, quando, em qual registro e o que mudou, com filtro por usuário, data ou tipo (criação, edição, exclusão, login) e exportação para análise externa. Serve para disputa, conformidade LGPD e erro operacional.</p>
+            <p><strong>Auditoria e Logs</strong> — tela <code>/admin/auditoria</code>, restrita a ADMIN. Mostra as ações administrativas mais recentes sobre contas de usuário: criar, editar, desativar, ativar, redefinir senha e alterar perfil, com autor, perfil e horário. Os registros ficam na tabela <code>usuario_auditoria</code> e a gravação é obrigatória: se ela falhar, a operação sobre o usuário falha em vez de informar sucesso. <strong>Na pré-release v2.1.0-rc1.6 esta tela só se abre pela URL</strong> — o item de menu chega na atualização seguinte. A tela Log de Auditoria não exibe essas ações.</p>
           </section>
 
           <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
