@@ -48,9 +48,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Gestão logística interna para pontos de retirada (PUDOs): recebimento, guarda por posição e retirada conferida. Canais desta edição: Mercado Livre, Shopee e Temu. Pré-release Windows v2.1.0-rc1.2 para avaliação; GA do instalador em 06/Abr/2027',
+            description: 'Gestão logística interna para pontos de retirada (PUDOs): recebimento, guarda por posição e retirada conferida. Canais desta edição: Mercado Livre, Shopee e Temu. Pré-release Windows v2.1.0-rc1.7 para avaliação; GA do instalador em 06/Abr/2027',
             url: 'projeto-hub.html',
-            tags: ['java', 'jakarta', 'pudo', 'ponto de retirada', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'v2.1.0-rc1.2'],
+            tags: ['java', 'jakarta', 'pudo', 'ponto de retirada', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'v2.1.0-rc1.7'],
             category: 'projeto'
         },
         {
