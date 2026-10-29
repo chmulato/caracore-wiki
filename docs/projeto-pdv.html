@@ -81,7 +81,7 @@
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Coexistência e versões:</strong> Java estável usa a <strong>v3.2.12-free</strong>, atualização corretiva da linha 3.2.x, com manutenção restrita até 08/11/2026; a v4 sucede por ciclo de RCs, sem GA automático nessa data. A RC6 é pré-release pública; RC7 segue em QA local. Rust usa a release <strong>v0.1.4</strong>. São faixas independentes. <strong>V3</strong> é o posicionamento de negócio (PME e CBS/IBS no Premium), não o número de release de nenhuma das linhas.
+            <strong>Coexistência e versões:</strong> Java estável usa a <strong>v3.2.12-free</strong>, atualização corretiva da linha 3.2.x, com manutenção restrita até 08/11/2026; a v4 sucede por ciclo de RCs, sem GA automático nessa data. A RC6 é pré-release pública; RC7 segue em QA local. Rust usa a release <strong>v0.1.4</strong>. São faixas independentes.
           </div>
 
           <div class="row g-4 mb-4">
@@ -160,8 +160,8 @@
           </section>
 
           <section class="mb-5" id="java-detalhe">
-            <h2><i class="bi bi-cash-register"></i> O que o PDV Java (linha madura) já entrega</h2>
-            <p>Canal público atual: <strong>v3.2.12-free</strong> (14/10/2026). App web local no computador da loja, com caixa redesenhado, leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado, pagamento em modal e recibo com subtotal/desconto. Pacotes ZIP para Windows, Linux e macOS. Primeiro acesso: Java 25+, pasta nova, <code>iniciar-pdv.bat</code> / <code>iniciar-pdv.sh</code>, depois <code>http://localhost:8080/login</code> com <code>admin</code> / <code>admin</code>. O programa escuta só neste computador, salvo configuração explícita. Roteiro: <a href="https://pdv.caracore.com.br/download.html#instalacao" target="_blank" rel="noopener">instalação com sucesso</a>. Notas: <a href="https://pdv.caracore.com.br/wiki-release-v3-2-12-free.html" target="_blank" rel="noopener">3.2.12-free</a>. Manual e Wiki Fiscal: <a href="pdv/index.html">manual operacional Java</a>.</p>
+            <h2><i class="bi bi-cash-register"></i> O que o CaraCore PDV 3.2.12 (linha madura) já entrega</h2>
+            <p>Canal público atual: <strong>v3.2.12-free</strong> (15/10/2026). App web local no computador da loja, com caixa redesenhado, leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado, pagamento em modal e recibo com subtotal/desconto. Pacotes ZIP para Windows, Linux e macOS. Primeiro acesso: Java 25+, pasta nova, <code>iniciar-pdv.bat</code> / <code>iniciar-pdv.sh</code>, depois <code>http://localhost:8080/login</code> com <code>admin</code> / <code>admin</code>. O programa escuta só neste computador, salvo configuração explícita. Roteiro: <a href="https://pdv.caracore.com.br/download.html#instalacao" target="_blank" rel="noopener">instalação com sucesso</a>. Notas: <a href="https://pdv.caracore.com.br/wiki-release-v3-2-12-free.html" target="_blank" rel="noopener">3.2.12-free</a>. Manual e Wiki Fiscal: <a href="pdv/index.html">manual operacional Java</a>.</p>
             <div class="table-responsive">
               <table class="table table-bordered align-middle">
                 <thead>
@@ -172,7 +172,7 @@
                   <tr><td>Gestão</td><td>Dashboard (vendas, estoque, performance), multi-loja com estoque por unidade</td></tr>
                   <tr><td>Continuidade</td><td>SQLite local; a loja continua vendendo se a internet falhar</td></tr>
                   <tr><td>Relatórios</td><td>PDF via JasperReports; trilha do contador neste portal</td></tr>
-                  <tr><td>Planos</td><td>Fonte: <code>PlanoLicencaService</code>. <strong>Free</strong> (R$ 0): 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; SQLite offline; recibo digital por link e PDF, sem valor fiscal; sem PIX integrado e sem NF-e/NFC-e. <strong>Premium:</strong> assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas por mês), cálculo de CBS/IBS. NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>. CTA da loja: <strong>Baixar Free</strong>.</td></tr>
+                  <tr><td>Planos</td><td>Fonte: <code>PlanoLicencaService</code>. <strong>Free</strong> (R$ 0): 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores (PENDENTE de confirmação), 1 loja; SQLite offline; recibo digital por link e PDF, sem valor fiscal; sem PIX integrado e sem NF-e/NFC-e. <strong>Premium:</strong> assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas por mês), cálculo de CBS/IBS. NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>. CTA da loja: <strong>Baixar Free</strong>.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -194,8 +194,8 @@
           </section>
 
           <section class="mb-5" id="v4">
-            <h2><i class="bi bi-window"></i> CaraCore-PDV v4 (pré-release para avaliação)</h2>
-            <p>Pré-release pública: <a href="https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html" target="_blank" rel="noopener"><strong>v4.0.0-rc6</strong></a>, edição Free para avaliação no Windows, com limite de 100 vendas finalizadas por mês civil. ZIP portátil unsigned na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc6" target="_blank" rel="noopener">GitHub Release</a>; SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code> (178.166.244 bytes, substituído de novo em 11/10/2026). Java 25 está em <code>runtime\</code>; o pacote não usa JDK nem Python do sistema. O Edge continua necessário. A <strong>v4.0.0-rc5</strong> fica no histórico. O <a href="https://pdv.caracore.com.br/homologacao-v4.html#rc6" target="_blank" rel="noopener">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. MSI não será distribuído. RC7 segue em QA local, sem download público. A v4 avança pelo ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A versão estável multiplataforma é <code>v3.2.12-free</code>, atualização corretiva da linha 3.2.x, em manutenção restrita até essa data. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
+            <h2><i class="bi bi-window"></i> CaraCore PDV 4 (prévia)</h2>
+            <p>Pré-release pública: <a href="https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html" target="_blank" rel="noopener"><strong>v4.0.0-rc6</strong></a>, edição Free para avaliação no Windows, com limite de 100 vendas finalizadas por mês civil. ZIP portátil unsigned na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc6" target="_blank" rel="noopener">GitHub Release</a>; SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code> (178.166.244 bytes, publicada em 10/10/2026). Java 25 está em <code>runtime\</code>; o pacote não usa JDK nem Python do sistema. O Edge continua necessário. A <strong>v4.0.0-rc5</strong> fica no histórico. O <a href="https://pdv.caracore.com.br/homologacao-v4.html#rc6" target="_blank" rel="noopener">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. MSI não será distribuído. RC7 segue em QA local, sem download público. A v4 avança pelo ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A versão estável multiplataforma é <code>v3.2.12-free</code>, atualização corretiva da linha 3.2.x, em manutenção restrita até essa data. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
             <div class="alert alert-info" role="note">
               <strong>O que a v4 acrescenta para a gestão:</strong> faturamento do dia identificado sem chamar faturamento de lucro; projeção de bruto, IBS, CBS, retenção prevista e líquido; painel diário com recebimentos por meio e saldo esperado em dinheiro; simulador de preço com alíquotas informadas (sem consulta à SEFAZ e sem executar PIX); custo de aquisição opcional e alertas gerenciais de custo acima do preço ou líquido previsto negativo. Essas projeções e alertas são restritos a GERENTE/ADMIN. Não são apuração fiscal, emissão de documento fiscal, integração SEFAZ ou PIX no PDV.
             </div>
@@ -204,6 +204,19 @@
               <li>A <a href="https://pdv.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA da loja</a> é atalho da vitrine — não é o caixa.</li>
               <li>Roadmap: <a href="https://pdv.caracore.com.br/roadmap-2026.html" target="_blank" rel="noopener">pdv.caracore.com.br/roadmap-2026.html</a>.</li>
               <li>Não substitui a linha Rust (<a href="projeto-pdv-rust.html">projeto-pdv-rust.html</a>).</li>
+            </ul>
+          </section>
+
+          <section class="mb-5" id="migracao-v4">
+            <h2><i class="bi bi-arrow-left-right"></i> Migrar da 3.2 para a 4</h2>
+            <div class="alert alert-warning" role="note">
+              <strong>Hoje NÃO suportado.</strong> A transferência de dados da linha 3.2 para a prévia 4 não é suportada. Sua operação continua na <code>v3.2.12-free</code>.
+            </div>
+            <ul class="feature-list">
+              <li>Não copie o banco da 3.2 para a v4.</li>
+              <li>Na v4 não há estorno de venda finalizada.</li>
+              <li>Instale a v4 em pasta separada, só para teste. Sua operação continua na 3.2.12.</li>
+              <li>Faça backup antes de qualquer teste.</li>
             </ul>
           </section>
 
