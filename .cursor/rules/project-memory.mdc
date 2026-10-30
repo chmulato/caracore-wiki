@@ -12,7 +12,13 @@ alwaysApply: true
 - Corretiva de HTTP 405 e ESTORNADA/CANCELADA, migração V047 e fila em transação independente. Mesmos limites, sem PIX/NF-e/NFC-e.
 
 
-**Atualizado:** 2026-10-20 · Fonte IAs: `D:\onedrive\dev\AGENTS.md` · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+**Atualizado:** 2026-10-30 · Fonte IAs: `caracore-site/AGENTS.md` + `caracore-site/docs/ECOSYSTEM_MEMORIA.md` (o antigo `D:\onedrive\dev\AGENTS.md` **não existe mais**) · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+
+## Estado do que a wiki descreve (30/10/2026)
+
+- **PDV:** a 3.2.12 aparece como **versão anterior, indicada para operar** (o GitHub ainda a marca *Latest*); a v4 está em **pré-lançamento** e o **Gate E recusou o GA em 29/10/2026** — rota `rc7` curta, GA só em data escrita (`D-GA-1`). **08/11/2026 é o fim da manutenção da 3.2.12, não GA da v4.** Não chamar a v4 de estável/Latest/GA; não chamar a 3.2.12 de corretiva.
+- **Hub:** pré-release `v2.1.0-rc1.7` publicada em 27/10/2026 e **reprovada pela QA da rodada 5** (N1/N2 bloqueantes) — a retirada conferida volume a volume ainda não é entregue pela interface; próxima entrega é a `rc1.8`. O GA Windows segue 06/04/2027 e não é homologado.
+- **Copiar com honestidade:** o que não tem `arquivo:linha`, teste ou run não é fato; estado antes do adjetivo; bloqueado/não medido ≠ aprovado; nunca "0 CVE" (SCA do PDV não medido).
 
 ## Repositório e papel
 - **caracore-wiki:** centro de **alinhamento** (o que é cada produto, o que já existe, o que é Garagem). Não é manual de botão.
