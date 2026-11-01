@@ -731,7 +731,7 @@ pre {
   }
 
   .wiki-search-input {
-    padding: 12px 12px 12px 38px !important;
+    padding: 12px 56px 12px 38px !important;
     font-size: 1rem;
   }
 
@@ -741,6 +741,14 @@ pre {
 
   .wiki-search-icon {
     left: 12px;
+  }
+
+  .wiki-search-btn {
+    padding: 0 12px;
+  }
+
+  .wiki-search-btn-label {
+    display: none;
   }
 }
 
@@ -763,7 +771,7 @@ pre {
   }
 
   .wiki-search-input {
-    padding: 12px 8px 12px 32px !important;
+    padding: 12px 52px 12px 32px !important;
   }
 
   .wiki-search-input::placeholder {

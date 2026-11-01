@@ -68,11 +68,15 @@
                 <h1><i class="bi bi-compass"></i> Wiki Cara Core</h1>
                 <p class="wiki-portal-lead" id="o-que-e">A Cara Core Informática desenvolve software de operação para quem vende, controla frota e recebe encomendas. Esta wiki reúne o funcionamento de cada produto, os termos da casa e o padrão de trabalho da empresa. A documentação vive aqui; download e contratação ficam nas lojas.</p>
 
-                <div class="wiki-search-shell" role="search">
+                <form class="wiki-search-shell" id="wiki-search-form" role="search" action="index.html" method="get">
                     <i class="bi bi-search wiki-search-icon" aria-hidden="true"></i>
                     <label class="visually-hidden" for="wiki-search">O que você deseja entender hoje?</label>
-                    <input type="search" id="wiki-search" class="form-control wiki-search-input" placeholder="O que você deseja entender hoje?" autocomplete="off" enterkeyhint="search">
-                </div>
+                    <input type="search" id="wiki-search" name="q" class="form-control wiki-search-input" placeholder="O que você deseja entender hoje?" autocomplete="off" enterkeyhint="search">
+                    <button type="submit" class="wiki-search-btn" aria-label="Buscar na wiki">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <span class="wiki-search-btn-label" aria-hidden="true">Buscar</span>
+                    </button>
+                </form>
                 <div class="wiki-search-examples" role="group" aria-label="Exemplos de busca">
                     <span class="wiki-search-examples-label">Exemplos:</span>
                     <button type="button" class="wiki-search-chip" data-wiki-search-example="PDV">PDV</button>

@@ -394,9 +394,22 @@ function initWikiSearch() {
     let searchResults = null;
     let selectedIndex = -1;
 
-    // Criar container de resultados
+    // Criar container de resultados (padrão ARIA combobox/listbox)
     const resultsContainer = createResultsContainer();
     searchInput.parentElement.appendChild(resultsContainer);
+
+    searchInput.setAttribute('role', 'combobox');
+    searchInput.setAttribute('aria-autocomplete', 'list');
+    searchInput.setAttribute('aria-expanded', 'false');
+    searchInput.setAttribute('aria-controls', resultsContainer.id);
+
+    // Região live: anuncia quantidade de resultados a leitores de tela
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('role', 'status');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'visually-hidden';
+    searchInput.parentElement.appendChild(liveRegion);
 
     // Exemplos clicáveis: preenchem a busca e disparam os resultados
     document.querySelectorAll('[data-wiki-search-example]').forEach(function (chip) {
@@ -421,6 +434,15 @@ function initWikiSearch() {
         displayResults(results);
         filterLocalCards(searchTerm);
     }, 300));
+
+    // Confirmação (botão ou Enter sem seleção): vai ao melhor resultado
+    const searchForm = document.getElementById('wiki-search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            confirmSearch();
+        });
+    }
 
     // Navegação por teclado
     searchInput.addEventListener('keydown', function(e) {
@@ -487,6 +509,9 @@ function initWikiSearch() {
     function createResultsContainer() {
         const container = document.createElement('div');
         container.className = 'wiki-search-results';
+        container.id = 'wiki-search-results';
+        container.setAttribute('role', 'listbox');
+        container.setAttribute('aria-label', 'Resultados da busca');
         container.style.cssText = `
             position: absolute;
             top: 100%;
@@ -514,11 +539,13 @@ function initWikiSearch() {
             `;
             resultsContainer.style.display = 'block';
             resultsContainer.classList.add('show');
+            searchInput.setAttribute('aria-expanded', 'true');
+            announce('Nenhum resultado encontrado para "' + searchInput.value.trim() + '"');
             return;
         }
 
         resultsContainer.innerHTML = results.map((item, index) => `
-            <div class="search-result-item" data-url="${item.url}" data-index="${index}" style="
+            <div class="search-result-item" role="option" id="wiki-search-option-${index}" aria-selected="false" data-url="${item.url}" data-index="${index}" style="
                 padding: 0.75rem 1rem;
                 cursor: pointer;
                 border-bottom: 1px solid var(--wiki-inst-border, #dee2e6);
@@ -560,26 +587,64 @@ function initWikiSearch() {
 
         resultsContainer.style.display = 'block';
         resultsContainer.classList.add('show');
+        searchInput.setAttribute('aria-expanded', 'true');
+        searchInput.removeAttribute('aria-activedescendant');
+        announce(results.length + (results.length === 1 ? ' resultado encontrado' : ' resultados encontrados'));
         selectedIndex = -1;
     }
 
     function hideResults() {
         resultsContainer.style.display = 'none';
         resultsContainer.classList.remove('show');
+        searchInput.setAttribute('aria-expanded', 'false');
+        searchInput.removeAttribute('aria-activedescendant');
+        resultsContainer.querySelectorAll('[aria-selected="true"]').forEach(function(item) {
+            item.setAttribute('aria-selected', 'false');
+        });
         selectedIndex = -1;
+    }
+
+    function announce(message) {
+        liveRegion.textContent = '';
+        liveRegion.textContent = message;
+    }
+
+    function confirmSearch() {
+        const term = searchInput.value.trim().toLowerCase();
+
+        if (term.length < 2) {
+            searchInput.focus();
+            return;
+        }
+
+        const results = searchWiki(term, wikiIndex);
+
+        if (results.length > 0) {
+            window.location.href = results[0].url;
+        } else {
+            displayResults([]);
+            filterLocalCards(term);
+            searchInput.focus();
+        }
     }
 
     function updateSelectedItem(items) {
         items.forEach((item, index) => {
             if (index === selectedIndex) {
                 item.classList.add('selected');
+                item.setAttribute('aria-selected', 'true');
                 item.style.backgroundColor = 'var(--wiki-inst-header-bg, #f8f9fa)';
+                searchInput.setAttribute('aria-activedescendant', item.id);
                 item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             } else {
                 item.classList.remove('selected');
+                item.setAttribute('aria-selected', 'false');
                 item.style.backgroundColor = '';
             }
         });
+        if (selectedIndex < 0) {
+            searchInput.removeAttribute('aria-activedescendant');
+        }
     }
 
     function filterLocalCards(searchTerm) {

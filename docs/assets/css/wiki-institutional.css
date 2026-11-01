@@ -1169,7 +1169,7 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
 }
 
 .wiki-search-input {
-  padding: 14px 16px 14px 46px !important;
+  padding: 14px 116px 14px 46px !important;
   font-size: 1.05rem;
   border-radius: 8px !important;
   border: 1px solid var(--wiki-inst-border-strong) !important;
@@ -1219,6 +1219,42 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
   background: var(--wiki-inst-accent-soft);
   border-color: var(--wiki-inst-accent);
   color: var(--wiki-inst-link-hover);
+}
+
+.wiki-search-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--wiki-inst-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.wiki-search-btn:hover,
+.wiki-search-btn:focus-visible {
+  background: var(--wiki-inst-link-hover);
+  color: #fff;
+}
+
+[data-theme="dark"] .wiki-search-btn {
+  color: #0d1117;
+}
+
+[data-theme="dark"] .wiki-search-btn:hover,
+[data-theme="dark"] .wiki-search-btn:focus-visible {
+  color: #0d1117;
 }
 
 .wiki-portal-section {
