@@ -411,7 +411,8 @@ function initWikiSearch() {
     liveRegion.className = 'visually-hidden';
     searchInput.parentElement.appendChild(liveRegion);
 
-    // Exemplos clicáveis: preenchem a busca e disparam os resultados
+    // Exemplos ficam ocultos enquanto o dropdown está aberto (evita sobreposição no mobile)
+    const examplesRow = document.querySelector('.wiki-search-examples');
     document.querySelectorAll('[data-wiki-search-example]').forEach(function (chip) {
         chip.addEventListener('click', function () {
             searchInput.value = chip.getAttribute('data-wiki-search-example') || '';
@@ -531,6 +532,7 @@ function initWikiSearch() {
     }
 
     function displayResults(results) {
+        if (examplesRow) examplesRow.classList.add('wiki-search-examples--hidden');
         if (results.length === 0) {
             resultsContainer.innerHTML = `
                 <div class="search-no-results" style="padding: 1rem; text-align: center; color: var(--wiki-inst-muted, #6c757d);">
@@ -596,6 +598,7 @@ function initWikiSearch() {
     function hideResults() {
         resultsContainer.style.display = 'none';
         resultsContainer.classList.remove('show');
+        if (examplesRow) examplesRow.classList.remove('wiki-search-examples--hidden');
         searchInput.setAttribute('aria-expanded', 'false');
         searchInput.removeAttribute('aria-activedescendant');
         resultsContainer.querySelectorAll('[aria-selected="true"]').forEach(function(item) {
@@ -752,6 +755,10 @@ style.textContent = `
     [data-theme="dark"] mark {
         background-color: rgba(255, 193, 7, 0.3) !important;
         color: #ffc107;
+    }
+
+    .wiki-search-examples--hidden {
+        display: none !important;
     }
 `;
 document.head.appendChild(style);
