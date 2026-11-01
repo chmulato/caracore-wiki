@@ -12,24 +12,24 @@ function initWikiSearch() {
     // Índice de conteúdo do wiki
     const wikiIndex = [
         {
-            title: 'CaraCore PDV (hub Java + Rust)',
-            description: 'PDV Java estável v3.2.12-free e pré-release v4.0.0-candidato-20261031 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
+            title: 'CaraCore PDV (Java + Rust)',
+            description: 'Duas linhas do caixa da loja: a linha Java madura e a linha piloto Rust. O que cada uma faz e como escolher',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.12-free', 'v4.0.0-candidato-20261031', 't032', 'pix split'],
+            tags: ['pdv', 'ponto de venda', 'caixa', 'varejo', 'java', 'rust', 'coexistência'],
             category: 'projeto'
         },
         {
             title: 'CaraCore PDV Java (linha madura)',
-            description: 'PDV maduro multi-plataforma (v3.2.12-free): Quarkus, SQLite local, UI no navegador (localhost:8080). Sem PIX integrado e sem NF-e/NFC-e no Free.',
+            description: 'PDV maduro no navegador: cadastro de produtos, venda e operação local. Sem PIX integrado e sem NF-e/NFC-e no Free.',
             url: 'projeto-pdv.html#java',
-            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'browser', 'localhost:8080', 'pme', 'v3.2.12-free', 'java 25'],
+            tags: ['pdv', 'ponto de venda', 'varejo', 'quarkus', 'sqlite', 'navegador', 'pme', 'java'],
             category: 'projeto'
         },
         {
             title: 'CaraCore PDV (Rust + Tauri)',
-            description: 'Linha desktop Rust + Tauri 2 — piloto Windows, instaladores pt-BR, release v0.1.4, download na loja pdv-rust (tag GitHub v0.1.4, não latest Java)',
+            description: 'Linha desktop do PDV em Rust + Tauri para Windows — piloto com instaladores em pt-BR.',
             url: 'projeto-pdv-rust.html',
-            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'caracore pdv', 'pt-br', 'msi', 'nsis', 'v0.1.4', 'github releases'],
+            tags: ['pdv', 'rust', 'tauri', 'react', 'windows', 'piloto', 'desktop', 'pt-br'],
             category: 'projeto'
         },
         {
@@ -48,9 +48,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore Hub',
-            description: 'Gestão logística interna para pontos de retirada (PUDOs): recebimento, guarda por posição e retirada conferida. Canais desta edição: Mercado Livre, Shopee e Temu. Pré-release Windows v2.1.0-rc1.8 para avaliação; GA do instalador em 06/Abr/2027',
+            description: 'Gestão logística interna de ponto de retirada (PUDO): recebimento, guarda por posição e retirada conferida. Canais desta edição: Mercado Livre, Shopee e Temu.',
             url: 'projeto-hub.html',
-            tags: ['java', 'jakarta', 'pudo', 'ponto de retirada', 'encomendas', 'mercado livre', 'shopee', 'temu', 'hub', 'v2.1.0-rc1.8'],
+            tags: ['hub', 'pudo', 'ponto de retirada', 'encomendas', 'mercado livre', 'shopee', 'temu', 'java'],
             category: 'projeto'
         },
         {
@@ -104,9 +104,9 @@ function initWikiSearch() {
         },
         {
             title: 'CaraCore CSO',
-            description: 'Gestão de Frotas (Web, em produção) e Gestão de Transportes (Desktop bunker 08/11/2028) em cso.caracore.com.br — CSO não é rastreador GPS',
+            description: 'Gestão de Frotas no navegador e Gestão de Transportes no desktop — duas aplicações, uma solução. CSO não é rastreador GPS.',
             url: 'projeto-cso.html',
-            tags: ['cso', 'frotas', 'transportes', 'quarkus', 'logística', 'javafx', 'produção', 'frota', 'veículos', 'lgpd', 'pix', 'planilha', 'bunker'],
+            tags: ['cso', 'frotas', 'transportes', 'quarkus', 'frota', 'veículos', 'logística', 'javafx', 'lgpd', 'pix', 'planilha'],
             category: 'projeto'
         },
         {
@@ -159,11 +159,18 @@ function initWikiSearch() {
             category: 'navegação'
         },
         {
-            title: 'Centro de Alinhamento (Trilhas)',
-            description: 'Entrada da wiki por personagens: Cliente, Estagiário e Sócio — com cenários e linha do tempo',
+            title: 'Wiki Cara Core — portal de conhecimento',
+            description: 'Ponto de entrada: o que é a Cara Core, quem você é, produtos principais e recursos da wiki',
             url: 'index.html',
-            tags: ['trilha', 'cliente', 'estagiário', 'sócio', 'cenários', 'linha do tempo', 'desde 2010', 'storytelling', 'alinhamento'],
+            tags: ['início', 'portal', 'conhecimento', 'produtos', 'cliente', 'estagiário', 'sócio'],
             category: 'navegação'
+        },
+        {
+            title: 'Estado dos Produtos (versões e datas)',
+            description: 'Centro de status: linhas e versões do PDV, CSO e Hub, pré-lançamentos, RC, GA, manutenção e cronogramas',
+            url: 'status.html',
+            tags: ['status', 'estado', 'versão', 'versões', 'rc', 'ga', 'manutenção', 'pré-lançamento', 'roadmap', 'cronograma', 'datas'],
+            category: 'referência'
         },
         {
             title: 'Trilha do Sucesso (Cliente)',
@@ -213,6 +220,174 @@ function initWikiSearch() {
             url: 'glossario.html',
             tags: ['glossário', 'termos', 'definições', 'referência', 'dicionário'],
             category: 'referência'
+        },
+        {
+            title: 'Componentes da entrega — Área 51',
+            description: 'Componentes fieis do pacote licenciado Área 51: scripts OIDC, operação Keycloak, testes e documentação.',
+            url: 'area51/componentes-entrega.html',
+            tags: ['area51', 'oidc', 'keycloak', 'scripts', 'entrega'],
+            category: 'projeto'
+        },
+        {
+            title: 'Fluxo OIDC de referência — Área 51',
+            description: 'Diagrama de referência: Authorization Code + PKCE para integrações OIDC do cliente licenciado — não modela a loja pública.',
+            url: 'area51/fluxo-oidc-referencia.html',
+            tags: ['area51', 'oidc', 'pkce', 'authorization code', 'diagrama'],
+            category: 'projeto'
+        },
+        {
+            title: 'Fronteiras e segurança — Área 51',
+            description: 'Fronteiras on-premises, variáveis de ambiente, controlos PKCE/JWT e pipeline de validação do produto Área 51.',
+            url: 'area51/fronteiras-seguranca.html',
+            tags: ['area51', 'segurança', 'jwt', 'pkce', 'on-premises'],
+            category: 'projeto'
+        },
+        {
+            title: 'O que é o Área 51',
+            description: 'Definição fiel do produto Área 51: titularidade, entrega licenciada, pacote baseline e serviços Cara Core.',
+            url: 'area51/o-que-e-area51.html',
+            tags: ['área 51', 'laboratório', 'licenciado', 'baseline', 'oidc'],
+            category: 'projeto'
+        },
+        {
+            title: 'O que recebe na entrega — Área 51',
+            description: 'Estrutura do pacote licenciado Área 51, exemplos de configuração, comandos de validação e referência de laboratório.',
+            url: 'area51/o-que-recebe-entrega.html',
+            tags: ['área 51', 'pacote', 'configuração', 'validação', 'laboratório'],
+            category: 'projeto'
+        },
+        {
+            title: 'BioReator 4.0 — modelo e exemplo 1.1.1',
+            description: 'Modelo, parâmetros, método numérico, critérios de término e trajetória de referência do BioReator 4.0 Community 1.1.1.',
+            url: 'bioreator-tecnico.html',
+            tags: ['bioreator', 'modelo', 'parâmetros', 'numérico', '1.1.1'],
+            category: 'projeto'
+        },
+        {
+            title: 'Downloads — Circuito Ferradura',
+            description: 'Baixe e avalie o Circuito Ferradura para Windows, macOS ou HTML offline.',
+            url: 'circuito/entregas.html',
+            tags: ['circuito', 'download', 'windows', 'macos', 'html offline'],
+            category: 'projeto'
+        },
+        {
+            title: 'Dúvidas rápidas — Circuito Ferradura',
+            description: 'Dúvidas rápidas e transparentes sobre download, uso pessoal, conversa com escolas e suporte do Circuito Ferradura.',
+            url: 'circuito/faq.html',
+            tags: ['circuito', 'dúvidas', 'suporte', 'escolas', 'gratuito'],
+            category: 'projeto'
+        },
+        {
+            title: 'Como funciona — Circuito Ferradura',
+            description: 'Conheça a proposta do Circuito Ferradura em linguagem simples e transparente.',
+            url: 'circuito/roteiro-pedagogico.html',
+            tags: ['circuito', 'lógica', 'ábaco', 'python', 'pedagogia'],
+            category: 'projeto'
+        },
+        {
+            title: 'Como acessar o CaraCore Hub',
+            description: 'A aplicação web do ponto de retirada abre no navegador. URL local típica no Tomcat instalado.',
+            url: 'hub/acesso.html',
+            tags: ['hub', 'acesso', 'navegador', 'tomcat', 'url'],
+            category: 'guia'
+        },
+        {
+            title: 'Casos de uso — CaraCore Hub',
+            description: 'Três fluxos: receber mercadoria, processar pedido do Mercado Livre e fazer inventário.',
+            url: 'hub/casos-de-uso.html',
+            tags: ['hub', 'casos de uso', 'mercado livre', 'inventário', 'recebimento'],
+            category: 'guia'
+        },
+        {
+            title: 'Dashboard — CaraCore Hub',
+            description: 'A sala de controle depois do login: métricas, atalhos, alertas e status dos conectores.',
+            url: 'hub/dashboard.html',
+            tags: ['hub', 'dashboard', 'métricas', 'conectores', 'alertas'],
+            category: 'guia'
+        },
+        {
+            title: 'Dicas e atalhos — CaraCore Hub',
+            description: 'Atalhos de teclado, busca, operação no chão e alertas que pedem ação.',
+            url: 'hub/dicas.html',
+            tags: ['hub', 'atalhos', 'teclado', 'operação', 'alertas'],
+            category: 'guia'
+        },
+        {
+            title: 'Controle de estoque — CaraCore Hub',
+            description: 'Painel, busca, etiquetas, ocupação, mapa, recebimento, retirada e inventário cíclico.',
+            url: 'hub/estoque.html',
+            tags: ['hub', 'estoque', 'etiquetas', 'inventário', 'mapa'],
+            category: 'guia'
+        },
+        {
+            title: 'Login e sessão — CaraCore Hub',
+            description: 'Como entrar, recuperar senha, perfil e logout na aplicação web do Hub.',
+            url: 'hub/login.html',
+            tags: ['hub', 'login', 'sessão', 'senha', 'perfil'],
+            category: 'guia'
+        },
+        {
+            title: 'Problemas comuns — CaraCore Hub',
+            description: 'Login, lentidão, leitor, gravação, conector, estoque e exportação — o que tentar antes do suporte.',
+            url: 'hub/troubleshooting.html',
+            tags: ['hub', 'problemas', 'suporte', 'login', 'conector'],
+            category: 'guia'
+        },
+        {
+            title: 'Contador do PDV Free',
+            description: 'O que o PDV Free gera hoje para o contador e a Reforma Tributária.',
+            url: 'pdv/contador.html',
+            tags: ['pdv free', 'contador', 'reforma tributária', 'fiscal'],
+            category: 'guia'
+        },
+        {
+            title: 'Hub de Guias do PDV',
+            description: 'Central de guias públicos do CaraCore PDV, com foco na aplicação web local no navegador e arquivo resumido de apoio.',
+            url: 'pdv/guias-aplicacao.html',
+            tags: ['pdv', 'guias', 'aplicação web', 'manual', 'navegador'],
+            category: 'guia'
+        },
+        {
+            title: 'Wiki do PDV Free',
+            description: 'Wiki do PDV Free: usar, contador e parceiros.',
+            url: 'pdv/index.html',
+            tags: ['pdv free', 'wiki', 'manual', 'contador', 'parceiros'],
+            category: 'guia'
+        },
+        {
+            title: 'Manual Operacional PDV Java - Aplicação Web Local',
+            description: 'Guia operacional do CaraCore PDV Java, aplicação web local acessada pelo navegador e com SQLite no computador da loja.',
+            url: 'pdv/manual-operacional-pdv-java21.html',
+            tags: ['pdv', 'manual', 'java 21', 'aplicação web', 'sqlite'],
+            category: 'guia'
+        },
+        {
+            title: 'Programa de Parceiros',
+            description: 'Programa de Parceiros Cara Core: comissão de ativação e comissão mensal pela venda do PDV Free.',
+            url: 'pdv/parceiros.html',
+            tags: ['pdv free', 'parceiros', 'comissão', 'venda', 'ativação'],
+            category: 'guia'
+        },
+        {
+            title: 'Usar o PDV Free',
+            description: 'Instalar o PDV Free, fazer a primeira venda, entender mensagens e pedir suporte.',
+            url: 'pdv/usar.html',
+            tags: ['pdv free', 'instalação', 'primeira venda', 'suporte', 'operador'],
+            category: 'guia'
+        },
+        {
+            title: 'Manual Operacional PDV - Alias Historico',
+            description: 'Alias historico mantido para continuidade de links antigos, com redirecionamento editorial para os materiais corretamente classificados da loja.',
+            url: 'pdv/manual-operacional-pdv-stack-anterior.html',
+            tags: ['pdv', 'histórico', 'alias', 'manual', 'links antigos'],
+            category: 'guia'
+        },
+        {
+            title: 'Manual de Upgrade Historico - Transicao Java 21',
+            description: 'Guia historico preservado da transicao para Java 21, mantido para auditoria e consulta tecnica, nao como fluxo publico principal.',
+            url: 'pdv/manual-upgrade-java21.html',
+            tags: ['pdv', 'upgrade', 'java 21', 'histórico', 'transição'],
+            category: 'guia'
         }
     ];
 
@@ -222,6 +397,15 @@ function initWikiSearch() {
     // Criar container de resultados
     const resultsContainer = createResultsContainer();
     searchInput.parentElement.appendChild(resultsContainer);
+
+    // Exemplos clicáveis: preenchem a busca e disparam os resultados
+    document.querySelectorAll('[data-wiki-search-example]').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+            searchInput.value = chip.getAttribute('data-wiki-search-example') || '';
+            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+            searchInput.focus();
+        });
+    });
 
     // Event listener para input
     searchInput.addEventListener('input', debounce(function(e) {
@@ -308,8 +492,8 @@ function initWikiSearch() {
             top: 100%;
             left: 0;
             right: 0;
-            background: var(--bs-body-bg, #fff);
-            border: 1px solid var(--bs-border-color, #dee2e6);
+            background: var(--wiki-inst-surface, #fff);
+            border: 1px solid var(--wiki-inst-border, #dee2e6);
             border-radius: 0.375rem;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
             max-height: 400px;
@@ -324,7 +508,7 @@ function initWikiSearch() {
     function displayResults(results) {
         if (results.length === 0) {
             resultsContainer.innerHTML = `
-                <div class="search-no-results" style="padding: 1rem; text-align: center; color: var(--bs-secondary-color, #6c757d);">
+                <div class="search-no-results" style="padding: 1rem; text-align: center; color: var(--wiki-inst-muted, #6c757d);">
                     <i class="bi bi-search"></i> Nenhum resultado encontrado
                 </div>
             `;
@@ -337,14 +521,14 @@ function initWikiSearch() {
             <div class="search-result-item" data-url="${item.url}" data-index="${index}" style="
                 padding: 0.75rem 1rem;
                 cursor: pointer;
-                border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+                border-bottom: 1px solid var(--wiki-inst-border, #dee2e6);
                 transition: background-color 0.2s;
             ">
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <i class="bi bi-${getCategoryIcon(item.category)}" style="color: var(--wiki-primary, #0d6efd);"></i>
+                    <i class="bi bi-${getCategoryIcon(item.category)}" style="color: var(--wiki-inst-accent, #0d6efd);"></i>
                     <div style="flex: 1;">
-                        <div style="font-weight: 600; color: var(--bs-body-color, #212529);">${highlightText(item.title, searchInput.value)}</div>
-                        <div style="font-size: 0.875rem; color: var(--bs-secondary-color, #6c757d); margin-top: 0.25rem;">
+                        <div style="font-weight: 600; color: var(--wiki-inst-text, #212529);">${highlightText(item.title, searchInput.value)}</div>
+                        <div style="font-size: 0.875rem; color: var(--wiki-inst-muted, #6c757d); margin-top: 0.25rem;">
                             ${highlightText(item.description, searchInput.value)}
                         </div>
                         <div style="margin-top: 0.25rem;">
@@ -364,7 +548,7 @@ function initWikiSearch() {
             });
             
             item.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = 'var(--bs-light, #f8f9fa)';
+                this.style.backgroundColor = 'var(--wiki-inst-header-bg, #f8f9fa)';
             });
             
             item.addEventListener('mouseleave', function() {
@@ -389,7 +573,7 @@ function initWikiSearch() {
         items.forEach((item, index) => {
             if (index === selectedIndex) {
                 item.classList.add('selected');
-                item.style.backgroundColor = 'var(--bs-light, #f8f9fa)';
+                item.style.backgroundColor = 'var(--wiki-inst-header-bg, #f8f9fa)';
                 item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             } else {
                 item.classList.remove('selected');
@@ -464,7 +648,7 @@ style.textContent = `
     }
 
     .wiki-search-results::-webkit-scrollbar-track {
-        background: var(--bs-light, #f8f9fa);
+        background: var(--wiki-inst-header-bg, #f8f9fa);
         border-radius: 4px;
     }
 

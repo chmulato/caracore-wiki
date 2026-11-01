@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visão Geral dos Projetos - Wiki Cara Core</title>
+    <title>Visão Geral dos Projetos | Wiki Cara Core</title>
     <meta name="description" content="Visão geral dos projetos da Cara Core: PDV, CSO e Hub no núcleo; o restante do portfólio documentado sem competir com esse trio.">
     
     <!-- Bootstrap CSS -->
@@ -15,13 +15,18 @@
     <!-- Wiki Unified (overrides) -->
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
     <link rel="stylesheet" href="assets/css/wiki-institutional.css">
-
+    <link rel="stylesheet" href="assets/css/wiki-responsive.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Visão Geral dos Projetos | Wiki Cara Core">
+    <meta property="og:description" content="Visão geral dos projetos da Cara Core: PDV, CSO e Hub no núcleo; o restante do portfólio documentado sem competir com esse trio.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wiki.caracore.com.br/projetos-overview.html">
 </head>
 <body>
     <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-journal-code"></i> Wiki Cara Core
@@ -42,7 +47,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                        <a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
                             <i class="bi bi-globe2"></i> Mapa
                         </a>
                     </li>
@@ -119,6 +124,14 @@
                             <a class="btn btn-dark btn-sm" href="trilha-socio.html"><i class="bi bi-diagram-3"></i> Trilha do Sócio</a>
                             <a class="btn btn-outline-secondary btn-sm" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa do ecossistema</a>
                         </div>
+                    </div>
+
+                    <div class="wiki-filter" role="search">
+                        <label for="project-filter">Filtrar projetos</label>
+                        <input type="search" class="form-control wiki-filter-input" id="project-filter" placeholder="Nome, produto ou tema (ex.: frota, OIDC, PDV)" autocomplete="off" enterkeyhint="search" data-project-filter>
+                        <p class="wiki-filter-count" data-project-filter-count role="status" aria-live="polite"></p>
+                        <p class="wiki-filter-empty" data-project-filter-empty hidden>Nenhum projeto encontrado. Tente outro termo.</p>
+                        <button type="button" class="wiki-filter-more" data-project-filter-more hidden>Mostrar todos os projetos</button>
                     </div>
 
                     <section class="wiki-track wiki-track--cliente">
@@ -966,6 +979,14 @@
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
             <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+            <div class="mt-2">
+                <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                    <i class="bi bi-shield-lock"></i> Política de Privacidade
+                </a>
+                <a href="https://www.caracore.com.br/" class="text-light">
+                    <i class="bi bi-house"></i> Site Principal
+                </a>
+            </div>
         </div>
     </footer>
 

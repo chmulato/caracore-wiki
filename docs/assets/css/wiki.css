@@ -672,23 +672,6 @@ html:not([data-theme="dark"]) .wiki-footer .text-light {
   }
 }
 
-/* Animações */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.wiki-content,
-.project-card {
-  animation: fadeIn 0.5s ease-out;
-}
-
 /* Scroll suave */
 html {
   scroll-behavior: smooth;

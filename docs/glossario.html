@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossário Técnico - Wiki Cara Core</title>
+    <title>Glossário Técnico | Wiki Cara Core</title>
     <meta name="description" content="Glossário completo de termos técnicos utilizados nos projetos da Cara Core Informática - explicações simples e detalhadas.">
     
     <!-- Bootstrap CSS -->
@@ -17,13 +17,18 @@
     <!-- Wiki Unified (overrides) -->
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
     <link rel="stylesheet" href="assets/css/wiki-institutional.css">
-    
+    <link rel="stylesheet" href="assets/css/wiki-responsive.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Glossário Técnico | Wiki Cara Core">
+    <meta property="og:description" content="Glossário completo de termos técnicos utilizados nos projetos da Cara Core Informática - explicações simples e detalhadas.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wiki.caracore.com.br/glossario.html">
 </head>
 <body>
     <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-journal-code"></i> Wiki Cara Core
@@ -44,7 +49,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
+                        <a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)">
                             <i class="bi bi-globe2"></i> Mapa
                         </a>
                     </li>
@@ -88,7 +93,7 @@
                     <!-- Busca por letra -->
                     <div class="mt-4">
                         <h5><i class="bi bi-search"></i> Buscar por Letra</h5>
-                        <div class="glossary-alphabet">
+                        <div class="glossary-alphabet" role="navigation" aria-label="Ir para uma letra do glossário">
                             <a href="#A">A</a>
                             <a href="#B">B</a>
                             <a href="#C">C</a>
@@ -97,24 +102,24 @@
                             <a href="#F">F</a>
                             <a href="#G">G</a>
                             <a href="#H">H</a>
-                            <a href="#I">I</a>
+                            <span class="is-empty" aria-disabled="true">I</span>
                             <a href="#J">J</a>
-                            <a href="#K">K</a>
-                            <a href="#L">L</a>
+                            <span class="is-empty" aria-disabled="true">K</span>
+                            <span class="is-empty" aria-disabled="true">L</span>
                             <a href="#M">M</a>
-                            <a href="#N">N</a>
+                            <span class="is-empty" aria-disabled="true">N</span>
                             <a href="#O">O</a>
                             <a href="#P">P</a>
-                            <a href="#Q">Q</a>
+                            <span class="is-empty" aria-disabled="true">Q</span>
                             <a href="#R">R</a>
                             <a href="#S">S</a>
                             <a href="#T">T</a>
-                            <a href="#U">U</a>
+                            <span class="is-empty" aria-disabled="true">U</span>
                             <a href="#V">V</a>
-                            <a href="#W">W</a>
-                            <a href="#X">X</a>
-                            <a href="#Y">Y</a>
-                            <a href="#Z">Z</a>
+                            <span class="is-empty" aria-disabled="true">W</span>
+                            <span class="is-empty" aria-disabled="true">X</span>
+                            <span class="is-empty" aria-disabled="true">Y</span>
+                            <span class="is-empty" aria-disabled="true">Z</span>
                         </div>
                     </div>
                 </div>
@@ -129,11 +134,11 @@
                     </div>
 
                     <!-- Campo de busca -->
-                    <div class="mb-4">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" id="glossary-search" placeholder="Buscar termo...">
-                        </div>
+                    <div class="wiki-filter" role="search">
+                        <label for="glossary-search">Buscar termo no glossário</label>
+                        <input type="search" class="form-control wiki-filter-input" id="glossary-search" placeholder="Ex.: API, frota, OIDC" autocomplete="off" enterkeyhint="search">
+                        <p class="wiki-filter-count" id="glossary-count" role="status" aria-live="polite"></p>
+                        <p class="wiki-filter-empty" id="glossary-empty" hidden>Nenhum termo encontrado. Tente outra palavra.</p>
                     </div>
 
                     <!-- A -->
@@ -1098,6 +1103,14 @@
         <div class="container">
             <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
             <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+            <div class="mt-2">
+                <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                    <i class="bi bi-shield-lock"></i> Política de Privacidade
+                </a>
+                <a href="https://www.caracore.com.br/" class="text-light">
+                    <i class="bi bi-house"></i> Site Principal
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -1106,43 +1119,5 @@
     <!-- Wiki JS -->
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/wiki.js"></script>
-    <!-- Glossary Search Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('glossary-search');
-            const glossaryTerms = document.querySelectorAll('.glossary-term');
-            
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                
-                glossaryTerms.forEach(term => {
-                    const title = term.querySelector('h3').textContent.toLowerCase();
-                    const content = term.textContent.toLowerCase();
-                    
-                    if (title.includes(searchTerm) || content.includes(searchTerm)) {
-                        term.style.display = 'block';
-                        term.parentElement.style.display = 'block';
-                    } else {
-                        term.style.display = 'none';
-                        
-                        // Esconder seção se todos os termos estão ocultos
-                        const section = term.parentElement;
-                        const visibleTerms = section.querySelectorAll('.glossary-term[style="display: block"]');
-                        if (visibleTerms.length === 0) {
-                            section.style.display = 'none';
-                        }
-                    }
-                });
-                
-                // Se não há busca, mostrar tudo
-                if (searchTerm === '') {
-                    glossaryTerms.forEach(term => {
-                        term.style.display = 'block';
-                        term.parentElement.style.display = 'block';
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

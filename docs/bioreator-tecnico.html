@@ -10,11 +10,17 @@
   <link rel="stylesheet" href="assets/css/wiki.css">
   <link rel="stylesheet" href="assets/css/wiki-unified.css">
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="assets/css/wiki-responsive.css">
   <link rel="stylesheet" href="assets/css/bioreator-wiki.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="BioReator 4.0 — modelo e exemplo 1.1.1 | Wiki Cara Core">
+    <meta property="og:description" content="Modelo, parâmetros, método numérico, critérios de término e trajetória de referência do BioReator 4.0 Community 1.1.1.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wiki.caracore.com.br/bioreator-tecnico.html">
 </head>
 <body class="wiki-bioreator">
-  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
     <div class="container">
       <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
@@ -22,8 +28,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarWiki">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="projeto-bioreator.html"><i class="bi bi-moisture"></i> BioReator 4.0</a></li>
-          <li class="nav-item"><a class="nav-link" href="ecosistema.html"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
           <li class="nav-item">
             <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
               <i class="bi bi-moon-stars-fill"></i>
@@ -83,7 +90,7 @@
         <h2>Trajetória da carga padrão</h2>
         <p>A execução empacotada termina em 122,55 h (5,11 dias) por <code>SUBSTRATE_DEPLETED</code>. Ao fim, S = 0,000985 g/L, Xviável = 3,913056 g/L e Xtotal = 4,229586 g/L.</p>
         <figure class="my-3">
-          <img class="img-fluid rounded border" src="assets/img/comparacao-curva-bioreator-1.1.1.svg" alt="Curva simulada do BioReator 4.0 1.1.1, com biomassa viável e total, consumo de substrato e término após 122,55 horas.">
+          <img class="img-fluid rounded border" src="assets/img/comparacao-curva-bioreator-1.1.1.svg" width="900" height="390" loading="lazy" decoding="async" alt="Curva simulada do BioReator 4.0 1.1.1, com biomassa viável e total, consumo de substrato e término após 122,55 horas.">
           <figcaption class="small text-muted mt-2">A faixa de 5–7 dias é apenas contexto de duração publicado; não é validação nem série experimental equivalente.</figcaption>
         </figure>
         <div class="table-responsive">
@@ -225,10 +232,18 @@
   </div>
 
   <footer class="wiki-footer">
-    <div class="container">
-      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
-      <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
-    </div>
+      <div class="container">
+          <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+          <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+          <div class="mt-2">
+              <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                  <i class="bi bi-shield-lock"></i> Política de Privacidade
+              </a>
+              <a href="https://www.caracore.com.br/" class="text-light">
+                  <i class="bi bi-house"></i> Site Principal
+              </a>
+          </div>
+      </div>
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

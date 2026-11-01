@@ -1,0 +1,776 @@
+/* Wiki Cara Core — camada responsiva mobile-first
+   Carregada depois de wiki.css, wiki-unified.css e wiki-institutional.css.
+   Escala: celular (até 767px), tablet (768–1024px), desktop (1025px+). */
+
+:root {
+  --wiki-fluid-h1: clamp(2rem, 5vw, 4rem);
+  --wiki-fluid-h2: clamp(1.25rem, 3vw, 2rem);
+  --wiki-fluid-h3: clamp(1.125rem, 2.4vw, 1.5rem);
+  --wiki-fluid-text: clamp(1rem, 2vw, 1.125rem);
+  --wiki-space-xs: clamp(0.25rem, 0.6vw, 0.5rem);
+  --wiki-space-sm: clamp(0.5rem, 1vw, 0.75rem);
+  --wiki-space-md: clamp(0.75rem, 1.6vw, 1rem);
+  --wiki-space-lg: clamp(1rem, 2.4vw, 1.5rem);
+  --wiki-space-xl: clamp(1.5rem, 3.6vw, 2.5rem);
+  --wiki-touch: 44px;
+  --wiki-focus: #0a6b85;
+}
+
+[data-theme="dark"] {
+  --wiki-focus: #79c0d0;
+}
+
+/* -------------------------------------------------------------------------
+   Base e contenção horizontal
+   ------------------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;
+  line-height: 1.6;
+}
+
+@supports not (overflow: clip) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.wiki-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(12px, 3vw, 24px);
+}
+
+.wiki-content {
+  padding: clamp(16px, 3vw, 30px);
+  overflow-wrap: break-word;
+}
+
+.wiki-breadcrumb .breadcrumb {
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+
+/* -------------------------------------------------------------------------
+   Tipografia fluida
+   ------------------------------------------------------------------------- */
+.wiki-content h1,
+.wiki-header h1,
+.wiki-home h1,
+.wiki-home .wiki-header h1,
+.wiki-home.wiki-portal .wiki-portal-hero h1,
+.manual-hero h1 {
+  font-size: var(--wiki-fluid-h1);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.wiki-content h2,
+.wiki-home h2,
+.wiki-home .wiki-header h2,
+.wiki-home .wiki-portal-section > h2 {
+  font-size: var(--wiki-fluid-h2);
+  line-height: 1.25;
+}
+
+.wiki-content h3,
+.wiki-home h3 {
+  font-size: var(--wiki-fluid-h3);
+  line-height: 1.3;
+}
+
+.wiki-content p,
+.wiki-content li,
+.wiki-content dd {
+  font-size: var(--wiki-fluid-text);
+  line-height: 1.65;
+}
+
+.wiki-content h1 .bi,
+.wiki-content h2 .bi {
+  font-size: 0.78em;
+}
+
+.wiki-lede {
+  font-size: var(--wiki-fluid-text);
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------------------------
+   Cabeçalho de conteúdo: margens acompanham o padding do cartão
+   ------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+  .wiki-content {
+    padding: 30px;
+  }
+
+  .wiki-header {
+    margin: -30px -30px 24px !important;
+    padding: 24px 30px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024.98px) {
+  .wiki-content {
+    padding: 24px;
+  }
+
+  .wiki-header {
+    margin: -24px -24px 20px !important;
+    padding: 20px 24px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wiki-content {
+    padding: 16px;
+  }
+
+  .wiki-header {
+    margin: 0 0 16px !important;
+    padding: 16px !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Barra superior: desktop completo, tablet compacto, celular hambúrguer
+   ------------------------------------------------------------------------- */
+.wiki-nav .navbar-toggler {
+  align-items: center;
+  justify-content: center;
+  width: var(--wiki-touch);
+  height: var(--wiki-touch);
+  padding: 0;
+}
+
+.wiki-nav .navbar-brand,
+.wiki-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--wiki-touch);
+  gap: 6px;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--wiki-touch);
+  min-height: var(--wiki-touch);
+}
+
+@media (max-width: 767.98px) {
+  .wiki-nav .navbar-toggler {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .wiki-nav .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024.98px) {
+  .wiki-nav .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .wiki-nav .navbar-nav {
+    gap: 2px;
+  }
+
+  .wiki-nav .nav-link {
+    min-height: var(--wiki-touch);
+    padding: 0.45rem 0.6rem;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wiki-nav .navbar-collapse {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--wiki-inst-border, #c8ccd1);
+  }
+
+  .wiki-nav .navbar-nav {
+    gap: 2px;
+    padding-bottom: 8px;
+  }
+
+  .wiki-nav .nav-link {
+    min-height: var(--wiki-touch);
+    padding: 0.7rem 0.75rem;
+    border-radius: 6px;
+  }
+
+  .wiki-nav .nav-item {
+    width: 100%;
+  }
+
+  .theme-toggle-btn {
+    margin: 4px 0 0 0.75rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Layout de conteúdo: sem colunas obrigatórias abaixo do desktop
+   ------------------------------------------------------------------------- */
+@media (max-width: 1024.98px) {
+  .wiki-container > .row > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wiki-sidebar {
+    position: static;
+    max-height: none;
+    margin-bottom: 16px;
+  }
+}
+
+/* Botão que substitui a sidebar no celular/tablet */
+.wiki-sidebar-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--wiki-inst-border, #c8ccd1);
+  border-radius: 6px;
+  background: var(--wiki-inst-surface, #fff);
+  color: var(--wiki-inst-text, #203246);
+  font-weight: 600;
+  text-align: left;
+}
+
+@media (max-width: 1024.98px) {
+  .wiki-sidebar-toggle:not([hidden]) {
+    display: inline-flex;
+  }
+}
+
+.wiki-sidebar-toggle .bi-chevron-down {
+  margin-left: auto;
+  transition: transform 0.15s ease;
+}
+
+.wiki-sidebar-toggle[aria-expanded="true"] .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+.wiki-sidebar-toggle:hover {
+  background: var(--wiki-inst-accent-soft, #eaf3f6);
+  border-color: var(--wiki-inst-accent, #0a6b85);
+}
+
+.wiki-sidebar a {
+  min-height: var(--wiki-touch);
+}
+
+@media (max-width: 1024.98px) {
+  .wiki-sidebar .wiki-menu a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Home: cartões empilhados, 2 colunas no tablet e 3 no desktop
+   ------------------------------------------------------------------------- */
+.wiki-persona-grid,
+.wiki-product-grid {
+  grid-template-columns: 1fr;
+}
+
+.wiki-resource-list {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .wiki-persona-grid,
+  .wiki-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wiki-resource-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1025px) {
+  .wiki-persona-grid,
+  .wiki-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.wiki-persona,
+.wiki-product {
+  height: 100%;
+  min-height: 132px;
+}
+
+.wiki-persona-desc,
+.wiki-product-function {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 767.98px) {
+  .wiki-help-grid {
+    flex-direction: column;
+  }
+
+  .wiki-help-link {
+    width: 100%;
+    min-height: 48px;
+    justify-content: flex-start;
+  }
+
+  .wiki-resource-list a {
+    min-height: 48px;
+  }
+}
+
+/* Busca: elemento principal da home */
+.wiki-search-shell,
+.wiki-search-examples {
+  max-width: 800px;
+}
+
+.wiki-search-input {
+  min-height: 52px;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1024.98px) {
+  .wiki-search-shell,
+  .wiki-search-examples {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wiki-search-examples {
+    gap: 8px;
+  }
+
+  .wiki-search-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--wiki-touch);
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Tabelas: completa no desktop, rolagem no tablet, cartões no celular
+   ------------------------------------------------------------------------- */
+.wiki-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wiki-table-scroll:focus-visible,
+.table-responsive:focus-visible {
+  outline: 3px solid var(--wiki-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767.98px) {
+  .wiki-content table.wiki-table-cards {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .wiki-content table.wiki-table-cards thead {
+    display: none;
+  }
+
+  .wiki-content table.wiki-table-cards tbody,
+  .wiki-content table.wiki-table-cards tr,
+  .wiki-content table.wiki-table-cards td {
+    display: block;
+    width: 100%;
+  }
+
+  .wiki-content table.wiki-table-cards tr {
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    border: 1px solid var(--wiki-inst-border, #c8ccd1);
+    border-radius: 6px;
+    background: var(--wiki-inst-surface, #fff);
+  }
+
+  .wiki-content table.wiki-table-cards td {
+    padding: 3px 0;
+    border: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .wiki-content table.wiki-table-cards td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--wiki-inst-muted, #5d6f82);
+  }
+
+  .wiki-content table.wiki-table-cards td:not([data-label])::before {
+    content: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Acordeões (versões, status, glossário e história)
+   ------------------------------------------------------------------------- */
+.wiki-accordion {
+  margin: 0 0 12px;
+  border: 1px solid var(--wiki-inst-border, #c8ccd1);
+  border-radius: 6px;
+  background: var(--wiki-inst-surface, #fff);
+}
+
+.wiki-accordion > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 12px 16px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 650;
+  color: var(--wiki-inst-text, #203246);
+}
+
+.wiki-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.wiki-accordion > summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  margin-left: auto;
+  border-right: 2px solid var(--wiki-inst-muted, #5d6f82);
+  border-bottom: 2px solid var(--wiki-inst-muted, #5d6f82);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.wiki-accordion[open] > summary::after {
+  transform: rotate(-135deg);
+}
+
+.wiki-accordion > summary:hover {
+  background: var(--wiki-inst-header-bg, #f8f9fa);
+}
+
+.wiki-accordion[open] > summary {
+  border-bottom: 1px solid var(--wiki-inst-border, #c8ccd1);
+}
+
+.wiki-accordion-title {
+  display: block;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.3;
+}
+
+.wiki-accordion-meta {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--wiki-inst-muted, #5d6f82);
+}
+
+.wiki-accordion-body {
+  padding: 14px 16px 16px;
+}
+
+.wiki-accordion-body > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .wiki-accordion > summary {
+    padding: 12px;
+  }
+
+  .wiki-accordion-body {
+    padding: 12px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Pesquisa filtrável (glossário e projetos)
+   ------------------------------------------------------------------------- */
+.wiki-filter {
+  margin: 0 0 20px;
+  padding: 14px;
+  border: 1px solid var(--wiki-inst-border, #c8ccd1);
+  border-radius: 6px;
+  background: var(--wiki-inst-header-bg, #f8f9fa);
+}
+
+.wiki-filter label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  color: var(--wiki-inst-text, #203246);
+}
+
+.wiki-filter-input {
+  min-height: 48px;
+  border-radius: 6px !important;
+}
+
+.wiki-filter-count {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--wiki-inst-muted, #5d6f82);
+}
+
+.wiki-filter-empty {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  color: var(--wiki-inst-text, #203246);
+}
+
+.wiki-filter-more {
+  margin-top: 10px;
+  min-height: var(--wiki-touch);
+  padding: 8px 14px;
+  border: 1px solid var(--wiki-inst-border, #c8ccd1);
+  border-radius: 6px;
+  background: var(--wiki-inst-surface, #fff);
+  color: var(--wiki-inst-link, #0a6b85);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wiki-filter-more:hover {
+  background: var(--wiki-inst-accent-soft, #eaf3f6);
+  border-color: var(--wiki-inst-accent, #0a6b85);
+}
+
+.wiki-project-hidden {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------------------
+   Acessibilidade: foco, toque e link de salto
+   ------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 3px solid var(--wiki-focus);
+  outline-offset: 2px;
+}
+
+.wiki-content a:focus-visible,
+.wiki-sidebar a:focus-visible,
+.wiki-nav a:focus-visible,
+.wiki-nav button:focus-visible,
+.wiki-accordion > summary:focus-visible,
+.wiki-filter input:focus-visible {
+  outline: 3px solid var(--wiki-focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.wiki-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 2000;
+  padding: 10px 14px;
+  border-radius: 0 0 6px 6px;
+  background: var(--wiki-inst-surface, #fff);
+  color: var(--wiki-inst-link, #0a6b85);
+  border: 1px solid var(--wiki-inst-border, #c8ccd1);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.wiki-skip-link:focus {
+  top: 0;
+}
+
+@media (pointer: coarse), (max-width: 1024.98px) {
+  .wiki-menu a,
+  .wiki-help-link,
+  .wiki-filter-more,
+  .wiki-search-chip,
+  .btn-wiki,
+  .btn,
+  .navbar-toggler,
+  .theme-toggle-btn,
+  .wiki-accordion > summary {
+    min-height: var(--wiki-touch);
+  }
+
+  .wiki-menu a {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-wiki,
+  .wiki-help-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Letras do glossário com alvo de toque confortável */
+.glossary-alphabet a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--wiki-touch);
+  height: var(--wiki-touch);
+}
+
+@media (max-width: 767.98px) {
+  .glossary-alphabet {
+    justify-content: flex-start;
+    gap: 6px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Movimento reduzido e performance
+   ------------------------------------------------------------------------- */
+.wiki-content,
+.project-card {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Ajustes finos por faixa
+   ------------------------------------------------------------------------- */
+@media (max-width: 1024.98px) {
+  .wiki-content {
+    margin-bottom: 16px;
+  }
+
+  .wiki-footer {
+    margin-top: 24px;
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wiki-container {
+    padding-inline: 12px;
+  }
+
+  .wiki-content {
+    padding: 14px;
+  }
+
+  .wiki-header {
+    margin: 0 0 14px !important;
+    padding: 14px !important;
+  }
+
+  .wiki-portal-kicker,
+  .wiki-status-kicker {
+    font-size: 0.7rem;
+  }
+
+  .wiki-search-input {
+    padding: 12px 12px 12px 38px !important;
+    font-size: 1rem;
+  }
+
+  .wiki-search-input::placeholder {
+    font-size: 0.875rem;
+  }
+
+  .wiki-search-icon {
+    left: 12px;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .wiki-container {
+    padding-inline: 8px;
+  }
+
+  .wiki-content {
+    padding: 10px;
+  }
+
+  .wiki-header {
+    margin: 0 0 12px !important;
+    padding: 12px !important;
+  }
+
+  .wiki-home.wiki-portal .wiki-portal-hero {
+    padding: 16px 10px 14px !important;
+  }
+
+  .wiki-search-input {
+    padding: 12px 8px 12px 32px !important;
+  }
+
+  .wiki-search-input::placeholder {
+    font-size: 0.8125rem;
+  }
+
+  .wiki-search-icon {
+    left: 10px;
+  }
+}

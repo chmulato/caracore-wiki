@@ -1,70 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-loja-shell="1">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fronteiras e segurança — Wiki Área 51</title>
+    <title>Fronteiras e segurança — Área 51 | Wiki Cara Core</title>
     <meta name="description" content="Fronteiras on-premises, variáveis de ambiente, controlos PKCE/JWT e pipeline de validação do produto Área 51.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://area51.caracore.com.br/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://area51.caracore.com.br/assets/css/store-public.css">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/css/wiki.css">
     <link rel="stylesheet" href="../assets/css/wiki-unified.css">
-    <link rel="stylesheet" href="../assets/css/wiki-loja-align.css">
     <link rel="stylesheet" href="../assets/css/wiki-diagrams.css">
-    <link rel="icon" href="https://area51.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+    <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script src="../assets/js/wiki-mermaid.js" defer></script>
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Fronteiras e segurança — Área 51 | Wiki Cara Core">
+    <meta property="og:description" content="Fronteiras on-premises, variáveis de ambiente, controlos PKCE/JWT e pipeline de validação do produto Área 51.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wiki.caracore.com.br/area51/fronteiras-seguranca.html">
 </head>
-<body class="store store-inner wiki-loja">
-    <header class="sf-header">
-        <div class="sf-header-inner">
-            <a class="sf-brand" href="https://area51.caracore.com.br/">Área 51 — Loja</a>
-            <nav class="sf-nav" aria-label="Principal">
-                <ul>
-                    <li><a href="https://area51.caracore.com.br/">Início</a></li>
-                    <li><a href="https://area51.caracore.com.br/produto.html">Produto</a></li>
-                    <li><a href="https://area51.caracore.com.br/servicos.html">Serviços</a></li>
-                    <li><a href="https://area51.caracore.com.br/galeria.html">Galeria</a></li>
-                    <li><a href="../projeto-area51.html" aria-current="page">Wiki</a></li>
-                    <li><a href="https://area51.caracore.com.br/download.html">Como começar</a></li>
-                    <li><a href="https://area51.caracore.com.br/imprensa.html">Imprensa</a></li>
-                    <li><a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a></li>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarWiki">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#area-51"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
+                    </li>
                 </ul>
-            </nav>
-            <details class="sf-menu">
-                <summary>Menu</summary>
-                <div class="sf-menu-body">
-                    <a href="https://area51.caracore.com.br/">Início</a>
-                    <a href="https://area51.caracore.com.br/produto.html">Produto</a>
-                    <a href="https://area51.caracore.com.br/servicos.html">Serviços</a>
-                    <a href="https://area51.caracore.com.br/galeria.html">Galeria</a>
-                    <a href="../projeto-area51.html" aria-current="page">Wiki</a>
-                    <a href="https://area51.caracore.com.br/download.html">Como começar</a>
-                    <a href="https://area51.caracore.com.br/imprensa.html">Imprensa</a>
-                    <a href="https://area51.caracore.com.br/faq.html">FAQ</a>
-                    <a href="https://area51.caracore.com.br/licenca-uso.html">Licença</a>
-                    <a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a>
-                </div>
-            </details>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="wiki-trail">
-        <div class="sf-header-inner">
-            <nav class="sf-breadcrumb" aria-label="Navegação">
+    <div class="wiki-product-nav">
+        <div class="container">
+            <nav aria-label="Navegação do Área 51">
                 <a href="https://area51.caracore.com.br/">Loja</a>
-                <span class="sep">/</span>
-                <a href="../projeto-area51.html">Wiki</a>
-                <span class="sep">/</span>
-                <span class="sf-breadcrumb-current">Fronteiras e segurança</span>
+                <a href="https://area51.caracore.com.br/produto.html">Produto</a>
+                <a href="https://area51.caracore.com.br/servicos.html">Serviços</a>
+                <a href="https://area51.caracore.com.br/download.html">Como começar</a>
+                <a href="https://area51.caracore.com.br/galeria.html">Galeria</a>
+                <a href="https://area51.caracore.com.br/faq.html">FAQ</a>
+                <a href="https://area51.caracore.com.br/licenca-uso.html">Licença</a>
+                <a href="https://area51.caracore.com.br/imprensa.html">Imprensa</a>
+                <a href="https://area51.caracore.com.br/apresentacao-tecnica.html">Apresentação</a>
+                <a href="https://area51.caracore.com.br/canal-feedback.html">Contato</a>
+                <a href="../projeto-area51.html">Índice do wiki</a>
             </nav>
         </div>
     </div>
 
-    <main id="main" class="wiki-container">
+    <div class="wiki-breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+                    <li class="breadcrumb-item"><a href="../projeto-area51.html">Área 51</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Fronteiras e segurança</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+<main id="main" class="wiki-container">
         <article class="wiki-content wiki-diagram-page">
             <h1>Fronteiras de controle e validação de segurança</h1>
             <p class="wiki-diagram-lead">
@@ -192,31 +201,22 @@ sequenceDiagram
         </article>
     </main>
 
-    <footer class="sf-footer">
-        <div class="sf-footer-inner">
-            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
-            <p class="sf-footer-brand">Área 51</p>
-            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
-            <p class="sf-footer-tagline">Identidade e acesso institucional — produto licenciado e serviços Cara Core.</p>
-            <nav class="sf-footer-links" aria-label="Mapa do site">
-                <a href="https://area51.caracore.com.br/"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
-                <a href="https://area51.caracore.com.br/produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
-                <a href="https://area51.caracore.com.br/servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
-                <a href="https://area51.caracore.com.br/galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
-                <a href="../projeto-area51.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
-                <a href="https://area51.caracore.com.br/download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Como começar</a>
-                <a href="https://area51.caracore.com.br/imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
-                <a href="https://area51.caracore.com.br/faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
-                <a href="https://area51.caracore.com.br/licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
-                <a href="https://area51.caracore.com.br/canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
-                <a href="https://area51.caracore.com.br/apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
-            </nav>
-            <div class="sf-footer-leg">
-                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
-                <p>Produto de titularidade do Governo Federal</p>
-                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="https://area51.caracore.com.br/canal-feedback.html">Canal de feedback</a></p>
+    <footer class="wiki-footer">
+        <div class="container">
+            <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+            <div class="mt-2">
+                <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                    <i class="bi bi-shield-lock"></i> Política de Privacidade
+                </a>
+                <a href="https://www.caracore.com.br/" class="text-light">
+                    <i class="bi bi-house"></i> Site Principal
+                </a>
             </div>
         </div>
     </footer>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/theme-toggle.js"></script>
+    <script src="../assets/js/wiki.js"></script>
 </body>
 </html>

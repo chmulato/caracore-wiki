@@ -3,46 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hub de Guias do PDV | Wiki PDV</title>
+  <title>Hub de Guias do PDV | Wiki Cara Core</title>
   <meta name="description" content="Central de guias públicos do CaraCore PDV, com foco na aplicação web local no navegador e arquivo resumido de apoio.">
-  <link href="https://pdv.caracore.com.br/assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki.css">
-  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/wiki-unified.css">
-  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/guias-aplicacao.css">
-  <link rel="icon" href="https://pdv.caracore.com.br/assets/img/favicon.ico" type="image/ico">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
   <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-core-typography.css">
   <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/caracore-institutional-components.css">
+  <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/guias-aplicacao.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <!-- Meta tags Open Graph -->
+  <meta property="og:title" content="Hub de Guias do PDV | Wiki Cara Core">
+  <meta property="og:description" content="Central de guias públicos do CaraCore PDV, com foco na aplicação web local no navegador e arquivo resumido de apoio.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wiki.caracore.com.br/pdv/guias-aplicacao.html">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarWiki">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="https://pdv.caracore.com.br/"><i class="bi bi-shop"></i> Loja</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki</a></li>
-          <li class="nav-item"><a class="nav-link active" href="guias-aplicacao.html" aria-current="page"><i class="bi bi-journal-bookmark"></i> Hub de Guias</a></li>
-          <li class="nav-item"><a class="nav-link" href="../projeto-pdv.html"><i class="bi bi-box"></i> Produto PDV</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#caracore-pdv"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <div class="wiki-product-nav">
+    <div class="container">
+      <nav aria-label="Navegação do PDV">
+        <a href="https://pdv.caracore.com.br/">Loja</a>
+        <a href="index.html">Wiki do PDV</a>
+        <a href="guias-aplicacao.html" aria-current="page">Hub de Guias</a>
+        <a href="manual-operacional-pdv-java21.html">Manual atual</a>
+        <a href="manual-operacional-pdv-stack-anterior.html">Stack anterior</a>
+        <a href="manual-upgrade-java21.html">Upgrade histórico</a>
+        <a href="../projeto-pdv.html">Produto PDV</a>
+      </nav>
+    </div>
+  </div>
+
   <div class="wiki-breadcrumb">
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="https://pdv.caracore.com.br/">Loja</a></li>
-          <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">PDV</a></li>
           <li class="breadcrumb-item active" aria-current="page">Hub de Guias do PDV</li>
         </ol>
       </nav>
     </div>
   </div>
 
-  <div class="wiki-container py-4">
+  <div class="wiki-container">
     <div class="wiki-content">
       <section class="guides-hero">
         <h1><i class="bi bi-journal-bookmark"></i> Hub de Guias do PDV</h1>
@@ -145,7 +172,24 @@
     </div>
   </div>
 
-  <script src="https://pdv.caracore.com.br/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+
+  <footer class="wiki-footer">
+    <div class="container">
+      <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+      <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+      <div class="mt-2">
+        <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+          <i class="bi bi-shield-lock"></i> Política de Privacidade
+        </a>
+        <a href="https://www.caracore.com.br/" class="text-light">
+          <i class="bi bi-house"></i> Site Principal
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
 

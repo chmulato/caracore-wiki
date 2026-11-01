@@ -3,27 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dúvidas rápidas — Circuito Ferradura</title>
+    <title>Dúvidas rápidas — Circuito Ferradura | Wiki Cara Core</title>
     <meta name="description" content="Dúvidas rápidas e transparentes sobre download, uso pessoal, conversa com escolas e suporte do Circuito Ferradura.">
-    <link href="https://circuito.caracore.com.br/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://circuito.caracore.com.br/assets/css/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://circuito.caracore.com.br/assets/css/wiki.css">
-    <link rel="stylesheet" href="https://circuito.caracore.com.br/assets/css/wiki-unified.css">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/wiki.css">
+    <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+    <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Dúvidas rápidas — Circuito Ferradura | Wiki Cara Core">
+    <meta property="og:description" content="Dúvidas rápidas e transparentes sobre download, uso pessoal, conversa com escolas e suporte do Circuito Ferradura.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wiki.caracore.com.br/circuito/faq.html">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
         <div class="container">
-            <a class="navbar-brand" href="../projeto-python.html">Wiki Circuito Ferradura</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="https://circuito.caracore.com.br/">Loja</a>
-                <a class="nav-link" href="https://circuito.caracore.com.br/download.html">Download</a>
-                <a class="nav-link active" href="faq.html">Dúvidas</a>
+            <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarWiki">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html#circuito-python"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+                    <li class="nav-item">
+                        <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
+    <div class="wiki-product-nav">
+        <div class="container">
+            <nav aria-label="Navegação do Circuito Ferradura">
+                <a href="https://circuito.caracore.com.br/">Loja</a>
+                <a href="entregas.html">Downloads</a>
+                <a href="roteiro-pedagogico.html">Como funciona</a>
+                <a href="faq.html" aria-current="page">Dúvidas</a>
+                <a href="https://circuito.caracore.com.br/portal-escolas.html">Escolas</a>
+                <a href="../projeto-python.html">Wiki do produto</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="wiki-breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+                    <li class="breadcrumb-item"><a href="../projeto-python.html">Circuito Ferradura</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dúvidas rápidas</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
     <main class="wiki-container">
-        <div class="wiki-content py-4">
+        <div class="wiki-content">
             <section class="text-center py-4">
                 <h1>Dúvidas rápidas</h1>
                 <p class="lead">Respostas diretas sobre o que o produto é hoje e como falar conosco.</p>
@@ -67,5 +110,24 @@
             </section>
         </div>
     </main>
+
+    <footer class="wiki-footer">
+        <div class="container">
+            <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+            <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+            <div class="mt-2">
+                <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                    <i class="bi bi-shield-lock"></i> Política de Privacidade
+                </a>
+                <a href="https://www.caracore.com.br/" class="text-light">
+                    <i class="bi bi-house"></i> Site Principal
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/theme-toggle.js"></script>
+    <script src="../assets/js/wiki.js"></script>
 </body>
 </html>

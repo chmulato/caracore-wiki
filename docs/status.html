@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estado dos Produtos — versões e datas | Wiki Cara Core</title>
+  <meta name="description" content="Centro de status da Cara Core: linhas e versões do PDV, CSO e Hub, pré-lançamentos, RC, GA, manutenção e cronogramas.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="assets/css/wiki-responsive.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Estado dos Produtos | Wiki Cara Core">
+  <meta property="og:description" content="O que está no ar, o que está em pré-lançamento e o que está previsto nos produtos da Cara Core.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wiki.caracore.com.br/status.html">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item active">Estado dos Produtos</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Navegação</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-house"></i> Página Inicial</a></li>
+            <li><a href="status.html" class="active"><i class="bi bi-activity"></i> Estado dos Produtos</a></li>
+            <li>
+              <a href="projetos-overview.html"><i class="bi bi-collection"></i> Produtos</a>
+              <ul class="submenu">
+                <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
+                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
+                <li><a href="projeto-hub.html">CaraCore Hub</a></li>
+              </ul>
+            </li>
+            <li><a href="glossario.html"><i class="bi bi-book"></i> Glossário</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home wiki-status-page">
+          <div class="wiki-header">
+            <p class="wiki-status-kicker">Centro de status</p>
+            <h1><i class="bi bi-activity"></i> Estado dos Produtos</h1>
+            <p class="wiki-lede">O que está no ar, o que está em pré-lançamento e o que está previsto. A página inicial explica o que cada produto faz; esta página registra versões, datas e o que ainda depende de validação.</p>
+            <p class="wiki-status-updated">Quadro consolidado em 31/10/2026. Detalhes de release ficam na loja de cada produto.</p>
+          </div>
+
+          <div class="alert alert-info" role="note">
+            <i class="bi bi-info-circle"></i>
+            <strong>Como ler os rótulos:</strong> <em>indicado para operar</em> não significa “mais recente”; <em>pré-lançamento</em> e <em>RC</em> são versões para avaliação, não GA; <em>GA</em> é a disponibilidade geral do instalador homologado; uma data-alvo não confirma disponibilidade.
+          </div>
+
+          <details class="wiki-accordion">
+            <summary>
+              <span>
+                <span class="wiki-accordion-title"><i class="bi bi-cash-stack"></i> CaraCore PDV</span>
+                <span class="wiki-accordion-meta">v3.2.12 indicada para operar · v4 em pré-lançamento · GA sem data</span>
+              </span>
+            </summary>
+            <div class="wiki-accordion-body">
+            <p>Duas linhas do mesmo produto, com faixas independentes. <a href="projeto-pdv.html">Entenda o que cada linha faz</a>.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle wiki-status-table">
+                <thead>
+                  <tr><th>Item</th><th>Situação</th><th>Versão / data</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Item">Linha Java</td>
+                    <td data-label="Situação"><span class="badge text-bg-success">Indicada para operar</span></td>
+                    <td data-label="Versão / data"><strong>v3.2.12-free</strong> — versão anterior, última da linha 3.2.x</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Linha Java</td>
+                    <td data-label="Situação"><span class="badge text-bg-warning text-dark">Manutenção de transição</span></td>
+                    <td data-label="Versão / data">Até <strong>08/11/2026</strong> — fim da manutenção da 3.2.12, não é GA da v4</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Linha Java — v4</td>
+                    <td data-label="Situação"><span class="badge text-bg-info text-dark">Pré-lançamento</span></td>
+                    <td data-label="Versão / data"><strong>v4.0.0-candidato-20261031</strong> — prévia pública para avaliação no Windows</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Linha Java — v4</td>
+                    <td data-label="Situação">GA</td>
+                    <td data-label="Versão / data">Sem data definida. Gate E recusou o corte em 29/10/2026; rota RC7 aprovada, ainda sem tag publicada</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Linha Rust</td>
+                    <td data-label="Situação"><span class="badge text-bg-secondary">Piloto</span></td>
+                    <td data-label="Versão / data"><strong>v0.1.4</strong> — app desktop para Windows</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Coexistência</td>
+                    <td data-label="Situação">Linhas independentes</td>
+                    <td data-label="Versão / data">Java e Rust não se substituem; a escolha depende da operação</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Histórico</td>
+                    <td data-label="Situação">RCs anteriores</td>
+                    <td data-label="Versão / data"><strong>v4.0.0-rc6</strong> (10/10/2026) e <strong>v4.0.0-rc5</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-warning" role="note">
+              <strong>A v4 não é GA nem Latest</strong> e não substitui a v3.2.12-free. O fim da manutenção da 3.2.12 em 08/11/2026 <strong>não</strong> é a data de lançamento da v4.
+            </div>
+            </div>
+          </details>
+
+          <details class="wiki-accordion">
+            <summary>
+              <span>
+                <span class="wiki-accordion-title"><i class="bi bi-truck"></i> CaraCore CSO</span>
+                <span class="wiki-accordion-meta">Frotas em produção · Transportes com alvo 08/11/2028</span>
+              </span>
+            </summary>
+            <div class="wiki-accordion-body">
+            <p>Duas aplicações, uma solução: Frotas no navegador e Transportes no computador da empresa. <a href="projeto-cso.html">Ver a página do CSO</a>.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle wiki-status-table">
+                <thead>
+                  <tr><th>Item</th><th>Situação</th><th>Versão / data</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Item">Gestão de Frotas (Web)</td>
+                    <td data-label="Situação"><span class="badge text-bg-success">Em produção</span></td>
+                    <td data-label="Versão / data">No ar desde <strong>06/10/2026</strong>, em cso.caracore.com.br</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Gestão de Frotas (Web)</td>
+                    <td data-label="Situação">Freeze de estabilização</td>
+                    <td data-label="Versão / data"><strong>08/11/2026</strong> — sem GPS nem mapa</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Transportes (Desktop)</td>
+                    <td data-label="Situação"><span class="badge text-bg-warning text-dark">Em desenvolvimento</span></td>
+                    <td data-label="Versão / data">Alvo conjunto com o Virtual Tracker: <strong>08/11/2028</strong></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Transportes + Virtual Tracker</td>
+                    <td data-label="Situação">Condicionado</td>
+                    <td data-label="Versão / data">Depende de prova móvel, capacidade e homologação; sem fila offline</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Plano de execução</td>
+                    <td data-label="Situação">10 sprints locais + 21 tarefas integradas</td>
+                    <td data-label="Versão / data"><strong>0/21</strong> concluídas; total integrado a estimar em INT-03</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Contratação</td>
+                    <td data-label="Situação">Transportes indisponível</td>
+                    <td data-label="Versão / data">Sem preço ou instalador público; a data-alvo não garante disponibilidade</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </details>
+
+          <details class="wiki-accordion">
+            <summary>
+              <span>
+                <span class="wiki-accordion-title"><i class="bi bi-box-seam"></i> CaraCore Hub</span>
+                <span class="wiki-accordion-meta">rc1.8 em avaliação · homologação pendente · GA previsto 06/04/2027</span>
+              </span>
+            </summary>
+            <div class="wiki-accordion-body">
+            <p>Gestão logística de ponto de retirada (PUDO). <a href="projeto-hub.html">Ver a página do Hub</a> · <a href="hub/index.html">Manual de uso</a>.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle wiki-status-table">
+                <thead>
+                  <tr><th>Item</th><th>Situação</th><th>Versão / data</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Item">Pré-release Windows</td>
+                    <td data-label="Situação"><span class="badge text-bg-info text-dark">Avaliação</span></td>
+                    <td data-label="Versão / data"><strong>v2.1.0-rc1.8</strong> (31/10/2026) — ZIP portátil, sem assinatura digital</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Homologação</td>
+                    <td data-label="Situação"><span class="badge text-bg-warning text-dark">Pendente</span></td>
+                    <td data-label="Versão / data">Aceite de QA da rc1.8 pendente; B7 (smoke Linux x64) e S6.9 abertos</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">GA do instalador Windows</td>
+                    <td data-label="Situação"><span class="badge text-bg-secondary">Previsto</span></td>
+                    <td data-label="Versão / data"><strong>06/04/2027</strong> — não homologado</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Histórico</td>
+                    <td data-label="Situação">RCs anteriores</td>
+                    <td data-label="Versão / data"><strong>v2.1.0-rc1.7</strong> (27/10/2026) reprovada pela QA (N1/N2)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-warning" role="note">
+              A pré-release <strong>não é GA</strong>: é um ZIP de avaliação, sem instalador NSIS e sem assinatura digital. O GA de 06/04/2027 ainda não está homologado.
+            </div>
+            </div>
+          </details>
+
+          <details class="wiki-accordion">
+            <summary>
+              <span>
+                <span class="wiki-accordion-title"><i class="bi bi-mortarboard"></i> Educação, laboratório e vitrine</span>
+                <span class="wiki-accordion-meta">Área 51, Reino OIDC, Circuito Ferradura e MKT</span>
+              </span>
+            </summary>
+            <div class="wiki-accordion-body">
+            <p>Formação, laboratório e vitrine. Não são GA de operação e não substituem PDV, CSO ou Hub. <a href="projetos-overview.html">Ver o catálogo</a>.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle wiki-status-table">
+                <thead>
+                  <tr><th>Produto</th><th>Versão / estado</th><th>Próximo marco</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-area51.html">Área 51</a></td>
+                    <td data-label="Versão / estado">Laboratório licenciado; baseline <strong>0.1.0-dev</strong></td>
+                    <td data-label="Próximo marco">Sem GA público</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-reino.html">Reino OIDC</a></td>
+                    <td data-label="Versão / estado">Edição Free <strong>2.0.2</strong> (tag <code>v2.0.2-free</code>)</td>
+                    <td data-label="Próximo marco">Edição paga em desenvolvimento</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-python.html">Circuito Ferradura</a></td>
+                    <td data-label="Versão / estado"><strong>v2.0.24</strong> (08/10/2026)</td>
+                    <td data-label="Próximo marco">Licença escolar sob conversa</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-mkt.html">Cara Core MKT</a></td>
+                    <td data-label="Versão / estado">Vitrine gratuita e Sala Cara Core</td>
+                    <td data-label="Próximo marco">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </details>
+
+          <details class="wiki-accordion">
+            <summary>
+              <span>
+                <span class="wiki-accordion-title"><i class="bi bi-collection"></i> Demais produtos</span>
+                <span class="wiki-accordion-meta">BioReator, Ink, Minerador, Seed e Helianto</span>
+              </span>
+            </summary>
+            <div class="wiki-accordion-body">
+            <div class="table-responsive">
+              <table class="table table-sm align-middle wiki-status-table">
+                <thead>
+                  <tr><th>Produto</th><th>Versão / estado</th><th>Próximo marco</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-bioreator.html">BioReator 4.0</a></td>
+                    <td data-label="Versão / estado">Community <strong>1.1.1</strong> publicada em 13/10/2026</td>
+                    <td data-label="Próximo marco">Premium previsto para <strong>18/06/2027</strong></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-ink.html">Ink Agenda</a></td>
+                    <td data-label="Versão / estado">Desktop Windows <strong>v2.0.1</strong> estável desde 07/10/2026 (linha 2.0 desde 26/06/2026)</td>
+                    <td data-label="Próximo marco">PWA não antes de 2028</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-minerador.html">Minerador 4.0</a></td>
+                    <td data-label="Versão / estado">Canal <strong>v1.2.3</strong></td>
+                    <td data-label="Próximo marco">—</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-seed.html">Cara Core Seed</a></td>
+                    <td data-label="Versão / estado">Pré-release candidata <strong>0.1.5</strong> para avaliação</td>
+                    <td data-label="Próximo marco">Homologação independente pendente</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Produto"><a href="projeto-helianto.html">Helianto Condominium</a></td>
+                    <td data-label="Versão / estado">Em desenvolvimento</td>
+                    <td data-label="Próximo marco">Lançamento previsto para <strong>30/12/2029</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </details>
+
+          <section class="mb-4">
+            <h2><i class="bi bi-box-arrow-up-right"></i> Onde ver o detalhe de cada release</h2>
+            <ul class="feature-list">
+              <li>PDV: <a href="https://pdv.caracore.com.br/versoes.html" target="_blank" rel="noopener">versões publicadas</a> e <a href="https://pdv.caracore.com.br/roadmap-2026.html" target="_blank" rel="noopener">roadmap do produto</a>.</li>
+              <li>Hub: <a href="https://hub.caracore.com.br/download.html" target="_blank" rel="noopener">download da pré-release</a>.</li>
+              <li>CSO: <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">Gestão de Frotas</a> e <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">vitrine de Transportes</a>.</li>
+            </ul>
+            <p class="wiki-status-note">A wiki não publica cronograma detalhado de engenharia nem builds internos. Quando um número depende de gate, QA ou homologação, ele aparece aqui como pendente.</p>
+          </section>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a href="index.html" class="btn-wiki"><i class="bi bi-house"></i> Voltar ao portal</a>
+            <a href="projetos-overview.html" class="btn-wiki"><i class="bi bi-collection"></i> Visão geral dos projetos</a>
+            <a href="glossario.html" class="btn-wiki"><i class="bi bi-book"></i> Glossário</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wiki-footer">
+      <div class="container">
+          <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+          <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+          <div class="mt-2">
+              <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                  <i class="bi bi-shield-lock"></i> Política de Privacidade
+              </a>
+              <a href="https://www.caracore.com.br/" class="text-light">
+                  <i class="bi bi-house"></i> Site Principal
+              </a>
+          </div>
+      </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/wiki.js"></script>
+</body>
+</html>

@@ -76,3 +76,26 @@
         font-size: 0.9rem;
     }
 }
+
+.glossary-alphabet .is-empty {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--wiki-inst-muted, #6c757d);
+    background: var(--wiki-inst-accent-soft, #f1f3f5);
+    opacity: .55;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .glossary-alphabet .is-empty {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 0.9rem;
+    }
+}
