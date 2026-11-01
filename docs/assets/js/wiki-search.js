@@ -13,9 +13,9 @@ function initWikiSearch() {
     const wikiIndex = [
         {
             title: 'CaraCore PDV (hub Java + Rust)',
-            description: 'PDV Java estável v3.2.12-free e pré-release v4.0.0-rc6 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
+            description: 'PDV Java estável v3.2.12-free e pré-release v4.0.0-candidato-20261031 para avaliação; Rust piloto v0.1.4 — linhas independentes, nenhuma substitui a outra',
             url: 'projeto-pdv.html',
-            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.12-free', 'v4.0.0-rc6', 't032', 'pix split'],
+            tags: ['pdv', 'hub', 'coexistência', 'java', 'rust', 'v3.2.12-free', 'v4.0.0-candidato-20261031', 't032', 'pix split'],
             category: 'projeto'
         },
         {

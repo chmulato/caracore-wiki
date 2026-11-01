@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaraCore PDV — Java e Rust | Wiki Cara Core</title>
-  <meta name="description" content="Hub do CaraCore PDV: versão anterior 3.2.x (v3.2.12-free, Java 25 · Quarkus · browser localhost:8080), PDV v4 em pré-lançamento com a prévia rc6 e linha piloto Rust (Windows v0.1.4).">
+  <meta name="description" content="Hub do CaraCore PDV: versão anterior 3.2.x (v3.2.12-free, Java 25 · Quarkus · browser localhost:8080), PDV v4 em pré-lançamento com a build candidata de 31/10 e linha piloto Rust (Windows v0.1.4).">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/wiki-institutional.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <meta property="og:title" content="CaraCore PDV — Java e Rust | Wiki Cara Core">
-  <meta property="og:description" content="A versão anterior do PDV Java é a v3.2.12-free; o PDV v4 está em pré-lançamento, com a v4.0.0-rc6 como prévia pública. A linha Rust v0.1.4 é piloto independente.">
+  <meta property="og:description" content="A versão anterior do PDV Java é a v3.2.12-free; o PDV v4 está em pré-lançamento, com a v4.0.0-candidato-20261031 como prévia pública. A linha Rust v0.1.4 é piloto independente.">
   <meta property="og:type" content="article">
 </head>
 <body>
@@ -81,7 +81,7 @@
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Coexistência e versões:</strong> a <strong>versão anterior</strong> do PDV Java é a <strong>v3.2.12-free</strong>, última da linha 3.2.x, em manutenção de transição até 08/11/2026 e ainda a indicada para operar. O <strong>PDV v4 está em pré-lançamento</strong>: a v4.0.0-rc6 é a prévia pública e a versão final depende de aprovação formal, sem GA automático em 08/11. A RC7 segue em QA local. Rust usa a release <strong>v0.1.4</strong>. São faixas independentes.
+            <strong>Coexistência e versões:</strong> a <strong>versão anterior</strong> do PDV Java é a <strong>v3.2.12-free</strong>, última da linha 3.2.x, em manutenção de transição até 08/11/2026 e ainda a indicada para operar. O <strong>PDV v4 está em pré-lançamento</strong>: a v4.0.0-candidato-20261031 (build de 31/10/2026) é a prévia pública e a versão final depende de aprovação formal, sem GA automático em 08/11. A RC7 segue como rota aprovada do Gate E, ainda sem tag publicada. Rust usa a release <strong>v0.1.4</strong>. São faixas independentes.
           </div>
 
           <div class="row g-4 mb-4">
@@ -178,7 +178,7 @@
             </div>
             <div class="alert alert-secondary" role="note">
               <i class="bi bi-mortarboard"></i>
-              <strong>Oficina Java:</strong> módulos <code>pdv-core</code>, <code>pdv-fiscal-payment</code>, <code>pdv-platform-security</code> e <code>pdv-apps</code>. A versão anterior <code>v3.2.12-free</code> é uma aplicação web local no navegador em <code>http://localhost:8080/login</code>, publicada em 15/10/2026 por autorização explícita para gates pendentes. Fonte: branch <code>hotfix/3.2.12-free</code>, commit <code>72ace488aed4ee91001c60cf40a3934ddfe8faf1</code>. A 3.2.8 permanece no histórico. O v4 na oficina usa Quarkus + Qute e está em pré-lançamento; a RC6 é a prévia pública. A wiki institucional não substitui o README da oficina.
+              <strong>Oficina Java:</strong> módulos <code>pdv-core</code>, <code>pdv-fiscal-payment</code>, <code>pdv-platform-security</code> e <code>pdv-apps</code>. A versão anterior <code>v3.2.12-free</code> é uma aplicação web local no navegador em <code>http://localhost:8080/login</code>, publicada em 15/10/2026 por autorização explícita para gates pendentes. Fonte: branch <code>hotfix/3.2.12-free</code>, commit <code>72ace488aed4ee91001c60cf40a3934ddfe8faf1</code>. A 3.2.8 permanece no histórico. O v4 na oficina usa Quarkus + Qute e está em pré-lançamento; a build candidata de 31/10 é a prévia pública. A wiki institucional não substitui o README da oficina.
             </div>
             <div class="alert alert-warning" role="note">
               <strong>Não homologado integralmente:</strong> 19/19 testes focados passaram com Java 25/H2; os três ZIPs passaram CRC/estrutura e os cinco assets remotos tiveram hashes conferidos. Pendentes: suíte completa, smoke portátil com SQLite/health/navegador, execução Linux/macOS e homologação operacional completa, incluindo Edge/leitor físico. Publicação autorizada em 15/10/2026 com essas ressalvas; os aceites da 3.2.8 não certificam a 3.2.12.
@@ -195,7 +195,7 @@
 
           <section class="mb-5" id="v4">
             <h2><i class="bi bi-window"></i> CaraCore PDV 4 (pré-lançamento)</h2>
-            <p>Pré-release pública: <a href="https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html" target="_blank" rel="noopener"><strong>v4.0.0-rc6</strong></a>, edição Free para avaliação no Windows, com limite de 100 vendas finalizadas por mês civil. ZIP portátil unsigned na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc6" target="_blank" rel="noopener">GitHub Release</a>; SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code> (178.166.244 bytes, publicada em 10/10/2026). Java 25 está em <code>runtime\</code>; o pacote não usa JDK nem Python do sistema. O Edge continua necessário. A <strong>v4.0.0-rc5</strong> fica no histórico. O <a href="https://pdv.caracore.com.br/homologacao-v4.html#rc6" target="_blank" rel="noopener">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. MSI não será distribuído. RC7 segue em QA local, sem download público. A v4 avança pelo ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A versão anterior multiplataforma é <code>v3.2.12-free</code>, última da linha 3.2.x, em manutenção de transição até essa data e ainda a indicada para operar. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
+            <p>Pré-release pública: <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-candidato-20261031" target="_blank" rel="noopener"><strong>v4.0.0-candidato-20261031</strong></a>, build de 31/10/2026 (fonte <code>master</code> <code>c343890</code>) da edição Free para avaliação no Windows, com limite de 100 vendas finalizadas por mês civil. ZIP portátil unsigned; SHA-256: <code>0c2003b0f99a75328f7ebe632fc20b07cb5834a3f75b6f0e97ccfb7aef83434d</code> (178.317.680 bytes, publicada em 31/10/2026). Java 25 está em <code>runtime\</code>; o pacote não usa JDK nem Python do sistema. O Edge continua necessário. As <strong>v4.0.0-rc6</strong> (10/10/2026, SHA-256 <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>, 178.166.244 bytes) e <strong>v4.0.0-rc5</strong> ficam no histórico. O <a href="https://pdv.caracore.com.br/homologacao-v4.html" target="_blank" rel="noopener">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. MSI não será distribuído. T032 e a matriz M01–M11 foram medidos em <code>ff400efd</code>, não neste pacote; o SCA segue não medido. A RC7 segue como rota aprovada do Gate E, ainda sem tag publicada. A v4 avança pelo ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A versão anterior multiplataforma é <code>v3.2.12-free</code>, última da linha 3.2.x, em manutenção de transição até essa data e ainda a indicada para operar. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
             <div class="alert alert-info" role="note">
               <strong>O que a v4 acrescenta para a gestão:</strong> faturamento do dia identificado sem chamar faturamento de lucro; projeção de bruto, IBS, CBS, retenção prevista e líquido; painel diário com recebimentos por meio e saldo esperado em dinheiro; simulador de preço com alíquotas informadas (sem consulta à SEFAZ e sem executar PIX); custo de aquisição opcional e alertas gerenciais de custo acima do preço ou líquido previsto negativo. Essas projeções e alertas são restritos a GERENTE/ADMIN. Não são apuração fiscal, emissão de documento fiscal, integração SEFAZ ou PIX no PDV.
             </div>
