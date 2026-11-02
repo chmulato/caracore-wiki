@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ink Agenda | Wiki Cara Core</title>
-  <meta name="description" content="Ink Agenda v2.0.1 estável e candidata v2.0.2 disponível como prerelease para homologação no Windows. PWA não antes de 2028. Java 25 + SQLite.">
+  <meta name="description" content="Ink Agenda v2.0.3 disponível para Windows (sem assinatura digital). PWA não antes de 2028. Java 25 + SQLite.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Meta tags Open Graph -->
     <meta property="og:title" content="Ink Agenda | Wiki Cara Core">
-    <meta property="og:description" content="Ink Agenda v2.0.1 estável e candidata v2.0.2 disponível como prerelease para homologação no Windows. PWA não antes de 2028. Java 25 + SQLite.">
+    <meta property="og:description" content="Ink Agenda v2.0.3 disponível para Windows (sem assinatura digital). PWA não antes de 2028. Java 25 + SQLite.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wiki.caracore.com.br/projeto-ink.html">
 </head>
@@ -52,7 +52,7 @@
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
         <h1><i class="bi bi-calendar-check"></i> Ink Agenda</h1>
-        <p class="wiki-lede">Gestão para estúdios de tatuagem. Desktop Windows <strong>v2.0.1</strong> estável/Latest; candidata <strong>v2.0.2</strong> disponível como prerelease para homologação, sem assinatura digital e ainda não aprovada como estável. <strong>PWA não antes de 2028</strong> (Mac, Linux, Android e tablet — sem DMG/DEB nativos). Downloads na loja; documentação neste portal.</p>
+        <p class="wiki-lede">Gestão para estúdios de tatuagem. Desktop Windows <strong>v2.0.3</strong> (Latest), sem assinatura digital. <strong>PWA não antes de 2028</strong> (Mac, Linux, Android e tablet — sem DMG/DEB nativos). Downloads na loja; documentação neste portal.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
@@ -62,17 +62,17 @@
             <span class="tech-badge">SQLite</span>
             <span class="tech-badge">Windows desktop</span>
             <span class="tech-badge">PWA não antes de 2028 (sem Mac/Linux nativos)</span>
-            <span class="tech-badge">v2.0.1 estável · v2.0.2 prerelease</span>
+            <span class="tech-badge">v2.0.3</span>
             <span class="tech-badge">Licença proprietária</span>
           </div>
           <div class="alert alert-info" role="note">
             Código-fonte privado. Vitrine e download Windows: <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">ink.caracore.com.br</a>. Esta página substitui a antiga wiki da loja.
           </div>
           <div class="alert alert-warning" role="note">
-            A v2.0.1 continua estável/Latest. A v2.0.2 está disponível como prerelease para homologação, sem assinatura digital e ainda não aprovada como estável.             Faça backup dos dados antes de testar.
+            A v2.0.3 é a versão atual, sem assinatura digital. Faça backup dos dados antes de atualizar.
             </div>
             <div class="alert alert-secondary" role="note">
-            <strong>Em preparação — v2.0.3 (ainda não publicada).</strong> Corrige a duplicação de entradas manuais em Finanças após reiniciar (com migration que remove duplicatas sem apagar lançamentos legítimos), o estado da caixa «Pagou», o lembrete de backup em instalação nova, «Lembrar da minha senha» (protegida pelo Windows por até 12 h), a mensagem de bloqueio por tentativas, o formulário de orçamento em telas pequenas, a máscara do código de emergência e as reticências em nomes longos. Em Configurações, a verificação de atualização é <strong>manual</strong>: consulta, em segundo plano e sem travar a tela, o canal <code>api.caracore.com.br/releases/ink/latest.json</code> (JSON com versão, link e SHA-256, sem enviar dados do usuário ou da base) e só oferece a página de releases quando há versão mais nova; nunca baixa nem instala sozinha. Sem assinatura digital. A v2.0.1 continua sendo a indicada.
+            <strong>v2.0.3 — publicada em 02/11/2026.</strong> Corrige a duplicação de entradas manuais em Finanças após reiniciar (com migration que remove duplicatas sem apagar lançamentos legítimos), o estado da caixa «Pagou», o lembrete de backup em instalação nova, «Lembrar da minha senha» (protegida pelo Windows por até 12 h), a mensagem de bloqueio por tentativas, o formulário de orçamento em telas pequenas, a máscara do código de emergência e as reticências em nomes longos. Em Configurações, a verificação de atualização é <strong>manual</strong>: consulta, em segundo plano e sem travar a tela, o canal <code>api.caracore.com.br/releases/ink/latest.json</code> (JSON com versão, link e SHA-256, sem enviar dados do usuário ou da base) e só oferece a página de releases quando há versão mais nova; nunca baixa nem instala sozinha. Sem assinatura digital: o SmartScreen ou antivírus pode avisar.
           </div>
           <div class="row g-4">
             <div class="col-md-6">
@@ -95,10 +95,10 @@
           </div>
           <section class="mt-4" id="primeiros-passos">
             <h2 class="h5"><i class="bi bi-door-open"></i> Primeiros passos no desktop</h2>
-            <p>Versão estável: <strong>v2.0.1</strong>. A prerelease v2.0.2 está disponível para homologação, mas ainda não foi aprovada como estável. Mac/Linux/Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG/DEB). Downloads e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
+            <p>Versão atual: <strong>v2.0.3</strong>. Mac/Linux/Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG/DEB). Downloads e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
             <p>Isto <strong>não é</strong> o PDV Cara Core. Não use <code>admin</code>/<code>admin</code> nem <code>admin</code>/<code>admin123</code>. O Ink Agenda <strong>não traz usuário de fábrica</strong>.</p>
             <ol>
-              <li>Baixe <code>AgendaInk-2.0.1-windows-setup.exe</code> ou <code>AgendaInk-2.0.1-windows.zip</code>. Runtime Java 25 embutido — sem JDK.</li>
+              <li>Baixe <code>AgendaInk-2.0.3-windows-setup.exe</code> ou <code>AgendaInk-2.0.3-windows.zip</code>. Runtime Java 25 embutido — sem JDK.</li>
               <li>Instale ou extraia e abra <code>AgendaInk.exe</code>. Um aviso diz “Seus dados ficam só neste computador”.</li>
               <li>A primeira tela é o <strong>Passo 1 de 3 — Identificação</strong>: celular do responsável e <strong>Continuar</strong>. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
               <li><strong>Passo 2 de 3 — Senha e recuperação local:</strong> perfil (Proprietário, Tatuador Sr ou Tatuador Jr), senha (mínimo 8 caracteres), frase de recuperação (mínimo 10 caracteres) e, recomendado, 8 códigos de emergência (anote; o app mostra uma vez). Clique em <strong>Concluir configuração</strong>.</li>
@@ -110,7 +110,7 @@
           </section>
           <section class="mt-4" id="pwa">
             <h2 class="h5"><i class="bi bi-phone"></i> PWA — não antes de 2028</h2>
-            <p>Não haverá instalador nativo para macOS nem Linux. O canal abrangente é o PWA (mesmo backend da v2): Mac, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá, a v2.0.1 continua estável/Latest e a v2.0.2 está disponível como prerelease para homologação. A 3.0 substitui o Desktop só depois de existir a importação dos dados. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
+            <p>Não haverá instalador nativo para macOS nem Linux. O canal abrangente é o PWA (mesmo backend da v2): Mac, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá, o Desktop Windows v2.0.3 é a versão atual. A 3.0 substitui o Desktop só depois de existir a importação dos dados. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
           </section>
           <section class="mt-4" id="operacao">
             <h2 class="h5"><i class="bi bi-clipboard-check"></i> Operação no estúdio</h2>
