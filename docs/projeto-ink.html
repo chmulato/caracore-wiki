@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ink Agenda | Wiki Cara Core</title>
-  <meta name="description" content="Ink Agenda v2.0.4 disponível para Windows e Linux (sem assinatura digital). PWA não antes de 2028. Java 25 + SQLite.">
+  <meta name="description" content="Ink Agenda 2.1.0 disponível para Windows e Linux (sem assinatura digital), com perfis de Tatuagem, Odontologia e Beleza. PWA não antes de 2028. Java 25 + SQLite.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Meta tags Open Graph -->
     <meta property="og:title" content="Ink Agenda | Wiki Cara Core">
-    <meta property="og:description" content="Ink Agenda v2.0.4 disponível para Windows e Linux (sem assinatura digital). PWA não antes de 2028. Java 25 + SQLite.">
+    <meta property="og:description" content="Ink Agenda 2.1.0 disponível para Windows e Linux (sem assinatura digital), com perfis de Tatuagem, Odontologia e Beleza. PWA não antes de 2028. Java 25 + SQLite.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wiki.caracore.com.br/projeto-ink.html">
 </head>
@@ -52,7 +52,7 @@
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
         <h1><i class="bi bi-calendar-check"></i> Ink Agenda</h1>
-        <p class="wiki-lede">Gestão para estúdios de tatuagem. Desktop Windows e Linux <strong>v2.0.4</strong> (Latest), sem assinatura digital. <strong>PWA não antes de 2028</strong> (macOS, Linux, Android e tablet — sem DMG nativo). Downloads na loja; documentação neste portal.</p>
+        <p class="wiki-lede">Gestão para estúdios de tatuagem, consultórios odontológicos e espaços de beleza. Desktop Windows e Linux <strong>v2.1.0</strong> (Latest), sem assinatura digital: um executável, três perfis. <strong>PWA não antes de 2028</strong> (macOS, Android e tablet — sem DMG nativo). Downloads na loja; documentação neste portal.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
@@ -62,31 +62,48 @@
             <span class="tech-badge">SQLite</span>
             <span class="tech-badge">Windows e Linux (.deb)</span>
             <span class="tech-badge">PWA não antes de 2028 (macOS pelo navegador)</span>
-            <span class="tech-badge">v2.0.4</span>
+            <span class="tech-badge">3 perfis: Tatuagem, Odontologia e Beleza</span>
+            <span class="tech-badge">v2.1.0</span>
             <span class="tech-badge">Licença proprietária</span>
           </div>
           <div class="alert alert-info" role="note">
             Código-fonte privado. Vitrine e downloads (Windows e Linux): <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">ink.caracore.com.br</a>. Esta página substitui a antiga wiki da loja.
           </div>
           <div class="alert alert-warning" role="note">
-            A v2.0.4 é a versão atual, sem assinatura digital. Faça backup dos dados antes de atualizar.
+            A v2.1.0 é a versão atual, sem assinatura digital. Faça backup dos dados antes de atualizar.
             </div>
             <div class="alert alert-secondary" role="note">
-            <strong>v2.0.4 — publicada em 02/11/2026.</strong> O pagamento lançado passa a refletir no status do agendamento, a senha lembrada fica protegida pelo Windows (DPAPI) por até 12 h com AES-GCM, e os avisos de backup e de bloqueio por tentativas deixam de aparecer errado. O formulário de orçamento rola em telas pequenas, o código de emergência aparece mascarado e nomes longos ganham reticências. Em Configurações, a verificação de atualização é <strong>manual</strong>: consulta, em segundo plano e sem travar a tela, o canal <code>api.caracore.com.br/releases/ink/latest.json</code> (JSON com versão, link e SHA-256, sem enviar dados do usuário ou da base) e só oferece a página de releases quando há versão mais nova. A verificação passa a exigir assinatura <strong>Ed25519</strong> conferida com a chave pública embutida no aplicativo, aceita apenas links de <code>github.com/chmulato</code> e <code>*.caracore.com.br</code>, confere o SHA-256 antes de abrir, respeita <code>mandatory</code>/<code>min_supported</code> e desiste em 10 s; nunca baixa nem instala sozinha. Sem assinatura digital: o SmartScreen ou antivírus pode avisar.
+            <strong>v2.1.0 — publicada em 03/11/2026.</strong> O Desktop passa a ser metamórfico: no primeiro acesso o operador escolhe <strong>Tatuagem &amp; Arte Corporal</strong>, <strong>Odontologia &amp; Saúde</strong> ou <strong>Beleza &amp; Estética</strong>, e o aplicativo muda a paleta, o vocabulário e o catálogo financeiro sugerido sem reinstalação. A preferência fica em <code>app_preferences</code> (V24) e as sementes de Odontologia e Beleza entram na V25. Bases 2.0.1 a 2.0.4 migram automaticamente; sem preferência gravada, o perfil Tatuador continua sendo o padrão. A verificação de atualização segue manual e assinada com <strong>Ed25519</strong>, com allowlist e SHA-256 conferidos antes de abrir o instalador. A 2.0.4 permanece no histórico com as correções de pagamento, senha lembrada por 12 h e orçamento rolável.
           </div>
+          <section class="mt-4" id="perfis">
+            <h2 class="h5"><i class="bi bi-palette"></i> Três perfis, um executável</h2>
+            <p>O mesmo aplicativo atende três rotinas de hora marcada. A escolha é feita no primeiro acesso e pode ser trocada depois em <strong>Config → Identidade e Visual do Posto</strong>, sem reinstalar nem perder dados.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle">
+                <thead><tr><th>Perfil</th><th>Paleta</th><th>Sessão</th><th>Cliente</th><th>Espaço</th><th>Valor</th></tr></thead>
+                <tbody>
+                  <tr><td>Tatuagem &amp; Arte Corporal</td><td>Lilás</td><td>Sessão</td><td>Cliente</td><td>Estúdio</td><td>Valor da sessão (R$)</td></tr>
+                  <tr><td>Odontologia &amp; Saúde</td><td>Azul turquesa</td><td>Consulta</td><td>Paciente</td><td>Consultório</td><td>Valor da consulta (R$)</td></tr>
+                  <tr><td>Beleza &amp; Estética</td><td>Dourado champagne</td><td>Procedimento</td><td>Cliente</td><td>Espaço</td><td>Valor do procedimento (R$)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>O título da janela acompanha o perfil (<code>Ink Agenda 2.1.0 — Estúdio</code>, <code>— Consultório</code> ou <code>— Espaço</code>). Catálogos financeiros já personalizados não são alterados; as sugestões por nicho só nascem em catálogo vazio.</p>
+          </section>
           <div class="row g-4">
             <div class="col-md-6">
               <h2 class="h5"><i class="bi bi-people"></i> O que muda para você</h2>
               <p>Agenda de sessões, cadastro de clientes, orçamentos, receitas e despesas, saldo e faturamento por mês e ano. Tudo no PC, sem depender de internet para funcionar.</p>
               <ul class="feature-list">
                 <li>Calendário e lista do dia com horário, duração e valor (sem sobrepor horários)</li>
+                <li>Três perfis (Tatuagem, Odontologia e Beleza) com paleta, vocabulário e sugestões financeiras próprias</li>
                 <li>Check “Pagou” na lista do dia</li>
                 <li>Backup <code>.inkbak</code> com senha, backup automático (pode desligar) e CSV que não duplica ao importar</li>
               </ul>
             </div>
             <div class="col-md-6">
               <h2 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h2>
-              <p>Desktop nativo para Windows e Linux: <strong>Java 25 + JavaFX 21.0.11 + SQLite</strong>. PWA (não antes de 2028): o mesmo backend. Oficina <code>caracore-ink</code>; loja <code>caracore-ink-releases</code>.</p>
+              <p>Desktop nativo para Windows e Linux: <strong>Java 25 + JavaFX 21.0.11 + SQLite</strong>. A preferência visual fica em <code>app_preferences</code> (V24) e as sementes por nicho entram na V25. PWA (não antes de 2028): o mesmo backend. Oficina <code>caracore-ink</code>; loja <code>caracore-ink-releases</code>.</p>
               <ul class="feature-list">
                 <li>Build Maven; testes JUnit 5</li>
                 <li>Operação local (Bunker); internet só para baixar o instalador</li>
@@ -95,12 +112,12 @@
           </div>
           <section class="mt-4" id="primeiros-passos">
             <h2 class="h5"><i class="bi bi-door-open"></i> Primeiros passos no desktop</h2>
-            <p>Versão atual: <strong>v2.0.4</strong>. Windows: setup e ZIP portátil; Linux: pacote <code>.deb</code>. macOS e Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG). Downloads e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
+            <p>Versão atual: <strong>v2.1.0</strong>. Windows: setup e ZIP portátil; Linux: pacote <code>.deb</code>. macOS e Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG). Downloads e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
             <p>Isto <strong>não é</strong> o PDV Cara Core. Não use <code>admin</code>/<code>admin</code> nem <code>admin</code>/<code>admin123</code>. O Ink Agenda <strong>não traz usuário de fábrica</strong>.</p>
             <ol>
-              <li>Baixe <code>AgendaInk-2.0.4-windows-setup.exe</code> ou <code>AgendaInk-2.0.4-windows.zip</code>. Runtime Java 25 embutido — sem JDK. No Linux, instale <code>agenda-ink-2.0.4-linux.deb</code> com <code>sudo apt install ./agenda-ink-2.0.4-linux.deb</code>.</li>
+              <li>Baixe <code>AgendaInk-2.1.0-windows-setup.exe</code> ou <code>AgendaInk-2.1.0-windows.zip</code>. Runtime Java 25 embutido — sem JDK. No Linux, instale <code>agenda-ink-2.1.0-linux.deb</code> com <code>sudo apt install ./agenda-ink-2.1.0-linux.deb</code>.</li>
               <li>Instale ou extraia e abra <code>AgendaInk.exe</code>. Um aviso diz “Seus dados ficam só neste computador”.</li>
-              <li>A primeira tela é o <strong>Passo 1 de 3 — Identificação</strong>: celular do responsável e <strong>Continuar</strong>. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
+              <li>A primeira tela é o <strong>Passo 1 de 3 — Identificação</strong>: escolha o perfil (Tatuagem, Odontologia ou Beleza), que aplica a skin na hora, e informe o celular do responsável; clique em <strong>Continuar</strong>. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
               <li><strong>Passo 2 de 3 — Senha e recuperação local:</strong> perfil (Proprietário, Tatuador Sr ou Tatuador Jr), senha (mínimo 8 caracteres), frase de recuperação (mínimo 10 caracteres) e, recomendado, 8 códigos de emergência (anote; o app mostra uma vez). Clique em <strong>Concluir configuração</strong>.</li>
               <li><strong>Passo 3:</strong> o login aparece só agora. Entre com o mesmo celular e a senha criada.</li>
             </ol>
@@ -110,12 +127,13 @@
           </section>
           <section class="mt-4" id="pwa">
             <h2 class="h5"><i class="bi bi-phone"></i> PWA — não antes de 2028</h2>
-            <p>macOS fica sem instalador nativo; no Linux, a v2.0.4 publica o pacote <code>.deb</code>. O canal abrangente é o PWA (mesmo backend da v2): macOS, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá, o Desktop v2.0.4 (Windows e Linux) é a versão atual. A 3.0 substitui o Desktop só depois de existir a importação dos dados. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
+            <p>macOS fica sem instalador nativo; no Linux, a v2.1.0 publica o pacote <code>.deb</code>. O canal abrangente é o PWA (mesmo backend da v2): macOS, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá, o Desktop v2.1.0 (Windows e Linux) é a versão atual. A 3.0 substitui o Desktop só depois de existir a importação dos dados. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
           </section>
           <section class="mt-4" id="operacao">
             <h2 class="h5"><i class="bi bi-clipboard-check"></i> Operação no estúdio</h2>
             <ul>
               <li>Conferir agenda do dia antes de abrir atendimento</li>
+              <li>Usar o vocabulário do perfil ativo (sessão, consulta ou procedimento) nos lançamentos e no diálogo de agendamento</li>
               <li>Atualizar pagamento ao finalizar a sessão</li>
               <li>Lançar despesas no mesmo dia</li>
               <li>Backup automático a cada hora e ao fechar (30 cópias no PC); backup <code>.inkbak</code> com senha ao menos uma vez por semana, guardado em pendrive ou outro disco</li>
