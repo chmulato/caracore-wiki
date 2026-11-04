@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ink Agenda | Wiki Cara Core</title>
-  <meta name="description" content="Ink Agenda 2.1.0 disponível para Windows e Linux (sem assinatura digital), com perfis de Tatuagem, Odontologia e Beleza. PWA não antes de 2028. Java 25 + SQLite.">
+  <meta name="description" content="Ink Agenda 2.2.1 disponível para Windows e Linux (sem assinatura digital), com três perfis, equipe com papéis e mensageria WhatsApp/Telegram. PWA não antes de 2028. Java 25 + SQLite.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Meta tags Open Graph -->
     <meta property="og:title" content="Ink Agenda | Wiki Cara Core">
-    <meta property="og:description" content="Ink Agenda 2.1.0 disponível para Windows e Linux (sem assinatura digital), com perfis de Tatuagem, Odontologia e Beleza. PWA não antes de 2028. Java 25 + SQLite.">
+    <meta property="og:description" content="Ink Agenda 2.2.1 disponível para Windows e Linux (sem assinatura digital), com três perfis, equipe com papéis e mensageria WhatsApp/Telegram. PWA não antes de 2028. Java 25 + SQLite.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wiki.caracore.com.br/projeto-ink.html">
 </head>
@@ -52,7 +52,7 @@
     <div class="wiki-content wiki-home">
       <div class="wiki-header">
         <h1><i class="bi bi-calendar-check"></i> Ink Agenda</h1>
-        <p class="wiki-lede">Gestão para estúdios de tatuagem, consultórios odontológicos e espaços de beleza. Desktop Windows e Linux <strong>v2.1.0</strong> (Latest), sem assinatura digital: um executável, três perfis. <strong>PWA não antes de 2028</strong> (macOS, Android e tablet — sem DMG nativo). Downloads na loja; documentação neste portal.</p>
+        <p class="wiki-lede">Gestão para estúdios de tatuagem, consultórios odontológicos e espaços de beleza. Desktop Windows e Linux <strong>v2.2.1</strong> (Latest), sem assinatura digital: um executável, três perfis e equipe com papéis. <strong>PWA não antes de 2028</strong> (macOS, Android e tablet — sem DMG nativo). Downloads na loja; documentação neste portal.</p>
       </div>
       <div class="project-card mb-4">
         <div class="project-body p-4">
@@ -63,17 +63,25 @@
             <span class="tech-badge">Windows e Linux (.deb)</span>
             <span class="tech-badge">PWA não antes de 2028 (macOS pelo navegador)</span>
             <span class="tech-badge">3 perfis: Tatuagem, Odontologia e Beleza</span>
-            <span class="tech-badge">v2.1.0</span>
+            <span class="tech-badge">Equipe com papéis (V26)</span>
+            <span class="tech-badge">Mensageria WhatsApp/Telegram</span>
+            <span class="tech-badge">v2.2.1</span>
             <span class="tech-badge">Licença proprietária</span>
           </div>
           <div class="alert alert-info" role="note">
             Código-fonte privado. Vitrine e downloads (Windows e Linux): <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">ink.caracore.com.br</a>. Esta página substitui a antiga wiki da loja.
           </div>
           <div class="alert alert-warning" role="note">
-            A v2.1.0 é a versão atual, sem assinatura digital. Faça backup dos dados antes de atualizar.
+            A v2.2.1 é a versão atual, sem assinatura digital. Faça backup dos dados antes de atualizar. Quem está na 2.1.0 ou na 2.2.0 precisa baixar a 2.2.1 uma vez pela loja: o botão de atualização dessas versões continuava quebrado.
             </div>
             <div class="alert alert-secondary" role="note">
-            <strong>v2.1.0 — publicada em 03/11/2026.</strong> O Desktop passa a ser metamórfico: no primeiro acesso o operador escolhe <strong>Tatuagem &amp; Arte Corporal</strong>, <strong>Odontologia &amp; Saúde</strong> ou <strong>Beleza &amp; Estética</strong>, e o aplicativo muda a paleta, o vocabulário e o catálogo financeiro sugerido sem reinstalação. A preferência fica em <code>app_preferences</code> (V24) e as sementes de Odontologia e Beleza entram na V25. Bases 2.0.1 a 2.0.4 migram automaticamente; sem preferência gravada, o perfil Tatuador continua sendo o padrão. A verificação de atualização segue manual e assinada com <strong>Ed25519</strong>, com allowlist e SHA-256 conferidos antes de abrir o instalador. A 2.0.4 permanece no histórico com as correções de pagamento, senha lembrada por 12 h e orçamento rolável.
+            <strong>v2.2.1 — publicada em 04/11/2026.</strong> Corrige o botão <strong>«Baixar e abrir instalador»</strong>: a URL do GitHub responde com redirecionamento (HTTP 302) e o aplicativo aceitava apenas resposta direta. A versão segue até cinco saltos, valida cada destino por HTTPS e domínio oficial e mantém a conferência do SHA-256 do manifesto assinado antes de abrir o instalador. Atualiza o Jackson de 3.1.1 para 3.1.7. Nenhuma migração nova: a base permanece na V26.
+          </div>
+          <div class="alert alert-secondary" role="note">
+            <strong>v2.2.0 — publicada em 04/11/2026.</strong> A instalação deixa de ter uma única credencial: além do responsável (administrador), a equipe entra com celular e senha próprios, com áreas e valores limitados por perfil — <strong>Agenda</strong> e <strong>Financeiro</strong>. Na aba Usuário, o perfil autorizado configura WhatsApp ou Telegram: o Ink abre o aplicativo com o texto pronto e <strong>quem envia é o operador</strong>. O layout atende tablet e desktop a partir de 768×520. A tabela <code>app_users</code> nasce na migração <strong>V26</strong>, com senha em PBKDF2; a credencial do responsável continua fora do banco.
+          </div>
+            <div class="alert alert-secondary" role="note">
+            <strong>v2.1.0 — 03/11/2026 (histórico).</strong> O Desktop passou a ser metamórfico: no primeiro acesso o operador escolhe <strong>Tatuagem &amp; Arte Corporal</strong>, <strong>Odontologia &amp; Saúde</strong> ou <strong>Beleza &amp; Estética</strong>, e o aplicativo muda a paleta, o vocabulário e o catálogo financeiro sugerido sem reinstalação. A preferência fica em <code>app_preferences</code> (V24) e as sementes de Odontologia e Beleza entram na V25. A verificação de atualização segue manual e assinada com <strong>Ed25519</strong>, com allowlist e SHA-256 conferidos antes de abrir o instalador.
           </div>
           <section class="mt-4" id="perfis">
             <h2 class="h5"><i class="bi bi-palette"></i> Três perfis, um executável</h2>
@@ -88,7 +96,27 @@
                 </tbody>
               </table>
             </div>
-            <p>O título da janela acompanha o perfil (<code>Ink Agenda 2.1.0 — Estúdio</code>, <code>— Consultório</code> ou <code>— Espaço</code>). Catálogos financeiros já personalizados não são alterados; as sugestões por nicho só nascem em catálogo vazio.</p>
+            <p>O título da janela acompanha o perfil (<code>Ink Agenda 2.2.1 — Estúdio</code>, <code>— Consultório</code> ou <code>— Espaço</code>). Catálogos financeiros já personalizados não são alterados; as sugestões por nicho só nascem em catálogo vazio.</p>
+          </section>
+          <section class="mt-4" id="equipe">
+            <h2 class="h5"><i class="bi bi-people"></i> Equipe com papéis separados</h2>
+            <p>O responsável continua sendo o administrador. As pessoas da equipe entram com celular e senha próprios, cada uma com um perfil que limita o que aparece na tela. O cadastro fica em <strong>Config → Usuários e perfis</strong>, disponível somente ao administrador.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle">
+                <thead><tr><th>Perfil</th><th>Como entra</th><th>Acessa</th><th>Não acessa</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Administrador</strong> (responsável)</td><td>Credencial do responsável, guardada fora do banco</td><td>Hoje, Calendário, Finanças, Dashboard, Orçamentos, Clientes, Usuário e Config; gerencia usuários e envia mensagens</td><td>—</td></tr>
+                  <tr><td><strong>Agenda</strong></td><td><code>app_users</code> (V26), senha em PBKDF2</td><td>Hoje, Calendário, Clientes e Usuário; envia mensagens</td><td>Finanças, Dashboard, Orçamentos e Config; não vê valores nem o check <strong>Pagou</strong></td></tr>
+                  <tr><td><strong>Financeiro</strong></td><td><code>app_users</code> (V26), senha em PBKDF2</td><td>Hoje, Calendário, Finanças, Dashboard, Orçamentos, Clientes e Usuário</td><td>Config e gestão de usuários; não envia mensagens</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Uma tentativa de abrir área sem permissão mostra «Seu perfil não tem acesso a esta área. Fale com o responsável pela instalação.» e não troca o conteúdo. A credencial do responsável não é copiada para <code>app_users</code>: a equipe é adicional e o administrador não aparece na lista de usuários.</p>
+          </section>
+          <section class="mt-4" id="mensageria">
+            <h2 class="h5"><i class="bi bi-chat-dots"></i> Mensageria — o Ink entrega a conversa</h2>
+            <p>Na aba <strong>Usuário</strong>, o perfil com permissão configura o envio em quatro passos: escolher WhatsApp ou Telegram, confirmar o celular do remetente, testar e começar a usar. Depois disso, o botão <strong>Mensagem</strong> aparece nos agendamentos do dia: o Ink abre o aplicativo já instalado com o texto pronto e <strong>quem envia é o operador</strong>.</p>
+            <p>Limites declarados: o aplicativo não envia sozinho, não confirma entrega, não lê respostas e não guarda o conteúdo das mensagens. Se não houver aplicativo registrado para o canal, a jornada informa que ele não está instalado em vez de simular sucesso.</p>
           </section>
           <div class="row g-4">
             <div class="col-md-6">
@@ -97,46 +125,52 @@
               <ul class="feature-list">
                 <li>Calendário e lista do dia com horário, duração e valor (sem sobrepor horários)</li>
                 <li>Três perfis (Tatuagem, Odontologia e Beleza) com paleta, vocabulário e sugestões financeiras próprias</li>
+                <li>Equipe com papéis: Administrador, Agenda e Financeiro, cada um com acesso limitado por permissão</li>
+                <li>Mensagem por WhatsApp ou Telegram a partir do agendamento, com o texto pronto e o envio feito pelo operador</li>
                 <li>Check “Pagou” na lista do dia</li>
                 <li>Backup <code>.inkbak</code> com senha, backup automático (pode desligar) e CSV que não duplica ao importar</li>
               </ul>
             </div>
             <div class="col-md-6">
               <h2 class="h5"><i class="bi bi-code"></i> Detalhe opcional</h2>
-              <p>Desktop nativo para Windows e Linux: <strong>Java 25 + JavaFX 21.0.11 + SQLite</strong>. A preferência visual fica em <code>app_preferences</code> (V24) e as sementes por nicho entram na V25. PWA (não antes de 2028): o mesmo backend. Oficina <code>caracore-ink</code>; loja <code>caracore-ink-releases</code>.</p>
+              <p>Desktop nativo para Windows e Linux: <strong>Java 25 + JavaFX 21.0.11 + SQLite</strong>. A preferência visual fica em <code>app_preferences</code> (V24), as sementes por nicho na V25 e a equipe em <code>app_users</code> (V26, PBKDF2; o responsável continua fora do banco). O layout é medido de 768×520 a 2560×1400. PWA (não antes de 2028): o mesmo backend. Oficina <code>caracore-ink</code>; loja <code>caracore-ink-releases</code>.</p>
               <ul class="feature-list">
-                <li>Build Maven; testes JUnit 5</li>
+                <li>Build Maven; testes JUnit 5 e FxIT (papéis, mensageria, layout)</li>
                 <li>Operação local (Bunker); internet só para baixar o instalador</li>
+                <li>Atualização pelo app com manifesto assinado (Ed25519) e SHA-256; o download segue redirecionamento do GitHub desde a 2.2.1</li>
               </ul>
             </div>
           </div>
           <section class="mt-4" id="primeiros-passos">
             <h2 class="h5"><i class="bi bi-door-open"></i> Primeiros passos no desktop</h2>
-            <p>Versão atual: <strong>v2.1.0</strong>. Windows: setup e ZIP portátil; Linux: pacote <code>.deb</code>. macOS e Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG). Downloads e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
+            <p>Versão atual: <strong>v2.2.1</strong>. Windows: setup e ZIP portátil; Linux: pacote <code>.deb</code>. macOS e Android: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA em roadmap (não antes de 2028)</a> (sem DMG). Downloads e SHA256 na <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">loja</a>. Guia: <a href="https://ink.caracore.com.br/artifacts/instalacao-windows.html" target="_blank" rel="noopener">Instalação Windows</a>. Login: <a href="https://ink.caracore.com.br/primeiro-acesso.html" target="_blank" rel="noopener">Primeiro acesso</a>.</p>
             <p>Isto <strong>não é</strong> o PDV Cara Core. Não use <code>admin</code>/<code>admin</code> nem <code>admin</code>/<code>admin123</code>. O Ink Agenda <strong>não traz usuário de fábrica</strong>.</p>
             <ol>
-              <li>Baixe <code>AgendaInk-2.1.0-windows-setup.exe</code> ou <code>AgendaInk-2.1.0-windows.zip</code>. Runtime Java 25 embutido — sem JDK. No Linux, instale <code>agenda-ink-2.1.0-linux.deb</code> com <code>sudo apt install ./agenda-ink-2.1.0-linux.deb</code>.</li>
+              <li>Baixe <code>AgendaInk-2.2.1-windows-setup.exe</code> ou <code>AgendaInk-2.2.1-windows.zip</code>. Runtime Java 25 embutido — sem JDK. No Linux, instale <code>agenda-ink-2.2.1-linux.deb</code> com <code>sudo apt install ./agenda-ink-2.2.1-linux.deb</code>.</li>
               <li>Instale ou extraia e abra <code>AgendaInk.exe</code>. Um aviso diz “Seus dados ficam só neste computador”.</li>
               <li>A primeira tela é o <strong>Passo 1 de 3 — Identificação</strong>: escolha o perfil (Tatuagem, Odontologia ou Beleza), que aplica a skin na hora, e informe o celular do responsável; clique em <strong>Continuar</strong>. Tudo ocorre neste dispositivo — sem conta na nuvem.</li>
               <li><strong>Passo 2 de 3 — Senha e recuperação local:</strong> perfil (Proprietário, Tatuador Sr ou Tatuador Jr), senha (mínimo 8 caracteres), frase de recuperação (mínimo 10 caracteres) e, recomendado, 8 códigos de emergência (anote; o app mostra uma vez). Clique em <strong>Concluir configuração</strong>.</li>
               <li><strong>Passo 3:</strong> o login aparece só agora. Entre com o mesmo celular e a senha criada.</li>
             </ol>
+            <p><strong>Atualização:</strong> quem está na 2.1.0 ou na 2.2.0 encontra o botão «Baixar e abrir instalador» quebrado nessas versões — baixe a 2.2.1 pela loja uma vez. Da 2.2.1 em diante a atualização volta a funcionar pelo próprio app, sempre com o SHA-256 do manifesto assinado conferido.</p>
             <p>Dados: <code>%LOCALAPPDATA%\CaraCore\AgendaInk\agenda.db</code>; backup automático em <code>backups\</code>; registro técnico em <code>logs\</code>. Reinstalar o app não apaga essa pasta.</p>
             <p><strong>Esqueci minha senha:</strong> sem recuperação remota (sem SMS/e-mail). No login, “Esqueci minha senha” gera um código de 6 dígitos só neste computador, válido por 15 minutos, com a frase de recuperação ou um código de emergência. Sem frase nem código: restaurar um backup ou apagar a pasta de dados.</p>
-            <p>Depois de entrar: 1 cliente · 1 agendamento · 1 receita ou despesa · 1 backup com senha em Config → Backup do estúdio. Manual completo na <a href="https://ink.caracore.com.br/manual.html" target="_blank" rel="noopener">loja</a>.</p>
+            <p>Depois de entrar: 1 cliente · 1 agendamento · 1 receita ou despesa · 1 backup com senha em Config → Backup do estúdio. Para trabalhar com equipe, cadastre as pessoas em <strong>Config → Usuários e perfis</strong> (somente administrador). Manual completo na <a href="https://ink.caracore.com.br/manual.html" target="_blank" rel="noopener">loja</a>.</p>
           </section>
           <section class="mt-4" id="pwa">
             <h2 class="h5"><i class="bi bi-phone"></i> PWA — não antes de 2028</h2>
-            <p>macOS fica sem instalador nativo; no Linux, a v2.1.0 publica o pacote <code>.deb</code>. O canal abrangente é o PWA (mesmo backend da v2): macOS, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá, o Desktop v2.1.0 (Windows e Linux) é a versão atual. A 3.0 substitui o Desktop só depois de existir a importação dos dados. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
+            <p>macOS fica sem instalador nativo; no Linux, a linha 2.x publica o pacote <code>.deb</code>. O canal abrangente é o PWA (mesmo backend da v2): macOS, Linux, Android e tablet. <strong>Não antes de 2028</strong>, depois do Hub. Até lá, o Desktop v2.2.1 (Windows e Linux) é a versão atual. A 3.0 substitui o Desktop só depois de existir a importação dos dados. Página da loja: <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">ink.caracore.com.br/pwa.html</a>.</p>
           </section>
           <section class="mt-4" id="operacao">
             <h2 class="h5"><i class="bi bi-clipboard-check"></i> Operação no estúdio</h2>
             <ul>
               <li>Conferir agenda do dia antes de abrir atendimento</li>
               <li>Usar o vocabulário do perfil ativo (sessão, consulta ou procedimento) nos lançamentos e no diálogo de agendamento</li>
+              <li>Cadastrar a equipe em Config → Usuários e perfis e revisar o que cada papel vê; a gestão de usuários é só do administrador</li>
+              <li>Configurar WhatsApp ou Telegram na aba Usuário e confirmar que o aparelho do remetente tem o aplicativo instalado</li>
               <li>Atualizar pagamento ao finalizar a sessão</li>
               <li>Lançar despesas no mesmo dia</li>
-              <li>Backup automático a cada hora e ao fechar (30 cópias no PC); backup <code>.inkbak</code> com senha ao menos uma vez por semana, guardado em pendrive ou outro disco</li>
+              <li>Backup automático a cada hora e ao fechar (30 cópias no PC); backup <code>.inkbak</code> com senha ao menos uma vez por semana, guardado em pendrive ou outro disco. Ao restaurar um dossiê anterior à 2.2, a equipe precisa ser cadastrada de novo; o responsável continua entrando como administrador</li>
             </ul>
           </section>
           <div class="text-center mt-4 d-flex flex-wrap justify-content-center gap-2">

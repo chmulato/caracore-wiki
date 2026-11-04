@@ -34,9 +34,9 @@ function initWikiSearch() {
         },
         {
             title: 'Ink Agenda',
-            description: 'Aplicativo para tatuagem, odontologia e beleza com agenda, clientes, financeiro e operação offline no desktop — v2.1.0 publicada',
+            description: 'Aplicativo para tatuagem, odontologia e beleza com agenda, clientes, financeiro, equipe com papéis e mensageria no desktop — v2.2.1 publicada',
             url: 'projeto-ink.html',
-            tags: ['ink agenda', 'tatuagem', 'odontologia', 'beleza', 'estúdio', 'agenda', 'financeiro', 'clientes', 'javafx', 'sqlite', 'offline', 'windows', 'linux', 'v2.1.0'],
+            tags: ['ink agenda', 'tatuagem', 'odontologia', 'beleza', 'estúdio', 'agenda', 'financeiro', 'clientes', 'equipe', 'mensageria', 'javafx', 'sqlite', 'offline', 'windows', 'linux', 'v2.2.1'],
             category: 'projeto'
         },
         {
