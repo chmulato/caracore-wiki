@@ -12,12 +12,12 @@ alwaysApply: true
 - Corretiva de HTTP 405 e ESTORNADA/CANCELADA, migração V047 e fila em transação independente. Mesmos limites, sem PIX/NF-e/NFC-e.
 
 
-**Atualizado:** 2026-10-30 · Fonte IAs: `caracore-site/AGENTS.md` + `caracore-site/docs/ECOSYSTEM_MEMORIA.md` (o antigo `D:\onedrive\dev\AGENTS.md` **não existe mais**) · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
+**Atualizado:** 2026-11-07 · Fonte IAs: `caracore-site/AGENTS.md` + `caracore-site/docs/ECOSYSTEM_MEMORIA.md` (o antigo `D:\onedrive\dev\AGENTS.md` **não existe mais**) · **Nova tarefa:** `caracore-site/docs/INICIAR_NOVA_TAREFA.md`
 
-## Estado do que a wiki descreve (31/10/2026)
+## Estado do que a wiki descreve (07/11/2026)
 
 - **PDV:** a 3.2.12 aparece como **versão anterior, indicada para operar** (o GitHub ainda a marca *Latest*); a v4 está em **pré-lançamento** e o **Gate E recusou o GA em 29/10/2026** — rota `rc7` curta, GA só em data escrita (`D-GA-1`). **08/11/2026 é o fim da manutenção da 3.2.12, não GA da v4.** Não chamar a v4 de estável/Latest/GA; não chamar a 3.2.12 de corretiva.
-- **Hub:** pré-release `v2.1.0-rc1.8` publicada em 31/10/2026; a `rc1.7` (27/10) foi reprovada pela QA da rodada 5 (N1/N2 bloqueantes). O aceite formal de produto da rc1.8 segue pendente; o GA Windows segue 06/04/2027 e não é homologado.
+- **Hub:** pré-release `v2.1.0-rc1.10` publicada em 07/11/2026; a `rc1.8` (31/10) permanece no histórico e a `rc1.7` (27/10) foi reprovada pela QA da rodada 5 (N1/N2 bloqueantes). O aceite formal de produto da rc1.10 segue pendente; o GA Windows segue 06/04/2027 e não é homologado.
 - **Copiar com honestidade:** o que não tem `arquivo:linha`, teste ou run não é fato; estado antes do adjetivo; bloqueado/não medido ≠ aprovado; nunca "0 CVE" (SCA do PDV não medido).
 
 ## Repositório e papel
@@ -51,7 +51,7 @@ alwaysApply: true
 
 ## CaraCore Hub
 - **Gestão logística interna para pontos de retirada (PUDOs):** recebe, confere, guarda por posição e entrega com conferência de volume. Encomendas de ML, Shopee e Temu; Amazon e B2W não têm conector nesta edição (fora do filtro de canais). Não é marketplace, não é centro de distribuição, não é Flask nem orquestrador interno. Aplicação web 2.1 sobre Tomcat embutido no instalador, com SQLite local; o `WAR` é artefato interno de build e não aparece na copy pública.
-- Download vigente: pré-release Windows `v2.1.0-rc1.8` em https://hub.caracore.com.br/download.html (ZIP portátil, unsigned). SHA-256 do ZIP `3c4e61b2e192fece6667ccfbc79d735f3fad7ce8542e50c492b9ef24a9743334`; esta build não tem instalador NSIS. A tag `v2.1.0-rc1.7`, `v2.1.0-rc1.6` (25/10), `v2.1.0-rc1.2`, `v2.1.0-rc1.1` e `v2.1.0-rc1` permanecem com seus pacotes; `rc1.3`, `rc1.4` e `rc1.5` nunca foram tagueadas. Mac e Linux fora desta tag. Não é GA e não está homologada: rodada de QA, **B7** (smoke Linux x64) e S6.9 abertos. A tela `Auditoria e Logs` (`/admin/auditoria`, ADMIN) tem item no menu desde a `rc1.7`, em Administração → Auditoria e Logs; na `rc1.6` só se abria pela URL.
+- Download vigente: pré-release Windows `v2.1.0-rc1.10` em https://hub.caracore.com.br/download.html (ZIP portátil, unsigned, 228.354.977 bytes). SHA-256 do ZIP `0b18fbcf3af02d53a341ac5b83af9132a0ef201e698585160f332d3ad8bdae00`; esta build não tem instalador NSIS. A `v2.1.0-rc1.8` (31/10, 324.536.724 bytes) conserva o pacote dela; a `v2.1.0-rc1.7`, `v2.1.0-rc1.6` (25/10), `v2.1.0-rc1.2`, `v2.1.0-rc1.1` e `v2.1.0-rc1` também permanecem com seus pacotes; `rc1.3`, `rc1.4` e `rc1.5` nunca foram tagueadas. Mac e Linux fora desta tag. Não é GA e não está homologada: rodada de QA e S6.9 abertos; o **B7** (smoke Linux x64) fechou em 07/11/2026 (run `42415755367`, 10/10 com backend `gnome_libsecret`). A rc1.10 traz a base da atualização assinada: chave pública Ed25519 embutida e conferente de SHA-256/assinatura; o canal publica o manifesto assinado, mas esta versão ainda não baixa nem aplica atualização sozinha. A tela `Auditoria e Logs` (`/admin/auditoria`, ADMIN) tem item no menu desde a `rc1.7`, em Administração → Auditoria e Logs; na `rc1.6` só se abria pela URL.
 - Próxima pré-release: outra tag, sem repor os bytes já publicados. GA instalador Windows 06/04/2027 (SQLite). Tia Sócia = pitch. Alinhamento: `docs/projeto-hub.html`. Manual: `docs/hub/`.
 - **20/10/2026:** manual (`docs/hub/`, 10 páginas), `projeto-hub.html`, glossário, ecossistema e tecnologias reescritos sem `WAR`/`oficina`, com login por telefone, recuperação por código offline de uso único (nova senha com mínimo de 12 caracteres, `CodigoRecuperacaoService.java:27`), sessão com timeout de inatividade de 30 min (padrão do Tomcat — o app não define `session-config`) e sem senha por e-mail/SMS. Commit `3fc45d2`. Documento alinhado não é aceite: a `v2.1.0-rc1.2` nunca foi aprovada pela QA da rodada 4 e a `v2.1.0-rc1.6` também não foi homologada.
 
