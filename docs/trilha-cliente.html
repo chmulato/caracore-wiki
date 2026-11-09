@@ -90,7 +90,7 @@
             <section class="mb-4">
                 <div class="alert alert-info" role="note">
                     <i class="bi bi-info-circle-fill"></i>
-                    <strong>Como ler:</strong> cada card é um cenário. O selo (PDV, CSO, Hub) diz o produto; os três blocos dizem o que muda para você. Manual de botão e download ficam na loja do produto.
+                    <strong>Como ler:</strong> cada card é um cenário. O selo (PDV, CSO, Hub, Ink) diz o produto; os três blocos dizem o que muda para você. Manual de botão e download ficam na loja do produto.
                 </div>
             </section>
 
@@ -98,11 +98,11 @@
                 <header class="wiki-track-heading">
                     <p class="wiki-track-kicker">Cenários</p>
                     <h2><i class="bi bi-compass"></i> Cenários prioritários</h2>
-                    <p class="wiki-track-lead">Comece pela dor que mais custa hoje. Os três produtos-chave vêm primeiro; segurança e transportes no computador vêm em seguida.</p>
+                    <p class="wiki-track-lead">Comece pela dor que mais custa hoje. Os quatro produtos principais vêm primeiro; segurança e transportes no computador vêm em seguida.</p>
                 </header>
 
                 <div class="row g-4">
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-3">
                         <div class="track-card project-card product-card product-card--pdv">
                             <div class="track-header track-cliente">
                                 <div>
@@ -128,7 +128,7 @@
                                             Abra o guia de serviços ou o que é o PDV nesta wiki. Download e manual de botão ficam na loja.
                                         </li>
                                     </ul>
-                                    <p class="scenario-note"><strong>Detalhe opcional:</strong> linha madura Java <code>v3.2.12-free</code> · linha piloto Rust <code>v0.1.4</code> (Windows).</p>
+                                    <p class="scenario-note"><strong>Detalhe opcional:</strong> linha madura Java <code>v4.0.0</code> (lançada em 08/11/2026; a <code>v3.2.12-free</code> é a versão anterior) · linha piloto Rust <code>v0.1.4</code> (Windows).</p>
                                     <div class="links">
                                         <a href="https://www.caracore.com.br/publications/livros/guia_de_servicos_caracore-pdv.html" target="_blank" rel="noopener"><i class="bi bi-journal-bookmark"></i> Guia de serviços (PDV)</a>
                                         <a href="projeto-pdv.html"><i class="bi bi-journal-code"></i> O que é o PDV</a>
@@ -139,7 +139,43 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="track-card project-card product-card product-card--hub">
+                            <div class="track-header track-cliente">
+                                <div>
+                                    <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> Cenário: balcão de retirada sem retrabalho</h3>
+                                    <small>A mesma encomenda em três painéis</small>
+                                </div>
+                                <span class="product-badge product-badge--hub">Hub</span>
+                            </div>
+                            <div class="track-body">
+                                <div class="scenario-card">
+                                    <h4>Processar mais com a mesma equipe</h4>
+                                    <ul class="scenario-steps">
+                                        <li>
+                                            <span class="step-label">O que você ganha</span>
+                                            Mercado Livre, Shopee e Temu numa fila só, com estoque visível e menos erro na retirada.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Como resolve agora</span>
+                                            Conheça a pré-release Windows <strong>v2.1.0-rc1.10</strong> para avaliação.
+                                        </li>
+                                        <li>
+                                            <span class="step-label">Próximo passo</span>
+                                            O GA do instalador segue em <strong>06/Abr/2027</strong>, para instalar sem equipe de TI.
+                                        </li>
+                                    </ul>
+                                    <div class="links">
+                                        <a href="projeto-hub.html"><i class="bi bi-journal-code"></i> O que é o Hub</a>
+                                        <a href="hub/index.html"><i class="bi bi-book"></i> Manual de uso</a>
+                                        <a href="https://hub.caracore.com.br" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Loja (vitrine)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
                         <div class="track-card project-card product-card product-card--cso">
                             <div class="track-header track-cliente">
                                 <div>
@@ -174,36 +210,36 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="track-card project-card product-card product-card--hub">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="track-card project-card product-card product-card--ink">
                             <div class="track-header track-cliente">
                                 <div>
-                                    <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> Cenário: balcão de retirada sem retrabalho</h3>
-                                    <small>A mesma encomenda em três painéis</small>
+                                    <h3 class="h5 mb-1"><i class="bi bi-calendar2-check"></i> Cenário: agenda e caixa no mesmo lugar</h3>
+                                    <small>Horário, cliente e pagamento em lugares diferentes</small>
                                 </div>
-                                <span class="product-badge product-badge--hub">Hub</span>
+                                <span class="product-badge product-badge--ink">Ink</span>
                             </div>
                             <div class="track-body">
                                 <div class="scenario-card">
-                                    <h4>Processar mais com a mesma equipe</h4>
+                                    <h4>Encher a agenda sem perder o financeiro</h4>
                                     <ul class="scenario-steps">
                                         <li>
                                             <span class="step-label">O que você ganha</span>
-                                            Mercado Livre, Shopee e Temu numa fila só, com estoque visível e menos erro na retirada.
+                                            Agenda, clientes e caixa no mesmo aplicativo, com a equipe entrando por papéis separados.
                                         </li>
                                         <li>
                                             <span class="step-label">Como resolve agora</span>
-                                            Conheça a pré-release Windows <strong>v2.1.0-rc1.10</strong> para avaliação.
+                                            Desktop Windows e Linux <strong>v2.2.1</strong>, publicado em 04/11/2026, para tatuagem, odontologia e beleza.
                                         </li>
                                         <li>
                                             <span class="step-label">Próximo passo</span>
-                                            O GA do instalador segue em <strong>06/Abr/2027</strong>, para instalar sem equipe de TI.
+                                            A <strong>2.3.0</strong> está planejada para <strong>29/01/2027</strong>, com conteúdo ainda não publicado.
                                         </li>
                                     </ul>
+                                    <p class="scenario-note"><strong>Detalhe opcional:</strong> opera offline por padrão, com dados em SQLite local · macOS sem instalador; a PWA da linha 3.0 não sai antes de 2028.</p>
                                     <div class="links">
-                                        <a href="projeto-hub.html"><i class="bi bi-journal-code"></i> O que é o Hub</a>
-                                        <a href="hub/index.html"><i class="bi bi-book"></i> Manual de uso</a>
-                                        <a href="https://hub.caracore.com.br" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Loja (vitrine)</a>
+                                        <a href="projeto-ink.html"><i class="bi bi-journal-code"></i> O que é o Ink</a>
+                                        <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Loja</a>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +383,7 @@
                 </div>
                 <div class="alert alert-light border mt-4 mb-0" role="note">
                     <i class="bi bi-info-circle"></i>
-                    <strong>Dois PDVs no computador, um produto:</strong> linha madura em <a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a> (canal <code>v3.2.12-free</code>).
+                    <strong>Dois PDVs no computador, um produto:</strong> linha madura em <a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a> (canal <code>v4.0.0</code>; a <code>v3.2.12-free</code> é a versão anterior).
                     Linha piloto em <a href="projeto-pdv-rust.html">projeto-pdv-rust.html</a> (release <code>v0.1.4</code>, Windows). Nenhuma substitui a outra.
                 </div>
             </section>

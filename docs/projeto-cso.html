@@ -276,7 +276,7 @@
 
           <section class="mb-5" id="gateway-versoes">
             <h2><i class="bi bi-arrow-repeat"></i> Gateway de versões — onde mora e como migra</h2>
-            <p>O canal que avisa os aplicativos desktop sobre novas versões (PDV, Hub, CSO e Ink Agenda) tem uma <strong>fonte primária única</strong>: o repositório <code>caracore-api</code>, que guarda a especificação do Gateway (contrato, catálogo de aplicativos e rotas). O <code>caracore-cso-quarkus</code> apenas <strong>hospeda temporariamente uma réplica</strong> desse serviço, no mesmo deployment da Gestão de Frotas, e deve refletir exatamente o código do <code>caracore-api</code>.</p>
+            <p>O canal que avisa os aplicativos desktop sobre novas versões (PDV, CSO, Hub e Ink Agenda) tem uma <strong>fonte primária única</strong>: o repositório <code>caracore-api</code>, que guarda a especificação do Gateway (contrato, catálogo de aplicativos e rotas). O <code>caracore-cso-quarkus</code> apenas <strong>hospeda temporariamente uma réplica</strong> desse serviço, no mesmo deployment da Gestão de Frotas, e deve refletir exatamente o código do <code>caracore-api</code>.</p>
             <ul>
               <li>As rotas usam endereços neutros (<code>api.caracore.com.br/releases/{app}/latest.json</code>), sem citar o produto que hospeda o serviço. Por isso o Gateway pode ir para um servidor dedicado sem mudar nada nos aplicativos instalados.</li>
               <li>Mudanças de contrato começam no <code>caracore-api</code> e são replicadas no CSO; o CSO não é editado direto.</li>

@@ -330,6 +330,13 @@ pre {
   }
 }
 
+/* Home: quatro produtos principais no desktop */
+@media (min-width: 1025px) {
+  .wiki-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .wiki-persona,
 .wiki-product {
   height: 100%;

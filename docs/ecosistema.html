@@ -85,9 +85,10 @@
                             <a href="projetos-overview.html"><i class="bi bi-collection"></i> Visão Geral dos Projetos</a>
                             <ul class="submenu">
                                 <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
-                                <li><a href="projeto-pdv-rust.html">Linha piloto do PDV</a></li>
-                                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
                                 <li><a href="projeto-hub.html">CaraCore Hub</a></li>
+                                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
+                                <li><a href="projeto-ink.html">Ink Agenda</a></li>
+                                <li><a href="projeto-pdv-rust.html">Linha piloto do PDV</a></li>
                             </ul>
                         </li>
                         <li><a href="ecosistema.html" class="active"><i class="bi bi-globe2"></i> Mapa do ecossistema</a></li>
@@ -107,8 +108,8 @@
                         <p class="wiki-home-subtitle">
                             Como a Cara Core se organiza: <strong>empresa</strong> → <strong>produto</strong> → <strong>oficina</strong> (onde o código vive) → <strong>loja</strong> (onde o cliente baixa e lê).
                         </p>
-                        <p class="mb-2"><strong>Eco Mundo</strong> é só o apelido interno desta página. Os <strong>três produtos-chave</strong> são o <a href="projeto-pdv.html">PDV</a> (caixa), o <a href="projeto-cso.html">CSO</a> (frota) e o <a href="projeto-hub.html">Hub</a> (encomendas). O restante do portfólio não compete com esse núcleo.</p>
-                        <p class="mb-0 wiki-lede">Duas linhas de PDV convivem (nenhuma substitui a outra). CSO de frota já no ar; transportes no computador em <strong>08/Nov/2028</strong>. Hub com pré-release Windows <strong>v2.1.0-rc1.10</strong> para avaliação; GA do instalador em <strong>06/Abr/2027</strong>.</p>
+                        <p class="mb-2"><strong>Eco Mundo</strong> é só o apelido interno desta página. Os <strong>quatro produtos-chave</strong> são o <a href="projeto-pdv.html">PDV</a> (caixa), o <a href="projeto-hub.html">Hub</a> (encomendas), o <a href="projeto-cso.html">CSO</a> (frota) e o <a href="projeto-ink.html">Ink Agenda</a> (agenda). O restante do portfólio não compete com esse núcleo.</p>
+                        <p class="mb-0 wiki-lede">Duas linhas de PDV convivem (nenhuma substitui a outra). CSO de frota já no ar; transportes no computador em <strong>08/Nov/2028</strong>. Hub com pré-release Windows <strong>v2.1.0-rc1.10</strong> para avaliação; GA do instalador em <strong>06/Abr/2027</strong>. Ink Agenda com Desktop <strong>v2.2.1</strong> publicado e a <strong>2.3.0</strong> planejada para <strong>29/Jan/2027</strong>.</p>
                         <div class="wiki-quick-actions wiki-quick-actions--trails" role="navigation" aria-label="Trilhas">
                             <a class="btn btn-success btn-sm" href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Trilha do Cliente</a>
                             <a class="btn btn-primary btn-sm" href="trilha-estagiario.html"><i class="bi bi-mortarboard"></i> Trilha do Estagiário</a>
@@ -124,28 +125,28 @@
                             <p class="wiki-track-lead">Não é um organograma técnico. É o caminho de uma ideia até o cliente.</p>
                         </header>
                         <div class="row g-4">
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-6">
                                 <div class="scenario-card h-100">
                                     <div class="kicker">1</div>
                                     <h4>Matriz</h4>
                                     <p class="mb-0">A empresa (www.caracore.com.br): o que vendemos, o que já existe, o que ainda não está em oferta aberta.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-6">
                                 <div class="scenario-card h-100">
                                     <div class="kicker">2</div>
                                     <h4>Produto</h4>
-                                    <p class="mb-0">A solução com nome: PDV, CSO, Hub — e o restante do portfólio, sem competir com esse núcleo.</p>
+                                    <p class="mb-0">A solução com nome: PDV, CSO, Hub e Ink Agenda — e o restante do portfólio, sem competir com esse núcleo.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-6">
                                 <div class="scenario-card h-100">
                                     <div class="kicker">3</div>
                                     <h4>Oficina</h4>
                                     <p class="mb-0">Onde o time constrói o código. O cliente não precisa entrar aqui.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-6">
                                 <div class="scenario-card h-100">
                                     <div class="kicker">4</div>
                                     <h4>Loja</h4>
@@ -168,7 +169,7 @@
                             <ul class="scenario-steps mb-0">
                                 <li><span class="step-label">O que você ganha</span> Um discurso único: o que já existe, o que ainda não está à venda, e para quem cada produto serve.</li>
                                 <li><span class="step-label">Como resolve agora</span> A matriz aponta para as lojas (pdv., pdv-rust., hub., cso-transp.) e para a aplicação do CSO. Sem pasta <code>/delivery/</code>.</li>
-                                <li><span class="step-label">Próximo passo</span> Os três produtos-chave abaixo; o restante do mapa não compete com esse núcleo.</li>
+                                <li><span class="step-label">Próximo passo</span> Os quatro produtos-chave abaixo; o restante do mapa não compete com esse núcleo.</li>
                             </ul>
                         </div>
                     </section>
@@ -177,11 +178,11 @@
                     <section class="wiki-track wiki-track--cliente mb-5">
                         <header class="wiki-track-heading">
                             <p class="wiki-track-kicker">Camada 2 · Núcleo</p>
-                            <h2><i class="bi bi-bullseye"></i> Três produtos-chave</h2>
-                            <p class="wiki-track-lead">Comece por aqui. O restante do portfólio existe e tem loja; não compete com este trio.</p>
+                            <h2><i class="bi bi-bullseye"></i> Quatro produtos-chave</h2>
+                            <p class="wiki-track-lead">Comece por aqui. O restante do portfólio existe e tem loja; não compete com este núcleo.</p>
                         </header>
                         <div class="row g-4">
-                            <div class="col-lg-4">
+                            <div class="col-md-6 col-lg-3">
                                 <div class="track-card project-card product-card product-card--pdv">
                                     <div class="track-header track-cliente">
                                         <h3 class="h5 mb-1"><i class="bi bi-shop"></i> CaraCore PDV</h3>
@@ -199,25 +200,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="track-card project-card product-card product-card--cso">
-                                    <div class="track-header track-cliente">
-                                        <h3 class="h5 mb-1"><i class="bi bi-truck"></i> CaraCore CSO</h3>
-                                        <small>Frota no navegador — não é GPS</small>
-                                        <span class="product-badge product-badge--cso">CSO</span>
-                                    </div>
-                                    <div class="track-body">
-                                        <div class="scenario-card">
-                                            <ul class="scenario-steps">
-                                                <li><span class="step-label">O que você ganha</span> Veículos e equipe fora da planilha, sem comprar rastreador.</li>
-                                                <li><span class="step-label">Como resolve agora</span> Gestão de Frotas já no ar em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>. Vitrine das duas frentes: <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a>.</li>
-                                                <li><span class="step-label">Próximo passo</span> Organizar entregas e acompanhar deslocamentos pelo celular: Transportes + Virtual Tracker integrado, alvo conjunto <strong>08/Nov/2028</strong>, sujeito à validação. <a href="projeto-cso.html#virtual-tracker">Como funciona e limites</a>.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-6 col-lg-3">
                                 <div class="track-card project-card product-card product-card--hub">
                                     <div class="track-header track-cliente">
                                         <h3 class="h5 mb-1"><i class="bi bi-box-seam"></i> CaraCore Hub</h3>
@@ -235,6 +218,42 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="track-card project-card product-card product-card--cso">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-truck"></i> CaraCore CSO</h3>
+                                        <small>Frota no navegador — não é GPS</small>
+                                        <span class="product-badge product-badge--cso">CSO</span>
+                                    </div>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Veículos e equipe fora da planilha, sem comprar rastreador.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Gestão de Frotas já no ar em <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">cso.caracore.com.br</a>. Vitrine das duas frentes: <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">cso-transp.caracore.com.br</a>.</li>
+                                                <li><span class="step-label">Próximo passo</span> Organizar entregas e acompanhar deslocamentos pelo celular: Transportes + Virtual Tracker integrado, alvo conjunto <strong>08/Nov/2028</strong>, sujeito à validação. <a href="projeto-cso.html#virtual-tracker">Como funciona e limites</a>.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="track-card project-card product-card product-card--ink">
+                                    <div class="track-header track-cliente">
+                                        <h3 class="h5 mb-1"><i class="bi bi-calendar2-check"></i> CaraCore Ink Agenda</h3>
+                                        <small>Agenda e financeiro de hora marcada</small>
+                                        <span class="product-badge product-badge--ink">Ink</span>
+                                    </div>
+                                    <div class="track-body">
+                                        <div class="scenario-card">
+                                            <ul class="scenario-steps">
+                                                <li><span class="step-label">O que você ganha</span> Agenda, clientes e caixa no mesmo lugar, com a equipe entrando por papéis separados.</li>
+                                                <li><span class="step-label">Como resolve agora</span> Desktop Windows e Linux <strong>v2.2.1</strong>, publicado em 04/Nov/2026, em <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">ink.caracore.com.br</a>.</li>
+                                                <li><span class="step-label">Próximo passo</span> Desktop <strong>2.3.0</strong> planejado para <strong>29/Jan/2027</strong>; PWA em roadmap, não antes de 2028. <a href="projeto-ink.html">O que é o Ink</a>.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -242,7 +261,7 @@
                         <header class="wiki-track-heading">
                             <p class="wiki-track-kicker">Camada 2 · Portfólio</p>
                             <h2><i class="bi bi-collection"></i> Demais produtos</h2>
-                            <p class="wiki-track-lead">Existem e têm loja ou vitrine. Manuais de botão ficam no subdomínio; nesta wiki só o alinhamento. Os atalhos de 1 KB (Ink, Minerador, Seed…) redirecionam de propósito para a loja.</p>
+                            <p class="wiki-track-lead">Existem e têm loja ou vitrine. Manuais de botão ficam no subdomínio; nesta wiki só o alinhamento. Os atalhos de 1 KB (Minerador, Seed…) redirecionam de propósito para a loja.</p>
                         </header>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -250,13 +269,6 @@
                                     <h4><i class="bi bi-lightning-charge"></i> Linha piloto do PDV</h4>
                                     <p>A segunda linha de caixa, mais leve, piloto Windows. Convive com a linha madura; não a substitui.</p>
                                     <div class="links"><a href="projeto-pdv-rust.html">Alinhamento</a> · <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">Loja</a></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="scenario-card h-100">
-                                    <h4><i class="bi bi-pen"></i> Ink Agenda</h4>
-                                    <p>Agenda, clientes e financeiro para tatuagem, odontologia e beleza, com equipe de papéis separados. Desktop Windows e Linux v2.2.1 (04/Nov/2026). PWA não antes de 2028.</p>
-                                    <div class="links"><a href="projeto-ink.html">Alinhamento</a> · <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">Loja</a> · <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA</a></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -338,7 +350,7 @@
                                         <tr>
                                             <td><i class="bi bi-shop"></i> PDV — linha madura</td>
                                             <td><code>caracore-pdv</code></td>
-                                            <td>Java 25 · Quarkus · SQLite · navegador (localhost:8080)</td>
+                                            <td>Java 25 · Quarkus · SQLite · Edge via launcher (v4) · navegador (3.2.12-free)</td>
                                         </tr>
                                         <tr>
                                             <td><i class="bi bi-lightning-charge"></i> PDV — linha piloto</td>
@@ -489,7 +501,7 @@
                         <header class="wiki-track-heading">
                             <p class="wiki-track-kicker">Outros canais</p>
                             <h2><i class="bi bi-broadcast"></i> Presenças institucionais</h2>
-                            <p class="wiki-track-lead">Além das lojas: alinhamento, editorial e operação. Não competem com PDV, CSO e Hub.</p>
+                            <p class="wiki-track-lead">Além das lojas: alinhamento, editorial e operação. Não competem com PDV, CSO, Hub e Ink Agenda.</p>
                         </header>
                         <div class="row g-3">
                             <div class="col-md-6">

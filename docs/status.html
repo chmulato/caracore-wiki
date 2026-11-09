@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estado dos Produtos — versões e datas | Wiki Cara Core</title>
-  <meta name="description" content="Centro de status da Cara Core: linhas e versões do PDV, CSO e Hub, pré-lançamentos, RC, GA, manutenção e cronogramas.">
+  <meta name="description" content="Centro de status da Cara Core: linhas e versões do PDV, CSO, Hub e Ink Agenda, pré-lançamentos, RC, GA, manutenção e cronogramas.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -62,8 +62,9 @@
               <a href="projetos-overview.html"><i class="bi bi-collection"></i> Produtos</a>
               <ul class="submenu">
                 <li><a href="projeto-pdv.html">CaraCore PDV</a></li>
-                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
                 <li><a href="projeto-hub.html">CaraCore Hub</a></li>
+                <li><a href="projeto-cso.html">CaraCore CSO</a></li>
+                <li><a href="projeto-ink.html">Ink Agenda</a></li>
               </ul>
             </li>
             <li><a href="glossario.html"><i class="bi bi-book"></i> Glossário</a></li>
@@ -77,7 +78,7 @@
             <p class="wiki-status-kicker">Centro de status</p>
             <h1><i class="bi bi-activity"></i> Estado dos Produtos</h1>
             <p class="wiki-lede">O que está no ar, o que está em pré-lançamento e o que está previsto. A página inicial explica o que cada produto faz; esta página registra versões, datas e o que ainda depende de validação.</p>
-            <p class="wiki-status-updated">Quadro consolidado em 31/10/2026. Detalhes de release ficam na loja de cada produto.</p>
+            <p class="wiki-status-updated">Quadro consolidado em 09/11/2026. Detalhes de release ficam na loja de cada produto.</p>
           </div>
 
           <div class="alert alert-info" role="note">
@@ -101,14 +102,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-label="Item">Linha Java</td>
+                    <td data-label="Item">Linha Java — v4</td>
                     <td data-label="Situação"><span class="badge text-bg-success">Indicada para operar</span></td>
-                    <td data-label="Versão / data"><strong>v3.2.12-free</strong> — versão anterior, última da linha 3.2.x</td>
+                    <td data-label="Versão / data"><strong>v4.0.0</strong> — Windows 10/11 x64, lançada em 08/11/2026, com migração do banco da 3.2.x no primeiro acesso</td>
                   </tr>
                   <tr>
-                    <td data-label="Item">Linha Java</td>
-                    <td data-label="Situação"><span class="badge text-bg-warning text-dark">Manutenção encerrada</span></td>
-                    <td data-label="Versão / data"><strong>08/11/2026</strong> — fim da manutenção da 3.2.12 e lançamento da v4.0.0</td>
+                    <td data-label="Item">Linha Java — 3.2.12</td>
+                    <td data-label="Situação"><span class="badge text-bg-warning text-dark">Versão anterior</span></td>
+                    <td data-label="Versão / data"><strong>v3.2.12-free</strong> — última da linha 3.2.x, com os pacotes ainda disponíveis; manutenção encerrada em 08/11/2026</td>
                   </tr>
                   <tr>
                     <td data-label="Item">Linha Java — v4</td>
@@ -242,12 +243,58 @@
           <details class="wiki-accordion">
             <summary>
               <span>
+                <span class="wiki-accordion-title"><i class="bi bi-calendar2-check"></i> Ink Agenda</span>
+                <span class="wiki-accordion-meta">Desktop v2.2.1 publicado · 2.3.0 planejada para 29/01/2027 · PWA não antes de 2028</span>
+              </span>
+            </summary>
+            <div class="wiki-accordion-body">
+            <p>Agenda, clientes e financeiro para negócios de hora marcada, com a equipe entrando por papéis separados. <a href="projeto-ink.html">Ver a página do Ink</a> · <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">loja</a>.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle wiki-status-table">
+                <thead>
+                  <tr><th>Item</th><th>Situação</th><th>Versão / data</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Item">Desktop Windows e Linux</td>
+                    <td data-label="Situação"><span class="badge text-bg-success">Publicado</span></td>
+                    <td data-label="Versão / data"><strong>v2.2.1</strong> (04/11/2026) — setup e ZIP Windows, <code>.deb</code> Linux; três perfis (Tatuagem, Odontologia, Beleza) e mensageria por WhatsApp ou Telegram</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Assinatura digital</td>
+                    <td data-label="Situação"><span class="badge text-bg-warning text-dark">Ausente</span></td>
+                    <td data-label="Versão / data">Artefatos <em>unsigned</em>: SmartScreen e antivírus podem avisar</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Base de dados</td>
+                    <td data-label="Situação">Compatível</td>
+                    <td data-label="Versão / data">Bases 2.0.1–2.2.0 abrem na <strong>V26</strong>; a 2.2.1 não traz migração nova</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">Desktop 2.3.0</td>
+                    <td data-label="Situação"><span class="badge text-bg-secondary">Previsto</span></td>
+                    <td data-label="Versão / data"><strong>29/01/2027</strong> — entrega a Onda 1 (fundação multi-perfil, profissional e presença); conteúdo ainda não publicado</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Item">PWA (linha 3.0)</td>
+                    <td data-label="Situação">Roadmap</td>
+                    <td data-label="Versão / data">Depois do Desktop, <strong>não antes de 2028</strong>; macOS sem instalador nativo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </details>
+
+          <details class="wiki-accordion">
+            <summary>
+              <span>
                 <span class="wiki-accordion-title"><i class="bi bi-mortarboard"></i> Educação, laboratório e vitrine</span>
                 <span class="wiki-accordion-meta">Área 51, Reino OIDC, Circuito Ferradura e MKT</span>
               </span>
             </summary>
             <div class="wiki-accordion-body">
-            <p>Formação, laboratório e vitrine. Não são GA de operação e não substituem PDV, CSO ou Hub. <a href="projetos-overview.html">Ver o catálogo</a>.</p>
+            <p>Formação, laboratório e vitrine. Não são GA de operação e não substituem PDV, CSO, Hub ou Ink. <a href="projetos-overview.html">Ver o catálogo</a>.</p>
             <div class="table-responsive">
               <table class="table table-sm align-middle wiki-status-table">
                 <thead>
@@ -284,7 +331,7 @@
             <summary>
               <span>
                 <span class="wiki-accordion-title"><i class="bi bi-collection"></i> Demais produtos</span>
-                <span class="wiki-accordion-meta">BioReator, Ink, Minerador, Seed e Helianto</span>
+                <span class="wiki-accordion-meta">BioReator, Minerador, Seed e Helianto</span>
               </span>
             </summary>
             <div class="wiki-accordion-body">
@@ -298,11 +345,6 @@
                     <td data-label="Produto"><a href="projeto-bioreator.html">BioReator 4.0</a></td>
                     <td data-label="Versão / estado">Community <strong>1.1.1</strong> publicada em 13/10/2026</td>
                     <td data-label="Próximo marco">Premium previsto para <strong>18/06/2027</strong></td>
-                  </tr>
-                  <tr>
-                    <td data-label="Produto"><a href="projeto-ink.html">Ink Agenda</a></td>
-                    <td data-label="Versão / estado">Desktop Windows e Linux <strong>v2.2.1</strong> (Latest) desde 04/11/2026, metamórfico com perfis de Tatuagem, Odontologia e Beleza, equipe com papéis e mensageria WhatsApp/Telegram, sem assinatura digital; macOS fica para a linha 3.0 em PWA</td>
-                    <td data-label="Próximo marco">PWA não antes de 2028</td>
                   </tr>
                   <tr>
                     <td data-label="Produto"><a href="projeto-minerador.html">Minerador 4.0</a></td>
@@ -331,6 +373,7 @@
               <li>PDV: <a href="https://pdv.caracore.com.br/versoes.html" target="_blank" rel="noopener">versões publicadas</a> e <a href="https://pdv.caracore.com.br/roadmap-2026.html" target="_blank" rel="noopener">roadmap do produto</a>.</li>
               <li>Hub: <a href="https://hub.caracore.com.br/download.html" target="_blank" rel="noopener">download da pré-release</a>.</li>
               <li>CSO: <a href="https://cso.caracore.com.br/" target="_blank" rel="noopener">Gestão de Frotas</a> e <a href="https://cso-transp.caracore.com.br/" target="_blank" rel="noopener">vitrine de Transportes</a>.</li>
+              <li>Ink Agenda: <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">loja do Desktop</a> e <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">plano da PWA</a>.</li>
             </ul>
             <p class="wiki-status-note">A wiki não publica cronograma detalhado de engenharia nem builds internos. Quando um número depende de gate, QA ou homologação, ele aparece aqui como pendente.</p>
           </section>

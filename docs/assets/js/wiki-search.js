@@ -146,7 +146,7 @@ function initWikiSearch() {
         },
         {
             title: 'Mapa do ecossistema (Eco Mundo)',
-            description: 'Como a Cara Core se organiza: empresa, produto, oficina e loja. Núcleo PDV, CSO e Hub. Eco Mundo é só o apelido interno.',
+            description: 'Como a Cara Core se organiza: empresa, produto, oficina e loja. Núcleo PDV, CSO, Hub e Ink Agenda. Eco Mundo é só o apelido interno.',
             url: 'ecosistema.html',
             tags: ['eco mundo', 'ecossistema', 'matriz', 'oficina', 'loja', 'mapa', 'garagem'],
             category: 'navegação'
@@ -167,7 +167,7 @@ function initWikiSearch() {
         },
         {
             title: 'Estado dos Produtos (versões e datas)',
-            description: 'Centro de status: linhas e versões do PDV, CSO e Hub, pré-lançamentos, RC, GA, manutenção e cronogramas',
+            description: 'Centro de status: linhas e versões do PDV, CSO, Hub e Ink Agenda, pré-lançamentos, RC, GA, manutenção e cronogramas',
             url: 'status.html',
             tags: ['status', 'estado', 'versão', 'versões', 'rc', 'ga', 'manutenção', 'pré-lançamento', 'roadmap', 'cronograma', 'datas'],
             category: 'referência'
