@@ -287,3 +287,9 @@ html[data-theme="dark"] .seed-critical-note {
         scroll-margin-top: 1.5rem;
     }
 }
+
+/* Links no meio do texto: sublinhado como distincao que nao depende so da cor (WCAG 1.4.1) */
+.alert a:not(.btn):not(.btn-wiki),
+.seed-quickstart a:not(.btn):not(.btn-wiki) {
+    text-decoration: underline;
+}
