@@ -58,6 +58,29 @@
     display: flex;
     justify-content: center;
     min-width: min(100%, 280px);
+    /* O <pre> do mermaid herdava do Bootstrap o margin-bottom e o white-space: pre. */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    white-space: pre;
+}
+
+/* Diagramas pré-renderizados: variante clara por padrão, escura no tema dark.
+   display:contents mantém o SVG como item flex do painel, com a mesma largura
+   que ele tinha quando era renderizado em tempo de execução. */
+.mermaid-var {
+    display: contents;
+}
+
+.mermaid-var--dark {
+    display: none;
+}
+
+[data-theme="dark"] .mermaid-var--light {
+    display: none;
+}
+
+[data-theme="dark"] .mermaid-var--dark {
+    display: contents;
 }
 
 .wiki-diagram-list {
