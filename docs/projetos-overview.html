@@ -157,7 +157,7 @@
 
                     <div class="wiki-filter" role="search">
                         <label for="project-filter">Filtrar projetos</label>
-                        <input type="search" class="form-control wiki-filter-input" id="project-filter" placeholder="Nome, produto ou tema (ex.: frota, OIDC, PDV)" autocomplete="off" enterkeyhint="search" data-project-filter>
+                        <input type="search" class="form-control wiki-filter-input" id="project-filter" placeholder="Nome, produto ou tema (ex.: frota, OIDC, PDV)" autocomplete="off" data-project-filter>
                         <p class="wiki-filter-count" data-project-filter-count role="status" aria-live="polite"></p>
                         <p class="wiki-filter-empty" data-project-filter-empty hidden>Nenhum projeto encontrado. Tente outro termo.</p>
                         <button type="button" class="wiki-filter-more" data-project-filter-more hidden>Mostrar todos os projetos</button>
@@ -271,7 +271,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O CaraCore PDV está na <strong>v4.0.0</strong>, lançada em <strong>08/11/2026</strong> para <strong>Windows 10/11 x64</strong>: cadastrar produto, registrar venda e manter a operação estável, com banco local e migração do banco da linha 3.2.x no primeiro acesso. O pacote saiu assinado por duas chaves Ed25519, com SHA-256 publicado. A <strong>3.2.12-free</strong> continua disponível como versão anterior para <strong>Windows · Linux · macOS</strong>, com a manutenção encerrada em 08/11/2026. Sem PIX integrado e sem NF-e/NFC-e no Free. Premium: assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas por mês), cálculo de CBS/IBS. NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</p>
                                         <div class="alert alert-info mt-3 mb-3">
                                             <strong>Posicionamento:</strong> produto direcionado a <strong>pequenos e médios negócios</strong>, com foco operacional em <strong>CBS/IBS no Premium</strong>, para reduzir a complexidade do fechamento e da conversa com o contador.
@@ -289,7 +289,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Versão anterior: <strong>v3.2.12-free</strong> (aplicação web local; login em <code>http://localhost:8080/login</code>), com manutenção de transição encerrada em 08/11/2026. PDV v4.0.0 lançado em 08/11/2026, com release publicada em 06/11/2026. Oficina: Java 25 + Quarkus + SQLite.</p>
                                         <p><strong>Persona de negócio padronizada:</strong> gestor(a) de loja PME em crescimento, com equipe enxuta, pressão por fluxo de caixa e necessidade de simplificar rotina fiscal/financeira com transparência de evolução por versão.</p>
                                         
@@ -342,7 +342,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>Quem opera um ponto de retirada recebe encomenda de vários canais (Mercado Livre, Shopee, Temu) e precisa saber o que chegou, onde guardar e para quem entregar. O Hub junta recebimento, guarda e retirada num só lugar — para o PUDO, não para “ligar os produtos da Cara Core entre si”.</p>
                                         
                                         <p><strong>Benefícios práticos:</strong></p>
@@ -354,7 +354,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Código do produto <code>caracore-hub</code> (privado): Jakarta EE 10, JSP, Tomcat embutido no instalador e SQLite local no computador do cliente. Tia Sócia é exemplo de negócio na loja, não o nome do produto.</p>
                                         
                                         <p><strong>Arquitetura:</strong></p>
@@ -409,7 +409,7 @@
                                  </div>
                                  <div class="row">
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                         <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                          <p>O <strong>CaraCore CSO</strong> tira a frota da planilha. Frotas já cuida de veículos, custos e equipe. Transportes organizará as entregas; o Virtual Tracker permitirá acompanhar o deslocamento pelo celular, sem aparelho dedicado. Mapa e histórico somente no desktop; Frotas encaminhará conteúdo cifrado sem ler ou guardar trajetos. Acompanhamento exige rede e base disponível, sem fila offline.</p>
                                          <p><strong>Destaques da Frotas (já disponível):</strong></p>
                                          <ul class="feature-list">
@@ -420,7 +420,7 @@
                                          </ul>
                                      </div>
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                         <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                          <p>Não há oficina única <code>caracore-cso</code>. Aplicação em cso.caracore.com.br; vitrine em cso-transp.caracore.com.br.</p>
                                          <ul class="feature-list">
                                              <li><strong>Frotas:</strong> <code>caracore-cso-quarkus</code> — Java 21, Quarkus, PostgreSQL 16, Qute/HTMX, sessão opaca, multi-tenant</li>
@@ -469,7 +469,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O <strong>Ink Agenda</strong> organiza agenda, clientes e resultado financeiro de estúdios de tatuagem, consultórios de odontologia e espaços de beleza. <strong>Desktop Windows e Linux v2.2.1</strong> é a versão atual desde 04/11/2026, sem assinatura digital: um mesmo executável com três perfis (Tatuagem, Odontologia e Beleza) que adapta cores e vocabulário, agora com equipe de papéis separados e envio de mensagem por WhatsApp ou Telegram. A próxima atualização é o <strong>Desktop 2.3.0, planejada para 29/01/2027</strong>, com o profissional em cada agendamento e a presença separando atendido, falta e cancelado. PWA em roadmap (não antes de 2028) para macOS, Linux, Android e tablet — macOS sem instalador nativo. Opera offline por padrão.</p>
                                         <ul class="feature-list">
                                             <li>Agenda com calendário e lista do dia (ordem por horário; sem sobreposição)</li>
@@ -482,7 +482,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>O Ink Agenda desktop usa <strong>Java 25 + JavaFX 21 + SQLite local</strong> no Windows e no Linux. A <strong>v2.2.1</strong> é a versão atual/Latest: os três perfis ficam em <code>app_preferences</code> (V24), as sementes por nicho na V25 e a equipe em <code>app_users</code> (V26, senha em PBKDF2; o responsável continua fora do banco). Bases 2.0.1–2.2.0 abrem sem perda de dados; a 2.2.1 não traz migração nova e corrige o download do atualizador (redirecionamento do GitHub) com Jackson 3.1.7. O layout é medido de 768×520 a 2560×1400. macOS, Linux pelo navegador e Android: PWA em roadmap (não antes de 2028; sem DMG nativo), o mesmo backend.</p>
                                         <div class="alert alert-info mt-3">
                                             <strong>Links:</strong> <a href="https://ink.caracore.com.br/" target="_blank" rel="noopener">Portal oficial</a> · <a href="https://ink.caracore.com.br/download.html" target="_blank" rel="noopener">Download</a> · <a href="https://ink.caracore.com.br/pwa.html" target="_blank" rel="noopener">PWA (roadmap)</a>
@@ -521,7 +521,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>Linha piloto do PDV no computador da loja: mais leve, em teste no Windows (release v0.1.4). Convive com a linha madura; <strong>não a substitui</strong>.</p>
                                         <ul class="feature-list">
                                             <li>Checkout <code>/vendas-v2</code>, caixa, gestão, estoque e clientes (LGPD)</li>
@@ -531,7 +531,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Monorepo Rust + app Tauri 2 + UI React. Oficina <code>caracore-pdv-rust</code>; loja <code>caracore-pdv-rust-releases</code> em <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">pdv-rust.caracore.com.br</a>. Homologação SEFAZ real e multi-loja plena ainda não fazem parte do piloto.</p>
                                         <div class="alert alert-info mt-3">
                                             <strong>Links:</strong> <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">Loja Rust</a> · <a href="projeto-pdv-rust.html">Wiki da linha piloto</a> · <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4" target="_blank" rel="noopener">GitHub tag v0.1.4</a>
@@ -569,7 +569,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O <strong>Minerador 4.0</strong> é um simulador que aplica a lógica das <strong>Estações de Tratamento de Efluentes (ETE)</strong> ao refino de terras raras. No computador, o aluno ou o engenheiro explora cenários de separação mineral usando tanques em série, decantação e controle de pH — sem risco e com base em modelos validados.</p>
                                         <p><strong>Foco Ensino Médio Escolar:</strong></p>
                                         <ul class="feature-list">
@@ -580,7 +580,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Instalador Windows (.exe), checksums SHA-256 e MD5. Arquitetura ETE transferida para refino mineral; módulo Mineração desbloqueado via upgrade Ouro 4.0 (PIX + <code>license.key</code>), com liberação após confirmação de pagamento e registro LGPD.</p>
                                         <div class="alert alert-info mt-3">
                                             <strong>Links:</strong> <a href="https://ete.caracore.com.br/" target="_blank" rel="noopener">Portal oficial</a> · <a href="https://ete.caracore.com.br/download.html" target="_blank" rel="noopener">Download</a>
@@ -614,7 +614,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O Reino da Identidade Federada (Reino OIDC) ensina segurança de login com Lady OAuth, Lord OIDC e Pixie PKCE. A Edição Free 2.0.1 está na loja.</p>
                                         
                                         <p><strong>O que ensina:</strong></p>
@@ -630,7 +630,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Plataforma educacional gamificada que ensina OAuth 2.1 e OpenID Connect através de narrativa épica, flashcards interativos e progressão por níveis.</p>
                                         
                                         <p><strong>Recursos técnicos:</strong></p>
@@ -675,7 +675,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O <strong>CaraCore Seed</strong> é um aplicativo desktop local e complementar para cadastrar clientes e administrar licenças; cada produto mantém seu próprio aplicativo e banco. A pré-release candidata Windows x64 <strong>0.1.5</strong> está disponível para avaliação e aguarda homologação independente; o piloto é gratuito sob MIT. SQLite local, API protegida e vinculada a <code>127.0.0.1</code>, com porta dinâmica; documentação local sem CDN e sem checkout ou monitoramento remoto.</p>
                                         
                                         <p><strong>Vantagens:</strong></p>
@@ -687,7 +687,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>O pacote desktop inclui runtime Java 25 e Tomcat embutido; os dados permanecem no perfil local do usuário. Faça um backup antes de atualizar e teste a restauração apenas quando puder substituir os dados atuais. Consulte o <a href="projeto-seed.html#guia-uso">guia passo a passo</a> para cadastrar clientes, emitir licenças e proteger o token de integração.</p>
                                         
                                         <p><strong>Escopo:</strong></p>
@@ -727,7 +727,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O Circuito Ferradura é um produto educacional em evolução da Cara Core. A proposta é testar uma forma simples de apresentar lógica, ábaco romano e primeiros passos em Python. O uso pessoal é gratuito; para escolas, cursos e laboratórios, a adoção deve ser conversada e licenciada conforme o contexto.</p>
                                         
                                         <p><strong>O que o material propõe:</strong></p>
@@ -743,7 +743,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Curso em HTML, pacote Windows com executável, pacote macOS, HTML offline, checksums e registro local de conclusão. A wiki detalhada permanece na loja oficial do produto.</p>
                                         
                                         <p><strong>Módulos:</strong></p>
@@ -791,7 +791,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>A Área 51 é o <strong>laboratório de segurança</strong> da Cara Core: testamos padrões de acesso (quem entra, com qual identidade) antes de levar o mesmo cuidado aos outros produtos.</p>
                                         
                                         <p><strong>Como funciona:</strong></p>
@@ -807,7 +807,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Sistema de autenticação e autorização enterprise-grade em produção, com integração Google/Microsoft e controle granular de acessos.</p>
                                         
                                         <p><strong>Arquitetura:</strong></p>
@@ -851,7 +851,7 @@
                             <div class="project-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                         <p>O Helianto Condominium é a central do morador e do síndico para organizar a rotina do condomínio. Ele controla a entrada/saída de moradores, faz o rateio das despesas mensais de forma justa e gera o boleto contendo o QR Code Pix de liquidação imediata (BolePix) com total conformidade e privacidade.</p>
                                         <p><strong>Destaques:</strong></p>
                                         <ul class="feature-list">
@@ -863,7 +863,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                        <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                         <p>Arquitetura moderna de multilocação (multi-tenant) com shared schema PostgreSQL e isolamento robusto via <code>tenant_id</code> e ThreadLocal.</p>
                                         <p><strong>Stack:</strong></p>
                                         <ul class="feature-list">
@@ -909,11 +909,11 @@
                              <div class="project-body">
                                  <div class="row">
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                         <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                          <p>O <strong>BioReator 4.0</strong> é uma estação local de bioinsumos. A Community 1.1.1 simula efeitos configurados de oxigênio, temperatura e pH, fase lag e decaimento celular, distingue biomassa viável e total e registra o critério de término, com histórico e CSV. A Premium do mesmo produto chega em 18/06/2027, sem preço e sem PIX.</p>
                                      </div>
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-code text-warning"></i> Pacote 1.1.1</h4>
+                                         <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Pacote 1.1.1</h3>
                                          <p>Oficina <code>caracore-ru</code>. Windows x64, sem assinatura. O MSI e o ZIP estão publicados na release <code>bioreator-1.1.1</code>. O EXE fica dentro do ZIP. A Premium chega em 18/06/2027, sem arquivo.</p>
                                          <div class="alert alert-info mt-3">
                                              <strong>Loja:</strong> <a href="https://ru.caracore.com.br/download.html#bioreator40" target="_blank" rel="noopener">ru.caracore.com.br</a>
@@ -944,11 +944,11 @@
                              <div class="project-body">
                                  <div class="row">
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-people text-info"></i> O que muda para você</h4>
+                                         <h3 class="keep-h4"><i class="bi bi-people text-info"></i> O que muda para você</h3>
                                          <p>Ambiente gratuito para rotina, disciplina e presença digital com propósito. A Sala Cara Core organiza o fluxo do dia; a loja explica o método. <strong>Não vendemos.</strong></p>
                                      </div>
                                      <div class="col-md-6">
-                                         <h4><i class="bi bi-code text-warning"></i> Detalhe opcional</h4>
+                                         <h3 class="keep-h4"><i class="bi bi-code text-warning"></i> Detalhe opcional</h3>
                                          <p>Oficina <code>caracore-mkt</code> (Python). Loja em mkt.caracore.com.br. Sala canónica em tools.caracore.com.br/sala/.</p>
                                          <div class="alert alert-info mt-3">
                                              <strong>Vitrine:</strong> <a href="https://mkt.caracore.com.br/" target="_blank" rel="noopener">mkt.caracore.com.br</a> · <strong>Sala:</strong> <a href="https://tools.caracore.com.br/sala/" target="_blank" rel="noopener">tools.caracore.com.br/sala/</a>
@@ -993,7 +993,7 @@
                             <div class="col-md-4 mb-3">
                                 <div class="scenario-card support-card h-100">
                                     <div class="kicker">Cliente</div>
-                                    <h4>Trilha do Sucesso</h4>
+                                    <h3 class="keep-h4">Trilha do Sucesso</h3>
                                     <p class="wiki-lede">O que você ganha, como resolve agora, próximo passo.</p>
                                     <div class="links">
                                         <a href="trilha-cliente.html"><i class="bi bi-briefcase"></i> Abrir</a>
@@ -1003,7 +1003,7 @@
                             <div class="col-md-4 mb-3">
                                 <div class="scenario-card support-card h-100">
                                     <div class="kicker">Estagiário</div>
-                                    <h4>Trilha do Aprendizado</h4>
+                                    <h3 class="keep-h4">Trilha do Aprendizado</h3>
                                     <p class="wiki-lede">Primeira semana, padrão de entrega e qual produto resolve qual dor.</p>
                                     <div class="links">
                                         <a href="trilha-estagiario.html"><i class="bi bi-mortarboard"></i> Abrir</a>
@@ -1013,7 +1013,7 @@
                             <div class="col-md-4 mb-3">
                                 <div class="scenario-card support-card h-100">
                                     <div class="kicker">Sócio</div>
-                                    <h4>Trilha da Estratégia</h4>
+                                    <h3 class="keep-h4">Trilha da Estratégia</h3>
                                     <p class="wiki-lede">Por que a decisão existe e o que muda na operação em seguida.</p>
                                     <div class="links">
                                         <a href="trilha-socio.html"><i class="bi bi-diagram-3"></i> Abrir</a>

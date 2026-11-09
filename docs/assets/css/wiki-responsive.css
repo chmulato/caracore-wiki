@@ -101,6 +101,45 @@ pre {
   line-height: 1.3;
 }
 
+/* Nível do título corrigido sem alterar a tipografia original */
+.keep-h4 {
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: 1.2;
+}
+
+.keep-h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.wiki-content h3.keep-h4,
+.wiki-home h3.keep-h4 {
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: 1.2;
+}
+
+.wiki-content h3.keep-h5,
+.wiki-home h3.keep-h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.project-header h3.keep-h4 {
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+@media (min-width: 1200px) {
+  .keep-h4 {
+    font-size: 1.5rem;
+  }
+
+  .wiki-content h3.keep-h4,
+  .wiki-home h3.keep-h4 {
+    font-size: 1.5rem;
+  }
+}
+
 .wiki-content p,
 .wiki-content li,
 .wiki-content dd {

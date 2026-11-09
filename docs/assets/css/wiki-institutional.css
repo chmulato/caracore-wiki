@@ -589,7 +589,8 @@ html[data-theme="dark"] nav.wiki-nav.navbar-dark .navbar-toggler-icon {
   color: var(--wiki-inst-text);
 }
 
-.wiki-home .scenario-card h4 {
+.wiki-home .scenario-card h4,
+.wiki-home .scenario-card .keep-h4 {
   font-size: 1rem;
   font-weight: 650;
   color: var(--wiki-inst-text);

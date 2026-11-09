@@ -907,7 +907,8 @@ html {
   color: var(--muted-text);
 }
 
-.scenario-card h4 {
+.scenario-card h4,
+.scenario-card .keep-h4 {
   margin-top: 6px;
   margin-bottom: 6px;
   font-size: 1.05rem;
