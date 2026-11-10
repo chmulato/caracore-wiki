@@ -1,0 +1,232 @@
+﻿/* Manual Operacional PDV - Stack Anterior */
+.legacy-hero {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+  color: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.legacy-hero h1 {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.legacy-hero p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+.legacy-badges {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legacy-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.section-card {
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.section-card h2 {
+  margin: 0 0 8px;
+  color: #1e3a8a;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.screen-card {
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.screen-head {
+  background: #eff6ff;
+  border-bottom: 1px solid #dbeafe;
+  padding: 12px;
+}
+
+.screen-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1e3a8a;
+}
+
+.screen-meta {
+  margin-top: 4px;
+  font-size: 0.84rem;
+  color: #475569;
+}
+
+.screen-media {
+  padding: 12px;
+}
+
+.screen-media img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+}
+
+.screen-notes {
+  margin: 0;
+  padding: 0 12px 8px;
+  font-size: 0.89rem;
+  color: #334155;
+}
+
+.acceptance-box {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  border-radius: 8px;
+  margin: 8px 12px 12px;
+  padding: 10px;
+}
+
+.acceptance-title {
+  margin: 0 0 8px;
+  color: #1e3a8a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.acceptance-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 5px;
+  font-size: 0.84rem;
+  color: #1e3a8a;
+}
+
+.manual-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.audit-print-header {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .screens-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 10mm 14mm;
+  }
+
+  body {
+    background: #fff !important;
+    font-size: 10pt;
+  }
+
+  .navbar,
+  .wiki-breadcrumb,
+  .manual-actions {
+    display: none !important;
+  }
+
+  .wiki-container,
+  .wiki-content {
+    max-width: none !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+
+  .audit-print-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #000;
+    padding: 0 0 4mm;
+    margin-bottom: 6mm;
+    font-size: 10pt;
+    background: #fff;
+    color: #000;
+  }
+
+  .legacy-hero,
+  .section-card,
+  .screen-card {
+    box-shadow: none !important;
+    border-color: #999 !important;
+  }
+
+  .legacy-hero {
+    margin-top: 20mm;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .legacy-hero p {
+    color: #111 !important;
+  }
+
+  .legacy-badge {
+    border-color: #888;
+    background: #fff;
+    color: #000;
+  }
+
+  .screens-grid {
+    display: block;
+  }
+
+  .screen-card {
+    page-break-after: always;
+    break-after: page;
+    margin-bottom: 8mm;
+  }
+
+  .screen-card:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .acceptance-box {
+    border-color: #888;
+    background: #fff;
+  }
+}
+
+

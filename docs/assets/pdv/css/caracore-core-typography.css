@@ -1,0 +1,21 @@
+﻿/* Tipografia sem CDN externo (redes que bloqueiam fonts.googleapis.com). */
+:root {
+  --cc-font-heading: "Segoe UI", system-ui, Tahoma, sans-serif;
+  --cc-font-body: "Segoe UI", system-ui, Arial, sans-serif;
+}
+
+:where(body) {
+  font-family: var(--cc-font-body);
+  line-height: 1.5;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--cc-font-heading);
+  letter-spacing: 0.01em;
+}
+
+:where(button, input, select, textarea, .btn) {
+  font-family: var(--cc-font-body);
+}
+
+

@@ -1,0 +1,77 @@
+﻿/* Manual Upgrade Java 21 - wiki local */
+.manual-hero {
+  background: linear-gradient(135deg, #0b3d91 0%, #0f766e 100%);
+  color: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.manual-hero h1 {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.manual-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 8px;
+  font-size: 0.85rem;
+}
+
+.step-card {
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.step-title {
+  margin: 0 0 8px;
+  color: #0b3d91;
+  font-weight: 700;
+}
+
+.screenshot-box {
+  border: 2px dashed #93a7bc;
+  background: #f8fbff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.screenshot-box img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #c9d7e6;
+}
+
+.screenshot-caption {
+  color: #3d566e;
+  font-size: 0.92rem;
+  margin-top: 6px;
+}
+
+.callout-ok {
+  border-left: 5px solid #15803d;
+  background: #f0fdf4;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.callout-warn {
+  border-left: 5px solid #b45309;
+  background: #fffbeb;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.quick-nav a {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+
