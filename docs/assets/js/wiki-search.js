@@ -40,6 +40,41 @@ function initWikiSearch() {
             category: 'projeto'
         },
         {
+            title: 'Gaspar — mascote e aviso por SMS',
+            description: 'Mascote oficial da Cara Core no computador da loja e envio de aviso de venda por SMS pelo chip do celular pareado — versão publicada 1.7.0 com aplicativo Android 1.2',
+            url: 'gaspar/index.html',
+            tags: ['gaspar', 'mascote', 'sms', 'celular', 'aviso', 'pdv', 'gratuito', '1.7.0'],
+            category: 'projeto'
+        },
+        {
+            title: 'Instalação do Gaspar',
+            description: 'Do download ao primeiro SMS: instalar no Windows ou Linux, colocar o aplicativo no celular, parear por QR Code e enviar o teste',
+            url: 'gaspar/instalacao.html',
+            tags: ['gaspar', 'instalação', 'download', 'windows', 'linux', 'android', 'pareamento', 'qr code'],
+            category: 'guia'
+        },
+        {
+            title: 'SMS pelo celular — Gaspar',
+            description: 'Como o pedido chega ao celular pareado, o que cada estado significa, o que a lista mostra e os limites de envio',
+            url: 'gaspar/sms.html',
+            tags: ['gaspar', 'sms', 'celular', 'chip', 'histórico', 'limites', 'comprovante', 'operadora'],
+            category: 'guia'
+        },
+        {
+            title: 'Privacidade do SMS — Gaspar',
+            description: 'O que o Gaspar guarda, por quanto tempo e o que nunca é gravado: auditoria sem conteúdo, LGPD e limites do desenho',
+            url: 'gaspar/privacidade.html',
+            tags: ['gaspar', 'privacidade', 'lgpd', 'dados', 'auditoria', 'ponta a ponta', 'retenção'],
+            category: 'guia'
+        },
+        {
+            title: 'BlackBox — bloqueio de telemetria',
+            description: 'Gaspar BlackBox: reduzir telemetria do editor e bloquear domínios de coleta pelo arquivo hosts, com checklist rápido',
+            url: 'gaspar/blackbox.html',
+            tags: ['gaspar', 'blackbox', 'telemetria', 'hosts', 'vscode', 'cursor', 'firewall', 'ollama'],
+            category: 'guia'
+        },
+        {
             title: 'Minerador 4.0',
             description: 'Simulador de ETE e hidrometalurgia para Ensino Médio e mineração. Terras raras, upgrade Ouro 4.0',
             url: 'projeto-minerador.html',

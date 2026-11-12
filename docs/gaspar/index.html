@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaspar — mascote e aviso por SMS | Wiki Cara Core</title>
+  <meta name="description" content="Área de suporte do Gaspar, o mascote da Cara Core: instalação no computador e no celular, envio de SMS pelo chip, privacidade dos dados e bloqueio de telemetria com o BlackBox.">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+  <link rel="stylesheet" href="../assets/css/projeto-gaspar.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Gaspar — mascote e aviso por SMS | Wiki Cara Core">
+  <meta property="og:description" content="Instalação, SMS pelo celular, privacidade e BlackBox do Gaspar, o mascote da Cara Core.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wiki.caracore.com.br/gaspar/">
+  <meta property="og:image" content="https://wiki.caracore.com.br/assets/img/og-wiki-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://wiki.caracore.com.br/gaspar/">
+  <meta property="og:site_name" content="Wiki Cara Core">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://wiki.caracore.com.br/gaspar/#webpage",
+      "name": "Gaspar — mascote e aviso por SMS",
+      "url": "https://wiki.caracore.com.br/gaspar/",
+      "description": "Área de suporte do Gaspar, o mascote da Cara Core: instalação, SMS pelo celular, privacidade e BlackBox.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://wiki.caracore.com.br/#website",
+        "name": "Wiki Cara Core",
+        "url": "https://wiki.caracore.com.br/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://caracore.com.br/#organization",
+        "name": "Cara Core Informática",
+        "url": "https://caracore.com.br/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item active">Gaspar</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Manual do Gaspar</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html" class="active"><i class="bi bi-map"></i> Visão geral</a></li>
+            <li><a href="instalacao.html"><i class="bi bi-download"></i> Instalação</a></li>
+            <li><a href="sms.html"><i class="bi bi-chat-dots"></i> SMS pelo celular</a></li>
+            <li><a href="privacidade.html"><i class="bi bi-shield-lock"></i> Privacidade</a></li>
+            <li><a href="blackbox.html"><i class="bi bi-shield"></i> BlackBox</a></li>
+            <li><a href="https://gaspar.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja e download</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home gaspar-content">
+          <div class="wiki-header">
+            <h1><i class="bi bi-pc-display"></i> Gaspar — mascote e aviso por SMS</h1>
+            <p class="wiki-lede">O Gaspar é o mascote oficial da Cara Core. Ele fica na tela do computador da loja e, quando um celular é pareado, envia o aviso de venda por SMS usando o chip da própria loja.</p>
+          </div>
+
+          <div class="alert alert-warning" role="note">
+            <i class="bi bi-cone-striped"></i>
+            <strong>Versão publicada: Gaspar 1.7.0 e aplicativo Android 1.2.</strong>
+            O mascote funciona sozinho; o SMS é <strong>opcional</strong> e só liga quando um celular é pareado.
+            A proteção de ponta a ponta, a auditoria sem conteúdo e o aviso de versão nova entram na próxima versão dos dois lados.
+          </div>
+
+          <section>
+            <h2>O que o Gaspar faz</h2>
+            <p>No dia a dia, o Gaspar cuida de três coisas: deixa o mascote visível na tela, avisa quando o PDV pede uma mensagem e acompanha cada tentativa de SMS. Nada é enviado para a nuvem da Cara Core: computador e celular conversam pela Wi-Fi da loja.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5"><i class="bi bi-download"></i> Começar</h3>
+                    <ul class="feature-list">
+                      <li><a href="instalacao.html">Instalar no computador e no celular</a></li>
+                      <li><a href="instalacao.html#parear">Parear o celular pelo QR Code</a></li>
+                      <li><a href="instalacao.html#teste">Enviar o primeiro SMS de teste</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5"><i class="bi bi-chat-dots"></i> SMS no dia a dia</h3>
+                    <ul class="feature-list">
+                      <li><a href="sms.html">Como o pedido chega ao celular</a></li>
+                      <li><a href="sms.html#historico">O que a lista mostra</a></li>
+                      <li><a href="sms.html#falta">O que a versão atual ainda não faz</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5"><i class="bi bi-shield-lock"></i> Privacidade</h3>
+                    <ul class="feature-list">
+                      <li><a href="privacidade.html">O que fica guardado e por quanto tempo</a></li>
+                      <li><a href="privacidade.html#direitos">Direitos do cliente (LGPD)</a></li>
+                      <li><a href="privacidade.html#limites">O que o desenho não resolve</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5"><i class="bi bi-shield"></i> BlackBox</h3>
+                    <ul class="feature-list">
+                      <li><a href="blackbox.html">Bloquear telemetria no ambiente de desenvolvimento</a></li>
+                      <li><a href="blackbox.html#hosts">O que o bloqueio grava no arquivo hosts</a></li>
+                      <li><a href="blackbox.html#checklist">Checklist rápido</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Versão publicada e próxima versão</h2>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">No ar hoje (1.7.0 + Android 1.2)</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span>Mascote na tela, painel de configuração e ícone perto do relógio.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Pareamento por QR Code e envio de SMS pelo chip do celular.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Até 20 pedidos por minuto e 300 por dia; fila de 100 com duas tentativas.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>A mesma venda não gera segundo SMS em 24 horas.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Texto de até 480 caracteres.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Na próxima versão dos dois lados</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-arrow-right-circle"></i><span>Texto protegido de ponta a ponta, aberto só pelo celular pareado.</span></li>
+                      <li><i class="bi bi-arrow-right-circle"></i><span>Histórico e auditoria sem número e sem texto, por 90 dias.</span></li>
+                      <li><i class="bi bi-arrow-right-circle"></i><span>Limites por número e teto diário no próprio celular.</span></li>
+                      <li><i class="bi bi-arrow-right-circle"></i><span>Aviso de versão nova dentro do programa.</span></li>
+                      <li><i class="bi bi-arrow-right-circle"></i><span>Chamada automática quando o PDV fecha a venda.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gaspar-note gaspar-note--info">
+              <i class="bi bi-info-circle"></i>
+              <div>
+                <p>Enquanto a próxima versão não sai, vale o que está publicado: o histórico guarda o número completo e o texto na pasta do computador da loja, e o envio parte do painel do Gaspar.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Onde baixar e onde pedir ajuda</h2>
+            <p>O download, as notas de versão e o guia de atualização ficam na loja do produto. Esta área da Wiki responde como usar e o que esperar de cada versão.</p>
+            <div class="text-center my-4 d-flex flex-wrap justify-content-center gap-2">
+              <a href="https://gaspar.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja do Gaspar</a>
+              <a href="https://gaspar.caracore.com.br/atualizacao.html" class="btn-wiki" target="_blank" rel="noopener"><i class="bi bi-arrow-repeat"></i> Atualização</a>
+              <a href="mailto:suporte@caracore.com.br" class="btn-wiki"><i class="bi bi-envelope"></i> suporte@caracore.com.br</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer class="wiki-footer">
+      <div class="container">
+          <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+          <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+          <div class="mt-2">
+              <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                  <i class="bi bi-shield-lock"></i> Política de Privacidade
+              </a>
+              <a href="https://www.caracore.com.br/" class="text-light">
+                  <i class="bi bi-house"></i> Site Principal
+              </a>
+          </div>
+      </div>
+  </footer>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap-collapse.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+<script defer src="/assets/js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacidade do SMS — Gaspar | Wiki Cara Core</title>
+  <meta name="description" content="O que o Gaspar guarda, por quanto tempo e o que nunca é gravado: histórico, auditoria sem conteúdo, LGPD e os limites do desenho de privacidade.">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+  <link rel="stylesheet" href="../assets/css/projeto-gaspar.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Privacidade do SMS — Gaspar | Wiki Cara Core">
+  <meta property="og:description" content="O que o Gaspar guarda, por quanto tempo e o que nunca é gravado.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wiki.caracore.com.br/gaspar/privacidade.html">
+  <meta property="og:image" content="https://wiki.caracore.com.br/assets/img/og-wiki-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://wiki.caracore.com.br/gaspar/privacidade.html">
+  <meta property="og:site_name" content="Wiki Cara Core">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://wiki.caracore.com.br/gaspar/privacidade.html#webpage",
+      "name": "Privacidade do SMS — Gaspar",
+      "url": "https://wiki.caracore.com.br/gaspar/privacidade.html",
+      "description": "O que o Gaspar guarda, por quanto tempo e o que nunca é gravado.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://wiki.caracore.com.br/#website",
+        "name": "Wiki Cara Core",
+        "url": "https://wiki.caracore.com.br/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://caracore.com.br/#organization",
+        "name": "Cara Core Informática",
+        "url": "https://caracore.com.br/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Gaspar</a></li>
+          <li class="breadcrumb-item active">Privacidade</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Manual do Gaspar</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-map"></i> Visão geral</a></li>
+            <li><a href="instalacao.html"><i class="bi bi-download"></i> Instalação</a></li>
+            <li><a href="sms.html"><i class="bi bi-chat-dots"></i> SMS pelo celular</a></li>
+            <li><a href="privacidade.html" class="active"><i class="bi bi-shield-lock"></i> Privacidade</a></li>
+            <li><a href="blackbox.html"><i class="bi bi-shield"></i> BlackBox</a></li>
+            <li><a href="https://gaspar.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja e download</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home gaspar-content">
+          <div class="wiki-header">
+            <h1><i class="bi bi-shield-lock"></i> Privacidade do SMS</h1>
+            <p class="wiki-lede">O Gaspar entrega o SMS pedido pela loja e guarda apenas o necessário para você saber o que aconteceu. O desenho completo não grava o número nem o texto; a versão publicada ainda guarda os dois no computador da loja.</p>
+          </div>
+
+          <div class="alert alert-warning" role="note">
+            <i class="bi bi-exclamation-triangle"></i>
+            <strong>Versão publicada:</strong> Gaspar 1.7.0 com aplicativo Android 1.2. O texto ainda fica no computador da loja e não há proteção de ponta a ponta. A proteção e a auditoria sem conteúdo chegam na próxima versão dos dois lados.
+          </div>
+
+          <section id="resumo">
+            <h2>Em resumo</h2>
+            <p>O Gaspar não é um serviço na nuvem: ele roda no computador da loja e não envia dados para a Cara Core.</p>
+            <div class="project-card">
+              <div class="project-body">
+                <h3 class="h5">O mínimo necessário, pelo menor tempo possível</h3>
+                <p>No desenho completo, o número e o texto passam pelo Gaspar <strong>fechados com a chave do celular</strong>, não são gravados em texto e o registro de auditoria guarda apenas <strong>data, venda, modelo e estado</strong>. Não há nome, CPF, endereço ou e-mail do cliente em nenhum ponto.</p>
+                <div class="gaspar-note">
+                  <i class="bi bi-exclamation-triangle"></i>
+                  <div>
+                    <p><strong>Versão atual:</strong> o recurso publicado é o da 1.7.0 com o aplicativo 1.2. A proteção de ponta a ponta e a auditoria sem conteúdo entram na próxima versão; até lá, o histórico guarda o número completo e o texto na pasta do computador da loja.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="quem">
+            <h2>Quem participa</h2>
+            <p>Nenhum servidor da Cara Core fica no caminho.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">O lojista</h3>
+                    <p>Decide enviar o SMS e responde pela base legal. É quem atende os pedidos dos clientes.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">A Cara Core, pelo Gaspar</h3>
+                    <p>Entrega o pedido ao celular e guarda só os metadados mínimos. Não tem acesso aos dados da loja.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">O celular pareado</h3>
+                    <p>Abre o pedido, dispara o SMS pelo chip e devolve o comprovante.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">A operadora e o cliente</h3>
+                    <p>Transportam e recebem a mensagem, como qualquer SMS.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="guarda">
+            <h2>O que fica e o que não fica</h2>
+            <p>Na versão publicada (1.7.0), o número e o texto ainda ficam guardados na pasta do computador da loja. Na próxima versão, o conteúdo deixa de ser guardado e sobra só o suficiente para responder "houve envio para esta venda?".</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Na próxima versão, fica guardado por 90 dias</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span>Código da venda, modelo usado, estado e horários.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Motivo da falha, em código curto.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Um código do destino, que não revela o número.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>O botão <strong>Apagar histórico</strong> remove tudo antes do prazo.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Na próxima versão, não fica guardado</h3>
+                    <ul class="gaspar-checklist gaspar-checklist--off">
+                      <li><i class="bi bi-x-circle"></i><span>O número do cliente em texto.</span></li>
+                      <li><i class="bi bi-x-circle"></i><span>O texto da mensagem em texto.</span></li>
+                      <li><i class="bi bi-x-circle"></i><span>Nome, CPF, e-mail ou endereço do cliente.</span></li>
+                      <li><i class="bi bi-x-circle"></i><span>O endereço do computador na rede interna.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="protecao">
+            <h2>Proteção até o celular</h2>
+            <p>Hoje a conversa com o celular usa a proteção da própria Wi-Fi da loja. Na próxima versão, o conteúdo ganha uma proteção própria, que só o celular pareado abre.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-4">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">A chave é do celular</h3>
+                    <p>O celular cria a própria chave no pareamento. Ela nunca sai do aparelho.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Só ele abre o pedido</h3>
+                    <p>O Gaspar fecha o pacote com a chave pública do celular. Depois de enviado, nem o Gaspar consegue ler o texto.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Duas camadas</h3>
+                    <p>O caminho pela Wi-Fi já vai protegido e o conteúdo tem uma proteção própria, só para aquele celular.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gaspar-note gaspar-note--info">
+              <i class="bi bi-info-circle"></i>
+              <div>
+                <p>Quem abre o arquivo de estado do Gaspar vê apenas o pacote fechado. A operadora e o aparelho do cliente recebem o SMS em claro, como qualquer mensagem.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="auditoria">
+            <h2>Auditoria sem conteúdo</h2>
+            <p>Hoje não existe essa trilha. Na próxima versão, ela serve para responder o que aconteceu, não para reconstruir a mensagem.</p>
+            <ul class="gaspar-checklist">
+              <li><i class="bi bi-check-circle"></i><span>Uma linha por mudança de estado: fila, enviado, entregue ou falhou.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Só data, venda, modelo, estado, motivo e códigos que não voltam a ser número ou texto.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Retenção de 90 dias; a limpeza roda quando o Gaspar abre.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>O botão <strong>Apagar histórico</strong> apaga os pedidos e a trilha inteira.</span></li>
+            </ul>
+          </section>
+
+          <section id="direitos">
+            <h2>Direitos do cliente, na prática</h2>
+            <p>O Gaspar foi desenhado para atender aos princípios do art. 6º da LGPD.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">O que o lojista pode atender</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span>Confirmação de que houve tratamento.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Acesso aos metadados guardados.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Eliminação pelo botão <strong>Apagar histórico</strong>.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Informação sobre compartilhamento: não há.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">O que a Cara Core garante</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span>Nada é enviado para a nuvem nem para fora do Brasil.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Não há compartilhamento com terceiros além do próprio SMS entregue à operadora.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>O dado fica no computador da loja e no celular pareado.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>A Cara Core apoia com o registro de auditoria em caso de incidente.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="limites">
+            <h2>O que este desenho não resolve</h2>
+            <p>Nenhuma proteção cobre tudo. Estas são as situações que continuam fora do alcance do Gaspar.</p>
+            <div class="gaspar-faq">
+              <details>
+                <summary>E se o computador da loja for invadido?</summary>
+                <p>Quem controla o computador pode ler o pedido no instante em que ele chega, antes de ser fechado, ou pedir SMS com o código de acesso. A proteção cobre o caminho e o arquivo guardado, não uma máquina invadida.</p>
+              </details>
+              <details>
+                <summary>A conversa com o Gaspar tem cadeado?</summary>
+                <p>A conversa acontece só dentro do computador e da rede interna, sem o cadeado de segurança dos sites. Por isso o Gaspar não deve ser exposto à internet.</p>
+              </details>
+              <details>
+                <summary>E se o celular for perdido?</summary>
+                <p>Enquanto estiver pareado e ativo, o aparelho pode enviar. Pareie outro celular para invalidar a chave antiga; o teto diário limita o estrago até lá.</p>
+              </details>
+              <details>
+                <summary>O SMS fica na caixa Enviadas do celular?</summary>
+                <p>Sim. O aplicativo de mensagens do Android guarda a cópia como qualquer SMS digitado à mão. O Gaspar não controla essa cópia; ela pode ser apagada no aparelho.</p>
+              </details>
+              <details>
+                <summary>O backup do Android leva os dados?</summary>
+                <p>A chave que abre o conteúdo está presa ao aparelho e não funciona em outro celular. O segredo de pareamento pode ir no backup; parear de novo resolve.</p>
+              </details>
+              <details>
+                <summary>A versão publicada já tem essa proteção?</summary>
+                <p>Ainda não. Até a próxima versão dos dois lados, o recurso em produção é o da 1.7.0 com o aplicativo 1.2, sem a proteção de ponta a ponta e sem a auditoria sem conteúdo. Esta página descreve o desenho completo e diz o que já está no ar.</p>
+              </details>
+            </div>
+          </section>
+
+          <section id="papeis">
+            <h2>Quem cuida de quê</h2>
+            <p>O termo de privacidade só funciona se cada parte souber o seu papel.</p>
+            <ul class="gaspar-checklist">
+              <li><i class="bi bi-check-circle"></i><span><strong>Cara Core:</strong> entrega o software, mantém a proteção, a auditoria e as travas, e documenta o que o programa faz. Não acessa os dados da loja.</span></li>
+              <li><i class="bi bi-check-circle"></i><span><strong>Quem instala:</strong> pareia o celular, guarda o código de acesso do PDV e mantém computador e celular atualizados.</span></li>
+              <li><i class="bi bi-check-circle"></i><span><strong>Lojista:</strong> define a base legal, orienta a equipe, atende os pedidos dos clientes e decide quando apagar o histórico.</span></li>
+              <li><i class="bi bi-check-circle"></i><span><strong>Equipe da loja:</strong> usa a janela Celular / SMS e não compartilha o código de acesso nem o QR de pareamento.</span></li>
+            </ul>
+          </section>
+
+          <div class="text-center my-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="sms.html" class="btn-wiki"><i class="bi bi-chat-dots"></i> SMS no dia a dia</a>
+            <a href="mailto:suporte@caracore.com.br" class="btn-wiki"><i class="bi bi-envelope"></i> Falar com o suporte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer class="wiki-footer">
+      <div class="container">
+          <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+          <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+          <div class="mt-2">
+              <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                  <i class="bi bi-shield-lock"></i> Política de Privacidade
+              </a>
+              <a href="https://www.caracore.com.br/" class="text-light">
+                  <i class="bi bi-house"></i> Site Principal
+              </a>
+          </div>
+      </div>
+  </footer>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap-collapse.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+<script defer src="/assets/js/analytics.js"></script>
+</body>
+</html>

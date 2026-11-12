@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackBox — bloqueio de telemetria | Wiki Cara Core</title>
+  <meta name="description" content="Guia do Gaspar BlackBox para reduzir telemetria no ambiente de desenvolvimento: configurações do editor, extensões, arquivo hosts, firewall do Windows e checklist rápido.">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+  <link rel="stylesheet" href="../assets/css/projeto-gaspar.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="BlackBox — bloqueio de telemetria | Wiki Cara Core">
+  <meta property="og:description" content="Guia do Gaspar BlackBox para reduzir telemetria no ambiente de desenvolvimento.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wiki.caracore.com.br/gaspar/blackbox.html">
+  <meta property="og:image" content="https://wiki.caracore.com.br/assets/img/og-wiki-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://wiki.caracore.com.br/gaspar/blackbox.html">
+  <meta property="og:site_name" content="Wiki Cara Core">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://wiki.caracore.com.br/gaspar/blackbox.html#webpage",
+      "name": "BlackBox — bloqueio de telemetria",
+      "url": "https://wiki.caracore.com.br/gaspar/blackbox.html",
+      "description": "Guia do Gaspar BlackBox para reduzir telemetria no ambiente de desenvolvimento.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://wiki.caracore.com.br/#website",
+        "name": "Wiki Cara Core",
+        "url": "https://wiki.caracore.com.br/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://caracore.com.br/#organization",
+        "name": "Cara Core Informática",
+        "url": "https://caracore.com.br/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Gaspar</a></li>
+          <li class="breadcrumb-item active">BlackBox</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Manual do Gaspar</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-map"></i> Visão geral</a></li>
+            <li><a href="instalacao.html"><i class="bi bi-download"></i> Instalação</a></li>
+            <li><a href="sms.html"><i class="bi bi-chat-dots"></i> SMS pelo celular</a></li>
+            <li><a href="privacidade.html"><i class="bi bi-shield-lock"></i> Privacidade</a></li>
+            <li><a href="blackbox.html" class="active"><i class="bi bi-shield"></i> BlackBox</a></li>
+            <li><a href="https://gaspar.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja e download</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home gaspar-content">
+          <div class="wiki-header">
+            <h1><i class="bi bi-shield"></i> BlackBox — soberania do código</h1>
+            <p class="wiki-lede">Guia da Cara Core para reduzir telemetria no ambiente de desenvolvimento e impedir que domínios conhecidos de coleta saiam do equipamento sem permissão expressa.</p>
+          </div>
+
+          <div class="alert alert-info" role="note">
+            <i class="bi bi-info-circle"></i>
+            O bloqueio é feito pelo <strong>Gaspar BlackBox</strong>, que grava um bloco delimitado no arquivo <code>hosts</code> do sistema. O processo é reversível e não instala serviços. A ferramenta é <strong>opcional</strong> e pede elevação de administrador.
+          </div>
+
+          <section id="editor">
+            <h2>1. Configurações do editor</h2>
+            <p>Arquivos:</p>
+            <ul>
+              <li>Cursor: <code>%APPDATA%\Cursor\User\settings.json</code></li>
+              <li>VS Code: <code>%APPDATA%\Code\User\settings.json</code></li>
+            </ul>
+            <p>Chaves recomendadas:</p>
+<pre class="gaspar-code-block"><code>{
+  "telemetry.telemetryLevel": "off",
+  "telemetry.enableCrashReporter": false,
+  "enable-crash-reporter": false
+}</code></pre>
+            <div class="gaspar-table-wrap">
+              <table class="gaspar-table">
+                <thead>
+                  <tr><th>Chave</th><th>Efeito</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>telemetry.telemetryLevel</code></td><td>Desativa telemetria de uso, erros e eventos.</td></tr>
+                  <tr><td><code>telemetry.enableCrashReporter</code></td><td>Desativa o envio de relatórios de crash.</td></tr>
+                  <tr><td><code>enable-crash-reporter</code></td><td>Reforça a desativação no Electron.</td></tr>
+                  <tr><td><code>update.mode</code></td><td>Opcional: <code>"none"</code> evita busca automática de atualizações.</td></tr>
+                  <tr><td><code>extensions.autoCheckUpdates</code></td><td>Opcional: <code>false</code> evita consulta automática de extensões.</td></tr>
+                  <tr><td><code>extensions.autoUpdate</code></td><td>Opcional: <code>false</code> evita atualização automática de extensões.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>No Cursor, ative também <strong>Settings &gt; General &gt; Privacy Mode</strong>. Isso reduz a retenção de prompts e código por provedores de modelo. Se a versão atual expuser a chave, use <code>"cursor.privacyMode": true</code>.</p>
+            <div class="gaspar-note">
+              <i class="bi bi-exclamation-triangle"></i>
+              <div>
+                <p>Reinicie o editor depois de alterar. Desligar a telemetria no editor não impede todos os DNS lookups; para bloquear de fato, use o arquivo <code>hosts</code>.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="extensoes">
+            <h2>2. Extensões que costumam enviar dados</h2>
+            <div class="gaspar-table-wrap">
+              <table class="gaspar-table">
+                <thead>
+                  <tr><th>Extensão ou família</th><th>O que costuma enviar</th><th>Como limitar</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>GitHub Copilot</td><td>Trechos de código e contexto</td><td>Desative em repositórios sensíveis; use modelos locais quando possível.</td></tr>
+                  <tr><td>GitLens</td><td>Uso e telemetria</td><td><code>"gitlens.telemetry.enabled": false</code></td></tr>
+                  <tr><td>Red Hat (Java, YAML etc.)</td><td>Telemetria de uso</td><td><code>"redhat.telemetry.enabled": false</code></td></tr>
+                  <tr><td>Docker</td><td>Telemetria e analytics</td><td>Desative nas configurações da extensão.</td></tr>
+                  <tr><td>Azure / MS SQL</td><td>Telemetria e diagnóstico</td><td>Desative a telemetria de cada extensão.</td></tr>
+                  <tr><td>Codeium, Tabnine e similares</td><td>Contexto de código para servidores</td><td>Não instale ou desative em ambiente black-box.</td></tr>
+                  <tr><td>Extensões de IA em nuvem</td><td>Código e prompts</td><td>Prefira modelos locais, como Ollama.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Boas práticas</h3>
+            <ul class="gaspar-checklist">
+              <li><i class="bi bi-check-circle"></i><span>Revise cada extensão em <strong>Details</strong> e procure por Telemetry, Data e Privacy.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Desative telemetria específica quando existir configuração própria.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Mantenha o mínimo de extensões em projetos sensíveis.</span></li>
+            </ul>
+          </section>
+
+          <section id="hosts">
+            <h2>3. Bloqueio no arquivo hosts</h2>
+            <h3>Pela interface</h3>
+            <ol class="gaspar-steps">
+              <li><p>No ícone do Gaspar, perto do relógio, escolha <strong>Gaspar BlackBox</strong>. O atalho do menu Iniciar também abre a ferramenta.</p></li>
+              <li><p>Aceite a elevação (UAC no Windows, <code>pkexec</code> no Linux).</p></li>
+              <li><p>Clique em <strong>Aplicar bloqueio</strong>.</p></li>
+              <li><p>Opcionalmente, clique em <strong>Atualizar cache DNS</strong>.</p></li>
+            </ol>
+            <p>O status mostra <strong>Bloqueio ativo</strong> ou <strong>Bloqueio inativo</strong>. O botão <strong>Remover bloqueio</strong> restaura o conteúdo anterior.</p>
+
+            <h3>Pela linha de comando</h3>
+<pre class="gaspar-code-block"><code>python -m gaspar.telemetry_hosts --status
+python -m gaspar.telemetry_hosts --dry-run
+python -m gaspar.telemetry_hosts --remove</code></pre>
+            <p>O <code>--dry-run</code> mostra o que seria feito sem escrever no arquivo e sem exigir administrador.</p>
+
+            <h3>O que é gravado</h3>
+<pre class="gaspar-code-block"><code># BLOCK TELEMETRIA - INICIO (Cara Core Black-Box)
+0.0.0.0 vortex.data.microsoft.com
+0.0.0.0 vortex-win.data.microsoft.com
+...
+# BLOCK TELEMETRIA - FIM</code></pre>
+
+            <h3>Características</h3>
+            <ul class="gaspar-checklist">
+              <li><i class="bi bi-check-circle"></i><span>34 domínios conhecidos de telemetria da Microsoft, VS Code/Cursor, Azure e Application Insights.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Reaplicar é idempotente: o bloco anterior é substituído, não duplicado.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>A remoção preserva o restante do arquivo e o estilo de quebra de linha (CRLF ou LF).</span></li>
+              <li><i class="bi bi-check-circle"></i><span>O cache DNS é atualizado por <code>ipconfig</code>, <code>resolvectl</code>, <code>systemd-resolve</code> ou <code>nscd</code>, conforme disponível.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Requer privilégios de administrador/root para escrever no arquivo.</span></li>
+            </ul>
+
+            <h3>Efeitos colaterais possíveis</h3>
+            <p>O bloqueio inclui domínios de autenticação e marketplace:</p>
+            <ul>
+              <li><code>login.microsoftonline.com</code></li>
+              <li><code>vscode.dev</code></li>
+              <li><code>marketplace.visualstudio.com</code></li>
+              <li><code>management.azure.com</code></li>
+              <li><code>global.azure.microsoft.com</code></li>
+              <li><code>monitor.azure.com</code></li>
+            </ul>
+            <div class="gaspar-note gaspar-note--danger">
+              <i class="bi bi-exclamation-triangle"></i>
+              <div>
+                <p>Enquanto o bloqueio estiver ativo, login Microsoft, instalação de extensões e alguns recursos do Azure podem falhar. Remova o bloqueio antes de autenticar ou instalar extensões.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="firewall">
+            <h2>4. Firewall do Windows e Ollama</h2>
+            <h3>Ollama em localhost:11434</h3>
+            <p>O tráfego para <code>127.0.0.1:11434</code> é loopback e normalmente já é permitido pelo Firewall do Windows. Na maioria dos casos não é necessário criar regra.</p>
+            <p>Só crie uma regra de entrada para a porta 11434 se o Ollama estiver vinculado a <code>0.0.0.0</code> e você quiser acesso explícito.</p>
+            <h3>Bloquear telemetria sem quebrar o ambiente</h3>
+            <p>Não bloqueie a porta 443 inteira para o editor: isso quebra atualizações, extensões, Git e outros serviços. A abordagem prática é:</p>
+            <ol class="gaspar-steps">
+              <li><p>Bloquear os domínios de telemetria pelo arquivo <code>hosts</code>.</p></li>
+              <li><p>Desligar a telemetria nas configurações do editor e das extensões.</p></li>
+              <li><p>Usar regras de firewall por processo apenas se houver uma política adicional.</p></li>
+            </ol>
+            <p>Regras por IP de destino exigem manter uma lista de IPs que muda com frequência. O bloqueio por nome de host via <code>hosts</code> é mais simples e previsível.</p>
+          </section>
+
+          <section id="checklist">
+            <h2>5. Checklist rápido</h2>
+            <ul class="gaspar-checklist">
+              <li><i class="bi bi-check-circle"></i><span><code>telemetry.telemetryLevel</code> em <code>"off"</code>.</span></li>
+              <li><i class="bi bi-check-circle"></i><span><code>telemetry.enableCrashReporter</code> e <code>enable-crash-reporter</code> em <code>false</code>.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Cursor com Privacy Mode ativado.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Telemetria de extensões desligada (GitLens, Red Hat, Docker etc.).</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Evitar extensões de IA em nuvem em projetos da Cara Core.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Bloqueio aplicado pelo Gaspar BlackBox e cache DNS atualizado.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Ollama em <code>localhost:11434</code> para modelos locais.</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Opcional: <code>update.mode</code> em <code>"none"</code> e atualizações automáticas de extensões desligadas.</span></li>
+              <li><i class="bi bi-x-circle"></i><span>Remover o bloqueio antes de login Microsoft, marketplace ou operações do Azure.</span></li>
+            </ul>
+            <p class="gaspar-meta">Soberania do Código — Cara Core Informática. Nada sai do equipamento sem sua permissão expressa.</p>
+          </section>
+
+          <div class="text-center my-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="index.html" class="btn-wiki"><i class="bi bi-arrow-left"></i> Visão geral do Gaspar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer class="wiki-footer">
+      <div class="container">
+          <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+          <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+          <div class="mt-2">
+              <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                  <i class="bi bi-shield-lock"></i> Política de Privacidade
+              </a>
+              <a href="https://www.caracore.com.br/" class="text-light">
+                  <i class="bi bi-house"></i> Site Principal
+              </a>
+          </div>
+      </div>
+  </footer>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap-collapse.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+<script defer src="/assets/js/analytics.js"></script>
+</body>
+</html>

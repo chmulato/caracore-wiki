@@ -1,0 +1,222 @@
+/* Área Gaspar — estilos de conteúdo
+   Camada de elemento sobre wiki.css; cores sempre por variável para
+   funcionar no tema claro e no escuro. */
+
+.gaspar-content h2 {
+    margin-top: 2.2rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gaspar-content h3 {
+    margin-top: 1.6rem;
+    font-size: 1.12rem;
+}
+
+.gaspar-content p,
+.gaspar-content li {
+    color: var(--card-text);
+}
+
+.gaspar-meta {
+    color: var(--muted-text);
+    font-size: .9rem;
+}
+
+.gaspar-note {
+    display: flex;
+    gap: .75rem;
+    align-items: flex-start;
+    margin: 1.25rem 0;
+    padding: .9rem 1rem;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--warning-color);
+    border-radius: 6px;
+    background: var(--hover-bg);
+}
+
+.gaspar-note--info {
+    border-left-color: var(--primary-color);
+}
+
+.gaspar-note--danger {
+    border-left-color: var(--danger-color);
+}
+
+.gaspar-note > i {
+    flex: none;
+    margin-top: .15rem;
+    font-size: 1.1rem;
+    color: var(--warning-color);
+}
+
+.gaspar-note--info > i {
+    color: var(--primary-color);
+}
+
+.gaspar-note--danger > i {
+    color: var(--danger-color);
+}
+
+.gaspar-note p {
+    margin: 0;
+}
+
+.gaspar-note p + p {
+    margin-top: .5rem;
+}
+
+.gaspar-steps {
+    list-style: none;
+    counter-reset: gaspar-step;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.gaspar-steps > li {
+    position: relative;
+    padding-left: 2.6rem;
+}
+
+.gaspar-steps > li::before {
+    counter-increment: gaspar-step;
+    content: counter(gaspar-step);
+    position: absolute;
+    left: 0;
+    top: .05rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    font-size: .85rem;
+}
+
+.gaspar-steps h3,
+.gaspar-steps h4 {
+    margin: .1rem 0 .3rem;
+    font-size: 1rem;
+}
+
+.gaspar-steps p {
+    margin: 0 0 .45rem;
+}
+
+.gaspar-steps p:last-child {
+    margin-bottom: 0;
+}
+
+.gaspar-checklist {
+    list-style: none;
+    margin: .75rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: .55rem;
+}
+
+.gaspar-checklist li {
+    display: flex;
+    gap: .55rem;
+    align-items: flex-start;
+}
+
+.gaspar-checklist li > i {
+    flex: none;
+    margin-top: .18rem;
+    color: var(--success-color);
+}
+
+.gaspar-checklist--off li > i {
+    color: var(--danger-color);
+}
+
+.gaspar-faq {
+    display: grid;
+    gap: .6rem;
+    margin-top: 1rem;
+}
+
+.gaspar-faq details {
+    padding: .35rem .95rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--card-bg);
+}
+
+.gaspar-faq summary {
+    padding: .6rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--card-text);
+}
+
+.gaspar-faq details p {
+    margin: 0 0 .8rem;
+}
+
+.gaspar-table-wrap {
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.gaspar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .92rem;
+}
+
+.gaspar-table th,
+.gaspar-table td {
+    padding: .55rem .7rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: top;
+    color: var(--card-text);
+}
+
+.gaspar-table th {
+    background: var(--hover-bg);
+    font-weight: 650;
+}
+
+.gaspar-code-block {
+    margin: 1rem 0;
+    padding: .9rem 1rem;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--code-bg);
+    color: var(--code-text);
+    font-size: .85rem;
+    line-height: 1.5;
+}
+
+.gaspar-content code {
+    padding: .1rem .35rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--code-bg);
+    color: var(--code-text);
+    font-size: .88em;
+}
+
+.gaspar-code-block code {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+}
+
+.gaspar-card-grid .project-card {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.gaspar-card-grid .project-body h3 {
+    margin-top: 0;
+}

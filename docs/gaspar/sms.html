@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS pelo celular — Gaspar | Wiki Cara Core</title>
+  <meta name="description" content="Como o Gaspar entrega o pedido ao celular pareado e envia o SMS pelo chip da loja: preparação, pareamento, teste, histórico, limites e problemas comuns.">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/wiki-institutional.css">
+  <link rel="stylesheet" href="../assets/css/wiki-responsive.css">
+  <link rel="stylesheet" href="../assets/css/projeto-gaspar.css">
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="SMS pelo celular — Gaspar | Wiki Cara Core">
+  <meta property="og:description" content="Como o Gaspar entrega o pedido ao celular pareado e envia o SMS pelo chip da loja.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wiki.caracore.com.br/gaspar/sms.html">
+  <meta property="og:image" content="https://wiki.caracore.com.br/assets/img/og-wiki-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://wiki.caracore.com.br/gaspar/sms.html">
+  <meta property="og:site_name" content="Wiki Cara Core">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://wiki.caracore.com.br/gaspar/sms.html#webpage",
+      "name": "SMS pelo celular — Gaspar",
+      "url": "https://wiki.caracore.com.br/gaspar/sms.html",
+      "description": "Como o Gaspar entrega o pedido ao celular pareado e envia o SMS pelo chip da loja.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://wiki.caracore.com.br/#website",
+        "name": "Wiki Cara Core",
+        "url": "https://wiki.caracore.com.br/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://caracore.com.br/#organization",
+        "name": "Cara Core Informática",
+        "url": "https://caracore.com.br/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><i class="bi bi-journal-code"></i> Wiki Cara Core</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/"><i class="bi bi-house"></i> Site Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.caracore.com.br/portfolio.html"><i class="bi bi-briefcase"></i> Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../ecosistema.html" title="Mapa do ecossistema (Eco Mundo)"><i class="bi bi-globe2"></i> Mapa</a></li>
+          <li class="nav-item">
+            <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Wiki Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Gaspar</a></li>
+          <li class="breadcrumb-item active">SMS pelo celular</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Manual do Gaspar</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-map"></i> Visão geral</a></li>
+            <li><a href="instalacao.html"><i class="bi bi-download"></i> Instalação</a></li>
+            <li><a href="sms.html" class="active"><i class="bi bi-chat-dots"></i> SMS pelo celular</a></li>
+            <li><a href="privacidade.html"><i class="bi bi-shield-lock"></i> Privacidade</a></li>
+            <li><a href="blackbox.html"><i class="bi bi-shield"></i> BlackBox</a></li>
+            <li><a href="https://gaspar.caracore.com.br/" target="_blank" rel="noopener"><i class="bi bi-shop"></i> Loja e download</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content wiki-home gaspar-content">
+          <div class="wiki-header">
+            <h1><i class="bi bi-chat-dots"></i> SMS pelo celular</h1>
+            <p class="wiki-lede">Com o celular pareado, o Gaspar entrega o pedido ao aparelho pela Wi-Fi e o SMS sai pelo chip. O computador não precisa de internet nem de serviço de SMS.</p>
+          </div>
+
+          <div class="alert alert-info" role="note">
+            <i class="bi bi-info-circle"></i>
+            <strong>Versão publicada:</strong> Gaspar 1.7.0 com aplicativo Android 1.2. Hoje o envio parte do painel do Gaspar; a chamada automática quando o PDV fecha a venda entra na próxima versão.
+          </div>
+
+          <section id="como">
+            <h2>Como funciona</h2>
+            <p>O caminho é curto e fica todo dentro da loja: computador, Wi-Fi e celular.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-4">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">1. O pedido chega ao Gaspar</h3>
+                    <p>Você envia pelo painel ou o PDV pede a mensagem. O Gaspar monta o texto e prepara o envio.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">2. O celular dispara o SMS</h3>
+                    <p>Pela Wi-Fi da loja, o celular pareado recebe o pedido e envia pelo chip, com o plano da loja.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">3. Você acompanha o resultado</h3>
+                    <p>O Gaspar mostra quando o chip aceitou e quando a operadora confirmou a entrega.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gaspar-note">
+              <i class="bi bi-exclamation-triangle"></i>
+              <div>
+                <p><strong>Transparência da versão atual:</strong> na 1.7.0, o histórico guarda o número completo e o texto na pasta do computador da loja. Na próxima versão, o texto vai protegido de ponta a ponta e o histórico guarda só data, venda, modelo e estado.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="preparar">
+            <h2>Prepare o celular</h2>
+            <p>O aplicativo é quem dispara o SMS. Ele não precisa de internet, mas precisa de permissão e de bateria liberada.</p>
+            <div class="project-card">
+              <div class="project-body">
+                <ol class="gaspar-steps">
+                  <li>
+                    <h3>Instale o aplicativo</h3>
+                    <p>Baixe o APK na <a href="https://gaspar.caracore.com.br/" target="_blank" rel="noopener">página de downloads</a> e instale no celular. O passo a passo está em <a href="instalacao.html">instalação</a>.</p>
+                  </li>
+                  <li>
+                    <h3>Aceite as permissões de SMS</h3>
+                    <p>O aplicativo pede enviar, receber e ler. Ele usa enviar para os comprovantes e receber para a licença; não lê a caixa de entrada.</p>
+                  </li>
+                  <li>
+                    <h3>Libere da economia de bateria</h3>
+                    <p>No aplicativo, toque em <strong>Liberar o app da economia de bateria</strong> e confirme na tela do sistema. Sem isso, o Android pode encerrar o serviço com a tela apagada.</p>
+                  </li>
+                  <li>
+                    <h3>Fique na mesma Wi-Fi</h3>
+                    <p>Celular e computador na mesma rede. Redes de visitantes que isolam os aparelhos impedem a conversa.</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section id="parear">
+            <h2>Pareie o celular pelo QR Code</h2>
+            <p>O pareamento é o que autoriza o celular a receber os pedidos.</p>
+            <div class="project-card">
+              <div class="project-body">
+                <ol class="gaspar-steps">
+                  <li>
+                    <h3>Abra Celular / SMS</h3>
+                    <p>No Gaspar, clique em <strong>Celular / SMS</strong> e confirme que <strong>Ponte ativa</strong> está marcado.</p>
+                  </li>
+                  <li>
+                    <h3>Clique em Parear celular</h3>
+                    <p>Um QR Code aparece em uma janela separada.</p>
+                  </li>
+                  <li>
+                    <h3>Leia o código</h3>
+                    <p>No celular, abra o aplicativo e use a leitura de QR. Aponte para a tela do computador.</p>
+                  </li>
+                  <li>
+                    <h3>Confirme</h3>
+                    <p>Quando o celular termina, o Gaspar mostra <strong>Celular pareado</strong>. O QR vale 15 minutos e só pode ser usado uma vez.</p>
+                  </li>
+                </ol>
+                <p class="gaspar-meta">Trocou de aparelho? Pareie o novo do mesmo jeito. A chave do celular antigo deixa de valer.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="teste">
+            <h2>Envie um teste</h2>
+            <p>O teste não precisa do PDV. Ele confirma o pareamento e a rede.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <ol class="gaspar-steps">
+                      <li>
+                        <h3>Digite o número</h3>
+                        <p>Use um número com DDD, por exemplo <strong>11999999999</strong>.</p>
+                      </li>
+                      <li>
+                        <h3>Clique em Enviar teste</h3>
+                        <p>A mensagem sai pelo celular pareado.</p>
+                      </li>
+                      <li>
+                        <h3>Acompanhe em Últimos envios</h3>
+                        <p>A lista mostra fila, enviando, enviado, entregue ou falhou.</p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">O que cada estado quer dizer</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span><strong>Enviado</strong> — o chip do celular aceitou a mensagem.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span><strong>Entregue</strong> — a operadora confirmou a entrega ao aparelho do cliente.</span></li>
+                      <li><i class="bi bi-x-circle"></i><span><strong>Falhou</strong> — o chip ou a operadora recusou; confira crédito, chip e sinal.</span></li>
+                    </ul>
+                    <p class="gaspar-meta">O comprovante de entrega depende da operadora. Quando ela não devolve o recibo, o pedido fica em <strong>enviado</strong>, o que já confirma que o SMS saiu do celular. Em nenhum caso há confirmação de que o cliente leu a mensagem.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="historico">
+            <h2>O que a lista mostra</h2>
+            <p>O histórico serve para acompanhar sem expor o cadastro do cliente.</p>
+            <div class="row g-4 gaspar-card-grid">
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Na tela</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span>Data, estado e horário de cada tentativa.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Na versão publicada, o final do número mascarado e o começo do texto enviado.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Na próxima versão, só o modelo e um código do destino, sem o número e sem o texto.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-body">
+                    <h3 class="h5">Limites que protegem a loja</h3>
+                    <ul class="gaspar-checklist">
+                      <li><i class="bi bi-check-circle"></i><span>Até 20 pedidos por minuto e 300 por dia.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>A mesma venda não gera segundo SMS em 24 horas.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Mensagem de até 480 caracteres.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Fila de até 100 pedidos, com duas tentativas quando o celular está fora do ar.</span></li>
+                      <li><i class="bi bi-arrow-right-circle"></i><span>Na próxima versão entram os limites por número e um teto diário no próprio celular.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="problemas">
+            <h2>Problemas comuns</h2>
+            <div class="gaspar-faq">
+              <details>
+                <summary>O celular não é encontrado</summary>
+                <p>Confira se está na mesma Wi-Fi e se a rede não isola os aparelhos. Abra o aplicativo, confirme que o serviço está ligado e desative a economia de bateria. No Windows, permita o Gaspar na rede privada.</p>
+              </details>
+              <details>
+                <summary>O QR Code expirou</summary>
+                <p>Gere outro em <strong>Parear celular</strong>. O código anterior deixa de valer.</p>
+              </details>
+              <details>
+                <summary>O Gaspar avisa que a porta está em uso</summary>
+                <p>Feche outra janela do Gaspar e abra de novo. Se continuar, peça ao responsável técnico para ajustar a porta nas configurações.</p>
+              </details>
+              <details>
+                <summary>O PDV recebe erro de acesso</summary>
+                <p>O código de acesso do PDV foi trocado. Copie o código atual na janela <strong>Celular / SMS</strong> e atualize o cadastro do PDV.</p>
+              </details>
+              <details>
+                <summary>Aparece "sem chave do celular"</summary>
+                <p>O celular não foi pareado com o aplicativo atual. Pareie de novo em <strong>Parear celular</strong>. Se o aplicativo estiver antigo, atualize-o e repita.</p>
+              </details>
+              <details>
+                <summary>Troquei de celular</summary>
+                <p>Pareie o aparelho novo em <strong>Parear celular</strong>. A chave antiga deixa de valer; pedidos que estavam na fila precisam ser enviados de novo.</p>
+              </details>
+              <details>
+                <summary>O envio falha sempre</summary>
+                <p>Confira crédito, chip e permissão de SMS. No Android, libere o aplicativo da economia de bateria. <strong>Enviado</strong> significa que o chip aceitou; <strong>entregue</strong> é a confirmação da operadora.</p>
+              </details>
+            </div>
+          </section>
+
+          <section id="falta">
+            <h2>O que a versão atual ainda não faz</h2>
+            <p>Preferimos dizer antes de você perguntar.</p>
+            <ul class="gaspar-checklist gaspar-checklist--off">
+              <li><i class="bi bi-x-circle"></i><span><strong>Confirmação de leitura:</strong> o recibo da operadora confirma a entrega ao aparelho, não a leitura da mensagem.</span></li>
+              <li><i class="bi bi-x-circle"></i><span><strong>Chamada automática do PDV:</strong> a integração do lado do PDV entra na próxima versão; hoje o envio parte do painel.</span></li>
+              <li><i class="bi bi-x-circle"></i><span><strong>Aplicativo atualizado:</strong> na próxima versão, Gaspar e celular precisam ser atualizados juntos para o pareamento funcionar.</span></li>
+            </ul>
+          </section>
+
+          <div class="text-center my-4 d-flex flex-wrap justify-content-center gap-2">
+            <a href="instalacao.html" class="btn-wiki"><i class="bi bi-download"></i> Como instalar e parear</a>
+            <a href="privacidade.html" class="btn-wiki"><i class="bi bi-shield-lock"></i> Ver privacidade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer class="wiki-footer">
+      <div class="container">
+          <p>&copy; 2026 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+          <p>Wiki como centro de alinhamento (Cliente, Estagiário e Sócio) — história, cenários e padrão de execução.</p>
+          <div class="mt-2">
+              <a href="https://www.caracore.com.br/politica/politica-privacidade.html" class="text-light me-3">
+                  <i class="bi bi-shield-lock"></i> Política de Privacidade
+              </a>
+              <a href="https://www.caracore.com.br/" class="text-light">
+                  <i class="bi bi-house"></i> Site Principal
+              </a>
+          </div>
+      </div>
+  </footer>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap-collapse.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/wiki.js"></script>
+<script defer src="/assets/js/analytics.js"></script>
+</body>
+</html>
