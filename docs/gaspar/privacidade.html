@@ -101,12 +101,12 @@
         <div class="wiki-content wiki-home gaspar-content">
           <div class="wiki-header">
             <h1><i class="bi bi-shield-lock"></i> Privacidade do SMS</h1>
-            <p class="wiki-lede">O Gaspar entrega o SMS pedido pela loja e guarda apenas o necessário para você saber o que aconteceu. O desenho completo não grava o número nem o texto; a versão publicada ainda guarda os dois no computador da loja.</p>
+            <p class="wiki-lede">O Gaspar entrega o SMS pedido pela loja e guarda apenas o necessário para você saber o que aconteceu. O computador da loja não guarda o número nem o texto: sobra data, venda, modelo, estado e um código do destino.</p>
           </div>
 
           <div class="alert alert-warning" role="note">
             <i class="bi bi-exclamation-triangle"></i>
-            <strong>Versão publicada:</strong> Gaspar 1.7.0 com aplicativo Android 1.2. O texto ainda fica no computador da loja e não há proteção de ponta a ponta. A proteção e a auditoria sem conteúdo chegam na próxima versão dos dois lados.
+            <strong>Versão publicada:</strong> Gaspar 1.7.2 com aplicativo Android 1.5. O texto vai fechado até o celular pareado e o histórico guarda só data, venda, modelo, estado e um código do destino. Use o aplicativo 1.5 com o Gaspar 1.7.1 ou mais novo.
           </div>
 
           <section id="resumo">
@@ -115,11 +115,11 @@
             <div class="project-card">
               <div class="project-body">
                 <h3 class="h5">O mínimo necessário, pelo menor tempo possível</h3>
-                <p>No desenho completo, o número e o texto passam pelo Gaspar <strong>fechados com a chave do celular</strong>, não são gravados em texto e o registro de auditoria guarda apenas <strong>data, venda, modelo e estado</strong>. Não há nome, CPF, endereço ou e-mail do cliente em nenhum ponto.</p>
+                <p>Na versão publicada, o número e o texto passam pelo Gaspar <strong>fechados com a chave do celular</strong>, não são gravados em texto e o registro de auditoria guarda apenas <strong>data, venda, modelo, estado e códigos</strong> do destino e do motivo. Não há nome, CPF, endereço ou e-mail do cliente em nenhum ponto.</p>
                 <div class="gaspar-note">
                   <i class="bi bi-exclamation-triangle"></i>
                   <div>
-                    <p><strong>Versão atual:</strong> o recurso publicado é o da 1.7.0 com o aplicativo 1.2. A proteção de ponta a ponta e a auditoria sem conteúdo entram na próxima versão; até lá, o histórico guarda o número completo e o texto na pasta do computador da loja.</p>
+                    <p><strong>No que está no ar:</strong> o Gaspar 1.7.2 com o aplicativo 1.5 já entrega o texto fechado e guarda o histórico sem número e sem texto, por 90 dias. Se a loja acabou de atualizar, vale tocar em <strong>Apagar histórico</strong> uma vez para não deixar registros antigos na pasta.</p>
                   </div>
                 </div>
               </div>
@@ -167,12 +167,12 @@
 
           <section id="guarda">
             <h2>O que fica e o que não fica</h2>
-            <p>Na versão publicada (1.7.0), o número e o texto ainda ficam guardados na pasta do computador da loja. Na próxima versão, o conteúdo deixa de ser guardado e sobra só o suficiente para responder "houve envio para esta venda?".</p>
+            <p>Na versão publicada (1.7.2 com o aplicativo 1.5), o conteúdo não fica guardado: sobra só o suficiente para responder "houve envio para esta venda?".</p>
             <div class="row g-4 gaspar-card-grid">
               <div class="col-md-6">
                 <div class="project-card">
                   <div class="project-body">
-                    <h3 class="h5">Na próxima versão, fica guardado por 90 dias</h3>
+                    <h3 class="h5">Fica guardado por 90 dias</h3>
                     <ul class="gaspar-checklist">
                       <li><i class="bi bi-check-circle"></i><span>Código da venda, modelo usado, estado e horários.</span></li>
                       <li><i class="bi bi-check-circle"></i><span>Motivo da falha, em código curto.</span></li>
@@ -185,7 +185,7 @@
               <div class="col-md-6">
                 <div class="project-card">
                   <div class="project-body">
-                    <h3 class="h5">Na próxima versão, não fica guardado</h3>
+                    <h3 class="h5">Não fica guardado</h3>
                     <ul class="gaspar-checklist gaspar-checklist--off">
                       <li><i class="bi bi-x-circle"></i><span>O número do cliente em texto.</span></li>
                       <li><i class="bi bi-x-circle"></i><span>O texto da mensagem em texto.</span></li>
@@ -200,7 +200,7 @@
 
           <section id="protecao">
             <h2>Proteção até o celular</h2>
-            <p>Hoje a conversa com o celular usa a proteção da própria Wi-Fi da loja. Na próxima versão, o conteúdo ganha uma proteção própria, que só o celular pareado abre.</p>
+            <p>O conteúdo sai do Gaspar fechado e só o celular pareado abre. A Wi-Fi da loja é só o caminho; a proteção principal é a chave do aparelho.</p>
             <div class="row g-4 gaspar-card-grid">
               <div class="col-md-4">
                 <div class="project-card">
@@ -237,7 +237,7 @@
 
           <section id="auditoria">
             <h2>Auditoria sem conteúdo</h2>
-            <p>Hoje não existe essa trilha. Na próxima versão, ela serve para responder o que aconteceu, não para reconstruir a mensagem.</p>
+            <p>A trilha serve para responder o que aconteceu, não para reconstruir a mensagem.</p>
             <ul class="gaspar-checklist">
               <li><i class="bi bi-check-circle"></i><span>Uma linha por mudança de estado: fila, enviado, entregue ou falhou.</span></li>
               <li><i class="bi bi-check-circle"></i><span>Só data, venda, modelo, estado, motivo e códigos que não voltam a ser número ou texto.</span></li>
@@ -305,7 +305,7 @@
               </details>
               <details>
                 <summary>A versão publicada já tem essa proteção?</summary>
-                <p>Ainda não. Até a próxima versão dos dois lados, o recurso em produção é o da 1.7.0 com o aplicativo 1.2, sem a proteção de ponta a ponta e sem a auditoria sem conteúdo. Esta página descreve o desenho completo e diz o que já está no ar.</p>
+                <p>Sim, desde o Gaspar 1.7.1 no computador com o aplicativo 1.5 no celular; hoje a versão publicada é a 1.7.2. Use o aplicativo 1.5 com o Gaspar 1.7.1 ou mais novo; quem continua no Gaspar 1.7.0 fica com o aplicativo 1.2.</p>
               </details>
             </div>
           </section>

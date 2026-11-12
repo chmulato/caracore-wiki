@@ -106,7 +106,7 @@
 
           <div class="alert alert-info" role="note">
             <i class="bi bi-info-circle"></i>
-            <strong>Versão publicada:</strong> Gaspar 1.7.0 com aplicativo Android 1.2. Hoje o envio parte do painel do Gaspar; a chamada automática quando o PDV fecha a venda entra na próxima versão.
+            <strong>Versão publicada:</strong> Gaspar 1.7.2 com aplicativo Android 1.5. Hoje o envio parte do painel do Gaspar; a chamada automática quando o PDV fecha a venda entra na linha 4.1 do PDV.
           </div>
 
           <section id="como">
@@ -141,7 +141,7 @@
             <div class="gaspar-note">
               <i class="bi bi-exclamation-triangle"></i>
               <div>
-                <p><strong>Transparência da versão atual:</strong> na 1.7.0, o histórico guarda o número completo e o texto na pasta do computador da loja. Na próxima versão, o texto vai protegido de ponta a ponta e o histórico guarda só data, venda, modelo e estado.</p>
+                <p><strong>Transparência da versão atual:</strong> na 1.7.2, o texto vai protegido de ponta a ponta e o histórico guarda só data, venda, modelo, estado e um código do destino — sem o número e sem o texto. O botão <strong>Apagar histórico</strong> remove tudo antes do prazo.</p>
               </div>
             </div>
           </section>
@@ -251,8 +251,7 @@
                     <h3 class="h5">Na tela</h3>
                     <ul class="gaspar-checklist">
                       <li><i class="bi bi-check-circle"></i><span>Data, estado e horário de cada tentativa.</span></li>
-                      <li><i class="bi bi-check-circle"></i><span>Na versão publicada, o final do número mascarado e o começo do texto enviado.</span></li>
-                      <li><i class="bi bi-check-circle"></i><span>Na próxima versão, só o modelo e um código do destino, sem o número e sem o texto.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Modelo usado e um código curto do destino, sem o número e sem o texto.</span></li>
                     </ul>
                   </div>
                 </div>
@@ -263,10 +262,11 @@
                     <h3 class="h5">Limites que protegem a loja</h3>
                     <ul class="gaspar-checklist">
                       <li><i class="bi bi-check-circle"></i><span>Até 20 pedidos por minuto e 300 por dia.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Para o mesmo número: 1 SMS por hora e 3 por dia nos pedidos automáticos. Os envios feitos pelo painel não entram nessa conta.</span></li>
                       <li><i class="bi bi-check-circle"></i><span>A mesma venda não gera segundo SMS em 24 horas.</span></li>
                       <li><i class="bi bi-check-circle"></i><span>Mensagem de até 480 caracteres.</span></li>
                       <li><i class="bi bi-check-circle"></i><span>Fila de até 100 pedidos, com duas tentativas quando o celular está fora do ar.</span></li>
-                      <li><i class="bi bi-arrow-right-circle"></i><span>Na próxima versão entram os limites por número e um teto diário no próprio celular.</span></li>
+                      <li><i class="bi bi-check-circle"></i><span>Teto diário de 300 SMS no próprio celular, mesmo que o computador pareça pedir mais.</span></li>
                     </ul>
                   </div>
                 </div>
@@ -313,8 +313,8 @@
             <p>Preferimos dizer antes de você perguntar.</p>
             <ul class="gaspar-checklist gaspar-checklist--off">
               <li><i class="bi bi-x-circle"></i><span><strong>Confirmação de leitura:</strong> o recibo da operadora confirma a entrega ao aparelho, não a leitura da mensagem.</span></li>
-              <li><i class="bi bi-x-circle"></i><span><strong>Chamada automática do PDV:</strong> a integração do lado do PDV entra na próxima versão; hoje o envio parte do painel.</span></li>
-              <li><i class="bi bi-x-circle"></i><span><strong>Aplicativo atualizado:</strong> na próxima versão, Gaspar e celular precisam ser atualizados juntos para o pareamento funcionar.</span></li>
+              <li><i class="bi bi-x-circle"></i><span><strong>Chamada automática do PDV:</strong> o PDV 4.0.0 publicado ainda não chama o Gaspar; a chamada entra na linha 4.1 do PDV.</span></li>
+              <li><i class="bi bi-x-circle"></i><span><strong>Aplicativo antigo no celular:</strong> o 1.2 não envia a chave do aparelho, então o Gaspar 1.7.1 ou mais novo recusa o envio até o celular ser atualizado para o 1.5. Quem continua no Gaspar 1.7.0 fica com o 1.2.</span></li>
             </ul>
           </section>
 
